@@ -1,0 +1,22 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI] | Auth: Azure Active Directory, MFA | 🔒 | ⚠️", "Central management interface for configuration and monitoring of Azure resources.")
+    System(Azure_Local_Instance, "Azure Local Instance | [Azure Arc, Windows Server] | Auth: Active Directory, Local accounts | 🔒 | ⚠️", "Hosts traditional VMs and applications, managed via Azure Arc.")
+    System(Arc_VMs, "Arc VMs | [Azure Arc, Hyper-V] | Auth: Azure AD, Local credentials | 🔒 | ⚠️", "Virtual machines managed under Azure Arc, enabling hybrid capabilities.")
+    System(Hyper_V, "Hyper-V | [Windows Server Hyper-V] | Auth: Windows Authentication | 🔒 | ⚠️", "Virtualization technology for running VMs.")
+    System(Azure_Virtual_Desktop, "Azure Virtual Desktop | [Azure Virtual Desktop] | Auth: Azure AD, MFA | 🔒 | ⚠️", "Provides virtual desktop infrastructure for session hosts.")
+    System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Kubernetes, Docker] | Auth: Kubernetes RBAC, Service accounts | 🔒 | ⚠️", "Containerized applications orchestrated using Kubernetes.")
+    System(Azure_Kubernetes_Service__AKS_, "Azure Kubernetes Service (AKS) | [AKS, Azure Arc] | Auth: Azure AD, Kubernetes RBAC | 🔒 | ⚠️", "Managed Kubernetes service enabled by Azure Arc.")
+    System(Storage_Spaces_Direct__S2D_, "Storage Spaces Direct (S2D) | [Windows Server S2D] | Auth: Windows Authentication | 🔒 | ⚠️", "Storage solution for high availability and scalability.")
+    System(ToR_Switches, "ToR Switches | [Cisco, Arista] | Auth: 802.1X | 🔒 | ⚠️", "Top-of-rack switches facilitating network connectivity.")
+    System(Corp_Firewall, "Corp Firewall | [Palo Alto, Cisco ASA] | Auth: None | 🔒 | ⚠️", "Security perimeter controlling outbound access.")
+    System(Azure_Monitor, "Azure Monitor", "Auto-created component: Azure Monitor")
+    System(Azure_Backup, "Azure Backup", "Auto-created component: Azure Backup")
+    System(User_Devices, "User Devices", "Auto-created component: User Devices")
+    System(Internet, "Internet", "Auto-created component: Internet")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Monitor, "HTTPS | Application logs | Auth: required | 🔒 | ⚠️")
+    Rel(Arc_VMs, Azure_Backup, "HTTPS | Backup data | Auth: required | 🔒 | ⚠️")
+    Rel(Azure_Virtual_Desktop, User_Devices, "RDP | Session data | Auth: required | 🔒 | ⚠️")
+    Rel(Corp_Firewall, Internet, "Various | Outbound traffic | ⚠️")
