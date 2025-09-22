@@ -1,0 +1,15 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both the Hybrid Azure Local Integration Architecture and the Cloud-Native Application Security Framework identify unauthorized access as a critical threat.,,,,2025-09-22T22:09:12.968223
+CORR_002,,,,Mitigation strategies for data interception during transit are consistent across multiple threat models.,,,,2025-09-22T22:09:12.968248
+CORR_003,,,,VM escape attacks are a concern shared with other virtualization environments.,,,,2025-09-22T22:09:12.968264
+CORR_004,,,,Compliance frameworks such as NIST and ISO 27001 share similar requirements for data protection and access controls.,,,,2025-09-22T22:09:12.968278
+CORR_005,,,,Shared risks related to insufficient logging and monitoring across various threat models.,,,,2025-09-22T22:09:12.968292
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,"Unauthorized access attempts are frequently reported across various architectures, indicating a systemic issue with access controls.",high,,2025-09-22T22:09:12.968312
+PATTERN_002,,"Data interception during transit is a common threat in hybrid environments, highlighting the need for strong encryption practices.",medium,,2025-09-22T22:09:12.968328
+PATTERN_003,,"Insufficient logging and monitoring is a recurring theme, leading to undetected security incidents.",high,,2025-09-22T22:09:12.968344
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-22T22:09:12.968372
+OPP_002,,,,,,2025-09-22T22:09:12.968384
