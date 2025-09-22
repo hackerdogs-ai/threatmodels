@@ -1,0 +1,14 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both the Azure Local Integrated Reference Design and the Cloud Infrastructure Security Model identify unauthorized access as a critical threat.,,,,2025-09-22T22:17:03.657536
+CORR_002,,,,Both models recommend regular audits of RBAC configurations to prevent privilege escalation.,,,,2025-09-22T22:17:03.657548
+CORR_003,,,,Both models highlight the importance of data encryption at rest and in transit to meet compliance standards.,,,,2025-09-22T22:17:03.657555
+CORR_004,,,,Both models identify DDoS attacks as a significant threat to network availability.,,,,2025-09-22T22:17:03.657561
+CORR_005,,,,"Both models recognize insider threats as a critical risk, necessitating comprehensive monitoring and training.",,,,2025-09-22T22:17:03.657567
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,Frequent occurrences of unauthorized access attempts across multiple threat models indicate a systemic vulnerability.,high,,2025-09-22T22:17:03.657576
+PATTERN_002,,Common vulnerabilities related to weak encryption practices highlight a need for standardized encryption protocols.,medium,,2025-09-22T22:17:03.657583
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-22T22:17:03.657604
+OPP_002,,,,,,2025-09-22T22:17:03.657610
