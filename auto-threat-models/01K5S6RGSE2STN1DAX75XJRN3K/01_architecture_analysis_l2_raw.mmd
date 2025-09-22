@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_Infrastructure, "On-Premises Infrastructure") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Hyper-V, Windows Server] | Auth: Active Directory, Local accounts | 🔒 | ⚠️", "Hosts traditional applications and virtual machines (Arc VMs) on Hyper-V.")
+        System(Networking, "Networking | [ToR switches, Firewalls] | Auth: N/A | 🔒 | ⚠️", "Comprises switches and firewalls to manage East/West traffic between local machines.")
+    }
+    System_Boundary(tb_Cloud_Integration_Layer, "Cloud Integration Layer") {
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI] | Auth: Azure Active Directory | 🔒 | ⚠️", "Manages resources and services through Azure Portal, Azure CLI, and tools.")
+        System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Azure AD integration | 🔒 | ⚠️", "Supports containerized workloads via Azure Kubernetes Service (AKS) enabled by Azure Arc.")
+    }
+    System(Validated_Hardware, "Validated Hardware | [Azure certified hardware] | Auth: N/A | 🔒 | ⚠️", "Includes physical machines validated for Azure Local deployment.")
+    System(Azure_Services, "Azure Services", "Auto-created component: Azure Services")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Services, "HTTPS | Application data | Auth: required | 🔒 | ⚠️")
