@@ -1,0 +1,15 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both the Azure Local Integration Architecture and the Cloud Service Provider Threat Model identify unauthorized access as a critical threat.,,,,2025-09-22T21:58:09.190124
+CORR_002,,,,Both models emphasize the importance of role-based access control (RBAC) to mitigate risks associated with privilege escalation.,,,,2025-09-22T21:58:09.190136
+CORR_003,,,,"Both models face risks from insider threats, highlighting the need for comprehensive monitoring and access controls.",,,,2025-09-22T21:58:09.190143
+CORR_004,,,,"Both models must adhere to similar compliance frameworks, including GDPR and HIPAA, which emphasize data protection and privacy.",,,,2025-09-22T21:58:09.190149
+CORR_005,,,,"Both models are susceptible to denial of service attacks, necessitating robust network defenses.",,,,2025-09-22T21:58:09.190156
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,"A frequent threat across various models, indicating a systemic vulnerability in access control mechanisms.",high,,2025-09-22T21:58:09.190166
+PATTERN_002,,"Commonly identified across different models, highlighting the need for robust monitoring and access controls.",medium,,2025-09-22T21:58:09.190172
+PATTERN_003,,"A prevalent threat in both cloud and on-premises environments, emphasizing the need for network resilience.",high,,2025-09-22T21:58:09.190179
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-22T21:58:09.190232
+OPP_002,,,,,,2025-09-22T21:58:09.190243
