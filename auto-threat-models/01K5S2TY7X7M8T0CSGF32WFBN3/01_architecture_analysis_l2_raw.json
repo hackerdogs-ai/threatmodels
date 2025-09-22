@@ -1,0 +1,239 @@
+{
+  "id": "01K5S2WHTDZ0XEDC7A07RX8S5G",
+  "title": null,
+  "overview": "The architecture represents a hybrid cloud setup using Azure Local, integrating on-premises resources with Azure services. It includes various components for managing traditional and containerized applications, ensuring seamless data flow and security.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages resources via Azure portal, Azure CLI, and tools like Azure Policy and Azure Monitor.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI",
+        "Azure Policy",
+        "Azure Monitor"
+      ],
+      "security_considerations": [
+        "Access control policies",
+        "Audit logging",
+        "Multi-factor authentication"
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages configuration and monitoring data.",
+      "authentication_methods": [
+        "Azure AD",
+        "Multi-factor authentication"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Misconfiguration",
+        "Insufficient logging"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Local Instance",
+      "type": "infrastructure",
+      "description": "Hosts virtual machines (Arc VMs) and Hyper-V for traditional applications.",
+      "technology_stack": [
+        "Azure Arc",
+        "Hyper-V"
+      ],
+      "security_considerations": [
+        "Network isolation",
+        "Regular patching",
+        "Endpoint protection"
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles application and system data.",
+      "authentication_methods": [
+        "Windows Authentication",
+        "Azure AD"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "partial",
+      "vulnerabilities": [
+        "Outdated software",
+        "Unpatched vulnerabilities"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Kubernetes-based Applications",
+      "type": "backend",
+      "description": "Supports containerized workloads through Azure Kubernetes Service (AKS) enabled by Azure Arc.",
+      "technology_stack": [
+        "Azure Kubernetes Service",
+        "Docker"
+      ],
+      "security_considerations": [
+        "Pod security policies",
+        "Network policies",
+        "Secrets management"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Processes application data and user requests.",
+      "authentication_methods": [
+        "Kubernetes RBAC",
+        "Service accounts"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Container vulnerabilities",
+        "Misconfigured network policies"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Validated Hardware",
+      "type": "infrastructure",
+      "description": "Includes Azure Local machines and validated nodes for Azure Local.",
+      "technology_stack": [
+        "Azure validated hardware"
+      ],
+      "security_considerations": [
+        "Hardware security modules",
+        "Firmware integrity checks"
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles physical and virtual machine data.",
+      "authentication_methods": [
+        "TPM",
+        "Secure Boot"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Physical tampering",
+        "Firmware vulnerabilities"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Switch/Router/Firewall",
+      "type": "infrastructure",
+      "description": "Facilitates East/West traffic management and security.",
+      "technology_stack": [
+        "Network switches",
+        "Firewalls"
+      ],
+      "security_considerations": [
+        "Intrusion detection systems",
+        "Traffic monitoring",
+        "Access control lists"
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages network traffic and data flow.",
+      "authentication_methods": [
+        "802.1X",
+        "VPN"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Network attacks",
+        "Misconfigured rules"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "Azure Services",
+      "data_type": "Application data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data interception",
+        "Unauthorized access"
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Kubernetes-based Applications",
+      "destination": "Azure Monitor",
+      "data_type": "Monitoring data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data leakage",
+        "Insufficient logging"
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises to Azure Local",
+      "components": [
+        "Azure Local Instance",
+        "Control Plane"
+      ],
+      "security_controls": [
+        "Firewalls",
+        "VPN",
+        "Encryption"
+      ],
+      "vulnerabilities": [
+        "Data exposure",
+        "Network attacks"
+      ],
+      "recommendations": [
+        "Implement strict firewall rules",
+        "Regularly audit access logs"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Kubernetes Cluster",
+      "components": [
+        "Kubernetes-based Applications",
+        "Validated Hardware"
+      ],
+      "security_controls": [
+        "Network policies",
+        "Pod security policies"
+      ],
+      "vulnerabilities": [
+        "Container vulnerabilities",
+        "Misconfigured access controls"
+      ],
+      "recommendations": [
+        "Regularly scan images for vulnerabilities",
+        "Implement least privilege access"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-22 16:07:39.597426",
+  "updated_at": "2025-09-22 16:07:39.597433"
+}

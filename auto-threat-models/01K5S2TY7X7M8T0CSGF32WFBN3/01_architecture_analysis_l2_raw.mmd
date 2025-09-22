@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure_Local, "On-Premises to Azure Local") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Azure Arc, Hyper-V] | Auth: Windows Authentication, Azure AD | 🔒 | ⚠️", "Hosts virtual machines (Arc VMs) and Hyper-V for traditional applications.")
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Policy (+1)] | Auth: Azure AD, Multi-factor authentication | 🔒 | ⚠️", "Manages resources via Azure portal, Azure CLI, and tools like Azure Policy and Azure Monitor.")
+    }
+    System_Boundary(tb_Kubernetes_Cluster, "Kubernetes Cluster") {
+        System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Service accounts | 🔒 | ⚠️", "Supports containerized workloads through Azure Kubernetes Service (AKS) enabled by Azure Arc.")
+        System(Validated_Hardware, "Validated Hardware | [Azure validated hardware] | Auth: TPM, Secure Boot | 🔒 | ⚠️", "Includes Azure Local machines and validated nodes for Azure Local.")
+    }
+    System(Switch_Router_Firewall, "Switch/Router/Firewall | [Network switches, Firewalls] | Auth: 802.1X, VPN | 🔒 | ⚠️", "Facilitates East/West traffic management and security.")
+    System(Azure_Services, "Azure Services", "Auto-created component: Azure Services")
+    System(Azure_Monitor, "Azure Monitor", "Auto-created component: Azure Monitor")
+
+    Rel(Azure_Local_Instance, Azure_Services, "HTTPS | Application data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Monitor, "HTTPS | Monitoring data | Auth: required | 🔒 | ⚠️")
