@@ -1,0 +1,313 @@
+{
+  "id": "01K5S81KRS7VP2VP3V9MY2KZSQ",
+  "title": null,
+  "overview": "The hybrid cloud architecture integrates on-premises resources with Azure services, focusing on secure management, application hosting, data storage, and networking. It leverages Azure Local for virtualization and container orchestration, ensuring high availability and performance while addressing security and compliance requirements.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages resources through Azure portal, ARM, and Bicep templates.",
+      "technology_stack": [
+        "Azure Portal",
+        "ARM",
+        "Bicep"
+      ],
+      "security_considerations": [
+        "Access control policies",
+        "Role-based access control (RBAC)",
+        "Audit logging"
+      ],
+      "trust_level": "high",
+      "data_handling": "Management data only",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Misconfiguration risks",
+        "Insufficient access controls"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Local Instance",
+      "type": "backend",
+      "description": "Hosts traditional and containerized applications, including Azure Virtual Desktop and AKS.",
+      "technology_stack": [
+        "Azure Virtual Desktop",
+        "Azure Kubernetes Service"
+      ],
+      "security_considerations": [
+        "Network segmentation",
+        "Regular patching",
+        "Container security scanning"
+      ],
+      "trust_level": "high",
+      "data_handling": "Application data processing",
+      "authentication_methods": [
+        "Azure AD",
+        "Multi-factor authentication"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Container vulnerabilities",
+        "Insecure configurations"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Hyper-V",
+      "type": "infrastructure",
+      "description": "Virtualization technology for running virtual machines.",
+      "technology_stack": [
+        "Hyper-V"
+      ],
+      "security_considerations": [
+        "Isolation of VMs",
+        "Secure boot",
+        "Regular updates"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Virtual machine data",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Local security policies",
+      "encryption_status": "partial",
+      "vulnerabilities": [
+        "VM escape attacks",
+        "Unpatched hypervisor vulnerabilities"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Arc VMs",
+      "type": "backend",
+      "description": "Virtual machines managed through Azure Arc for hybrid cloud capabilities.",
+      "technology_stack": [
+        "Azure Arc"
+      ],
+      "security_considerations": [
+        "Compliance monitoring",
+        "Centralized management",
+        "Access controls"
+      ],
+      "trust_level": "high",
+      "data_handling": "Managed VM data",
+      "authentication_methods": [
+        "Azure AD"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Management interface exposure",
+        "Inconsistent security policies"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Storage Spaces Direct (S2D)",
+      "type": "infrastructure",
+      "description": "Provides storage virtualization for high availability and performance.",
+      "technology_stack": [
+        "Storage Spaces Direct"
+      ],
+      "security_considerations": [
+        "Data redundancy",
+        "Access control",
+        "Encryption at rest"
+      ],
+      "trust_level": "high",
+      "data_handling": "Storage data",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "NTFS permissions",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Data loss risks",
+        "Unauthorized access"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Switch/Router/Firewall",
+      "type": "infrastructure",
+      "description": "Manages East/West traffic within the architecture.",
+      "technology_stack": [
+        "Firewalls",
+        "Routers"
+      ],
+      "security_considerations": [
+        "Intrusion detection systems",
+        "Traffic monitoring",
+        "Access control lists"
+      ],
+      "trust_level": "high",
+      "data_handling": "Network traffic",
+      "authentication_methods": [
+        "None"
+      ],
+      "authorization_model": "ACLs",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Network attacks",
+        "Misconfigured rules"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Validated Hardware",
+      "type": "infrastructure",
+      "description": "Ensures compatibility and performance with Azure Local.",
+      "technology_stack": [
+        "Certified hardware"
+      ],
+      "security_considerations": [
+        "Hardware integrity checks",
+        "Firmware updates"
+      ],
+      "trust_level": "high",
+      "data_handling": "Hardware performance data",
+      "authentication_methods": [
+        "None"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Hardware failures",
+        "Supply chain risks"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "Control Plane",
+      "data_type": "Management data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data interception",
+        "Unauthorized access"
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Control Plane",
+      "destination": "Azure Local Instance",
+      "data_type": "Management commands",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Command injection",
+        "Privilege escalation"
+      ]
+    },
+    {
+      "id": "3",
+      "source": "Azure Virtual Desktop",
+      "destination": "User Devices",
+      "data_type": "Application data",
+      "protocol": "RDP",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Session hijacking",
+        "Data leakage"
+      ]
+    },
+    {
+      "id": "4",
+      "source": "AKS",
+      "destination": "Internal Services",
+      "data_type": "Container data",
+      "protocol": "HTTP/HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Container vulnerabilities",
+        "Insecure APIs"
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises to Azure Local",
+      "components": [
+        "Control Plane",
+        "Azure Local Instance",
+        "Hyper-V"
+      ],
+      "security_controls": [
+        "Firewalls",
+        "Access controls",
+        "Encryption"
+      ],
+      "vulnerabilities": [
+        "Data interception",
+        "Unauthorized access"
+      ],
+      "recommendations": [
+        "Implement VPN for secure connections",
+        "Regularly audit access controls"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Internal Network",
+      "components": [
+        "Switch/Router/Firewall",
+        "Arc VMs",
+        "S2D"
+      ],
+      "security_controls": [
+        "Intrusion detection",
+        "Network segmentation"
+      ],
+      "vulnerabilities": [
+        "Internal threats",
+        "Misconfigured devices"
+      ],
+      "recommendations": [
+        "Regular network assessments",
+        "Implement micro-segmentation"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-22 17:37:48.313222",
+  "updated_at": "2025-09-22 17:37:48.313227"
+}

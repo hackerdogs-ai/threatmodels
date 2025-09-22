@@ -1,0 +1,22 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure_Local, "On-Premises to Azure Local") {
+        System(Control_Plane, "Control Plane | [Azure Portal, ARM, Bicep] | Auth: Azure Active Directory | 🔒 | ⚠️", "Manages resources through Azure portal, ARM, and Bicep templates.")
+        System(Azure_Local_Instance, "Azure Local Instance | [Azure Virtual Desktop, Azure Kubernetes Service] | Auth: Azure AD, Multi-factor authentication | 🔒 | ⚠️", "Hosts traditional and containerized applications, including Azure Virtual Desktop and AKS.")
+        System(Hyper_V, "Hyper-V | [Hyper-V] | Auth: Windows Authentication | 🔒 | ⚠️", "Virtualization technology for running virtual machines.")
+    }
+    System_Boundary(tb_Internal_Network, "Internal Network") {
+        System(Switch_Router_Firewall, "Switch/Router/Firewall | [Firewalls, Routers] | Auth: None | 🔒 | ⚠️", "Manages East/West traffic within the architecture.")
+        System(Arc_VMs, "Arc VMs | [Azure Arc] | Auth: Azure AD | 🔒 | ⚠️", "Virtual machines managed through Azure Arc for hybrid cloud capabilities.")
+    }
+    System(Storage_Spaces_Direct__S2D_, "Storage Spaces Direct (S2D) | [Storage Spaces Direct] | Auth: Windows Authentication | 🔒 | ⚠️", "Provides storage virtualization for high availability and performance.")
+    System(Validated_Hardware, "Validated Hardware | [Certified hardware] | Auth: None | 🔒 | ⚠️", "Ensures compatibility and performance with Azure Local.")
+    System(Azure_Virtual_Desktop, "Azure Virtual Desktop", "Auto-created component: Azure Virtual Desktop")
+    System(User_Devices, "User Devices", "Auto-created component: User Devices")
+    System(AKS, "AKS", "Auto-created component: AKS")
+    System(Internal_Services, "Internal Services", "Auto-created component: Internal Services")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management data | Auth: required | 🔒 | ⚠️")
+    Rel(Control_Plane, Azure_Local_Instance, "HTTPS | Management commands | Auth: required | 🔒 | ⚠️")
+    Rel(Azure_Virtual_Desktop, User_Devices, "RDP | Application data | Auth: required | 🔒 | ⚠️")
+    Rel(AKS, Internal_Services, "HTTP/HTTPS | Container data | Auth: required | 🔒 | ⚠️")
