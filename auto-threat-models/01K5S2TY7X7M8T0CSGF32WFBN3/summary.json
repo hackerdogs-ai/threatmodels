@@ -1,0 +1,151 @@
+{
+  "run_id": "01K5S2TY7X7M8T0CSGF32WFBN3",
+  "timestamp": "2025-09-22T09:07:43.189827",
+  "execution_time_secs": 37.44,
+  "total_cost": 0.0047,
+  "total_steps": 1,
+  "successful_steps": 1,
+  "failed_steps": 0,
+  "overall_success": true,
+  "steps": {
+    "architecture_analysis": {
+      "success": true,
+      "cost": 0.004695932552083334,
+      "total_tokens": 2584,
+      "input_tokens": 1010,
+      "output_tokens": 1574,
+      "execution_time_secs": 33.81636691093445,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:07:39.597863",
+        "input_tokens": 1010,
+        "output_tokens": 1574,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.0010959,
+        "compute_cost_usd": 0.0005,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "architecture_analysis": {
+            "usage": 1,
+            "cost_usd": 0.002,
+            "rate_per_unit": 0.002
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.003,
+        "total_cost_usd": 0.004695932552083334,
+        "price_with_margin_usd": 0.023479662760416676,
+        "credits_burned": 2.3479662760416677,
+        "cost_breakdown_percentage": {
+          "llm": 23.337217641974174,
+          "compute": 10.647512383417364,
+          "storage": 0.0006931974207954013,
+          "data_transfer": 2.1295024766834727,
+          "features": 63.885074300504186
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 2.3479662760416677,
+      "cost_breakdown": {
+        "llm": 23.337217641974174,
+        "compute": 10.647512383417364,
+        "storage": 0.0006931974207954013,
+        "data_transfer": 2.1295024766834727,
+        "features": 63.885074300504186
+      },
+      "feature_usage": {
+        "architecture_analysis": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    }
+  },
+  "generated_files": {
+    "total_files": 3,
+    "files": [
+      "01_architecture_analysis_l2_raw.mmd",
+      "01_architecture_analysis_l2_raw.md",
+      "01_architecture_analysis_l2_raw.json"
+    ],
+    "output_directory": "hackerdogs-ai/threatmodels/01K5S2TY7X7M8T0CSGF32WFBN3",
+    "ulid": "01K5S2TY7X7M8T0CSGF32WFBN3"
+  },
+  "output_directory": "hackerdogs-ai/threatmodels/01K5S2TY7X7M8T0CSGF32WFBN3",
+  "cost_summary": {
+    "total_cost_usd": 0.004696,
+    "total_detailed_cost_usd": 0.004696,
+    "total_credits_burned": 2.35,
+    "cost_breakdown_percentage": {
+      "llm": 23.337217641974174,
+      "compute": 10.647512383417364,
+      "storage": 0.0006931974207954013,
+      "data_transfer": 2.1295024766834727,
+      "features": 63.885074300504186
+    },
+    "feature_usage_summary": {
+      "architecture_analysis": 1.0,
+      "threat_modeling": 1.0
+    },
+    "cost_efficiency": {
+      "cost_per_step": 0.004696,
+      "credits_per_step": 2.35,
+      "cost_per_second": 0.000125
+    }
+  },
+  "prompt_files": {
+    "L2": {
+      "architecture_analysis": "prompts/l2/architecture_analysis.txt",
+      "data_flow_diagrams": "prompts/l2/data_flow_diagrams.txt",
+      "threats": "prompts/l2/threats.txt",
+      "attack_trees": "prompts/l2/attack_trees.txt",
+      "mitigations": "prompts/l2/mitigations.txt",
+      "dread_assessment": "prompts/l2/dread_assessment.txt",
+      "test_cases": "prompts/l2/test_cases.txt",
+      "security_controls": "prompts/l2/security_controls.txt",
+      "compliance_assessment": "prompts/l2/compliance_assessment.txt",
+      "risk_prioritization": "prompts/l2/risk_prioritization.txt",
+      "correlations": "prompts/l2/correlations.txt",
+      "dashboard": "prompts/l2/dashboard.txt",
+      "executive_summary": "prompts/l2/executive_summary.txt"
+    }
+  },
+  "source_information": {
+    "source": "tm_resources/reference_archs/azure-local-baseline.png",
+    "source_type": "file",
+    "collected_at": "2025-09-22T09:07:05.754104",
+    "collector_version": "1.0",
+    "file_path": "/Users/tejaswiredkar/Documents/GitHub/hackerdogs-core/tm_resources/reference_archs/azure-local-baseline.png",
+    "file_name": "azure-local-baseline.png",
+    "file_extension": ".png",
+    "file_size_bytes": 653876,
+    "file_size_mb": 0.62,
+    "created_timestamp": "2025-09-14T10:05:09.240446",
+    "modified_timestamp": "2025-09-14T10:05:09.240446",
+    "accessed_timestamp": "2025-09-14T23:02:31.377443",
+    "is_file": true,
+    "is_directory": false,
+    "parent_directory": "/Users/tejaswiredkar/Documents/GitHub/hackerdogs-core/tm_resources/reference_archs",
+    "relative_path": null,
+    "sha256_hash": "784c3b5808a88b0b5234b674427aeab19ade741342ef6d68547a05ec6d7322ff",
+    "md5_hash": "414d3121649de9b96f36f39faaaadde9",
+    "mime_type": "image/png"
+  },
+  "output_plugin": {
+    "plugin_type": "GitHubStoragePlugin",
+    "folder_name": "hackerdogs-ai/threatmodels",
+    "subfolder": "01K5S2TY7X7M8T0CSGF32WFBN3",
+    "config_valid": true,
+    "owner": "hackerdogs-ai",
+    "repo": "threatmodels",
+    "branch": "main",
+    "path": "auto-threat-models",
+    "files_pending_commit": 0
+  }
+}
