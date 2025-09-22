@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure_Cloud, "On-Premises to Azure Cloud") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Hyper-V, Windows Server] | Auth: Active Directory, Local accounts | 🔒 | ⚠️", "Hosts virtual machines (Arc VMs) and Hyper-V for traditional applications.")
+        System(Switch_Router_Firewall, "Switch/Router/Firewall | [Firewalls, Routers] | Auth: N/A | 🔒 | ⚠️", "Manages traffic between Azure Local machines and external networks.")
+    }
+    System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI] | Auth: Azure AD, MFA | 🔒 | ⚠️", "Central management interface for resource management including Azure portal and CLI.")
+    System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Azure AD integration | 🔒 | ⚠️", "Supports containerized workloads managed via Azure Kubernetes Service (AKS).")
+    System(Azure_Arc, "Azure Arc | [Azure Arc] | Auth: Azure AD | 🔒 | ⚠️", "Extends Azure management capabilities to on-premises and multi-cloud environments.")
+    System(Validated_Hardware, "Validated Hardware | [Certified hardware specifications] | Auth: N/A | 🔒 | ⚠️", "Specifies hardware configurations certified for Azure Local.")
+    System(Azure_Services, "Azure Services", "Auto-created component: Azure Services")
+    System(Azure_Monitor, "Azure Monitor", "Auto-created component: Azure Monitor")
+
+    Rel(Azure_Local_Instance, Azure_Services, "HTTPS | Management and application data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Monitor, "HTTPS | Monitoring data | Auth: required | 🔒 | ⚠️")
