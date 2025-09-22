@@ -1,0 +1,24 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Control_Plane_Boundary, "Control Plane Boundary") {
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, ARM Templates] | Auth: Azure Active Directory | 🔒 | ⚠️", "Manages resources via Azure portal, Azure CLI, and templates.")
+        System(Azure_Portal, "Azure Portal", "Auto-created component: Azure Portal")
+    }
+    System_Boundary(tb_Data_Handling_Boundary, "Data Handling Boundary") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Windows Server, Kubernetes] | Auth: Windows Authentication, Azure AD | 🔒 | ⚠️", "Hosts traditional VMs and Kubernetes-based applications.")
+        System(Arc_VMs, "Arc VMs | [Azure Arc, Windows/Linux VMs] | Auth: Azure Active Directory | 🔒 | ⚠️", "Virtual machines managed through Azure Arc for hybrid capabilities.")
+        System(Kubernetes_Applications, "Kubernetes Applications", "Auto-created component: Kubernetes Applications")
+    }
+    System_Boundary(tb_Network_Security_Boundary, "Network Security Boundary") {
+        System(Switch_Router_Firewall, "Switch/Router/Firewall | [Firewalls, Network Switches] | Auth: None | 🔒 | ⚠️", "Manages East/West traffic between nodes and enforces security.")
+    }
+    System(Hyper_V, "Hyper-V | [Hyper-V] | Auth: Windows Authentication | 🔒 | ⚠️", "Virtualization technology for running VMs.")
+    System(Azure_Virtual_Desktop, "Azure Virtual Desktop | [Azure Virtual Desktop] | Auth: Azure Active Directory, MFA | 🔒 | ⚠️", "Provides desktop virtualization for users.")
+    System(Azure_Kubernetes_Service__AKS_, "Azure Kubernetes Service (AKS) | [Kubernetes, Azure Arc] | Auth: Azure Active Directory, Kubernetes RBAC | 🔒 | ⚠️", "Manages containerized applications enabled by Azure Arc.")
+    System(Storage_Spaces_Direct__S2D_, "Storage Spaces Direct (S2D) | [Storage Spaces Direct] | Auth: Windows Authentication | 🔒 | ⚠️", "Provides storage solutions for the architecture.")
+    System(Azure_Monitor, "Azure Monitor", "Auto-created component: Azure Monitor")
+
+    Rel(Azure_Portal, Control_Plane, "HTTPS | Configuration Data | Auth: required | 🔒 | ⚠️")
+    Rel(Control_Plane, Azure_Local_Instance, "HTTPS | Management Commands | Auth: required | 🔒 | ⚠️")
+    Rel(Azure_Local_Instance, Arc_VMs, "TCP | Application Data | Auth: required | ⚠️")
+    Rel(Kubernetes_Applications, Azure_Monitor, "HTTPS | Monitoring Data | Auth: required | 🔒 | ⚠️")
