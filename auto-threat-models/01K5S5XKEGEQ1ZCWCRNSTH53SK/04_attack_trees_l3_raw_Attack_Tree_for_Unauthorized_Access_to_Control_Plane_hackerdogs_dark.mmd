@@ -1,0 +1,36 @@
+graph TB
+  node_01K5S62X3D2SC0FE8APKEAHWX9["Unauthorized access to the Control Plane can lead to management of resources and configurations. | [HIGH] | T1078"]:::highRisk
+  node_01K5S62X3D2SC0FE8APKEAHWX9-1["Phishing for Credentials | [HIGH] | T1566"]:::highRisk
+  node_01K5S62X3D2SC0FE8APKEAHWX9-1_cm_0["CM: Implement multi-factor authentication (MFA) for all accounts. (Eff: 0.9)"]:::countermeasure
+  node_01K5S62X3D2SC0FE8APKEAHWX9-1_cm_1["CM: Conduct regular security awareness training for users. (Eff: 0.8)"]:::countermeasure
+  node_01K5S62X3D2SC0FE8APKEAHWX9-2["Brute Force Attack on Credentials | [MED] | T1110"]:::mediumRisk
+  node_01K5S62X3D2SC0FE8APKEAHWX9-2_cm_0["CM: Limit login attempts and implement account lockout policies. (Eff: 0.85)"]:::countermeasure
+  node_01K5S62X3D2SC0FE8APKEAHWX9-2_cm_1["CM: Use complex password policies to enhance password strength. (Eff: 0.8)"]:::countermeasure
+  node_01K5S62X3D2SC0FE8APKEAHWX9-3["Exploitation of Vulnerabilities in Control Plane Interfaces | [HIGH] | T1190"]:::highRisk
+  node_01K5S62X3D2SC0FE8APKEAHWX9-3_cm_0["CM: Regularly update and patch all software components. (Eff: 0.9)"]:::countermeasure
+  node_01K5S62X3D2SC0FE8APKEAHWX9-3_cm_1["CM: Conduct regular vulnerability assessments and penetration testing. (Eff: 0.85)"]:::countermeasure
+  node_01K5S62X3D2SC0FE8APKEAHWX9_cm_0["CM: Implement strict access controls and role-based access management. (Eff: 0.9)"]:::countermeasure
+  node_01K5S62X3D2SC0FE8APKEAHWX9_cm_1["CM: Enable logging and monitoring of access attempts to the Control Plane. (Eff: 0.8)"]:::countermeasure
+
+  node_01K5S62X3D2SC0FE8APKEAHWX9 -.-> node_01K5S62X3D2SC0FE8APKEAHWX9-1
+  node_01K5S62X3D2SC0FE8APKEAHWX9-1 -.-> node_01K5S62X3D2SC0FE8APKEAHWX9-1_cm_0
+  node_01K5S62X3D2SC0FE8APKEAHWX9-1 -.-> node_01K5S62X3D2SC0FE8APKEAHWX9-1_cm_1
+  node_01K5S62X3D2SC0FE8APKEAHWX9 -.-> node_01K5S62X3D2SC0FE8APKEAHWX9-2
+  node_01K5S62X3D2SC0FE8APKEAHWX9-2 -.-> node_01K5S62X3D2SC0FE8APKEAHWX9-2_cm_0
+  node_01K5S62X3D2SC0FE8APKEAHWX9-2 -.-> node_01K5S62X3D2SC0FE8APKEAHWX9-2_cm_1
+  node_01K5S62X3D2SC0FE8APKEAHWX9 -.-> node_01K5S62X3D2SC0FE8APKEAHWX9-3
+  node_01K5S62X3D2SC0FE8APKEAHWX9-3 -.-> node_01K5S62X3D2SC0FE8APKEAHWX9-3_cm_0
+  node_01K5S62X3D2SC0FE8APKEAHWX9-3 -.-> node_01K5S62X3D2SC0FE8APKEAHWX9-3_cm_1
+  node_01K5S62X3D2SC0FE8APKEAHWX9 -.-> node_01K5S62X3D2SC0FE8APKEAHWX9_cm_0
+  node_01K5S62X3D2SC0FE8APKEAHWX9 -.-> node_01K5S62X3D2SC0FE8APKEAHWX9_cm_1
+
+  classDef andNode fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef orNode fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef highRisk fill:#FF4C4C,color:#F5F7FA,stroke:#FF4C4C,stroke-width:2px
+  classDef mediumRisk fill:#FFD300,stroke:#FFD300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#A259FF,stroke:#c3a4ff,stroke-width:1px,stroke-dasharray:3 3,color:#F5F7FA
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

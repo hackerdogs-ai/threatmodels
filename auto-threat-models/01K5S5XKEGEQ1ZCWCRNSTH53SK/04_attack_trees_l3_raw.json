@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "id": "01K5S62X3D2SC0FE8APKEAHWX9",
+    "title": "Attack Tree for Unauthorized Access to Control Plane",
+    "description": "This attack tree outlines the potential paths an attacker could take to gain unauthorized access to the Control Plane of the Azure Local Integration Project.",
+    "author": "Threat Modeling Expert",
+    "version": "1.0",
+    "created": "2025-09-22 17:03:33+00:00",
+    "last_updated": "2025-09-22 17:04:02.854909",
+    "framework_references": [
+      {
+        "framework": "MITRE ATT&CK",
+        "id": "T1078",
+        "name": "Valid Accounts"
+      },
+      {
+        "framework": "MITRE ATT&CK",
+        "id": "T1190",
+        "name": "Exploit Public-Facing Application"
+      }
+    ]
+  },
+  "tree": {
+    "id": "01K5S62X3D2SC0FE8APKEAHWX9",
+    "description": "Unauthorized access to the Control Plane can lead to management of resources and configurations.",
+    "type": "OR",
+    "mitre_attack": {
+      "tactic": "Initial Access",
+      "technique_id": "T1078",
+      "technique_name": "Valid Accounts"
+    },
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 9.0,
+      "cost_to_attacker": 3.0,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K5S62X3D2SC0FE8APKEAHWX9-1",
+        "description": "Phishing for Credentials",
+        "type": "OR",
+        "mitre_attack": {
+          "tactic": "Initial Access",
+          "technique_id": "T1566",
+          "technique_name": "Phishing"
+        },
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": 2.0,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement multi-factor authentication (MFA) for all accounts.",
+            "mitre_mitigation_id": "M1032",
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Conduct regular security awareness training for users.",
+            "mitre_mitigation_id": "M1036",
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K5S62X3D2SC0FE8APKEAHWX9-2",
+        "description": "Brute Force Attack on Credentials",
+        "type": "OR",
+        "mitre_attack": {
+          "tactic": "Credential Access",
+          "technique_id": "T1110",
+          "technique_name": "Brute Force"
+        },
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 7.0,
+          "cost_to_attacker": 4.0,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Limit login attempts and implement account lockout policies.",
+            "mitre_mitigation_id": "M1033",
+            "effectiveness": 0.85
+          },
+          {
+            "description": "Use complex password policies to enhance password strength.",
+            "mitre_mitigation_id": "M1034",
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K5S62X3D2SC0FE8APKEAHWX9-3",
+        "description": "Exploitation of Vulnerabilities in Control Plane Interfaces",
+        "type": "OR",
+        "mitre_attack": {
+          "tactic": "Exploitation",
+          "technique_id": "T1190",
+          "technique_name": "Exploit Public-Facing Application"
+        },
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 9.0,
+          "cost_to_attacker": 5.0,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Regularly update and patch all software components.",
+            "mitre_mitigation_id": "M1035",
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Conduct regular vulnerability assessments and penetration testing.",
+            "mitre_mitigation_id": "M1037",
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement strict access controls and role-based access management.",
+        "mitre_mitigation_id": "M1038",
+        "effectiveness": 0.9
+      },
+      {
+        "description": "Enable logging and monitoring of access attempts to the Control Plane.",
+        "mitre_mitigation_id": "M1040",
+        "effectiveness": 0.8
+      }
+    ],
+    "references": []
+  }
+}
