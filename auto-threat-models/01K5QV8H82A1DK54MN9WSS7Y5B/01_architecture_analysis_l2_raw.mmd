@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_GitHub_API_Interaction, "GitHub API Interaction") {
+        System(GitHub_Repositories, "GitHub Repositories | [GitHub API] | Auth: OAuth tokens | 🔒 | ⚠️", "Source of repository data organized by programming topics.")
+        System(Python_Scripts, "Python Scripts | [Python] | Auth: None | 🔒 | ⚠️", "Scripts for fetching and processing repository data.")
+    }
+    System_Boundary(tb_Data_Storage_and_Access, "Data Storage and Access") {
+        SystemDb(JSON_Files, "JSON Files | [JSON] | Auth: File system permissions | 🔒 | ⚠️", "Storage format for curated repository metadata.")
+        SystemDb(Configuration_File, "Configuration File | [JSON] | Auth: File system permissions | 🔒 | ⚠️", "Defines topics, search terms, and settings for updates.")
+    }
+    System(GitHub_Actions, "GitHub Actions | [GitHub Actions] | Auth: GitHub token | 🔒 | ⚠️", "CI/CD tool for automating updates of repository lists.")
+
+    Rel(GitHub_Repositories, JSON_Files, "HTTPS | repository metadata | Auth: required | 🔒 | ⚠️")
+    Rel(Python_Scripts, JSON_Files, "file system | updated repository lists | ⚠️")
+    Rel(GitHub_Actions, GitHub_Repositories, "HTTPS | update triggers | Auth: required | 🔒 | ⚠️")
