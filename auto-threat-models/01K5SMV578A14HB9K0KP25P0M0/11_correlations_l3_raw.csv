@@ -1,0 +1,15 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both the Hybrid Azure Local Architecture and the Cloud-Native Application Security model share threats related to unauthorized access and data tampering.,,,,2025-09-22T21:29:08.556881
+CORR_002,,,,Mitigations for session hijacking and insufficient logging are shared across the Azure Virtual Desktop and traditional VDI models.,,,,2025-09-22T21:29:08.556900
+CORR_003,,,,Attack patterns related to denial of service are common across both the Hybrid Azure Local Architecture and on-premises data centers.,,,,2025-09-22T21:29:08.556908
+CORR_004,,,,Both the Hybrid Azure Local Architecture and the Financial Services Compliance model have overlapping compliance requirements related to data protection.,,,,2025-09-22T21:29:08.556917
+CORR_005,,,,"The technology stacks of the Hybrid Azure Local Architecture and the Kubernetes Security Framework share common components, leading to similar vulnerabilities.",,,,2025-09-22T21:29:08.556925
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,Repeated incidents of unauthorized access attempts across multiple threat models indicate a systemic issue with access controls.,high,,2025-09-22T21:29:08.556939
+PATTERN_002,,Frequent data tampering incidents highlight vulnerabilities in data handling processes.,medium,,2025-09-22T21:29:08.556946
+PATTERN_003,,Common vulnerabilities related to session hijacking across remote access technologies.,high,,2025-09-22T21:29:08.556953
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-22T21:29:08.556974
+OPP_002,,,,,,2025-09-22T21:29:08.556980
