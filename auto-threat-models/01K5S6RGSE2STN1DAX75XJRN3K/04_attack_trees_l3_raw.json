@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "id": "01K5S6W6868A1NP35XK2EZWQ8",
+    "title": "Attack Tree for Unauthorized Access to Control Plane",
+    "description": "This attack tree outlines the potential paths and techniques for gaining unauthorized access to the Control Plane of the Azure Local Hybrid Deployment Architecture.",
+    "author": "Threat Modeling Expert",
+    "version": "1.0",
+    "created": "2025-09-22 17:30:00+00:00",
+    "last_updated": "2025-09-22 17:17:45.979280",
+    "framework_references": [
+      {
+        "framework": "MITRE ATT&CK",
+        "id": "T1078",
+        "name": "Valid Accounts"
+      },
+      {
+        "framework": "MITRE ATT&CK",
+        "id": "T1203",
+        "name": "Exploitation for Client Execution"
+      }
+    ]
+  },
+  "tree": {
+    "id": "01K5S6W6868A1NP35XK2EZWQ9",
+    "description": "Unauthorized access to the Control Plane can lead to significant security breaches and resource manipulation.",
+    "type": "OR",
+    "mitre_attack": {
+      "tactic": "Initial Access",
+      "technique_id": "T1078",
+      "technique_name": "Valid Accounts"
+    },
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 9.0,
+      "cost_to_attacker": 3.0,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K5S6W6868A1NP35XK2EZWQ10",
+        "description": "Phishing for credentials",
+        "type": "OR",
+        "mitre_attack": {
+          "tactic": "Initial Access",
+          "technique_id": "T1566",
+          "technique_name": "Phishing"
+        },
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 9.0,
+          "cost_to_attacker": 2.0,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement email filtering and user training on phishing awareness.",
+            "mitre_mitigation_id": "M1017",
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K5S6W6868A1NP35XK2EZWQ11",
+        "description": "Exploiting unpatched vulnerabilities",
+        "type": "OR",
+        "mitre_attack": {
+          "tactic": "Exploitation",
+          "technique_id": "T1203",
+          "technique_name": "Exploitation for Client Execution"
+        },
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": 4.0,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Regularly update and patch systems to mitigate vulnerabilities.",
+            "mitre_mitigation_id": "M1033",
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K5S6W6868A1NP35XK2EZWQ12",
+        "description": "Credential stuffing attacks using leaked credentials",
+        "type": "OR",
+        "mitre_attack": {
+          "tactic": "Credential Access",
+          "technique_id": "T1110",
+          "technique_name": "Brute Force"
+        },
+        "risk": {
+          "likelihood": 7.0,
+          "impact": 8.0,
+          "cost_to_attacker": 3.0,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement multi-factor authentication (MFA) for all access points.",
+            "mitre_mitigation_id": "M1032",
+            "effectiveness": 0.95
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Enforce strict access control policies and regular audits of access logs.",
+        "mitre_mitigation_id": "M1031",
+        "effectiveness": 0.85
+      },
+      {
+        "description": "Utilize Azure Active Directory for identity management and conditional access.",
+        "mitre_mitigation_id": "M1041",
+        "effectiveness": 0.9
+      }
+    ],
+    "references": []
+  }
+}
