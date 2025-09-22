@@ -1,0 +1,346 @@
+{
+  "id": "01K5SNYCYGD1SPFWZP7HQBKWAC",
+  "title": null,
+  "overview": "The Azure Local Deployment Architecture integrates on-premises resources with Azure services, enabling the deployment of traditional and containerized applications while ensuring robust management and security through various Azure tools.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages resources and services via Azure portal, Azure CLI, and templates.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI",
+        "ARM Templates"
+      ],
+      "security_considerations": [
+        "Access control policies must be enforced.",
+        "Regular audits of access logs should be conducted."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages metadata and configuration data.",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Misconfiguration risks",
+        "Insufficient access controls"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Local Instance",
+      "type": "backend",
+      "description": "Hosts traditional and non-containerized applications, utilizing Azure Arc for management.",
+      "technology_stack": [
+        "Azure Arc",
+        "Windows Server",
+        "Linux"
+      ],
+      "security_considerations": [
+        "Ensure regular updates and patches.",
+        "Implement network segmentation to isolate instances."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Handles application data and configuration.",
+      "authentication_methods": [
+        "Active Directory",
+        "Local accounts"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "partial",
+      "vulnerabilities": [
+        "Outdated software",
+        "Insecure configurations"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Arc VMs",
+      "type": "infrastructure",
+      "description": "Virtual machines managed through Azure Arc, allowing integration with Azure services.",
+      "technology_stack": [
+        "Azure Arc",
+        "Hyper-V"
+      ],
+      "security_considerations": [
+        "Implement VM isolation and segmentation.",
+        "Use Azure Security Center for monitoring."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Processes and stores application data.",
+      "authentication_methods": [
+        "Azure AD",
+        "SSH keys"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "VM escape vulnerabilities",
+        "Misconfigured security groups"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Hyper-V",
+      "type": "infrastructure",
+      "description": "Virtualization technology for running multiple operating systems on a single physical machine.",
+      "technology_stack": [
+        "Hyper-V"
+      ],
+      "security_considerations": [
+        "Ensure secure boot and shielded VMs.",
+        "Regularly update Hyper-V to mitigate vulnerabilities."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages virtualized workloads.",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Local Security Policies",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Hypervisor vulnerabilities",
+        "Configuration errors"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Kubernetes-based Applications",
+      "type": "backend",
+      "description": "Containerized applications managed through Azure Kubernetes Service (AKS) enabled by Azure Arc.",
+      "technology_stack": [
+        "Azure Kubernetes Service",
+        "Docker"
+      ],
+      "security_considerations": [
+        "Implement network policies for pod communication.",
+        "Use Azure Policy for governance."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Handles containerized application data.",
+      "authentication_methods": [
+        "Kubeconfig",
+        "Service Accounts"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Container vulnerabilities",
+        "Misconfigured RBAC"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Storage Spaces Direct (S2D)",
+      "type": "infrastructure",
+      "description": "Storage solution for pooling and managing storage resources.",
+      "technology_stack": [
+        "Storage Spaces Direct"
+      ],
+      "security_considerations": [
+        "Encrypt sensitive data at rest.",
+        "Implement access controls on storage resources."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Stores application and system data.",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "NTFS permissions",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Data leakage",
+        "Unauthorized access"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Validated Hardware",
+      "type": "infrastructure",
+      "description": "Hardware configurations that meet Azure Local requirements.",
+      "technology_stack": [
+        "Certified Hardware"
+      ],
+      "security_considerations": [
+        "Ensure hardware is sourced from trusted vendors.",
+        "Regularly review hardware security configurations."
+      ],
+      "trust_level": "high",
+      "data_handling": "N/A",
+      "authentication_methods": [
+        "N/A"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "N/A",
+      "vulnerabilities": [
+        "Supply chain vulnerabilities",
+        "Firmware vulnerabilities"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "ToR Switches",
+      "type": "infrastructure",
+      "description": "Top-of-Rack switches facilitating network connectivity between local machines and external networks.",
+      "technology_stack": [
+        "Cisco Nexus",
+        "Arista"
+      ],
+      "security_considerations": [
+        "Implement VLANs for network segmentation.",
+        "Use access control lists (ACLs) to restrict traffic."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Manages network traffic.",
+      "authentication_methods": [
+        "SNMPv3",
+        "802.1X"
+      ],
+      "authorization_model": "ACLs",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Network sniffing",
+        "Unauthorized access"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Corp Firewall",
+      "type": "infrastructure",
+      "description": "Security device managing inbound and outbound traffic to and from the corporate network.",
+      "technology_stack": [
+        "Palo Alto",
+        "Fortinet"
+      ],
+      "security_considerations": [
+        "Regularly update firewall rules.",
+        "Conduct penetration testing to identify weaknesses."
+      ],
+      "trust_level": "high",
+      "data_handling": "Monitors and controls network traffic.",
+      "authentication_methods": [
+        "N/A"
+      ],
+      "authorization_model": "Policy-based",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Misconfigured rules",
+        "Bypass techniques"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "ToR Switches",
+      "data_type": "Application Data",
+      "protocol": "TCP/IP",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data interception",
+        "Man-in-the-middle attacks"
+      ]
+    },
+    {
+      "id": "2",
+      "source": "ToR Switches",
+      "destination": "Corp Firewall",
+      "data_type": "Network Traffic",
+      "protocol": "TCP/IP",
+      "encryption": "no",
+      "authentication": "none",
+      "authorization": "Policy-based",
+      "security_risks": [
+        "Unauthorized access",
+        "Traffic sniffing"
+      ]
+    },
+    {
+      "id": "3",
+      "source": "Corp Firewall",
+      "destination": "External Networks",
+      "data_type": "Internet Traffic",
+      "protocol": "TCP/IP",
+      "encryption": "yes",
+      "authentication": "optional",
+      "authorization": "Policy-based",
+      "security_risks": [
+        "Data leakage",
+        "DDoS attacks"
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises Network",
+      "components": [
+        "Azure Local Instance",
+        "Arc VMs",
+        "Hyper-V"
+      ],
+      "security_controls": [
+        "Firewalls",
+        "Network Segmentation"
+      ],
+      "vulnerabilities": [
+        "Insider threats",
+        "Physical security risks"
+      ],
+      "recommendations": [
+        "Implement strict access controls.",
+        "Conduct regular security audits."
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Cloud Integration Layer",
+      "components": [
+        "Control Plane",
+        "Azure Services"
+      ],
+      "security_controls": [
+        "RBAC",
+        "Encryption"
+      ],
+      "vulnerabilities": [
+        "Misconfiguration",
+        "Data exposure"
+      ],
+      "recommendations": [
+        "Utilize Azure Policy for compliance.",
+        "Regularly review access permissions."
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-22 21:40:43.088625",
+  "updated_at": "2025-09-22 21:40:43.088629"
+}
