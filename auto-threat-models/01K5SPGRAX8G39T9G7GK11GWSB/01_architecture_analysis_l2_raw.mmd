@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_Network, "On-Premises Network") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Hyper-V, Windows Server] | Auth: Windows Authentication | 🔒 | ⚠️", "Hosts virtual machines and traditional applications managed through Hyper-V.")
+        System(Switch_Router_Firewall, "Switch/Router/Firewall | [Cisco Switches, Palo Alto Firewalls] | Auth: N/A | 🔒 | ⚠️", "Manages East/West traffic between local machines and external communications.")
+    }
+    System_Boundary(tb_Cloud_Integration_Layer, "Cloud Integration Layer") {
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure PowerShell] | Auth: Azure AD, OAuth2 | 🔒 | ⚠️", "Central management interface for resource management and monitoring.")
+        System(Azure_Key_Vault, "Azure Key Vault", "Auto-created component: Azure Key Vault")
+    }
+    System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes Service Account, Azure AD integration | 🔒 | ⚠️", "Supports containerized workloads via Azure Kubernetes Service (AKS).")
+    System(Validated_Hardware, "Validated Hardware | [Azure certified hardware] | Auth: N/A | 🔒 | ⚠️", "Includes Azure Local machines and validated nodes for deployment.")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management Data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Key_Vault, "HTTPS | Secrets and Configuration Data | Auth: required | 🔒 | ⚠️")
+    Rel(Control_Plane, Azure_Local_Instance, "HTTPS | Configuration Data | Auth: required | 🔒 | ⚠️")
