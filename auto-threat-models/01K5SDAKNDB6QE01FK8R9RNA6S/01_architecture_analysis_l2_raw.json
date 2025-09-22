@@ -1,0 +1,270 @@
+{
+  "id": "01K5SDCCAWTG8337N6EJB4P9R4",
+  "title": null,
+  "overview": "The architecture for the Hybrid Cloud Integration for Azure Local Environment integrates on-premises resources with Azure services, ensuring a secure and efficient management of hybrid resources. It leverages various technologies including Azure services, Hyper-V, Kubernetes, and Azure Arc, while emphasizing security through a robust control plane and validated hardware configurations.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages resources through Azure Portal, Azure CLI, and tools like Azure Policy and Azure Monitor.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI",
+        "Azure Policy",
+        "Azure Monitor"
+      ],
+      "security_considerations": [
+        "Access control policies",
+        "Audit logging",
+        "Role-based access control"
+      ],
+      "trust_level": "high",
+      "data_handling": "Management data for resources",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-based access control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Misconfiguration risks",
+        "Insufficient logging"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Local Instance",
+      "type": "infrastructure",
+      "description": "Hosts traditional VMs and Kubernetes-based applications.",
+      "technology_stack": [
+        "Azure Virtual Desktop",
+        "Azure Kubernetes Service (AKS)"
+      ],
+      "security_considerations": [
+        "Network segmentation",
+        "Isolation of workloads"
+      ],
+      "trust_level": "high",
+      "data_handling": "Application and user data",
+      "authentication_methods": [
+        "Azure Active Directory",
+        "Kubernetes RBAC"
+      ],
+      "authorization_model": "Role-based access control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Container vulnerabilities",
+        "VM vulnerabilities"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Hyper-V",
+      "type": "infrastructure",
+      "description": "Virtualization technology for running traditional applications.",
+      "technology_stack": [
+        "Hyper-V"
+      ],
+      "security_considerations": [
+        "Isolation of VMs",
+        "Secure boot"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Virtual machine data",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Windows ACLs",
+      "encryption_status": "partial",
+      "vulnerabilities": [
+        "Hypervisor vulnerabilities",
+        "VM escape risks"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Arc VMs",
+      "type": "infrastructure",
+      "description": "Virtual machines managed through Azure Arc for hybrid resource management.",
+      "technology_stack": [
+        "Azure Arc"
+      ],
+      "security_considerations": [
+        "Unified management",
+        "Access control"
+      ],
+      "trust_level": "high",
+      "data_handling": "Managed VM data",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-based access control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Integration risks",
+        "Access control misconfigurations"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Validated Hardware",
+      "type": "infrastructure",
+      "description": "Specific hardware configurations validated for Azure Local, supporting 1 to 16 machines.",
+      "technology_stack": [
+        "Validated hardware configurations"
+      ],
+      "security_considerations": [
+        "Hardware security modules",
+        "Firmware updates"
+      ],
+      "trust_level": "high",
+      "data_handling": "Hardware management data",
+      "authentication_methods": [
+        "N/A"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Hardware vulnerabilities",
+        "Supply chain risks"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Switch/Router/Firewall",
+      "type": "infrastructure",
+      "description": "Manages East/West traffic between local machines and external communications.",
+      "technology_stack": [
+        "Firewalls",
+        "Routers",
+        "Switches"
+      ],
+      "security_considerations": [
+        "Traffic monitoring",
+        "Access control lists"
+      ],
+      "trust_level": "high",
+      "data_handling": "Network traffic data",
+      "authentication_methods": [
+        "N/A"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Network attacks",
+        "Misconfigured firewalls"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "Control Plane",
+      "data_type": "Management data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data interception",
+        "Unauthorized access"
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Control Plane",
+      "destination": "Azure Local Instance",
+      "data_type": "Configuration data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data tampering",
+        "Unauthorized configuration changes"
+      ]
+    },
+    {
+      "id": "3",
+      "source": "Azure Local Instance",
+      "destination": "Corporate Firewall",
+      "data_type": "Outbound traffic",
+      "protocol": "TCP/UDP",
+      "encryption": "partial",
+      "authentication": "optional",
+      "authorization": "N/A",
+      "security_risks": [
+        "Data leakage",
+        "Malware exfiltration"
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises Environment",
+      "components": [
+        "Azure Local Instance",
+        "Hyper-V",
+        "Arc VMs"
+      ],
+      "security_controls": [
+        "Network segmentation",
+        "Access controls"
+      ],
+      "vulnerabilities": [
+        "Insider threats",
+        "Physical security risks"
+      ],
+      "recommendations": [
+        "Implement strict access controls",
+        "Regularly audit physical security"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Environment",
+      "components": [
+        "Control Plane",
+        "Azure Services"
+      ],
+      "security_controls": [
+        "RBAC",
+        "Encryption at rest and in transit"
+      ],
+      "vulnerabilities": [
+        "Misconfiguration",
+        "Account compromise"
+      ],
+      "recommendations": [
+        "Regularly review access permissions",
+        "Implement multi-factor authentication"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-22 19:11:04.028363",
+  "updated_at": "2025-09-22 19:11:04.028367"
+}
