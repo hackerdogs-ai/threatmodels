@@ -1,0 +1,15 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both threat models identify unauthorized access as a critical threat, highlighting the need for robust authentication mechanisms.",,,,2025-09-22T16:38:32.065729
+CORR_002,,,,Both models emphasize the importance of encryption for data in transit and at rest.,,,,2025-09-22T16:38:32.065740
+CORR_003,,,,Both models recognize the risk of misconfigured firewall rules leading to unauthorized access.,,,,2025-09-22T16:38:32.065747
+CORR_004,,,,"Both models align with compliance frameworks such as GDPR and HIPAA, emphasizing data protection and privacy.",,,,2025-09-22T16:38:32.065753
+CORR_005,,,,"Both models utilize Azure services, indicating shared vulnerabilities associated with the Azure platform.",,,,2025-09-22T16:38:32.065759
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,"Unauthorized access incidents are frequently reported across multiple threat models, indicating a common vulnerability.",high,,2025-09-22T16:38:32.065769
+PATTERN_002,,"Data interception during transmission is a recurring threat across various models, highlighting the need for encryption.",medium,,2025-09-22T16:38:32.065776
+PATTERN_003,,"Misconfigurations in firewall and security settings are common across threat models, necessitating regular audits.",high,,2025-09-22T16:38:32.065783
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-22T16:38:32.065803
+OPP_002,,,,,,2025-09-22T16:38:32.065808
