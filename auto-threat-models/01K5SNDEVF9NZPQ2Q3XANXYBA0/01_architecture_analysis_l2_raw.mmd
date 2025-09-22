@@ -1,0 +1,12 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure_Integration, "On-Premises to Azure Integr...") {
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Backup (+2)] | Auth: Azure Active Directory, Multi-Factor Authentication | 🔒 | ⚠️", "Manages resources through Azure Portal, Azure CLI, and various Azure services.")
+        System(Azure_Local_Instance, "Azure Local Instance | [Hyper-V, Windows Server] | Auth: Windows Authentication, Active Directory | 🔒 | ⚠️", "Hosts traditional applications and virtual machines managed through Hyper-V.")
+        System(Corporate_Firewall, "Corporate Firewall | [Next-Generation Firewall] | Auth: N/A | 🔒 | ⚠️", "Provides a security layer for outbound traffic.")
+    }
+    System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Azure Active Directory integration | 🔒 | ⚠️", "Facilitates containerized workloads using Azure Kubernetes Service (AKS).")
+    System(Validated_Hardware, "Validated Hardware | [ToR Switches, Azure Stack Hardware] | Auth: N/A | 🔒 | ⚠️", "Consists of Azure Local machines connected through ToR switches.")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management and Monitoring Data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Control_Plane, "HTTPS | Application Metrics and Logs | Auth: required | 🔒 | ⚠️")

@@ -1,0 +1,216 @@
+{
+  "id": "01K5SNEJ0PMHS2K5Q7SRD939XZ",
+  "title": null,
+  "overview": "The Hybrid Azure Local Integration architecture provides a robust framework for integrating on-premises resources with Azure services, emphasizing security, scalability, and efficient management of both traditional and containerized applications.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages resources through Azure Portal, Azure CLI, and various Azure services.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI",
+        "Azure Backup",
+        "Azure Monitor",
+        "Microsoft Defender for Cloud"
+      ],
+      "security_considerations": [
+        "Access controls to the Azure Portal must be strictly managed.",
+        "Regular audits of Azure CLI usage.",
+        "Integration with Microsoft Defender for Cloud for threat detection."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages metadata and configurations for resources.",
+      "authentication_methods": [
+        "Azure Active Directory",
+        "Multi-Factor Authentication"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "Data at rest and in transit is encrypted.",
+      "vulnerabilities": [
+        "Misconfiguration of access controls",
+        "Insufficient monitoring of resource usage"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Local Instance",
+      "type": "backend",
+      "description": "Hosts traditional applications and virtual machines managed through Hyper-V.",
+      "technology_stack": [
+        "Hyper-V",
+        "Windows Server"
+      ],
+      "security_considerations": [
+        "Ensure Hyper-V is updated with the latest patches.",
+        "Implement network isolation for VMs."
+      ],
+      "trust_level": "high",
+      "data_handling": "Processes and stores application data.",
+      "authentication_methods": [
+        "Windows Authentication",
+        "Active Directory"
+      ],
+      "authorization_model": "Active Directory Groups",
+      "encryption_status": "Data at rest is encrypted using BitLocker.",
+      "vulnerabilities": [
+        "VM escape attacks",
+        "Insufficient isolation between VMs"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Kubernetes-based Applications",
+      "type": "backend",
+      "description": "Facilitates containerized workloads using Azure Kubernetes Service (AKS).",
+      "technology_stack": [
+        "Azure Kubernetes Service",
+        "Docker"
+      ],
+      "security_considerations": [
+        "Implement network policies to control traffic between pods.",
+        "Use Azure Policy for compliance enforcement."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Handles containerized application data.",
+      "authentication_methods": [
+        "Kubernetes RBAC",
+        "Azure Active Directory integration"
+      ],
+      "authorization_model": "Kubernetes RBAC",
+      "encryption_status": "Secrets and configurations are encrypted.",
+      "vulnerabilities": [
+        "Container vulnerabilities",
+        "Misconfigured RBAC settings"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Validated Hardware",
+      "type": "infrastructure",
+      "description": "Consists of Azure Local machines connected through ToR switches.",
+      "technology_stack": [
+        "ToR Switches",
+        "Azure Stack Hardware"
+      ],
+      "security_considerations": [
+        "Physical security measures for hardware.",
+        "Regular firmware updates for switches."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles network traffic between components.",
+      "authentication_methods": [
+        "N/A"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "N/A",
+      "vulnerabilities": [
+        "Physical tampering",
+        "Firmware vulnerabilities"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Corporate Firewall",
+      "type": "infrastructure",
+      "description": "Provides a security layer for outbound traffic.",
+      "technology_stack": [
+        "Next-Generation Firewall"
+      ],
+      "security_considerations": [
+        "Regularly update firewall rules based on threat intelligence.",
+        "Implement logging and monitoring for outbound traffic."
+      ],
+      "trust_level": "high",
+      "data_handling": "Controls and monitors outbound traffic.",
+      "authentication_methods": [
+        "N/A"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "N/A",
+      "vulnerabilities": [
+        "Misconfigured rules",
+        "Bypassing firewall policies"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "Control Plane",
+      "data_type": "Management and Monitoring Data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data interception during transmission",
+        "Unauthorized access to management data"
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Kubernetes-based Applications",
+      "destination": "Control Plane",
+      "data_type": "Application Metrics and Logs",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data leakage through logs",
+        "Insecure API access"
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises to Azure Integration",
+      "components": [
+        "Control Plane",
+        "Azure Local Instance",
+        "Corporate Firewall"
+      ],
+      "security_controls": [
+        "Firewalls",
+        "Network Segmentation",
+        "Access Controls"
+      ],
+      "vulnerabilities": [
+        "Misconfigured firewall rules",
+        "Insufficient monitoring"
+      ],
+      "recommendations": [
+        "Regularly review and update firewall rules.",
+        "Implement a centralized logging solution for monitoring traffic."
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-22 21:32:03.990501",
+  "updated_at": "2025-09-22 21:32:03.990506"
+}
