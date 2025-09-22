@@ -1,0 +1,17 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure_Cloud, "On-Premises to Azure Cloud") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Hyper-V, Windows Server] | Auth: Windows Authentication | 🔒 | ⚠️", "Hosts traditional applications and virtual machines managed through Hyper-V.")
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Backup (+1)] | Auth: Azure Active Directory | 🔒 | ⚠️", "Management interfaces including Azure Portal, Azure CLI, and Azure services for monitoring and backup.")
+    }
+    System_Boundary(tb_Kubernetes_Cluster, "Kubernetes Cluster") {
+        System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Azure AD integration | 🔒 | ⚠️", "Containerized applications deployed using Azure Kubernetes Service (AKS).")
+    }
+    System(Validated_Hardware, "Validated Hardware | [Azure Local hardware, ToR switches] | Auth: N/A | 🔒 | ⚠️", "Includes Azure Local machines and ToR switches for network connectivity.")
+    System(Corp_Firewall, "Corp Firewall | [Next-Generation Firewall] | Auth: N/A | 🔒 | ⚠️", "Provides security by controlling outbound access to required URL endpoints.")
+    System(Azure_Monitor, "Azure Monitor", "Auto-created component: Azure Monitor")
+    System(Internet, "Internet", "Auto-created component: Internet")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Monitor, "HTTPS | Application logs | Auth: required | 🔒 | ⚠️")
+    Rel(Corp_Firewall, Internet, "Various | Outbound traffic | ⚠️")
