@@ -1,0 +1,245 @@
+{
+  "id": "01K5S5ZFBCGKF7XCM20NWKKSES",
+  "title": null,
+  "overview": "The Azure Local Integration Project architecture integrates on-premises resources with Azure services, focusing on a robust control plane, virtualization, container orchestration, and secure networking. This architecture is designed to ensure high availability, security, and compliance with industry regulations.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages resources using Azure Portal, Azure CLI, Azure Policy, and Azure Monitor.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI",
+        "Azure Policy",
+        "Azure Monitor"
+      ],
+      "security_considerations": [
+        "Access controls must be enforced to limit management access.",
+        "Regular audits of Azure Policy configurations."
+      ],
+      "trust_level": "high",
+      "data_handling": "Management data and configurations.",
+      "authentication_methods": [
+        "Azure AD"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Misconfiguration risks",
+        "Insufficient access controls"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Local Instance",
+      "type": "backend",
+      "description": "Hosts virtual machines (Arc VMs) and traditional applications using Hyper-V.",
+      "technology_stack": [
+        "Hyper-V",
+        "Windows Server"
+      ],
+      "security_considerations": [
+        "Ensure Hyper-V is regularly patched.",
+        "Use network segmentation to isolate VMs."
+      ],
+      "trust_level": "high",
+      "data_handling": "Application data and VM states.",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Local User Accounts",
+      "encryption_status": "partial",
+      "vulnerabilities": [
+        "VM escape",
+        "Insecure configurations"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Kubernetes-based Applications",
+      "type": "backend",
+      "description": "Supports containerized workloads through Azure Kubernetes Service (AKS) enabled by Azure Arc.",
+      "technology_stack": [
+        "Azure Kubernetes Service",
+        "Docker"
+      ],
+      "security_considerations": [
+        "Implement network policies to control traffic between pods.",
+        "Use Azure Policy for Kubernetes to enforce security standards."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Containerized application data.",
+      "authentication_methods": [
+        "Service Accounts",
+        "Azure AD"
+      ],
+      "authorization_model": "RBAC in Kubernetes",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Container vulnerabilities",
+        "Insecure APIs"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Validated Hardware",
+      "type": "infrastructure",
+      "description": "Includes Azure Local machines and validated nodes for Azure Local, ensuring compatibility and performance.",
+      "technology_stack": [
+        "Azure Local Hardware"
+      ],
+      "security_considerations": [
+        "Regularly verify hardware integrity.",
+        "Implement physical security controls."
+      ],
+      "trust_level": "high",
+      "data_handling": "Hardware configurations and performance metrics.",
+      "authentication_methods": [
+        "Physical access controls"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Physical tampering",
+        "Supply chain risks"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Networking",
+      "type": "infrastructure",
+      "description": "Comprises switches/routers/firewalls to manage East/West traffic and external communications.",
+      "technology_stack": [
+        "ToR Switches",
+        "Firewalls"
+      ],
+      "security_considerations": [
+        "Implement firewall rules to restrict traffic.",
+        "Use VPNs for secure remote access."
+      ],
+      "trust_level": "high",
+      "data_handling": "Network traffic data.",
+      "authentication_methods": [
+        "802.1X",
+        "VPN Authentication"
+      ],
+      "authorization_model": "Access Control Lists (ACLs)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Network eavesdropping",
+        "DDoS attacks"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "Control Plane",
+      "data_type": "Management data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data interception",
+        "Unauthorized access"
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Control Plane",
+      "destination": "Kubernetes-based Applications",
+      "data_type": "Configuration data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Configuration tampering",
+        "Data leakage"
+      ]
+    },
+    {
+      "id": "3",
+      "source": "Kubernetes-based Applications",
+      "destination": "Networking",
+      "data_type": "Application traffic",
+      "protocol": "HTTP/HTTPS",
+      "encryption": "yes",
+      "authentication": "optional",
+      "authorization": "N/A",
+      "security_risks": [
+        "Insecure traffic",
+        "Man-in-the-middle attacks"
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises Network",
+      "components": [
+        "Azure Local Instance",
+        "Networking"
+      ],
+      "security_controls": [
+        "Firewalls",
+        "Network Segmentation"
+      ],
+      "vulnerabilities": [
+        "Insider threats",
+        "External attacks"
+      ],
+      "recommendations": [
+        "Implement strict access controls.",
+        "Regularly update firewall rules."
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Cloud Integration Layer",
+      "components": [
+        "Control Plane",
+        "Kubernetes-based Applications"
+      ],
+      "security_controls": [
+        "Encryption in transit",
+        "Access Control Lists"
+      ],
+      "vulnerabilities": [
+        "Data interception",
+        "Misconfigured access controls"
+      ],
+      "recommendations": [
+        "Conduct regular security audits.",
+        "Implement logging and monitoring for access attempts."
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-22 17:01:41.100953",
+  "updated_at": "2025-09-22 17:01:41.100958"
+}
