@@ -1,0 +1,313 @@
+{
+  "id": "01K5QVX1M75YXPB8PXTSSHCBPW",
+  "title": null,
+  "overview": "The scalable e-commerce microservices platform is designed for high availability and fault tolerance, leveraging a microservices architecture with various services for user management, product management, order processing, and notifications. Security is a primary focus, with multiple layers of protection implemented across the architecture.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "API Gateway",
+      "type": "api",
+      "description": "Single entry point for client requests, managing authentication, request routing, load balancing, and rate limiting.",
+      "technology_stack": [
+        "Kong"
+      ],
+      "security_considerations": [
+        "Validates JWT tokens for authentication.",
+        "Implements rate limiting to prevent abuse.",
+        "Uses TLS 1.3 for secure communication."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles user requests and routes them to appropriate services.",
+      "authentication_methods": [
+        "JWT"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "enabled",
+      "vulnerabilities": [
+        "Potential for DDoS attacks if not properly configured."
+      ]
+    },
+    {
+      "id": "2",
+      "name": "User Service",
+      "type": "backend",
+      "description": "Manages user registration, authentication, profile management, and session handling.",
+      "technology_stack": [
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "security_considerations": [
+        "Uses bcrypt for password hashing.",
+        "Implements session management with secure cookies.",
+        "Regular security audits for vulnerabilities."
+      ],
+      "trust_level": "high",
+      "data_handling": "Stores user data including PII.",
+      "authentication_methods": [
+        "JWT",
+        "session cookies"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "enabled (at rest)",
+      "vulnerabilities": [
+        "Injection attacks if input validation is not rigorous."
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Product Service",
+      "type": "backend",
+      "description": "Handles product catalog management, inventory tracking, and search functionalities.",
+      "technology_stack": [
+        "Java Spring Boot",
+        "PostgreSQL"
+      ],
+      "security_considerations": [
+        "Input validation to prevent SQL injection.",
+        "Database encryption at rest.",
+        "Access controls based on user roles."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Manages product data and inventory information.",
+      "authentication_methods": [
+        "JWT"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "enabled (at rest)",
+      "vulnerabilities": [
+        "Potential for data leakage if access controls are misconfigured."
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Order Service",
+      "type": "backend",
+      "description": "Processes orders, integrates payments, tracks order statuses, and updates inventory.",
+      "technology_stack": [
+        "Python",
+        "Django",
+        "MySQL"
+      ],
+      "security_considerations": [
+        "Uses HTTPS for secure data transmission.",
+        "Validates payment information to prevent fraud.",
+        "Regularly updates dependencies to mitigate vulnerabilities."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles sensitive payment and order information.",
+      "authentication_methods": [
+        "JWT"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "enabled (at rest)",
+      "vulnerabilities": [
+        "Risk of payment fraud if not properly secured."
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Notification Service",
+      "type": "backend",
+      "description": "Manages email notifications, SMS alerts, and push notifications in an event-driven manner.",
+      "technology_stack": [
+        "Go",
+        "RabbitMQ"
+      ],
+      "security_considerations": [
+        "Ensures secure message transmission using TLS.",
+        "Validates message sources to prevent spoofing.",
+        "Logs all notification events for auditing."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Handles user notification preferences and messages.",
+      "authentication_methods": [
+        "Token-based authentication"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "enabled (in transit)",
+      "vulnerabilities": [
+        "Message interception if not properly secured."
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Container Orchestration",
+      "type": "infrastructure",
+      "description": "Manages deployment, scaling, and operation of application containers across clusters.",
+      "technology_stack": [
+        "Kubernetes",
+        "Docker",
+        "Istio"
+      ],
+      "security_considerations": [
+        "Network policies to control traffic between pods.",
+        "Role-based access control for Kubernetes resources.",
+        "Regular updates to container images to mitigate vulnerabilities."
+      ],
+      "trust_level": "high",
+      "data_handling": "Orchestrates microservices and manages their lifecycle.",
+      "authentication_methods": [
+        "Kubernetes RBAC"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "enabled (in transit)",
+      "vulnerabilities": [
+        "Misconfiguration can lead to unauthorized access."
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Cloud Provider",
+      "type": "infrastructure",
+      "description": "Provides cloud infrastructure for hosting and scaling the application.",
+      "technology_stack": [
+        "AWS",
+        "EKS"
+      ],
+      "security_considerations": [
+        "Utilizes VPC isolation and security groups.",
+        "Implements IAM roles for fine-grained access control.",
+        "Regular security audits of cloud configurations."
+      ],
+      "trust_level": "high",
+      "data_handling": "Hosts all microservices and databases.",
+      "authentication_methods": [
+        "IAM roles"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "enabled (at rest and in transit)",
+      "vulnerabilities": [
+        "Misconfigured IAM roles can lead to data breaches."
+      ]
+    },
+    {
+      "id": "8",
+      "name": "CI/CD Pipeline",
+      "type": "infrastructure",
+      "description": "Automates the deployment of applications and infrastructure changes.",
+      "technology_stack": [
+        "GitLab",
+        "ArgoCD"
+      ],
+      "security_considerations": [
+        "Ensures code is scanned for vulnerabilities before deployment.",
+        "Uses secrets management for sensitive information.",
+        "Enforces approval workflows for deployments."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Manages application code and deployment configurations.",
+      "authentication_methods": [
+        "OAuth2"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "enabled (for sensitive data)",
+      "vulnerabilities": [
+        "Potential for unauthorized code changes if not properly secured."
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Monitoring Tools",
+      "type": "infrastructure",
+      "description": "Tools for monitoring application performance and security events.",
+      "technology_stack": [
+        "CloudWatch",
+        "Prometheus",
+        "Grafana"
+      ],
+      "security_considerations": [
+        "Monitors for unusual activity and alerts security teams.",
+        "Logs security events for auditing.",
+        "Ensures access to monitoring data is restricted."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Collects logs and metrics from all services.",
+      "authentication_methods": [
+        "API keys"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "enabled (in transit)",
+      "vulnerabilities": [
+        "Exposure of sensitive logs if not properly secured."
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Logging Infrastructure",
+      "type": "infrastructure",
+      "description": "Centralized logging solution for aggregating logs from all microservices.",
+      "technology_stack": [
+        "ELK stack"
+      ],
+      "security_considerations": [
+        "Ensures logs are stored securely and access is controlled.",
+        "Regularly audits logs for suspicious activity.",
+        "Encrypts sensitive log data."
+      ],
+      "trust_level": "high",
+      "data_handling": "Aggregates logs from all services for analysis.",
+      "authentication_methods": [
+        "Basic Auth"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "enabled (at rest)",
+      "vulnerabilities": [
+        "Log injection attacks if not properly sanitized."
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Client",
+      "destination": "API Gateway",
+      "data_type": "User requests",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Man-in-the-middle attacks if TLS is not enforced."
+      ]
+    },
+    {
+      "id": "2",
+      "source": "API Gateway",
+      "destination": "User Service",
+      "data_type": "User data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data leakage if access controls are misconfigured."
+      ]
+    }
+  ],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-22 04:46:21.319646",
+  "updated_at": "2025-09-22 04:46:21.319654"
+}

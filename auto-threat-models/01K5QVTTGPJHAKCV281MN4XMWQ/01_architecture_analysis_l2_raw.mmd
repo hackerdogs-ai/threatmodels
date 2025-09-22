@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(API_Gateway, "API Gateway | [Kong] | Auth: JWT | 🔒 | ⚠️", "Single entry point for client requests, managing authentication, request routing, load balancing, and rate limiting.")
+    System(User_Service, "User Service | [Node.js, Express, MongoDB] | Auth: JWT, session cookies | 🔒 | ⚠️", "Manages user registration, authentication, profile management, and session handling.")
+    System(Product_Service, "Product Service | [Java Spring Boot, PostgreSQL] | Auth: JWT | 🔒 | ⚠️", "Handles product catalog management, inventory tracking, and search functionalities.")
+    System(Order_Service, "Order Service | [Python, Django, MySQL] | Auth: JWT | 🔒 | ⚠️", "Processes orders, integrates payments, tracks order statuses, and updates inventory.")
+    System(Notification_Service, "Notification Service | [Go, RabbitMQ] | Auth: Token-based authentication | 🔒 | ⚠️", "Manages email notifications, SMS alerts, and push notifications in an event-driven manner.")
+    System(Container_Orchestration, "Container Orchestration | [Kubernetes, Docker, Istio] | Auth: Kubernetes RBAC | 🔒 | ⚠️", "Manages deployment, scaling, and operation of application containers across clusters.")
+    System(Cloud_Provider, "Cloud Provider | [AWS, EKS] | Auth: IAM roles | 🔒 | ⚠️", "Provides cloud infrastructure for hosting and scaling the application.")
+    System(CI_CD_Pipeline, "CI/CD Pipeline | [GitLab, ArgoCD] | Auth: OAuth2 | 🔒 | ⚠️", "Automates the deployment of applications and infrastructure changes.")
+    System(Monitoring_Tools, "Monitoring Tools | [CloudWatch, Prometheus, Grafana] | Auth: API keys | 🔒 | ⚠️", "Tools for monitoring application performance and security events.")
+    System(Logging_Infrastructure, "Logging Infrastructure | [ELK stack] | Auth: Basic Auth | 🔒 | ⚠️", "Centralized logging solution for aggregating logs from all microservices.")
+    System(Client, "Client", "Auto-created component: Client")
+
+    Rel(Client, API_Gateway, "HTTPS | User requests | Auth: required | 🔒 | ⚠️")
+    Rel(API_Gateway, User_Service, "HTTPS | User data | Auth: required | 🔒 | ⚠️")
