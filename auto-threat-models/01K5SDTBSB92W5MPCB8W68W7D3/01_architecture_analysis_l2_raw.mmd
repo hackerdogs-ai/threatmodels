@@ -1,0 +1,18 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure_Communication, "On-Premises to Azure Commun...") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Hyper-V, Windows Server] | Auth: Active Directory, Local accounts | 🔒 | ⚠️", "Hosts virtual machines (Arc VMs) and traditional applications, utilizing Hyper-V for virtualization.")
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Policy (+1)] | Auth: Azure Active Directory, Multi-Factor Authentication | 🔒 | ⚠️", "Manages resources through Azure Portal, Azure CLI, and tools like Azure Policy and Azure Key Vault.")
+        System(Corporate_Firewall, "Corporate Firewall | [Next-Generation Firewall] | Auth: N/A | 🔒 | ⚠️", "Provides security for outbound access to required URL endpoints.")
+    }
+    System_Boundary(tb_Kubernetes_Environment, "Kubernetes Environment") {
+        System(Kubernetes_Applications, "Kubernetes Applications", "Auto-created component: Kubernetes Applications")
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Policy (+1)] | Auth: Azure Active Directory, Multi-Factor Authentication | 🔒 | ⚠️", "Manages resources through Azure Portal, Azure CLI, and tools like Azure Policy and Azure Key Vault.")
+    }
+    System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Azure AD integration | 🔒 | ⚠️", "Supports containerized applications through Azure Kubernetes Service (AKS) enabled by Azure Arc.")
+    System(Validated_Hardware, "Validated Hardware | [Azure Local machines, Top of Rack switches] | Auth: Physical access controls | 🔒 | ⚠️", "Includes Azure Local machines and ToR switches for network connectivity.")
+    System(Azure_Services, "Azure Services", "Auto-created component: Azure Services")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_Applications, Azure_Services, "HTTPS | Application data | Auth: required | 🔒 | ⚠️")
+    Rel(Control_Plane, Azure_Local_Instance, "HTTPS | Configuration data | Auth: required | 🔒 | ⚠️")
