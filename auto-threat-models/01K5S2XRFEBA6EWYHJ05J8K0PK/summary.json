@@ -1,0 +1,838 @@
+{
+  "run_id": "01K5S2XRFEBA6EWYHJ05J8K0PK",
+  "timestamp": "2025-09-22T09:17:13.088342",
+  "execution_time_secs": 511.75,
+  "total_cost": 0.0558,
+  "total_steps": 13,
+  "successful_steps": 11,
+  "failed_steps": 2,
+  "overall_success": false,
+  "steps": {
+    "architecture_analysis": {
+      "success": false,
+      "cost": 0.004959932552083333,
+      "total_tokens": 3066,
+      "input_tokens": 1066,
+      "output_tokens": 2000,
+      "execution_time_secs": 46.37080407142639,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:09:27.723753",
+        "input_tokens": 1066,
+        "output_tokens": 2000,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.0013598999999999998,
+        "compute_cost_usd": 0.0005,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "architecture_analysis": {
+            "usage": 1,
+            "cost_usd": 0.002,
+            "rate_per_unit": 0.002
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.003,
+        "total_cost_usd": 0.004959932552083333,
+        "price_with_margin_usd": 0.02479966276041667,
+        "credits_burned": 2.479966276041667,
+        "cost_breakdown_percentage": {
+          "llm": 27.417711545871676,
+          "compute": 10.08078224350014,
+          "storage": 0.0006563009273112071,
+          "data_transfer": 2.016156448700028,
+          "features": 60.48469346100084
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 2.479966276041667,
+      "cost_breakdown": {
+        "llm": 27.417711545871676,
+        "compute": 10.08078224350014,
+        "storage": 0.0006563009273112071,
+        "data_transfer": 2.016156448700028,
+        "features": 60.48469346100084
+      },
+      "feature_usage": {
+        "architecture_analysis": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    },
+    "data_flow_diagrams": {
+      "success": true,
+      "cost": 0.003198882552083333,
+      "total_tokens": 2522,
+      "input_tokens": 1143,
+      "output_tokens": 1379,
+      "execution_time_secs": 17.75379514694214,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:09:45.484035",
+        "input_tokens": 1143,
+        "output_tokens": 1379,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.00099885,
+        "compute_cost_usd": 0.0006,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "dfd_generation": {
+            "usage": 1,
+            "cost_usd": 0.0005,
+            "rate_per_unit": 0.0005
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.0015,
+        "total_cost_usd": 0.003198882552083333,
+        "price_with_margin_usd": 0.01599441276041667,
+        "credits_burned": 1.599441276041667,
+        "cost_breakdown_percentage": {
+          "llm": 31.22496633549362,
+          "compute": 18.756549833604815,
+          "storage": 0.0010176079553822059,
+          "data_transfer": 3.1260916389341364,
+          "features": 46.89137458401205
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 1.599441276041667,
+      "cost_breakdown": {
+        "llm": 31.22496633549362,
+        "compute": 18.756549833604815,
+        "storage": 0.0010176079553822059,
+        "data_transfer": 3.1260916389341364,
+        "features": 46.89137458401205
+      },
+      "feature_usage": {
+        "dfd_generation": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    },
+    "threats": {
+      "success": true,
+      "cost": 0.003243532552083333,
+      "total_tokens": 5397,
+      "input_tokens": 3766,
+      "output_tokens": 1631,
+      "execution_time_secs": 29.696908950805664,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:10:15.207871",
+        "input_tokens": 3766,
+        "output_tokens": 1631,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.0015434999999999997,
+        "compute_cost_usd": 0.0006,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.001,
+        "total_cost_usd": 0.003243532552083333,
+        "price_with_margin_usd": 0.016217662760416668,
+        "credits_burned": 1.621766276041667,
+        "cost_breakdown_percentage": {
+          "llm": 47.5870050697843,
+          "compute": 18.498349881354443,
+          "storage": 0.0010035997114450112,
+          "data_transfer": 3.083058313559074,
+          "features": 30.83058313559074
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 1.621766276041667,
+      "cost_breakdown": {
+        "llm": 47.5870050697843,
+        "compute": 18.498349881354443,
+        "storage": 0.0010035997114450112,
+        "data_transfer": 3.083058313559074,
+        "features": 30.83058313559074
+      },
+      "feature_usage": {
+        "threat_modeling": 1.0,
+        "threat_analysis": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    },
+    "attack_trees": {
+      "success": true,
+      "cost": 0.004691432552083333,
+      "total_tokens": 9465,
+      "input_tokens": 8528,
+      "output_tokens": 937,
+      "execution_time_secs": 25.79905390739441,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:10:41.014181",
+        "input_tokens": 8528,
+        "output_tokens": 937,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.0018414,
+        "compute_cost_usd": 0.00075,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "attack_tree_generation": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.002,
+        "total_cost_usd": 0.004691432552083333,
+        "price_with_margin_usd": 0.02345716276041667,
+        "credits_burned": 2.345716276041667,
+        "cost_breakdown_percentage": {
+          "llm": 39.25027120303128,
+          "compute": 15.986588140693748,
+          "storage": 0.0006938623324953883,
+          "data_transfer": 2.1315450854258327,
+          "features": 42.63090170851665
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 2.345716276041667,
+      "cost_breakdown": {
+        "llm": 39.25027120303128,
+        "compute": 15.986588140693748,
+        "storage": 0.0006938623324953883,
+        "data_transfer": 2.1315450854258327,
+        "features": 42.63090170851665
+      },
+      "feature_usage": {
+        "attack_tree_generation": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    },
+    "dread_assessment": {
+      "success": true,
+      "cost": 0.005188882552083333,
+      "total_tokens": 10909,
+      "input_tokens": 8459,
+      "output_tokens": 2450,
+      "execution_time_secs": 51.96036887168884,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:11:32.995906",
+        "input_tokens": 8459,
+        "output_tokens": 2450,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.0027388499999999997,
+        "compute_cost_usd": 0.00055,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "dread_assessment": {
+            "usage": 1,
+            "cost_usd": 0.0008,
+            "rate_per_unit": 0.0008
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.0018,
+        "total_cost_usd": 0.005188882552083333,
+        "price_with_margin_usd": 0.02594441276041667,
+        "credits_burned": 2.594441276041667,
+        "cost_breakdown_percentage": {
+          "llm": 52.783040905413316,
+          "compute": 10.599584678962822,
+          "storage": 0.0006273428432151291,
+          "data_transfer": 1.9271972143568767,
+          "features": 34.68954985842378
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 2.594441276041667,
+      "cost_breakdown": {
+        "llm": 52.783040905413316,
+        "compute": 10.599584678962822,
+        "storage": 0.0006273428432151291,
+        "data_transfer": 1.9271972143568767,
+        "features": 34.68954985842378
+      },
+      "feature_usage": {
+        "dread_assessment": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    },
+    "mitigations": {
+      "success": true,
+      "cost": 0.004610782552083333,
+      "total_tokens": 7146,
+      "input_tokens": 5393,
+      "output_tokens": 1753,
+      "execution_time_secs": 62.812312841415405,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:12:35.817819",
+        "input_tokens": 5393,
+        "output_tokens": 1753,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.0018607499999999998,
+        "compute_cost_usd": 0.0006500000000000001,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "mitigation_analysis": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.002,
+        "total_cost_usd": 0.004610782552083333,
+        "price_with_margin_usd": 0.02305391276041667,
+        "credits_burned": 2.305391276041667,
+        "cost_breakdown_percentage": {
+          "llm": 40.356490009689125,
+          "compute": 14.097390034286143,
+          "storage": 0.0007059991002747467,
+          "data_transfer": 2.168829236044022,
+          "features": 43.37658472088044
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 2.305391276041667,
+      "cost_breakdown": {
+        "llm": 40.356490009689125,
+        "compute": 14.097390034286143,
+        "storage": 0.0007059991002747467,
+        "data_transfer": 2.168829236044022,
+        "features": 43.37658472088044
+      },
+      "feature_usage": {
+        "mitigation_analysis": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    },
+    "test_cases": {
+      "success": true,
+      "cost": 0.005075982552083333,
+      "total_tokens": 11583,
+      "input_tokens": 9053,
+      "output_tokens": 2530,
+      "execution_time_secs": 72.26375603675842,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:13:48.089751",
+        "input_tokens": 9053,
+        "output_tokens": 2530,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.0028759499999999995,
+        "compute_cost_usd": 0.0006,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "test_case_generation": {
+            "usage": 1,
+            "cost_usd": 0.0005,
+            "rate_per_unit": 0.0005
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.0015,
+        "total_cost_usd": 0.005075982552083333,
+        "price_with_margin_usd": 0.025379912760416668,
+        "credits_burned": 2.5379912760416667,
+        "cost_breakdown_percentage": {
+          "llm": 56.65799617099994,
+          "compute": 11.82037159985395,
+          "storage": 0.0006412962022490208,
+          "data_transfer": 1.9700619333089915,
+          "features": 29.550928999634873
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 2.5379912760416667,
+      "cost_breakdown": {
+        "llm": 56.65799617099994,
+        "compute": 11.82037159985395,
+        "storage": 0.0006412962022490208,
+        "data_transfer": 1.9700619333089915,
+        "features": 29.550928999634873
+      },
+      "feature_usage": {
+        "test_case_generation": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    },
+    "security_controls": {
+      "success": false,
+      "cost": 0.005621482552083334,
+      "total_tokens": 12143,
+      "input_tokens": 9143,
+      "output_tokens": 3000,
+      "execution_time_secs": 70.53260612487793,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:14:58.631777",
+        "input_tokens": 9143,
+        "output_tokens": 3000,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.00317145,
+        "compute_cost_usd": 0.00055,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "security_controls": {
+            "usage": 1,
+            "cost_usd": 0.0008,
+            "rate_per_unit": 0.0008
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.0018,
+        "total_cost_usd": 0.005621482552083334,
+        "price_with_margin_usd": 0.028107412760416676,
+        "credits_burned": 2.8107412760416675,
+        "cost_breakdown_percentage": {
+          "llm": 56.41661199899401,
+          "compute": 9.78389588341191,
+          "storage": 0.0005790658074936026,
+          "data_transfer": 1.7788901606203473,
+          "features": 32.02002289116624
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 2.8107412760416675,
+      "cost_breakdown": {
+        "llm": 56.41661199899401,
+        "compute": 9.78389588341191,
+        "storage": 0.0005790658074936026,
+        "data_transfer": 1.7788901606203473,
+        "features": 32.02002289116624
+      },
+      "feature_usage": {
+        "security_controls": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    },
+    "compliance_assessment": {
+      "success": true,
+      "cost": 0.004762382552083333,
+      "total_tokens": 10617,
+      "input_tokens": 9573,
+      "output_tokens": 1044,
+      "execution_time_secs": 29.23206400871277,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:15:27.869367",
+        "input_tokens": 9573,
+        "output_tokens": 1044,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.0020623499999999997,
+        "compute_cost_usd": 0.0006,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "compliance_assessment": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.002,
+        "total_cost_usd": 0.004762382552083333,
+        "price_with_margin_usd": 0.02381191276041667,
+        "credits_burned": 2.381191276041667,
+        "cost_breakdown_percentage": {
+          "llm": 43.30500495172973,
+          "compute": 12.598735894022758,
+          "storage": 0.0006835251678614779,
+          "data_transfer": 2.09978931567046,
+          "features": 41.9957863134092
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 2.381191276041667,
+      "cost_breakdown": {
+        "llm": 43.30500495172973,
+        "compute": 12.598735894022758,
+        "storage": 0.0006835251678614779,
+        "data_transfer": 2.09978931567046,
+        "features": 41.9957863134092
+      },
+      "feature_usage": {
+        "compliance_assessment": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    },
+    "risk_prioritization": {
+      "success": true,
+      "cost": 0.004705082552083333,
+      "total_tokens": 10422,
+      "input_tokens": 9107,
+      "output_tokens": 1315,
+      "execution_time_secs": 38.18987679481506,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:16:06.066226",
+        "input_tokens": 9107,
+        "output_tokens": 1315,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.0021550499999999995,
+        "compute_cost_usd": 0.0006500000000000001,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "risk_prioritization": {
+            "usage": 1,
+            "cost_usd": 0.0008,
+            "rate_per_unit": 0.0008
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.0018,
+        "total_cost_usd": 0.004705082552083333,
+        "price_with_margin_usd": 0.023525412760416673,
+        "credits_burned": 2.3525412760416673,
+        "cost_breakdown_percentage": {
+          "llm": 45.8025970032296,
+          "compute": 13.814847939537017,
+          "storage": 0.000691849355946365,
+          "data_transfer": 2.1253612214672333,
+          "features": 38.2565019864102
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 2.3525412760416673,
+      "cost_breakdown": {
+        "llm": 45.8025970032296,
+        "compute": 13.814847939537017,
+        "storage": 0.000691849355946365,
+        "data_transfer": 2.1253612214672333,
+        "features": 38.2565019864102
+      },
+      "feature_usage": {
+        "risk_prioritization": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    },
+    "dashboard": {
+      "success": true,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.0032541751861572266,
+      "error_message": null,
+      "detailed_cost": {},
+      "credits_burned": 0.0,
+      "cost_breakdown": {},
+      "feature_usage": {},
+      "model_used": "aggregation",
+      "provider_used": "internal"
+    },
+    "correlations": {
+      "success": true,
+      "cost": 0.0059397325520833336,
+      "total_tokens": 15195,
+      "input_tokens": 13394,
+      "output_tokens": 1801,
+      "execution_time_secs": 42.849851846694946,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:16:48.966176",
+        "input_tokens": 13394,
+        "output_tokens": 1801,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.0030897,
+        "compute_cost_usd": 0.00075,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "correlations_analysis": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.002,
+        "total_cost_usd": 0.0059397325520833336,
+        "price_with_margin_usd": 0.029698662760416675,
+        "credits_burned": 2.9698662760416674,
+        "cost_breakdown_percentage": {
+          "llm": 52.01749359769241,
+          "compute": 12.62683114809506,
+          "storage": 0.0005480395463582925,
+          "data_transfer": 1.6835774864126747,
+          "features": 33.671549728253495
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 2.9698662760416674,
+      "cost_breakdown": {
+        "llm": 52.01749359769241,
+        "compute": 12.62683114809506,
+        "storage": 0.0005480395463582925,
+        "data_transfer": 1.6835774864126747,
+        "features": 33.671549728253495
+      },
+      "feature_usage": {
+        "correlations_analysis": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    },
+    "executive_summary": {
+      "success": true,
+      "cost": 0.003803032552083333,
+      "total_tokens": 7336,
+      "input_tokens": 6108,
+      "output_tokens": 1228,
+      "execution_time_secs": 24.104151010513306,
+      "error_message": null,
+      "detailed_cost": {
+        "timestamp": "2025-09-22T09:17:13.077781",
+        "input_tokens": 6108,
+        "output_tokens": 1228,
+        "llm_model_name": "gpt-4o-mini",
+        "llm_cost_usd": 0.0016529999999999997,
+        "compute_cost_usd": 0.00055,
+        "storage_cost_usd": 3.2552083333333335e-08,
+        "data_transfer_cost_usd": 0.0001,
+        "feature_costs_usd": {
+          "executive_summary": {
+            "usage": 1,
+            "cost_usd": 0.0005,
+            "rate_per_unit": 0.0005
+          },
+          "threat_modeling": {
+            "usage": 1,
+            "cost_usd": 0.001,
+            "rate_per_unit": 0.001
+          }
+        },
+        "total_feature_cost_usd": 0.0015,
+        "total_cost_usd": 0.003803032552083333,
+        "price_with_margin_usd": 0.01901516276041667,
+        "credits_burned": 1.9015162760416668,
+        "cost_breakdown_percentage": {
+          "llm": 43.465312940707605,
+          "compute": 14.462142841735748,
+          "storage": 0.0008559506890231858,
+          "data_transfer": 2.6294805166792266,
+          "features": 39.442207750188395
+        },
+        "margin_percentage": 80.0,
+        "usd_to_credit_rate": 100
+      },
+      "credits_burned": 1.9015162760416668,
+      "cost_breakdown": {
+        "llm": 43.465312940707605,
+        "compute": 14.462142841735748,
+        "storage": 0.0008559506890231858,
+        "data_transfer": 2.6294805166792266,
+        "features": 39.442207750188395
+      },
+      "feature_usage": {
+        "executive_summary": 1.0,
+        "threat_modeling": 1.0
+      },
+      "model_used": "gpt-4o-mini",
+      "provider_used": "openai"
+    }
+  },
+  "generated_files": {
+    "total_files": 31,
+    "files": [
+      "02_data_flow_diagrams_L3_raw_dark.mmd",
+      "02_data_flow_diagrams_L3_raw_dark.md",
+      "02_data_flow_diagrams_L3_raw_dark.html",
+      "02_data_flow_diagrams_L3_raw_light.mmd",
+      "02_data_flow_diagrams_L3_raw_light.md",
+      "02_data_flow_diagrams_L3_raw_light.html",
+      "02_data_flow_diagrams_L3_raw.json",
+      "03_threats_l2_raw.md",
+      "03_threats_l2_raw.json",
+      "03_threats_l2_raw.csv",
+      "05_dread_assessment_l2_raw.json",
+      "05_dread_assessment_l2_raw.csv",
+      "05_dread_assessment_l2_raw.md",
+      "06_mitigations_l2_raw.json",
+      "06_mitigations_l2_raw.md",
+      "07_test_cases_l2_raw.feature",
+      "07_test_cases_l2_raw.json",
+      "07_test_cases_l2_raw.md",
+      "09_compliance_assessment_l2_raw.json",
+      "09_compliance_assessment_l2_raw.md",
+      "10_risk_prioritization_l2_raw.json",
+      "10_risk_prioritization_l2_raw.md",
+      "12_dashboard_l2_raw.json",
+      "12_dashboard_l2_raw.md",
+      "12_dashboard_l2_raw.html",
+      "11_correlations_l2_raw.json",
+      "11_correlations_l2_raw.md",
+      "11_correlations_l2_raw.html",
+      "11_correlations_l2_raw.csv",
+      "13_executive_summary_l2_raw.json",
+      "13_executive_summary_l2_raw.md"
+    ],
+    "output_directory": "hackerdogs-ai/threatmodels/01K5S2XRFEBA6EWYHJ05J8K0PK",
+    "ulid": "01K5S2XRFEBA6EWYHJ05J8K0PK"
+  },
+  "output_directory": "hackerdogs-ai/threatmodels/01K5S2XRFEBA6EWYHJ05J8K0PK",
+  "cost_summary": {
+    "total_cost_usd": 0.055801,
+    "total_detailed_cost_usd": 0.055801,
+    "total_credits_burned": 27.9,
+    "cost_breakdown_percentage": {
+      "llm": 536.2845017326366,
+      "compute": 163.12607011905857,
+      "storage": 0.008704439639055633,
+      "data_transfer": 26.7400385711789,
+      "features": 473.8406851374869
+    },
+    "feature_usage_summary": {
+      "architecture_analysis": 1.0,
+      "threat_modeling": 12.0,
+      "dfd_generation": 1.0,
+      "threat_analysis": 1.0,
+      "attack_tree_generation": 1.0,
+      "dread_assessment": 1.0,
+      "mitigation_analysis": 1.0,
+      "test_case_generation": 1.0,
+      "security_controls": 1.0,
+      "compliance_assessment": 1.0,
+      "risk_prioritization": 1.0,
+      "correlations_analysis": 1.0,
+      "executive_summary": 1.0
+    },
+    "cost_efficiency": {
+      "cost_per_step": 0.004292,
+      "credits_per_step": 2.15,
+      "cost_per_second": 0.000109
+    }
+  },
+  "prompt_files": {
+    "L2": {
+      "architecture_analysis": "prompts/l2/architecture_analysis.txt",
+      "data_flow_diagrams": "prompts/l2/data_flow_diagrams.txt",
+      "threats": "prompts/l2/threats.txt",
+      "attack_trees": "prompts/l2/attack_trees.txt",
+      "mitigations": "prompts/l2/mitigations.txt",
+      "dread_assessment": "prompts/l2/dread_assessment.txt",
+      "test_cases": "prompts/l2/test_cases.txt",
+      "security_controls": "prompts/l2/security_controls.txt",
+      "compliance_assessment": "prompts/l2/compliance_assessment.txt",
+      "risk_prioritization": "prompts/l2/risk_prioritization.txt",
+      "correlations": "prompts/l2/correlations.txt",
+      "dashboard": "prompts/l2/dashboard.txt",
+      "executive_summary": "prompts/l2/executive_summary.txt"
+    }
+  },
+  "source_information": {
+    "source": "tm_resources/reference_archs/azure-local-baseline.png",
+    "source_type": "file",
+    "collected_at": "2025-09-22T09:08:41.336819",
+    "collector_version": "1.0",
+    "file_path": "/Users/tejaswiredkar/Documents/GitHub/hackerdogs-core/tm_resources/reference_archs/azure-local-baseline.png",
+    "file_name": "azure-local-baseline.png",
+    "file_extension": ".png",
+    "file_size_bytes": 653876,
+    "file_size_mb": 0.62,
+    "created_timestamp": "2025-09-14T10:05:09.240446",
+    "modified_timestamp": "2025-09-14T10:05:09.240446",
+    "accessed_timestamp": "2025-09-14T23:02:31.377443",
+    "is_file": true,
+    "is_directory": false,
+    "parent_directory": "/Users/tejaswiredkar/Documents/GitHub/hackerdogs-core/tm_resources/reference_archs",
+    "relative_path": null,
+    "sha256_hash": "784c3b5808a88b0b5234b674427aeab19ade741342ef6d68547a05ec6d7322ff",
+    "md5_hash": "414d3121649de9b96f36f39faaaadde9",
+    "mime_type": "image/png"
+  },
+  "output_plugin": {
+    "plugin_type": "GitHubStoragePlugin",
+    "folder_name": "hackerdogs-ai/threatmodels",
+    "subfolder": "01K5S2XRFEBA6EWYHJ05J8K0PK",
+    "config_valid": true,
+    "owner": "hackerdogs-ai",
+    "repo": "threatmodels",
+    "branch": "main",
+    "path": "auto-threat-models",
+    "files_pending_commit": 0
+  }
+}
