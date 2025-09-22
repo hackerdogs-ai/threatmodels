@@ -1,0 +1,17 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure_Boundary, "On-Premises to Azure Boundary") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Azure Arc, Hyper-V] | Auth: Active Directory, Local Accounts | 🔒 | ⚠️", "Hosts traditional applications via Arc VMs and Hyper-V.")
+        System(Switch_Router_Firewall, "Switch/Router/Firewall | [Firewalls, Routers, Switches] | Auth: N/A | 🔒 | ⚠️", "Manages East/West traffic between local machines and external connections.")
+    }
+    System_Boundary(tb_Control_Plane_Access_Boundary, "Control Plane Access Boundary") {
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Backup (+2)] | Auth: Azure Active Directory, Multi-Factor Authentication | 🔒 | ⚠️", "Manages resources through Azure portal, CLI, and tools for backup and monitoring.")
+        System(Azure_Virtual_Desktop, "Azure Virtual Desktop | [Azure Virtual Desktop] | Auth: Azure Active Directory, Single Sign-On | 🔒 | ⚠️", "Provides session hosts for virtual desktop infrastructure.")
+    }
+    System(Azure_Kubernetes_Service__AKS_, "Azure Kubernetes Service (AKS) | [Azure Kubernetes Service, Azure Arc] | Auth: Kubernetes RBAC, Azure Active Directory | 🔒 | ⚠️", "Facilitates container orchestration enabled by Azure Arc.")
+    System(Storage_Spaces_Direct__S2D_, "Storage Spaces Direct (S2D) | [Storage Spaces Direct] | Auth: Windows Authentication | 🔒 | ⚠️", "Offers storage solutions for high availability and performance.")
+    System(Validated_Hardware, "Validated Hardware | [Validated Hardware] | Auth: N/A | 🔒 | ⚠️", "Ensures compatibility and performance across 1 to 16 machines.")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management Data | Auth: required | 🔒 | ⚠️")
+    Rel(Control_Plane, Azure_Virtual_Desktop, "RDP | User Session Data | Auth: required | 🔒 | ⚠️")
+    Rel(Azure_Kubernetes_Service__AKS_, Storage_Spaces_Direct__S2D_, "HTTPS | Application Data | Auth: required | 🔒 | ⚠️")
