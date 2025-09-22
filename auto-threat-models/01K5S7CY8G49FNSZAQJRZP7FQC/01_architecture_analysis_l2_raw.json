@@ -1,0 +1,339 @@
+{
+  "id": "01K5S7F1D50718T5H6C1KW9HXZ",
+  "title": null,
+  "overview": "The Azure Local Hybrid Integration Architecture provides a comprehensive framework for integrating on-premises resources with Azure services, ensuring secure management of both traditional and containerized applications. It leverages Azure Arc for hybrid capabilities, enabling seamless communication and data flow between local and cloud environments.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Azure Portal",
+      "type": "frontend",
+      "description": "Central management interface for Azure services.",
+      "technology_stack": [
+        "Azure Portal"
+      ],
+      "security_considerations": [
+        "Access control via Microsoft Entra ID",
+        "Multi-factor authentication (MFA) enabled"
+      ],
+      "trust_level": "high",
+      "data_handling": "User management and service configuration",
+      "authentication_methods": [
+        "OAuth 2.0",
+        "MFA"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Phishing attacks targeting user credentials"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Microsoft Entra ID",
+      "type": "backend",
+      "description": "Identity management for secure access.",
+      "technology_stack": [
+        "Microsoft Entra"
+      ],
+      "security_considerations": [
+        "Use of conditional access policies",
+        "Regular audits of user access rights"
+      ],
+      "trust_level": "high",
+      "data_handling": "User identities and access tokens",
+      "authentication_methods": [
+        "SAML",
+        "OAuth 2.0"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Identity theft through credential compromise"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Azure Site Recovery",
+      "type": "backend",
+      "description": "Disaster recovery service for on-premises and Azure resources.",
+      "technology_stack": [
+        "Azure Site Recovery"
+      ],
+      "security_considerations": [
+        "Data replication is encrypted",
+        "Regular testing of recovery plans"
+      ],
+      "trust_level": "high",
+      "data_handling": "Backup and recovery data",
+      "authentication_methods": [
+        "Azure AD"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Data loss during replication failure"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Azure Backup and File Sync",
+      "type": "backend",
+      "description": "Data protection and synchronization solutions.",
+      "technology_stack": [
+        "Azure Backup",
+        "File Sync"
+      ],
+      "security_considerations": [
+        "End-to-end encryption for backups",
+        "Access controls on backup data"
+      ],
+      "trust_level": "high",
+      "data_handling": "Backup data and file synchronization",
+      "authentication_methods": [
+        "Azure AD"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Insecure backup storage configurations"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Azure Monitor",
+      "type": "backend",
+      "description": "Monitoring and analytics tool for Azure resources.",
+      "technology_stack": [
+        "Azure Monitor"
+      ],
+      "security_considerations": [
+        "Logs are stored securely with restricted access",
+        "Alerts configured for suspicious activities"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Monitoring logs and metrics",
+      "authentication_methods": [
+        "Azure AD"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Log tampering if access is compromised"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Azure Key Vault",
+      "type": "backend",
+      "description": "Secure storage for secrets and keys.",
+      "technology_stack": [
+        "Azure Key Vault"
+      ],
+      "security_considerations": [
+        "Access policies defined for secret retrieval",
+        "Audit logs for key access"
+      ],
+      "trust_level": "high",
+      "data_handling": "Secrets and encryption keys",
+      "authentication_methods": [
+        "Azure AD"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Unauthorized access to secrets"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Microsoft Defender for Cloud",
+      "type": "backend",
+      "description": "Security management and threat protection.",
+      "technology_stack": [
+        "Microsoft Defender"
+      ],
+      "security_considerations": [
+        "Continuous security assessments",
+        "Integration with Azure Security Center"
+      ],
+      "trust_level": "high",
+      "data_handling": "Security alerts and recommendations",
+      "authentication_methods": [
+        "Azure AD"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Delayed response to detected threats"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Azure Local Instance",
+      "type": "infrastructure",
+      "description": "Hosts traditional VMs and services.",
+      "technology_stack": [
+        "Windows Server",
+        "Hyper-V"
+      ],
+      "security_considerations": [
+        "Regular patching of VMs",
+        "Network isolation for sensitive workloads"
+      ],
+      "trust_level": "medium",
+      "data_handling": "VM data and application workloads",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Local user permissions",
+      "encryption_status": "partial",
+      "vulnerabilities": [
+        "VM escape attacks"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Hyper-V",
+      "type": "infrastructure",
+      "description": "Virtualization platform for running VMs.",
+      "technology_stack": [
+        "Hyper-V"
+      ],
+      "security_considerations": [
+        "Secure boot enabled for VMs",
+        "Isolation of VM networks"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Virtual machine data",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Local user permissions",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Misconfiguration leading to VM exposure"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Azure Virtual Desktop",
+      "type": "infrastructure",
+      "description": "Virtual desktop infrastructure for remote access.",
+      "technology_stack": [
+        "Azure Virtual Desktop"
+      ],
+      "security_considerations": [
+        "User sessions monitored for anomalies",
+        "Conditional access policies applied"
+      ],
+      "trust_level": "high",
+      "data_handling": "User desktop sessions and data",
+      "authentication_methods": [
+        "Azure AD"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Session hijacking risks"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Azure Kubernetes Service (AKS)",
+      "type": "infrastructure",
+      "description": "Managed Kubernetes for container orchestration.",
+      "technology_stack": [
+        "Kubernetes",
+        "Azure AKS"
+      ],
+      "security_considerations": [
+        "Network policies to control traffic between pods",
+        "RBAC for Kubernetes resources"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Containerized application data",
+      "authentication_methods": [
+        "Kubeconfig",
+        "Azure AD"
+      ],
+      "authorization_model": "RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Container vulnerabilities and misconfigurations"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Storage Spaces Direct (S2D)",
+      "type": "infrastructure",
+      "description": "Storage virtualization technology.",
+      "technology_stack": [
+        "Windows Server S2D"
+      ],
+      "security_considerations": [
+        "Data redundancy and integrity checks",
+        "Access controls on storage resources"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Storage data and configurations",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Local user permissions",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Data loss due to hardware failure"
+      ]
+    },
+    {
+      "id": "13",
+      "name": "ToR Switches",
+      "type": "infrastructure",
+      "description": "Network switches for connecting local machines.",
+      "technology_stack": [
+        "Ethernet",
+        "Layer 2 Switching"
+      ],
+      "security_considerations": [
+        "VLAN segmentation for traffic isolation",
+        "Port security to prevent unauthorized access"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Network traffic",
+      "authentication_methods": [
+        "802.1X"
+      ],
+      "authorization_model": "MAC address filtering",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Man-in-the-middle attacks"
+      ]
+    }
+  ],
+  "data_flows": [],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-22 17:27:39.685633",
+  "updated_at": "2025-09-22 17:27:39.685639"
+}
