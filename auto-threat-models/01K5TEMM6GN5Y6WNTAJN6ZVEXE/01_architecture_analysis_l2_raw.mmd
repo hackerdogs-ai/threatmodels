@@ -1,0 +1,13 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure_Integration, "On-Premises to Azure Integr...") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Hyper-V, Windows Server] | Auth: Windows Authentication, Azure AD | 🔒 | ⚠️", "Hosts virtual machines and Hyper-V for traditional applications.")
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Policy (+1)] | Auth: Azure Active Directory | 🔒 | ⚠️", "Manages Azure resources through Azure Portal, Azure CLI, and governance tools.")
+        System(Switch_Router_Firewall, "Switch/Router/Firewall | [Firewalls, Routers, Switches] | Auth: N/A | 🔒 | ⚠️", "Manages East/West traffic and ensures security through a corporate firewall.")
+    }
+    System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: OAuth 2.0, OpenID Connect | 🔒 | ⚠️", "Supports containerized applications managed via Azure Kubernetes Service.")
+    System(Validated_Hardware, "Validated Hardware | [Azure Stack, Validated Hardware Configurations] | Auth: Hardware Security Module (HSM) | 🔒 | ⚠️", "Includes Azure Local machines configured for various workloads.")
+    System(Azure_Monitor, "Azure Monitor", "Auto-created component: Azure Monitor")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management Data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Monitor, "HTTPS | Monitoring Data | Auth: required | 🔒 | ⚠️")
