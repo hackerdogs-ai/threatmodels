@@ -1,0 +1,285 @@
+{
+  "id": "01K5TCZZC3TQ9AZ98R4GEP5FMW",
+  "title": null,
+  "overview": "The Hybrid Cloud Management Solution integrates on-premises resources with Azure services, leveraging Azure Arc for management and Azure Kubernetes Service for container orchestration. The architecture emphasizes security through a corporate firewall, Azure Key Vault, and Microsoft Defender for Cloud, ensuring robust data protection and compliance.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages Azure services and resources, providing a unified interface for management.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI",
+        "Azure Backup",
+        "Azure Monitor"
+      ],
+      "security_considerations": [
+        "Access restricted to authorized personnel only.",
+        "Regular audits of access logs."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages configuration and monitoring data.",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "Data at rest and in transit is encrypted.",
+      "vulnerabilities": [
+        "Potential misconfiguration leading to unauthorized access."
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Local Instance",
+      "type": "backend",
+      "description": "Hosts traditional applications and Azure Arc-enabled services for hybrid management.",
+      "technology_stack": [
+        "Azure Arc",
+        "Windows Server"
+      ],
+      "security_considerations": [
+        "Isolated network segment for sensitive applications.",
+        "Regular vulnerability assessments."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Processes application data and configuration.",
+      "authentication_methods": [
+        "Windows Authentication",
+        "Azure AD"
+      ],
+      "authorization_model": "RBAC and local permissions.",
+      "encryption_status": "Data at rest is encrypted using BitLocker.",
+      "vulnerabilities": [
+        "Exposure to local network threats."
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Arc VMs",
+      "type": "infrastructure",
+      "description": "Virtual machines managed through Azure Arc, enabling hybrid capabilities.",
+      "technology_stack": [
+        "Hyper-V",
+        "Azure Arc"
+      ],
+      "security_considerations": [
+        "Use of Azure Security Center for threat detection.",
+        "Regular patching and updates."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Handles VM operational data.",
+      "authentication_methods": [
+        "Azure AD",
+        "Local Admin Credentials"
+      ],
+      "authorization_model": "RBAC.",
+      "encryption_status": "VM disks encrypted with Azure Disk Encryption.",
+      "vulnerabilities": [
+        "Misconfigured security groups leading to exposure."
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Hyper-V",
+      "type": "infrastructure",
+      "description": "Virtualization technology for running virtual machines.",
+      "technology_stack": [
+        "Windows Server Hyper-V"
+      ],
+      "security_considerations": [
+        "Isolation of VMs to prevent lateral movement.",
+        "Regular updates to Hyper-V host."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Manages VM workloads and data.",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Local permissions.",
+      "encryption_status": "VMs can be encrypted using BitLocker.",
+      "vulnerabilities": [
+        "Hypervisor vulnerabilities."
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Azure Kubernetes Service (AKS)",
+      "type": "backend",
+      "description": "Container orchestration service for deploying and managing containerized applications.",
+      "technology_stack": [
+        "Kubernetes",
+        "Docker"
+      ],
+      "security_considerations": [
+        "Network policies to restrict pod communication.",
+        "Use of Azure Policy for governance."
+      ],
+      "trust_level": "high",
+      "data_handling": "Processes application data in containers.",
+      "authentication_methods": [
+        "Kubernetes RBAC",
+        "Azure AD integration"
+      ],
+      "authorization_model": "Kubernetes RBAC.",
+      "encryption_status": "Secrets stored in Kubernetes are encrypted.",
+      "vulnerabilities": [
+        "Container vulnerabilities if not scanned."
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Storage Spaces Direct (S2D)",
+      "type": "infrastructure",
+      "description": "Storage solution for high availability and performance.",
+      "technology_stack": [
+        "Windows Server S2D"
+      ],
+      "security_considerations": [
+        "Data redundancy and replication for high availability.",
+        "Access controls on storage volumes."
+      ],
+      "trust_level": "high",
+      "data_handling": "Stores application and VM data.",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "NTFS permissions.",
+      "encryption_status": "Data at rest encrypted with Storage Service Encryption.",
+      "vulnerabilities": [
+        "Potential data loss if not properly configured."
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Switch/Router/Firewall",
+      "type": "infrastructure",
+      "description": "Manages East/West traffic between local machines and ensures security.",
+      "technology_stack": [
+        "Cisco ASA",
+        "Fortinet"
+      ],
+      "security_considerations": [
+        "Regular updates to firewall rules.",
+        "Intrusion detection and prevention systems in place."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles all network traffic.",
+      "authentication_methods": [
+        "None"
+      ],
+      "authorization_model": "Access control lists (ACLs).",
+      "encryption_status": "Traffic encryption using VPNs where applicable.",
+      "vulnerabilities": [
+        "Firewall misconfigurations leading to exposure."
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "Control Plane",
+      "data_type": "Management and monitoring data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Potential interception if not properly secured."
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Control Plane",
+      "destination": "Arc VMs",
+      "data_type": "Configuration and operational data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Unauthorized access if RBAC is misconfigured."
+      ]
+    },
+    {
+      "id": "3",
+      "source": "AKS",
+      "destination": "Azure Local Instance",
+      "data_type": "Application data",
+      "protocol": "HTTP/HTTPS",
+      "encryption": "partial",
+      "authentication": "required",
+      "authorization": "Kubernetes RBAC",
+      "security_risks": [
+        "Data leakage if container security is not enforced."
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises Network",
+      "components": [
+        "Azure Local Instance",
+        "Arc VMs",
+        "Hyper-V"
+      ],
+      "security_controls": [
+        "Firewall",
+        "Network segmentation"
+      ],
+      "vulnerabilities": [
+        "Insider threats, local network attacks."
+      ],
+      "recommendations": [
+        "Implement strict access controls.",
+        "Regularly audit network traffic."
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Cloud Environment",
+      "components": [
+        "Control Plane",
+        "AKS",
+        "Azure Key Vault"
+      ],
+      "security_controls": [
+        "Azure Security Center",
+        "Azure Policy"
+      ],
+      "vulnerabilities": [
+        "Misconfiguration of cloud resources."
+      ],
+      "recommendations": [
+        "Use Azure Policy for compliance.",
+        "Implement continuous monitoring."
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-23 04:23:31.971805",
+  "updated_at": "2025-09-23 04:23:31.971810"
+}
