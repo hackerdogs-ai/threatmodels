@@ -1,0 +1,14 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify unauthorized access as a critical threat, highlighting the need for robust access controls.",,,,2025-09-23T05:41:57.732533
+CORR_002,,,,Both models recommend regular security assessments and penetration testing to identify vulnerabilities.,,,,2025-09-23T05:41:57.732544
+CORR_003,,,,"Both models highlight the risk of data tampering, particularly in management data.",,,,2025-09-23T05:41:57.732551
+CORR_004,,,,"Both models utilize similar networking technologies, including firewalls and switches, to manage traffic.",,,,2025-09-23T05:41:57.732557
+CORR_005,,,,"Both models address compliance with regulatory standards, emphasizing the need for regular audits.",,,,2025-09-23T05:41:57.732564
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,Frequent attempts to gain unauthorized access across multiple threat models indicate a systemic vulnerability.,high,,2025-09-23T05:41:57.732580
+PATTERN_002,,"Misconfigurations leading to data exposure are common across various models, highlighting a need for better configuration management.",medium,,2025-09-23T05:41:57.732586
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-23T05:41:57.732608
+OPP_002,,,,,,2025-09-23T05:41:57.732614
