@@ -1,0 +1,15 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both the Hybrid Cloud Management Solution and the Cloud Infrastructure Security Model identify unauthorized access as a critical threat.,,,,2025-09-23T04:29:24.172843
+CORR_002,,,,Both models emphasize the importance of continuous monitoring and incident response capabilities.,,,,2025-09-23T04:29:24.172862
+CORR_003,,,,Attack patterns related to data breaches and misconfigurations are common across multiple threat models.,,,,2025-09-23T04:29:24.172870
+CORR_004,,,,"Both models must adhere to similar compliance frameworks, including GDPR and HIPAA.",,,,2025-09-23T04:29:24.172877
+CORR_005,,,,"Similar technology stacks, including Azure services and Kubernetes, increase the likelihood of shared vulnerabilities.",,,,2025-09-23T04:29:24.172883
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,"Unauthorized access is a recurring theme across multiple threat models, indicating a systemic vulnerability.",high,,2025-09-23T04:29:24.172895
+PATTERN_002,,"Misconfigurations are frequently identified as a threat, highlighting the need for better configuration management practices.",high,,2025-09-23T04:29:24.172901
+PATTERN_003,,"Insider threats are a common concern, emphasizing the need for strict access controls and monitoring.",medium,,2025-09-23T04:29:24.172908
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-23T04:29:24.172925
+OPP_002,,,,,,2025-09-23T04:29:24.172930
