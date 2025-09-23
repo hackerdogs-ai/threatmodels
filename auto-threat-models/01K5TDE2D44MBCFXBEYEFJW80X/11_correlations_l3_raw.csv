@@ -1,0 +1,15 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both the Hybrid Azure Local Integrated Architecture and the organization's cloud-based applications face threats from unauthorized access and data interception.,,,,2025-09-23T04:37:56.238727
+CORR_002,,,,Mitigation strategies such as DDoS protection and session management are common across various threat models.,,,,2025-09-23T04:37:56.238743
+CORR_003,,,,The aggregation of risks from insider threats and misconfigurations can lead to systemic vulnerabilities across the organization.,,,,2025-09-23T04:37:56.238750
+CORR_004,,,,There is a significant overlap in compliance requirements related to data protection and incident response across different threat models.,,,,2025-09-23T04:37:56.238757
+CORR_005,,,,"The technology stack used in the Hybrid Azure Local architecture is similar to other cloud-based architectures, increasing the likelihood of shared vulnerabilities.",,,,2025-09-23T04:37:56.238764
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,A recurring pattern observed across multiple threat models where unauthorized access leads to data breaches.,high,,2025-09-23T04:37:56.238774
+PATTERN_002,,Frequent misconfigurations across cloud and hybrid architectures leading to exposure of sensitive data.,medium,,2025-09-23T04:37:56.238781
+PATTERN_003,,A common threat across various architectures where insiders exploit their access to sensitive information.,medium,,2025-09-23T04:37:56.238787
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-23T04:37:56.239065
+OPP_002,,,,,,2025-09-23T04:37:56.239074
