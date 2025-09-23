@@ -1,0 +1,15 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both the Azure Local Integration Architecture and the Cloud Infrastructure Security Model identify unauthorized access as a critical threat.,,,,2025-09-23T04:50:33.501124
+CORR_002,,,,Both models emphasize the importance of encryption for data in transit and at rest.,,,,2025-09-23T04:50:33.501141
+CORR_003,,,,Attack patterns such as Denial of Service (DoS) attacks are common across both threat models.,,,,2025-09-23T04:50:33.501149
+CORR_004,,,,"Both models utilize container orchestration technologies, highlighting shared vulnerabilities in containerized applications.",,,,2025-09-23T04:50:33.501157
+CORR_005,,,,Both models address compliance with industry standards such as NIST and ISO 27001.,,,,2025-09-23T04:50:33.501167
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,"A frequent threat pattern across multiple models, indicating systemic vulnerabilities in access control mechanisms.",high,,2025-09-23T04:50:33.501178
+PATTERN_002,,"Commonly identified as a risk during data transmission, necessitating robust encryption practices.",high,,2025-09-23T04:50:33.501186
+PATTERN_003,,"Identified across various models, highlighting the need for stringent access controls and monitoring.",medium,,2025-09-23T04:50:33.501194
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-23T04:50:33.501383
+OPP_002,,,,,,2025-09-23T04:50:33.501394
