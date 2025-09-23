@@ -1,0 +1,14 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify unauthorized access as a critical threat, emphasizing the need for robust access controls.",,,,2025-09-23T06:19:40.976000
+CORR_002,,,,Both models recommend utilizing encryption for data at rest and in transit to mitigate data interception risks.,,,,2025-09-23T06:19:40.976085
+CORR_003,,,,"Both models identify vulnerabilities in containerized applications as a significant threat, highlighting the need for vulnerability scanning.",,,,2025-09-23T06:19:40.976108
+CORR_004,,,,Both models emphasize the importance of proper firewall configurations to prevent unauthorized access and data leakage.,,,,2025-09-23T06:19:40.976247
+CORR_005,,,,"Both models highlight the risk of data breaches due to insufficient logging and monitoring, indicating a systemic vulnerability.",,,,2025-09-23T06:19:40.976731
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,"Frequent identification of data breach threats across various threat models, emphasizing the need for comprehensive data protection strategies.",high,,2025-09-23T06:19:40.976753
+PATTERN_002,,"Recurring issues related to misconfigurations and vulnerabilities in cloud environments, indicating a need for improved configuration management practices.",medium,,2025-09-23T06:19:40.976761
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-23T06:19:40.977376
+OPP_002,,,,,,2025-09-23T06:19:40.977651
