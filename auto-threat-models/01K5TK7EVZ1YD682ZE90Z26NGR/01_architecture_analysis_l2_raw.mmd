@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure_Integration, "On-Premises to Azure Integr...") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Hyper-V, Azure Arc] | Auth: Windows Authentication, Azure AD | 🔒 | ⚠️", "Hosts virtual machines (Arc VMs) and traditional applications using Hyper-V.")
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, ARM Templates] | Auth: Azure Active Directory | 🔒 | ⚠️", "Manages resources and services via Azure portal, Azure CLI, and templates.")
+    }
+    System_Boundary(tb_Kubernetes_Security_Boundary, "Kubernetes Security Boundary") {
+        System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Service Accounts, Azure AD | 🔒 | ⚠️", "Supports containerized applications through Azure Kubernetes Service (AKS) enabled by Azure Arc.")
+    }
+    System(Validated_Hardware, "Validated Hardware | [Top-of-Rack Switches] | Auth: N/A | 🔒 | ⚠️", "Comprises Azure Local machines connected via top-of-rack (ToR) switches for network management.")
+    System(Corp_Firewall, "Corp Firewall | [Next-Gen Firewall] | Auth: N/A | 🔒 | ⚠️", "Provides perimeter security for the architecture.")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management data | Auth: required | 🔒 | ⚠️")
+    Rel(Control_Plane, Kubernetes_based_Applications, "HTTPS | Configuration data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Corp_Firewall, "TCP/UDP | Outbound traffic | Auth: optional | ⚠️")
