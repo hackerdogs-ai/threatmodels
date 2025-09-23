@@ -1,0 +1,19 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_Environment, "On-Premises Environment") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Azure Arc, Windows Server] | Auth: Windows Authentication, Azure AD | 🔒 | ⚠️", "Hosts traditional applications and virtual machines managed through Azure Arc.")
+        System(Hyper_V, "Hyper-V | [Hyper-V, Windows Server] | Auth: Windows Authentication | 🔒 | ⚠️", "Virtualization technology for running virtual machines.")
+    }
+    System_Boundary(tb_Cloud_Environment, "Cloud Environment") {
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, ARM templates (+1)] | Auth: Azure Active Directory, OAuth | 🔒 | ⚠️", "Management and orchestration layer for Azure Local resources.")
+        System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Azure AD integration | 🔒 | ⚠️", "Containerized applications managed via Azure Kubernetes Service (AKS).")
+    }
+    System(Storage_Spaces_Direct__S2D_, "Storage Spaces Direct (S2D) | [Windows Server, Storage Spaces Direct] | Auth: Windows Authentication | 🔒 | ⚠️", "A storage solution for high availability and scalability.")
+    System(Validated_Hardware, "Validated Hardware | [Azure Certified Hardware] | Auth: N/A | 🔒 | ⚠️", "Specifies hardware configurations validated for Azure Local.")
+    System(Switch_Router_Firewall, "Switch/Router/Firewall | [Cisco, Fortinet] | Auth: N/A | 🔒 | ⚠️", "Manages East/West traffic between local machines and external connections.")
+    System(Azure_Services, "Azure Services", "Auto-created component: Azure Services")
+    System(Azure_Monitor, "Azure Monitor", "Auto-created component: Azure Monitor")
+
+    Rel(Azure_Local_Instance, Azure_Services, "HTTPS | Application Data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Monitor, "HTTPS | Monitoring Data | Auth: required | 🔒 | ⚠️")
+    Rel(Control_Plane, Azure_Local_Instance, "HTTPS | Configuration Data | Auth: required | 🔒 | ⚠️")
