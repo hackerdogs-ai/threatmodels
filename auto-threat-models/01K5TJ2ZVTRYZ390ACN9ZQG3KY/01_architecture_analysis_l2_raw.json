@@ -1,0 +1,241 @@
+{
+  "id": "01K5TJ47PHTBHVRZ6WSP45G7M2",
+  "title": null,
+  "overview": "The Azure Local Hybrid Infrastructure integrates on-premises resources with Azure services, providing a robust architecture for managing traditional and containerized applications. The architecture emphasizes security, compliance, and efficient data flow management.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages resources using Azure portal, Azure CLI, and tools like Azure Backup and Azure Monitor.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI",
+        "Azure Backup",
+        "Azure Monitor",
+        "Microsoft Defender for Cloud"
+      ],
+      "security_considerations": [
+        "Access control via Azure Active Directory",
+        "Multi-factor authentication for administrative access",
+        "Regular audits of access logs"
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages configuration and operational data.",
+      "authentication_methods": [
+        "Azure Active Directory",
+        "OAuth 2.0"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "Data at rest and in transit are encrypted.",
+      "vulnerabilities": [
+        "Potential misconfiguration leading to unauthorized access"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Local Instance",
+      "type": "backend",
+      "description": "Hosts traditional applications via Azure Arc VMs and Hyper-V.",
+      "technology_stack": [
+        "Azure Arc",
+        "Hyper-V"
+      ],
+      "security_considerations": [
+        "Regular patching of VMs",
+        "Use of Azure Security Center for threat protection"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Processes application data and user data.",
+      "authentication_methods": [
+        "Windows Authentication",
+        "Azure AD"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "Data at rest is encrypted using BitLocker.",
+      "vulnerabilities": [
+        "Exposed VMs to the internet without proper firewall rules"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Kubernetes-based Applications",
+      "type": "backend",
+      "description": "Managed through Azure Kubernetes Service (AKS) enabled by Azure Arc.",
+      "technology_stack": [
+        "Azure Kubernetes Service",
+        "Azure Arc"
+      ],
+      "security_considerations": [
+        "Network policies to restrict pod communication",
+        "RBAC for Kubernetes resources"
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles containerized application data.",
+      "authentication_methods": [
+        "Kubernetes Service Account",
+        "Azure AD integration"
+      ],
+      "authorization_model": "Kubernetes RBAC",
+      "encryption_status": "Secrets stored in Azure Key Vault are encrypted.",
+      "vulnerabilities": [
+        "Misconfigured RBAC leading to privilege escalation"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Validated Hardware",
+      "type": "infrastructure",
+      "description": "Consists of Azure Local machines connected via ToR switches.",
+      "technology_stack": [
+        "Azure Local Machines",
+        "ToR Switches"
+      ],
+      "security_considerations": [
+        "Physical security measures in data centers",
+        "Regular hardware audits"
+      ],
+      "trust_level": "high",
+      "data_handling": "Hosts and processes application workloads.",
+      "authentication_methods": [
+        "N/A"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "N/A",
+      "vulnerabilities": [
+        "Physical tampering risks"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Switch/Router/Firewall",
+      "type": "infrastructure",
+      "description": "Facilitates East/West traffic between local machines and external access.",
+      "technology_stack": [
+        "Firewalls",
+        "Routers",
+        "Switches"
+      ],
+      "security_considerations": [
+        "Implementing strict firewall rules",
+        "Regularly updating firmware"
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages network traffic.",
+      "authentication_methods": [
+        "N/A"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "Traffic encryption via VPN or TLS.",
+      "vulnerabilities": [
+        "Potential for DDoS attacks"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "Control Plane",
+      "data_type": "Management Data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Man-in-the-middle attacks if not properly secured"
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Kubernetes-based Applications",
+      "destination": "Azure Monitor",
+      "data_type": "Monitoring Data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "Kubernetes RBAC",
+      "security_risks": [
+        "Data leakage if monitoring data is exposed"
+      ]
+    },
+    {
+      "id": "3",
+      "source": "Control Plane",
+      "destination": "Azure Local Instance",
+      "data_type": "Configuration Data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Unauthorized configuration changes"
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises to Azure",
+      "components": [
+        "Azure Local Instance",
+        "Control Plane"
+      ],
+      "security_controls": [
+        "Firewalls",
+        "VPNs",
+        "Encryption"
+      ],
+      "vulnerabilities": [
+        "Data interception during transit"
+      ],
+      "recommendations": [
+        "Implement end-to-end encryption",
+        "Regularly review firewall rules"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Kubernetes Cluster",
+      "components": [
+        "Kubernetes-based Applications",
+        "Control Plane"
+      ],
+      "security_controls": [
+        "RBAC",
+        "Network Policies"
+      ],
+      "vulnerabilities": [
+        "Misconfigured access controls"
+      ],
+      "recommendations": [
+        "Conduct regular security audits of Kubernetes configurations",
+        "Implement pod security standards"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-23 05:53:14.449970",
+  "updated_at": "2025-09-23 05:53:14.449975"
+}

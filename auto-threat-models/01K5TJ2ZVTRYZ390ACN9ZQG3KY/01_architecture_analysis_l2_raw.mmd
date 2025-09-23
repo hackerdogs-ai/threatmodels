@@ -1,0 +1,17 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure, "On-Premises to Azure") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Azure Arc, Hyper-V] | Auth: Windows Authentication, Azure AD | 🔒 | ⚠️", "Hosts traditional applications via Azure Arc VMs and Hyper-V.")
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Backup (+2)] | Auth: Azure Active Directory, OAuth 2.0 | 🔒 | ⚠️", "Manages resources using Azure portal, Azure CLI, and tools like Azure Backup and Azure Monitor.")
+    }
+    System_Boundary(tb_Kubernetes_Cluster, "Kubernetes Cluster") {
+        System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Azure Arc] | Auth: Kubernetes Service Account, Azure AD integration | 🔒 | ⚠️", "Managed through Azure Kubernetes Service (AKS) enabled by Azure Arc.")
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Backup (+2)] | Auth: Azure Active Directory, OAuth 2.0 | 🔒 | ⚠️", "Manages resources using Azure portal, Azure CLI, and tools like Azure Backup and Azure Monitor.")
+    }
+    System(Validated_Hardware, "Validated Hardware | [Azure Local Machines, ToR Switches] | Auth: N/A | 🔒 | ⚠️", "Consists of Azure Local machines connected via ToR switches.")
+    System(Switch_Router_Firewall, "Switch/Router/Firewall | [Firewalls, Routers, Switches] | Auth: N/A | 🔒 | ⚠️", "Facilitates East/West traffic between local machines and external access.")
+    System(Azure_Monitor, "Azure Monitor", "Auto-created component: Azure Monitor")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management Data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Monitor, "HTTPS | Monitoring Data | Auth: required | 🔒 | ⚠️")
+    Rel(Control_Plane, Azure_Local_Instance, "HTTPS | Configuration Data | Auth: required | 🔒 | ⚠️")
