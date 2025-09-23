@@ -1,0 +1,15 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both threat models identify unauthorized access as a critical threat, highlighting the risk of compromised control planes.",,,,2025-09-23T05:51:01.865092
+CORR_002,,,,Both models emphasize the need for regular vulnerability assessments and penetration testing to secure Kubernetes environments.,,,,2025-09-23T05:51:01.865120
+CORR_003,,,,"Both models align with CSA's recommendations for data encryption and access control, ensuring compliance with cloud security best practices.",,,,2025-09-23T05:51:01.865129
+CORR_004,,,,"Both models highlight the risks associated with misconfigured firewall rules, which can lead to unauthorized access and data breaches.",,,,2025-09-23T05:51:01.865138
+CORR_005,,,,Both models utilize Azure services and emphasize the importance of secure configurations and access controls.,,,,2025-09-23T05:51:01.865148
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,A recurring theme across multiple threat models is the risk of unauthorized access to critical systems and data.,high,,2025-09-23T05:51:01.865159
+PATTERN_002,,Many threat models emphasize the importance of data encryption and secure access to sensitive information.,medium,,2025-09-23T05:51:01.865168
+PATTERN_003,,Misconfigurations in cloud environments are a common vulnerability identified across various models.,high,,2025-09-23T05:51:01.865177
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-23T05:51:01.865191
+OPP_002,,,,,,2025-09-23T05:51:01.865196
