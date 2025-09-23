@@ -1,0 +1,209 @@
+{
+  "id": "01K5T5EAASRR9WD5ZVPXVGSDG5",
+  "title": null,
+  "overview": "The Azure Local Hybrid Cloud Architecture integrates on-premises resources with Azure services, emphasizing a hybrid cloud approach for seamless operation of traditional and containerized applications. This analysis provides a comprehensive overview of the architecture's components, security considerations, data flows, trust boundaries, and actionable recommendations for enhancing security.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages resources and services via Azure portal, Azure CLI, and tools.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI"
+      ],
+      "security_considerations": [
+        "Access control policies",
+        "Multi-factor authentication (MFA)"
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages metadata and configuration data.",
+      "authentication_methods": [
+        "Azure AD",
+        "MFA"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Potential for unauthorized access if credentials are compromised"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Local Instance",
+      "type": "backend",
+      "description": "Hosts traditional, non-containerized applications and virtual machines (Arc VMs) using Hyper-V.",
+      "technology_stack": [
+        "Hyper-V",
+        "Windows Server"
+      ],
+      "security_considerations": [
+        "Isolation of VMs",
+        "Regular patching"
+      ],
+      "trust_level": "high",
+      "data_handling": "Processes sensitive application data.",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Active Directory Groups",
+      "encryption_status": "partial",
+      "vulnerabilities": [
+        "VM escape attacks",
+        "Misconfiguration risks"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Kubernetes-based Applications",
+      "type": "backend",
+      "description": "Supports containerized workloads through Azure Kubernetes Service (AKS) enabled by Azure Arc.",
+      "technology_stack": [
+        "Azure Kubernetes Service",
+        "Docker"
+      ],
+      "security_considerations": [
+        "Network policies",
+        "Pod security policies"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Handles application data in containers.",
+      "authentication_methods": [
+        "Kubernetes RBAC",
+        "Azure AD integration"
+      ],
+      "authorization_model": "Kubernetes RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Container vulnerabilities",
+        "Insecure API access"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Validated Hardware",
+      "type": "infrastructure",
+      "description": "Includes Azure Local machines and validated nodes for Azure Local, ensuring compatibility and performance.",
+      "technology_stack": [
+        "Azure Local Machines",
+        "Validated Nodes"
+      ],
+      "security_considerations": [
+        "Hardware security modules (HSM)",
+        "Firmware updates"
+      ],
+      "trust_level": "high",
+      "data_handling": "N/A",
+      "authentication_methods": [
+        "N/A"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Firmware vulnerabilities",
+        "Physical security risks"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Networking",
+      "type": "infrastructure",
+      "description": "Features switches/routers/firewalls for managing East/West traffic between machines and external communications.",
+      "technology_stack": [
+        "Firewalls",
+        "Switches",
+        "Routers"
+      ],
+      "security_considerations": [
+        "Network segmentation",
+        "Intrusion detection systems"
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages traffic data.",
+      "authentication_methods": [
+        "N/A"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Network eavesdropping",
+        "DDoS attacks"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "Control Plane",
+      "data_type": "Configuration data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data interception during transmission"
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Kubernetes-based Applications",
+      "destination": "Azure Services",
+      "data_type": "Application data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "Kubernetes RBAC",
+      "security_risks": [
+        "Unauthorized access to application data"
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises to Azure Communication",
+      "components": [
+        "Control Plane",
+        "Azure Local Instance",
+        "Networking"
+      ],
+      "security_controls": [
+        "Firewalls",
+        "VPNs"
+      ],
+      "vulnerabilities": [
+        "Man-in-the-middle attacks",
+        "Data leakage"
+      ],
+      "recommendations": [
+        "Implement end-to-end encryption",
+        "Regularly audit firewall rules"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-23 02:11:33.337936",
+  "updated_at": "2025-09-23 02:11:33.337941"
+}

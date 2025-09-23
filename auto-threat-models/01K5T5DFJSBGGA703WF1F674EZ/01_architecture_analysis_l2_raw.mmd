@@ -1,0 +1,13 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure_Communication, "On-Premises to Azure Commun...") {
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI] | Auth: Azure AD, MFA | 🔒 | ⚠️", "Manages resources and services via Azure portal, Azure CLI, and tools.")
+        System(Azure_Local_Instance, "Azure Local Instance | [Hyper-V, Windows Server] | Auth: Windows Authentication | 🔒 | ⚠️", "Hosts traditional, non-containerized applications and virtual machines (Arc VMs) using Hyper-V.")
+        System(Networking, "Networking | [Firewalls, Switches, Routers] | Auth: N/A | 🔒 | ⚠️", "Features switches/routers/firewalls for managing East/West traffic between machines and external communications.")
+    }
+    System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Azure AD integration | 🔒 | ⚠️", "Supports containerized workloads through Azure Kubernetes Service (AKS) enabled by Azure Arc.")
+    System(Validated_Hardware, "Validated Hardware | [Azure Local Machines, Validated Nodes] | Auth: N/A | 🔒 | ⚠️", "Includes Azure Local machines and validated nodes for Azure Local, ensuring compatibility and performance.")
+    System(Azure_Services, "Azure Services", "Auto-created component: Azure Services")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Configuration data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Services, "HTTPS | Application data | Auth: required | 🔒 | ⚠️")
