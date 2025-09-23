@@ -1,0 +1,21 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_Network, "On-Premises Network") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Azure Arc] | Auth: Azure Active Directory, Local authentication | 🔒 | ⚠️", "Hosts traditional and non-containerized applications.")
+        System(Hyper_V, "Hyper-V | [Microsoft Hyper-V] | Auth: Windows Authentication | 🔒 | ⚠️", "Virtualization platform for running virtual machines.")
+        System(ToR_Switches, "ToR Switches | [Network Switches] | Auth: 802.1X | 🔒 | ⚠️", "Facilitates east/west traffic between Azure Local machines.")
+        System(Corporate_Firewall, "Corporate Firewall | [Firewall Appliances] | Auth: None | 🔒 | ⚠️", "Controls outbound access to required URL endpoints.")
+    }
+    System_Boundary(tb_Cloud_Environment, "Cloud Environment") {
+        System(Azure_Services, "Azure Services", "Auto-created component: Azure Services")
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Backup (+2)] | Auth: Azure Active Directory | 🔒 | ⚠️", "Manages Azure resources through various interfaces and tools.")
+    }
+    System(Arc_VMs, "Arc VMs | [Azure Arc] | Auth: Azure Active Directory | 🔒 | ⚠️", "Virtual machines managed through Azure Arc for hybrid cloud capabilities.")
+    System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Azure Active Directory | 🔒 | ⚠️", "Supports containerized applications through Azure Kubernetes Service (AKS).")
+    System(Storage_Spaces_Direct__S2D_, "Storage Spaces Direct (S2D) | [Windows Server S2D] | Auth: Windows Authentication | 🔒 | ⚠️", "Provides high availability and performance storage solutions.")
+    System(Azure_Monitor, "Azure Monitor", "Auto-created component: Azure Monitor")
+    System(Azure_Control_Plane, "Azure Control Plane", "Auto-created component: Azure Control Plane")
+
+    Rel(Azure_Local_Instance, Azure_Services, "HTTPS | Application Data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Monitor, "HTTPS | Monitoring Data | Auth: required | 🔒 | ⚠️")
+    Rel(Arc_VMs, Azure_Control_Plane, "HTTPS | Configuration Data | Auth: required | 🔒 | ⚠️")
