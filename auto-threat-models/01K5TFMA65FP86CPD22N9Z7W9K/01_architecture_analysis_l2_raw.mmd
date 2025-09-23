@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Azure_Boundary, "On-Premises to Azure Boundary") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Azure Stack, Hyper-V] | Auth: Windows Authentication, Azure AD | 🔒 | ⚠️", "Hosts traditional and non-containerized applications, Arc VMs, and Hyper-V.")
+        System(Corp_Firewall, "Corp Firewall | [Next-Gen Firewall] | Auth: None | 🔒 | ⚠️", "Provides security for outbound access to required URL endpoints.")
+    }
+    System_Boundary(tb_Kubernetes_Cluster_Boundary, "Kubernetes Cluster Boundary") {
+        System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Azure AD integration | 🔒 | ⚠️", "Managed through Azure Kubernetes Service (AKS) enabled by Azure Arc.")
+        System(Azure_Key_Vault, "Azure Key Vault", "Auto-created component: Azure Key Vault")
+    }
+    System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Policy (+1)] | Auth: Azure Active Directory, Multi-Factor Authentication | 🔒 | ⚠️", "Manages resources via Azure Portal, Azure CLI, Azure Policy, and Azure Key Vault.")
+    System(Azure_Services, "Azure Services", "Auto-created component: Azure Services")
+
+    Rel(Azure_Local_Instance, Azure_Services, "HTTPS | Application Data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Key_Vault, "HTTPS | Secrets | Auth: required | 🔒 | ⚠️")
