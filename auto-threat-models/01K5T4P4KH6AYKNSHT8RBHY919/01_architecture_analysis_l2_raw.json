@@ -1,0 +1,231 @@
+{
+  "id": "01K5T4QMXMC66KYD2HVRYEZD1S",
+  "title": null,
+  "overview": "The Azure Local Hybrid Architecture integrates traditional and cloud-native applications, emphasizing a hybrid approach with Azure services and on-premises resources. This architecture is designed to ensure secure data management, efficient application deployment, and robust disaster recovery mechanisms.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages Azure services and resources through various tools.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI",
+        "Azure Backup",
+        "Azure Monitor"
+      ],
+      "security_considerations": [
+        "Access controls must be enforced to limit management capabilities.",
+        "Regular audits of access logs to detect unauthorized access."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages configuration and monitoring data.",
+      "authentication_methods": [
+        "Azure Active Directory",
+        "Multi-Factor Authentication"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Potential misconfiguration leading to unauthorized access"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Local Instance",
+      "type": "backend",
+      "description": "Hosts traditional applications and virtual machines managed through Hyper-V.",
+      "technology_stack": [
+        "Hyper-V",
+        "Windows Server"
+      ],
+      "security_considerations": [
+        "Ensure Hyper-V is configured with secure boot and shielded VMs.",
+        "Regular patching of the underlying OS and Hyper-V."
+      ],
+      "trust_level": "high",
+      "data_handling": "Processes application data and VM configurations.",
+      "authentication_methods": [
+        "Windows Authentication",
+        "Azure AD"
+      ],
+      "authorization_model": "Local and Azure AD-based permissions",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Hyper-V vulnerabilities, if not patched regularly"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Kubernetes-based Applications",
+      "type": "backend",
+      "description": "Supports containerized applications using Azure Kubernetes Service (AKS).",
+      "technology_stack": [
+        "Azure Kubernetes Service",
+        "Docker"
+      ],
+      "security_considerations": [
+        "Implement network policies to restrict pod communication.",
+        "Use Azure Policy for compliance and security enforcement."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Handles application data and container configurations.",
+      "authentication_methods": [
+        "Kubernetes RBAC",
+        "Azure AD integration"
+      ],
+      "authorization_model": "Kubernetes RBAC",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Misconfigured RBAC leading to privilege escalation"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Validated Hardware",
+      "type": "infrastructure",
+      "description": "Specifies hardware configurations for Azure Local, allowing for scalable deployments.",
+      "technology_stack": [
+        "Certified Hardware"
+      ],
+      "security_considerations": [
+        "Ensure hardware is sourced from trusted vendors.",
+        "Regularly review hardware for compliance with security standards."
+      ],
+      "trust_level": "high",
+      "data_handling": "N/A",
+      "authentication_methods": [],
+      "authorization_model": "N/A",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Hardware vulnerabilities if not properly vetted"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Corporate Firewall",
+      "type": "infrastructure",
+      "description": "Facilitates network traffic management and security between components.",
+      "technology_stack": [
+        "Next-Gen Firewall"
+      ],
+      "security_considerations": [
+        "Regularly update firewall rules based on threat intelligence.",
+        "Implement intrusion detection and prevention systems."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages inbound and outbound traffic.",
+      "authentication_methods": [],
+      "authorization_model": "N/A",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Firewall misconfigurations leading to exposure"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "Control Plane",
+      "data_type": "Management Data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data interception during transmission"
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Kubernetes-based Applications",
+      "destination": "Control Plane",
+      "data_type": "Monitoring Data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Unauthorized access to monitoring data"
+      ]
+    },
+    {
+      "id": "3",
+      "source": "Control Plane",
+      "destination": "Corporate Firewall",
+      "data_type": "Configuration Data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "N/A",
+      "security_risks": [
+        "Configuration data leakage"
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises Network",
+      "components": [
+        "Azure Local Instance",
+        "Corporate Firewall"
+      ],
+      "security_controls": [
+        "Firewall",
+        "Network Segmentation"
+      ],
+      "vulnerabilities": [
+        "Potential for lateral movement if compromised"
+      ],
+      "recommendations": [
+        "Implement network segmentation to isolate critical components.",
+        "Regularly review firewall rules and access controls."
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Cloud Environment",
+      "components": [
+        "Control Plane",
+        "Kubernetes-based Applications"
+      ],
+      "security_controls": [
+        "Azure AD",
+        "RBAC"
+      ],
+      "vulnerabilities": [
+        "Misconfigured access leading to data exposure"
+      ],
+      "recommendations": [
+        "Conduct regular audits of access permissions.",
+        "Implement Azure Policy for compliance checks."
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-23 01:59:10.518573",
+  "updated_at": "2025-09-23 01:59:10.518581"
+}

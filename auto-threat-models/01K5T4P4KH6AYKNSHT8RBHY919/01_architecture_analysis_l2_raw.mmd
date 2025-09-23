@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_Network, "On-Premises Network") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Hyper-V, Windows Server] | Auth: Windows Authentication, Azure AD | 🔒 | ⚠️", "Hosts traditional applications and virtual machines managed through Hyper-V.")
+        System(Corporate_Firewall, "Corporate Firewall | [Next-Gen Firewall] | 🔒 | ⚠️", "Facilitates network traffic management and security between components.")
+    }
+    System_Boundary(tb_Cloud_Environment, "Cloud Environment") {
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Backup (+1)] | Auth: Azure Active Directory, Multi-Factor Authentication | 🔒 | ⚠️", "Manages Azure services and resources through various tools.")
+        System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Azure AD integration | 🔒 | ⚠️", "Supports containerized applications using Azure Kubernetes Service (AKS).")
+    }
+    System(Validated_Hardware, "Validated Hardware | [Certified Hardware] | 🔒 | ⚠️", "Specifies hardware configurations for Azure Local, allowing for scalable deployments.")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Management Data | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Control_Plane, "HTTPS | Monitoring Data | Auth: required | 🔒 | ⚠️")
+    Rel(Control_Plane, Corporate_Firewall, "HTTPS | Configuration Data | Auth: required | 🔒 | ⚠️")
