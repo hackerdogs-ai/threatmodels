@@ -1,0 +1,14 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify unauthorized access as a critical threat, particularly to control planes and API endpoints.",,,,2025-09-23T05:08:07.966187
+CORR_002,,,,Both models emphasize the need for regular audits and monitoring to ensure compliance and security.,,,,2025-09-23T05:08:07.966213
+CORR_003,,,,Both models recognize the risk of privilege escalation within Kubernetes environments.,,,,2025-09-23T05:08:07.966225
+CORR_004,,,,Both models highlight the importance of data backup and recovery strategies to mitigate data loss risks.,,,,2025-09-23T05:08:07.966235
+CORR_005,,,,"Both models utilize similar networking technologies, emphasizing the need for secure configurations.",,,,2025-09-23T05:08:07.966244
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,Frequent unauthorized access attempts across multiple environments indicate a systemic vulnerability.,high,,2025-09-23T05:08:07.966260
+PATTERN_002,,Instances of data tampering reported in both cloud and on-premises environments highlight the need for enhanced data integrity measures.,medium,,2025-09-23T05:08:07.966269
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-23T05:08:07.966462
+OPP_002,,,,,,2025-09-23T05:08:07.966471
