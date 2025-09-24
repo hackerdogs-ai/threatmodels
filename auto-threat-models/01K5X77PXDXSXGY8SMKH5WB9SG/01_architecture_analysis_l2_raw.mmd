@@ -1,0 +1,17 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_On_Premises_to_Cloud_Boundary, "On-Premises to Cloud Boundary") {
+        System(Azure_Local_Instance, "Azure Local Instance | [Azure Arc, Hyper-V] | Auth: Windows Authentication, Azure AD | 🔒 | ⚠️", "Hosts traditional and non-containerized applications using Arc VMs and Hyper-V.")
+        System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI, Azure Backup (+2)] | Auth: OAuth 2.0, Azure AD | 🔒 | ⚠️", "Central management interface for Azure services including Azure portal and CLI.")
+    }
+    System_Boundary(tb_Kubernetes_Cluster_Boundary, "Kubernetes Cluster Boundary") {
+        System(Kubernetes_based_Applications, "Kubernetes-based Applications | [Azure Kubernetes Service, Docker] | Auth: Kubernetes RBAC, Service accounts | 🔒 | ⚠️", "Supports containerized workloads through Azure Kubernetes Service (AKS).")
+    }
+    System(Validated_Hardware, "Validated Hardware | [Azure Local machines, ToR switches] | Auth: N/A | 🔒 | ⚠️", "Comprises Azure Local machines and ToR switches for network connectivity.")
+    System(Storage_Spaces_Direct__S2D_, "Storage Spaces Direct (S2D) | [Storage Spaces Direct] | Auth: N/A | 🔒 | ⚠️", "Provides storage virtualization for high availability and performance.")
+    System(Azure_Services, "Azure Services", "Auto-created component: Azure Services")
+    System(Azure_Monitor, "Azure Monitor", "Auto-created component: Azure Monitor")
+
+    Rel(Azure_Local_Instance, Control_Plane, "HTTPS | Configuration data | Auth: required | 🔒 | ⚠️")
+    Rel(Control_Plane, Azure_Services, "HTTPS | Management commands | Auth: required | 🔒 | ⚠️")
+    Rel(Kubernetes_based_Applications, Azure_Monitor, "HTTPS | Logs and metrics | Auth: required | 🔒 | ⚠️")
