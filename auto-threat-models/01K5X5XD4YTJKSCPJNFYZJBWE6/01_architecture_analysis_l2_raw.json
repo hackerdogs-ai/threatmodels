@@ -1,0 +1,252 @@
+{
+  "id": "01K5X5Z4MQ49316S3TKBY2RMQH",
+  "title": null,
+  "overview": "The Hybrid Azure Integration Architecture is designed to seamlessly integrate on-premises resources with Azure services, ensuring secure and efficient management of both traditional and containerized applications. This architecture leverages a control plane for resource management, Azure Local instances for hosting applications, and robust security measures to protect data and resources.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages resources through Azure portal, Azure CLI, and tools like Azure Backup, Azure Monitor, and Azure Key Vault.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI",
+        "Azure Backup",
+        "Azure Monitor",
+        "Azure Key Vault"
+      ],
+      "security_considerations": [
+        "Access control policies must be enforced",
+        "Regular audits of access logs",
+        "Multi-factor authentication for admin access"
+      ],
+      "trust_level": "high",
+      "data_handling": "Controls and manages the flow of data to and from Azure Local instances.",
+      "authentication_methods": [
+        "Azure Active Directory",
+        "Multi-Factor Authentication"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "Data in transit is encrypted using TLS.",
+      "vulnerabilities": [
+        "Potential for unauthorized access if credentials are compromised"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Azure Local Instance",
+      "type": "infrastructure",
+      "description": "Hosts virtual machines (Arc VMs) and traditional applications, managed through Hyper-V.",
+      "technology_stack": [
+        "Hyper-V",
+        "Azure Arc"
+      ],
+      "security_considerations": [
+        "Ensure VM isolation",
+        "Regular patching of Hyper-V",
+        "Use of host-based firewalls"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Processes data from the control plane and runs applications.",
+      "authentication_methods": [
+        "Windows Authentication",
+        "Azure AD"
+      ],
+      "authorization_model": "Local User Permissions",
+      "encryption_status": "Data at rest is encrypted using BitLocker.",
+      "vulnerabilities": [
+        "Hyper-V exploits",
+        "Misconfiguration of VMs"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Kubernetes-based Applications",
+      "type": "backend",
+      "description": "Facilitates containerized workloads using Azure Kubernetes Service (AKS) enabled by Azure Arc.",
+      "technology_stack": [
+        "Azure Kubernetes Service",
+        "Docker"
+      ],
+      "security_considerations": [
+        "Network policies to restrict pod communication",
+        "Regular vulnerability scanning of container images"
+      ],
+      "trust_level": "medium",
+      "data_handling": "Handles application data and inter-service communication.",
+      "authentication_methods": [
+        "Kubernetes RBAC",
+        "Service Accounts"
+      ],
+      "authorization_model": "Kubernetes RBAC",
+      "encryption_status": "Secrets are stored in Kubernetes with encryption at rest.",
+      "vulnerabilities": [
+        "Container vulnerabilities",
+        "Misconfigured RBAC settings"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Validated Hardware",
+      "type": "infrastructure",
+      "description": "Includes physical machines and networking equipment, ensuring compatibility and performance.",
+      "technology_stack": [
+        "Physical Servers",
+        "Networking Equipment"
+      ],
+      "security_considerations": [
+        "Physical security measures",
+        "Regular hardware audits"
+      ],
+      "trust_level": "high",
+      "data_handling": "Hosts critical infrastructure components.",
+      "authentication_methods": [
+        "BIOS Passwords",
+        "Hardware Security Modules"
+      ],
+      "authorization_model": "Physical Access Control",
+      "encryption_status": "Hardware-based encryption where applicable.",
+      "vulnerabilities": [
+        "Physical tampering",
+        "Outdated firmware"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Switch/Router/Firewall",
+      "type": "infrastructure",
+      "description": "Manages traffic between nodes and external networks, ensuring secure communication.",
+      "technology_stack": [
+        "Firewalls",
+        "Routers",
+        "Switches"
+      ],
+      "security_considerations": [
+        "Implement access control lists (ACLs)",
+        "Regular firmware updates"
+      ],
+      "trust_level": "high",
+      "data_handling": "Controls data flow between internal and external networks.",
+      "authentication_methods": [
+        "Device Authentication",
+        "Network Access Control"
+      ],
+      "authorization_model": "ACL-based",
+      "encryption_status": "Traffic encryption using IPsec and SSL.",
+      "vulnerabilities": [
+        "Misconfigured firewall rules",
+        "Outdated firmware vulnerabilities"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Control Plane",
+      "destination": "Azure Local Instance",
+      "data_type": "Management Commands",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Man-in-the-middle attacks",
+        "Unauthorized command execution"
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Azure Local Instance",
+      "destination": "Kubernetes-based Applications",
+      "data_type": "Application Data",
+      "protocol": "HTTP/HTTPS",
+      "encryption": "partial",
+      "authentication": "required",
+      "authorization": "Kubernetes RBAC",
+      "security_risks": [
+        "Data leakage",
+        "Insecure API exposure"
+      ]
+    },
+    {
+      "id": "3",
+      "source": "Kubernetes-based Applications",
+      "destination": "External Networks",
+      "data_type": "User Requests",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "Service Account Permissions",
+      "security_risks": [
+        "Data interception",
+        "DDoS attacks"
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises Network",
+      "components": [
+        "Azure Local Instance",
+        "Switch/Router/Firewall"
+      ],
+      "security_controls": [
+        "Firewalls",
+        "Intrusion Detection Systems"
+      ],
+      "vulnerabilities": [
+        "Insider threats",
+        "External attacks"
+      ],
+      "recommendations": [
+        "Implement strict access controls",
+        "Regularly update firewall rules"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Cloud Environment",
+      "components": [
+        "Control Plane",
+        "Kubernetes-based Applications"
+      ],
+      "security_controls": [
+        "Azure Security Center",
+        "Azure Key Vault"
+      ],
+      "vulnerabilities": [
+        "Cloud misconfigurations",
+        "Data exposure risks"
+      ],
+      "recommendations": [
+        "Conduct regular security assessments",
+        "Utilize Azure Policy for compliance"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-24 06:18:27.863388",
+  "updated_at": "2025-09-24 06:18:27.863392"
+}
