@@ -1,0 +1,12 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Interaction_Layer, "User Interaction Layer") {
+        System(Frontend_Application, "Frontend Application | [React, JavaScript, HTML (+1)] | Auth: OAuth, JWT | 🔒 | ⚠️", "User interface for interacting with the GitHub repository.")
+    }
+    System_Boundary(tb_API_Layer, "API Layer") {
+        System(Backend_API, "Backend API | [Node.js, Express, MongoDB] | Auth: OAuth, API Keys | 🔒 | ⚠️", "RESTful API for processing requests from the frontend.")
+        SystemDb(Database, "Database | [MongoDB] | Auth: Username/Password, API Keys | 🔒 | ⚠️", "Stores user data, repository information, and access logs.")
+    }
+
+    Rel(Frontend_Application, Backend_API, "HTTPS | User Input Data | Auth: required | 🔒 | ⚠️")
+    Rel(Backend_API, Database, "MongoDB Protocol | User and Repository Data | Auth: required | 🔒 | ⚠️")
