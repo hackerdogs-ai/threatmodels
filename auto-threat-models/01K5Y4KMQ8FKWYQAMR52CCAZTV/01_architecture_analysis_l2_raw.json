@@ -1,0 +1,280 @@
+{
+  "id": "01K5Y4PEBRPVVK2DRW5QTQBHNH",
+  "title": null,
+  "overview": "This architecture represents a hybrid cloud solution integrating on-premises resources with Azure services, supporting both traditional and containerized applications through a centralized control plane. It emphasizes security, performance, and manageability.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Azure Local Instance",
+      "type": "infrastructure",
+      "description": "Core environment hosting virtual machines and applications.",
+      "technology_stack": [
+        "Azure Arc",
+        "Hyper-V"
+      ],
+      "security_considerations": [
+        "Regular security updates and patches for the Azure Local instance.",
+        "Isolation of workloads to prevent lateral movement."
+      ],
+      "trust_level": "high",
+      "data_handling": "Processes sensitive data in compliance with regulations.",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "Data at rest and in transit is encrypted.",
+      "vulnerabilities": [
+        "Potential misconfiguration of Azure services."
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Control Plane",
+      "type": "frontend",
+      "description": "Management interface for Azure services including Azure portal and CLI.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI"
+      ],
+      "security_considerations": [
+        "Multi-factor authentication (MFA) for access.",
+        "Audit logging for all administrative actions."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages sensitive configuration and operational data.",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "All data is encrypted in transit.",
+      "vulnerabilities": [
+        "Phishing attacks targeting user credentials."
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Traditional Applications",
+      "type": "backend",
+      "description": "Non-containerized applications running on Arc VMs.",
+      "technology_stack": [
+        "Windows Server",
+        "IIS"
+      ],
+      "security_considerations": [
+        "Regular vulnerability assessments and penetration testing.",
+        "Application whitelisting to prevent unauthorized execution."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Processes business-critical data.",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Access Control Lists (ACLs)",
+      "encryption_status": "Data at rest is encrypted.",
+      "vulnerabilities": [
+        "Outdated software components."
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Kubernetes-based Applications",
+      "type": "backend",
+      "description": "Containerized applications managed through Azure Kubernetes Service.",
+      "technology_stack": [
+        "Azure Kubernetes Service (AKS)",
+        "Docker"
+      ],
+      "security_considerations": [
+        "Network policies to control traffic between pods.",
+        "Regular scanning of container images for vulnerabilities."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles sensitive user data.",
+      "authentication_methods": [
+        "Service Account Tokens"
+      ],
+      "authorization_model": "Kubernetes RBAC",
+      "encryption_status": "Data in transit is encrypted using TLS.",
+      "vulnerabilities": [
+        "Misconfigured Kubernetes RBAC settings."
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Hyper-V",
+      "type": "infrastructure",
+      "description": "Virtualization platform for hosting VMs.",
+      "technology_stack": [
+        "Microsoft Hyper-V"
+      ],
+      "security_considerations": [
+        "Isolation of VMs to prevent cross-VM attacks.",
+        "Regular updates to Hyper-V to mitigate vulnerabilities."
+      ],
+      "trust_level": "high",
+      "data_handling": "Hosts multiple VMs with varying data sensitivity.",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Hyper-V Role-Based Access Control",
+      "encryption_status": "VMs are encrypted at rest.",
+      "vulnerabilities": [
+        "Potential for VM escape attacks."
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Storage Spaces Direct (S2D)",
+      "type": "infrastructure",
+      "description": "Storage solution for high availability and performance.",
+      "technology_stack": [
+        "Windows Server Storage Spaces"
+      ],
+      "security_considerations": [
+        "Data redundancy to prevent data loss.",
+        "Encryption of data at rest."
+      ],
+      "trust_level": "high",
+      "data_handling": "Stores critical application data.",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Access Control Lists (ACLs)",
+      "encryption_status": "Data at rest is encrypted.",
+      "vulnerabilities": [
+        "Data loss due to hardware failure."
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Switch/Router/Firewall",
+      "type": "infrastructure",
+      "description": "Network components managing traffic and securing the environment.",
+      "technology_stack": [
+        "Cisco Switches",
+        "Palo Alto Firewalls"
+      ],
+      "security_considerations": [
+        "Regular updates to firmware and software.",
+        "Intrusion detection and prevention systems (IDPS) in place."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages all network traffic.",
+      "authentication_methods": [
+        "RADIUS",
+        "TACACS+"
+      ],
+      "authorization_model": "Access Control Lists (ACLs)",
+      "encryption_status": "VPNs used for secure remote access.",
+      "vulnerabilities": [
+        "Misconfigured firewall rules."
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "Control Plane",
+      "data_type": "Management and monitoring data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Man-in-the-middle attacks if not properly secured."
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Arc VMs",
+      "destination": "Azure Backup",
+      "data_type": "Backup data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data exposure during backup process."
+      ]
+    },
+    {
+      "id": "3",
+      "source": "Kubernetes-based Applications",
+      "destination": "Azure Monitor",
+      "data_type": "Monitoring metrics",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Data leakage if monitoring data is not secured."
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "1",
+      "name": "On-Premises to Azure Local",
+      "components": [
+        "Azure Local Instance",
+        "Control Plane"
+      ],
+      "security_controls": [
+        "Firewalls",
+        "VPNs"
+      ],
+      "vulnerabilities": [
+        "Network eavesdropping during data transfer."
+      ],
+      "recommendations": [
+        "Implement end-to-end encryption for all data transfers.",
+        "Regularly audit firewall rules and VPN configurations."
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Internal Network Segmentation",
+      "components": [
+        "Switch/Router/Firewall",
+        "Arc VMs",
+        "Kubernetes-based Applications"
+      ],
+      "security_controls": [
+        "Network segmentation",
+        "Access Control Lists"
+      ],
+      "vulnerabilities": [
+        "Lateral movement within the network."
+      ],
+      "recommendations": [
+        "Implement micro-segmentation for critical applications.",
+        "Regularly review and update ACLs."
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-24 15:15:28.760680",
+  "updated_at": "2025-09-24 15:15:28.760684"
+}
