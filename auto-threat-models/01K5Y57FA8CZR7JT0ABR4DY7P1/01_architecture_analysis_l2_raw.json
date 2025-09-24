@@ -1,0 +1,319 @@
+{
+  "id": "01K5Y59GS99ERM2W2Y0AF01VTC",
+  "title": null,
+  "overview": "The architecture represents a hybrid cloud solution utilizing Azure Local, integrating on-premises resources with Azure services. It encompasses various components that facilitate both traditional and containerized applications, along with robust management and security features.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Azure Local Instance",
+      "type": "infrastructure",
+      "description": "Central hosting environment for both traditional VMs and containerized applications.",
+      "technology_stack": [
+        "Azure",
+        "Windows Server",
+        "Linux"
+      ],
+      "security_considerations": [
+        "Regular updates and patch management to mitigate vulnerabilities.",
+        "Implementation of network segmentation to limit exposure."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles sensitive data, requires strict access controls.",
+      "authentication_methods": [
+        "Azure Active Directory",
+        "Multi-Factor Authentication"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "Data at rest and in transit is encrypted.",
+      "vulnerabilities": [
+        "Potential for misconfiguration",
+        "Outdated software components"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Control Plane",
+      "type": "frontend",
+      "description": "Management interface for Azure resources, including Azure portal and CLI.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI"
+      ],
+      "security_considerations": [
+        "Access control policies to restrict management access.",
+        "Audit logging for all administrative actions."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages configuration data and user credentials.",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "All communications are encrypted.",
+      "vulnerabilities": [
+        "Phishing attacks targeting admin accounts"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Arc VMs",
+      "type": "infrastructure",
+      "description": "Virtual machines managed through Azure Arc for hybrid management.",
+      "technology_stack": [
+        "Azure Arc",
+        "Windows Server",
+        "Linux"
+      ],
+      "security_considerations": [
+        "Ensure secure connectivity to Azure for management.",
+        "Regular monitoring for compliance with security policies."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Handles workloads and configurations.",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "Data at rest is encrypted.",
+      "vulnerabilities": [
+        "Dependency on Azure connectivity"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Hyper-V",
+      "type": "infrastructure",
+      "description": "Virtualization platform for running traditional applications.",
+      "technology_stack": [
+        "Hyper-V",
+        "Windows Server"
+      ],
+      "security_considerations": [
+        "Isolate VMs to prevent lateral movement in case of compromise.",
+        "Regularly update Hyper-V to fix known vulnerabilities."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles application data and VM configurations.",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Local Security Policies",
+      "encryption_status": "VMs can be encrypted using BitLocker.",
+      "vulnerabilities": [
+        "VM escape attacks"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Azure Kubernetes Service (AKS)",
+      "type": "infrastructure",
+      "description": "Managed Kubernetes service for deploying containerized applications.",
+      "technology_stack": [
+        "Kubernetes",
+        "Docker",
+        "Azure"
+      ],
+      "security_considerations": [
+        "Implement network policies to control traffic between pods.",
+        "Regularly scan container images for vulnerabilities."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles application data and container configurations.",
+      "authentication_methods": [
+        "Azure Active Directory",
+        "Kubernetes RBAC"
+      ],
+      "authorization_model": "Kubernetes RBAC",
+      "encryption_status": "Secrets are encrypted at rest.",
+      "vulnerabilities": [
+        "Misconfigured RBAC permissions"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Azure Virtual Desktop",
+      "type": "frontend",
+      "description": "Provides virtual desktop infrastructure for users.",
+      "technology_stack": [
+        "Azure Virtual Desktop",
+        "Windows 10/11"
+      ],
+      "security_considerations": [
+        "Use of Conditional Access policies to enforce security requirements.",
+        "Regular monitoring of user sessions for anomalies."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles user data and application access.",
+      "authentication_methods": [
+        "Azure Active Directory",
+        "Multi-Factor Authentication"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "All data in transit is encrypted.",
+      "vulnerabilities": [
+        "Unauthorized access to user sessions"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Storage Spaces Direct (S2D)",
+      "type": "infrastructure",
+      "description": "Storage solution for high availability and performance.",
+      "technology_stack": [
+        "Windows Server",
+        "Storage Spaces Direct"
+      ],
+      "security_considerations": [
+        "Implement access controls to restrict storage access.",
+        "Regularly back up storage configurations."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles sensitive application data.",
+      "authentication_methods": [
+        "Windows Authentication"
+      ],
+      "authorization_model": "Local Security Policies",
+      "encryption_status": "Data at rest is encrypted.",
+      "vulnerabilities": [
+        "Data loss due to hardware failure"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Switch/Router/Firewall",
+      "type": "infrastructure",
+      "description": "Manages East/West traffic between local machines and external connections.",
+      "technology_stack": [
+        "Cisco",
+        "Fortinet"
+      ],
+      "security_considerations": [
+        "Implement access control lists (ACLs) to restrict traffic.",
+        "Regularly update firmware to patch vulnerabilities."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles network traffic data.",
+      "authentication_methods": [
+        "None"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "Traffic can be encrypted using VPN.",
+      "vulnerabilities": [
+        "Potential for DDoS attacks"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Corp Firewall",
+      "type": "infrastructure",
+      "description": "Provides security for outbound traffic.",
+      "technology_stack": [
+        "Palo Alto",
+        "Fortinet"
+      ],
+      "security_considerations": [
+        "Regularly review firewall rules for compliance.",
+        "Implement intrusion detection and prevention systems."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles all outbound traffic data.",
+      "authentication_methods": [
+        "None"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "Outbound traffic can be encrypted.",
+      "vulnerabilities": [
+        "Misconfigured firewall rules"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Azure Backup",
+      "type": "external_service",
+      "description": "Service for backing up Azure resources and on-premises data.",
+      "technology_stack": [
+        "Azure Backup"
+      ],
+      "security_considerations": [
+        "Ensure backup data is encrypted both in transit and at rest.",
+        "Regularly test backup and restore processes."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles backup data.",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "Data is encrypted at rest and in transit.",
+      "vulnerabilities": [
+        "Backup data exposure if not secured properly"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Azure Local Instance",
+      "destination": "Azure Services",
+      "data_type": "Application Data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "Role-Based Access Control (RBAC)",
+      "security_risks": [
+        "Data interception during transit"
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Control Plane",
+      "destination": "Azure Local Instance",
+      "data_type": "Management Commands",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "Role-Based Access Control (RBAC)",
+      "security_risks": [
+        "Unauthorized access to management interfaces"
+      ]
+    },
+    {
+      "id": "3",
+      "source": "Arc VMs",
+      "destination": "Azure Portal",
+      "data_type": "Monitoring Data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "Role-Based Access Control (RBAC)",
+      "security_risks": [
+        "Data leakage through misconfigured monitoring settings"
+      ]
+    }
+  ],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-24 15:25:53.833414",
+  "updated_at": "2025-09-24 15:25:53.833418"
+}

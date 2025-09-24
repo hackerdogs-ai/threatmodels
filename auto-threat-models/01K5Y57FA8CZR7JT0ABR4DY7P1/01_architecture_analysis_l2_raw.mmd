@@ -1,0 +1,18 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(Azure_Local_Instance, "Azure Local Instance | [Azure, Windows Server, Linux] | Auth: Azure Active Directory, Multi-Factor Authentication | 🔒 | ⚠️", "Central hosting environment for both traditional VMs and containerized applications.")
+    System(Control_Plane, "Control Plane | [Azure Portal, Azure CLI] | Auth: Azure Active Directory | 🔒 | ⚠️", "Management interface for Azure resources, including Azure portal and CLI.")
+    System(Arc_VMs, "Arc VMs | [Azure Arc, Windows Server, Linux] | Auth: Azure Active Directory | 🔒 | ⚠️", "Virtual machines managed through Azure Arc for hybrid management.")
+    System(Hyper_V, "Hyper-V | [Hyper-V, Windows Server] | Auth: Windows Authentication | 🔒 | ⚠️", "Virtualization platform for running traditional applications.")
+    System(Azure_Kubernetes_Service__AKS_, "Azure Kubernetes Service (AKS) | [Kubernetes, Docker, Azure] | Auth: Azure Active Directory, Kubernetes RBAC | 🔒 | ⚠️", "Managed Kubernetes service for deploying containerized applications.")
+    System(Azure_Virtual_Desktop, "Azure Virtual Desktop | [Azure Virtual Desktop, Windows 10/11] | Auth: Azure Active Directory, Multi-Factor Authentication | 🔒 | ⚠️", "Provides virtual desktop infrastructure for users.")
+    System(Storage_Spaces_Direct__S2D_, "Storage Spaces Direct (S2D) | [Windows Server, Storage Spaces Direct] | Auth: Windows Authentication | 🔒 | ⚠️", "Storage solution for high availability and performance.")
+    System(Switch_Router_Firewall, "Switch/Router/Firewall | [Cisco, Fortinet] | Auth: None | 🔒 | ⚠️", "Manages East/West traffic between local machines and external connections.")
+    System(Corp_Firewall, "Corp Firewall | [Palo Alto, Fortinet] | Auth: None | 🔒 | ⚠️", "Provides security for outbound traffic.")
+    System(Azure_Backup, "Azure Backup | [Azure Backup] | Auth: Azure Active Directory | 🔒 | ⚠️", "Service for backing up Azure resources and on-premises data.")
+    System(Azure_Services, "Azure Services", "Auto-created component: Azure Services")
+    System(Azure_Portal, "Azure Portal", "Auto-created component: Azure Portal")
+
+    Rel(Azure_Local_Instance, Azure_Services, "HTTPS | Application Data | Auth: required | 🔒 | ⚠️")
+    Rel(Control_Plane, Azure_Local_Instance, "HTTPS | Management Commands | Auth: required | 🔒 | ⚠️")
+    Rel(Arc_VMs, Azure_Portal, "HTTPS | Monitoring Data | Auth: required | 🔒 | ⚠️")
