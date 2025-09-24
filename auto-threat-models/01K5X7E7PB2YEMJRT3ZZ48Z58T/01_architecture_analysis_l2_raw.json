@@ -1,0 +1,256 @@
+{
+  "id": "01K5X7GBCT2E0W1E3XMEMHGZTZ",
+  "title": null,
+  "overview": "The Azure Local Integration Architecture provides a comprehensive framework for integrating on-premises resources with Azure services, ensuring secure management and deployment of applications across a hybrid environment.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "cp-001",
+      "name": "Control Plane",
+      "type": "infrastructure",
+      "description": "Manages resources using Azure portal, Azure CLI, and tools, including Azure Backup, Azure Monitor, and Microsoft Defender for Cloud.",
+      "technology_stack": [
+        "Azure Portal",
+        "Azure CLI",
+        "Azure Backup",
+        "Azure Monitor",
+        "Microsoft Defender for Cloud"
+      ],
+      "security_considerations": [
+        "Ensure role-based access control (RBAC) is implemented.",
+        "Use Azure Active Directory for identity management.",
+        "Regularly audit access logs and permissions."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages sensitive configuration and operational data.",
+      "authentication_methods": [
+        "Azure Active Directory",
+        "Multi-Factor Authentication"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "Data at rest and in transit is encrypted.",
+      "vulnerabilities": [
+        "Potential misconfiguration of access controls",
+        "Insufficient logging and monitoring"
+      ]
+    },
+    {
+      "id": "az-002",
+      "name": "Azure Local Instance",
+      "type": "backend",
+      "description": "Hosts traditional applications and virtual machines managed through Hyper-V.",
+      "technology_stack": [
+        "Hyper-V",
+        "Windows Server"
+      ],
+      "security_considerations": [
+        "Implement network segmentation for VMs.",
+        "Regularly update Hyper-V and Windows Server to patch vulnerabilities."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles application data and VM configurations.",
+      "authentication_methods": [
+        "Windows Authentication",
+        "Active Directory"
+      ],
+      "authorization_model": "Local and Active Directory-based permissions",
+      "encryption_status": "VM data is encrypted at rest.",
+      "vulnerabilities": [
+        "VM escape attacks",
+        "Insecure VM configurations"
+      ]
+    },
+    {
+      "id": "k8s-003",
+      "name": "Kubernetes-based Applications",
+      "type": "backend",
+      "description": "Facilitates containerized application deployment using Azure Kubernetes Service (AKS) enabled by Azure Arc.",
+      "technology_stack": [
+        "Azure Kubernetes Service",
+        "Docker",
+        "Azure Arc"
+      ],
+      "security_considerations": [
+        "Use network policies to control traffic between pods.",
+        "Implement Pod Security Policies to enforce security standards."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Processes application data and configurations.",
+      "authentication_methods": [
+        "Kubernetes RBAC",
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Kubernetes RBAC",
+      "encryption_status": "Secrets are stored encrypted in etcd.",
+      "vulnerabilities": [
+        "Container vulnerabilities",
+        "Misconfigured RBAC settings"
+      ]
+    },
+    {
+      "id": "hw-004",
+      "name": "Validated Hardware",
+      "type": "infrastructure",
+      "description": "Specifies the hardware requirements for Azure Local, supporting 1 to 16 machines.",
+      "technology_stack": [
+        "Physical Servers",
+        "Networking Equipment"
+      ],
+      "security_considerations": [
+        "Ensure hardware is sourced from trusted vendors.",
+        "Regularly update firmware and BIOS."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Handles hardware configurations and performance data.",
+      "authentication_methods": [
+        "Physical security controls",
+        "BIOS passwords"
+      ],
+      "authorization_model": "Physical access control",
+      "encryption_status": "No encryption at hardware level.",
+      "vulnerabilities": [
+        "Physical tampering",
+        "Firmware vulnerabilities"
+      ]
+    },
+    {
+      "id": "net-005",
+      "name": "Networking",
+      "type": "infrastructure",
+      "description": "Includes switches/routers/firewalls for managing East/West traffic between local machines.",
+      "technology_stack": [
+        "Firewalls",
+        "Routers",
+        "Switches"
+      ],
+      "security_considerations": [
+        "Implement firewall rules to restrict traffic.",
+        "Use VPNs for secure remote access."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages network traffic and configurations.",
+      "authentication_methods": [
+        "Network access control",
+        "802.1X"
+      ],
+      "authorization_model": "Network segmentation policies",
+      "encryption_status": "Traffic encryption via VPN and TLS.",
+      "vulnerabilities": [
+        "Network eavesdropping",
+        "Misconfigured firewall rules"
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "df-001",
+      "source": "Control Plane",
+      "destination": "Azure Local Instance",
+      "data_type": "Configuration and management data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "RBAC",
+      "security_risks": [
+        "Man-in-the-middle attacks",
+        "Unauthorized access to management data"
+      ]
+    },
+    {
+      "id": "df-002",
+      "source": "Azure Local Instance",
+      "destination": "Kubernetes-based Applications",
+      "data_type": "Application data",
+      "protocol": "HTTP/HTTPS",
+      "encryption": "partial",
+      "authentication": "required",
+      "authorization": "Kubernetes RBAC",
+      "security_risks": [
+        "Data leakage",
+        "Insecure API access"
+      ]
+    },
+    {
+      "id": "df-003",
+      "source": "Kubernetes-based Applications",
+      "destination": "Validated Hardware",
+      "data_type": "Performance and monitoring data",
+      "protocol": "HTTP/HTTPS",
+      "encryption": "yes",
+      "authentication": "optional",
+      "authorization": "Network policies",
+      "security_risks": [
+        "Data interception",
+        "Unauthorized access to monitoring data"
+      ]
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "id": "tb-001",
+      "name": "Control Plane Boundary",
+      "components": [
+        "Control Plane",
+        "Azure Local Instance"
+      ],
+      "security_controls": [
+        "RBAC",
+        "Network security groups",
+        "Encryption"
+      ],
+      "vulnerabilities": [
+        "Misconfigured access controls",
+        "Insufficient monitoring"
+      ],
+      "recommendations": [
+        "Regularly review and audit access controls.",
+        "Implement logging for all access to the control plane."
+      ]
+    },
+    {
+      "id": "tb-002",
+      "name": "Network Boundary",
+      "components": [
+        "Networking",
+        "Azure Local Instance",
+        "Kubernetes-based Applications"
+      ],
+      "security_controls": [
+        "Firewalls",
+        "Network segmentation",
+        "VPN"
+      ],
+      "vulnerabilities": [
+        "Network eavesdropping",
+        "Insecure configurations"
+      ],
+      "recommendations": [
+        "Conduct regular network penetration testing.",
+        "Implement strict firewall rules to limit traffic."
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-24 06:45:20.410551",
+  "updated_at": "2025-09-24 06:45:20.410555"
+}
