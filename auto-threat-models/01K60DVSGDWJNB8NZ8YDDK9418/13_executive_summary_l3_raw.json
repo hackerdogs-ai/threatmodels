@@ -1,0 +1,40 @@
+{
+  "executive_summary": {
+    "id": "01K60EF6CWVK5933ARYNEFMVT9",
+    "title": null,
+    "overview": "This executive summary presents a comprehensive threat model for the Azure Web Application Architecture project, highlighting key risks, compliance status, and strategic recommendations to enhance security posture and operational resilience.",
+    "scope": null,
+    "methodology": null,
+    "key_findings": [
+      "High risk of SQL Injection and DoS attacks necessitates immediate mitigation strategies.",
+      "Credential stuffing poses a significant threat due to weak password policies.",
+      "Current access controls for Azure SQL Database require enhancement to prevent unauthorized access."
+    ],
+    "critical_risks": [],
+    "high_priority_threats": [],
+    "total_threats": 0,
+    "high_risk_count": 0,
+    "medium_risk_count": 0,
+    "low_risk_count": 0,
+    "business_impact_summary": null,
+    "compliance_implications": null,
+    "recommendations": [],
+    "immediate_actions": [],
+    "strategic_recommendations": [
+      "Implement a comprehensive security training program focusing on secure coding practices and incident response.",
+      "Conduct regular security assessments and penetration testing to identify and remediate vulnerabilities.",
+      "Establish a cross-departmental security task force to oversee compliance and risk management efforts."
+    ],
+    "resource_requirements": {},
+    "timeline": null,
+    "budget_implications": null,
+    "next_steps": [
+      "Conduct a workshop to discuss shared threats and mitigation strategies.",
+      "Develop a detailed implementation plan for recommended actions.",
+      "Schedule regular reviews of the threat model to adapt to emerging threats."
+    ],
+    "follow_up_actions": [],
+    "created_at": "2025-09-25 12:44:45.852180",
+    "updated_at": "2025-09-25 12:44:45.852184"
+  }
+}
