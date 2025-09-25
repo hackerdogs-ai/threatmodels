@@ -1,0 +1,14 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"The default-github threat model shares several threats with other models in the organization, particularly XSS and SQL Injection, which are common vulnerabilities across web applications.",,,,2025-09-25T01:31:49.402550
+CORR_002,,,,"The mitigations proposed in the default-github model are also applicable to other models, indicating a need for a unified approach to security.",,,,2025-09-25T01:31:49.402570
+CORR_003,,,,"Common attack patterns such as token theft and session fixation are identified across multiple threat models, indicating a systemic issue in session management.",,,,2025-09-25T01:31:49.402582
+CORR_004,,,,The threats identified in the default-github model overlap with compliance requirements for data protection and privacy regulations.,,,,2025-09-25T01:31:49.402594
+CORR_005,,,,The aggregation of risks from multiple threat models highlights systemic vulnerabilities that could impact the entire organization.,,,,2025-09-25T01:31:49.402604
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,"Multiple applications within the organization exhibit similar vulnerabilities, particularly in web security.",high,,2025-09-25T01:31:49.402620
+PATTERN_002,,"Common mitigations are identified across different threat models, indicating a potential for standardization in security practices.",medium,,2025-09-25T01:31:49.402631
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-25T01:31:49.402646
+OPP_002,,,,,,2025-09-25T01:31:49.402653
