@@ -1,0 +1,14 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(Users, "Users | [Web Browsers, Mobile Devices] | Auth: OAuth 2.0, OpenID Connect | 🔒 | ⚠️", "End-users accessing the application through a web interface.")
+    System(Application_Gateway, "Application Gateway | [Azure Application Gateway] | Auth: None | 🔒 | ⚠️", "Manages incoming traffic and routes it to the appropriate services.")
+    System(Web_App_Firewall, "Web App Firewall | [Azure Web Application Firewall] | Auth: None | 🔒 | ⚠️", "Provides security by filtering and monitoring HTTP traffic.")
+    System(Load_Balancers, "Load Balancers | [Azure Load Balancer] | Auth: None | 🔒 | ⚠️", "Distributes incoming application traffic across multiple servers.")
+    System(App_Service, "App Service | [Azure App Service] | Auth: Azure Active Directory, OAuth 2.0 | 🔒 | ⚠️", "Hosts the web application.")
+    System(Web_App, "Web App | [ASP.NET, Node.js] | Auth: OAuth 2.0, OpenID Connect | 🔒 | ⚠️", "The main application component serving user requests.")
+    System(Web_App_Worker_Pools, "Web App Worker Pools | [Azure Functions, Azure Logic Apps] | Auth: None | 🔒 | ⚠️", "Processes background tasks for the web application.")
+    SystemDb(Azure_SQL_Database, "Azure SQL Database | [Azure SQL Database] | Auth: SQL Authentication, Azure Active Directory | 🔒 | ⚠️", "Stores application data securely.")
+    System(Bastion_Host, "Bastion Host | [Azure Bastion] | Auth: Azure Active Directory | 🔒 | ⚠️", "Provides secure access to virtual machines without exposing them to the public internet.")
+    System(Azure_Management_Portal, "Azure Management Portal | [Azure Portal] | Auth: Azure Active Directory | 🔒 | ⚠️", "Interface for managing Azure resources.")
+    System(Identity__Secrets___Access_Management, "Identity, Secrets & Access Management | [Azure Active Directory, Azure Key Vault] | Auth: OAuth 2.0, OpenID Connect | 🔒 | ⚠️", "Manages user identities, secrets, and access controls.")
+    System(System_Health_Monitoring, "System Health Monitoring | [Azure Security Center, Azure Monitor, Log Analytics] | Auth: None | 🔒 | ⚠️", "Monitors application health and security.")

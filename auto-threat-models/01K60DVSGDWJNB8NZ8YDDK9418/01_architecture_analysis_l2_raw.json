@@ -1,0 +1,332 @@
+{
+  "id": "01K60DY82TS78ZRWP4DSXQMG81",
+  "title": null,
+  "overview": "This architecture analysis provides a comprehensive overview of the Azure Web Application Architecture, focusing on security considerations, data flows, trust boundaries, and actionable recommendations to enhance the security posture of the application.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Users",
+      "type": "external_service",
+      "description": "End-users accessing the application through a web interface.",
+      "technology_stack": [
+        "Web Browsers",
+        "Mobile Devices"
+      ],
+      "security_considerations": [
+        "User education on phishing attacks.",
+        "Multi-factor authentication for access."
+      ],
+      "trust_level": "medium",
+      "data_handling": "User data is processed and stored securely.",
+      "authentication_methods": [
+        "OAuth 2.0",
+        "OpenID Connect"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Phishing",
+        "Credential stuffing"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Application Gateway",
+      "type": "infrastructure",
+      "description": "Manages incoming traffic and routes it to the appropriate services.",
+      "technology_stack": [
+        "Azure Application Gateway"
+      ],
+      "security_considerations": [
+        "Web Application Firewall (WAF) rules configured to block common attack patterns.",
+        "SSL termination to ensure secure traffic."
+      ],
+      "trust_level": "high",
+      "data_handling": "Traffic is inspected and routed securely.",
+      "authentication_methods": [
+        "None"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Misconfiguration",
+        "DDoS attacks"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Web App Firewall",
+      "type": "infrastructure",
+      "description": "Provides security by filtering and monitoring HTTP traffic.",
+      "technology_stack": [
+        "Azure Web Application Firewall"
+      ],
+      "security_considerations": [
+        "Regular updates to WAF rules to protect against new vulnerabilities.",
+        "Logging and monitoring of blocked requests."
+      ],
+      "trust_level": "high",
+      "data_handling": "Inspects HTTP requests and responses.",
+      "authentication_methods": [
+        "None"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Evasion techniques",
+        "False positives"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Load Balancers",
+      "type": "infrastructure",
+      "description": "Distributes incoming application traffic across multiple servers.",
+      "technology_stack": [
+        "Azure Load Balancer"
+      ],
+      "security_considerations": [
+        "Health probes to ensure only healthy instances receive traffic.",
+        "Network Security Groups (NSGs) to restrict access."
+      ],
+      "trust_level": "high",
+      "data_handling": "Traffic is balanced and routed securely.",
+      "authentication_methods": [
+        "None"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Single point of failure",
+        "Misconfiguration"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "App Service",
+      "type": "backend",
+      "description": "Hosts the web application.",
+      "technology_stack": [
+        "Azure App Service"
+      ],
+      "security_considerations": [
+        "Use of managed identities for Azure resources.",
+        "Regular patching and updates."
+      ],
+      "trust_level": "high",
+      "data_handling": "Processes application logic and user requests.",
+      "authentication_methods": [
+        "Azure Active Directory",
+        "OAuth 2.0"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Code injection",
+        "Misconfiguration"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Web App",
+      "type": "backend",
+      "description": "The main application component serving user requests.",
+      "technology_stack": [
+        "ASP.NET",
+        "Node.js"
+      ],
+      "security_considerations": [
+        "Input validation to prevent injection attacks.",
+        "Regular security testing and code reviews."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles user data and application logic.",
+      "authentication_methods": [
+        "OAuth 2.0",
+        "OpenID Connect"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Cross-Site Scripting (XSS)",
+        "SQL Injection"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Web App Worker Pools",
+      "type": "backend",
+      "description": "Processes background tasks for the web application.",
+      "technology_stack": [
+        "Azure Functions",
+        "Azure Logic Apps"
+      ],
+      "security_considerations": [
+        "Isolation of worker pools to prevent cross-application access.",
+        "Use of managed identities for secure resource access."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Handles background processing and task execution.",
+      "authentication_methods": [
+        "None"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Resource exhaustion",
+        "Unauthorized access"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Azure SQL Database",
+      "type": "database",
+      "description": "Stores application data securely.",
+      "technology_stack": [
+        "Azure SQL Database"
+      ],
+      "security_considerations": [
+        "Transparent Data Encryption (TDE) for data at rest.",
+        "Firewall rules to restrict access."
+      ],
+      "trust_level": "high",
+      "data_handling": "Stores sensitive user and application data.",
+      "authentication_methods": [
+        "SQL Authentication",
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "SQL Injection",
+        "Data breaches"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Bastion Host",
+      "type": "infrastructure",
+      "description": "Provides secure access to virtual machines without exposing them to the public internet.",
+      "technology_stack": [
+        "Azure Bastion"
+      ],
+      "security_considerations": [
+        "No public IP addresses for VMs.",
+        "Secure access through Azure Bastion only."
+      ],
+      "trust_level": "high",
+      "data_handling": "Facilitates secure management of VMs.",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Misconfiguration",
+        "Unauthorized access"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Azure Management Portal",
+      "type": "external_service",
+      "description": "Interface for managing Azure resources.",
+      "technology_stack": [
+        "Azure Portal"
+      ],
+      "security_considerations": [
+        "Multi-factor authentication for portal access.",
+        "Role-based access control for resource management."
+      ],
+      "trust_level": "high",
+      "data_handling": "Management of Azure resources and configurations.",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Account compromise",
+        "Insufficient permissions"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Identity, Secrets & Access Management",
+      "type": "infrastructure",
+      "description": "Manages user identities, secrets, and access controls.",
+      "technology_stack": [
+        "Azure Active Directory",
+        "Azure Key Vault"
+      ],
+      "security_considerations": [
+        "Use of Azure Key Vault for managing secrets securely.",
+        "Regular audits of access permissions."
+      ],
+      "trust_level": "high",
+      "data_handling": "Manages sensitive information and access controls.",
+      "authentication_methods": [
+        "OAuth 2.0",
+        "OpenID Connect"
+      ],
+      "authorization_model": "Role-Based Access Control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Insufficient access controls",
+        "Data leakage"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "System Health Monitoring",
+      "type": "infrastructure",
+      "description": "Monitors application health and security.",
+      "technology_stack": [
+        "Azure Security Center",
+        "Azure Monitor",
+        "Log Analytics"
+      ],
+      "security_considerations": [
+        "Alerts configured for suspicious activities.",
+        "Regular reviews of logs for anomalies."
+      ],
+      "trust_level": "high",
+      "data_handling": "Collects and analyzes performance and security data.",
+      "authentication_methods": [
+        "None"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Data retention policies",
+        "Log tampering"
+      ]
+    }
+  ],
+  "data_flows": [],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-25 12:35:30.522492",
+  "updated_at": "2025-09-25 12:35:30.522497"
+}
