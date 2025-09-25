@@ -1,0 +1,15 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify user credential theft as a critical threat, indicating a common vulnerability in user authentication mechanisms.",,,,2025-09-25T00:04:07.783900
+CORR_002,,,,"Both models recommend implementing encryption for sensitive data, indicating a shared understanding of data protection needs.",,,,2025-09-25T00:04:07.783917
+CORR_003,,,,"Both models highlight XSS and CSRF as critical vulnerabilities, indicating a need for comprehensive input validation strategies.",,,,2025-09-25T00:04:07.783927
+CORR_004,,,,"Both models align with compliance frameworks such as PCI-DSS, which emphasize secure data handling and access control.",,,,2025-09-25T00:04:07.783937
+CORR_005,,,,The aggregation of risks from insufficient logging and monitoring can lead to undetected breaches and prolonged exposure.,,,,2025-09-25T00:04:07.783945
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,Frequent occurrences of credential theft and token theft across various threat models indicate a systemic vulnerability in user authentication processes.,high,,2025-09-25T00:04:07.783958
+PATTERN_002,,Common vulnerabilities related to XSS and CSRF across threat models suggest a lack of robust input validation mechanisms.,high,,2025-09-25T00:04:07.783967
+PATTERN_003,,Shared threats related to data breaches highlight weaknesses in data protection strategies across multiple models.,medium,,2025-09-25T00:04:07.783976
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-25T00:04:07.783987
+OPP_002,,,,,,2025-09-25T00:04:07.783994
