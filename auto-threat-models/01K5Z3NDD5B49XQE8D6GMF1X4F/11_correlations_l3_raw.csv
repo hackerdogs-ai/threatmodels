@@ -1,0 +1,12 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both the AI Agent Project and the Customer Data Management System (CDMS) face threats related to unauthorized access and data interception.,,,,2025-09-25T00:25:29.692870
+CORR_002,,,,The AI Agent Project shares mitigation strategies with the Payment Processing System (PPS) regarding API abuse and insufficient logging.,,,,2025-09-25T00:25:29.692883
+CORR_003,,,,The attack patterns related to data tampering and elevation of privilege are common across the AI Agent Project and the Internal Communication Platform (ICP).,,,,2025-09-25T00:25:29.692890
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,Frequent occurrences of unauthorized access attempts across multiple systems indicate a systemic vulnerability.,high,,2025-09-25T00:25:29.692901
+PATTERN_002,,Common vulnerabilities in data transmission protocols lead to high risks of data interception.,medium,,2025-09-25T00:25:29.692908
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-25T00:25:29.692918
+OPP_002,,,,,,2025-09-25T00:25:29.692923
