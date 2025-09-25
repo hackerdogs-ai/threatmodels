@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Frontend_to_Backend, "Frontend to Backend") {
+        System(Frontend_Application, "Frontend Application | [React, JavaScript, HTML (+1)] | Auth: OAuth2, JWT | 🔒 | ⚠️", "User interface for interacting with the GitHub repository.")
+        System(Backend_API, "Backend API | [Node.js, Express, MongoDB] | Auth: OAuth2, API Keys | 🔒 | ⚠️", "RESTful API that serves data to the frontend and handles business logic.")
+    }
+    System_Boundary(tb_Backend_to_Database, "Backend to Database") {
+        System(Backend_API, "Backend API | [Node.js, Express, MongoDB] | Auth: OAuth2, API Keys | 🔒 | ⚠️", "RESTful API that serves data to the frontend and handles business logic.")
+        SystemDb(Database, "Database | [MongoDB] | Auth: Database user credentials | 🔒 | ⚠️", "Stores user data, repository information, and access logs.")
+    }
+    System(External_Authentication_Service, "External Authentication Service | [OAuth2 Provider] | Auth: OAuth2 | 🔒 | ⚠️", "Third-party service for user authentication.")
+
+    Rel(Frontend_Application, Backend_API, "HTTPS | User input and repository data | Auth: required | 🔒 | ⚠️")
+    Rel(Backend_API, Database, "MongoDB Protocol | User data and repository information | Auth: required | ⚠️")
+    Rel(Frontend_Application, External_Authentication_Service, "HTTPS | Authentication tokens | 🔒 | ⚠️")
