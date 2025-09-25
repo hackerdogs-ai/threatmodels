@@ -1,0 +1,12 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"The default-github threat model shares several common threats with other application threat models in the organization, particularly around injection attacks and insufficient logging.",,,,2025-09-25T02:18:29.877242
+CORR_002,,,,"Multiple threat models within the organization recommend similar mitigations for common threats, particularly around XSS and CSRF.",,,,2025-09-25T02:18:29.877260
+CORR_003,,,,"The attack patterns identified in the default-github model are also prevalent in other models, particularly around denial of service and token leakage.",,,,2025-09-25T02:18:29.877269
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,"Injection vulnerabilities are frequently identified across multiple threat models, indicating a systemic issue in input validation and sanitization.",high,,2025-09-25T02:18:29.877280
+PATTERN_002,,"Insufficient logging and monitoring is a common theme, leading to challenges in incident detection and response.",medium,,2025-09-25T02:18:29.877288
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-25T02:18:29.877298
+OPP_002,,,,,,2025-09-25T02:18:29.877305
