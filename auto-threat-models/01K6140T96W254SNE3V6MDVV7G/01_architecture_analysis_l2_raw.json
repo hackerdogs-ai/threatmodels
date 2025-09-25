@@ -1,0 +1,309 @@
+{
+  "id": "01K6142BVYB6TYDNK023ST6QFZ",
+  "title": null,
+  "overview": "The architecture of the Azure Web Application Service is designed to provide a scalable, secure, and robust environment for hosting web applications. It integrates various Azure services to ensure efficient load balancing, security, identity management, and monitoring, while adhering to best practices in cybersecurity.",
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "id": "1",
+      "name": "Application Gateway",
+      "type": "infrastructure",
+      "description": "Acts as a load balancer and web traffic manager, directing user requests to the appropriate services.",
+      "technology_stack": [
+        "Azure Application Gateway"
+      ],
+      "security_considerations": [
+        "Enables SSL termination to secure traffic.",
+        "Integrates with Web Application Firewall for enhanced security."
+      ],
+      "trust_level": "high",
+      "data_handling": "Handles user requests and routes them to the web app.",
+      "authentication_methods": [
+        "none"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Potential misconfiguration leading to traffic exposure."
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Web App Firewall",
+      "type": "infrastructure",
+      "description": "Filters and monitors HTTP traffic to and from the web application, protecting against common web vulnerabilities.",
+      "technology_stack": [
+        "Azure Web Application Firewall"
+      ],
+      "security_considerations": [
+        "Provides protection against OWASP Top 10 vulnerabilities.",
+        "Regularly updated rule sets for threat detection."
+      ],
+      "trust_level": "high",
+      "data_handling": "Monitors and filters HTTP requests.",
+      "authentication_methods": [
+        "none"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "False positives leading to legitimate traffic being blocked."
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Load Balancers",
+      "type": "infrastructure",
+      "description": "Distributes incoming application traffic across multiple instances of the web app to ensure reliability and performance.",
+      "technology_stack": [
+        "Azure Load Balancer"
+      ],
+      "security_considerations": [
+        "Ensures high availability and fault tolerance.",
+        "Can be configured with health probes to monitor backend instances."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Balances traffic across web app instances.",
+      "authentication_methods": [
+        "none"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "no",
+      "vulnerabilities": [
+        "Single point of failure if not configured correctly."
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Web App",
+      "type": "frontend",
+      "description": "The core application that users interact with, hosted on Azure App Service.",
+      "technology_stack": [
+        "Azure App Service"
+      ],
+      "security_considerations": [
+        "Regular updates and patching to address vulnerabilities.",
+        "Integration with Azure Active Directory for user authentication."
+      ],
+      "trust_level": "high",
+      "data_handling": "Processes user requests and interacts with the database.",
+      "authentication_methods": [
+        "OAuth",
+        "OpenID Connect"
+      ],
+      "authorization_model": "Role-based access control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Injection attacks, XSS if not properly sanitized."
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Web App Worker Pools",
+      "type": "backend",
+      "description": "Handles background processing tasks for the web application.",
+      "technology_stack": [
+        "Azure Functions",
+        "Azure Logic Apps"
+      ],
+      "security_considerations": [
+        "Isolated execution environment to minimize risk.",
+        "Access control to limit exposure of sensitive operations."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Processes background tasks and communicates with the web app.",
+      "authentication_methods": [
+        "none"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Resource exhaustion if not monitored."
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Azure SQL Database",
+      "type": "database",
+      "description": "A managed database service for storing application data.",
+      "technology_stack": [
+        "Azure SQL Database"
+      ],
+      "security_considerations": [
+        "Data encryption at rest and in transit.",
+        "Advanced threat protection and auditing features."
+      ],
+      "trust_level": "high",
+      "data_handling": "Stores application data and handles queries.",
+      "authentication_methods": [
+        "SQL authentication",
+        "Azure Active Directory authentication"
+      ],
+      "authorization_model": "Role-based access control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "SQL injection if queries are not parameterized."
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Application Insights",
+      "type": "external_service",
+      "description": "Monitors application performance and usage, providing analytics and diagnostics.",
+      "technology_stack": [
+        "Azure Application Insights"
+      ],
+      "security_considerations": [
+        "Data anonymization to protect user privacy.",
+        "Secure access to monitoring data."
+      ],
+      "trust_level": "medium",
+      "data_handling": "Collects telemetry data from the web app.",
+      "authentication_methods": [
+        "none"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Data leakage if access controls are misconfigured."
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Bastion Host",
+      "type": "infrastructure",
+      "description": "Provides secure access to virtual machines without exposing them to the public internet.",
+      "technology_stack": [
+        "Azure Bastion"
+      ],
+      "security_considerations": [
+        "Eliminates the need for public IPs on VMs.",
+        "Supports RDP and SSH over SSL."
+      ],
+      "trust_level": "high",
+      "data_handling": "Facilitates secure management of VMs.",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "N/A",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Misconfiguration could expose management interfaces."
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Azure Management Portal",
+      "type": "external_service",
+      "description": "Interface for managing Azure resources and services.",
+      "technology_stack": [
+        "Azure Portal"
+      ],
+      "security_considerations": [
+        "Multi-factor authentication for access.",
+        "Role-based access control to limit permissions."
+      ],
+      "trust_level": "high",
+      "data_handling": "Management of Azure resources.",
+      "authentication_methods": [
+        "Azure Active Directory"
+      ],
+      "authorization_model": "Role-based access control (RBAC)",
+      "encryption_status": "yes",
+      "vulnerabilities": [
+        "Account compromise could lead to unauthorized resource access."
+      ]
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "1",
+      "source": "Users",
+      "destination": "Application Gateway",
+      "data_type": "HTTP requests",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "N/A",
+      "security_risks": [
+        "DDoS attacks, man-in-the-middle attacks."
+      ]
+    },
+    {
+      "id": "2",
+      "source": "Application Gateway",
+      "destination": "Web App",
+      "data_type": "HTTP requests",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "none",
+      "authorization": "N/A",
+      "security_risks": [
+        "Injection attacks, session hijacking."
+      ]
+    },
+    {
+      "id": "3",
+      "source": "Web App",
+      "destination": "Azure SQL Database",
+      "data_type": "SQL queries",
+      "protocol": "TDS",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "N/A",
+      "security_risks": [
+        "SQL injection, data exposure."
+      ]
+    },
+    {
+      "id": "4",
+      "source": "Web App",
+      "destination": "Application Insights",
+      "data_type": "Telemetry data",
+      "protocol": "HTTPS",
+      "encryption": "yes",
+      "authentication": "none",
+      "authorization": "N/A",
+      "security_risks": [
+        "Data leakage, unauthorized access to telemetry."
+      ]
+    },
+    {
+      "id": "5",
+      "source": "Bastion Host",
+      "destination": "Virtual Machines",
+      "data_type": "Management traffic",
+      "protocol": "RDP/SSH",
+      "encryption": "yes",
+      "authentication": "required",
+      "authorization": "N/A",
+      "security_risks": [
+        "Unauthorized access if credentials are compromised."
+      ]
+    }
+  ],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-25 19:02:14.142431",
+  "updated_at": "2025-09-25 19:02:14.142437"
+}

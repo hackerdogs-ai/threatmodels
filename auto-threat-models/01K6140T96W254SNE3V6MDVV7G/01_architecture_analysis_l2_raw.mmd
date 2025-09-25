@@ -1,0 +1,19 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(Application_Gateway, "Application Gateway | [Azure Application Gateway] | Auth: none | 🔒 | ⚠️", "Acts as a load balancer and web traffic manager, directing user requests to the appropriate services.")
+    System(Web_App_Firewall, "Web App Firewall | [Azure Web Application Firewall] | Auth: none | 🔒 | ⚠️", "Filters and monitors HTTP traffic to and from the web application, protecting against common web vulnerabilities.")
+    System(Load_Balancers, "Load Balancers | [Azure Load Balancer] | Auth: none | 🔒 | ⚠️", "Distributes incoming application traffic across multiple instances of the web app to ensure reliability and performance.")
+    System(Web_App, "Web App | [Azure App Service] | Auth: OAuth, OpenID Connect | 🔒 | ⚠️", "The core application that users interact with, hosted on Azure App Service.")
+    System(Web_App_Worker_Pools, "Web App Worker Pools | [Azure Functions, Azure Logic Apps] | Auth: none | 🔒 | ⚠️", "Handles background processing tasks for the web application.")
+    SystemDb(Azure_SQL_Database, "Azure SQL Database | [Azure SQL Database] | Auth: SQL authentication, Azure Active Directory authentication | 🔒 | ⚠️", "A managed database service for storing application data.")
+    System(Application_Insights, "Application Insights | [Azure Application Insights] | Auth: none | 🔒 | ⚠️", "Monitors application performance and usage, providing analytics and diagnostics.")
+    System(Bastion_Host, "Bastion Host | [Azure Bastion] | Auth: Azure Active Directory | 🔒 | ⚠️", "Provides secure access to virtual machines without exposing them to the public internet.")
+    System(Azure_Management_Portal, "Azure Management Portal | [Azure Portal] | Auth: Azure Active Directory | 🔒 | ⚠️", "Interface for managing Azure resources and services.")
+    System(Users, "Users", "Auto-created component: Users")
+    System(Virtual_Machines, "Virtual Machines", "Auto-created component: Virtual Machines")
+
+    Rel(Users, Application_Gateway, "HTTPS | HTTP requests | Auth: required | 🔒 | ⚠️")
+    Rel(Application_Gateway, Web_App, "HTTPS | HTTP requests | 🔒 | ⚠️")
+    Rel(Web_App, Azure_SQL_Database, "TDS | SQL queries | Auth: required | 🔒 | ⚠️")
+    Rel(Web_App, Application_Insights, "HTTPS | Telemetry data | 🔒 | ⚠️")
+    Rel(Bastion_Host, Virtual_Machines, "RDP/SSH | Management traffic | Auth: required | 🔒 | ⚠️")
