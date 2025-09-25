@@ -1,0 +1,40 @@
+{
+  "executive_summary": {
+    "id": "01K5Z9FFESTBBFV1AN1FYPBYY6",
+    "title": null,
+    "overview": "This executive summary provides a comprehensive analysis of the threat model for the default-github project, highlighting critical risks, strategic recommendations, and compliance status to inform senior management's decision-making process. The assessment identifies significant vulnerabilities that could impact business operations, financial stability, and brand reputation.",
+    "scope": null,
+    "methodology": null,
+    "key_findings": [
+      "The threat model reveals a total of 16 identified threats, with a significant concentration in web application vulnerabilities.",
+      "High-priority risks include XSS, SQL Injection, and Token Leakage, all requiring immediate attention.",
+      "Mitigation strategies are currently unimplemented for critical threats, necessitating urgent resource allocation."
+    ],
+    "critical_risks": [],
+    "high_priority_threats": [],
+    "total_threats": 0,
+    "high_risk_count": 0,
+    "medium_risk_count": 0,
+    "low_risk_count": 0,
+    "business_impact_summary": null,
+    "compliance_implications": null,
+    "recommendations": [],
+    "immediate_actions": [],
+    "strategic_recommendations": [
+      "Implement immediate mitigation strategies for identified high-priority risks, including XSS and SQL Injection.",
+      "Establish a centralized security governance framework to enhance oversight of security practices across all applications.",
+      "Conduct organization-wide training on secure coding practices to reduce the occurrence of vulnerabilities."
+    ],
+    "resource_requirements": {},
+    "timeline": null,
+    "budget_implications": null,
+    "next_steps": [
+      "Initiate immediate risk mitigation actions for high-priority threats.",
+      "Schedule a cross-functional meeting to discuss compliance roadmap and resource allocation.",
+      "Develop a timeline for implementing security training programs across the organization."
+    ],
+    "follow_up_actions": [],
+    "created_at": "2025-09-25 01:58:17.818068",
+    "updated_at": "2025-09-25 01:58:17.818094"
+  }
+}
