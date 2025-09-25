@@ -1,0 +1,20 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Interaction_Boundary, "User Interaction Boundary") {
+        System(User_Interface, "User Interface | [React, HTML5, CSS3] | Auth: OAuth 2.0, JWT | 🔒 | ⚠️", "A web-based chat interface for user interaction with AI agents.")
+    }
+    System_Boundary(tb_Agent_Communication_Boundary, "Agent Communication Boundary") {
+        System(Agent_Orchestrator, "Agent Orchestrator | [LangGraph, Node.js] | Auth: API keys, OAuth 2.0 | 🔒 | ⚠️", "Workflow engine managing execution of conversational workflows.")
+        System(Crew_Coordination, "Crew Coordination | [CrewAI, Python] | Auth: OAuth 2.0 | 🔒 | ⚠️", "Distributes tasks among multiple agents for enhanced collaboration.")
+        System(Data_Processing, "Data Processing | [OpenAI API, Python] | Auth: API keys | 🔒 | ⚠️", "Analyzes content and processes natural language inputs using OpenAI agents.")
+    }
+    System_Boundary(tb_Monitoring_and_Logging_Boundary, "Monitoring and Logging Boun...") {
+        System(Monitoring, "Monitoring | [Prometheus, Grafana] | Auth: OAuth 2.0 | 🔒 | ⚠️", "Real-time tracking of agent behavior to ensure optimal performance.")
+    }
+    System(Admin_Dashboard, "Admin Dashboard", "Auto-created component: Admin Dashboard")
+
+    Rel(User_Interface, Agent_Orchestrator, "HTTPS | User queries and commands | Auth: required | 🔒 | ⚠️")
+    Rel(Agent_Orchestrator, Crew_Coordination, "HTTPS | Task assignments | Auth: required | 🔒 | ⚠️")
+    Rel(Crew_Coordination, Data_Processing, "HTTPS | Task data | Auth: required | 🔒 | ⚠️")
+    Rel(Data_Processing, User_Interface, "HTTPS | Processed responses | Auth: required | 🔒 | ⚠️")
+    Rel(Monitoring, Admin_Dashboard, "HTTPS | Performance metrics | Auth: required | 🔒 | ⚠️")
