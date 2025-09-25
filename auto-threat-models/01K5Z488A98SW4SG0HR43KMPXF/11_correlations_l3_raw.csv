@@ -1,0 +1,12 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Identified threats such as XSS, SQL Injection, and Token Theft are prevalent across multiple threat models within the organization.",,,,2025-09-25T00:33:43.593023
+CORR_002,,,,"Mitigation strategies identified in this threat model are also recommended in other models, indicating a unified approach to risk management.",,,,2025-09-25T00:33:43.593059
+CORR_003,,,,The aggregation of identified risks across multiple threat models indicates a potential systemic vulnerability within the organization's architecture.,,,,2025-09-25T00:33:43.593099
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,"A high frequency of web application vulnerabilities such as XSS, SQL Injection, and CSRF across multiple threat models.",high,,2025-09-25T00:33:43.593128
+PATTERN_002,,Frequent identification of token theft and interception vulnerabilities across various models.,medium,,2025-09-25T00:33:43.593149
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-25T00:33:43.593174
+OPP_002,,,,,,2025-09-25T00:33:43.593189
