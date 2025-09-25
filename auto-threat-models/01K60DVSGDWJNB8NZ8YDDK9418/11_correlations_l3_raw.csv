@@ -1,0 +1,14 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both models identify SQL Injection and Cross-Site Scripting (XSS) as significant threats.,,,,2025-09-25T12:44:28.567905
+CORR_002,,,,Both models emphasize the importance of multi-factor authentication (MFA) and role-based access control (RBAC).,,,,2025-09-25T12:44:28.567917
+CORR_003,,,,Both models highlight the need for a defined incident response plan to address security incidents effectively.,,,,2025-09-25T12:44:28.567926
+CORR_004,,,,"Both models recognize data leakage risks, particularly through logs and misconfigurations.",,,,2025-09-25T12:44:28.567933
+CORR_005,,,,Both models identify Denial of Service (DoS) attacks as a significant threat to availability.,,,,2025-09-25T12:44:28.567941
+
+PATTERN_ID,Name,Description,Frequency,Significance,Created_At
+PATTERN_001,,"Frequent identification of SQL Injection, XSS, and DoS attacks across various threat models.",high,,2025-09-25T12:44:28.567952
+PATTERN_002,,"Common reliance on MFA, RBAC, and logging best practices across multiple threat models.",medium,,2025-09-25T12:44:28.567960
+
+OPPORTUNITY_ID,Title,Description,Impact,Effort,Priority,Created_At
+OPP_001,,,,,,2025-09-25T12:44:28.567970
+OPP_002,,,,,,2025-09-25T12:44:28.567977
