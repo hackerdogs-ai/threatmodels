@@ -1,0 +1,39 @@
+graph TB
+  node_01F8M8Z8K8H8J8K8H8J8K8E1["User | (user) | [UT]"]:::untrusted
+  node_01F8M8Z8K8H8J8K8H8J8K8E2["OpenAI API | (service) | [UT]"]:::untrusted
+  node_01F8M8Z8K8H8J8K8H8J8K8P1["Workflow Extraction | (backend) | [HT]"]:::highTrust
+  node_01F8M8Z8K8H8J8K8H8J8K8P2["Threat Analysis | (backend) | [HT]"]:::highTrust
+  node_01F8M8Z8K8H8J8K8H8J8K8P3["Visualization Generation | (backend) | [HT]"]:::highTrust
+  node_01F8M8Z8K8H8J8K8H8J8K8P4["User Interface (CLI) | (frontend) | [LT]"]:::lowTrust
+  node_01F8M8Z8K8H8J8K8H8J8K8D1["JSON Graph Files | (file)"]:::dataStore
+  node_01F8M8Z8K8H8J8K8H8J8K8D2["Threat Reports | (file)"]:::dataStore
+  node_01F8M8Z8K8H8J8K8H8J8K8H8A1["Agent Workflows | [INT]"]:::dataAsset,internal
+  node_01F8M8Z8K8H8J8K8H8J8K8H8A2["Threat Assessment Reports | [CONF]"]:::dataAsset,confidential
+  node_01F8M8Z8K8H8J8K8H8J8K8H8A3["User API Keys | [REST]"]:::dataAsset,restricted
+
+  node_01F8M8Z8K8H8J8K8H8J8K8P4 -->|Extract Workflows| node_01F8M8Z8K8H8J8K8H8J8K8P1:::unencryptedFlow
+  node_01F8M8Z8K8H8J8K8H8J8K8P1 -->|Analyze Workflows| node_01F8M8Z8K8H8J8K8H8J8K8P2:::unencryptedFlow
+  node_01F8M8Z8K8H8J8K8H8J8K8P2 -->|Generate Visualization| node_01F8M8Z8K8H8J8K8H8J8K8P3:::unencryptedFlow
+  node_01F8M8Z8K8H8J8K8H8J8K8P1 -->|Store Graph JSON| node_01F8M8Z8K8H8J8K8H8J8K8D1:::unencryptedFlow
+  node_01F8M8Z8K8H8J8K8H8J8K8P2 -->|Store Threat Report| node_01F8M8Z8K8H8J8K8H8J8K8D2:::unencryptedFlow
+
+  classDef externalEntity fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef process fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef dataAsset fill:#A259FF,stroke:#c3a4ff,stroke-width:2px,color:#F5F7FA
+  classDef untrusted fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFD300,stroke:#FFD300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#36FF8F,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#36FF8F,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#FFD300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#FF4C4C,stroke-width:2px
+  classDef restricted fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#36FF8F,stroke-width:2px
+  classDef unencryptedFlow stroke:#FF4C4C,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5

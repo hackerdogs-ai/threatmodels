@@ -1,0 +1,14 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Input_Boundary, "User Input Boundary") {
+        System(Agent_Wiz_CLI, "Agent Wiz CLI", "The command-line interface that allows users to extract workflows, analyze threats, and visualize agent interactions.")
+    }
+    System_Boundary(tb_Data_Processing_Boundary, "Data Processing Boundary") {
+        System(Workflow_Extractors, "Workflow Extractors", "AST-based static parsers that extract agent workflows, tool functions, and interactions from various supported frameworks.")
+        System(Threat_Modeling_Engine, "Threat Modeling Engine", "Module that applies the MAESTRO threat modeling framework to evaluate agent workflows for vulnerabilities and risks.")
+    }
+    System(Visualization_Module, "Visualization Module", "Generates interactive visual representations of agent workflows and threat assessments.")
+
+    Rel(Agent_Wiz_CLI, Workflow_Extractors, "Uses")
+    Rel(Workflow_Extractors, Threat_Modeling_Engine, "Uses")
+    Rel(Threat_Modeling_Engine, Visualization_Module, "Uses")

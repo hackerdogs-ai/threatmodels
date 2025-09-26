@@ -1,0 +1,205 @@
+{
+  "risk_prioritization": {
+    "id": "01K63QSN49J3JZEN7JV7G5CN8V",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K63QSN47CTS4Q1VE83AH92J5",
+        "threat_title": "Unauthorized Access to Threat Modeling Reports",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "1 month",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement role-based access control (RBAC) for reports.",
+          "Conduct a security review of access permissions."
+        ]
+      },
+      {
+        "risk_id": "01K63QSN48YDVSGS7VQR5W5RNG",
+        "threat_title": "Injection Attacks via User Input",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "2 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Sanitize and validate all user inputs.",
+          "Use libraries that automatically escape user inputs."
+        ]
+      },
+      {
+        "risk_id": "01K63QSN480FZ61D59A43A7KQB",
+        "threat_title": "Denial of Service via Resource Exhaustion",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "1 month",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting and throttling mechanisms.",
+          "Monitor traffic patterns to detect anomalies."
+        ]
+      },
+      {
+        "risk_id": "01K63QSN48MP7VP23N287F6EFG",
+        "threat_title": "Spoofing of User Identity",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "2 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement multi-factor authentication (MFA).",
+          "Review and strengthen authentication mechanisms."
+        ]
+      },
+      {
+        "risk_id": "01K63QSN4975ZW774V4BJVQE82",
+        "threat_title": "Insecure API Key Exposure",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "1 month",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use environment variables for API keys.",
+          "Implement secret management tools."
+        ]
+      },
+      {
+        "risk_id": "01K63QSN49Q751TSBNJJ81V27F",
+        "threat_title": "Repudiation of Actions",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "3 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement comprehensive logging and monitoring.",
+          "Ensure actions can be audited effectively."
+        ]
+      },
+      {
+        "risk_id": "01K63QSN49J3JZEN7JV7G5CN8V",
+        "threat_title": "Elevation of Privilege through Misconfigured Access Controls",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "3 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Conduct regular security audits.",
+          "Review access control configurations."
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K63QSN47CTS4Q1VE83AH92J5",
+        "01K63QSN48YDVSGS7VQR5W5RNG"
+      ],
+      "high_priority_risks": [
+        "01K63QSN480FZ61D59A43A7KQB",
+        "01K63QSN48MP7VP23N287F6EFG",
+        "01K63QSN4975ZW774V4BJVQE82"
+      ],
+      "medium_priority_risks": [
+        "01K63QSN49Q751TSBNJJ81V27F",
+        "01K63QSN49J3JZEN7JV7G5CN8V"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K63QSN47CTS4Q1VE83AH92J5": 8.0,
+      "01K63QSN48YDVSGS7VQR5W5RNG": 8.0,
+      "01K63QSN480FZ61D59A43A7KQB": 7.0,
+      "01K63QSN48MP7VP23N287F6EFG": 7.0,
+      "01K63QSN4975ZW774V4BJVQE82": 7.0,
+      "01K63QSN49Q751TSBNJJ81V27F": 6.0,
+      "01K63QSN49J3JZEN7JV7G5CN8V": 6.0
+    },
+    "risk_rankings": [
+      [
+        "01K63QSN47CTS4Q1VE83AH92J5",
+        8.0
+      ],
+      [
+        "01K63QSN48YDVSGS7VQR5W5RNG",
+        8.0
+      ],
+      [
+        "01K63QSN480FZ61D59A43A7KQB",
+        7.0
+      ],
+      [
+        "01K63QSN48MP7VP23N287F6EFG",
+        7.0
+      ],
+      [
+        "01K63QSN4975ZW774V4BJVQE82",
+        7.0
+      ],
+      [
+        "01K63QSN49Q751TSBNJJ81V27F",
+        6.0
+      ],
+      [
+        "01K63QSN49J3JZEN7JV7G5CN8V",
+        6.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of revenue due to service downtime and data breaches.",
+      "operational_impact": "Disruption in service availability and user trust.",
+      "reputational_impact": "Damage to brand reputation and loss of customer confidence."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-26 19:28:13.040870",
+    "updated_at": "2025-09-26 19:28:13.040874"
+  }
+}
