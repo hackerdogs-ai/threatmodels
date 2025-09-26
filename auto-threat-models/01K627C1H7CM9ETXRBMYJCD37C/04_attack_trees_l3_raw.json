@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "id": "01K627ECNQ3Y8MXC9JTE6RZ5Q8",
+    "title": "Attack Tree for SQL Injection",
+    "description": "This attack tree outlines the potential paths and countermeasures for SQL Injection attacks on the Azure Cloud Application.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-26 05:20:28.343000",
+    "last_updated": "2025-09-26 05:20:33.537040",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K627ECNQ3Y8MXC9JTE6RZ5Q8",
+    "description": "SQL Injection Attack Path",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K627ECNQ3Y8MXC9JTE6RZ5Q9",
+        "description": "User inputs malicious SQL code into input fields",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement parameterized queries and prepared statements",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Use Web Application Firewall (WAF) to filter SQL injection attempts",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K627ECNQ3Y8MXC9JTE6RZ5Q10",
+        "description": "Attacker exploits vulnerable APIs to inject SQL commands",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Secure APIs with authentication and authorization checks",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          },
+          {
+            "description": "Conduct regular security assessments and code reviews",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.75
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Conduct regular security training for developers on secure coding practices",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      },
+      {
+        "description": "Implement logging and monitoring to detect suspicious activities",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.7
+      }
+    ],
+    "references": []
+  }
+}

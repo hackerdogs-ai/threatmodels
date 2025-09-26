@@ -1,0 +1,41 @@
+graph TB
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5W["End Users | (user) | [UT]"]:::untrusted
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5X["Azure Active Directory | (service) | [UT]"]:::untrusted
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5O["User Authentication | (frontend) | [HT]"]:::highTrust
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5P["Application Gateway Routing | (service) | [LT]"]:::lowTrust
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5Q["Web App Processing | (backend) | [HT]"]:::highTrust
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5R["Data Storage Access | (database) | [VHT]"]:::veryHighTrust
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5S["Monitoring and Logging | (service) | [LT]"]:::lowTrust
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5T["Azure SQL Database | (database)"]:::dataStore
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5U["Azure Key Vault | (file)"]:::dataStore
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5V["Log Analytics | (database)"]:::dataStore
+  node_01F8D9G5FJ6K8S9D8E3F5G2H4K["User Data | [PII]"]:::dataAsset,pii
+  node_01F8D9G5FJ6K8S9D8E3F5G2H4L["Application Data | [CONF]"]:::dataAsset,confidential
+  node_01F8D9G5FJ6K8S9D8E3F5G2H4M["Monitoring Logs | [INT]"]:::dataAsset,internal
+  node_01F8D9G5FJ6K8S9D8E3F5G2H4N["Secrets and Keys | [REST]"]:::dataAsset,restricted
+
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5W -->|User Authentication Request| node_01F8D9G5FJ6K8S9D8E3F5G2H5O:::encryptedFlow
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5O -->|Application Traffic| node_01F8D9G5FJ6K8S9D8E3F5G2H5P:::encryptedFlow
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5Q -->|Data Access Request| node_01F8D9G5FJ6K8S9D8E3F5G2H5R:::unencryptedFlow
+  node_01F8D9G5FJ6K8S9D8E3F5G2H5Q -->|Monitoring Data| node_01F8D9G5FJ6K8S9D8E3F5G2H5S:::encryptedFlow
+
+  classDef externalEntity fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef process fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef dataAsset fill:#ffa1ad,stroke:#A259FF,stroke-width:2px,color:#0B0D17
+  classDef untrusted fill:#FFB3B3,stroke:#8B0000,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFF2B3,stroke:#7A6300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#106B49,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#106B49,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#7A6300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#8B0000,stroke-width:2px
+  classDef restricted fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#106B49,stroke-width:2px
+  classDef unencryptedFlow stroke:#8B0000,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5

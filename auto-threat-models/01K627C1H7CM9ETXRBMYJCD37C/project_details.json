@@ -1,0 +1,43 @@
+{
+  "project_name": "Azure Cloud Application Security Architecture",
+  "line_of_business": [
+    "Software Development",
+    "IT Services",
+    "Cloud Computing"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "Azure Active Directory",
+    "OAuth",
+    "SAML"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "ISO 27001",
+    "PCI DSS"
+  ],
+  "security_requirements": [
+    "Web Application Firewall",
+    "Network Security Groups",
+    "Data Encryption at Rest and in Transit",
+    "Access Control",
+    "Incident Response Planning"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threat modeling for cloud-based application components and data flows",
+  "assumptions": [
+    "All users have internet access",
+    "Data stored in Azure SQL Database is sensitive",
+    "Application is primarily accessed remotely"
+  ],
+  "constraints": [
+    "Dependence on Azure services",
+    "Compliance with security regulations",
+    "Network latency considerations"
+  ]
+}
