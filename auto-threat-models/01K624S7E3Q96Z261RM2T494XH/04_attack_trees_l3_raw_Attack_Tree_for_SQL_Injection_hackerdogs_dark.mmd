@@ -1,0 +1,30 @@
+graph TB
+  node_01K624W2WTF1YGXKTXNB7NGR4X["SQL Injection Attack Path | [HIGH]"]:::highRisk
+  node_01K624W2WTF1YGXKTXNB7NGR4X-1["Identify vulnerable input fields | [MED]"]:::mediumRisk
+  node_01K624W2WTF1YGXKTXNB7NGR4X-1_cm_0["CM: Implement input validation and sanitization (Eff: 0.9)"]:::countermeasure
+  node_01K624W2WTF1YGXKTXNB7NGR4X-2["Inject malicious SQL code | [HIGH]"]:::highRisk
+  node_01K624W2WTF1YGXKTXNB7NGR4X-2_cm_0["CM: Use prepared statements and parameterized queries (Eff: 0.95)"]:::countermeasure
+  node_01K624W2WTF1YGXKTXNB7NGR4X-3["Gain unauthorized access to the database | [HIGH]"]:::highRisk
+  node_01K624W2WTF1YGXKTXNB7NGR4X-3_cm_0["CM: Limit database permissions and access controls (Eff: 0.85)"]:::countermeasure
+  node_01K624W2WTF1YGXKTXNB7NGR4X_cm_0["CM: Regularly update and patch web application frameworks (Eff: 0.8)"]:::countermeasure
+  node_01K624W2WTF1YGXKTXNB7NGR4X_cm_1["CM: Conduct security audits and penetration testing (Eff: 0.75)"]:::countermeasure
+
+  node_01K624W2WTF1YGXKTXNB7NGR4X --> node_01K624W2WTF1YGXKTXNB7NGR4X-1
+  node_01K624W2WTF1YGXKTXNB7NGR4X-1 -.-> node_01K624W2WTF1YGXKTXNB7NGR4X-1_cm_0
+  node_01K624W2WTF1YGXKTXNB7NGR4X --> node_01K624W2WTF1YGXKTXNB7NGR4X-2
+  node_01K624W2WTF1YGXKTXNB7NGR4X-2 -.-> node_01K624W2WTF1YGXKTXNB7NGR4X-2_cm_0
+  node_01K624W2WTF1YGXKTXNB7NGR4X --> node_01K624W2WTF1YGXKTXNB7NGR4X-3
+  node_01K624W2WTF1YGXKTXNB7NGR4X-3 -.-> node_01K624W2WTF1YGXKTXNB7NGR4X-3_cm_0
+  node_01K624W2WTF1YGXKTXNB7NGR4X -.-> node_01K624W2WTF1YGXKTXNB7NGR4X_cm_0
+  node_01K624W2WTF1YGXKTXNB7NGR4X -.-> node_01K624W2WTF1YGXKTXNB7NGR4X_cm_1
+
+  classDef andNode fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef orNode fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef highRisk fill:#FF4C4C,color:#F5F7FA,stroke:#FF4C4C,stroke-width:2px
+  classDef mediumRisk fill:#FFD300,stroke:#FFD300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#A259FF,stroke:#c3a4ff,stroke-width:1px,stroke-dasharray:3 3,color:#F5F7FA
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

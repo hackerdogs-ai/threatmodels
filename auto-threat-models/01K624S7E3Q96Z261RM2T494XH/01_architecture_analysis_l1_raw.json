@@ -1,0 +1,96 @@
+{
+  "id": "01K624T3CHSNATHQVDDWPDR8JZ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Application Gateway",
+      "description": "Acts as a reverse proxy, directing user traffic to the appropriate services.",
+      "type": "frontend"
+    },
+    {
+      "name": "Web App",
+      "description": "Core application logic that processes user requests.",
+      "type": "backend"
+    },
+    {
+      "name": "Azure SQL Database",
+      "description": "Managed database service for storing application data.",
+      "type": "database"
+    },
+    {
+      "name": "Web App Firewall",
+      "description": "Filters and monitors HTTP traffic to and from the web application for security.",
+      "type": "security service"
+    },
+    {
+      "name": "Application Insights",
+      "description": "Monitors application performance and usage metrics.",
+      "type": "monitoring service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Users",
+      "destination": "Application Gateway",
+      "description": "User requests are routed through the Application Gateway for traffic management."
+    },
+    {
+      "source": "Application Gateway",
+      "destination": "Web App",
+      "description": "The Application Gateway directs traffic to the Web App for processing user requests."
+    },
+    {
+      "source": "Web App",
+      "destination": "Azure SQL Database",
+      "description": "The Web App retrieves and stores data in the Azure SQL Database."
+    },
+    {
+      "source": "Web App",
+      "destination": "Application Insights",
+      "description": "The Web App sends performance and usage data to Application Insights for monitoring."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Interaction Boundary",
+      "description": "Boundary between end-users and the application components.",
+      "components": [
+        "Application Gateway",
+        "Web App"
+      ]
+    },
+    {
+      "name": "Data Storage Boundary",
+      "description": "Boundary between application logic and data storage.",
+      "components": [
+        "Web App",
+        "Azure SQL Database"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-26 04:34:26.321156",
+  "updated_at": "2025-09-26 04:34:26.321159"
+}
