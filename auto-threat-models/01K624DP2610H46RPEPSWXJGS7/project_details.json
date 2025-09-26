@@ -1,0 +1,41 @@
+{
+  "project_name": "Azure Web Application Hosting Architecture",
+  "line_of_business": [
+    "E-commerce",
+    "SaaS",
+    "Financial Services"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth",
+    "SAML",
+    "OpenID Connect"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "DDoS protection",
+    "Data encryption at rest and in transit",
+    "Access control management",
+    "Incident response procedures"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Full architecture including all components and data flows",
+  "assumptions": [
+    "Users have reliable internet access",
+    "Azure services are up to date and patched",
+    "Identity management is centralized through Azure AD"
+  ],
+  "constraints": [
+    "Budget limitations for Azure services",
+    "Compliance with regulatory frameworks",
+    "Dependency on Azure infrastructure availability"
+  ]
+}
