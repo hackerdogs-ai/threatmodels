@@ -1,0 +1,37 @@
+{
+  "project_name": "Visual Studio Code - Open Source",
+  "line_of_business": [
+    "Software Development",
+    "Open Source Collaboration"
+  ],
+  "application_type": "Desktop Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Public",
+  "authentication_methods": [
+    "OAuth",
+    "GitHub Authentication"
+  ],
+  "deployment_environment": "Cloud, On-premise",
+  "compliance_requirements": [
+    "MIT License",
+    "Open Source Compliance"
+  ],
+  "security_requirements": [
+    "Code Quality Assurance",
+    "Vulnerability Management",
+    "Access Control"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threat modeling for the Visual Studio Code application and its extensions",
+  "assumptions": [
+    "Users will contribute code and report issues",
+    "The application will be used in various environments",
+    "Community involvement in development and security"
+  ],
+  "constraints": [
+    "Open source license restrictions",
+    "Cross-platform compatibility requirements",
+    "Resource limitations for community contributions"
+  ]
+}
