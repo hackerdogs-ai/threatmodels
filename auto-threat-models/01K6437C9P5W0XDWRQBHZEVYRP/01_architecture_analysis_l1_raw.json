@@ -1,0 +1,68 @@
+{
+  "id": "01K6438FRAKNQSDPVGEAX9XSZ7",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Playwright MCP Server",
+      "description": "The core server that processes requests for browser automation and serves structured accessibility data.",
+      "type": "backend service"
+    },
+    {
+      "name": "MCP Clients",
+      "description": "Various clients (e.g., VS Code, Claude, Cursor) that interact with the Playwright MCP server to perform browser automation tasks.",
+      "type": "frontend application"
+    },
+    {
+      "name": "Playwright Library",
+      "description": "A library that provides the underlying functionality for browser automation and accessibility tree access.",
+      "type": "library"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "MCP Clients",
+      "destination": "Playwright MCP Server",
+      "description": "Clients send requests to the server for browser automation tasks, including commands and parameters."
+    },
+    {
+      "source": "Playwright MCP Server",
+      "destination": "MCP Clients",
+      "description": "The server responds with structured accessibility data and results of the automation tasks."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Client-Server Boundary",
+      "description": "The boundary between the MCP clients and the Playwright MCP server, where data is exchanged.",
+      "components": [
+        "MCP Clients",
+        "Playwright MCP Server"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-26 22:45:49.450890",
+  "updated_at": "2025-09-26 22:45:49.450898"
+}

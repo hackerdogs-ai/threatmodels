@@ -1,0 +1,38 @@
+{
+  "project_name": "Playwright MCP",
+  "line_of_business": [
+    "Software Development",
+    "Web Automation",
+    "Machine Learning"
+  ],
+  "application_type": "Server Application",
+  "application_audience": "Developers, Data Scientists, AI Researchers",
+  "data_sensitivity": "Internal",
+  "authentication_methods": [
+    "API Key",
+    "OAuth (potentially, based on usage context)"
+  ],
+  "deployment_environment": "Cloud, On-premise",
+  "compliance_requirements": [
+    "GDPR",
+    "CCPA (if applicable based on data usage)"
+  ],
+  "security_requirements": [
+    "Input validation",
+    "Access control",
+    "Data encryption in transit"
+  ],
+  "business_criticality": "Medium",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threats related to the Playwright MCP server and its interactions with clients",
+  "assumptions": [
+    "Users are familiar with Node.js and Playwright",
+    "Clients will properly configure the MCP server",
+    "The server will be deployed in a secure environment"
+  ],
+  "constraints": [
+    "Dependency on Node.js version",
+    "Limited to Playwright's capabilities",
+    "Client compatibility requirements"
+  ]
+}

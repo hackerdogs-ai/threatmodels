@@ -1,0 +1,175 @@
+{
+  "risk_prioritization": {
+    "id": "01K6438Y2THGK188DDSFBDCCJC",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K6438Y2THGK188DDSFBDCCJC",
+        "threat_title": "Unauthorized Access",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement authentication mechanisms such as OAuth or API keys."
+        ]
+      },
+      {
+        "risk_id": "01K6438Y2TKE48J0Q475H1101M",
+        "threat_title": "Data Tampering",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use HTTPS to encrypt data in transit."
+        ]
+      },
+      {
+        "risk_id": "01K6438Y2T7NS7ZA7JH637B7CQ",
+        "threat_title": "Replay Attacks",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement request validation and nonce tokens."
+        ]
+      },
+      {
+        "risk_id": "01K6438Y2TD52BN717FGHK3C7N",
+        "threat_title": "Information Disclosure",
+        "risk_score": 6,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement access controls and role-based permissions."
+        ]
+      },
+      {
+        "risk_id": "01K6438Y2V8GP9K0GG003331N0",
+        "threat_title": "Denial of Service (DoS)",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Deploy rate limiting and monitoring."
+        ]
+      },
+      {
+        "risk_id": "01K6438Y2V8GP9K0GG003331N1",
+        "threat_title": "Input Validation Attacks",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Conduct regular security audits and code reviews."
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K6438Y2THGK188DDSFBDCCJC",
+        "01K6438Y2TKE48J0Q475H1101M"
+      ],
+      "high_priority_risks": [
+        "01K6438Y2T7NS7ZA7JH637B7CQ",
+        "01K6438Y2TD52BN717FGHK3C7N"
+      ],
+      "medium_priority_risks": [
+        "01K6438Y2V8GP9K0GG003331N0",
+        "01K6438Y2V8GP9K0GG003331N1"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K6438Y2THGK188DDSFBDCCJC": 9.0,
+      "01K6438Y2TKE48J0Q475H1101M": 8.0,
+      "01K6438Y2T7NS7ZA7JH637B7CQ": 7.0,
+      "01K6438Y2TD52BN717FGHK3C7N": 6.0,
+      "01K6438Y2V8GP9K0GG003331N0": 5.0,
+      "01K6438Y2V8GP9K0GG003331N1": 5.0
+    },
+    "risk_rankings": [
+      [
+        "01K6438Y2THGK188DDSFBDCCJC",
+        9.0
+      ],
+      [
+        "01K6438Y2TKE48J0Q475H1101M",
+        8.0
+      ],
+      [
+        "01K6438Y2T7NS7ZA7JH637B7CQ",
+        7.0
+      ],
+      [
+        "01K6438Y2TD52BN717FGHK3C7N",
+        6.0
+      ],
+      [
+        "01K6438Y2V8GP9K0GG003331N0",
+        5.0
+      ],
+      [
+        "01K6438Y2V8GP9K0GG003331N1",
+        5.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of revenue due to service unavailability and legal liabilities.",
+      "operational_impact": "Disruption of services affecting user experience and trust.",
+      "reputational_impact": "Loss of customer trust and potential negative media coverage."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-26 22:48:46.740611",
+    "updated_at": "2025-09-26 22:48:46.740619"
+  }
+}

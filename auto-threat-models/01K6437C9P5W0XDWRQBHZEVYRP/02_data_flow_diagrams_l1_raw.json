@@ -1,0 +1,141 @@
+{
+  "id": "01F8M1FQ4K4YB0GZJ7K1D8K5D3",
+  "name": "Playwright MCP Data Flow Diagram",
+  "version": "1.0.0",
+  "description": "Data flow diagram for the Playwright MCP application, illustrating data movement, storage, and trust boundaries.",
+  "created_at": "2025-09-26 22:45:57.414893",
+  "last_updated": "2025-09-26 22:45:57.414906",
+  "data_assets": [
+    {
+      "id": "01F8M1FQ4K4YB0GZJ7K1D8K5D4",
+      "name": "User Configuration Data",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F8M1FQ4K4YB0GZJ7K1D8K5D5",
+      "name": "Browser Automation Data",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F8M1FQ4K4YB0GZJ7K1D8K5D6",
+      "name": "MCP Server",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8M1FQ4K4YB0GZJ7K1D8K5D7",
+      "name": "Client Application",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F8M1FQ4K4YB0GZJ7K1D8K5D8",
+      "name": "Configuration Files",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "none",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F8M1FQ4K4YB0GZJ7K1D8K5D9",
+      "name": "User",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F8M1FQ4K4YB0GZJ7K1D8K5D10",
+      "name": "LLM Client",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01F8M1FQ4K4YB0GZJ7K1D8K5D11",
+      "name": "User Configuration to MCP Server",
+      "description": null,
+      "source_id": "01F8M1FQ4K4YB0GZJ7K1D8K5D9",
+      "destination_id": "01F8M1FQ4K4YB0GZJ7K1D8K5D6",
+      "data_assets": [],
+      "protocol": "http",
+      "authentication_strength": null,
+      "encryption": "none",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8M1FQ4K4YB0GZJ7K1D8K5D12",
+      "name": "MCP Server to Client Application",
+      "description": null,
+      "source_id": "01F8M1FQ4K4YB0GZJ7K1D8K5D6",
+      "destination_id": "01F8M1FQ4K4YB0GZJ7K1D8K5D7",
+      "data_assets": [],
+      "protocol": "http",
+      "authentication_strength": null,
+      "encryption": "none",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8M1FQ4K4YB0GZJ7K1D8K5D13",
+      "name": "LLM Client to MCP Server",
+      "description": null,
+      "source_id": "01F8M1FQ4K4YB0GZJ7K1D8K5D10",
+      "destination_id": "01F8M1FQ4K4YB0GZJ7K1D8K5D6",
+      "data_assets": [],
+      "protocol": "http",
+      "authentication_strength": null,
+      "encryption": "none",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

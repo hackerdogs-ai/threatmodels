@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "id": "01K6438Y2THGK188DDSFBDCCJC",
+    "title": "Unauthorized Access Attack Tree",
+    "description": "Attack tree for unauthorized access to the Playwright MCP server.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-26 22:46:04+00:00",
+    "last_updated": "2025-09-26 22:46:18.278174",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6438Y2THGK188DDSFBDCCJC",
+    "description": "Unauthorized access to the Playwright MCP server.",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6438Y2THGK188DDSFBDCCJC-1",
+        "description": "Spoofing legitimate user credentials.",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement multi-factor authentication (MFA).",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Monitor and log access attempts.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6438Y2THGK188DDSFBDCCJC-2",
+        "description": "Exploiting vulnerabilities in client applications.",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Regularly update and patch client applications.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          },
+          {
+            "description": "Conduct security assessments on client applications.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.75
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Enforce strict access controls and permissions.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.85
+      },
+      {
+        "description": "Use encryption for data in transit.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      }
+    ],
+    "references": []
+  }
+}
