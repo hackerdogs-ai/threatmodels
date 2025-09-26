@@ -1,0 +1,10 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Application_Environment, "Application Environment") {
+        System(Screengrab, "Screengrab", "A component responsible for capturing screenshots of mobile applications using different strategies.")
+        System(FileWritingScreenshotCallback, "FileWritingScreenshotCallback", "Handles the saving of captured screenshots to the file system, managing file paths and directories.")
+    }
+    System(ScreenshotStrategy, "ScreenshotStrategy", "An interface that defines various strategies for taking screenshots, allowing for flexibility in implementation.")
+
+    Rel(Screengrab, ScreenshotStrategy, "Uses")
+    Rel(ScreenshotStrategy, FileWritingScreenshotCallback, "Uses")

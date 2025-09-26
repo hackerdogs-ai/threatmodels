@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "id": "01K639J3RFDQR37P55DEX835VM",
+    "title": "Attack Tree for Unauthorized Access to Screenshots",
+    "description": "This attack tree outlines the potential paths an attacker could take to gain unauthorized access to captured screenshots, leading to information disclosure.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-26 15:16:41+00:00",
+    "last_updated": "2025-09-26 15:16:51.441172",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K639J3RFDQR37P55DEX835VM",
+    "description": "Unauthorized Access to Screenshots",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 6.0,
+      "impact": 7.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K639J3RFDQR37P55DEX835VM-1",
+        "description": "Attacker exploits weak authentication mechanisms",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement strong authentication mechanisms",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K639J3RFDQR37P55DEX835VM-2",
+        "description": "Attacker gains access to the file system where screenshots are stored",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 6.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Encrypt screenshots before saving",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K639J3RFDQR37P55DEX835VM-3",
+        "description": "Attacker uses social engineering to obtain access",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 3.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Conduct security awareness training for users",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.75
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Regular security audits and vulnerability assessments",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      }
+    ],
+    "references": []
+  }
+}
