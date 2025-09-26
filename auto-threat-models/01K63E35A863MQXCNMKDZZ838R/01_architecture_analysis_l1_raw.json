@@ -1,0 +1,96 @@
+{
+  "id": "01K63E44CVBH4TRY6E0CVBCE7N",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Application Gateway",
+      "description": "Acts as a load balancer and routes incoming traffic to the web application.",
+      "type": "frontend"
+    },
+    {
+      "name": "Web App",
+      "description": "The main application hosted on Azure, processing user requests and interacting with the database.",
+      "type": "backend"
+    },
+    {
+      "name": "Azure SQL Database",
+      "description": "Relational database service for storing application data securely.",
+      "type": "database"
+    },
+    {
+      "name": "Web App Firewall",
+      "description": "Protects the web application from common threats and vulnerabilities.",
+      "type": "security"
+    },
+    {
+      "name": "Application Insights",
+      "description": "Monitors application performance and usage, providing insights for optimization.",
+      "type": "monitoring"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Users",
+      "destination": "Application Gateway",
+      "description": "Users access the application via DNS lookup, directing traffic to the Application Gateway."
+    },
+    {
+      "source": "Application Gateway",
+      "destination": "Web App",
+      "description": "The Application Gateway routes incoming traffic to the Web App for processing."
+    },
+    {
+      "source": "Web App",
+      "destination": "Azure SQL Database",
+      "description": "The Web App processes data and stores it in the Azure SQL Database."
+    },
+    {
+      "source": "Web App",
+      "destination": "Application Insights",
+      "description": "The Web App sends performance data to Application Insights for monitoring."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Access Boundary",
+      "description": "Boundary between external users and the internal application infrastructure.",
+      "components": [
+        "Application Gateway",
+        "Web App"
+      ]
+    },
+    {
+      "name": "Data Storage Boundary",
+      "description": "Boundary protecting the database from unauthorized access.",
+      "components": [
+        "Web App",
+        "Azure SQL Database"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-26 16:36:26.651673",
+  "updated_at": "2025-09-26 16:36:26.651677"
+}

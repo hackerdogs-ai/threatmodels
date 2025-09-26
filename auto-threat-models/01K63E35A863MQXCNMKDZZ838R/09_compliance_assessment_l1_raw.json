@@ -1,0 +1,85 @@
+{
+  "compliance_assessment": {
+    "id": "01K63E58GM6E959TM8FMWZXMNJ",
+    "framework": "ISO 27001",
+    "framework_description": "ISO/IEC 27001 is an international standard for information security management systems (ISMS), providing a systematic approach to managing sensitive company information, ensuring its confidentiality, integrity, and availability.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 75.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "A.5.1",
+        "requirement": "Information security policies",
+        "status": "compliant",
+        "evidence": "Information security policies are documented and communicated.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "A.6.1",
+        "requirement": "Organization of information security",
+        "status": "partially_compliant",
+        "evidence": "Roles and responsibilities are defined but not fully implemented.",
+        "gaps": [
+          "Lack of defined security roles for all teams."
+        ],
+        "recommendations": [
+          "Define and assign specific security roles and responsibilities across all teams."
+        ]
+      },
+      {
+        "requirement_id": "A.9.2",
+        "requirement": "User access management",
+        "status": "partially_compliant",
+        "evidence": "User access controls are in place but not consistently enforced.",
+        "gaps": [
+          "Inconsistent enforcement of access controls."
+        ],
+        "recommendations": [
+          "Implement automated access control reviews and audits."
+        ]
+      },
+      {
+        "requirement_id": "A.10.1",
+        "requirement": "Cryptographic controls",
+        "status": "compliant",
+        "evidence": "Data encryption in transit and at rest is implemented using TLS and Azure encryption services.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "A.12.4",
+        "requirement": "Logging and monitoring",
+        "status": "partially_compliant",
+        "evidence": "Logging is implemented, but monitoring is not comprehensive.",
+        "gaps": [
+          "Insufficient monitoring for suspicious activities."
+        ],
+        "recommendations": [
+          "Enhance monitoring capabilities to cover all critical components."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Inconsistent enforcement of access controls.",
+      "Insufficient monitoring for suspicious activities."
+    ],
+    "remediation_plan": [
+      "Define and assign specific security roles and responsibilities across all teams.",
+      "Implement automated access control reviews and audits.",
+      "Enhance monitoring capabilities to cover all critical components."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-26 16:38:59.561749",
+    "assessor": null,
+    "created_at": "2025-09-26 16:38:59.561759",
+    "updated_at": "2025-09-26 16:38:59.561764"
+  }
+}

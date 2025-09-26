@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "id": "01K63E58GM6E959TM8FMWZXMNJ",
+    "title": "Attack Tree for Cross-Site Scripting (XSS)",
+    "description": "This attack tree outlines the potential paths for executing a Cross-Site Scripting (XSS) attack on the Azure Web Application.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-26 16:40:00+00:00",
+    "last_updated": "2025-09-26 16:37:08.956670",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K63E58GM6E959TM8FMWZXMNJ",
+    "description": "Cross-Site Scripting (XSS) Attack Path",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 6.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K63E58GM6E959TM8FMWZXMNJ-1",
+        "description": "User inputs malicious script into input field",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement input validation and sanitization",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Use Content Security Policy (CSP)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K63E58GM6E959TM8FMWZXMNJ-2",
+        "description": "Malicious script is executed in user's browser",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Use HTTPOnly and Secure flags on cookies",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          },
+          {
+            "description": "Educate users about phishing and suspicious links",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Regular security audits and penetration testing",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      },
+      {
+        "description": "Update and patch web application frameworks regularly",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      }
+    ],
+    "references": []
+  }
+}

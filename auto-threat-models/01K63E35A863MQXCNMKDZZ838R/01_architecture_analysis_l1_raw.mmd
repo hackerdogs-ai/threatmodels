@@ -1,0 +1,18 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Access_Boundary, "User Access Boundary") {
+        System(Application_Gateway, "Application Gateway", "Acts as a load balancer and routes incoming traffic to the web application.")
+        System(Web_App, "Web App", "The main application hosted on Azure, processing user requests and interacting with the database.")
+    }
+    System_Boundary(tb_Data_Storage_Boundary, "Data Storage Boundary") {
+        System(Web_App, "Web App", "The main application hosted on Azure, processing user requests and interacting with the database.")
+        SystemDb(Azure_SQL_Database, "Azure SQL Database", "Relational database service for storing application data securely.")
+    }
+    System(Web_App_Firewall, "Web App Firewall", "Protects the web application from common threats and vulnerabilities.")
+    System(Application_Insights, "Application Insights", "Monitors application performance and usage, providing insights for optimization.")
+    System(Users, "Users", "Auto-created component: Users")
+
+    Rel(Users, Application_Gateway, "Uses")
+    Rel(Application_Gateway, Web_App, "Uses")
+    Rel(Web_App, Azure_SQL_Database, "Uses")
+    Rel(Web_App, Application_Insights, "Uses")

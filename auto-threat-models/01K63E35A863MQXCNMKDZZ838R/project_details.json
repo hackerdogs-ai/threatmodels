@@ -1,0 +1,41 @@
+{
+  "project_name": "Azure Web Application Deployment",
+  "line_of_business": [
+    "E-commerce",
+    "Online Services",
+    "SaaS"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth 2.0",
+    "OpenID Connect",
+    "Multi-factor Authentication"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "Data encryption at rest",
+    "Data encryption in transit",
+    "Access control management",
+    "Incident response monitoring"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threat model covers user access, data storage, and application performance monitoring",
+  "assumptions": [
+    "Users have varying levels of access",
+    "Sensitive data is stored in Azure SQL Database",
+    "Continuous monitoring is required for security posture"
+  ],
+  "constraints": [
+    "Limited budget for security-protection tools",
+    "Compliance with multiple regulations",
+    "Requirement for high availability and disaster recovery plans"
+  ]
+}
