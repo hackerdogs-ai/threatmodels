@@ -1,0 +1,7 @@
+Repository: https://github.com/octocat/Hello-World
+
+
+Repository Analysis Summary:
+- Files analyzed: 0 of 0 total files
+- Token usage estimate: ~13 tokens
+- Token limit configured: 4000 tokens

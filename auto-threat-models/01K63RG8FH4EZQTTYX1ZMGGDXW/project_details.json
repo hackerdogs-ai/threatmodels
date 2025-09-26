@@ -1,0 +1,32 @@
+{
+  "project_name": "Hello World Repository",
+  "line_of_business": [
+    "Software Development",
+    "Open Source Projects"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Public",
+  "authentication_methods": [
+    "None"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "None"
+  ],
+  "security_requirements": [
+    "Code review",
+    "Access control"
+  ],
+  "business_criticality": "Low",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Analysis of potential threats to the repository and its components",
+  "assumptions": [
+    "The repository is publicly accessible",
+    "No sensitive data is stored"
+  ],
+  "constraints": [
+    "Limited to the files currently in the repository",
+    "No active deployment environment specified"
+  ]
+}
