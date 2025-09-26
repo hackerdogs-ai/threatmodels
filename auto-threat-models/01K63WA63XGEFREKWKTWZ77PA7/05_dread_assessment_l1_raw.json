@@ -1,0 +1,236 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K63WC0TZAA9BPJ7ZF4707VN8",
+      "threat_title": "Credential Theft",
+      "dread_scores": {
+        "damage": 7,
+        "reproducibility": 6,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 6
+      },
+      "total_risk_score": 29,
+      "risk_level": "high",
+      "justification": "The potential for credential theft can lead to unauthorized access to sensitive user data, making it a significant risk. The attack is moderately reproducible and can be discovered through basic security audits.",
+      "recommendations": [
+        "Implement encryption for sensitive data in the .env file.",
+        "Use secure storage solutions for credentials.",
+        "Regularly audit access to sensitive data."
+      ],
+      "assessment_date": "2025-09-26 20:46:54.976419",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63WC0TZVTPTG59SNNVDH0S4",
+      "threat_title": "Email Spoofing",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 6,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 27,
+      "risk_level": "high",
+      "justification": "Email spoofing can lead to the processing of malicious content, affecting user trust and application integrity. It is moderately easy to reproduce and discover.",
+      "recommendations": [
+        "Implement DKIM and SPF records for email validation.",
+        "Enhance email content validation mechanisms.",
+        "Educate users about recognizing spoofed emails."
+      ],
+      "assessment_date": "2025-09-26 20:46:54.976846",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63WC0TZPRVJ5HCQGAFZSX3E",
+      "threat_title": "Data Exposure through Logs",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 4,
+        "discoverability": 5
+      },
+      "total_risk_score": 24,
+      "risk_level": "medium",
+      "justification": "Sensitive data exposure through logs can lead to information disclosure but is manageable with proper logging practices. The risk is moderate in terms of reproducibility and discoverability.",
+      "recommendations": [
+        "Implement logging best practices to avoid sensitive data exposure.",
+        "Regularly review and sanitize logs.",
+        "Limit access to log files."
+      ],
+      "assessment_date": "2025-09-26 20:46:54.977172",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63WC0V0K32CS1A187ARX5ED",
+      "threat_title": "Improper Input Validation",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 27,
+      "risk_level": "high",
+      "justification": "Improper input validation can lead to injection attacks, which can severely impact application integrity. The risk is moderate in terms of reproducibility and discoverability.",
+      "recommendations": [
+        "Implement strict input validation and sanitization.",
+        "Use libraries that provide built-in security features.",
+        "Conduct regular security testing."
+      ],
+      "assessment_date": "2025-09-26 20:46:54.977463",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63WC0V005GYMFYKEBSX1GZ0",
+      "threat_title": "Denial of Service via Email Flooding",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Email flooding can disrupt service availability, but the impact can be mitigated with proper rate limiting. The risk is moderate across all dimensions.",
+      "recommendations": [
+        "Implement rate limiting on email processing.",
+        "Monitor email traffic for unusual patterns.",
+        "Educate users on reporting suspicious email activity."
+      ],
+      "assessment_date": "2025-09-26 20:46:54.978037",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63WC0V005GYMFYKEBSX1GZ0",
+      "threat_title": "Insecure API Key Management",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 27,
+      "risk_level": "high",
+      "justification": "Insecure management of API keys can lead to unauthorized access to external services, posing a significant risk. The risk is moderate in terms of reproducibility and discoverability.",
+      "recommendations": [
+        "Use environment variables for API key storage.",
+        "Implement access controls for API keys.",
+        "Regularly rotate API keys."
+      ],
+      "assessment_date": "2025-09-26 20:46:54.978310",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63WC0V04531G3C1XMQ872RV",
+      "threat_title": "Insufficient Cleanup of Sensitive Data",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Insufficient cleanup of sensitive data can lead to unauthorized recovery of information. The risk is moderate across all dimensions.",
+      "recommendations": [
+        "Implement secure deletion practices for sensitive data.",
+        "Regularly audit data retention policies.",
+        "Educate users on data handling best practices."
+      ],
+      "assessment_date": "2025-09-26 20:46:54.980785",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The application faces several critical threats, primarily related to credential theft, email spoofing, and data exposure. Proper input validation and secure management of sensitive information are critical to mitigating these risks."
+}

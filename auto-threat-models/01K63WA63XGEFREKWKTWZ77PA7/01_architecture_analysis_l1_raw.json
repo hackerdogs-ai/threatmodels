@@ -1,0 +1,79 @@
+{
+  "id": "01K63WAZMW9WN7SCH7GC4YEE4A",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Gmail Tool",
+      "description": "Handles the connection to the Gmail IMAP server, retrieves unread emails, and manages email actions such as labeling and deleting.",
+      "type": "backend service"
+    },
+    {
+      "name": "AI Agent",
+      "description": "Utilizes language models to categorize emails, generate responses, and assign priorities based on content analysis.",
+      "type": "backend service"
+    },
+    {
+      "name": "Slack Notification Service",
+      "description": "Sends notifications to a specified Slack channel for high-priority emails, enhancing user awareness and engagement.",
+      "type": "backend service"
+    },
+    {
+      "name": "Configuration Management",
+      "description": "Manages application configuration, including API keys and user credentials, through environment variables.",
+      "type": "configuration"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Gmail Tool",
+      "destination": "AI Agent",
+      "description": "The Gmail Tool retrieves unread emails and sends them to the AI Agent for categorization and response generation."
+    },
+    {
+      "source": "AI Agent",
+      "destination": "Slack Notification Service",
+      "description": "The AI Agent sends notifications for high-priority emails to the Slack Notification Service for user alerts."
+    },
+    {
+      "source": "Configuration Management",
+      "destination": "Gmail Tool",
+      "description": "The Gmail Tool retrieves credentials and configuration settings from the Configuration Management component to establish a secure connection."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Credentials Trust Boundary",
+      "description": "Separates user credentials stored locally from external services like Gmail and Slack.",
+      "components": [
+        "Configuration Management",
+        "Gmail Tool",
+        "Slack Notification Service"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-26 20:44:51.228654",
+  "updated_at": "2025-09-26 20:44:51.228661"
+}

@@ -1,0 +1,39 @@
+{
+  "project_name": "Gmail Automation with CrewAI",
+  "line_of_business": [
+    "Email Management",
+    "Artificial Intelligence",
+    "Productivity Tools"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth 2.0",
+    "App Passwords"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "CCPA"
+  ],
+  "security_requirements": [
+    "Data Encryption",
+    "Secure Authentication",
+    "Input Validation",
+    "Access Control"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threats related to email management and automation processes",
+  "assumptions": [
+    "Users have enabled 2-Step Verification for Gmail",
+    "Users will provide valid API keys",
+    "Users have access to the necessary Slack workspace"
+  ],
+  "constraints": [
+    "Dependency on external APIs (Gmail, Slack)",
+    "Limited by Gmail's API usage policies",
+    "Requires internet connectivity"
+  ]
+}

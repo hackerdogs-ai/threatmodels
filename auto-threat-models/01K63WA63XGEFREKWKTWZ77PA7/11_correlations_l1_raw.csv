@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both models identify credential theft as a significant threat due to the storage of sensitive information.,,,,2025-09-26T20:49:15.914467
+CORR_002,,,,"Utilization of SPF, DKIM, and DMARC protocols to prevent email spoofing is common across both threat models.",,,,2025-09-26T20:49:15.914485
+CORR_003,,,,"Improper input validation is a shared threat across web applications, leading to potential injection attacks.",,,,2025-09-26T20:49:15.914496
+CORR_004,,,,Both models emphasize the importance of secure API key management to prevent unauthorized access.,,,,2025-09-26T20:49:15.914506
+CORR_005,,,,Denial of service via email flooding is a common threat in email filtering systems.,,,,2025-09-26T20:49:15.914516
+CORR_006,,,,Both models must comply with data protection regulations regarding the handling of sensitive information.,,,,2025-09-26T20:49:15.914525
+CORR_007,,,,Logging and monitoring solutions are recommended in both models to minimize data exposure risks.,,,,2025-09-26T20:49:15.914534
+CORR_008,,,,Data exposure through logs is a common threat in both e-commerce and email automation systems.,,,,2025-09-26T20:49:15.914544
+CORR_009,,,,Both systems handle sensitive user data and face similar risks of unauthorized access.,,,,2025-09-26T20:49:15.914553
+CORR_010,,,,Email spoofing is a threat that affects both email automation and social media platforms.,,,,2025-09-26T20:49:15.914563

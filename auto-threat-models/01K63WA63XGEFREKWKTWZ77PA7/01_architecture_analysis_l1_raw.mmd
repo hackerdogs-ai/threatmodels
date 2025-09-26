@@ -1,0 +1,12 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Credentials_Trust_Boundary, "User Credentials Trust Boun...") {
+        System(Configuration_Management, "Configuration Management", "Manages application configuration, including API keys and user credentials, through environment variables.")
+        System(Gmail_Tool, "Gmail Tool", "Handles the connection to the Gmail IMAP server, retrieves unread emails, and manages email actions such as labeling and deleting.")
+        System(Slack_Notification_Service, "Slack Notification Service", "Sends notifications to a specified Slack channel for high-priority emails, enhancing user awareness and engagement.")
+    }
+    System(AI_Agent, "AI Agent", "Utilizes language models to categorize emails, generate responses, and assign priorities based on content analysis.")
+
+    Rel(Gmail_Tool, AI_Agent, "Uses")
+    Rel(AI_Agent, Slack_Notification_Service, "Uses")
+    Rel(Configuration_Management, Gmail_Tool, "Uses")

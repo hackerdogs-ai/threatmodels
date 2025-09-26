@@ -1,0 +1,197 @@
+{
+  "risk_prioritization": {
+    "id": "01K63WC0TZAA9BPJ7ZF4707VN8",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K63WC0TZAA9BPJ7ZF4707VN8",
+        "threat_title": "Credential Theft",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement environment variable management tools to securely store and access sensitive credentials."
+        ]
+      },
+      {
+        "risk_id": "01K63WC0TZVTPTG59SNNVDH0S4",
+        "threat_title": "Email Spoofing",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Utilize SPF, DKIM, and DMARC email authentication protocols."
+        ]
+      },
+      {
+        "risk_id": "01K63WC0TZPRVJ5HCQGAFZSX3E",
+        "threat_title": "Data Exposure through Logs",
+        "risk_score": 6,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement logging and monitoring solutions to detect sensitive information being logged."
+        ]
+      },
+      {
+        "risk_id": "01K63WC0V0K32CS1A187ARX5ED",
+        "threat_title": "Improper Input Validation",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Enforce strict input validation and sanitization for all user inputs and email content."
+        ]
+      },
+      {
+        "risk_id": "01K63WC0V0C12TQHH6BEEMAKR6",
+        "threat_title": "Denial of Service via Email Flooding",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting and email filtering to mitigate the risk of denial of service attacks."
+        ]
+      },
+      {
+        "risk_id": "01K63WC0V005GYMFYKEBSX1GZ0",
+        "threat_title": "Insecure API Key Management",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use secure storage solutions for API keys and regularly rotate them."
+        ]
+      },
+      {
+        "risk_id": "01K63WC0V04531G3C1XMQ872RV",
+        "threat_title": "Insufficient Cleanup of Sensitive Data",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement secure deletion methods for sensitive data."
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K63WC0TZAA9BPJ7ZF4707VN8"
+      ],
+      "high_priority_risks": [
+        "01K63WC0TZVTPTG59SNNVDH0S4",
+        "01K63WC0TZPRVJ5HCQGAFZSX3E",
+        "01K63WC0V0K32CS1A187ARX5ED",
+        "01K63WC0V005GYMFYKEBSX1GZ0"
+      ],
+      "medium_priority_risks": [
+        "01K63WC0V04531G3C1XMQ872RV"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K63WC0TZAA9BPJ7ZF4707VN8": 8.0,
+      "01K63WC0TZVTPTG59SNNVDH0S4": 7.0,
+      "01K63WC0TZPRVJ5HCQGAFZSX3E": 6.0,
+      "01K63WC0V0K32CS1A187ARX5ED": 7.0,
+      "01K63WC0V0C12TQHH6BEEMAKR6": 6.0,
+      "01K63WC0V005GYMFYKEBSX1GZ0": 7.0,
+      "01K63WC0V04531G3C1XMQ872RV": 5.0
+    },
+    "risk_rankings": [
+      [
+        "01K63WC0TZAA9BPJ7ZF4707VN8",
+        8.0
+      ],
+      [
+        "01K63WC0TZVTPTG59SNNVDH0S4",
+        7.0
+      ],
+      [
+        "01K63WC0TZPRVJ5HCQGAFZSX3E",
+        6.0
+      ],
+      [
+        "01K63WC0V0K32CS1A187ARX5ED",
+        7.0
+      ],
+      [
+        "01K63WC0V0C12TQHH6BEEMAKR6",
+        6.0
+      ],
+      [
+        "01K63WC0V005GYMFYKEBSX1GZ0",
+        7.0
+      ],
+      [
+        "01K63WC0V04531G3C1XMQ872RV",
+        5.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of revenue due to unauthorized access and data breaches.",
+      "operational_impact": "Disruption in email management and communication processes.",
+      "reputational_impact": "Loss of customer trust and potential legal implications."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-26 20:48:51.259167",
+    "updated_at": "2025-09-26 20:48:51.259170"
+  }
+}
