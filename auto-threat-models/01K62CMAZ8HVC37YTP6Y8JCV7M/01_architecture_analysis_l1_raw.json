@@ -1,0 +1,79 @@
+{
+  "id": "01K62CMQM63CQARMK3Z8SYTYVS",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Screengrab",
+      "description": "A component responsible for capturing screenshots of mobile applications using various strategies.",
+      "type": "service"
+    },
+    {
+      "name": "ScreenshotStrategy",
+      "description": "An interface that defines the method for taking screenshots, allowing for different implementations like DecorViewScreenshotStrategy and UiAutomatorScreenshotStrategy.",
+      "type": "service"
+    },
+    {
+      "name": "FileWritingScreenshotCallback",
+      "description": "Handles the saving of captured screenshots to the file system, managing file paths and directories.",
+      "type": "service"
+    },
+    {
+      "name": "CleanStatusBar",
+      "description": "A utility component that modifies the status bar appearance during screenshot capture to ensure a clean output.",
+      "type": "utility"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Screengrab",
+      "destination": "ScreenshotStrategy",
+      "description": "Screengrab invokes the ScreenshotStrategy to capture screenshots using the selected strategy."
+    },
+    {
+      "source": "ScreenshotStrategy",
+      "destination": "FileWritingScreenshotCallback",
+      "description": "The screenshot captured by the ScreenshotStrategy is passed to FileWritingScreenshotCallback for saving."
+    },
+    {
+      "source": "Screengrab",
+      "destination": "CleanStatusBar",
+      "description": "Screengrab utilizes CleanStatusBar to ensure the status bar is clean before taking a screenshot."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Device Trust Boundary",
+      "description": "The boundary between the user's device and the fastlane service components.",
+      "components": [
+        "Screengrab",
+        "ScreenshotStrategy",
+        "FileWritingScreenshotCallback"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-26 06:51:19.046861",
+  "updated_at": "2025-09-26 06:51:19.046874"
+}
