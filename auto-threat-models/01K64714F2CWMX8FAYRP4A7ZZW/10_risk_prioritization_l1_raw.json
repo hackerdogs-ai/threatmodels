@@ -1,0 +1,229 @@
+{
+  "risk_prioritization": {
+    "id": "01K64739GPGGZ10ZE0CEZV677X",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K64739GPGGZ10ZE0CEZV677X",
+        "threat_title": "Credential Theft",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement multi-factor authentication (MFA)",
+          "Educate users on phishing and security best practices"
+        ]
+      },
+      {
+        "risk_id": "01K64739GQQP2G41HG1C5QRZ78",
+        "threat_title": "Session Hijacking",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use secure, HttpOnly, and SameSite attributes for session cookies",
+          "Implement session timeout mechanisms"
+        ]
+      },
+      {
+        "risk_id": "01K64739GRF86D4DVR057D09SW",
+        "threat_title": "Insecure Password Storage",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Ensure strong hashing algorithms (e.g., bcrypt) for password storage",
+          "Conduct regular security audits"
+        ]
+      },
+      {
+        "risk_id": "01K64739GRHEACK6H42Q3MFMYY",
+        "threat_title": "Brute Force Attacks",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement account lockout mechanisms after failed attempts",
+          "Use CAPTCHA for login forms"
+        ]
+      },
+      {
+        "risk_id": "01K64739GR0FQ7P67Y8B3Y8C99",
+        "threat_title": "Data Leakage through Misconfiguration",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Regularly review and update application configurations",
+          "Conduct security training for developers"
+        ]
+      },
+      {
+        "risk_id": "01K64739GRQJZGD82YNA7ET9NX",
+        "threat_title": "Cross-Site Scripting (XSS)",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement input validation and sanitization",
+          "Use Content Security Policy (CSP)"
+        ]
+      },
+      {
+        "risk_id": "01K64739GSF98JQ6TQWKJ0RD72",
+        "threat_title": "Insecure OAuth2 Implementation",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Follow best practices for OAuth2 implementation",
+          "Secure storage of tokens and validation of redirect URIs"
+        ]
+      },
+      {
+        "risk_id": "01K64739GSB66ZK2VTRKWDBG82",
+        "threat_title": "Insufficient Logging and Monitoring",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement logging and monitoring for unauthorized access",
+          "Regularly review logs for suspicious activities"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K64739GPGGZ10ZE0CEZV677X",
+        "01K64739GRF86D4DVR057D09SW"
+      ],
+      "high_priority_risks": [
+        "01K64739GQQP2G41HG1C5QRZ78",
+        "01K64739GRHEACK6H42Q3MFMYY",
+        "01K64739GRQJZGD82YNA7ET9NX",
+        "01K64739GSF98JQ6TQWKJ0RD72"
+      ],
+      "medium_priority_risks": [
+        "01K64739GR0FQ7P67Y8B3Y8C99",
+        "01K64739GSB66ZK2VTRKWDBG82"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K64739GPGGZ10ZE0CEZV677X": 9.0,
+      "01K64739GQQP2G41HG1C5QRZ78": 8.0,
+      "01K64739GRF86D4DVR057D09SW": 9.0,
+      "01K64739GRHEACK6H42Q3MFMYY": 7.0,
+      "01K64739GR0FQ7P67Y8B3Y8C99": 6.0,
+      "01K64739GRQJZGD82YNA7ET9NX": 8.0,
+      "01K64739GSF98JQ6TQWKJ0RD72": 7.0,
+      "01K64739GSB66ZK2VTRKWDBG82": 6.0
+    },
+    "risk_rankings": [
+      [
+        "01K64739GPGGZ10ZE0CEZV677X",
+        9.0
+      ],
+      [
+        "01K64739GRF86D4DVR057D09SW",
+        9.0
+      ],
+      [
+        "01K64739GQQP2G41HG1C5QRZ78",
+        8.0
+      ],
+      [
+        "01K64739GRQJZGD82YNA7ET9NX",
+        8.0
+      ],
+      [
+        "01K64739GRHEACK6H42Q3MFMYY",
+        7.0
+      ],
+      [
+        "01K64739GSF98JQ6TQWKJ0RD72",
+        7.0
+      ],
+      [
+        "01K64739GR0FQ7P67Y8B3Y8C99",
+        6.0
+      ],
+      [
+        "01K64739GSB66ZK2VTRKWDBG82",
+        6.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of revenue due to unauthorized access and data breaches.",
+      "operational_impact": "Disruption of services and potential legal ramifications.",
+      "reputational_impact": "Loss of user trust and damage to brand reputation."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-26 23:55:50.073516",
+    "updated_at": "2025-09-26 23:55:50.073522"
+  }
+}

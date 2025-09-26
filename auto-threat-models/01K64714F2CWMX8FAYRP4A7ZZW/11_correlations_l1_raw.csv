@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify credential theft as a significant threat, emphasizing the need for secure authentication mechanisms.",,,,2025-09-26T23:55:59.836575
+CORR_002,,,,Both models recommend secure handling of OAuth2 tokens and secrets to prevent unauthorized access.,,,,2025-09-26T23:55:59.836601
+CORR_003,,,,"Session hijacking is a common threat in both models, highlighting the importance of secure cookie attributes.",,,,2025-09-26T23:55:59.836614
+CORR_004,,,,Both models emphasize the need for strong password hashing techniques to protect user credentials.,,,,2025-09-26T23:55:59.836626
+CORR_005,,,,"Improper input validation is a shared concern, leading to various injection attacks.",,,,2025-09-26T23:55:59.836637
+CORR_006,,,,Both models align with compliance requirements for data protection and user privacy.,,,,2025-09-26T23:55:59.836648
+CORR_007,,,,Both models recognize data leakage through misconfiguration as a critical threat.,,,,2025-09-26T23:55:59.836658
+CORR_008,,,,Both models advocate for account lockout mechanisms to prevent brute force attacks.,,,,2025-09-26T23:55:59.836669
+CORR_009,,,,"Cross-Site Scripting (XSS) is a common threat addressed in both models, necessitating protective measures.",,,,2025-09-26T23:55:59.836679
+CORR_010,,,,Both models highlight the need for logging and monitoring to detect unauthorized access.,,,,2025-09-26T23:55:59.836690

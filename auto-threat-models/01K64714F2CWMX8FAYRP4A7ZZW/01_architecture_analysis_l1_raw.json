@@ -1,0 +1,97 @@
+{
+  "id": "01K64722HKE4SHNV2XXCDPMZAV",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Streamlit Application",
+      "description": "The frontend application built using Streamlit that interacts with users and displays the UI for authentication.",
+      "type": "frontend"
+    },
+    {
+      "name": "Authentication Controller",
+      "description": "Handles user authentication logic, including login, registration, and session management.",
+      "type": "backend"
+    },
+    {
+      "name": "Cookie Management",
+      "description": "Manages cookies for session persistence and re-authentication, ensuring secure storage of user session data.",
+      "type": "backend"
+    },
+    {
+      "name": "OAuth2 Services",
+      "description": "Integrates with external OAuth2 providers (e.g., Google, Microsoft) for user authentication.",
+      "type": "service"
+    },
+    {
+      "name": "Configuration File",
+      "description": "Stores user credentials and application settings in a YAML format, including hashed passwords and OAuth2 parameters.",
+      "type": "data"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Streamlit Application",
+      "destination": "Authentication Controller",
+      "description": "User credentials are sent from the Streamlit application to the Authentication Controller for verification."
+    },
+    {
+      "source": "Authentication Controller",
+      "destination": "Cookie Management",
+      "description": "Upon successful authentication, session cookies are created and managed by the Cookie Management component."
+    },
+    {
+      "source": "Authentication Controller",
+      "destination": "OAuth2 Services",
+      "description": "Requests for OAuth2 authentication are forwarded to the respective external services."
+    },
+    {
+      "source": "Configuration File",
+      "destination": "Authentication Controller",
+      "description": "The Authentication Controller reads user credentials and settings from the configuration file."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Data Boundary",
+      "description": "Boundary where user credentials and session data are processed and stored.",
+      "components": [
+        "Streamlit Application",
+        "Authentication Controller",
+        "Configuration File"
+      ]
+    },
+    {
+      "name": "External Authentication Boundary",
+      "description": "Boundary for interactions with external OAuth2 services for user authentication.",
+      "components": [
+        "Authentication Controller",
+        "OAuth2 Services"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-26 23:52:13.619783",
+  "updated_at": "2025-09-26 23:52:13.619791"
+}
