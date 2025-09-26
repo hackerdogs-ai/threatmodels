@@ -1,0 +1,173 @@
+{
+    "risk_prioritization": {
+        "id": "01K62BEZ8GC22H8STXVPJ4JK31",
+        "prioritization_method": "DREAD",
+        "criteria_weights": {
+            "business_impact": 0.4,
+            "technical_impact": 0.3,
+            "likelihood": 0.2,
+            "urgency": 0.1
+        },
+        "prioritized_risks": [
+            {
+                "risk_id": "01K62BEZ8GC22H8STXVPJ4JK21",
+                "threat_title": "SQL Injection",
+                "risk_score": 9,
+                "priority_level": "critical",
+                "business_impact": "high",
+                "technical_impact": "high",
+                "likelihood": "medium",
+                "urgency": "immediate",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "high",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Implement parameterized queries and prepared statements.",
+                    "Conduct regular security audits."
+                ]
+            },
+            {
+                "risk_id": "01K62BEZ8GE6HZ41FEZTJJ0A1M",
+                "threat_title": "Cross-Site Scripting (XSS)",
+                "risk_score": 8,
+                "priority_level": "high",
+                "business_impact": "high",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "short_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "medium",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Use Content Security Policy (CSP) headers.",
+                    "Sanitize user inputs."
+                ]
+            },
+            {
+                "risk_id": "01K62BEZ8GWGVZKPBYNXJPKWN9",
+                "threat_title": "Denial of Service (DoS)",
+                "risk_score": 8,
+                "priority_level": "high",
+                "business_impact": "high",
+                "technical_impact": "high",
+                "likelihood": "medium",
+                "urgency": "short_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "high",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Deploy Azure DDoS Protection.",
+                    "Implement rate limiting."
+                ]
+            },
+            {
+                "risk_id": "01K62BEZ8H3RBBBEAA9H7ZSNC1",
+                "threat_title": "Insufficient Authentication",
+                "risk_score": 7,
+                "priority_level": "high",
+                "business_impact": "high",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "short_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "medium",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Enforce strong authentication mechanisms using Azure Active Directory.",
+                    "Implement multi-factor authentication (MFA)."
+                ]
+            },
+            {
+                "risk_id": "01K62BEZ8HX2Y01R4700PXGPHW",
+                "threat_title": "Data Exposure",
+                "risk_score": 7,
+                "priority_level": "high",
+                "business_impact": "high",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "short_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "medium",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Implement access controls and encryption for sensitive data.",
+                    "Conduct regular audits of data access."
+                ]
+            },
+            {
+                "risk_id": "01K62BEZ8J3BYQKHXWH09K4PCK",
+                "threat_title": "Session Fixation",
+                "risk_score": 6,
+                "priority_level": "medium",
+                "business_impact": "medium",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "short_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "medium",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Utilize secure session management practices.",
+                    "Regenerate session IDs after login."
+                ]
+            },
+            {
+                "risk_id": "01K62BEZ8JAPW6YM64AM90QRCZ",
+                "threat_title": "Cross-Site Request Forgery (CSRF)",
+                "risk_score": 6,
+                "priority_level": "medium",
+                "business_impact": "medium",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "short_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "medium",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Implement anti-CSRF tokens in forms.",
+                    "Educate users about CSRF risks."
+                ]
+            },
+            {
+                "risk_id": "01K62BEZ8JE63H011BC6RJHSCS",
+                "threat_title": "Insecure Direct Object References (IDOR)",
+                "risk_score": 5,
+                "priority_level": "medium",
+                "business_impact": "medium",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "long_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "high",
+                "timeline": "long_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Conduct regular security audits and penetration testing.",
+                    "Implement proper access controls."
+                ]
+            },
+            {
+                "risk_id": "01K62BEZ8JV67TT1VSYAM2990F",
+                "threat_title": "Improper Input Validation",
+                "risk_score": 5,
+                "priority_level": "medium",
+                "business_impact": "medium",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "long_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "medium",
+                "timeline": "long_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Implement input validation and sanitization.",
+                    "Train developers on secure coding practices."
+                ]
+            }

@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify SQL Injection and Cross-Site Scripting (XSS) as critical threats, highlighting the need for robust input validation and sanitization.",,,,2025-09-26T06:34:40.587311
+CORR_002,,,,"Both models recommend using Azure Key Vault for secure storage of sensitive information, enhancing data protection across applications.",,,,2025-09-26T06:34:40.587325
+CORR_003,,,,"Denial of Service (DoS) attacks are a common threat across both models, necessitating similar defensive strategies.",,,,2025-09-26T06:34:40.587334
+CORR_004,,,,"Both models align with GDPR and HIPAA compliance requirements, emphasizing data protection and user privacy.",,,,2025-09-26T06:34:40.587342
+CORR_005,,,,Both models advocate for multi-factor authentication (MFA) to strengthen user authentication mechanisms.,,,,2025-09-26T06:34:40.587350
+CORR_006,,,,"Insecure Direct Object References (IDOR) is identified as a threat in both models, indicating a need for proper access controls.",,,,2025-09-26T06:34:40.587357
+CORR_007,,,,"Session fixation vulnerabilities are noted in both models, highlighting the need for secure session management practices.",,,,2025-09-26T06:34:40.587365
+CORR_008,,,,"Both models emphasize the importance of data encryption at rest and in transit, aligning with industry standards.",,,,2025-09-26T06:34:40.587373
+CORR_009,,,,"Cross-Site Request Forgery (CSRF) is a common threat across both models, necessitating anti-CSRF measures.",,,,2025-09-26T06:34:40.587380
+CORR_010,,,,"Both models face similar risks from insufficient authentication, allowing for combined mitigation efforts.",,,,2025-09-26T06:34:40.587388

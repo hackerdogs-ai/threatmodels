@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "id": "01K62BEZ8JAPW6YM64AM90QRCZ",
+    "title": "Attack Tree for SQL Injection",
+    "description": "An attack tree illustrating the paths for exploiting SQL Injection vulnerabilities in the Azure-based Secure Web Application.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-26 06:30:41.680644+00:00",
+    "last_updated": "2025-09-26 06:30:51.494308",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K62BEZ8JAPW6YM64AM90QRCZ",
+    "description": "SQL Injection Attack Path",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K62BEZ8JAPW6YM64AM90QRCZ-1",
+        "description": "User submits malicious input through a web form",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement input validation and parameterized queries",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K62BEZ8JAPW6YM64AM90QRCZ-2",
+        "description": "Malicious user crafts a URL with SQL injection payload",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Use Web Application Firewall (WAF) to filter malicious requests",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Regularly update and patch application dependencies",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      },
+      {
+        "description": "Conduct security testing and code reviews",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      }
+    ],
+    "references": []
+  }
+}

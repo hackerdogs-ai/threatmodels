@@ -1,0 +1,96 @@
+{
+  "id": "01K62BDM2V1Q2K62EEJ33WX6JZ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Application Gateway",
+      "description": "Acts as a load balancer and provides application-level routing and security.",
+      "type": "frontend"
+    },
+    {
+      "name": "Web App",
+      "description": "The core application that users interact with, hosted on Azure App Service.",
+      "type": "backend"
+    },
+    {
+      "name": "Azure SQL Database",
+      "description": "A managed relational database service for storing application data.",
+      "type": "database"
+    },
+    {
+      "name": "Web App Firewall",
+      "description": "Protects web applications from common threats and vulnerabilities.",
+      "type": "security service"
+    },
+    {
+      "name": "Azure Active Directory",
+      "description": "Manages user identities and access to resources.",
+      "type": "identity service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Application Gateway",
+      "destination": "Web App",
+      "description": "Routes incoming user requests to the Web App for processing."
+    },
+    {
+      "source": "Web App",
+      "destination": "Azure SQL Database",
+      "description": "Retrieves and stores application data in the Azure SQL Database."
+    },
+    {
+      "source": "Web App",
+      "destination": "Web App Firewall",
+      "description": "Sends traffic to the Web App Firewall for security checks before reaching the Web App."
+    },
+    {
+      "source": "Web App",
+      "destination": "Azure Active Directory",
+      "description": "Authenticates user access and manages identity verification."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Interaction Boundary",
+      "description": "Boundary between external users and the application components.",
+      "components": [
+        "Application Gateway",
+        "Web App"
+      ]
+    },
+    {
+      "name": "Data Storage Boundary",
+      "description": "Boundary protecting the database and sensitive data storage.",
+      "components": [
+        "Web App",
+        "Azure SQL Database"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-26 06:29:57.467869",
+  "updated_at": "2025-09-26 06:29:57.467875"
+}
