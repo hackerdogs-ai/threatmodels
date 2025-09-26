@@ -1,0 +1,42 @@
+{
+  "project_name": "Cloud-Based Application on Microsoft Azure",
+  "line_of_business": [
+    "Information Technology",
+    "Software Development",
+    "Data Management"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth 2.0",
+    "OpenID Connect",
+    "Multi-Factor Authentication"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI DSS"
+  ],
+  "security_requirements": [
+    "Traffic filtering through Web App Firewall",
+    "Data encryption in transit and at rest",
+    "Access control through Network Security Groups",
+    "Secure storage of secrets in Azure Key Vault"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "All components within the architecture including users, application, databases, and security measures",
+  "assumptions": [
+    "Users have varying levels of access permissions",
+    "Sensitive data is handled securely",
+    "Monitoring tools are effective in tracking performance and security incidents",
+    "The infrastructure is compliant with relevant regulations"
+  ],
+  "constraints": [
+    "Dependence on Azure services",
+    "Compliance with security and data privacy regulations",
+    "Latency and availability of cloud services"
+  ]
+}
