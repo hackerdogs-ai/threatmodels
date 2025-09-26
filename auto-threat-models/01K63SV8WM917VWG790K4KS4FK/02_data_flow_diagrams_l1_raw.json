@@ -1,0 +1,192 @@
+{
+  "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q8",
+  "name": "Taskmaster Data Flow Diagram",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for the Taskmaster AI-Driven Task Management System.",
+  "created_at": "2025-09-26 20:02:10.991211",
+  "last_updated": "2025-09-26 20:02:10.991215",
+  "data_assets": [
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q9",
+      "name": "User Data",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q10",
+      "name": "Task Data",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q11",
+      "name": "API Keys",
+      "description": null,
+      "classification": "confidential",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q12",
+      "name": "User Authentication",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q13",
+      "name": "Task Management",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q14",
+      "name": "AI Model Interaction",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q15",
+      "name": "User Database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q16",
+      "name": "Task Database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q17",
+      "name": "User",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q18",
+      "name": "AI Service Provider",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q19",
+      "name": "User Authentication Data Flow",
+      "description": null,
+      "source_id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q17",
+      "destination_id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q12",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q20",
+      "name": "Task Data Flow",
+      "description": null,
+      "source_id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q12",
+      "destination_id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q13",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q21",
+      "name": "AI Model Request Flow",
+      "description": null,
+      "source_id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q13",
+      "destination_id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q18",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q22",
+      "name": "Task Data Storage Flow",
+      "description": null,
+      "source_id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q13",
+      "destination_id": "01F8ZB1K8G4RZK8X8D5FJ8P8Q16",
+      "data_assets": [],
+      "protocol": "jdbc",
+      "authentication_strength": null,
+      "encryption": "at_rest",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

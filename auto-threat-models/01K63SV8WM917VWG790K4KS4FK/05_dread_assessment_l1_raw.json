@@ -1,0 +1,269 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K63SX6XRB1HD4N4Z31ZM7K26",
+      "threat_title": "Unauthorized Access",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Unauthorized access can lead to significant data breaches and misuse of the system, affecting multiple users. The attack can be reproduced with moderate effort, and the impact is considerable.",
+      "recommendations": [
+        "Implement strong authentication mechanisms.",
+        "Regularly rotate API keys.",
+        "Use multi-factor authentication."
+      ],
+      "assessment_date": "2025-09-26 20:02:51.342589",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63SX6XSHPZQF8EY3VGH0YY4",
+      "threat_title": "API Key Exposure",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Exposed API keys can lead to unauthorized access to AI services, affecting all users relying on those services. The exposure can happen easily, making it a significant risk.",
+      "recommendations": [
+        "Store API keys securely using environment variables.",
+        "Implement logging to detect unauthorized access attempts.",
+        "Educate developers on secure coding practices."
+      ],
+      "assessment_date": "2025-09-26 20:02:51.342897",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63SX6XSE67530CDF5ZEMEXQ",
+      "threat_title": "Command Injection",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Command injection can allow attackers to execute arbitrary commands, potentially compromising the entire system. The attack is reproducible and can be executed with moderate effort.",
+      "recommendations": [
+        "Implement input validation and sanitization.",
+        "Use parameterized commands to prevent injection.",
+        "Conduct regular security audits."
+      ],
+      "assessment_date": "2025-09-26 20:02:51.343164",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63SX6XSXWBVSQT4GAND8TB3",
+      "threat_title": "Data Leakage",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Data leakage can expose sensitive information, impacting all users. The risk is significant due to the potential for widespread exposure.",
+      "recommendations": [
+        "Implement strict access controls.",
+        "Encrypt sensitive data both at rest and in transit.",
+        "Regularly review data access logs."
+      ],
+      "assessment_date": "2025-09-26 20:02:51.343417",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63SX6XSXTRREN02GSTC42FM",
+      "threat_title": "Denial of Service (DoS)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "A DoS attack can render the Task Management Service unavailable, affecting all users. The attack is reproducible and can be executed with moderate effort.",
+      "recommendations": [
+        "Implement rate limiting on API requests.",
+        "Use a web application firewall to filter traffic.",
+        "Monitor traffic patterns for anomalies."
+      ],
+      "assessment_date": "2025-09-26 20:02:51.343677",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63SX6XSQ2C6KA4X985VRM79",
+      "threat_title": "Input Validation Attacks",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Improper input validation can lead to application crashes or unexpected behavior, affecting all users. The attack is easily reproducible.",
+      "recommendations": [
+        "Implement comprehensive input validation.",
+        "Use libraries that provide secure input handling.",
+        "Conduct regular testing for input validation vulnerabilities."
+      ],
+      "assessment_date": "2025-09-26 20:02:51.343932",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63SX6XS3K9V0VDF8AXYRV7P",
+      "threat_title": "Privilege Escalation",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Privilege escalation can allow attackers to gain elevated access, compromising the entire application. The attack is reproducible and can be executed with moderate effort.",
+      "recommendations": [
+        "Implement least privilege access controls.",
+        "Regularly review user permissions.",
+        "Conduct security training for developers."
+      ],
+      "assessment_date": "2025-09-26 20:02:51.344724",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K63SX6XSSH6701HNZPWMN3GF",
+      "threat_title": "Repudiation of Actions",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Without proper logging, users can deny actions taken, leading to accountability issues. The risk affects all users and is easily reproducible.",
+      "recommendations": [
+        "Implement comprehensive logging and audit trails.",
+        "Regularly review logs for suspicious activity.",
+        "Educate users on the importance of accountability."
+      ],
+      "assessment_date": "2025-09-26 20:02:51.345029",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The Taskmaster application faces several critical threats primarily related to unauthorized access, data protection, and input validation. Key risks include API key exposure, command injection, and denial of service attacks, necessitating robust security measures."
+}
