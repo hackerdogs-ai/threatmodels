@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "id": "01K62D5F6T4K8VBM0FQP9K2EB4",
+    "title": "Attack Tree for SQL Injection",
+    "description": "This attack tree outlines the potential paths for executing a SQL Injection attack on the Azure Cloud-Based Application.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-26 07:00:00+00:00",
+    "last_updated": "2025-09-26 06:57:09.426702",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K62D5F6T4K8VBM0FQP9K2EB4",
+    "description": "SQL Injection Attack Path",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K62D5F6T4K8VBM0FQP9K2EB5",
+        "description": "User inputs malicious SQL code in input fields",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement parameterized queries to prevent SQL injection.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Use input validation to sanitize user inputs.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K62D5F6T4K8VBM0FQP9K2EB6",
+        "description": "Malicious user accesses application through compromised credentials",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Enforce strong password policies and multi-factor authentication.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          },
+          {
+            "description": "Monitor and log access attempts for unusual activity.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.75
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Regularly update and patch application components to mitigate vulnerabilities.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      },
+      {
+        "description": "Conduct regular security assessments and penetration testing.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.85
+      }
+    ],
+    "references": []
+  }
+}

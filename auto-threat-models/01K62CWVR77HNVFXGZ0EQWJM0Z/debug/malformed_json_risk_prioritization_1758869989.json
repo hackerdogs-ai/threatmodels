@@ -1,0 +1,155 @@
+{
+    "risk_prioritization": {
+        "id": "01K62CZ12TXK8VBM0FQP9K2EBC",
+        "prioritization_method": "DREAD",
+        "criteria_weights": {
+            "business_impact": 0.4,
+            "technical_impact": 0.3,
+            "likelihood": 0.2,
+            "urgency": 0.1
+        },
+        "prioritized_risks": [
+            {
+                "risk_id": "01K62CZ12TXK8VBM0FQP9K2EB4",
+                "threat_title": "SQL Injection",
+                "risk_score": 9,
+                "priority_level": "critical",
+                "business_impact": "high",
+                "technical_impact": "high",
+                "likelihood": "medium",
+                "urgency": "immediate",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "medium",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Implement parameterized queries and stored procedures.",
+                    "Conduct regular security training for developers."
+                ]
+            },
+            {
+                "risk_id": "01K62CZ12TEKJZMREQBDZ4X1WE",
+                "threat_title": "Cross-Site Scripting (XSS)",
+                "risk_score": 8,
+                "priority_level": "high",
+                "business_impact": "high",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "short_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "medium",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Utilize Content Security Policy (CSP) headers.",
+                    "Sanitize user inputs."
+                ]
+            },
+            {
+                "risk_id": "01K62CZ12T3CBAB6NRVGA8XY1D",
+                "threat_title": "Credential Theft",
+                "risk_score": 8,
+                "priority_level": "high",
+                "business_impact": "high",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "short_term",
+                "mitigation_status": "partially_mitigated",
+                "resource_requirements": "high",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Enforce strong password policies.",
+                    "Implement multi-factor authentication (MFA)."
+                ]
+            },
+            {
+                "risk_id": "01K62CZ12VFNWJ5Q5Q7NKM0GP0",
+                "threat_title": "Data Exposure",
+                "risk_score": 7,
+                "priority_level": "high",
+                "business_impact": "high",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "short_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "medium",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Implement strict access controls for Azure Key Vault.",
+                    "Regularly audit access permissions."
+                ]
+            },
+            {
+                "risk_id": "01K62CZ12V5QKGA8V7Y1XM1N58",
+                "threat_title": "Denial of Service (DoS)",
+                "risk_score": 7,
+                "priority_level": "high",
+                "business_impact": "medium",
+                "technical_impact": "high",
+                "likelihood": "medium",
+                "urgency": "short_term",
+                "mitigation_status": "partially_mitigated",
+                "resource_requirements": "medium",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Deploy rate limiting and web application firewalls (WAF).",
+                    "Monitor traffic patterns for anomalies."
+                ]
+            },
+            {
+                "risk_id": "01K62CZ12W5A2AXNKQB73Z36C7",
+                "threat_title": "Session Fixation",
+                "risk_score": 6,
+                "priority_level": "medium",
+                "business_impact": "medium",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "short_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "medium",
+                "timeline": "short_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Implement secure session management practices.",
+                    "Regenerate session IDs after login."
+                ]
+            },
+            {
+                "risk_id": "01K62CZ12W9ZMA22TF1Q4FG3A6",
+                "threat_title": "Insecure Direct Object References (IDOR)",
+                "risk_score": 6,
+                "priority_level": "medium",
+                "business_impact": "medium",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "long_term",
+                "mitigation_status": "unmitigated",
+                "resource_requirements": "medium",
+                "timeline": "long_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Conduct regular security audits.",
+                    "Implement logging for sensitive operations."
+                ]
+            },
+            {
+                "risk_id": "01K62CZ12W5FG557BA2MQN6S6X",
+                "threat_title": "Insufficient Logging and Monitoring",
+                "risk_score": 5,
+                "priority_level": "medium",
+                "business_impact": "medium",
+                "technical_impact": "medium",
+                "likelihood": "medium",
+                "urgency": "long_term",
+                "mitigation_status": "partially_mitigated",
+                "resource_requirements": "medium",
+                "timeline": "long_term",
+                "dependencies": [],
+                "recommended_actions": [
+                    "Enable comprehensive logging and monitoring.",
+                    "Utilize Azure Monitor and Application Insights."
+                ]
+            }
