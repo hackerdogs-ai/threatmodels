@@ -1,0 +1,153 @@
+{
+  "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8J",
+  "name": "fastlane Data Flow Diagram",
+  "version": "1.0.0",
+  "description": "Data flow diagram for the fastlane application, illustrating how data moves through the system.",
+  "created_at": "2025-09-27 14:08:18.333696",
+  "last_updated": "2025-09-27 14:08:18.333711",
+  "data_assets": [
+    {
+      "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8A",
+      "name": "Screenshots",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8B",
+      "name": "User Configuration",
+      "description": null,
+      "classification": "confidential",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8C",
+      "name": "Screenshot Capture",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8D",
+      "name": "File Storage",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8E",
+      "name": "User Input Handling",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8F",
+      "name": "Local File System",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8G",
+      "name": "User",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8H",
+      "name": "Third-Party Services",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8I",
+      "name": "User Configuration to Screenshot Capture",
+      "description": null,
+      "source_id": "01F8M8Z9FQ8K8G8K8J8K8G8K8G",
+      "destination_id": "01F8M8Z9FQ8K8G8K8J8K8G8K8C",
+      "data_assets": [],
+      "protocol": "http",
+      "authentication_strength": null,
+      "encryption": "none",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8J",
+      "name": "Screenshot Capture to Local File System",
+      "description": null,
+      "source_id": "01F8M8Z9FQ8K8G8K8J8K8G8K8C",
+      "destination_id": "01F8M8Z9FQ8K8G8K8J8K8G8K8F",
+      "data_assets": [],
+      "protocol": "unknown",
+      "authentication_strength": null,
+      "encryption": "at_rest",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8M8Z9FQ8K8G8K8J8K8G8K8K",
+      "name": "Local File System to User",
+      "description": null,
+      "source_id": "01F8M8Z9FQ8K8G8K8J8K8G8K8F",
+      "destination_id": "01F8M8Z9FQ8K8G8K8J8K8G8K8G",
+      "data_assets": [],
+      "protocol": "http",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

@@ -1,0 +1,69 @@
+{
+  "compliance_assessment": {
+    "id": "01K65R1T2B60F57X6JPEGZV1Y18",
+    "framework": "GDPR",
+    "framework_description": "General Data Protection Regulation, a regulation in EU law on data protection and privacy.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 65.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-1",
+        "requirement": "Obtain explicit consent from users for data processing.",
+        "status": "partially_compliant",
+        "evidence": "Consent mechanisms are in place but need improvement.",
+        "gaps": [
+          "Lack of clear consent forms for all data processing activities."
+        ],
+        "recommendations": [
+          "Implement clear and concise consent forms for data processing."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-2",
+        "requirement": "Ensure data subject rights are respected (access, rectification, erasure).",
+        "status": "non_compliant",
+        "evidence": "No formal process for data subject requests.",
+        "gaps": [
+          "Absence of a documented process for handling data subject requests."
+        ],
+        "recommendations": [
+          "Develop and implement a formal process for data subject requests."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-3",
+        "requirement": "Implement data protection by design and by default.",
+        "status": "partially_compliant",
+        "evidence": "Some design considerations are in place.",
+        "gaps": [
+          "Limited integration of data protection measures in development processes."
+        ],
+        "recommendations": [
+          "Integrate data protection measures into the software development lifecycle."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Lack of a formal process for data subject requests.",
+      "Insufficient documentation of data processing activities."
+    ],
+    "remediation_plan": [
+      "Establish a formal process for handling data subject requests.",
+      "Document all data processing activities and ensure transparency.",
+      "Enhance consent mechanisms to ensure clarity and compliance."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-27 14:11:00.601917",
+    "assessor": null,
+    "created_at": "2025-09-27 14:11:00.601922",
+    "updated_at": "2025-09-27 14:11:00.601925"
+  }
+}

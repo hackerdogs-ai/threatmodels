@@ -1,0 +1,34 @@
+graph TB
+  node_01F8M8Z9FQ8K8G8K8J8K8G8K8G["User | (user) | [UT]"]:::untrusted
+  node_01F8M8Z9FQ8K8G8K8J8K8G8K8H["Third-Party Services | (service) | [UT]"]:::untrusted
+  node_01F8M8Z9FQ8K8G8K8J8K8G8K8C["Screenshot Capture | (service) | [HT]"]:::highTrust
+  node_01F8M8Z9FQ8K8G8K8J8K8G8K8D["File Storage | (service) | [HT]"]:::highTrust
+  node_01F8M8Z9FQ8K8G8K8J8K8G8K8E["User Input Handling | (frontend) | [LT]"]:::lowTrust
+  node_01F8M8Z9FQ8K8G8K8J8K8G8K8F["Local File System | (file)"]:::dataStore
+  node_01F8M8Z9FQ8K8G8K8J8K8G8K8A["Screenshots | [INT]"]:::dataAsset,internal
+  node_01F8M8Z9FQ8K8G8K8J8K8G8K8B["User Configuration | [CONF]"]:::dataAsset,confidential
+
+  node_01F8M8Z9FQ8K8G8K8J8K8G8K8G -->|User Configuration to Screenshot Capture| node_01F8M8Z9FQ8K8G8K8J8K8G8K8C:::unencryptedFlow
+  node_01F8M8Z9FQ8K8G8K8J8K8G8K8C -->|Screenshot Capture to Local File System| node_01F8M8Z9FQ8K8G8K8J8K8G8K8F:::unencryptedFlow
+  node_01F8M8Z9FQ8K8G8K8J8K8G8K8F -->|Local File System to User| node_01F8M8Z9FQ8K8G8K8J8K8G8K8G:::encryptedFlow
+
+  classDef externalEntity fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef process fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef dataAsset fill:#A259FF,stroke:#c3a4ff,stroke-width:2px,color:#F5F7FA
+  classDef untrusted fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFD300,stroke:#FFD300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#36FF8F,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#36FF8F,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#FFD300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#FF4C4C,stroke-width:2px
+  classDef restricted fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#36FF8F,stroke-width:2px
+  classDef unencryptedFlow stroke:#FF4C4C,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5
