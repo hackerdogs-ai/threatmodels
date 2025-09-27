@@ -1,0 +1,75 @@
+{
+  "compliance_assessment": {
+    "id": "01K64KYBSQEWQD23048PAXDGHH",
+    "framework": "GDPR",
+    "framework_description": "General Data Protection Regulation - A regulation in EU law on data protection and privacy.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 65.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-1",
+        "requirement": "Ensure data subject rights are respected, including access, rectification, and erasure.",
+        "status": "partially_compliant",
+        "evidence": "Some mechanisms for data access exist, but not all rights are fully implemented.",
+        "gaps": [
+          "Lack of clear processes for data erasure requests.",
+          "No documented procedures for data rectification."
+        ],
+        "recommendations": [
+          "Develop and document processes for handling data subject requests.",
+          "Implement a user-friendly interface for data access and erasure."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-2",
+        "requirement": "Implement data protection by design and by default.",
+        "status": "non_compliant",
+        "evidence": "Current design does not incorporate data protection principles.",
+        "gaps": [
+          "No privacy impact assessments conducted.",
+          "Lack of data minimization practices."
+        ],
+        "recommendations": [
+          "Conduct privacy impact assessments for new features.",
+          "Adopt data minimization practices in data collection."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-3",
+        "requirement": "Ensure data is encrypted in transit and at rest.",
+        "status": "partially_compliant",
+        "evidence": "Some data is encrypted, but not all sensitive data is covered.",
+        "gaps": [
+          "Inconsistent encryption practices across the application.",
+          "No encryption for certain sensitive data types."
+        ],
+        "recommendations": [
+          "Standardize encryption practices across all data types.",
+          "Implement encryption for all sensitive data at rest."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Lack of comprehensive data subject rights processes.",
+      "Insufficient encryption practices for sensitive data."
+    ],
+    "remediation_plan": [
+      "Establish a dedicated team to oversee GDPR compliance.",
+      "Create and implement a comprehensive data protection policy.",
+      "Conduct regular training for staff on GDPR requirements."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-27 03:39:42.627790",
+    "assessor": null,
+    "created_at": "2025-09-27 03:39:42.627794",
+    "updated_at": "2025-09-27 03:39:42.627797"
+  }
+}

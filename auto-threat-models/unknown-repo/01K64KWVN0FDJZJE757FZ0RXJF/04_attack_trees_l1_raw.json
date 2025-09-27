@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "id": "01K64KYBSP9A3A39THJ2CKC44N",
+    "title": "Attack Tree for Code Injection Threat",
+    "description": "This attack tree outlines the potential paths for exploiting the Code Injection vulnerability in the Ray Distributed Computing Framework.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-27 03:37:23+00:00",
+    "last_updated": "2025-09-27 03:37:32.476428",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K64KYBSP9A3A39THJ2CKC44N",
+    "description": "Code Injection Attack Path",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K64KYBSP9A3A39THJ2CKC44N-1",
+        "description": "User submits malicious input through an API endpoint.",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement input validation and sanitization.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K64KYBSP9A3A39THJ2CKC44N-2",
+        "description": "Malicious script is executed on the server due to insufficient validation.",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Use a web application firewall (WAF) to filter malicious requests.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Conduct regular security audits and code reviews.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.85
+      },
+      {
+        "description": "Educate developers on secure coding practices.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      }
+    ],
+    "references": []
+  }
+}
