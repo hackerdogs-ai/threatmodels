@@ -1,0 +1,73 @@
+{
+  "id": "01K65TFGCFHR3Y415SFMNC81W0",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Ray Core",
+      "description": "The central component that manages the execution of tasks and scheduling across distributed nodes.",
+      "type": "backend"
+    },
+    {
+      "name": "Docker Container",
+      "description": "Containerization component that encapsulates the application environment for consistent deployment across different platforms.",
+      "type": "service"
+    },
+    {
+      "name": "CI/CD Pipeline",
+      "description": "Continuous Integration and Continuous Deployment system that automates the building, testing, and deployment of applications.",
+      "type": "service"
+    },
+    {
+      "name": "Dependency Management",
+      "description": "Component responsible for managing and resolving dependencies required by the application.",
+      "type": "backend"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "CI/CD Pipeline",
+      "destination": "Docker Container",
+      "description": "The CI/CD pipeline builds the application and pushes the Docker image to the container registry."
+    },
+    {
+      "source": "Ray Core",
+      "destination": "Dependency Management",
+      "description": "Ray Core requests necessary dependencies from the Dependency Management component during task execution."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Deployment Environment",
+      "description": "The boundary between the development environment and the production environment.",
+      "components": [
+        "CI/CD Pipeline",
+        "Docker Container"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-27 14:50:51.151805",
+  "updated_at": "2025-09-27 14:50:51.151815"
+}

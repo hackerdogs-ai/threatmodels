@@ -1,0 +1,36 @@
+graph TB
+  root["Unauthorized Access to the Ray Distributed Computing Framework | [HIGH]"]:::highRisk
+  path1["Exploitation of weak authentication mechanisms | [HIGH]"]:::highRisk
+  leaf1["Brute force attack on user credentials | [MED]"]:::mediumRisk
+  leaf1_cm_0["CM: Implement account lockout policies after multiple failed login attempts. (Eff: 0.8)"]:::countermeasure
+  leaf1_cm_1["CM: Use CAPTCHA to prevent automated login attempts. (Eff: 0.7)"]:::countermeasure
+  path1_cm_0["CM: Enforce strong password policies. (Eff: 0.9)"]:::countermeasure
+  path2["Token replay attacks | [HIGH]"]:::highRisk
+  leaf2["Capture and reuse valid authentication tokens | [HIGH]"]:::highRisk
+  leaf2_cm_0["CM: Implement token expiration and refresh mechanisms. (Eff: 0.85)"]:::countermeasure
+  leaf2_cm_1["CM: Use HTTPS to encrypt token transmission. (Eff: 0.9)"]:::countermeasure
+  path2_cm_0["CM: Implement multi-factor authentication (MFA). (Eff: 0.95)"]:::countermeasure
+  root_cm_0["CM: Conduct regular security audits and penetration testing. (Eff: 0.8)"]:::countermeasure
+
+  root -.-> path1
+  path1 --> leaf1
+  leaf1 -.-> leaf1_cm_0
+  leaf1 -.-> leaf1_cm_1
+  path1 -.-> path1_cm_0
+  root -.-> path2
+  path2 --> leaf2
+  leaf2 -.-> leaf2_cm_0
+  leaf2 -.-> leaf2_cm_1
+  path2 -.-> path2_cm_0
+  root -.-> root_cm_0
+
+  classDef andNode fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef orNode fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef highRisk fill:#FF4C4C,color:#F5F7FA,stroke:#FF4C4C,stroke-width:2px
+  classDef mediumRisk fill:#FFD300,stroke:#FFD300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#A259FF,stroke:#c3a4ff,stroke-width:1px,stroke-dasharray:3 3,color:#F5F7FA
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

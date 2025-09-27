@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both models identify unauthorized access as a critical threat due to weak authentication mechanisms.,,,,2025-09-27T14:54:37.776305
+CORR_002,,,,Both models recommend data encryption as a mitigation strategy to prevent data leakage.,,,,2025-09-27T14:54:37.776320
+CORR_003,,,,Both models highlight code injection as a significant threat due to unsanitized inputs.,,,,2025-09-27T14:54:37.776331
+CORR_004,,,,Denial of Service (DoS) attacks are identified as a common threat across both models.,,,,2025-09-27T14:54:37.776340
+CORR_005,,,,Both models emphasize the need for token expiration and management to prevent replay attacks.,,,,2025-09-27T14:54:37.776349
+CORR_006,,,,Both models align with GDPR requirements regarding data protection and user privacy.,,,,2025-09-27T14:54:37.776359
+CORR_007,,,,Both models recommend regular updates and patch management to mitigate privilege escalation vulnerabilities.,,,,2025-09-27T14:54:37.776368
+CORR_008,,,,"Improper input validation is a common threat identified in both models, leading to various attacks.",,,,2025-09-27T14:54:37.776377
+CORR_009,,,,Both models can benefit from a unified incident response strategy to address identified threats.,,,,2025-09-27T14:54:37.776387
+CORR_010,,,,Both models identify replay attacks as a significant threat due to potential weaknesses in token management.,,,,2025-09-27T14:54:37.776396

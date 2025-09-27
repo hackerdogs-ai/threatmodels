@@ -1,0 +1,11 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Deployment_Environment, "Deployment Environment") {
+        System(CI_CD_Pipeline, "CI/CD Pipeline", "Continuous Integration and Continuous Deployment system that automates the building, testing, and deployment of applications.")
+        System(Docker_Container, "Docker Container", "Containerization component that encapsulates the application environment for consistent deployment across different platforms.")
+    }
+    System(Ray_Core, "Ray Core", "The central component that manages the execution of tasks and scheduling across distributed nodes.")
+    System(Dependency_Management, "Dependency Management", "Component responsible for managing and resolving dependencies required by the application.")
+
+    Rel(CI_CD_Pipeline, Docker_Container, "Uses")
+    Rel(Ray_Core, Dependency_Management, "Uses")

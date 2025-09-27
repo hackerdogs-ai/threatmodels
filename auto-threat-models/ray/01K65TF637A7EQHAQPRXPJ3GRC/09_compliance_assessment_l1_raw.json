@@ -1,0 +1,76 @@
+{
+  "compliance_assessment": {
+    "id": "01K65TGYQW2R1ZVKZPPST2W7SV",
+    "framework": "GDPR",
+    "framework_description": "General Data Protection Regulation, a regulation in EU law on data protection and privacy.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 70.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-1",
+        "requirement": "Ensure lawful processing of personal data.",
+        "status": "partially_compliant",
+        "evidence": "Data processing agreements are in place but lack clarity on lawful bases.",
+        "gaps": [
+          "Lack of explicit consent mechanisms",
+          "Insufficient documentation of processing activities"
+        ],
+        "recommendations": [
+          "Implement clear consent forms",
+          "Document all data processing activities comprehensively"
+        ]
+      },
+      {
+        "requirement_id": "GDPR-2",
+        "requirement": "Implement data subject rights (access, rectification, erasure).",
+        "status": "non_compliant",
+        "evidence": "No established processes for handling data subject requests.",
+        "gaps": [
+          "No procedures for data access requests",
+          "No mechanisms for data deletion requests"
+        ],
+        "recommendations": [
+          "Develop and implement procedures for data subject requests",
+          "Train staff on data subject rights"
+        ]
+      },
+      {
+        "requirement_id": "GDPR-3",
+        "requirement": "Ensure data security and breach notification.",
+        "status": "partially_compliant",
+        "evidence": "Basic security measures are in place, but no formal breach notification process.",
+        "gaps": [
+          "No incident response plan for data breaches",
+          "Lack of regular security assessments"
+        ],
+        "recommendations": [
+          "Establish a formal breach notification process",
+          "Conduct regular security assessments and audits"
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Lack of explicit consent mechanisms for data processing",
+      "No established procedures for data subject rights",
+      "Absence of a formal breach notification process"
+    ],
+    "remediation_plan": [
+      "Implement consent management tools to ensure lawful data processing.",
+      "Develop and document procedures for data subject requests.",
+      "Create an incident response plan that includes breach notification procedures."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-27 14:53:51.489159",
+    "assessor": null,
+    "created_at": "2025-09-27 14:53:51.489175",
+    "updated_at": "2025-09-27 14:53:51.489182"
+  }
+}
