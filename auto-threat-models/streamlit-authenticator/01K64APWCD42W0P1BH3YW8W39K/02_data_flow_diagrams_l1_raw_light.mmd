@@ -1,0 +1,39 @@
+graph TB
+  node_01F8F4X6D8R8F1F9G8E1["User | (user) | [UT]"]:::untrusted
+  node_01F8F4X6D8R8F1F9G8E2["OAuth2 Provider | (service) | [UT]"]:::untrusted
+  node_01F8F4X6D8R8F1F9G8P1["User Authentication | (backend) | [HT]"]:::highTrust
+  node_01F8F4X6D8R8F1F9G8P2["Password Hashing | (backend) | [HT]"]:::highTrust
+  node_01F8F4X6D8R8F1F9G8P3["Session Management | (backend) | [HT]"]:::highTrust
+  node_01F8F4X6D8R8F1F9G8P4["OAuth2 Authentication | (api) | [HT]"]:::highTrust
+  node_01F8F4X6D8R8F1F9G8S1["User Config File | (file)"]:::dataStore
+  node_01F8F4X6D8R8F1F9G8S2["Session Cookies | (cache)"]:::dataStore
+  node_01F8F4X6D8R8F1F9G8D1["User Credentials | [CONF]"]:::dataAsset,confidential
+  node_01F8F4X6D8R8F1F9G8D2["API Key | [CONF]"]:::dataAsset,confidential
+  node_01F8F4X6D8R8F1F9G8D3["OAuth2 Tokens | [CONF]"]:::dataAsset,confidential
+
+  node_01F8F4X6D8R8F1F9G8E1 -->|User Credentials Submission| node_01F8F4X6D8R8F1F9G8P1:::encryptedFlow
+  node_01F8F4X6D8R8F1F9G8P1 -->|Credentials to Hashing Process| node_01F8F4X6D8R8F1F9G8P2:::unencryptedFlow
+  node_01F8F4X6D8R8F1F9G8P2 -->|Hashed Password Storage| node_01F8F4X6D8R8F1F9G8S1:::unencryptedFlow
+  node_01F8F4X6D8R8F1F9G8P3 -->|Session Cookie Creation| node_01F8F4X6D8R8F1F9G8S2:::encryptedFlow
+  node_01F8F4X6D8R8F1F9G8E1 -->|OAuth2 Token Exchange| node_01F8F4X6D8R8F1F9G8P4:::encryptedFlow
+
+  classDef externalEntity fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef process fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef dataAsset fill:#ffa1ad,stroke:#A259FF,stroke-width:2px,color:#0B0D17
+  classDef untrusted fill:#FFB3B3,stroke:#8B0000,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFF2B3,stroke:#7A6300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#106B49,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#106B49,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#7A6300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#8B0000,stroke-width:2px
+  classDef restricted fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#106B49,stroke-width:2px
+  classDef unencryptedFlow stroke:#8B0000,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5
