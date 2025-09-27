@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify credential theft as a significant threat, emphasizing the need for strong authentication mechanisms.",,,,2025-09-27T00:48:16.946501
+CORR_002,,,,"Session hijacking is a common threat in both models, highlighting vulnerabilities in session management.",,,,2025-09-27T00:48:16.946517
+CORR_003,,,,Both models recommend hashing passwords using strong algorithms to prevent unauthorized access.,,,,2025-09-27T00:48:16.946526
+CORR_004,,,,"Denial of Service attacks are identified as a threat in both models, affecting application availability.",,,,2025-09-27T00:48:16.946534
+CORR_005,,,,"Information disclosure via configuration files is a shared concern, emphasizing the need for secure configuration practices.",,,,2025-09-27T00:48:16.946542
+CORR_006,,,,"Both models highlight the risk of input validation attacks, such as SQL injection and XSS.",,,,2025-09-27T00:48:16.946550
+CORR_007,,,,"Insufficient logging and monitoring is a common issue, underscoring the need for robust logging mechanisms.",,,,2025-09-27T00:48:16.946558
+CORR_008,,,,Both models emphasize the importance of secure OAuth2 implementations to prevent unauthorized access.,,,,2025-09-27T00:48:16.946566
+CORR_009,,,,"Both models align with data protection regulations, emphasizing the need for secure handling of user data.",,,,2025-09-27T00:48:16.946574
+CORR_010,,,,Both models highlight the importance of securing cloud configurations to prevent data breaches.,,,,2025-09-27T00:48:16.946581

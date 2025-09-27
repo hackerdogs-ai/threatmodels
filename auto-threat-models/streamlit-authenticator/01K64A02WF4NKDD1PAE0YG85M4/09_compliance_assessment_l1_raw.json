@@ -1,0 +1,89 @@
+{
+  "compliance_assessment": {
+    "id": "01K64A1SVZ3CN878TR09FAB9PC",
+    "framework": "ISO 27001",
+    "framework_description": "ISO/IEC 27001 is an international standard for information security management systems (ISMS), providing a systematic approach to managing sensitive company information, ensuring its confidentiality, integrity, and availability.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 75.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "A.9.2.1",
+        "requirement": "User registration and de-registration",
+        "status": "compliant",
+        "evidence": "User registration process is implemented with a YAML config file.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "A.9.3.1",
+        "requirement": "Use of secret authentication information",
+        "status": "partially_compliant",
+        "evidence": "Passwords are hashed automatically.",
+        "gaps": [
+          "No multi-factor authentication implemented."
+        ],
+        "recommendations": [
+          "Implement multi-factor authentication to enhance security."
+        ]
+      },
+      {
+        "requirement_id": "A.10.1.1",
+        "requirement": "Policy on the use of cryptographic controls",
+        "status": "partially_compliant",
+        "evidence": "Encryption is used for password storage.",
+        "gaps": [
+          "Lack of encryption for sensitive data in configuration files."
+        ],
+        "recommendations": [
+          "Implement encryption for sensitive data in configuration files."
+        ]
+      },
+      {
+        "requirement_id": "A.12.4.1",
+        "requirement": "Event logging",
+        "status": "non_compliant",
+        "evidence": "No logging and monitoring mechanisms established.",
+        "gaps": [
+          "Lack of logging and monitoring for suspicious activities."
+        ],
+        "recommendations": [
+          "Establish logging and monitoring mechanisms."
+        ]
+      },
+      {
+        "requirement_id": "A.16.1.1",
+        "requirement": "Responsibilities and procedures",
+        "status": "partially_compliant",
+        "evidence": "Incident response plan is under development.",
+        "gaps": [
+          "Incident response plan not fully implemented."
+        ],
+        "recommendations": [
+          "Finalize and implement the incident response plan."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "No multi-factor authentication implemented.",
+      "Lack of logging and monitoring mechanisms."
+    ],
+    "remediation_plan": [
+      "Implement multi-factor authentication for user logins.",
+      "Establish logging and monitoring mechanisms to detect suspicious activities.",
+      "Finalize and implement the incident response plan."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-27 00:47:33.914451",
+    "assessor": null,
+    "created_at": "2025-09-27 00:47:33.914458",
+    "updated_at": "2025-09-27 00:47:33.914463"
+  }
+}

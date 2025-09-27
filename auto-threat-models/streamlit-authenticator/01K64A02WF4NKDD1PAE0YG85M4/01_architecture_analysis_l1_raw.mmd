@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Data_Boundary, "User Data Boundary") {
+        System(Configuration_File, "Configuration File", "Stores user credentials and application settings in a YAML format for easy management.")
+        System(Authentication_Controller, "Authentication Controller", "Handles user authentication processes, including login, logout, and session management.")
+    }
+    System_Boundary(tb_Session_Management_Boundary, "Session Management Boundary") {
+        System(Cookie_Controller, "Cookie Controller", "Manages the creation and validation of authentication cookies for session persistence.")
+        System(Streamlit_Application, "Streamlit Application", "The frontend application built using Streamlit that interacts with users and displays the UI.")
+    }
+    System(OAuth2_Models, "OAuth2 Models", "Handles OAuth2 authentication flows for third-party services like Google and Microsoft.")
+
+    Rel(Streamlit_Application, Authentication_Controller, "Uses")
+    Rel(Authentication_Controller, Cookie_Controller, "Uses")
+    Rel(Streamlit_Application, OAuth2_Models, "Uses")
