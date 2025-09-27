@@ -1,0 +1,181 @@
+{
+  "risk_prioritization": {
+    "id": "01K64KP67R8J6QC27E1MCK2XAP",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K64KP67QG3V7FFDA9NHHJHJC",
+        "threat_title": "Unauthorized Access",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement multi-factor authentication (MFA).",
+          "Review and strengthen authentication mechanisms."
+        ]
+      },
+      {
+        "risk_id": "01K64KP67Q9Q1T2YK6G7AFZX1V",
+        "threat_title": "Data Leakage",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement data masking techniques.",
+          "Ensure sensitive data is not logged or captured in screenshots."
+        ]
+      },
+      {
+        "risk_id": "01K64KP67Q2ECG3M3CZ5RR4PEH",
+        "threat_title": "Malicious Input Handling",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Validate and sanitize all user inputs.",
+          "Implement input validation libraries."
+        ]
+      },
+      {
+        "risk_id": "01K64KP67QZ1D6QPNF2DZ98PG8",
+        "threat_title": "Denial of Service via Resource Exhaustion",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting and request throttling.",
+          "Monitor application traffic for unusual patterns."
+        ]
+      },
+      {
+        "risk_id": "01K64KP67R64PMRTXDCGA6XYDH",
+        "threat_title": "Replay Attacks",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use nonce or timestamp-based tokens for requests.",
+          "Implement session management best practices."
+        ]
+      },
+      {
+        "risk_id": "01K64KP67R7J6QC27E1MCK2XAP",
+        "threat_title": "Privilege Escalation",
+        "risk_score": 4,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "low",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Regularly review and update permissions and roles.",
+          "Conduct security audits on user roles."
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K64KP67QG3V7FFDA9NHHJHJC"
+      ],
+      "high_priority_risks": [
+        "01K64KP67Q9Q1T2YK6G7AFZX1V",
+        "01K64KP67Q2ECG3M3CZ5RR4PEH"
+      ],
+      "medium_priority_risks": [
+        "01K64KP67QZ1D6QPNF2DZ98PG8",
+        "01K64KP67R64PMRTXDCGA6XYDH",
+        "01K64KP67R7J6QC27E1MCK2XAP"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K64KP67QG3V7FFDA9NHHJHJC": 9.0,
+      "01K64KP67Q9Q1T2YK6G7AFZX1V": 8.0,
+      "01K64KP67Q2ECG3M3CZ5RR4PEH": 7.0,
+      "01K64KP67QZ1D6QPNF2DZ98PG8": 6.0,
+      "01K64KP67R64PMRTXDCGA6XYDH": 5.0,
+      "01K64KP67R7J6QC27E1MCK2XAP": 4.0
+    },
+    "risk_rankings": [
+      [
+        "01K64KP67QG3V7FFDA9NHHJHJC",
+        9.0
+      ],
+      [
+        "01K64KP67Q9Q1T2YK6G7AFZX1V",
+        8.0
+      ],
+      [
+        "01K64KP67Q2ECG3M3CZ5RR4PEH",
+        7.0
+      ],
+      [
+        "01K64KP67QZ1D6QPNF2DZ98PG8",
+        6.0
+      ],
+      [
+        "01K64KP67R64PMRTXDCGA6XYDH",
+        5.0
+      ],
+      [
+        "01K64KP67R7J6QC27E1MCK2XAP",
+        4.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of revenue due to unauthorized access or data breaches.",
+      "operational_impact": "Disruption of services leading to decreased productivity.",
+      "reputational_impact": "Loss of customer trust and potential legal consequences."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-27 03:35:43.011294",
+    "updated_at": "2025-09-27 03:35:43.011420"
+  }
+}

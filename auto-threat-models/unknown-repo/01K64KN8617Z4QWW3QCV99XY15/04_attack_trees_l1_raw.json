@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "id": "01K64KP67R7J6QC27E1MCK2XAP",
+    "title": "Attack Tree for Privilege Escalation",
+    "description": "This attack tree outlines the potential paths for an attacker to exploit vulnerabilities in the fastlane application to gain elevated privileges.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-27 03:32:55.672113",
+    "last_updated": "2025-09-27 03:33:08.483887",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K64KP67R7J6QC27E1MCK2XAP",
+    "description": "Privilege Escalation Attack Path",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K64KP67R7J6QC27E1MCK2XAP-1",
+        "description": "Exploit a known vulnerability in the application",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Regularly update dependencies and patch known vulnerabilities.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K64KP67R7J6QC27E1MCK2XAP-2",
+        "description": "Manipulate user input to trigger unintended behavior",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement input validation and sanitization.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K64KP67R7J6QC27E1MCK2XAP-3",
+        "description": "Bypass authentication mechanisms",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Enhance authentication mechanisms with multi-factor authentication.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Conduct regular security audits and penetration testing.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      }
+    ],
+    "references": []
+  }
+}

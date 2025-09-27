@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both models identify unauthorized access as a significant threat due to weak authentication mechanisms.,,,,2025-09-27T03:36:03.465448
+CORR_002,,,,"Data leakage is a common threat in both models, highlighting the risk of sensitive information exposure.",,,,2025-09-27T03:36:03.465461
+CORR_003,,,,Both models emphasize the importance of input validation and sanitization to prevent injection attacks.,,,,2025-09-27T03:36:03.465468
+CORR_004,,,,"Denial of service attacks are a shared concern, with both models outlining resource exhaustion as a potential attack vector.",,,,2025-09-27T03:36:03.465473
+CORR_005,,,,Both models recommend regular reviews of user permissions to prevent privilege escalation.,,,,2025-09-27T03:36:03.465479
+CORR_006,,,,Both models must comply with data protection regulations that mandate the secure handling of sensitive information.,,,,2025-09-27T03:36:03.465485
+CORR_007,,,,"Malicious input handling is a shared threat, emphasizing the need for robust input validation.",,,,2025-09-27T03:36:03.465490
+CORR_008,,,,Both models can benefit from a unified incident response plan to address threats like replay attacks effectively.,,,,2025-09-27T03:36:03.465496
+CORR_009,,,,"Replay attacks are a common concern, with both models identifying them as a risk due to session management flaws.",,,,2025-09-27T03:36:03.465501
+CORR_010,,,,Both models recommend implementing strong authentication mechanisms to mitigate unauthorized access.,,,,2025-09-27T03:36:03.465507
