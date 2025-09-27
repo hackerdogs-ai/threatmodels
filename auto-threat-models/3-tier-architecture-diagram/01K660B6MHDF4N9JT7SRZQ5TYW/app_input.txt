@@ -1,0 +1,37 @@
+Overall Architecture: The architecture is designed for a web application hosted on AWS, utilizing various services for load balancing, data storage, and content delivery. It emphasizes scalability and reliability through an auto-scaling group and multiple components working together.
+
+Key Components:
+- **Amazon Route 53**: A DNS service that directs traffic to the application.
+- **Elastic Load Balancer (ELB)**: Distributes incoming application traffic across multiple web servers to ensure high availability.
+- **Auto Scaling Group**: Automatically adjusts the number of web and app servers based on traffic demand.
+- **Web Servers**: Handle incoming HTTP requests and serve static content.
+- **App Servers**: Process application logic and interact with databases.
+- **Elastic Cache Tier**: Provides caching to improve application performance by reducing database load.
+- **Amazon RDS**: A managed relational database service for data storage, with a standby instance for failover.
+- **Amazon S3 Bucket**: Stores static data, such as images and files, accessible via Amazon CloudFront.
+- **Amazon CloudFront**: A content delivery network (CDN) that accelerates the delivery of static and dynamic web content.
+- **Amazon SNS**: Sends notifications based on events, integrated with CloudWatch alarms.
+- **Amazon SES**: Used for sending emails from the application.
+
+Data Flow: User requests are directed to the Route 53 DNS, which routes traffic to the Elastic Load Balancer. The ELB distributes the requests to the web servers within the auto-scaling group. Web servers handle the requests and may call app servers for dynamic content. App servers interact with the Elastic Cache for quick data retrieval and with Amazon RDS for persistent data storage. Static content is served from the S3 bucket, possibly cached by CloudFront for faster delivery.
+
+Technologies Used: AWS services including Route 53, Elastic Load Balancer, Auto Scaling, EC2 instances (for web and app servers), Elastic Cache, Amazon RDS, Amazon S3, Amazon CloudFront, Amazon SNS, and Amazon SES.
+
+Security Considerations: The architecture employs several security measures, including:
+- Use of Elastic Load Balancer for distributing traffic, which can mitigate DDoS attacks.
+- Auto Scaling Group for maintaining availability during traffic spikes.
+- Amazon RDS with a standby instance for data redundancy.
+- CloudFront for secure content delivery with SSL/TLS support.
+- Notifications via Amazon SNS for monitoring and alerting.
+
+Top 10 FAQ:
+1. What measures are in place for data encryption at rest and in transit?
+2. How is access control managed for AWS resources?
+3. What monitoring and logging solutions are implemented?
+4. How are security patches applied to the servers?
+5. What is the backup strategy for the RDS database?
+6. How are user authentication and authorization handled?
+7. What incident response plans are in place?
+8. Are there any rate limiting or throttling mechanisms?
+9. How is the application protected against common web vulnerabilities?
+10. What disaster recovery strategies are implemented?
