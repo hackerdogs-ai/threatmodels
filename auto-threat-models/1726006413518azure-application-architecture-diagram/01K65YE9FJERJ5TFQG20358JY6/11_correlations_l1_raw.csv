@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both models identify SQL Injection as a critical threat due to user input manipulation.,,,,2025-09-27T16:05:00.585294
+CORR_002,,,,"Session Hijacking is a common threat in both models, impacting user authentication and data security.",,,,2025-09-27T16:05:00.585311
+CORR_003,,,,Both models emphasize the need for HTTPS to secure sensitive data in transit.,,,,2025-09-27T16:05:00.585322
+CORR_004,,,,"Cross-Site Scripting (XSS) is a shared threat, with similar attack vectors targeting user data.",,,,2025-09-27T16:05:00.585332
+CORR_005,,,,"Data Exposure due to Misconfiguration is a common risk, particularly with S3 bucket settings.",,,,2025-09-27T16:05:00.585342
+CORR_006,,,,Both models recommend implementing IAM roles with the principle of least privilege to prevent unauthorized access.,,,,2025-09-27T16:05:00.585351
+CORR_007,,,,Insufficient Input Validation is a shared vulnerability that can lead to various injection attacks.,,,,2025-09-27T16:05:00.585361
+CORR_008,,,,"Both models must comply with data protection regulations such as GDPR, emphasizing data encryption.",,,,2025-09-27T16:05:00.585371
+CORR_009,,,,"Email Spoofing is identified as a risk, potentially leading to phishing attacks in both models.",,,,2025-09-27T16:05:00.585380
+CORR_010,,,,"Both models face risks from DDoS attacks, which can significantly disrupt service availability.",,,,2025-09-27T16:05:00.585390

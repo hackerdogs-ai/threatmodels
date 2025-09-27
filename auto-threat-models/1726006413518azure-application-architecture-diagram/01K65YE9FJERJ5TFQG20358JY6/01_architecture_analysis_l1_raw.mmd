@@ -1,0 +1,17 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Interaction_Boundary, "User Interaction Boundary") {
+        System(Amazon_Route_53, "Amazon Route 53", "DNS service that directs traffic to the application.")
+        System(Elastic_Load_Balancer, "Elastic Load Balancer", "Distributes incoming application traffic across multiple targets to prevent server overload.")
+        System(Web_Servers, "Web Servers", "Auto-created component: Web Servers")
+    }
+    System_Boundary(tb_Data_Storage_Boundary, "Data Storage Boundary") {
+        SystemDb(Amazon_RDS, "Amazon RDS", "Managed relational database service for structured data storage.")
+        SystemDb(Amazon_S3_Bucket, "Amazon S3 Bucket", "Stores static assets like images and videos.")
+    }
+    System(Auto_Scaling_Group, "Auto Scaling Group", "Automatically adjusts the number of web and app servers based on demand.")
+
+    Rel(Amazon_Route_53, Elastic_Load_Balancer, "Uses")
+    Rel(Elastic_Load_Balancer, Auto_Scaling_Group, "Uses")
+    Rel(Web_Servers, Amazon_RDS, "Uses")
+    Rel(Web_Servers, Amazon_S3_Bucket, "Uses")

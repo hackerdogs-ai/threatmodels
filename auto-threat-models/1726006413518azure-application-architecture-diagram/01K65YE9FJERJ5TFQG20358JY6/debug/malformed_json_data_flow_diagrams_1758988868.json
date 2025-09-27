@@ -1,0 +1,122 @@
+{
+    "id": "01F8Z4F5K8D3J8B9H8W6F8F8F8",
+    "name": "Scalable Web Application Data Flow Diagram",
+    "description": "Data flow diagram for a scalable web application hosted on AWS, illustrating the movement of data through various components and services.",
+    "data_assets": [
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F9",
+            "name": "User Data",
+            "classification": "pii"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F10",
+            "name": "Application Logs",
+            "classification": "internal"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F11",
+            "name": "Static Assets",
+            "classification": "public"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F12",
+            "name": "Database Records",
+            "classification": "confidential"
+        }
+    ],
+    "processes": [
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F13",
+            "name": "User Authentication",
+            "type": "api",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F14",
+            "name": "Request Processing",
+            "type": "backend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F15",
+            "name": "Content Delivery",
+            "type": "frontend",
+            "trust_level": "low_trust"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F16",
+            "name": "Notification Service",
+            "type": "service",
+            "trust_level": "low_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F17",
+            "name": "Amazon RDS",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F18",
+            "name": "Amazon S3 Bucket",
+            "type": "file",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F19",
+            "name": "Elastic Cache",
+            "type": "cache",
+            "encryption": "none"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F20",
+            "name": "End User",
+            "type": "user"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F21",
+            "name": "Email Service",
+            "type": "service"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F22",
+            "name": "Notification Service",
+            "type": "service"
+        }
+    ],
+    "data_flows": [
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F23",
+            "name": "User Request to Load Balancer",
+            "source_id": "01F8Z4F5K8D3J8B9H8W6F8F8F20",
+            "destination_id": "01F8Z4F5K8D3J8B9H8W6F8F8F13",
+            "protocol": "https",
+            "encryption": "transport"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F24",
+            "name": "Load Balancer to Web Server",
+            "source_id": "01F8Z4F5K8D3J8B9H8W6F8F8F13",
+            "destination_id": "01F8Z4F5K8D3J8B9H8W6F8F8F14",
+            "protocol": "http",
+            "encryption": "none"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F25",
+            "name": "Web Server to App Server",
+            "source_id": "01F8Z4F5K8D3J8B9H8W6F8F8F14",
+            "destination_id": "01F8Z4F5K8D3J8B9H8W6F8F8F14",
+            "protocol": "http",
+            "encryption": "none"
+        },
+        {
+            "id": "01F8Z4F5K8D3J8B9H8W6F8F8F26",
+            "name": "App Server to RDS",
+            "source_id": "01F8Z4F5K8D3J8B9H8W6F8F8F14",
+            "destination_id": "01F8Z4F5K8D3J8B9H8W6F8F8F17",
+            "protocol": "database",
+            "encryption": "transport"
+        }
