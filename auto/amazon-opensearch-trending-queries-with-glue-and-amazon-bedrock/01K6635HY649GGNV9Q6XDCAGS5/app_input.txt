@@ -1,0 +1,34 @@
+Overall Architecture: The architecture describes a system designed to optimize content strategy by identifying trending search queries. It leverages various AWS services to process, analyze, and store search query data, ultimately enhancing user experience and potentially increasing revenue.
+
+Key Components:
+1. **End Users**: Individuals who search for articles on the search page.
+2. **Amazon OpenSearch**: A service used for retrieving search results based on user queries.
+3. **Amazon API Gateway**: Acts as a proxy to send search queries to Amazon OpenSearch and retrieve trending queries.
+4. **Amazon Kinesis Data Streams**: Streams search query logs for real-time processing.
+5. **Amazon Kinesis Firehose**: Consolidates search query logs every 15 minutes for further processing.
+6. **AWS Lambda**: Compresses search query logs for storage optimization and processes CSV files to identify relevant queries.
+7. **Amazon Simple Storage Service (Amazon S3)**: Stores raw search query logs and processed data in Parquet format.
+8. **Amazon EventBridge**: Triggers AWS Step Functions daily for trending query identification.
+9. **AWS Step Functions**: Orchestrates workflows for clustering and classifying search queries.
+10. **AWS Glue**: Crawls and creates catalog tables for both raw logs and processed data, and performs data transformations.
+11. **Amazon Athena**: Queries the top n queries per cluster for further analysis.
+12. **Amazon Bedrock**: Used for identifying the most relevant search queries per cluster.
+13. **Amazon DynamoDB**: Stores the output of trending queries for retrieval by the application logic.
+
+Data Flow: User queries are sent to Amazon OpenSearch via the Amazon API Gateway. Search query logs are streamed through Amazon Kinesis Data Streams, consolidated by Amazon Kinesis Firehose, and stored in Amazon S3. AWS Lambda compresses these logs, while AWS Glue crawlers create catalog tables for both raw logs and transformed data. AWS Step Functions, triggered by Amazon EventBridge, orchestrate the clustering of search queries using AWS Glue jobs. The top queries are queried by Amazon Athena, processed by AWS Lambda, and stored in Amazon DynamoDB for retrieval when users access the search page.
+
+Technologies Used: The architecture utilizes AWS services including Amazon OpenSearch, Amazon API Gateway, Amazon Kinesis Data Streams, Amazon Kinesis Firehose, AWS Lambda, Amazon S3, AWS Glue, Amazon Athena, Amazon Bedrock, Amazon DynamoDB, and Amazon EventBridge.
+
+Security Considerations: The architecture does not explicitly mention security measures. However, it is crucial to consider securing data in transit (e.g., using HTTPS for API Gateway), data at rest (e.g., S3 bucket policies), and ensuring proper IAM roles and permissions for AWS services to limit access to sensitive data.
+
+Top 10 FAQ:
+1. What authentication mechanisms are in place for the API Gateway?
+2. How is data encrypted in transit and at rest across the architecture?
+3. What IAM roles and policies are implemented to secure access to AWS services?
+4. How are logs monitored and managed for security incidents?
+5. What measures are in place to prevent unauthorized access to Amazon S3 buckets?
+6. How is sensitive user data handled and protected throughout the process?
+7. Are there any rate limiting or throttling mechanisms for the API Gateway?
+8. What incident response procedures are established for data breaches?
+9. How is data integrity ensured during processing and storage?
+10. What compliance standards does this architecture adhere to (e.g., GDPR, HIPAA)?
