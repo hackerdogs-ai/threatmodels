@@ -1,0 +1,39 @@
+{
+  "project_name": "RAGFlow - Retrieval-Augmented Generation Engine",
+  "line_of_business": [
+    "Artificial Intelligence",
+    "Data Processing",
+    "Software Development"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "Username and Password",
+    "Token-based Authentication"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "CCPA",
+    "ISO 27001"
+  ],
+  "security_requirements": [
+    "Data Encryption",
+    "Access Control",
+    "Audit Logging",
+    "Input Validation"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threat modeling for the RAGFlow application and its components, including user authentication, data processing, and API interactions.",
+  "assumptions": [
+    "Users have valid credentials for access",
+    "Data processed by the application is sensitive",
+    "The application will be deployed in a secure environment"
+  ],
+  "constraints": [
+    "Dependency on Docker and specific system configurations",
+    "Resource limitations based on hardware requirements"
+  ]
+}
