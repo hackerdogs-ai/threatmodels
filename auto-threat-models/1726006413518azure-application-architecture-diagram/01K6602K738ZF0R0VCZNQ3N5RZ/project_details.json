@@ -1,0 +1,40 @@
+{
+  "project_name": "Cloud-based User Request Management System",
+  "line_of_business": [
+    "User Management",
+    "Data Processing",
+    "Cloud Services"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth",
+    "SAML",
+    "OpenID Connect"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA"
+  ],
+  "security_requirements": [
+    "DDoS Protection",
+    "Data Encryption",
+    "Access Control",
+    "Traffic Monitoring"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threat modeling for the entire cloud architecture including data flow and security controls",
+  "assumptions": [
+    "Azure services are properly configured",
+    "Users have valid access permissions",
+    "Third-party integrations are secure"
+  ],
+  "constraints": [
+    "Compliance with local data protection regulations",
+    "Performance limitations of Azure services",
+    "Budget constraints for cloud infrastructure"
+  ]
+}

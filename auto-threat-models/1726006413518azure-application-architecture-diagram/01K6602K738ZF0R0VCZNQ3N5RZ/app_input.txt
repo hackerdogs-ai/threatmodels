@@ -1,0 +1,49 @@
+### Overall Architecture
+The architecture represents a cloud-based application hosted on Microsoft Azure, designed to manage user requests, process workloads, and ensure secure access and monitoring. It integrates various Azure services for application delivery, identity management, and system health monitoring.
+
+### Key Components
+- **Users**: End-users accessing the application through a custom domain.
+- **Application Gateway**: A web traffic load balancer that manages incoming requests and routes them to the appropriate services.
+- **Web App Firewall**: Provides security by filtering and monitoring HTTP traffic to and from the web application.
+- **Load Balancers**: Distributes incoming application traffic across multiple instances of the web app to ensure reliability and performance.
+- **Web App**: The core application that processes user requests.
+- **Web App Worker Pools**: Background processing units that handle tasks asynchronously.
+- **Azure SQL Database**: A managed relational database service for storing application data.
+- **Application Insights**: A monitoring service that provides performance and usage analytics for the application.
+- **Azure Active Directory**: Manages user identities and access permissions.
+- **Azure Key Vaults**: Stores and manages sensitive information such as secrets and encryption keys.
+- **Network Security Groups**: Controls inbound and outbound traffic to Azure resources.
+- **Bastion Host**: Provides secure access to virtual machines without exposing them to the public internet.
+- **Azure Management Portal**: Interface for managing Azure resources.
+- **Azure Storage**: Provides scalable cloud storage for application data.
+- **ExpressRoute**: A service that allows for private connections between Azure data centers and on-premises infrastructure.
+- **VPN Gateway**: Facilitates secure connections between Azure and on-premises networks.
+
+### Data Flow
+Data flows from users to the Application Gateway, which routes requests to the appropriate Web App or Load Balancer. The Load Balancer distributes traffic to the Web App and Worker Pools. The Web App interacts with the Azure SQL Database for data storage and retrieval. Monitoring and analytics data are sent to Application Insights for performance tracking.
+
+### Technologies Used
+- **Microsoft Azure**: Cloud platform hosting the architecture.
+- **Azure DNS**: Manages domain name resolution.
+- **CNAME Records**: Used for custom domain mapping to the Application Gateway.
+- **HTTP/HTTPS**: Protocols for web traffic.
+- **Azure Services**: Various Azure services for application hosting, identity management, and monitoring.
+
+### Security Considerations
+- **Web App Firewall**: Protects against common web vulnerabilities.
+- **Network Security Groups**: Controls traffic flow to resources.
+- **Azure Active Directory**: Ensures secure identity management.
+- **Bastion Host**: Provides secure access to VMs without exposing them directly to the internet.
+- **Azure Key Vaults**: Secures sensitive information.
+
+### Top 10 FAQ
+1. What measures are in place to protect against DDoS attacks?
+2. How is data encrypted at rest and in transit?
+3. What authentication methods are supported by Azure Active Directory?
+4. How are user permissions managed and audited?
+5. What is the backup and disaster recovery strategy for the Azure SQL Database?
+6. How is application performance monitored and optimized?
+7. What logging and monitoring capabilities are available?
+8. How are updates and patches managed for the application and its components?
+9. What incident response procedures are in place?
+10. How is compliance with regulations (e.g., GDPR, HIPAA) ensured in this architecture?
