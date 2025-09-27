@@ -1,0 +1,34 @@
+Overall Architecture: This architecture represents a basic 3-tier web application structure, consisting of a presentation layer for user interaction, a business logic layer for processing requests, and a data layer for persistent storage. Each layer communicates with the others to deliver a cohesive application experience.
+
+Key Components: 
+1. Presentation Layer (Frontend): Built using React.js, this layer includes user interface components, client-side routing, and makes API calls to the backend for data retrieval and submission.
+2. Business Logic Layer (Backend): This layer is powered by a Node.js/Express server, which exposes REST API endpoints. It handles authentication through middleware and processes business logic for the application.
+3. Data Layer (Database): Utilizes a PostgreSQL database for storing user data, managing sessions, and ensuring data persistence across application sessions.
+
+Data Flow: Information flows from the user interface in the presentation layer, which interacts with the backend through API calls. The backend processes these requests, applies business logic, and interacts with the database to retrieve or store data. Responses are sent back through the backend to the frontend for user display.
+
+Technologies Used: 
+- Frontend: React.js
+- Backend: Node.js, Express
+- Database: PostgreSQL
+- Deployment: AWS S3 for static frontend hosting, AWS EC2 for backend server, AWS RDS for database management, and AWS Application Load Balancer for traffic distribution.
+
+Security Considerations: 
+- HTTPS encryption is employed to secure all communications between the client and server.
+- JSON Web Tokens (JWT) are used for secure authentication.
+- Input validation and sanitization are implemented to prevent malicious data entry.
+- SQL injection prevention measures are in place to protect the database.
+- CORS configuration ensures that only authorized domains can access the API.
+- Rate limiting is applied to API endpoints to mitigate abuse and denial-of-service attacks.
+
+Top 10 FAQ:
+1. What measures are in place to ensure data confidentiality during transmission?
+2. How is user authentication managed and what happens if a JWT token is compromised?
+3. What specific input validation techniques are implemented to prevent XSS attacks?
+4. How is session management handled in the PostgreSQL database?
+5. What is the strategy for handling database backups and recovery?
+6. How is the application monitored for security breaches or anomalies?
+7. What logging mechanisms are in place for tracking API access and errors?
+8. How are updates and patches applied to the server and database?
+9. What specific configurations are used for CORS and how are they maintained?
+10. How does the architecture handle scalability and load balancing during peak traffic?
