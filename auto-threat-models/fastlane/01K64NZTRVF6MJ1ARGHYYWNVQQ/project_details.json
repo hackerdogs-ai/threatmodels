@@ -1,0 +1,39 @@
+{
+  "project_name": "CapRover",
+  "line_of_business": [
+    "Web Development",
+    "Cloud Services",
+    "DevOps"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Internal",
+  "authentication_methods": [
+    "OAuth",
+    "API Key",
+    "Session-based Authentication"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "Data Encryption",
+    "Secure API Access",
+    "SSL/TLS for Data Transmission"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Deployment and management of web applications and databases using Docker and Nginx",
+  "assumptions": [
+    "Users have basic knowledge of Docker and web application deployment",
+    "Users require a simplified deployment process",
+    "The application will handle sensitive data"
+  ],
+  "constraints": [
+    "Limited knowledge of Docker and server management among target users",
+    "Dependency on third-party services for SSL and containerization"
+  ]
+}

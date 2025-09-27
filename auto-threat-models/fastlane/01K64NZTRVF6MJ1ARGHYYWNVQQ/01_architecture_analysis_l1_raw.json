@@ -1,0 +1,96 @@
+{
+  "id": "01K64P086E8YSZZ3GQGM71Z9K3",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Web GUI",
+      "description": "The user interface that allows users to interact with CapRover for deploying and managing applications.",
+      "type": "frontend"
+    },
+    {
+      "name": "API Server",
+      "description": "Handles requests from the Web GUI and communicates with the datastore and Docker services.",
+      "type": "backend"
+    },
+    {
+      "name": "Datastore",
+      "description": "Stores application configurations, user data, and other persistent information required by CapRover.",
+      "type": "database"
+    },
+    {
+      "name": "Docker Engine",
+      "description": "Manages containerized applications and services, enabling deployment and scaling.",
+      "type": "service"
+    },
+    {
+      "name": "Nginx",
+      "description": "Acts as a reverse proxy and load balancer for incoming traffic to the deployed applications.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Web GUI",
+      "destination": "API Server",
+      "description": "User actions in the Web GUI trigger API calls to the API Server for application management."
+    },
+    {
+      "source": "API Server",
+      "destination": "Datastore",
+      "description": "The API Server retrieves and stores application configurations and user data in the Datastore."
+    },
+    {
+      "source": "API Server",
+      "destination": "Docker Engine",
+      "description": "The API Server sends commands to the Docker Engine to deploy and manage containers."
+    },
+    {
+      "source": "Nginx",
+      "destination": "Docker Engine",
+      "description": "Nginx routes incoming traffic to the appropriate Docker containers based on configuration."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Interaction Boundary",
+      "description": "Boundary between the user and the CapRover system, including the Web GUI and API Server.",
+      "components": [
+        "Web GUI",
+        "API Server"
+      ]
+    },
+    {
+      "name": "Data Storage Boundary",
+      "description": "Boundary protecting the Datastore from unauthorized access and ensuring data integrity.",
+      "components": [
+        "API Server",
+        "Datastore"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-27 04:13:22.510540",
+  "updated_at": "2025-09-27 04:13:22.510544"
+}
