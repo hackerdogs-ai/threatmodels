@@ -1,0 +1,42 @@
+graph TB
+  node_01K64M8FEMME26TVR14ZKVECAJ["Unauthorized Access to the Dokploy application. | [HIGH]"]:::highRisk
+  node_01K64M9FEMME26TVR14ZKVECAJ["Exploitation of weak authentication mechanisms. | [HIGH]"]:::highRisk
+  node_01K64M10FEMME26TVR14ZKVECAJ["Brute force attack on user credentials. | [HIGH]"]:::highRisk
+  node_01K64M10FEMME26TVR14ZKVECAJ_cm_0["CM: Implement account lockout after multiple failed attempts. (Eff: 0.8)"]:::countermeasure
+  node_01K64M10FEMME26TVR14ZKVECAJ_cm_1["CM: Require strong password policies. (Eff: 0.9)"]:::countermeasure
+  node_01K64M11FEMME26TVR14ZKVECAJ["Phishing attack to obtain user credentials. | [HIGH]"]:::highRisk
+  node_01K64M11FEMME26TVR14ZKVECAJ_cm_0["CM: Conduct user training on recognizing phishing attempts. (Eff: 0.7)"]:::countermeasure
+  node_01K64M11FEMME26TVR14ZKVECAJ_cm_1["CM: Implement two-factor authentication. (Eff: 0.9)"]:::countermeasure
+  node_01K64M9FEMME26TVR14ZKVECAJ_cm_0["CM: Implement two-factor authentication for all users. (Eff: 0.9)"]:::countermeasure
+  node_01K64M12FEMME26TVR14ZKVECAJ["Exploitation of improper access controls. | [HIGH]"]:::highRisk
+  node_01K64M13FEMME26TVR14ZKVECAJ["Accessing sensitive endpoints without proper authorization. | [HIGH]"]:::highRisk
+  node_01K64M13FEMME26TVR14ZKVECAJ_cm_0["CM: Implement role-based access control (RBAC). (Eff: 0.85)"]:::countermeasure
+  node_01K64M13FEMME26TVR14ZKVECAJ_cm_1["CM: Regularly audit access logs. (Eff: 0.75)"]:::countermeasure
+  node_01K64M12FEMME26TVR14ZKVECAJ_cm_0["CM: Conduct regular security audits and penetration testing. (Eff: 0.8)"]:::countermeasure
+  node_01K64M8FEMME26TVR14ZKVECAJ_cm_0["CM: Implement comprehensive logging and monitoring for suspicious activities. (Eff: 0.85)"]:::countermeasure
+
+  node_01K64M8FEMME26TVR14ZKVECAJ -.-> node_01K64M9FEMME26TVR14ZKVECAJ
+  node_01K64M9FEMME26TVR14ZKVECAJ --> node_01K64M10FEMME26TVR14ZKVECAJ
+  node_01K64M10FEMME26TVR14ZKVECAJ -.-> node_01K64M10FEMME26TVR14ZKVECAJ_cm_0
+  node_01K64M10FEMME26TVR14ZKVECAJ -.-> node_01K64M10FEMME26TVR14ZKVECAJ_cm_1
+  node_01K64M9FEMME26TVR14ZKVECAJ --> node_01K64M11FEMME26TVR14ZKVECAJ
+  node_01K64M11FEMME26TVR14ZKVECAJ -.-> node_01K64M11FEMME26TVR14ZKVECAJ_cm_0
+  node_01K64M11FEMME26TVR14ZKVECAJ -.-> node_01K64M11FEMME26TVR14ZKVECAJ_cm_1
+  node_01K64M9FEMME26TVR14ZKVECAJ -.-> node_01K64M9FEMME26TVR14ZKVECAJ_cm_0
+  node_01K64M8FEMME26TVR14ZKVECAJ -.-> node_01K64M12FEMME26TVR14ZKVECAJ
+  node_01K64M12FEMME26TVR14ZKVECAJ --> node_01K64M13FEMME26TVR14ZKVECAJ
+  node_01K64M13FEMME26TVR14ZKVECAJ -.-> node_01K64M13FEMME26TVR14ZKVECAJ_cm_0
+  node_01K64M13FEMME26TVR14ZKVECAJ -.-> node_01K64M13FEMME26TVR14ZKVECAJ_cm_1
+  node_01K64M12FEMME26TVR14ZKVECAJ -.-> node_01K64M12FEMME26TVR14ZKVECAJ_cm_0
+  node_01K64M8FEMME26TVR14ZKVECAJ -.-> node_01K64M8FEMME26TVR14ZKVECAJ_cm_0
+
+  classDef andNode fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef orNode fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef highRisk fill:#FF4C4C,color:#F5F7FA,stroke:#FF4C4C,stroke-width:2px
+  classDef mediumRisk fill:#FFD300,stroke:#FFD300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#A259FF,stroke:#c3a4ff,stroke-width:1px,stroke-dasharray:3 3,color:#F5F7FA
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

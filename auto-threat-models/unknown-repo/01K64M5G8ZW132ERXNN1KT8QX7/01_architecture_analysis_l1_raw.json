@@ -1,0 +1,86 @@
+{
+  "id": "01K64M5P8VCM3ZDSX86EFA32ZQ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "API Server",
+      "description": "Handles incoming requests, manages application logic, and interacts with the database.",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "Stores application data, user information, and configuration settings. Supports multiple database types like PostgreSQL and MySQL.",
+      "type": "database"
+    },
+    {
+      "name": "Docker Management",
+      "description": "Manages Docker containers and orchestrates deployments using Docker Compose and Docker Swarm.",
+      "type": "service"
+    },
+    {
+      "name": "Frontend Dashboard",
+      "description": "User interface for managing applications, viewing logs, and configuring settings.",
+      "type": "frontend"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend Dashboard",
+      "destination": "API Server",
+      "description": "User actions in the dashboard trigger API calls to manage applications and retrieve data."
+    },
+    {
+      "source": "API Server",
+      "destination": "Database",
+      "description": "The API server queries and updates the database based on user requests and application logic."
+    },
+    {
+      "source": "API Server",
+      "destination": "Docker Management",
+      "description": "The API server sends commands to the Docker Management component to deploy or manage containers."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Data Boundary",
+      "description": "Boundary that separates user data from application logic and external services.",
+      "components": [
+        "API Server",
+        "Database"
+      ]
+    },
+    {
+      "name": "Deployment Boundary",
+      "description": "Boundary that separates the management of application deployments from user interactions.",
+      "components": [
+        "API Server",
+        "Docker Management"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-27 03:41:23.611338",
+  "updated_at": "2025-09-27 03:41:23.611342"
+}

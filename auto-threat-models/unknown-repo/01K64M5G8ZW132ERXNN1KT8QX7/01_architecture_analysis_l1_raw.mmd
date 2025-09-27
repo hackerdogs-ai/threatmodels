@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Data_Boundary, "User Data Boundary") {
+        System(API_Server, "API Server", "Handles incoming requests, manages application logic, and interacts with the database.")
+        SystemDb(Database, "Database", "Stores application data, user information, and configuration settings. Supports multiple database types like PostgreSQL and MySQL.")
+    }
+    System_Boundary(tb_Deployment_Boundary, "Deployment Boundary") {
+        System(API_Server, "API Server", "Handles incoming requests, manages application logic, and interacts with the database.")
+        System(Docker_Management, "Docker Management", "Manages Docker containers and orchestrates deployments using Docker Compose and Docker Swarm.")
+    }
+    System(Frontend_Dashboard, "Frontend Dashboard", "User interface for managing applications, viewing logs, and configuring settings.")
+
+    Rel(Frontend_Dashboard, API_Server, "Uses")
+    Rel(API_Server, Database, "Uses")
+    Rel(API_Server, Docker_Management, "Uses")

@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "id": "01K64M7FEMME26TVR14ZKVECAJ",
+    "title": "Unauthorized Access Attack Tree",
+    "description": "Attack paths leading to unauthorized access in the Dokploy application.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-27 03:41:49+00:00",
+    "last_updated": "2025-09-27 03:41:59.978794",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K64M8FEMME26TVR14ZKVECAJ",
+    "description": "Unauthorized Access to the Dokploy application.",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K64M9FEMME26TVR14ZKVECAJ",
+        "description": "Exploitation of weak authentication mechanisms.",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K64M10FEMME26TVR14ZKVECAJ",
+            "description": "Brute force attack on user credentials.",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 7.0,
+              "impact": 9.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement account lockout after multiple failed attempts.",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              },
+              {
+                "description": "Require strong password policies.",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K64M11FEMME26TVR14ZKVECAJ",
+            "description": "Phishing attack to obtain user credentials.",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 5.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Conduct user training on recognizing phishing attempts.",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.7
+              },
+              {
+                "description": "Implement two-factor authentication.",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Implement two-factor authentication for all users.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K64M12FEMME26TVR14ZKVECAJ",
+        "description": "Exploitation of improper access controls.",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K64M13FEMME26TVR14ZKVECAJ",
+            "description": "Accessing sensitive endpoints without proper authorization.",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 6.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement role-based access control (RBAC).",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.85
+              },
+              {
+                "description": "Regularly audit access logs.",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.75
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Conduct regular security audits and penetration testing.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement comprehensive logging and monitoring for suspicious activities.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.85
+      }
+    ],
+    "references": []
+  }
+}
