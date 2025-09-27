@@ -1,0 +1,91 @@
+{
+  "id": "01K64NG67WKJE44818H2BHKN70",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "DockerContainer",
+      "description": "Base class for managing Docker containers used in the build and deployment processes.",
+      "type": "service"
+    },
+    {
+      "name": "BuilderContainer",
+      "description": "Handles the building of Ray applications within a specified container environment.",
+      "type": "service"
+    },
+    {
+      "name": "Validator",
+      "description": "Abstract class for validating builds and configurations across different platforms.",
+      "type": "service"
+    },
+    {
+      "name": "Automation Scripts",
+      "description": "Scripts that automate various CI/CD tasks such as version updates, Docker image management, and dependency checks.",
+      "type": "script"
+    },
+    {
+      "name": "Documentation Generator",
+      "description": "Generates API documentation and checks for discrepancies in API annotations.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "BuilderContainer",
+      "destination": "DockerContainer",
+      "description": "The BuilderContainer builds application artifacts and sends them to the DockerContainer for deployment."
+    },
+    {
+      "source": "Automation Scripts",
+      "destination": "Validator",
+      "description": "Automation scripts trigger validation processes to ensure builds meet specified criteria."
+    },
+    {
+      "source": "Documentation Generator",
+      "destination": "API",
+      "description": "The Documentation Generator retrieves API information to create and update documentation."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Build Environment",
+      "description": "The boundary that separates the build process from external systems and repositories.",
+      "components": [
+        "BuilderContainer",
+        "DockerContainer"
+      ]
+    },
+    {
+      "name": "Validation Process",
+      "description": "The boundary that ensures only validated builds are deployed to production.",
+      "components": [
+        "Validator",
+        "Automation Scripts"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-27 04:04:36.220387",
+  "updated_at": "2025-09-27 04:04:36.220393"
+}

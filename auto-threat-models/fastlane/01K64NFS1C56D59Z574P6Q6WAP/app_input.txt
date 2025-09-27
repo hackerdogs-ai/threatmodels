@@ -1,0 +1,517 @@
+Repository: https://github.com/ray-project/ray
+
+PY Files:
+File: .buildkite/copy_files.py
+Imports:
+import argparse
+import os
+import subprocess
+import sys
+import time
+... (3 more imports)
+Functions:
+def retry(f):
+def inner():
+def perform_auth():
+def handle_docker_login(resp):
+def gather_paths(dir_path):
+def upload_paths(paths, resp, destination):
+
+File: bazel/gen_extract.py
+Imports:
+import os
+import shutil
+import subprocess
+from typing import List, Optional
+import runfiles
+
+File: bazel/pyzip.py
+Imports:
+import os
+import os.path
+import sys
+import zipfile
+Functions:
+def zip_dir(dir_path: str, output_zip_path: str):
+
+File: ci/__init__.py
+
+File: ci/build/get_build_info.py
+Imports:
+import json
+import os
+import platform
+Functions:
+def gha_get_self_url():
+def get_build_env():
+def get_build_config():
+
+File: ci/env/check_minimal_install.py
+Imports:
+import argparse
+import sys
+from typing import List
+Functions:
+def assert_packages_not_installed(blacklist: List[str]):
+
+File: ci/env/setup_credentials.py
+Imports:
+import json
+import sys
+import boto3
+Functions:
+def get_ray_air_secrets(client):
+def main():
+
+File: ci/lint/check_api_annotations.py
+Imports:
+import inspect
+import ray
+from ray.util.annotations import _is_annotated
+Functions:
+def _fullname(attr):
+def _ignore(attr, extra_ignore):
+def verify(symbol, scanned, ok, output, prefix=None, ignore=None):
+
+File: ci/lint/check_bazel_team_owner.py
+Imports:
+import json
+import sys
+import xml.etree.ElementTree as ET
+Functions:
+def perform_check(raw_xml_string: str):
+
+File: ci/lint/check_cpp_files_inclusion.py
+Imports:
+import re
+import sys
+Functions:
+def check_ray_core_inclusion(fname: str):
+def main():
+
+File: ci/lint/check_import_order.py
+Imports:
+import argparse
+import glob
+import io
+import re
+import sys
+... (1 more imports)
+Functions:
+def check_import(file):
+
+File: ci/lint/clang-tidy-diff.py
+Imports:
+import argparse
+import glob
+import json
+import multiprocessing
+import os
+... (8 more imports)
+Functions:
+def run_tidy(task_queue, lock, timeout):
+def start_workers(max_tasks, tidy_caller, task_queue, lock, timeout):
+def merge_replacement_files(tmpdir, mergefile):
+def main():
+
+File: ci/ray_ci/anyscale_docker_container.py
+Imports:
+from ray_release.configs.global_config import get_global_config
+from ci.ray_ci.container import _DOCKER_ECR_REPO, _DOCKER_GCP_REGISTRY
+from ci.ray_ci.docker_container import DockerContainer
+Classes:
+class AnyscaleDockerContainer(DockerContainer):
+
+File: ci/ray_ci/automation/check_nightly_ray_commit.py
+Imports:
+import click
+from ci.ray_ci.automation.docker_tags_lib import check_image_ray_commit
+from ci.ray_ci.docker_container import RayType
+Functions:
+def main(ray_type, expected_commit):
+
+File: ci/ray_ci/automation/determine_microcheck_step_ids.py
+Imports:
+import os
+import click
+from ray_release.test import (
+from ci.ray_ci.utils import ci_init
+
+File: ci/ray_ci/automation/docker_tags_lib.py
+Imports:
+import os
+import platform
+import re
+... (11 more imports)
+Classes:
+class DockerHubRateLimitException(Exception):
+class RetrieveImageConfigException(Exception):
+class AuthTokenException(Exception):
+Functions:
+def __init__(self):
+def __init__(self, message: str):
+def __init__(self, message: str):
+def _get_config_docker_oci(tag: str, namespace: str, repository: str):
+def _crane_binary():
+
+File: ci/ray_ci/automation/generate_index.py
+Imports:
+import click
+from ci.ray_ci.automation.docker_tags_lib import generate_index, list_image_tags
+from ci.ray_ci.docker_container import (
+Functions:
+def main(prefix):
+
+File: ci/ray_ci/automation/get_contributors.py
+Imports:
+import os
+import sys
+from collections import defaultdict
+from subprocess import check_output
+import click
+... (2 more imports)
+Functions:
+def run(access_token, prev_release_commit, curr_release_commit):
+def get_category(line):
+
+File: ci/ray_ci/automation/list_docker_tags.py
+Imports:
+import sys
+import click
+from ci.ray_ci.automation.docker_tags_lib import list_image_tags
+from ci.ray_ci.docker_container import (
+Functions:
+def main(prefix, ray_type):
+
+File: ci/ray_ci/automation/pypi_lib.py
+Imports:
+import os
+import subprocess
+import sys
+from typing import List
+from ray_release.aws import get_secret_token
+Functions:
+def _call_subprocess(command: List[str]):
+
+File: ci/ray_ci/automation/ray_wheels_lib.py
+Imports:
+import os
+from typing import List
+import boto3
+from ci.ray_ci.utils import logger
+
+File: ci/ray_ci/automation/update_version.py
+Imports:
+import os
+from typing import Optional
+import click
+from ci.ray_ci.automation.update_version_lib import (
+Functions:
+def main(new_version: str, root_dir: Optional[str] = None):
+
+File: ci/ray_ci/automation/update_version_lib.py
+Imports:
+import os
+import subprocess
+Functions:
+def list_java_files(root_dir: str):
+def get_check_output(file_path: str):
+def get_current_version(root_dir: str):
+def list_java_files():
+def replace_version_in_file(file_path: str, old_version: str):
+
+File: ci/ray_ci/automation/upload_wheels_pypi.py
+Imports:
+import tempfile
+from typing import Optional
+import click
+from ci.ray_ci.automation.pypi_lib import upload_wheels_to_pypi
+from ci.ray_ci.automation.ray_wheels_lib import (
+
+File: ci/ray_ci/automation/weekly_green_metric.py
+Imports:
+import json
+import sys
+import time
+import boto3
+import click
+... (3 more imports)
+
+File: ci/ray_ci/bazel_sharding.py
+Imports:
+import argparse
+import os
+import re
+... (7 more imports)
+Classes:
+class BazelRule:
+Functions:
+def __post_init__(self):
+
+File: ci/ray_ci/bisect/bisector.py
+Imports:
+import subprocess
+from typing import List, Optional
+from ray_release.test import Test
+from ci.ray_ci.bisect.validator import Validator
+from ci.ray_ci.utils import logger
+Classes:
+class Bisector:
+
+File: ci/ray_ci/bisect/generic_validator.py
+Imports:
+import time
+from pybuildkite.buildkite import Buildkite
+from ray_release.aws import get_secret_token
+from ray_release.configs.global_config import get_global_config
+from ray_release.test import Test
+... (2 more imports)
+Classes:
+class GenericValidator(Validator):
+
+File: ci/ray_ci/bisect/macos_validator.py
+Imports:
+import os
+import subprocess
+from ray_release.bazel import bazel_runfile
+from ray_release.test import Test
+from ci.ray_ci.bisect.validator import Validator
+Classes:
+class MacOSValidator(Validator):
+
+File: ci/ray_ci/bisect/validator.py
+Imports:
+import abc
+from ray_release.test import Test
+Classes:
+class Validator(abc.ABC):
+
+File: ci/ray_ci/build_in_docker.py
+Imports:
+from ci.ray_ci.builder import main
+
+File: ci/ray_ci/build_in_docker_windows.py
+Imports:
+from ci.ray_ci.builder import main
+
+File: ci/ray_ci/builder.py
+Imports:
+from typing import List
+import click
+from ci.ray_ci.anyscale_docker_container import AnyscaleDockerContainer
+from ci.ray_ci.builder_container import (
+from ci.ray_ci.container import _DOCKER_ECR_REPO
+... (4 more imports)
+
+File: ci/ray_ci/builder_container.py
+Imports:
+import os
+from typing import TypedDict
+from ci.ray_ci.linux_container import LinuxContainer
+Classes:
+class PythonVersionInfo(TypedDict):
+class BuilderContainer(LinuxContainer):
+
+File: ci/ray_ci/container.py
+Imports:
+import abc
+import os
+import re
+import subprocess
+import sys
+... (1 more imports)
+Classes:
+class Container(abc.ABC):
+
+File: ci/ray_ci/doc/api.py
+Imports:
+import importlib
+import inspect
+import re
+from dataclasses import dataclass
+from enum import Enum
+... (1 more imports)
+Classes:
+class AnnotationType(Enum):
+class CodeType(Enum):
+class API:
+
+File: ci/ray_ci/doc/autodoc.py
+Imports:
+import os
+import re
+from typing import List, Set
+from ci.ray_ci.doc.api import (
+Classes:
+class Autodoc:
+Functions:
+def __init__(self, head_rst_file: str):
+
+File: ci/ray_ci/doc/build_cache.py
+Imports:
+import os
+import pickle
+import subprocess
+import tempfile
+from typing import Set
+... (3 more imports)
+Classes:
+class BuildCache:
+Functions:
+def __init__(self, cache_dir: str):
+
+File: ci/ray_ci/doc/cmd_build.py
+Imports:
+import os
+import subprocess
+import click
+from ray_release.configs.global_config import get_global_config
+from ci.ray_ci.doc.build_cache import BuildCache
+... (1 more imports)
+Functions:
+def _build(ray_checkout_dir):
+
+File: ci/ray_ci/doc/cmd_check_api_discrepancy.py
+Imports:
+import click
+from ci.ray_ci.doc.api import API
+from ci.ray_ci.doc.autodoc import Autodoc
+from ci.ray_ci.doc.module import Module
+from ci.ray_ci.utils import logger
+
+File: ci/ray_ci/doc/mock/__init__.py
+Imports:
+from ci.ray_ci.doc.mock.mock_module import MockClass, mock_function
+
+File: ci/ray_ci/doc/mock/mock_module.py
+Imports:
+from ci.ray_ci.doc.api import AnnotationType
+Classes:
+class MockClass:
+Functions:
+def PublicAPI(*args, **kwargs):
+def wrap(obj):
+def Deprecated(*args, **kwargs):
+def wrap(obj):
+def mock_function():
+def mock_w00t():
+
+File: ci/ray_ci/doc/module.py
+Imports:
+import importlib
+import inspect
+from types import ModuleType
+from typing import List
+from ci.ray_ci.doc.api import API, AnnotationType, CodeType
+Classes:
+class Module:
+Functions:
+def __init__(self, module: str):
+
+File: ci/ray_ci/docker_container.py
+Imports:
+import os
+from datetime import datetime
+from enum import Enum
+from typing import Dict, List
+from ci.ray_ci.builder_container import DEFAULT_ARCHITECTURE, DEFAULT_PYTHON_VERSION
+... (1 more imports)
+Classes:
+class RayType(str, Enum):
+class DockerContainer(LinuxContainer):
+
+File: ci/ray_ci/linux_container.py
+Imports:
+import os
+import subprocess
+import sys
+from typing import List, Optional, Tuple
+from ci.ray_ci.container import Container
+Classes:
+class LinuxContainer(Container):
+
+File: ci/ray_ci/pipeline/gap_filling_scheduler.py
+Imports:
+import subprocess
+from datetime import datetime, timedelta
+from typing import Any, Dict, List, Optional, Tuple
+from pybuildkite.buildkite import Buildkite
+Classes:
+class GapFillingScheduler:
+
+File: ci/ray_ci/pipeline/scheduler.py
+Imports:
+import click
+from ray_release.aws import get_secret_token
+from ray_release.configs.global_config import get_global_config
+from ci.ray_ci.pipeline.gap_filling_scheduler import GapFillingScheduler
+from ci.ray_ci.utils import ci_init, logger
+
+File: ci/ray_ci/ray_docker_container.py
+Imports:
+import os
+from typing import List, Optional
+from ray_release.configs.global_config import get_global_config
+from ci.ray_ci.builder_container import DEFAULT_ARCHITECTURE, PYTHON_VERSIONS
+from ci.ray_ci.container import _DOCKER_ECR_REPO
+... (2 more imports)
+Classes:
+class RayDockerContainer(DockerContainer):
+
+File: ci/ray_ci/utils.py
+Imports:
+import base64
+import io
+import logging
+import os
+import subprocess
+... (9 more imports)
+Functions:
+def add_handlers(logger: logging.Logger):
+
+File: ci/ray_ci/windows_builder_container.py
+Imports:
+import os
+from ci.ray_ci.windows_container import WORKDIR, WindowsContainer
+Classes:
+class WindowsBuilderContainer(WindowsContainer):
+
+File: ci/ray_ci/windows_container.py
+Imports:
+import os
+import subprocess
+import sys
+from typing import List, Optional, Tuple
+from ci.ray_ci.container import Container
+Classes:
+class WindowsContainer(Container):
+
+File: ci/raydepsets/cli.py
+Imports:
+import difflib
+import platform
+import shlex
+... (10 more imports)
+Classes:
+class DependencySetManager:
+Functions:
+def cli():
+def copy_to_temp_dir(self):
+def diff_lock_files(self):
+def _build(self):
+def subgraph_dependency_nodes(self, depset_name: str):
+... (6 more functions)
+
+File: ci/raydepsets/raydepsets.py
+Imports:
+from ci.raydepsets.cli import cli
+
+
+INFO Files:
+Analysis truncated: 4882 more files not analyzed due to token limit.
+
+
+Repository Analysis Summary:
+- Files analyzed: 53 of 4935 total files
+- Token usage estimate: ~2850 tokens
+- Token limit configured: 4000 tokens
