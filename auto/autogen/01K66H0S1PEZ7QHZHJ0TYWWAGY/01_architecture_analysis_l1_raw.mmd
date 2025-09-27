@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Interaction_Boundary, "User Interaction Boundary") {
+        System(AutoGen_Studio, "AutoGen Studio", "A no-code GUI tool for prototyping and running multi-agent workflows, making it accessible for non-developers.")
+        System(AgentChat_API, "AgentChat API", "Provides a simplified API for rapid prototyping of multi-agent interactions, built on top of the Core API.")
+    }
+    System_Boundary(tb_API_Communication_Boundary, "API Communication Boundary") {
+        System(AgentChat_API, "AgentChat API", "Provides a simplified API for rapid prototyping of multi-agent interactions, built on top of the Core API.")
+        System(Core_API, "Core API", "Handles message passing, event-driven agents, and supports both local and distributed runtimes.")
+        System(Extensions_API, "Extensions API", "Allows for the integration of first- and third-party extensions, enhancing the framework's capabilities with specific implementations of LLM clients.")
+    }
+    System(User_Interface__AutoGen_Studio_, "User Interface (AutoGen Studio)", "Auto-created component: User Interface (AutoGen Studio)")
+
+    Rel(User_Interface__AutoGen_Studio_, AgentChat_API, "Uses")
+    Rel(AgentChat_API, Core_API, "Uses")
+    Rel(Core_API, Extensions_API, "Uses")

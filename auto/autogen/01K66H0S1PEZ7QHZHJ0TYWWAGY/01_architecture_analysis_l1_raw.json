@@ -1,0 +1,87 @@
+{
+  "id": "01K66H138G0QWH3CCK853PCRAS",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Core API",
+      "description": "Handles message passing, event-driven agents, and supports both local and distributed runtimes.",
+      "type": "backend"
+    },
+    {
+      "name": "AgentChat API",
+      "description": "Provides a simplified API for rapid prototyping of multi-agent interactions, built on top of the Core API.",
+      "type": "backend"
+    },
+    {
+      "name": "Extensions API",
+      "description": "Allows for the integration of first- and third-party extensions, enhancing the framework's capabilities with specific implementations of LLM clients.",
+      "type": "backend"
+    },
+    {
+      "name": "AutoGen Studio",
+      "description": "A no-code GUI tool for prototyping and running multi-agent workflows, making it accessible for non-developers.",
+      "type": "frontend"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "User Interface (AutoGen Studio)",
+      "destination": "AgentChat API",
+      "description": "User inputs are sent from the AutoGen Studio to the AgentChat API for processing and agent interaction."
+    },
+    {
+      "source": "AgentChat API",
+      "destination": "Core API",
+      "description": "The AgentChat API communicates with the Core API to utilize its message passing and event-driven capabilities."
+    },
+    {
+      "source": "Core API",
+      "destination": "Extensions API",
+      "description": "The Core API can invoke extensions through the Extensions API to enhance agent functionalities."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Interaction Boundary",
+      "description": "The boundary between the user interface and the backend services.",
+      "components": [
+        "AutoGen Studio",
+        "AgentChat API"
+      ]
+    },
+    {
+      "name": "API Communication Boundary",
+      "description": "The boundary between different API layers ensuring secure communication.",
+      "components": [
+        "AgentChat API",
+        "Core API",
+        "Extensions API"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-27 21:24:56.209119",
+  "updated_at": "2025-09-27 21:24:56.209123"
+}

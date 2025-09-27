@@ -1,0 +1,36 @@
+graph TB
+  node_01K66H1ZFAK3SBVDKN43GZXKQC["Unauthorized Access to AutoGen Framework | [HIGH]"]:::highRisk
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-1["Exploitation of Weak Authentication Mechanisms | [HIGH]"]:::highRisk
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-1-1["Brute Force Attack on Credentials | [MED]"]:::mediumRisk
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-1-1_cm_0["CM: Implement account lockout mechanisms after multiple failed attempts. (Eff: 0.8)"]:::countermeasure
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-1-2["Phishing Attack to Obtain Credentials | [HIGH]"]:::highRisk
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-1-2_cm_0["CM: Conduct regular security awareness training for users. (Eff: 0.7)"]:::countermeasure
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-1_cm_0["CM: Use multi-factor authentication (MFA) for all user accounts. (Eff: 0.9)"]:::countermeasure
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-2["Exploitation of Software Vulnerabilities | [HIGH]"]:::highRisk
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-2-1["Injection of Malicious Code via Input Fields | [HIGH]"]:::highRisk
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-2-1_cm_0["CM: Implement input validation and sanitization for all user inputs. (Eff: 0.85)"]:::countermeasure
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-2_cm_0["CM: Regularly update and patch software components. (Eff: 0.9)"]:::countermeasure
+  node_01K66H1ZFAK3SBVDKN43GZXKQC_cm_0["CM: Conduct regular security audits and penetration testing. (Eff: 0.75)"]:::countermeasure
+
+  node_01K66H1ZFAK3SBVDKN43GZXKQC -.-> node_01K66H1ZFAK3SBVDKN43GZXKQC-1
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-1 --> node_01K66H1ZFAK3SBVDKN43GZXKQC-1-1
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-1-1 -.-> node_01K66H1ZFAK3SBVDKN43GZXKQC-1-1_cm_0
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-1 --> node_01K66H1ZFAK3SBVDKN43GZXKQC-1-2
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-1-2 -.-> node_01K66H1ZFAK3SBVDKN43GZXKQC-1-2_cm_0
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-1 -.-> node_01K66H1ZFAK3SBVDKN43GZXKQC-1_cm_0
+  node_01K66H1ZFAK3SBVDKN43GZXKQC -.-> node_01K66H1ZFAK3SBVDKN43GZXKQC-2
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-2 --> node_01K66H1ZFAK3SBVDKN43GZXKQC-2-1
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-2-1 -.-> node_01K66H1ZFAK3SBVDKN43GZXKQC-2-1_cm_0
+  node_01K66H1ZFAK3SBVDKN43GZXKQC-2 -.-> node_01K66H1ZFAK3SBVDKN43GZXKQC-2_cm_0
+  node_01K66H1ZFAK3SBVDKN43GZXKQC -.-> node_01K66H1ZFAK3SBVDKN43GZXKQC_cm_0
+
+  classDef andNode fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef orNode fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef highRisk fill:#FFB3B3,color:#8B0000,stroke:#8B0000,stroke-width:2px
+  classDef mediumRisk fill:#FFF200,stroke:#7A6300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#ffa1ad,stroke:#A259FF,stroke-width:1px,stroke-dasharray:3 3,color:#0B0D17
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

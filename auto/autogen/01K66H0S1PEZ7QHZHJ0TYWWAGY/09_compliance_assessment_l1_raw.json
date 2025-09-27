@@ -1,0 +1,70 @@
+{
+  "compliance_assessment": {
+    "id": "01K66H1ZFAK3SBVDKN43GZXKQL",
+    "framework": "GDPR",
+    "framework_description": "General Data Protection Regulation - A regulation in EU law on data protection and privacy.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 65.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-1",
+        "requirement": "Obtain explicit consent from users before processing their personal data.",
+        "status": "non_compliant",
+        "evidence": "No evidence of consent mechanisms in place.",
+        "gaps": [
+          "Lack of user consent management system"
+        ],
+        "recommendations": [
+          "Implement a consent management system to track user consent."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-2",
+        "requirement": "Ensure data subjects have the right to access their data.",
+        "status": "partially_compliant",
+        "evidence": "Limited access features available.",
+        "gaps": [
+          "Access request process not clearly defined"
+        ],
+        "recommendations": [
+          "Develop a clear process for users to request access to their data."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-3",
+        "requirement": "Implement data protection by design and by default.",
+        "status": "partially_compliant",
+        "evidence": "Some data protection measures are in place.",
+        "gaps": [
+          "Insufficient documentation of data protection measures"
+        ],
+        "recommendations": [
+          "Document and enhance data protection measures in the development lifecycle."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Lack of user consent management system",
+      "Undefined access request process",
+      "Insufficient documentation of data protection measures"
+    ],
+    "remediation_plan": [
+      "Implement a consent management system.",
+      "Define and document the access request process.",
+      "Enhance documentation of data protection measures."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-27 21:27:14.288008",
+    "assessor": null,
+    "created_at": "2025-09-27 21:27:14.288011",
+    "updated_at": "2025-09-27 21:27:14.288014"
+  }
+}
