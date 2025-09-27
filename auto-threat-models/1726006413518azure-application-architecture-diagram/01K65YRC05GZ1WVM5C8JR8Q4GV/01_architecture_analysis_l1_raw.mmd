@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Access_Boundary, "User Access Boundary") {
+        System(User, "User", "Auto-created component: User")
+        System(Application_Gateway_with_Azure_WAF, "Application Gateway with Azure WAF", "Acts as a web application firewall, providing security and traffic management for incoming requests.")
+    }
+    System_Boundary(tb_Internal_Processing_Boundary, "Internal Processing Boundary") {
+        System(Azure_AI_Foundry, "Azure AI Foundry", "Platform for deploying AI models and services, processing data for user requests.")
+        System(Private_Endpoint_Subnet, "Private Endpoint Subnet", "Contains private endpoints for secure access to Azure services without exposing them to the public internet.")
+    }
+    System(Azure_Firewall, "Azure Firewall", "Provides network security by controlling inbound and outbound traffic within the virtual network.")
+
+    Rel(User, Application_Gateway_with_Azure_WAF, "Uses")
+    Rel(Application_Gateway_with_Azure_WAF, Azure_AI_Foundry, "Uses")
+    Rel(Azure_AI_Foundry, Private_Endpoint_Subnet, "Uses")

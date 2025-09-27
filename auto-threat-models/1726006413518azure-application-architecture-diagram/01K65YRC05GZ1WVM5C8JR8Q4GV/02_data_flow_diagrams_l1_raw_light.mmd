@@ -1,0 +1,41 @@
+graph TB
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3E1["User | (user) | [UT]"]:::untrusted
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3E2["Azure AI Foundry | (service) | [UT]"]:::untrusted
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3E3["Azure Firewall | (system) | [UT]"]:::untrusted
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3P1["User Authentication | (frontend) | [HT]"]:::highTrust
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3P2["Data Processing | (backend) | [VHT]"]:::veryHighTrust
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3P3["AI Model Deployment | (service) | [HT]"]:::highTrust
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3P4["Traffic Management | (api) | [HT]"]:::highTrust
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3D1["Azure Cosmos DB | (database)"]:::dataStore
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3D2["Azure Storage | (file)"]:::dataStore
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3D3["Application Insights | (database)"]:::dataStore
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3K1["User Data | [PII]"]:::dataAsset,pii
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3K2["AI Models | [INT]"]:::dataAsset,internal
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3K3["Application Logs | [INT]"]:::dataAsset,internal
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3K4["Configuration Data | [CONF]"]:::dataAsset,confidential
+
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3E1 -->|User Request to Application Gateway| node_01F8Z9F3B9GJ3FQ9F5D6D4G3P4:::encryptedFlow
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3P4 -->|Application Gateway to Backend Services| node_01F8Z9F3B9GJ3FQ9F5D6D4G3P2:::encryptedFlow
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3P2 -->|Data Processing to Azure Cosmos DB| node_01F8Z9F3B9GJ3FQ9F5D6D4G3D1:::unencryptedFlow
+  node_01F8Z9F3B9GJ3FQ9F5D6D4G3P3 -->|AI Model Deployment to Azure AI Foundry| node_01F8Z9F3B9GJ3FQ9F5D6D4G3E2:::encryptedFlow
+
+  classDef externalEntity fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef process fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef dataAsset fill:#ffa1ad,stroke:#A259FF,stroke-width:2px,color:#0B0D17
+  classDef untrusted fill:#FFB3B3,stroke:#8B0000,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFF2B3,stroke:#7A6300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#106B49,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#106B49,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#7A6300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#8B0000,stroke-width:2px
+  classDef restricted fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#106B49,stroke-width:2px
+  classDef unencryptedFlow stroke:#8B0000,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5

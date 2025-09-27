@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify Cross-Site Scripting (XSS) as a significant threat, highlighting the risk of data theft and user impersonation.",,,,2025-09-27T16:09:48.804713
+CORR_002,,,,"SQL Injection is identified as a common threat in both models, emphasizing the need for secure database interactions.",,,,2025-09-27T16:09:48.804729
+CORR_003,,,,Both models recommend implementing strong authentication and authorization measures to secure APIs against data exposure.,,,,2025-09-27T16:09:48.804739
+CORR_004,,,,Both models emphasize the importance of DDoS protection measures to maintain service availability.,,,,2025-09-27T16:09:48.804748
+CORR_005,,,,"Weak Authentication Mechanisms are a shared concern, highlighting vulnerabilities in user account access.",,,,2025-09-27T16:09:48.804756
+CORR_006,,,,"Both models recognize Insufficient Input Validation as a precursor to various attacks, including XSS and SQL Injection.",,,,2025-09-27T16:09:48.804766
+CORR_007,,,,Both models can benefit from a unified incident response strategy to address threats like DoS and session hijacking.,,,,2025-09-27T16:09:48.804775
+CORR_008,,,,"Both models must adhere to data protection regulations, emphasizing the need for secure data handling practices.",,,,2025-09-27T16:09:48.804784
+CORR_009,,,,Both models recommend the use of firewalls and network segmentation to enhance security posture.,,,,2025-09-27T16:09:48.804792
+CORR_010,,,,Similar attack patterns are observed in session hijacking incidents across different threat models.,,,,2025-09-27T16:09:48.804801
