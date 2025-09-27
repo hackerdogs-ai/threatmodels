@@ -1,0 +1,12 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_to_Deployment_Environment, "User to Deployment Environment") {
+        System(Capistrano_CLI, "Capistrano CLI", "The command-line interface that users interact with to initiate deployment tasks.")
+        System(SSH_Connection, "SSH Connection", "The secure shell connection used to communicate with remote servers for executing deployment tasks.")
+        System(Remote_Servers, "Remote Servers", "The servers where applications are deployed, which can have different roles such as web server, database server, etc.")
+    }
+    System(Deployment_Scripts, "Deployment Scripts", "Custom scripts written in Rake that define the steps for deployment, including server roles and tasks.")
+
+    Rel(Capistrano_CLI, Deployment_Scripts, "Uses")
+    Rel(Deployment_Scripts, SSH_Connection, "Uses")
+    Rel(SSH_Connection, Remote_Servers, "Uses")

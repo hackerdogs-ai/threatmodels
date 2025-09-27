@@ -1,0 +1,79 @@
+{
+  "id": "01K65VAEGJSXF87GZXRMYM996Q",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Capistrano CLI",
+      "description": "The command-line interface that users interact with to initiate deployment tasks.",
+      "type": "frontend"
+    },
+    {
+      "name": "Deployment Scripts",
+      "description": "Custom scripts written in Rake that define the steps for deployment, including server roles and tasks.",
+      "type": "backend"
+    },
+    {
+      "name": "SSH Connection",
+      "description": "The secure shell connection used to communicate with remote servers for executing deployment tasks.",
+      "type": "service"
+    },
+    {
+      "name": "Remote Servers",
+      "description": "The servers where applications are deployed, which can have different roles such as web server, database server, etc.",
+      "type": "infrastructure"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Capistrano CLI",
+      "destination": "Deployment Scripts",
+      "description": "User commands are translated into deployment tasks executed by the scripts."
+    },
+    {
+      "source": "Deployment Scripts",
+      "destination": "SSH Connection",
+      "description": "Deployment tasks are executed on remote servers via SSH commands."
+    },
+    {
+      "source": "SSH Connection",
+      "destination": "Remote Servers",
+      "description": "Commands are sent to remote servers to perform deployment actions."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User to Deployment Environment",
+      "description": "The boundary between the user executing deployment commands and the remote servers where deployments occur.",
+      "components": [
+        "Capistrano CLI",
+        "SSH Connection",
+        "Remote Servers"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-27 15:05:33.970792",
+  "updated_at": "2025-09-27 15:05:33.970796"
+}

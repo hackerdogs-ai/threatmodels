@@ -1,0 +1,203 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K65VBS58NQS68AD686Z6Z4HB",
+      "threat_title": "SSH Key Compromise",
+      "dread_scores": {
+        "damage": 7,
+        "reproducibility": 6,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 6
+      },
+      "total_risk_score": 29,
+      "risk_level": "high",
+      "justification": "Compromising an SSH key can lead to unauthorized access to deployment servers, which can cause significant damage. The attack is moderately reproducible and can be discovered through various means, such as scanning for exposed keys.",
+      "recommendations": [
+        "Implement strong key management practices.",
+        "Use passphrase-protected SSH keys.",
+        "Regularly rotate SSH keys."
+      ],
+      "assessment_date": "2025-09-27 15:07:15.696879",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K65VBS590M92SVMNM320NRKN",
+      "threat_title": "Malicious Code Injection",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 4,
+        "discoverability": 5
+      },
+      "total_risk_score": 28,
+      "risk_level": "high",
+      "justification": "Injecting malicious code can lead to severe consequences, including data loss and server compromise. While the attack can be moderately reproducible, it requires some knowledge of the deployment scripts.",
+      "recommendations": [
+        "Implement code review processes.",
+        "Use static code analysis tools.",
+        "Validate and sanitize inputs in deployment scripts."
+      ],
+      "assessment_date": "2025-09-27 15:07:15.697659",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K65VBS59P317R90BMCS2S6X4",
+      "threat_title": "Unauthorized Deployment Actions",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 4,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Unauthorized actions can lead to unintended changes in production environments. The attack is moderately reproducible and can be discovered through monitoring.",
+      "recommendations": [
+        "Implement strict role-based access control.",
+        "Audit deployment logs regularly.",
+        "Use multi-factor authentication for deployment access."
+      ],
+      "assessment_date": "2025-09-27 15:07:15.698621",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K65VBS59SBT1CVP1B0Z36YHC",
+      "threat_title": "Sensitive Data Exposure",
+      "dread_scores": {
+        "damage": 7,
+        "reproducibility": 4,
+        "exploitability": 5,
+        "affected_users": 3,
+        "discoverability": 6
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Exposing sensitive data can lead to significant security breaches. The attack is moderately reproducible and can be discovered through careful inspection of logs.",
+      "recommendations": [
+        "Avoid logging sensitive information.",
+        "Use environment variables for sensitive data.",
+        "Implement encryption for sensitive data."
+      ],
+      "assessment_date": "2025-09-27 15:07:15.699536",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K65VBS5AD5G3ZD8M5E06KSS5",
+      "threat_title": "Denial of Service via Resource Exhaustion",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 4,
+        "discoverability": 5
+      },
+      "total_risk_score": 26,
+      "risk_level": "medium",
+      "justification": "Resource exhaustion can lead to service outages, affecting all users. The attack is moderately reproducible and can be discovered through monitoring resource usage.",
+      "recommendations": [
+        "Implement rate limiting on deployment actions.",
+        "Monitor server resource usage closely.",
+        "Set up alerts for unusual deployment patterns."
+      ],
+      "assessment_date": "2025-09-27 15:07:15.701848",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K65VBS5AJYEWBYZJVY677VP4",
+      "threat_title": "Lack of Input Validation in Deployment Scripts",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 4,
+        "discoverability": 5
+      },
+      "total_risk_score": 26,
+      "risk_level": "medium",
+      "justification": "Improper input validation can lead to unintended consequences during deployment. The attack is moderately reproducible and can be discovered through code reviews.",
+      "recommendations": [
+        "Implement strict input validation in scripts.",
+        "Use whitelisting for acceptable inputs.",
+        "Conduct regular security training for developers."
+      ],
+      "assessment_date": "2025-09-27 15:07:15.702503",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The Capistrano Deployment Automation Tool faces several significant threats primarily related to authentication, data protection, and input validation. Key risks include SSH key compromise, malicious code injection, and unauthorized actions, which could significantly impact the security of the deployment process."
+}

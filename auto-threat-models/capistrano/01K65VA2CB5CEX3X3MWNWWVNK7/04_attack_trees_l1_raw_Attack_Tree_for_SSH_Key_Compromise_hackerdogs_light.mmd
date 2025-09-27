@@ -1,0 +1,34 @@
+graph TB
+  node_01K65VBS5AD5G3ZD8M5E06KSS5["Compromise of SSH Key Leading to Unauthorized Access | [HIGH]"]:::highRisk
+  node_01K65VBS5AD5G3ZD8M5E06KSS6["Phishing Attack to Obtain SSH Key | [HIGH]"]:::highRisk
+  node_01K65VBS5AD5G3ZD8M5E06KSS6_cm_0["CM: Implement security awareness training for users. (Eff: 0.8)"]:::countermeasure
+  node_01K65VBS5AD5G3ZD8M5E06KSS6_cm_1["CM: Use two-factor authentication for SSH access. (Eff: 0.9)"]:::countermeasure
+  node_01K65VBS5AD5G3ZD8M5E06KSS7["Malware Infection on User's Machine | [HIGH]"]:::highRisk
+  node_01K65VBS5AD5G3ZD8M5E06KSS7_cm_0["CM: Install and maintain up-to-date antivirus software. (Eff: 0.7)"]:::countermeasure
+  node_01K65VBS5AD5G3ZD8M5E06KSS7_cm_1["CM: Regularly update operating systems and applications. (Eff: 0.8)"]:::countermeasure
+  node_01K65VBS5AD5G3ZD8M5E06KSS8["Physical Access to User's Machine | [HIGH]"]:::highRisk
+  node_01K65VBS5AD5G3ZD8M5E06KSS8_cm_0["CM: Implement physical security measures (e.g., locked offices, access control). (Eff: 0.85)"]:::countermeasure
+  node_01K65VBS5AD5G3ZD8M5E06KSS5_cm_0["CM: Use SSH key passphrases to protect private keys. (Eff: 0.75)"]:::countermeasure
+  node_01K65VBS5AD5G3ZD8M5E06KSS5_cm_1["CM: Regularly rotate SSH keys and revoke old keys. (Eff: 0.8)"]:::countermeasure
+
+  node_01K65VBS5AD5G3ZD8M5E06KSS5 -.-> node_01K65VBS5AD5G3ZD8M5E06KSS6
+  node_01K65VBS5AD5G3ZD8M5E06KSS6 -.-> node_01K65VBS5AD5G3ZD8M5E06KSS6_cm_0
+  node_01K65VBS5AD5G3ZD8M5E06KSS6 -.-> node_01K65VBS5AD5G3ZD8M5E06KSS6_cm_1
+  node_01K65VBS5AD5G3ZD8M5E06KSS5 -.-> node_01K65VBS5AD5G3ZD8M5E06KSS7
+  node_01K65VBS5AD5G3ZD8M5E06KSS7 -.-> node_01K65VBS5AD5G3ZD8M5E06KSS7_cm_0
+  node_01K65VBS5AD5G3ZD8M5E06KSS7 -.-> node_01K65VBS5AD5G3ZD8M5E06KSS7_cm_1
+  node_01K65VBS5AD5G3ZD8M5E06KSS5 --> node_01K65VBS5AD5G3ZD8M5E06KSS8
+  node_01K65VBS5AD5G3ZD8M5E06KSS8 -.-> node_01K65VBS5AD5G3ZD8M5E06KSS8_cm_0
+  node_01K65VBS5AD5G3ZD8M5E06KSS5 -.-> node_01K65VBS5AD5G3ZD8M5E06KSS5_cm_0
+  node_01K65VBS5AD5G3ZD8M5E06KSS5 -.-> node_01K65VBS5AD5G3ZD8M5E06KSS5_cm_1
+
+  classDef andNode fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef orNode fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef highRisk fill:#FFB3B3,color:#8B0000,stroke:#8B0000,stroke-width:2px
+  classDef mediumRisk fill:#FFF200,stroke:#7A6300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#ffa1ad,stroke:#A259FF,stroke-width:1px,stroke-dasharray:3 3,color:#0B0D17
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

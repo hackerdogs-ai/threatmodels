@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "id": "01K65VBS5AD5G3ZD8M5E06KSS5",
+    "title": "Attack Tree for SSH Key Compromise",
+    "description": "This attack tree outlines the potential paths for an attacker to compromise the SSH key used for authentication in the Capistrano Deployment Automation Tool.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-27 15:06:17+00:00",
+    "last_updated": "2025-09-27 15:06:43.182300",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K65VBS5AD5G3ZD8M5E06KSS5",
+    "description": "Compromise of SSH Key Leading to Unauthorized Access",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K65VBS5AD5G3ZD8M5E06KSS6",
+        "description": "Phishing Attack to Obtain SSH Key",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement security awareness training for users.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          },
+          {
+            "description": "Use two-factor authentication for SSH access.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K65VBS5AD5G3ZD8M5E06KSS7",
+        "description": "Malware Infection on User's Machine",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Install and maintain up-to-date antivirus software.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          },
+          {
+            "description": "Regularly update operating systems and applications.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K65VBS5AD5G3ZD8M5E06KSS8",
+        "description": "Physical Access to User's Machine",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 10.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement physical security measures (e.g., locked offices, access control).",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Use SSH key passphrases to protect private keys.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      },
+      {
+        "description": "Regularly rotate SSH keys and revoke old keys.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      }
+    ],
+    "references": []
+  }
+}
