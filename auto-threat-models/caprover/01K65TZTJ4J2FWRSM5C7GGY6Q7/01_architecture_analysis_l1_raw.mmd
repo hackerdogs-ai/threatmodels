@@ -1,0 +1,17 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Interaction_Boundary, "User Interaction Boundary") {
+        System(Web_GUI, "Web GUI", "User interface for managing applications and databases, allowing users to deploy and configure services easily.")
+        System(API_Server, "API Server", "Handles requests from the Web GUI and CLI, processes application logic, and interacts with the datastore and Docker services.")
+    }
+    System_Boundary(tb_Data_Storage_Boundary, "Data Storage Boundary") {
+        System(API_Server, "API Server", "Handles requests from the Web GUI and CLI, processes application logic, and interacts with the datastore and Docker services.")
+        SystemDb(Data_Store, "Data Store", "Persistent storage for application configurations, user data, and service states, ensuring data integrity and availability.")
+    }
+    System(Docker_Engine, "Docker Engine", "Containerization platform that runs applications in isolated environments, managed by CapRover for deployment and scaling.")
+    System(Nginx_Load_Balancer, "Nginx Load Balancer", "Acts as a reverse proxy and load balancer for incoming traffic to the deployed applications, providing SSL termination and routing.")
+
+    Rel(Web_GUI, API_Server, "Uses")
+    Rel(API_Server, Data_Store, "Uses")
+    Rel(API_Server, Docker_Engine, "Uses")
+    Rel(Nginx_Load_Balancer, Docker_Engine, "Uses")

@@ -1,0 +1,192 @@
+{
+  "id": "01F8D3D4G5H6J7K8L9M0N1O2P3Q",
+  "name": "CapRover Data Flow Diagram",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for the CapRover application highlighting data movement, storage, and trust boundaries.",
+  "created_at": "2025-09-27 15:00:26.080269",
+  "last_updated": "2025-09-27 15:00:26.080274",
+  "data_assets": [
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P3R",
+      "name": "User Data",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P3S",
+      "name": "Application Configurations",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P3T",
+      "name": "Docker Images",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P3U",
+      "name": "Web GUI",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P3V",
+      "name": "API Server",
+      "description": null,
+      "type": "api",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P3W",
+      "name": "Data Store",
+      "description": null,
+      "type": "database",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "very_high_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P3X",
+      "name": "User Database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P3Y",
+      "name": "Application Configurations",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "none",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P3Z",
+      "name": "End User",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P4A",
+      "name": "Docker Hub",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P4B",
+      "name": "User Data Submission",
+      "description": null,
+      "source_id": "01F8D3D4G5H6J7K8L9M0N1O2P3Z",
+      "destination_id": "01F8D3D4G5H6J7K8L9M0N1O2P3U",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P4C",
+      "name": "API Response",
+      "description": null,
+      "source_id": "01F8D3D4G5H6J7K8L9M0N1O2P3U",
+      "destination_id": "01F8D3D4G5H6J7K8L9M0N1O2P3Z",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P4D",
+      "name": "Configuration Retrieval",
+      "description": null,
+      "source_id": "01F8D3D4G5H6J7K8L9M0N1O2P3U",
+      "destination_id": "01F8D3D4G5H6J7K8L9M0N1O2P3Y",
+      "data_assets": [],
+      "protocol": "http",
+      "authentication_strength": null,
+      "encryption": "none",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8D3D4G5H6J7K8L9M0N1O2P4E",
+      "name": "Docker Image Pull",
+      "description": null,
+      "source_id": "01F8D3D4G5H6J7K8L9M0N1O2P3W",
+      "destination_id": "01F8D3D4G5H6J7K8L9M0N1O2P4A",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

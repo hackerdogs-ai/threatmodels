@@ -1,0 +1,12 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both models identify unauthorized access as a critical threat due to weak authentication mechanisms.,,,,2025-09-27T15:04:52.064367
+CORR_002,,,,"Data tampering is a common threat in both models, highlighting the need for input validation.",,,,2025-09-27T15:04:52.064380
+CORR_003,,,,Both models recommend implementing rate limiting to mitigate Denial of Service (DoS) attacks.,,,,2025-09-27T15:04:52.064388
+CORR_004,,,,"Session hijacking is identified as a significant threat in both models, emphasizing the need for secure session management.",,,,2025-09-27T15:04:52.064395
+CORR_005,,,,"Both models address information disclosure risks, aligning with data protection regulations like GDPR.",,,,2025-09-27T15:04:52.064403
+CORR_006,,,,"Input validation attacks are a common attack vector across both models, particularly for SQL injection.",,,,2025-09-27T15:04:52.064410
+CORR_007,,,,Both models emphasize the importance of strong authentication mechanisms to prevent unauthorized access.,,,,2025-09-27T15:04:52.064417
+CORR_008,,,,"Denial of Service (DoS) attacks are a shared concern, impacting availability across both models.",,,,2025-09-27T15:04:52.064423
+CORR_009,,,,Both models address the need for regular security audits to comply with industry standards.,,,,2025-09-27T15:04:52.064430
+CORR_010,,,,Both models recommend conducting security training for developers to mitigate risks associated with coding vulnerabilities.,,,,2025-09-27T15:04:52.064437
+CORR_011,,,,Both models recognize the risk of privilege escalation due to misconfigurations in deployment environments.,,,,2025-09-27T15:04:52.064445

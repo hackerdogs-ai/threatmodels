@@ -1,0 +1,205 @@
+{
+  "risk_prioritization": {
+    "id": "01K65V1JJ5A1B2C3D4E5F6G7H8",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K65V1JJ2F59YP9TRZ7HYQ3A2",
+        "threat_title": "Unauthorized Access",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement strong authentication mechanisms such as multi-factor authentication (MFA).",
+          "Conduct regular security audits to identify vulnerabilities."
+        ]
+      },
+      {
+        "risk_id": "01K65V1JJ3VXYMV27YAQWMGR5V",
+        "threat_title": "Data Tampering",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "high",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use input validation and sanitization techniques.",
+          "Implement logging and monitoring of data changes."
+        ]
+      },
+      {
+        "risk_id": "01K65V1JJ3K97SK1P8144V2KBE",
+        "threat_title": "Session Hijacking",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement secure session management practices.",
+          "Use secure cookies and session expiration."
+        ]
+      },
+      {
+        "risk_id": "01K65V1JJ4R8QVANX4HEQ7FSMJ",
+        "threat_title": "Denial of Service (DoS)",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting and monitoring.",
+          "Use a web application firewall (WAF)."
+        ]
+      },
+      {
+        "risk_id": "01K65V1JJ3QYQ7A6ZMJC8AN7CG",
+        "threat_title": "Information Disclosure",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Ensure proper error handling and logging.",
+          "Conduct regular security training for developers."
+        ]
+      },
+      {
+        "risk_id": "01K65V1JJ4GTNMV22N49SVZZAR",
+        "threat_title": "Privilege Escalation",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Regularly review user permissions.",
+          "Implement role-based access control (RBAC)."
+        ]
+      },
+      {
+        "risk_id": "01K65V1JJ4TER3HBNB6W0Q2Y8C",
+        "threat_title": "Input Validation Attacks",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement input validation and sanitization.",
+          "Use security libraries for input handling."
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K65V1JJ2F59YP9TRZ7HYQ3A2"
+      ],
+      "high_priority_risks": [
+        "01K65V1JJ3VXYMV27YAQWMGR5V",
+        "01K65V1JJ3K97SK1P8144V2KBE",
+        "01K65V1JJ4R8QVANX4HEQ7FSMJ"
+      ],
+      "medium_priority_risks": [
+        "01K65V1JJ3QYQ7A6ZMJC8AN7CG",
+        "01K65V1JJ4GTNMV22N49SVZZAR",
+        "01K65V1JJ4TER3HBNB6W0Q2Y8C"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K65V1JJ2F59YP9TRZ7HYQ3A2": 9.0,
+      "01K65V1JJ3VXYMV27YAQWMGR5V": 8.0,
+      "01K65V1JJ3K97SK1P8144V2KBE": 8.0,
+      "01K65V1JJ4R8QVANX4HEQ7FSMJ": 7.0,
+      "01K65V1JJ3QYQ7A6ZMJC8AN7CG": 6.0,
+      "01K65V1JJ4GTNMV22N49SVZZAR": 6.0,
+      "01K65V1JJ4TER3HBNB6W0Q2Y8C": 5.0
+    },
+    "risk_rankings": [
+      [
+        "01K65V1JJ2F59YP9TRZ7HYQ3A2",
+        9.0
+      ],
+      [
+        "01K65V1JJ3VXYMV27YAQWMGR5V",
+        8.0
+      ],
+      [
+        "01K65V1JJ3K97SK1P8144V2KBE",
+        8.0
+      ],
+      [
+        "01K65V1JJ4R8QVANX4HEQ7FSMJ",
+        7.0
+      ],
+      [
+        "01K65V1JJ3QYQ7A6ZMJC8AN7CG",
+        6.0
+      ],
+      [
+        "01K65V1JJ4GTNMV22N49SVZZAR",
+        6.0
+      ],
+      [
+        "01K65V1JJ4TER3HBNB6W0Q2Y8C",
+        5.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "High potential costs due to data breaches and loss of customer trust.",
+      "operational_impact": "Disruption of services leading to downtime and loss of productivity.",
+      "reputational_impact": "Severe damage to brand reputation and customer confidence."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-27 15:04:23.423347",
+    "updated_at": "2025-09-27 15:04:23.423354"
+  }
+}
