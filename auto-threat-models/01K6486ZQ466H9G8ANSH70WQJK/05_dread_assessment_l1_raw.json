@@ -1,0 +1,269 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K648985GHCR2QC1PYBS9PMMB",
+      "threat_title": "Credential Theft",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 4
+      },
+      "total_risk_score": 23,
+      "risk_level": "medium",
+      "justification": "Credential theft can lead to unauthorized access, affecting multiple users. The attack is moderately complex but can be executed through common methods like phishing.",
+      "recommendations": [
+        "Implement multi-factor authentication.",
+        "Educate users on recognizing phishing attempts.",
+        "Monitor for unusual login attempts."
+      ],
+      "assessment_date": "2025-09-27 00:14:31.395444",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K648985GAN2J2F0QS6Z2X7YQ",
+      "threat_title": "Session Hijacking",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 4
+      },
+      "total_risk_score": 23,
+      "risk_level": "medium",
+      "justification": "Session hijacking can allow attackers to impersonate users, affecting multiple accounts. The attack is moderately complex and can be executed if session cookies are not secured.",
+      "recommendations": [
+        "Use secure cookies with HttpOnly and Secure flags.",
+        "Implement session timeout and re-authentication mechanisms.",
+        "Monitor session activity for anomalies."
+      ],
+      "assessment_date": "2025-09-27 00:14:31.396447",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K648985H1ZRG15NATDBZZ5XF",
+      "threat_title": "Password Reset Abuse",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 4,
+        "discoverability": 4
+      },
+      "total_risk_score": 21,
+      "risk_level": "medium",
+      "justification": "Improper handling of password resets can lead to unauthorized access to user accounts. The attack is moderately complex and can be executed if validation is weak.",
+      "recommendations": [
+        "Implement strong validation for password reset requests.",
+        "Use rate limiting on password reset attempts.",
+        "Notify users of password reset requests."
+      ],
+      "assessment_date": "2025-09-27 00:14:31.396773",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K648985HHKKQDE056GSXGE6M",
+      "threat_title": "Insecure Storage of Credentials",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 4
+      },
+      "total_risk_score": 23,
+      "risk_level": "medium",
+      "justification": "Storing credentials insecurely can lead to exposure if the data store is compromised. The attack is moderately complex but can be executed through common data breaches.",
+      "recommendations": [
+        "Use strong hashing algorithms for password storage.",
+        "Encrypt sensitive data at rest.",
+        "Regularly audit data storage practices."
+      ],
+      "assessment_date": "2025-09-27 00:14:31.397019",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K648985H5PNA3RN4W6Q6H7HS",
+      "threat_title": "Cross-Site Scripting (XSS)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 4
+      },
+      "total_risk_score": 23,
+      "risk_level": "medium",
+      "justification": "XSS can allow attackers to execute scripts in users' browsers, affecting multiple users. The attack is moderately complex and can be executed through input validation failures.",
+      "recommendations": [
+        "Implement input validation and output encoding.",
+        "Use Content Security Policy (CSP) to mitigate XSS risks.",
+        "Regularly test for XSS vulnerabilities."
+      ],
+      "assessment_date": "2025-09-27 00:14:31.398826",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K648985HM17XS9M0GVHFQ9F",
+      "threat_title": "Denial of Service (DoS)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 4
+      },
+      "total_risk_score": 22,
+      "risk_level": "medium",
+      "justification": "DoS attacks can disrupt service availability for all users. The attack is moderately complex and can be executed through various means.",
+      "recommendations": [
+        "Implement rate limiting and throttling.",
+        "Use a Web Application Firewall (WAF) to filter traffic.",
+        "Monitor traffic patterns for anomalies."
+      ],
+      "assessment_date": "2025-09-27 00:14:31.399278",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K648985HM2TDZ51Q7VWZEF3N",
+      "threat_title": "Improper Input Validation",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 4
+      },
+      "total_risk_score": 23,
+      "risk_level": "medium",
+      "justification": "Improper input validation can lead to various attacks, including SQL injection. The attack is moderately complex and can be executed through common input manipulation techniques.",
+      "recommendations": [
+        "Implement strict input validation and sanitization.",
+        "Use prepared statements for database queries.",
+        "Regularly test for input validation vulnerabilities."
+      ],
+      "assessment_date": "2025-09-27 00:14:31.399609",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K648985JY1HR7DJY00AYT8GX",
+      "threat_title": "Information Disclosure through Error Messages",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 4,
+        "exploitability": 3,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 18,
+      "risk_level": "medium",
+      "justification": "Detailed error messages can reveal sensitive information, but the impact is limited to the information disclosed. The attack is moderately complex and can be executed through error handling failures.",
+      "recommendations": [
+        "Implement generic error messages for users.",
+        "Log detailed errors internally without exposing them to users.",
+        "Regularly review error handling practices."
+      ],
+      "assessment_date": "2025-09-27 00:14:31.399979",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "low",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The Streamlit Authenticator application faces several threats primarily related to authentication, session management, and input validation. Each threat has been assessed for its risk level, and recommendations have been provided to mitigate these risks effectively."
+}

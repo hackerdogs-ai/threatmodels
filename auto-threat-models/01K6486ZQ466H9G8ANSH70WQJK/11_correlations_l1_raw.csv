@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify Credential Theft as a significant threat, emphasizing the risk of unauthorized access through stolen credentials.",,,,2025-09-27T00:16:34.240512
+CORR_002,,,,"Session Hijacking is a common threat in both models, highlighting the need for secure session management practices.",,,,2025-09-27T00:16:34.240528
+CORR_003,,,,Both models recommend strong hashing algorithms for password storage to prevent Insecure Storage of Credentials.,,,,2025-09-27T00:16:34.240538
+CORR_004,,,,"Both models recognize Cross-Site Scripting (XSS) as a potential attack vector, emphasizing the need for input validation.",,,,2025-09-27T00:16:34.240547
+CORR_005,,,,"Both models align with compliance requirements for data protection, particularly regarding user credential management.",,,,2025-09-27T00:16:34.240556
+CORR_006,,,,"Denial of Service (DoS) attacks are recognized as a threat in both models, affecting service availability.",,,,2025-09-27T00:16:34.240565
+CORR_007,,,,Both models emphasize the importance of secure error handling to prevent Information Disclosure through Error Messages.,,,,2025-09-27T00:16:34.240573
+CORR_008,,,,"Improper Input Validation is a common threat across both models, leading to various attacks.",,,,2025-09-27T00:16:34.240581
+CORR_009,,,,"Password Reset Abuse is a recognized threat in both models, highlighting the need for robust validation mechanisms.",,,,2025-09-27T00:16:34.240590
+CORR_010,,,,Both models align with compliance frameworks that mandate secure handling of user data.,,,,2025-09-27T00:16:34.240598
