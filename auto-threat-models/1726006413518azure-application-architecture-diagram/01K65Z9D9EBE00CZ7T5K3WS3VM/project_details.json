@@ -1,0 +1,42 @@
+{
+  "project_name": "Azure Cloud-Based Application",
+  "line_of_business": [
+    "E-commerce",
+    "Finance",
+    "Health Care"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth 2.0",
+    "API Key"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "PCI-DSS",
+    "HIPAA"
+  ],
+  "security_requirements": [
+    "DDoS protection",
+    "Data encryption in transit and at rest",
+    "Access control",
+    "Monitoring and logging",
+    "Secure API management"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Application, APIs, Databases, Networking components",
+  "assumptions": [
+    "Users have internet access",
+    "Resources can be dynamically scaled",
+    "Compliance frameworks are applicable based on data processing",
+    "All components support Azure integration"
+  ],
+  "constraints": [
+    "Dependence on Microsoft Azure services",
+    "Latency considerations due to cloud deployment",
+    "Regulatory compliance requirements"
+  ]
+}

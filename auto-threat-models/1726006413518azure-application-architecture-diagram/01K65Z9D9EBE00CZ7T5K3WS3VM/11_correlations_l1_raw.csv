@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both models identify SQL Injection as a critical threat due to the use of databases for sensitive information storage.,,,,2025-09-27T16:19:26.959952
+CORR_002,,,,"Insecure API Endpoints are a common threat, allowing unauthorized access to sensitive operations.",,,,2025-09-27T16:19:26.959961
+CORR_003,,,,Both models emphasize the need for multi-factor authentication to mitigate insufficient authentication mechanisms.,,,,2025-09-27T16:19:26.959968
+CORR_004,,,,Regular security configuration audits are recommended in both models to prevent data exposure due to misconfigured security settings.,,,,2025-09-27T16:19:26.959974
+CORR_005,,,,"Improper Input Validation is a shared concern, leading to various attacks including XSS and SQL Injection.",,,,2025-09-27T16:19:26.959980
+CORR_006,,,,"Cross-Site Scripting (XSS) vulnerabilities are identified in both models, particularly in user input handling.",,,,2025-09-27T16:19:26.959985
+CORR_007,,,,"Denial of Service (DoS) attacks are a common threat, affecting service availability across both models.",,,,2025-09-27T16:19:26.959991
+CORR_008,,,,"Both models must adhere to data protection regulations such as GDPR, focusing on data exposure risks.",,,,2025-09-27T16:19:26.959997
+CORR_009,,,,Both models recommend implementing rate limiting to protect against abuse of API endpoints.,,,,2025-09-27T16:19:26.960002
+CORR_010,,,,Both models emphasize the importance of access control mechanisms to prevent unauthorized data access.,,,,2025-09-27T16:19:26.960008
