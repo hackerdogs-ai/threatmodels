@@ -1,0 +1,42 @@
+{
+  "project_name": "Azure Web Application Framework",
+  "line_of_business": [
+    "E-commerce",
+    "Healthcare",
+    "Finance",
+    "Education"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth",
+    "OpenID Connect",
+    "SAML"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "DDoS protection",
+    "Data encryption in transit and at rest",
+    "Identity and access management",
+    "Secure storage of sensitive information"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Web application hosted on Microsoft Azure, including user interactions and backend services",
+  "assumptions": [
+    "Users have internet access",
+    "Identity management is centralized through Azure Active Directory",
+    "Data is stored securely in Azure SQL Database"
+  ],
+  "constraints": [
+    "Dependency on Azure services",
+    "Latency constraints due to cloud deployment",
+    "Regulatory compliance requirements"
+  ]
+}
