@@ -1,0 +1,34 @@
+Overall Architecture: This architecture outlines a system designed to optimize search query performance and enhance user experience by leveraging various AWS services. It facilitates the collection, processing, and analysis of search queries to identify trending topics, which can inform content strategy and improve engagement.
+
+Key Components: 
+1. **End Users**: Individuals who interact with the search application to find articles.
+2. **Amazon OpenSearch**: A search and analytics engine that retrieves results based on user queries.
+3. **Amazon API Gateway**: Serves as a proxy to handle incoming search queries and facilitate communication between components.
+4. **Amazon Kinesis Data Streams**: Streams search query logs for real-time processing.
+5. **Amazon Kinesis Firehose**: Consolidates search query logs every 15 minutes for further analysis.
+6. **AWS Lambda**: A serverless compute service that compresses logs and processes CSV files to invoke Amazon Bedrock.
+7. **Amazon S3**: Storage service for raw logs, Parquet files, and clustered search queries.
+8. **AWS Glue**: Manages data cataloging, transformation, and processing of search query logs and clusters.
+9. **Amazon Athena**: Queries the top search queries per cluster for further analysis.
+10. **Amazon DynamoDB**: A NoSQL database that stores the most relevant search queries for quick retrieval.
+11. **Amazon Bedrock**: Utilized for identifying the most relevant search queries based on processed data.
+12. **AWS Step Functions**: Orchestrates workflows for clustering and classifying search queries.
+13. **Amazon EventBridge**: Schedules daily tasks for query processing.
+
+Data Flow: User queries are submitted through the search application, routed via Amazon API Gateway to Amazon OpenSearch. Search query logs are streamed through Kinesis Data Streams and consolidated by Kinesis Firehose. AWS Lambda compresses these logs and stores them in Amazon S3. AWS Glue crawlers create catalog tables for both raw logs and transformed Parquet files. The data undergoes K-means clustering to identify trends, which are then queried by Amazon Athena. The results are processed by AWS Lambda, which invokes Amazon Bedrock to classify queries and stores the results in DynamoDB. Finally, the application retrieves trending queries from DynamoDB to display to users.
+
+Technologies Used: AWS services including Amazon OpenSearch, Amazon API Gateway, Amazon Kinesis Data Streams, Amazon Kinesis Firehose, AWS Lambda, Amazon S3, AWS Glue, Amazon Athena, Amazon DynamoDB, Amazon Bedrock, and AWS Step Functions.
+
+Security Considerations: The architecture utilizes AWS services that inherently provide security features, such as IAM roles for access control, encryption for data at rest in Amazon S3, and secure API access through Amazon API Gateway. However, specific security measures such as data encryption in transit, logging, and monitoring are not explicitly detailed in the diagram.
+
+Top 10 FAQ:
+1. What authentication mechanisms are in place for the API Gateway?
+2. How is data encrypted in transit and at rest?
+3. What IAM roles and policies are implemented for access control?
+4. How are logs monitored and analyzed for security incidents?
+5. What measures are taken to protect against DDoS attacks?
+6. How is sensitive user data handled and stored?
+7. What incident response plans are in place for data breaches?
+8. Are there any rate limiting or throttling mechanisms for the API?
+9. How are AWS services configured to minimize the attack surface?
+10. What compliance standards does this architecture adhere to?
