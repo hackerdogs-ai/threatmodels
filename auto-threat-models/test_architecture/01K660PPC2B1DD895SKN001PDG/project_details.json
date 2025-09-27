@@ -1,0 +1,40 @@
+{
+  "project_name": "3-Tier Web Application",
+  "line_of_business": [
+    "E-commerce",
+    "Social Networking",
+    "Content Management"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "JWT tokens"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "PCI-DSS",
+    "HIPAA"
+  ],
+  "security_requirements": [
+    "HTTPS encryption",
+    "Input validation",
+    "SQL injection prevention",
+    "CORS configuration",
+    "Rate limiting"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Web application components including frontend, backend, and database interactions",
+  "assumptions": [
+    "Users will access the application over the internet",
+    "Sensitive data will be stored in the database",
+    "API endpoints will be exposed to the public"
+  ],
+  "constraints": [
+    "Limited budget for security audits",
+    "Compliance with data protection regulations",
+    "Performance requirements for API response times"
+  ]
+}
