@@ -1,0 +1,75 @@
+{
+  "compliance_assessment": {
+    "id": "01K66GV2QG3H46SP6SVKSTTSVW",
+    "framework": "GDPR",
+    "framework_description": "General Data Protection Regulation - A regulation in EU law on data protection and privacy.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 65.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-1",
+        "requirement": "Obtain explicit consent from users for data processing.",
+        "status": "partially_compliant",
+        "evidence": "User consent mechanisms are in place but lack clarity.",
+        "gaps": [
+          "Lack of clear consent forms for data processing.",
+          "No mechanism for users to withdraw consent easily."
+        ],
+        "recommendations": [
+          "Implement clear and concise consent forms.",
+          "Provide users with an easy option to withdraw consent."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-2",
+        "requirement": "Ensure data subject rights are upheld (access, rectification, erasure).",
+        "status": "non_compliant",
+        "evidence": "No documented processes for data subject requests.",
+        "gaps": [
+          "Absence of procedures for handling data access requests.",
+          "No mechanisms for data erasure requests."
+        ],
+        "recommendations": [
+          "Develop and document processes for data subject requests.",
+          "Train staff on handling data subject rights."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-3",
+        "requirement": "Implement data protection by design and by default.",
+        "status": "partially_compliant",
+        "evidence": "Some data protection measures are implemented.",
+        "gaps": [
+          "Insufficient integration of data protection in the development lifecycle.",
+          "Lack of default settings that favor data privacy."
+        ],
+        "recommendations": [
+          "Integrate data protection measures into the software development lifecycle.",
+          "Review default settings to enhance user privacy."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Lack of documented processes for data subject rights.",
+      "Insufficient consent mechanisms."
+    ],
+    "remediation_plan": [
+      "Develop and implement a comprehensive data subject rights policy.",
+      "Enhance consent mechanisms to ensure clarity and ease of use.",
+      "Conduct regular training for staff on GDPR compliance."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-27 21:23:29.164964",
+    "assessor": null,
+    "created_at": "2025-09-27 21:23:29.164974",
+    "updated_at": "2025-09-27 21:23:29.164980"
+  }
+}

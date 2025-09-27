@@ -1,0 +1,81 @@
+{
+  "id": "01K66GT6JTD9DXZS2PEX6SPHQC",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend Interface",
+      "description": "The user-facing component that allows users to interact with the RAGFlow system, providing a graphical interface for input and output.",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend Services",
+      "description": "The core processing unit that handles requests, executes RAG workflows, and manages data processing and retrieval.",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "Stores user data, configurations, and processed documents to support retrieval and generation tasks.",
+      "type": "database"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend Interface",
+      "destination": "Backend Services",
+      "description": "User inputs are sent from the frontend to the backend for processing and retrieval."
+    },
+    {
+      "source": "Backend Services",
+      "destination": "Database",
+      "description": "Processed data and user configurations are stored in the database for future retrieval."
+    },
+    {
+      "source": "Database",
+      "destination": "Backend Services",
+      "description": "The backend retrieves necessary data from the database to fulfill user requests."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Trust Boundary",
+      "description": "The boundary that separates user interactions from backend processing, ensuring that user data is handled securely.",
+      "components": [
+        "Frontend Interface",
+        "Backend Services"
+      ]
+    },
+    {
+      "name": "Data Storage Trust Boundary",
+      "description": "The boundary that protects stored data in the database from unauthorized access and ensures data integrity.",
+      "components": [
+        "Backend Services",
+        "Database"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-27 21:21:10.234615",
+  "updated_at": "2025-09-27 21:21:10.234633"
+}

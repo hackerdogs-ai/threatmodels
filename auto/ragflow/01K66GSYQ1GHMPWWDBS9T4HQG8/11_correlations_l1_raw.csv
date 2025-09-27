@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both models identify unauthorized access as a critical threat due to weak authentication mechanisms.,,,,2025-09-27T21:24:20.038940
+CORR_002,,,,"Data tampering is a common threat in both models, emphasizing the need for data integrity checks.",,,,2025-09-27T21:24:20.038952
+CORR_003,,,,Both models recommend input validation and sanitization to prevent SQL injection attacks.,,,,2025-09-27T21:24:20.038959
+CORR_004,,,,"Session hijacking is a shared concern, with both models highlighting the risks associated with insecure session management.",,,,2025-09-27T21:24:20.038965
+CORR_005,,,,Both models align with GDPR requirements regarding data protection and user privacy.,,,,2025-09-27T21:24:20.038972
+CORR_006,,,,Both models advocate for rate limiting and IP blacklisting to mitigate Denial of Service (DoS) attacks.,,,,2025-09-27T21:24:20.038978
+CORR_007,,,,Cross-Site Scripting (XSS) vulnerabilities are identified in both models as significant threats.,,,,2025-09-27T21:24:20.038983
+CORR_008,,,,"Elevation of privilege attacks are a concern in both models, highlighting the need for strict access controls.",,,,2025-09-27T21:24:20.038989
+CORR_009,,,,Both models emphasize the importance of strong authentication mechanisms to prevent unauthorized access.,,,,2025-09-27T21:24:20.038995
+CORR_010,,,,"Both models address the need for data encryption to protect sensitive information, aligning with HIPAA compliance.",,,,2025-09-27T21:24:20.039001

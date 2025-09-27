@@ -1,0 +1,40 @@
+{
+  "project_name": "RAGFlow",
+  "line_of_business": [
+    "Artificial Intelligence",
+    "Data Processing",
+    "Software Development"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "Username and Password",
+    "Token-based Authentication"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "ISO 27001"
+  ],
+  "security_requirements": [
+    "Data Encryption",
+    "Access Control",
+    "Input Validation",
+    "Secure API"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threats to the RAGFlow application, including data handling, user authentication, and service management.",
+  "assumptions": [
+    "Users have valid credentials",
+    "The application is hosted in a secure environment",
+    "Data is processed in compliance with applicable laws"
+  ],
+  "constraints": [
+    "Limited resources for scaling",
+    "Dependency on third-party services",
+    "Compliance with data protection regulations"
+  ]
+}

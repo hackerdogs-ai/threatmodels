@@ -1,0 +1,269 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K66GV2QGSNQPT5SHRNXZEJWS",
+      "threat_title": "Unauthorized Access",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Unauthorized access can lead to significant data breaches, affecting user data and system integrity. The attack is moderately reproducible and exploitable due to potential weaknesses in authentication mechanisms.",
+      "recommendations": [
+        "Implement strong authentication mechanisms.",
+        "Regularly audit access logs.",
+        "Educate users on security best practices."
+      ],
+      "assessment_date": "2025-09-27 21:22:17.880096",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66GV2QGBXVBKA3G6CRMA7VY",
+      "threat_title": "Data Tampering",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Data tampering can compromise the integrity of the application\u2019s data, leading to incorrect outputs and decisions. The attack is moderately reproducible and exploitable, especially if data validation is weak.",
+      "recommendations": [
+        "Implement data validation and integrity checks.",
+        "Use encryption for data in transit and at rest.",
+        "Monitor data access and modifications."
+      ],
+      "assessment_date": "2025-09-27 21:22:17.880630",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66GV2QGSA346JASZJ89HZ4G",
+      "threat_title": "Session Hijacking",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Session hijacking can allow attackers to impersonate legitimate users, leading to unauthorized actions. The attack is moderately reproducible and exploitable due to potential session management flaws.",
+      "recommendations": [
+        "Implement secure session management practices.",
+        "Use HTTPS to encrypt session data.",
+        "Implement session timeout and re-authentication mechanisms."
+      ],
+      "assessment_date": "2025-09-27 21:22:17.880934",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66GV2QG3H46SP6SVKSTTSVW",
+      "threat_title": "SQL Injection",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "SQL injection can lead to unauthorized data access and manipulation, posing a significant risk to data integrity. The attack is moderately reproducible and exploitable due to potential input validation weaknesses.",
+      "recommendations": [
+        "Use prepared statements and parameterized queries.",
+        "Regularly test for SQL injection vulnerabilities.",
+        "Implement web application firewalls."
+      ],
+      "assessment_date": "2025-09-27 21:22:17.881226",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66GV2QH7T77CH9QZ8MSE7BF",
+      "threat_title": "Cross-Site Scripting (XSS)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "XSS attacks can allow attackers to inject malicious scripts, affecting users and potentially compromising their data. The attack is moderately reproducible and exploitable due to potential output encoding issues.",
+      "recommendations": [
+        "Implement output encoding and input validation.",
+        "Use Content Security Policy (CSP) headers.",
+        "Regularly audit and test for XSS vulnerabilities."
+      ],
+      "assessment_date": "2025-09-27 21:22:17.881516",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66GV2QHW9B0DV4YTCTC9Q0Q",
+      "threat_title": "Denial of Service (DoS)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "DoS attacks can disrupt service availability, affecting all users. The attack is moderately reproducible and exploitable due to potential resource exhaustion vulnerabilities.",
+      "recommendations": [
+        "Implement rate limiting and throttling.",
+        "Use load balancers and redundancy.",
+        "Monitor traffic for abnormal patterns."
+      ],
+      "assessment_date": "2025-09-27 21:22:17.881798",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66GV2QH26PV1A4JV5YZEPKY",
+      "threat_title": "Information Disclosure",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Information disclosure can lead to sensitive data leaks, impacting user privacy and trust. The attack is moderately reproducible and exploitable due to potential access control weaknesses.",
+      "recommendations": [
+        "Implement strict access controls.",
+        "Regularly audit data access permissions.",
+        "Encrypt sensitive data at rest and in transit."
+      ],
+      "assessment_date": "2025-09-27 21:22:17.882087",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66GV2QHW9B0DV4YTCTC9Q0Q",
+      "threat_title": "Elevation of Privilege",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Elevation of privilege can allow users to perform unauthorized actions, compromising system integrity. The attack is moderately reproducible and exploitable due to potential flaws in access controls.",
+      "recommendations": [
+        "Implement role-based access control (RBAC).",
+        "Regularly review user permissions.",
+        "Conduct security training for developers."
+      ],
+      "assessment_date": "2025-09-27 21:22:17.882371",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The application faces several essential threats, including unauthorized access, data tampering, and input validation attacks. These threats can lead to significant impacts on data integrity, confidentiality, and availability, necessitating robust security measures."
+}

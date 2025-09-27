@@ -1,0 +1,14 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Trust_Boundary, "User Trust Boundary") {
+        System(Frontend_Interface, "Frontend Interface", "The user-facing component that allows users to interact with the RAGFlow system, providing a graphical interface for input and output.")
+        System(Backend_Services, "Backend Services", "The core processing unit that handles requests, executes RAG workflows, and manages data processing and retrieval.")
+    }
+    System_Boundary(tb_Data_Storage_Trust_Boundary, "Data Storage Trust Boundary") {
+        System(Backend_Services, "Backend Services", "The core processing unit that handles requests, executes RAG workflows, and manages data processing and retrieval.")
+        SystemDb(Database, "Database", "Stores user data, configurations, and processed documents to support retrieval and generation tasks.")
+    }
+
+    Rel(Frontend_Interface, Backend_Services, "Uses")
+    Rel(Backend_Services, Database, "Uses")
+    Rel(Database, Backend_Services, "Uses")
