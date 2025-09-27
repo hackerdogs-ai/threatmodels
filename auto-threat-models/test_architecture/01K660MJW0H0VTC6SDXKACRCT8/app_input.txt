@@ -1,0 +1,34 @@
+Overall Architecture: The architecture described is a 3-tier web application that separates concerns into three distinct layers: the Presentation Layer, Business Logic Layer, and Data Layer. This structure enhances maintainability and scalability while allowing for clear separation of responsibilities.
+
+Key Components:
+1. Presentation Layer (Frontend): This layer is built using React.js, providing a dynamic user interface with components that handle client-side routing and make API calls to the backend for data retrieval and interaction.
+2. Business Logic Layer (Backend): The backend is powered by a Node.js/Express server that exposes REST API endpoints. This layer is responsible for processing business logic, handling authentication through middleware, and managing interactions between the frontend and the database.
+3. Data Layer (Database): The data layer utilizes a PostgreSQL database to store user data, manage sessions, and ensure data persistence. This component is crucial for maintaining the application's state and user information.
+
+Data Flow: Information flows from the user interface in the Presentation Layer, where users interact with the React.js application. API calls are made to the Business Logic Layer, where the Node.js/Express server processes requests, applies business logic, and interacts with the Data Layer to retrieve or store data in the PostgreSQL database. The response is then sent back through the Business Logic Layer to the Presentation Layer for user display.
+
+Technologies Used: The architecture employs several technologies, including:
+- Frontend: React.js
+- Backend: Node.js and Express
+- Database: PostgreSQL
+- Deployment: AWS S3 for static file hosting, AWS CloudFront for content delivery, AWS EC2 for backend hosting, AWS RDS for managed PostgreSQL database, and AWS Application Load Balancer for traffic distribution.
+
+Security Considerations: The architecture incorporates several security measures:
+- HTTPS encryption ensures secure communication between clients and servers.
+- JWT tokens are used for user authentication, providing a stateless mechanism for session management.
+- Input validation and sanitization are implemented to prevent malicious data from being processed.
+- SQL injection prevention techniques are employed to safeguard the database.
+- CORS configuration is set up to control resource sharing between different origins.
+- Rate limiting is applied to API endpoints to mitigate abuse and denial-of-service attacks.
+
+Top 10 FAQ:
+1. What specific measures are in place to protect against XSS attacks?
+2. How is user data encrypted at rest in the PostgreSQL database?
+3. What is the process for handling security vulnerabilities discovered in the application?
+4. Are there any logging and monitoring mechanisms in place for security incidents?
+5. How often are security audits or assessments conducted on the architecture?
+6. What authentication methods are available besides JWT tokens?
+7. How is the application protected against DDoS attacks?
+8. What backup and disaster recovery strategies are implemented for the database?
+9. Are there any third-party services integrated that could introduce security risks?
+10. How is the security of the AWS infrastructure managed and monitored?
