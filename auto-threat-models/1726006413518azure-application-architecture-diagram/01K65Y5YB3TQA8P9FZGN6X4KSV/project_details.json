@@ -1,0 +1,40 @@
+{
+  "project_name": "Azure Cloud Application Security Architecture",
+  "line_of_business": [
+    "Finance",
+    "Healthcare",
+    "E-commerce"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth 2.0",
+    "OpenID Connect",
+    "Multi-Factor Authentication"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI DSS"
+  ],
+  "security_requirements": [
+    "Web application threat protection",
+    "Data encryption at rest and in transit",
+    "Access control based on user roles"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Application and its supporting Azure infrastructure components",
+  "assumptions": [
+    "Users have internet access",
+    "All data passed through Azure services",
+    "Azure services are configured securely"
+  ],
+  "constraints": [
+    "Dependency on Azure service uptime",
+    "Compliance with regulatory requirements",
+    "Limited budget for security measures"
+  ]
+}

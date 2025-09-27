@@ -1,0 +1,45 @@
+{
+  "executive_summary": {
+    "id": "01K65YDNQGF77ZWCFP5JT088B7",
+    "title": null,
+    "overview": "The Azure Cloud Application Security Architecture threat model identifies critical vulnerabilities and outlines strategic measures to enhance security posture, ensuring business continuity and compliance with regulatory standards.",
+    "scope": null,
+    "methodology": null,
+    "key_findings": [
+      "SQL Injection and Credential Theft are identified as critical risks with high business and technical impacts, necessitating immediate attention.",
+      "Cross-Site Scripting (XSS) and Denial of Service (DoS) threats pose significant risks, requiring proactive mitigation strategies.",
+      "The architecture's reliance on Azure services provides robust security features, yet unmitigated risks highlight areas for improvement.",
+      "Compliance with industry standards such as NIST and ISO/IEC 27001 is essential for maintaining trust and safeguarding sensitive data.",
+      "The need for enhanced logging and monitoring practices to detect anomalies and respond to threats in real-time is critical."
+    ],
+    "critical_risks": [],
+    "high_priority_threats": [],
+    "total_threats": 0,
+    "high_risk_count": 0,
+    "medium_risk_count": 0,
+    "low_risk_count": 0,
+    "business_impact_summary": null,
+    "compliance_implications": null,
+    "recommendations": [],
+    "immediate_actions": [],
+    "strategic_recommendations": [
+      "Implement parameterized queries and stored procedures to mitigate SQL Injection risks.",
+      "Enforce multi-factor authentication (MFA) and regularly review user access permissions to combat Credential Theft.",
+      "Adopt Content Security Policy (CSP) headers and sanitize user inputs to prevent XSS attacks.",
+      "Utilize Azure DDoS Protection and deploy rate limiting to safeguard against DoS threats.",
+      "Conduct regular security training for developers to enhance awareness of common vulnerabilities and secure coding practices."
+    ],
+    "resource_requirements": {},
+    "timeline": null,
+    "budget_implications": null,
+    "next_steps": [
+      "Prioritize the implementation of recommended actions for critical and high-priority risks within the next quarter.",
+      "Establish a continuous monitoring framework to ensure compliance with security policies and regulatory requirements.",
+      "Schedule regular audits and reviews of security controls to adapt to evolving threats and maintain a robust security posture.",
+      "Allocate resources for security training and awareness programs to foster a culture of security within the organization."
+    ],
+    "follow_up_actions": [],
+    "created_at": "2025-09-27 15:59:45.392790",
+    "updated_at": "2025-09-27 15:59:45.392796"
+  }
+}

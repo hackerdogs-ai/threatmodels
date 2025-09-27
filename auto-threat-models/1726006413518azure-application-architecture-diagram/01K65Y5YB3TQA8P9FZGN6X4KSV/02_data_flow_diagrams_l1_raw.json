@@ -1,0 +1,231 @@
+{
+  "id": "01F8Z6F1D8F2B3A3B8D8B8C8D8",
+  "name": "Azure Cloud Application Data Flow Diagram",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for the Azure Cloud Application Security Architecture.",
+  "created_at": "2025-09-27 15:56:39.647322",
+  "last_updated": "2025-09-27 15:56:39.647333",
+  "data_assets": [
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8D9",
+      "name": "User Data",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8D0",
+      "name": "Application Data",
+      "description": null,
+      "classification": "confidential",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8D1",
+      "name": "Logs and Metrics",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8D2",
+      "name": "Secrets and API Keys",
+      "description": null,
+      "classification": "restricted",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8D3",
+      "name": "User Authentication",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8D4",
+      "name": "Application Processing",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8D5",
+      "name": "Data Storage Access",
+      "description": null,
+      "type": "database",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "very_high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8D6",
+      "name": "Monitoring and Logging",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8D7",
+      "name": "Azure SQL Database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8D8",
+      "name": "Azure Storage",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8D9",
+      "name": "Log Analytics",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8E0",
+      "name": "End Users",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8E1",
+      "name": "Azure Active Directory",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8E2",
+      "name": "Monitoring Tools",
+      "description": null,
+      "type": "system",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8E3",
+      "name": "User Requests",
+      "description": null,
+      "source_id": "01F8Z6F1D8F2B3A3B8D8B8C8E0",
+      "destination_id": "01F8Z6F1D8F2B3A3B8D8B8C8D3",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8E4",
+      "name": "Application Responses",
+      "description": null,
+      "source_id": "01F8Z6F1D8F2B3A3B8D8B8C8D4",
+      "destination_id": "01F8Z6F1D8F2B3A3B8D8B8C8E0",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8E5",
+      "name": "Data Access",
+      "description": null,
+      "source_id": "01F8Z6F1D8F2B3A3B8D8B8C8D4",
+      "destination_id": "01F8Z6F1D8F2B3A3B8D8B8C8D5",
+      "data_assets": [],
+      "protocol": "jdbc",
+      "authentication_strength": null,
+      "encryption": "at_rest",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8Z6F1D8F2B3A3B8D8B8C8E6",
+      "name": "Monitoring Data",
+      "description": null,
+      "source_id": "01F8Z6F1D8F2B3A3B8D8B8C8D6",
+      "destination_id": "01F8Z6F1D8F2B3A3B8D8B8C8E2",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

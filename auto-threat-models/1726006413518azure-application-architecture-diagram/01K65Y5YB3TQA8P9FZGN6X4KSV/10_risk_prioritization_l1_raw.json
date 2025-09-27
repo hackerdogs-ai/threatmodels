@@ -1,0 +1,229 @@
+{
+  "risk_prioritization": {
+    "id": "01K65Y8ETT2D68F7FNMGEPPQAQ",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K65Y8ETPKNEJXDF6PX4TC8PN",
+        "threat_title": "SQL Injection",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement parameterized queries and stored procedures.",
+          "Conduct regular security testing."
+        ]
+      },
+      {
+        "risk_id": "01K65Y8ETR6C3FHP08F4K6PHVY",
+        "threat_title": "Cross-Site Scripting (XSS)",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "high",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use Content Security Policy (CSP) headers.",
+          "Sanitize user inputs."
+        ]
+      },
+      {
+        "risk_id": "01K65Y8ETRE44NYVTV4DSD32R4",
+        "threat_title": "Credential Theft",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Enforce multi-factor authentication (MFA).",
+          "Regularly review user access permissions."
+        ]
+      },
+      {
+        "risk_id": "01K65Y8ETSFGBQT6VYZ5XSKQBF",
+        "threat_title": "Data Exposure",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement role-based access control (RBAC).",
+          "Ensure data encryption at rest and in transit."
+        ]
+      },
+      {
+        "risk_id": "01K65Y8ETSSW35S8C0SEGCBAT6",
+        "threat_title": "Denial of Service (DoS)",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Deploy rate limiting and IP throttling.",
+          "Utilize Azure DDoS Protection."
+        ]
+      },
+      {
+        "risk_id": "01K65Y8ETSH45V9E2KZPM4XAS0",
+        "threat_title": "Improper Input Validation",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement input validation and sanitization.",
+          "Conduct regular code reviews."
+        ]
+      },
+      {
+        "risk_id": "01K65Y8ETTJDY5C6FED9V31Z8G",
+        "threat_title": "Privilege Escalation",
+        "risk_score": 7,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Regularly review and update user permissions.",
+          "Implement least privilege access."
+        ]
+      },
+      {
+        "risk_id": "01K65Y8ETT2D68F7FNMGEPPQAQ",
+        "threat_title": "Session Hijacking",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use secure session management practices.",
+          "Regenerate session tokens after login."
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K65Y8ETPKNEJXDF6PX4TC8PN",
+        "01K65Y8ETR6C3FHP08F4K6PHVY",
+        "01K65Y8ETRE44NYVTV4DSD32R4"
+      ],
+      "high_priority_risks": [
+        "01K65Y8ETSFGBQT6VYZ5XSKQBF",
+        "01K65Y8ETSSW35S8C0SEGCBAT6",
+        "01K65Y8ETSH45V9E2KZPM4XAS0",
+        "01K65Y8ETT2D68F7FNMGEPPQAQ"
+      ],
+      "medium_priority_risks": [
+        "01K65Y8ETTJDY5C6FED9V31Z8G"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K65Y8ETPKNEJXDF6PX4TC8PN": 9.0,
+      "01K65Y8ETR6C3FHP08F4K6PHVY": 8.0,
+      "01K65Y8ETRE44NYVTV4DSD32R4": 9.0,
+      "01K65Y8ETSFGBQT6VYZ5XSKQBF": 8.0,
+      "01K65Y8ETSSW35S8C0SEGCBAT6": 7.0,
+      "01K65Y8ETSH45V9E2KZPM4XAS0": 8.0,
+      "01K65Y8ETTJDY5C6FED9V31Z8G": 7.0,
+      "01K65Y8ETT2D68F7FNMGEPPQAQ": 8.0
+    },
+    "risk_rankings": [
+      [
+        "01K65Y8ETPKNEJXDF6PX4TC8PN",
+        9.0
+      ],
+      [
+        "01K65Y8ETRE44NYVTV4DSD32R4",
+        9.0
+      ],
+      [
+        "01K65Y8ETR6C3FHP08F4K6PHVY",
+        8.0
+      ],
+      [
+        "01K65Y8ETSFGBQT6VYZ5XSKQBF",
+        8.0
+      ],
+      [
+        "01K65Y8ETT2D68F7FNMGEPPQAQ",
+        8.0
+      ],
+      [
+        "01K65Y8ETSSW35S8C0SEGCBAT6",
+        7.0
+      ],
+      [
+        "01K65Y8ETTJDY5C6FED9V31Z8G",
+        7.0
+      ],
+      [
+        "01K65Y8ETSH45V9E2KZPM4XAS0",
+        8.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of revenue due to data breaches and service downtime.",
+      "operational_impact": "Disruption of services leading to loss of customer trust.",
+      "reputational_impact": "Negative publicity and loss of customer confidence."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-27 15:59:14.208091",
+    "updated_at": "2025-09-27 15:59:14.208096"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "compliance_assessment": {
+    "id": "01K65Y8ETPKNEJXDF6PX4TC8PN",
+    "framework": "ISO 27001",
+    "framework_description": "ISO/IEC 27001 is an international standard for information security management systems (ISMS), providing a systematic approach to managing sensitive company information, ensuring its confidentiality, integrity, and availability.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 75.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "A.9.1.1",
+        "requirement": "Access control policy",
+        "status": "partially_compliant",
+        "evidence": "Access control policies are defined but not fully enforced across all components.",
+        "gaps": [
+          "Lack of role-based access control implementation in some areas."
+        ],
+        "recommendations": [
+          "Implement Role-Based Access Control (RBAC) across all services."
+        ]
+      },
+      {
+        "requirement_id": "A.10.1",
+        "requirement": "Cryptographic controls",
+        "status": "compliant",
+        "evidence": "Data encryption is implemented for data at rest and in transit.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "A.12.4",
+        "requirement": "Logging and monitoring",
+        "status": "partially_compliant",
+        "evidence": "Logging is implemented but lacks centralized monitoring.",
+        "gaps": [
+          "No centralized log management solution in place."
+        ],
+        "recommendations": [
+          "Implement a centralized logging solution with monitoring capabilities."
+        ]
+      },
+      {
+        "requirement_id": "A.16.1",
+        "requirement": "Incident management",
+        "status": "partially_compliant",
+        "evidence": "An incident response plan exists but is not regularly tested.",
+        "gaps": [
+          "Lack of regular incident response drills."
+        ],
+        "recommendations": [
+          "Conduct regular incident response drills and update the plan accordingly."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Inconsistent enforcement of access control policies.",
+      "Lack of centralized logging and monitoring.",
+      "Insufficient testing of the incident response plan."
+    ],
+    "remediation_plan": [
+      "Implement RBAC across all components to ensure proper access control.",
+      "Establish a centralized logging and monitoring solution.",
+      "Regularly test and update the incident response plan."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-27 15:58:56.057902",
+    "assessor": null,
+    "created_at": "2025-09-27 15:58:56.057907",
+    "updated_at": "2025-09-27 15:58:56.057910"
+  }
+}
