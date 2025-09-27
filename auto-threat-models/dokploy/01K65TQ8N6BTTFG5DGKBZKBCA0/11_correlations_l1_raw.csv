@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify unauthorized access as a critical threat, emphasizing the need for robust authentication mechanisms.",,,,2025-09-27T14:59:15.961077
+CORR_002,,,,"Data tampering is a common threat in both models, highlighting the risk of unauthorized modifications to data.",,,,2025-09-27T14:59:15.961089
+CORR_003,,,,Both models recommend encryption of sensitive data to mitigate exposure risks.,,,,2025-09-27T14:59:15.961096
+CORR_004,,,,"Denial of Service (DoS) attacks are a shared concern, affecting service availability in both models.",,,,2025-09-27T14:59:15.961103
+CORR_005,,,,"Both models emphasize the importance of protecting sensitive data, aligning with data protection regulations.",,,,2025-09-27T14:59:15.961110
+CORR_006,,,,Both models advocate for role-based access control (RBAC) to manage user permissions effectively.,,,,2025-09-27T14:59:15.961117
+CORR_007,,,,"Repudiation of actions is a concern in both models, emphasizing the need for proper logging and monitoring.",,,,2025-09-27T14:59:15.961123
+CORR_008,,,,"Input validation attacks are identified as a common threat, highlighting the risk of code injection vulnerabilities.",,,,2025-09-27T14:59:15.961130
+CORR_009,,,,Both models recommend regular security training for users to recognize potential threats.,,,,2025-09-27T14:59:15.961137
+CORR_010,,,,Both models stress the importance of assessing third-party vendors for compliance with security standards.,,,,2025-09-27T14:59:15.961143

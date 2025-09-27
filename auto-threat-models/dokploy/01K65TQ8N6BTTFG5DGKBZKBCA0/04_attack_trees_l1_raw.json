@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "id": "01K65TRG1ZVZEA2AEQHCJ4AKAW",
+    "title": "Attack Tree for Sensitive Data Exposure",
+    "description": "This attack tree outlines the potential paths for exploiting sensitive data exposure vulnerabilities in the Dokploy application.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-27 14:55:10+00:00",
+    "last_updated": "2025-09-27 14:56:02.612085",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K65TRG1ZVZEA2AEQHCJ4AKAW",
+    "description": "Sensitive Data Exposure Attack Path",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K65TRG1ZVZEA2AEQHCJ4AKAW-1",
+        "description": "Exploitation of API vulnerabilities to access sensitive data",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K65TRG1ZVZEA2AEQHCJ4AKAW-1-1",
+            "description": "Bypass authentication mechanisms",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 5.0,
+              "impact": 9.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement strong authentication mechanisms (e.g., OAuth, JWT)",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K65TRG1ZVZEA2AEQHCJ4AKAW-1-2",
+            "description": "Manipulate API requests to retrieve sensitive data",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 6.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement input validation and sanitization",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Conduct regular security audits and penetration testing",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K65TRG1ZVZEA2AEQHCJ4AKAW-2",
+        "description": "Improper handling of sensitive data in logs or error messages",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K65TRG1ZVZEA2AEQHCJ4AKAW-2-1",
+            "description": "Log sensitive information without proper masking",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 3.0,
+              "impact": 7.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Mask sensitive information in logs",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.95
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K65TRG1ZVZEA2AEQHCJ4AKAW-2-2",
+            "description": "Expose sensitive data in error messages",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 4.0,
+              "impact": 6.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement generic error messages without sensitive data",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Regularly review logging practices and error handling",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement encryption for sensitive data at rest and in transit",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      },
+      {
+        "description": "Educate developers on secure coding practices",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.85
+      }
+    ],
+    "references": []
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "project_name": "Dokploy - Open Source PaaS",
+  "line_of_business": [
+    "Cloud Computing",
+    "Application Deployment",
+    "DevOps"
+  ],
+  "application_type": "Platform as a Service (PaaS)",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth",
+    "API Key",
+    "Session-based Authentication"
+  ],
+  "deployment_environment": "On-premise",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "Data Encryption",
+    "Access Control",
+    "Audit Logging",
+    "Backup and Recovery"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Deployment and management of applications and databases in a self-hosted environment",
+  "assumptions": [
+    "Users have technical knowledge to self-host",
+    "External services are secure",
+    "Network infrastructure is reliable"
+  ],
+  "constraints": [
+    "Limited to supported programming languages and databases",
+    "Dependency on Docker and Docker Swarm for orchestration"
+  ]
+}
