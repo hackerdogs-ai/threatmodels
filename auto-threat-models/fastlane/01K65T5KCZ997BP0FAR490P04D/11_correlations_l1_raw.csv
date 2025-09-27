@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both models identify unauthorized access to sensitive data (screenshots) as a critical threat.,,,,2025-09-27T14:49:53.440356
+CORR_002,,,,"Injection attacks are a common threat in both models, affecting input handling and data integrity.",,,,2025-09-27T14:49:53.440369
+CORR_003,,,,Both models recommend implementing rate limiting to mitigate denial of service attacks.,,,,2025-09-27T14:49:53.440375
+CORR_004,,,,"Replay attacks are a concern in both models, particularly in command execution contexts.",,,,2025-09-27T14:49:53.440381
+CORR_005,,,,Both models emphasize the importance of data encryption and secure storage to comply with data protection regulations.,,,,2025-09-27T14:49:53.440387
+CORR_006,,,,Both models highlight the need for regular permission audits to prevent elevation of privilege attacks.,,,,2025-09-27T14:49:53.440392
+CORR_007,,,,"Denial of service attacks are a shared concern, particularly regarding resource exhaustion through excessive requests.",,,,2025-09-27T14:49:53.440398
+CORR_008,,,,"Insecure file storage is a common threat, affecting both mobile applications and managed devices.",,,,2025-09-27T14:49:53.440403
+CORR_009,,,,Both models advocate for secure coding practices to prevent vulnerabilities during development.,,,,2025-09-27T14:49:53.440408
+CORR_010,,,,Both models can benefit from coordinated incident response strategies to address similar threats.,,,,2025-09-27T14:49:53.440414
