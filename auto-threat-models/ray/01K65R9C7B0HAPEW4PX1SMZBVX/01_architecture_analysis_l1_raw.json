@@ -1,0 +1,85 @@
+{
+  "id": "01K65R9HB0RDAG5VXVS3A45ZCH",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Ray Docker Container",
+      "description": "A containerized environment for running Ray applications, providing isolation and dependency management.",
+      "type": "service"
+    },
+    {
+      "name": "CI/CD Pipeline",
+      "description": "Automated workflows for building, testing, and deploying Ray applications, ensuring code quality and integration.",
+      "type": "backend"
+    },
+    {
+      "name": "Dependency Set Manager",
+      "description": "Manages and resolves dependencies for Ray applications, ensuring that all required packages are available.",
+      "type": "service"
+    },
+    {
+      "name": "Buildkite Integration",
+      "description": "Integration with Buildkite for continuous integration and deployment, facilitating automated testing and deployment processes.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "CI/CD Pipeline",
+      "destination": "Ray Docker Container",
+      "description": "The CI/CD pipeline builds and deploys applications into the Ray Docker Container for execution."
+    },
+    {
+      "source": "Dependency Set Manager",
+      "destination": "CI/CD Pipeline",
+      "description": "The Dependency Set Manager provides the CI/CD pipeline with the necessary dependencies for building Ray applications."
+    },
+    {
+      "source": "Buildkite Integration",
+      "destination": "CI/CD Pipeline",
+      "description": "Buildkite triggers the CI/CD pipeline to initiate builds and tests based on code changes."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Container Isolation Boundary",
+      "description": "Isolates the Ray Docker Container from the host system and other containers to prevent cross-contamination.",
+      "components": [
+        "Ray Docker Container"
+      ]
+    },
+    {
+      "name": "CI/CD Pipeline Boundary",
+      "description": "Separates the CI/CD pipeline from the development environment to ensure that only validated code is deployed.",
+      "components": [
+        "CI/CD Pipeline",
+        "Buildkite Integration"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-27 14:12:38.368746",
+  "updated_at": "2025-09-27 14:12:38.368754"
+}

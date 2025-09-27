@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack Tree for Code Injection - Hackerdogs Dark Theme</title>
+    <link rel="icon" type="image/x-icon" href="https://hackerdogs.ai/nc_assets/img/icons/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #2d2d2d;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #3d3d3d;
+            color: #cccccc;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #555;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .header p {
+            margin: 5px 0 0 0;
+            font-size: 1.1em;
+            color: #cccccc;
+        }
+        .controls {
+            padding: 15px 20px;
+            background-color: #3d3d3d;
+            border-bottom: 1px solid #555;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background-color: #29ABE2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #1f8bb8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+        .diagram-container {
+            padding: 20px;
+            min-height: 400px;
+        }
+        .mermaid {
+            text-align: center;
+        }
+        .footer {
+            padding: 15px 20px;
+            background-color: #3d3d3d;
+            border-top: 1px solid #555;
+            text-align: center;
+            color: #cccccc;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .footer img {
+            height: 20px;
+            width: auto;
+        }
+        .footer a {
+            color: #29ABE2;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Custom styling for dark theme arrows */
+        body .mermaid svg .edgePath .path { stroke: #F5F7FA !important; stroke-width: 3px !important; }
+        body .mermaid svg .arrowheadPath { fill: #F5F7FA !important; }
+        body .mermaid svg .marker { fill: #F5F7FA !important; stroke: #F5F7FA !important; }
+        body .mermaid svg .flowchart-link { stroke: #F5F7FA !important; stroke-width: 3px !important; }
+        body .mermaid svg .edgeLabel { background-color: #2d2d2d !important; color: #ffffff !important; }
+        body .mermaid svg .edgeLabel rect { background-color: #2d2d2d !important; fill: #2d2d2d !important; }
+        
+        /* Custom styling for dark theme trust boundaries - target subgraph elements */
+        body .mermaid svg .subgraph { stroke: #F5F7FA !important; stroke-width: 3px !important; }
+        body .mermaid svg .subgraph rect { stroke: #F5F7FA !important; stroke-width: 3px !important; }
+        body .mermaid svg .subgraph polygon { stroke: #F5F7FA !important; stroke-width: 3px !important; }
+        /* Also target the specific trust boundary class */
+        body .mermaid svg .trustBoundary { stroke: #F5F7FA !important; stroke-width: 3px !important; }
+        body .mermaid svg .trustBoundary rect { stroke: #F5F7FA !important; stroke-width: 3px !important; }
+        body .mermaid svg .trustBoundary polygon { stroke: #F5F7FA !important; stroke-width: 3px !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Attack Tree for Code Injection</h1>
+            <p>Attack Tree Visualization</p>
+        </div>
+        
+        <div class="controls">
+            <button class="btn" onclick="downloadSVG()">Download SVG</button>
+            <button class="btn" onclick="downloadMMD()">Download MMD</button>
+        </div>
+        
+        <div class="diagram-container">
+            <div class="mermaid">
+graph TB
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85["Code Injection Attack Path | [HIGH]"]:::highRisk
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-1["Attacker identifies input fields susceptible to injection. | [MED]"]:::mediumRisk
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-1_cm_0["CM: Implement input validation and sanitization. (Eff: 0.9)"]:::countermeasure
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-2["Attacker crafts and submits malicious input. | [HIGH]"]:::highRisk
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-2_cm_0["CM: Use prepared statements and parameterized queries. (Eff: 0.95)"]:::countermeasure
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-3["Malicious code is executed by the application. | [HIGH]"]:::highRisk
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-3_cm_0["CM: Conduct regular security audits and code reviews. (Eff: 0.85)"]:::countermeasure
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85_cm_0["CM: Implement a Web Application Firewall (WAF) to filter malicious requests. (Eff: 0.8)"]:::countermeasure
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85_cm_1["CM: Educate developers on secure coding practices. (Eff: 0.75)"]:::countermeasure
+
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85 --> node_01K65RAKMX5MKVJ7ZPHNZTRM85-1
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-1 -.-> node_01K65RAKMX5MKVJ7ZPHNZTRM85-1_cm_0
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85 --> node_01K65RAKMX5MKVJ7ZPHNZTRM85-2
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-2 -.-> node_01K65RAKMX5MKVJ7ZPHNZTRM85-2_cm_0
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85 --> node_01K65RAKMX5MKVJ7ZPHNZTRM85-3
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-3 -.-> node_01K65RAKMX5MKVJ7ZPHNZTRM85-3_cm_0
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85 -.-> node_01K65RAKMX5MKVJ7ZPHNZTRM85_cm_0
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85 -.-> node_01K65RAKMX5MKVJ7ZPHNZTRM85_cm_1
+
+  classDef andNode fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef orNode fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef highRisk fill:#FF4C4C,color:#F5F7FA,stroke:#FF4C4C,stroke-width:2px
+  classDef mediumRisk fill:#FFD300,stroke:#FFD300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#A259FF,stroke:#c3a4ff,stroke-width:1px,stroke-dasharray:3 3,color:#F5F7FA
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5
+            </div>
+        </div>
+        
+        <div class="footer">
+            <a href="https://www.hackerdogs.ai" target="_blank">
+                <img src="https://hackerdogs.ai/nc_assets/img/logos/hd_logo.png" alt="Hackerdogs Logo">
+            </a>
+            <a href="https://www.hackerdogs.ai" target="_blank">Generated by Hackerdogs AI</a>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true
+            }
+        });
+
+        // Download SVG function
+        function downloadSVG() {
+            const svgElement = document.querySelector('.mermaid svg');
+            if (svgElement) {
+                const svgData = new XMLSerializer().serializeToString(svgElement);
+                const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+                const svgUrl = URL.createObjectURL(svgBlob);
+                const downloadLink = document.createElement('a');
+                downloadLink.href = svgUrl;
+                downloadLink.download = 'attack_tree_diagram.svg';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+                URL.revokeObjectURL(svgUrl);
+            }
+        }
+
+        // Download MMD function - FIXED to download actual MMD content
+        function downloadMMD() {
+            const mmdContent = `graph TB
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85["Code Injection Attack Path | [HIGH]"]:::highRisk
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-1["Attacker identifies input fields susceptible to injection. | [MED]"]:::mediumRisk
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-1_cm_0["CM: Implement input validation and sanitization. (Eff: 0.9)"]:::countermeasure
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-2["Attacker crafts and submits malicious input. | [HIGH]"]:::highRisk
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-2_cm_0["CM: Use prepared statements and parameterized queries. (Eff: 0.95)"]:::countermeasure
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-3["Malicious code is executed by the application. | [HIGH]"]:::highRisk
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-3_cm_0["CM: Conduct regular security audits and code reviews. (Eff: 0.85)"]:::countermeasure
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85_cm_0["CM: Implement a Web Application Firewall (WAF) to filter malicious requests. (Eff: 0.8)"]:::countermeasure
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85_cm_1["CM: Educate developers on secure coding practices. (Eff: 0.75)"]:::countermeasure
+
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85 --> node_01K65RAKMX5MKVJ7ZPHNZTRM85-1
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-1 -.-> node_01K65RAKMX5MKVJ7ZPHNZTRM85-1_cm_0
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85 --> node_01K65RAKMX5MKVJ7ZPHNZTRM85-2
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-2 -.-> node_01K65RAKMX5MKVJ7ZPHNZTRM85-2_cm_0
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85 --> node_01K65RAKMX5MKVJ7ZPHNZTRM85-3
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85-3 -.-> node_01K65RAKMX5MKVJ7ZPHNZTRM85-3_cm_0
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85 -.-> node_01K65RAKMX5MKVJ7ZPHNZTRM85_cm_0
+  node_01K65RAKMX5MKVJ7ZPHNZTRM85 -.-> node_01K65RAKMX5MKVJ7ZPHNZTRM85_cm_1
+
+  classDef andNode fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef orNode fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef highRisk fill:#FF4C4C,color:#F5F7FA,stroke:#FF4C4C,stroke-width:2px
+  classDef mediumRisk fill:#FFD300,stroke:#FFD300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#A259FF,stroke:#c3a4ff,stroke-width:1px,stroke-dasharray:3 3,color:#F5F7FA
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5`;
+            const mmdBlob = new Blob([mmdContent], {type: 'text/plain;charset=utf-8'});
+            const mmdUrl = URL.createObjectURL(mmdBlob);
+            const downloadLink = document.createElement('a');
+            downloadLink.href = mmdUrl;
+            downloadLink.download = 'attack_tree_diagram.mmd';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+            URL.revokeObjectURL(mmdUrl);
+        }
+    </script>
+</body>
+</html>

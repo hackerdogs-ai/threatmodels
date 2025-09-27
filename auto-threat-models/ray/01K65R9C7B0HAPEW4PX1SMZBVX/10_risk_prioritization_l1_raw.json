@@ -1,0 +1,181 @@
+{
+  "risk_prioritization": {
+    "id": "01K65RAKMX5MKVJ7ZPHNZTRM85",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K65RAKMWX3HKC8RKBV4SXY3J",
+        "threat_title": "Unauthorized Access",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement multi-factor authentication (MFA)",
+          "Conduct a security audit of authentication mechanisms"
+        ]
+      },
+      {
+        "risk_id": "01K65RAKMX32CKEQ937DC2X6YT",
+        "threat_title": "Data Exposure",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Encrypt sensitive data at rest and in transit",
+          "Implement strict access controls"
+        ]
+      },
+      {
+        "risk_id": "01K65RAKMX5MKVJ7ZPHNZTRM85",
+        "threat_title": "Code Injection",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use input validation and sanitization libraries",
+          "Conduct regular code reviews"
+        ]
+      },
+      {
+        "risk_id": "01K65RAKMYDD6MAJADXSYQ61SB",
+        "threat_title": "Denial of Service (DoS)",
+        "risk_score": 6,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting",
+          "Monitor traffic patterns for anomalies"
+        ]
+      },
+      {
+        "risk_id": "01K65RAKMYPETR7YDZG5BQBHP2",
+        "threat_title": "Improper Authentication",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Regularly review and update authentication mechanisms",
+          "Implement stronger password policies"
+        ]
+      },
+      {
+        "risk_id": "01K65RAKMYBBAM3QFYKFPTHNSG",
+        "threat_title": "Repudiation of Actions",
+        "risk_score": 4,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "low",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "low",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement comprehensive logging and monitoring",
+          "Ensure logs are tamper-proof"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K65RAKMWX3HKC8RKBV4SXY3J",
+        "01K65RAKMX32CKEQ937DC2X6YT"
+      ],
+      "high_priority_risks": [
+        "01K65RAKMX5MKVJ7ZPHNZTRM85",
+        "01K65RAKMYDD6MAJADXSYQ61SB"
+      ],
+      "medium_priority_risks": [
+        "01K65RAKMYPETR7YDZG5BQBHP2",
+        "01K65RAKMYBBAM3QFYKFPTHNSG"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K65RAKMWX3HKC8RKBV4SXY3J": 9.0,
+      "01K65RAKMX32CKEQ937DC2X6YT": 8.0,
+      "01K65RAKMX5MKVJ7ZPHNZTRM85": 7.0,
+      "01K65RAKMYDD6MAJADXSYQ61SB": 6.0,
+      "01K65RAKMYPETR7YDZG5BQBHP2": 5.0,
+      "01K65RAKMYBBAM3QFYKFPTHNSG": 4.0
+    },
+    "risk_rankings": [
+      [
+        "01K65RAKMWX3HKC8RKBV4SXY3J",
+        9.0
+      ],
+      [
+        "01K65RAKMX32CKEQ937DC2X6YT",
+        8.0
+      ],
+      [
+        "01K65RAKMX5MKVJ7ZPHNZTRM85",
+        7.0
+      ],
+      [
+        "01K65RAKMYDD6MAJADXSYQ61SB",
+        6.0
+      ],
+      [
+        "01K65RAKMYPETR7YDZG5BQBHP2",
+        5.0
+      ],
+      [
+        "01K65RAKMYBBAM3QFYKFPTHNSG",
+        4.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "High potential costs due to data breaches and legal penalties.",
+      "operational_impact": "Disruption of services leading to loss of customer trust.",
+      "reputational_impact": "Significant damage to brand reputation and customer loyalty."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-27 14:16:13.897496",
+    "updated_at": "2025-09-27 14:16:13.897510"
+  }
+}
