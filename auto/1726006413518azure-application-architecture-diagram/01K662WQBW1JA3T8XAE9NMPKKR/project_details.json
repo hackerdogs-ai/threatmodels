@@ -1,0 +1,42 @@
+{
+  "project_name": "Azure Cloud-Based Application with Secure User Access",
+  "line_of_business": [
+    "Information Technology",
+    "Software Development",
+    "Cloud Services"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth 2.0",
+    "OpenID Connect",
+    "Multi-Factor Authentication (MFA)"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI DSS"
+  ],
+  "security_requirements": [
+    "DDoS protection",
+    "Data encryption in transit and at rest",
+    "Secure secret management",
+    "Role-based access control",
+    "Incident response planning"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Application architecture and its components, including data flow and identity management.",
+  "assumptions": [
+    "Users are external and may access the application from various locations.",
+    "The application is expected to handle sensitive user data.",
+    "Integrated Azure services are configured properly for security."
+  ],
+  "constraints": [
+    "Dependence on Azure infrastructure and services",
+    "Compliance with industry regulations",
+    "Budget limitations for security implementations"
+  ]
+}
