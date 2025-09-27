@@ -1,0 +1,30 @@
+graph TB
+  node_01K65Z4Z1KDXSV2HKY0X27PCQY9K["Unauthorized Access to API via Weak Authentication Mechanisms | [HIGH]"]:::highRisk
+  node_01K65Z5Z1KDXSV2HKY0X27PCQY9L["Exploitation of Weak API Keys | [MED]"]:::mediumRisk
+  node_01K65Z5Z1KDXSV2HKY0X27PCQY9L_cm_0["CM: Implement strong API key management and rotation policies. (Eff: 0.8)"]:::countermeasure
+  node_01K65Z6Z1KDXSV2HKY0X27PCQY9M["Brute Force Attack on Authentication Credentials | [HIGH]"]:::highRisk
+  node_01K65Z6Z1KDXSV2HKY0X27PCQY9M_cm_0["CM: Implement account lockout mechanisms and CAPTCHA for login attempts. (Eff: 0.7)"]:::countermeasure
+  node_01K65Z7Z1KDXSV2HKY0X27PCQY9N["Phishing for User Credentials | [HIGH]"]:::highRisk
+  node_01K65Z7Z1KDXSV2HKY0X27PCQY9N_cm_0["CM: Conduct regular security awareness training for users. (Eff: 0.6)"]:::countermeasure
+  node_01K65Z4Z1KDXSV2HKY0X27PCQY9K_cm_0["CM: Enforce multi-factor authentication (MFA) for API access. (Eff: 0.9)"]:::countermeasure
+  node_01K65Z4Z1KDXSV2HKY0X27PCQY9K_cm_1["CM: Regularly review and update authentication mechanisms. (Eff: 0.8)"]:::countermeasure
+
+  node_01K65Z4Z1KDXSV2HKY0X27PCQY9K --> node_01K65Z5Z1KDXSV2HKY0X27PCQY9L
+  node_01K65Z5Z1KDXSV2HKY0X27PCQY9L -.-> node_01K65Z5Z1KDXSV2HKY0X27PCQY9L_cm_0
+  node_01K65Z4Z1KDXSV2HKY0X27PCQY9K --> node_01K65Z6Z1KDXSV2HKY0X27PCQY9M
+  node_01K65Z6Z1KDXSV2HKY0X27PCQY9M -.-> node_01K65Z6Z1KDXSV2HKY0X27PCQY9M_cm_0
+  node_01K65Z4Z1KDXSV2HKY0X27PCQY9K --> node_01K65Z7Z1KDXSV2HKY0X27PCQY9N
+  node_01K65Z7Z1KDXSV2HKY0X27PCQY9N -.-> node_01K65Z7Z1KDXSV2HKY0X27PCQY9N_cm_0
+  node_01K65Z4Z1KDXSV2HKY0X27PCQY9K -.-> node_01K65Z4Z1KDXSV2HKY0X27PCQY9K_cm_0
+  node_01K65Z4Z1KDXSV2HKY0X27PCQY9K -.-> node_01K65Z4Z1KDXSV2HKY0X27PCQY9K_cm_1
+
+  classDef andNode fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef orNode fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef highRisk fill:#FFB3B3,color:#8B0000,stroke:#8B0000,stroke-width:2px
+  classDef mediumRisk fill:#FFF200,stroke:#7A6300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#ffa1ad,stroke:#A259FF,stroke-width:1px,stroke-dasharray:3 3,color:#0B0D17
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

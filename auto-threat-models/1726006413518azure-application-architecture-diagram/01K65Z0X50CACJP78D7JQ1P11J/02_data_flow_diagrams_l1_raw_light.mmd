@@ -1,0 +1,43 @@
+graph TB
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ15["End Users | (user) | [UT]"]:::untrusted
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ8["API Gateway | (api) | [HT]"]:::highTrust
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ9["Search Query Processing | (backend) | [HT]"]:::highTrust
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ10["Log Consolidation | (backend) | [HT]"]:::highTrust
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ11["Data Transformation | (backend) | [HT]"]:::highTrust
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ12["Query Analysis | (backend) | [HT]"]:::highTrust
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ13["Amazon S3 | (file)"]:::dataStore
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ14["Amazon DynamoDB | (database)"]:::dataStore
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ5["Search Query Logs | [INT]"]:::dataAsset,internal
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ6["Clustered Search Queries | [INT]"]:::dataAsset,internal
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ7["Trending Queries | [INT]"]:::dataAsset,internal
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ19["Component 01FJZ8K8GQ4H0J9J9D8F8K8GQ19"]:::process,untrusted
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ18["Component 01FJZ8K8GQ4H0J9J9D8F8K8GQ18"]:::process,untrusted
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ20["Component 01FJZ8K8GQ4H0J9J9D8F8K8GQ20"]:::process,untrusted
+
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ15 -->|User Queries to API Gateway| node_01FJZ8K8GQ4H0J9J9D8F8K8GQ8:::encryptedFlow
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ8 -->|API Gateway to OpenSearch| node_01FJZ8K8GQ4H0J9J9D8F8K8GQ18:::encryptedFlow
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ18 -->|OpenSearch to Kinesis Data Streams| node_01FJZ8K8GQ4H0J9J9D8F8K8GQ19:::encryptedFlow
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ19 -->|Kinesis Data Streams to Kinesis Firehose| node_01FJZ8K8GQ4H0J9J9D8F8K8GQ10:::unencryptedFlow
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ10 -->|Kinesis Firehose to Amazon S3| node_01FJZ8K8GQ4H0J9J9D8F8K8GQ13:::unencryptedFlow
+  node_01FJZ8K8GQ4H0J9J9D8F8K8GQ11 -->|AWS Lambda to Amazon Bedrock| node_01FJZ8K8GQ4H0J9J9D8F8K8GQ20:::encryptedFlow
+
+  classDef externalEntity fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef process fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef dataAsset fill:#ffa1ad,stroke:#A259FF,stroke-width:2px,color:#0B0D17
+  classDef untrusted fill:#FFB3B3,stroke:#8B0000,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFF2B3,stroke:#7A6300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#106B49,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#106B49,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#7A6300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#8B0000,stroke-width:2px
+  classDef restricted fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#106B49,stroke-width:2px
+  classDef unencryptedFlow stroke:#8B0000,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5

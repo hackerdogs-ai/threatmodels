@@ -1,0 +1,123 @@
+{
+    "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ4",
+    "name": "Search Query Optimization and Analysis System",
+    "description": "Data flow diagram for the Search Query Optimization and Analysis System utilizing various AWS services for processing and analyzing search queries.",
+    "data_assets": [
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ5",
+            "name": "Search Query Logs",
+            "classification": "internal"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ6",
+            "name": "Clustered Search Queries",
+            "classification": "internal"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ7",
+            "name": "Trending Queries",
+            "classification": "internal"
+        }
+    ],
+    "processes": [
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ8",
+            "name": "API Gateway",
+            "type": "api",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ9",
+            "name": "Search Query Processing",
+            "type": "backend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ10",
+            "name": "Log Consolidation",
+            "type": "backend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ11",
+            "name": "Data Transformation",
+            "type": "backend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ12",
+            "name": "Query Analysis",
+            "type": "backend",
+            "trust_level": "high_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ13",
+            "name": "Amazon S3",
+            "type": "file",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ14",
+            "name": "Amazon DynamoDB",
+            "type": "database",
+            "encryption": "at_rest"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ15",
+            "name": "End Users",
+            "type": "user"
+        }
+    ],
+    "data_flows": [
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ16",
+            "name": "User Queries to API Gateway",
+            "source_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ15",
+            "destination_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ8",
+            "protocol": "https",
+            "encryption": "transport"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ17",
+            "name": "API Gateway to OpenSearch",
+            "source_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ8",
+            "destination_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ18",
+            "protocol": "https",
+            "encryption": "transport"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ18",
+            "name": "OpenSearch to Kinesis Data Streams",
+            "source_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ18",
+            "destination_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ19",
+            "protocol": "https",
+            "encryption": "transport"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ19",
+            "name": "Kinesis Data Streams to Kinesis Firehose",
+            "source_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ19",
+            "destination_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ10",
+            "protocol": "stream",
+            "encryption": "none"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ10",
+            "name": "Kinesis Firehose to Amazon S3",
+            "source_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ10",
+            "destination_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ13",
+            "protocol": "file",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ11",
+            "name": "AWS Lambda to Amazon Bedrock",
+            "source_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ11",
+            "destination_id": "01FJZ8K8GQ4H0J9J9D8F8K8GQ20",
+            "protocol": "https",
+            "encryption": "transport"
+        }

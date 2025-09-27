@@ -1,0 +1,198 @@
+{
+  "risk_prioritization": {
+    "id": "01K65Z2YZGFW4MPM3WHD4EN5M8",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K65Z2YZGFW4MPM3WHD4EN5M0",
+        "threat_title": "Unauthorized Access to API",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement OAuth 2.0 or API keys for secure authentication."
+        ]
+      },
+      {
+        "risk_id": "01K65Z2YZGQG61BJET8XC5NESJ",
+        "threat_title": "Data Tampering in Transit",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use TLS encryption for all data in transit."
+        ]
+      },
+      {
+        "risk_id": "01K65Z2YZGBWQ0W7NPSB6WV75P",
+        "threat_title": "Repudiation of Actions",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement comprehensive logging and monitoring of user actions."
+        ]
+      },
+      {
+        "risk_id": "01K65Z2YZHTWDHE71V3QC0DR94",
+        "threat_title": "Sensitive Data Exposure",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Utilize encryption for sensitive user data stored in DynamoDB and S3."
+        ]
+      },
+      {
+        "risk_id": "01K65Z2YZHZBQ794GBTEF9P4TF",
+        "threat_title": "Denial of Service Attack",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting and throttling on the API Gateway."
+        ]
+      },
+      {
+        "risk_id": "01K65Z2YZHJ13168756BBEQEHB",
+        "threat_title": "Elevation of Privilege via Lambda Functions",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Apply the principle of least privilege to AWS Lambda functions."
+        ]
+      },
+      {
+        "risk_id": "01K65Z2YZKH00D6HJGM96F10K9",
+        "threat_title": "Input Validation Attacks",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement input validation and sanitization to prevent injection attacks."
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K65Z2YZGFW4MPM3WHD4EN5M0"
+      ],
+      "high_priority_risks": [
+        "01K65Z2YZGQG61BJET8XC5NESJ",
+        "01K65Z2YZHTWDHE71V3QC0DR94",
+        "01K65Z2YZGBWQ0W7NPSB6WV75P",
+        "01K65Z2YZHZBQ794GBTEF9P4TF"
+      ],
+      "medium_priority_risks": [
+        "01K65Z2YZHJ13168756BBEQEHB",
+        "01K65Z2YZKH00D6HJGM96F10K9"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K65Z2YZGFW4MPM3WHD4EN5M0": 9.0,
+      "01K65Z2YZGQG61BJET8XC5NESJ": 8.0,
+      "01K65Z2YZGBWQ0W7NPSB6WV75P": 7.0,
+      "01K65Z2YZHTWDHE71V3QC0DR94": 8.0,
+      "01K65Z2YZHZBQ794GBTEF9P4TF": 7.0,
+      "01K65Z2YZHJ13168756BBEQEHB": 6.0,
+      "01K65Z2YZKH00D6HJGM96F10K9": 6.0
+    },
+    "risk_rankings": [
+      [
+        "01K65Z2YZGFW4MPM3WHD4EN5M0",
+        9.0
+      ],
+      [
+        "01K65Z2YZGQG61BJET8XC5NESJ",
+        8.0
+      ],
+      [
+        "01K65Z2YZHTWDHE71V3QC0DR94",
+        8.0
+      ],
+      [
+        "01K65Z2YZGBWQ0W7NPSB6WV75P",
+        7.0
+      ],
+      [
+        "01K65Z2YZHZBQ794GBTEF9P4TF",
+        7.0
+      ],
+      [
+        "01K65Z2YZHJ13168756BBEQEHB",
+        6.0
+      ],
+      [
+        "01K65Z2YZKH00D6HJGM96F10K9",
+        6.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of revenue due to unauthorized access or service disruption.",
+      "operational_impact": "Increased operational overhead to manage security incidents and compliance.",
+      "reputational_impact": "Loss of user trust and potential legal ramifications from data breaches."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-27 16:14:03.993954",
+    "updated_at": "2025-09-27 16:14:03.993960"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "id": "01K65Z3Z1KDXSV2HKY0X27PCQY9J",
+    "title": "Attack Tree for Unauthorized Access to API",
+    "description": "This attack tree outlines the potential paths an attacker may take to gain unauthorized access to the API Gateway, focusing on the risks and countermeasures.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-27 16:15:00+00:00",
+    "last_updated": "2025-09-27 16:11:37.643440",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K65Z4Z1KDXSV2HKY0X27PCQY9K",
+    "description": "Unauthorized Access to API via Weak Authentication Mechanisms",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K65Z5Z1KDXSV2HKY0X27PCQY9L",
+        "description": "Exploitation of Weak API Keys",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement strong API key management and rotation policies.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K65Z6Z1KDXSV2HKY0X27PCQY9M",
+        "description": "Brute Force Attack on Authentication Credentials",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement account lockout mechanisms and CAPTCHA for login attempts.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K65Z7Z1KDXSV2HKY0X27PCQY9N",
+        "description": "Phishing for User Credentials",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Conduct regular security awareness training for users.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.6
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Enforce multi-factor authentication (MFA) for API access.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      },
+      {
+        "description": "Regularly review and update authentication mechanisms.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      }
+    ],
+    "references": []
+  }
+}
