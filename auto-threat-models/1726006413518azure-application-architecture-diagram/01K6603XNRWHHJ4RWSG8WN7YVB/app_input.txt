@@ -1,0 +1,29 @@
+Overall Architecture: The architecture is designed to facilitate secure interactions between users and various Azure services through a structured network setup. It employs an Application Gateway with Web Application Firewall (WAF) for security, private endpoints for secure access to services, and integrates multiple Azure components to support AI and data storage functionalities.
+
+Key Components:
+1. User: The end-user accessing the system.
+2. Application Gateway: Acts as a reverse proxy, providing load balancing and WAF capabilities.
+3. Virtual Network: Segments the network into subnets for better security and management.
+4. Private Endpoints: Enable secure connections to Azure services without exposing them to the public internet.
+5. Azure Firewall: Provides network security by controlling inbound and outbound traffic.
+6. Azure AI Foundry: Hosts AI models and services, integrating with other Azure components.
+7. Azure Cosmos DB: A globally distributed database service for data storage.
+8. Azure Storage: Used for storing application data securely.
+
+Data Flow: Information flows from the user through the Application Gateway, which directs traffic to the appropriate private endpoints. The Azure Firewall monitors and controls this traffic. Data is stored in Azure Cosmos DB and Azure Storage, while AI services interact with these data stores through private endpoints.
+
+Technologies Used: Microsoft Azure services, Application Gateway with WAF, Azure Firewall, Azure Key Vault, Azure AI Foundry, Azure Cosmos DB, Azure Storage, Managed Identities, and Application Insights for monitoring.
+
+Security Considerations: The architecture employs an Application Gateway with WAF for protection against web vulnerabilities, private endpoints to restrict public access to services, and Azure Firewall for controlling traffic. Managed identities are used for secure service-to-service communication.
+
+Top 10 FAQ:
+1. What measures are in place to protect against DDoS attacks?
+2. How is data encrypted in transit and at rest?
+3. What authentication mechanisms are implemented for user access?
+4. How are the private endpoints secured?
+5. What logging and monitoring solutions are in place?
+6. How is the Azure Firewall configured to handle threats?
+7. What is the backup strategy for data stored in Azure Cosmos DB and Azure Storage?
+8. How are updates and patches managed for the services in use?
+9. What incident response plan is established for security breaches?
+10. How is compliance with data protection regulations ensured?
