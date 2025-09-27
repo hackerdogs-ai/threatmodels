@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both models face SQL Injection and XSS vulnerabilities due to user input handling.,,,,2025-09-27T17:12:59.972320
+CORR_002,,,,Both models utilize multi-factor authentication (MFA) to secure user accounts.,,,,2025-09-27T17:12:59.972337
+CORR_003,,,,"Similar patterns of Denial of Service (DoS) attacks are observed, targeting system availability.",,,,2025-09-27T17:12:59.972349
+CORR_004,,,,Both models are susceptible to Cross-Site Request Forgery (CSRF) attacks due to session management issues.,,,,2025-09-27T17:12:59.972360
+CORR_005,,,,Both models emphasize the importance of encrypting sensitive data at rest and in transit.,,,,2025-09-27T17:12:59.972372
+CORR_006,,,,"Similar patterns of Insecure Direct Object References (IDOR) attacks are noted, allowing unauthorized access to resources.",,,,2025-09-27T17:12:59.972383
+CORR_007,,,,Both models must comply with PCI DSS regulations regarding sensitive data handling.,,,,2025-09-27T17:12:59.972394
+CORR_008,,,,Both models implement logging and monitoring to detect suspicious activities.,,,,2025-09-27T17:12:59.972404
+CORR_009,,,,Both models are vulnerable to Sensitive Data Exposure due to improper data handling.,,,,2025-09-27T17:12:59.972415
+CORR_010,,,,"Similar patterns of Authentication Bypass attacks are observed, allowing unauthorized access.",,,,2025-09-27T17:12:59.972425
