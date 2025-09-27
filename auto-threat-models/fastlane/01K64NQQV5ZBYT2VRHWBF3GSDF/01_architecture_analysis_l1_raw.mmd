@@ -1,0 +1,17 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Data_Trust_Boundary, "User Data Trust Boundary") {
+        System(API_Server, "API Server", "Handles incoming requests for application deployment, database management, and user authentication.")
+        SystemDb(Database, "Database", "Stores application data, user information, and deployment configurations. Supports multiple database types like PostgreSQL and MongoDB.")
+    }
+    System_Boundary(tb_Deployment_Trust_Boundary, "Deployment Trust Boundary") {
+        System(API_Server, "API Server", "Handles incoming requests for application deployment, database management, and user authentication.")
+        System(Docker_Management, "Docker Management", "Manages Docker containers for application deployment, scaling, and orchestration using Docker Compose and Docker Swarm.")
+    }
+    System(Frontend_Dashboard, "Frontend Dashboard", "User interface for managing applications, viewing logs, and monitoring resource usage.")
+    System(Notification_Service, "Notification Service", "Sends notifications to users regarding deployment status and alerts through various channels like Slack and Email.")
+
+    Rel(Frontend_Dashboard, API_Server, "Uses")
+    Rel(API_Server, Database, "Uses")
+    Rel(API_Server, Docker_Management, "Uses")
+    Rel(API_Server, Notification_Service, "Uses")

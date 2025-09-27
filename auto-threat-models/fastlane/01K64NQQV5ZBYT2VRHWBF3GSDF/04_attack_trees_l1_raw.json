@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "id": "01K64NS1J5Z7XCZSH32AFMGWTP",
+    "title": "Unauthorized Access Attack Tree",
+    "description": "Attack paths leading to unauthorized access in the Dokploy application.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-27 04:09:26.341642",
+    "last_updated": "2025-09-27 04:09:38.185763",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K64NS1J5Z7XCZSH32AFMGWTP",
+    "description": "Unauthorized Access to Dokploy Application",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K64NS1J5Z7XCZSH32AFMGWTP-1",
+        "description": "Weak Passwords",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement strong password policies.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          },
+          {
+            "description": "Enable multi-factor authentication (MFA).",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K64NS1J5Z7XCZSH32AFMGWTP-2",
+        "description": "Phishing Attacks",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Conduct regular security awareness training.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          },
+          {
+            "description": "Implement email filtering and anti-phishing tools.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.75
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K64NS1J5Z7XCZSH32AFMGWTP-3",
+        "description": "Session Hijacking",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Use secure cookies and HTTPS.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          },
+          {
+            "description": "Implement session timeout and re-authentication.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Regularly update and patch software components.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      },
+      {
+        "description": "Conduct security audits and penetration testing.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.85
+      }
+    ],
+    "references": []
+  }
+}

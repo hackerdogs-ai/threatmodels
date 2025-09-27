@@ -1,0 +1,340 @@
+Repository: https://github.com/Dokploy/dokploy
+
+README.md Content:
+<div align="center">
+  <a href="https://dokploy.com">
+    <img src=".github/sponsors/logo.png" alt="Dokploy - Open Source Alternative to Vercel, Heroku and Netlify." width="100%"  />
+  </a>
+  </br>
+  </br>
+  <p>Join us on Discord for help, feedback, and discussions!</p>
+  <a href="https://discord.gg/2tBnJ3jDJc">
+    <img src="https://discordapp.com/api/guilds/1234073262418563112/widget.png?style=banner2" alt="Discord Shield"/>
+  </a>
+</div>
+<br />
+
+
+
+<div align="center" markdown="1">
+   <sup>Special thanks to:</sup>
+   <br>
+   <br>
+   <a href="https://tuple.app/dokploy">
+     <img src=".github/sponsors/tuple.png" alt="Tuple's sponsorship image" width="400"/>
+   </a>
+
+### [Tuple, the premier screen sharing app for developers](https://tuple.app/dokploy)
+[Available for MacOS & Windows](https://tuple.app/dokploy)<br>
+
+</div>
+
+
+Dokploy is a free, self-hostable Platform as a Service (PaaS) that simplifies the deployment and management of applications and databases.
+
+
+## ✨ Features
+
+Dokploy includes multiple features to make your life easier.
+
+- **Applications**: Deploy any type of application (Node.js, PHP, Python, Go, Ruby, etc.).
+- **Databases**: Create and manage databases with support for MySQL, PostgreSQL, MongoDB, MariaDB, and Redis.
+- **Backups**: Automate backups for databases to an external storage destination.
+- **Docker Compose**: Native support for Docker Compose to manage complex applications.
+- **Multi Node**: Scale applications to multiple nodes using Docker Swarm to manage the cluster.
+- **Templates**: Deploy open-source templates (Plausible, Pocketbase, Calcom, etc.) with a single click.
+- **Traefik Integration**: Automatically integrates with Traefik for routing and load balancing.
+- **Real-time Monitoring**: Monitor CPU, memory, storage, and network usage for every resource.
+- **Docker Management**: Easily deploy and manage Docker containers.
+- **CLI/API**: Manage your applications and databases using the command line or through the API.
+- **Notifications**: Get notified when your deployments succeed or fail (via Slack, Discord, Telegram, Email, etc.).
+- **Multi Server**: Deploy and manage your applications remotely to external servers.
+- **Self-Hosted**: Self-host Dokploy on your VPS.
+
+## 🚀 Getting Started
+
+To get started, run the following command on a VPS:
+
+Want to skip the installation process? [Try the Dokploy Cloud](https://app.dokploy.com).
+
+```bash
+curl -sSL https://dokploy.com/install.sh | sh
+```
+
+For detailed documentation, visit [docs.dokploy.com](https://docs.dokploy.com).
+
+## ♥️ Sponsors
+
+🙏 We're deeply grateful to all our sponsors who make Dokploy possible! Your support helps cover the costs of hosting, testing, and developing new features.
+
+[Dokploy Open Collective](https://opencollective.com/dokploy)
+
+[Github Sponsors](https://github.com/sponsors/Siumauricio)
+
+<!-- Hero Sponsors 🎖 -->
+
+<!-- Add Hero Sponsors here -->
+
+### Hero Sponsors 🎖
+
+<div>
+  <a href="https://www.hostinger.com/vps-hosting?ref=dokploy"><img src=".github/sponsors/hostinger.jpg" alt="Hostinger" width="300"/></a>
+  <a href="https://www.lxaer.com/?ref=dokploy"><img src=".github/sponsors/lxaer.png" alt="LX Aer" width="100"/></a>
+</div>
+
+<!-- Premium Supporters 🥇 -->
+
+<!-- Add Premium Supporters here -->
+
+### Premium Supporters 🥇
+
+<div>
+  <a href="https://supafort.com/?ref=dokploy"><img src="https://supafort.com/build/q-4Ht4rBZR.webp" alt="Supafort.com" width="300"/></a>
+  <a href="https://agentdock.ai/?ref=dokploy"><img src=".github/sponsors/agentdock.png" alt="agentdock.ai" width="100"/></a>
+</div>
+
+<!-- Elite Contributors 🥈 -->
+
+<!-- Add Elite Contributors here -->
+
+### Elite Contributors 🥈
+
+<div>
+  <a href="https://americancloud.com/?ref=dokploy"><img src=".github/sponsors/american-cloud.png" alt="AmericanCloud" width="300"/></a>
+  <a href="https://tolgee.io/?utm_source=github_dokploy&utm_medium=banner&utm_campaign=dokploy"><img src="https://dokploy.com/tolgee-logo.png" alt="Tolgee" width="100"/></a>
+</div>
+
+### Supporting Members 🥉
+
+<div>
+
+  <a href="https://cloudblast.io/?ref=dokploy"><img src="https://cloudblast.io/img/logo-icon.193cf13e.svg" width="250px" alt="Cloudblast.io"/></a>
+
+  <a href="https://synexa.ai/?ref=dokploy"><img src=".github/sponsors/synexa.png" width="65px" alt="Synexa"/></a>
+</div>
+
+### Community Backers 🤝
+
+#### Organizations:
+
+[Sponsors on Open Collective](https://opencollective.com/dokploy)
+
+#### Individuals:
+
+[![Individual Contributors on Open Collective](https://opencollective.com/dokploy/individuals.svg?width=890)](https://opencollective.com/dokploy)
+
+### Contributors 🤝
+
+<a href="https://github.com/dokploy/dokploy/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=dokploy/dokploy" alt="Contributors" />
+</a>
+
+## 📺 Video Tutorial
+
+<a href="https://youtu.be/mznYKPvhcfw">
+  <img src="https://dokploy.com/banner.png" alt="Watch the video" width="400"/>
+</a>
+
+## 🤝 Contributing
+
+Check out the [Contributing Guide](CONTRIBUTING.md) for more information.
+
+
+TS Files:
+File: apps/api/src/index.ts
+Imports:
+import { serve } from "@hono/node-server";
+import { Hono } from "hono";
+import "dotenv/config";
+import { zValidator } from "@hono/zod-validator";
+import { Inngest } from "inngest";
+... (4 more imports)
+
+File: apps/api/src/logger.ts
+Imports:
+import pino from "pino";
+
+File: apps/api/src/schema.ts
+Imports:
+import { z } from "zod";
+
+File: apps/api/src/utils.ts
+Imports:
+import {
+import type { DeployJob } from "./schema";
+
+File: apps/dokploy/components/dashboard/docker/logs/utils.ts
+
+File: apps/dokploy/components/dashboard/settings/certificates/utils.ts
+Functions:
+const getExpirationStatus = (certData: string) =>
+const getCertificateChainInfo = (certData: string) =>
+
+File: apps/dokploy/components/dashboard/settings/destination/constants.ts
+
+File: apps/dokploy/esbuild.config.ts
+Imports:
+import dotenv, { type DotenvParseOutput } from "dotenv";
+import esbuild from "esbuild";
+Functions:
+function prepareDefine(config: DotenvParseOutput | undefined) {
+
+File: apps/dokploy/lib/auth-client.ts
+Imports:
+import {
+import { createAuthClient } from "better-auth/react";
+
+File: apps/dokploy/lib/languages.ts
+
+File: apps/dokploy/lib/slug.ts
+Imports:
+import slug from "slugify";
+Functions:
+const slugify = (text: string | undefined) =>
+
+File: apps/dokploy/lib/utils.ts
+Imports:
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+Functions:
+function cn(...inputs: ClassValue[]) {
+function generateSHA256Hash(text: string) {
+function formatTimestamp(timestamp: string | number) {
+
+File: apps/dokploy/migration.ts
+Imports:
+import { drizzle } from "drizzle-orm/postgres-js";
+import { migrate } from "drizzle-orm/postgres-js/migrator";
+import postgres from "postgres";
+
+File: apps/dokploy/pages/api/[...trpc].ts
+Imports:
+import { validateRequest } from "@dokploy/server";
+import { createOpenApiNextHandler } from "@dokploy/trpc-openapi";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { appRouter } from "@/server/api/root";
+import { createTRPCContext } from "@/server/api/trpc";
+
+File: apps/dokploy/pages/api/auth/[...all].ts
+Imports:
+import { auth } from "@dokploy/server/index";
+import { toNodeHandler } from "better-auth/node";
+
+File: apps/dokploy/pages/api/deploy/[refreshToken].ts
+Imports:
+import {
+import { eq } from "drizzle-orm";
+import type { NextApiRequest, NextApiResponse } from "next";
+... (5 more imports)
+Functions:
+function extractImageTag(dockerImage: string | null) {
+const extractCommitMessage = (headers: any, body: any) =>
+const extractHash = (headers: any, body: any) =>
+const extractBranchName = (headers: any, body: any) =>
+const getProviderByHeader = (headers: any) =>
+
+File: apps/dokploy/pages/api/deploy/compose/[refreshToken].ts
+Imports:
+import { IS_CLOUD, shouldDeploy } from "@dokploy/server";
+import { eq } from "drizzle-orm";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { db } from "@/server/db";
+import { compose } from "@/server/db/schema";
+... (4 more imports)
+
+File: apps/dokploy/pages/api/deploy/github.ts
+Imports:
+import {
+import { Webhooks } from "@octokit/webhooks";
+import { and, eq } from "drizzle-orm";
+... (7 more imports)
+
+File: apps/dokploy/pages/api/health.ts
+Imports:
+import type { NextApiRequest, NextApiResponse } from "next";
+
+File: apps/dokploy/pages/api/providers/gitea/authorize.ts
+Imports:
+import type { NextApiRequest, NextApiResponse } from "next";
+import { findGitea, redirectWithError } from "./helper";
+
+File: apps/dokploy/pages/api/providers/gitea/callback.ts
+Imports:
+import { updateGitea } from "@dokploy/server";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { findGitea, type Gitea, redirectWithError } from "./helper";
+
+File: apps/dokploy/pages/api/providers/gitea/helper.ts
+Imports:
+import { findGiteaById } from "@dokploy/server";
+import type { NextApiResponse } from "next";
+Functions:
+const redirectWithError = (res: NextApiResponse, error: string) =>
+
+File: apps/dokploy/pages/api/providers/github/setup.ts
+Imports:
+import { createGithub } from "@dokploy/server";
+import { eq } from "drizzle-orm";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { Octokit } from "octokit";
+import { db } from "@/server/db";
+... (1 more imports)
+
+File: apps/dokploy/pages/api/providers/github/webhook.ts
+Imports:
+import type { NextApiRequest, NextApiResponse } from "next";
+
+File: apps/dokploy/pages/api/providers/gitlab/callback.ts
+Imports:
+import { findGitlabById, updateGitlab } from "@dokploy/server";
+import type { NextApiRequest, NextApiResponse } from "next";
+
+File: apps/dokploy/pages/api/stripe/webhook.ts
+Imports:
+import { buffer } from "node:stream/consumers";
+import { findUserById, type Server } from "@dokploy/server";
+import { asc, eq } from "drizzle-orm";
+import type { NextApiRequest, NextApiResponse } from "next";
+import Stripe from "stripe";
+... (2 more imports)
+
+File: apps/dokploy/pages/api/trpc/[trpc].ts
+Imports:
+import { createNextApiHandler } from "@trpc/server/adapters/next";
+import { nodeHTTPFormDataContentTypeHandler } from "@trpc/server/adapters/node-http/content-type/form-data";
+import { nodeHTTPJSONContentTypeHandler } from "@trpc/server/adapters/node-http/content-type/json";
+import { appRouter } from "@/server/api/root";
+import { createTRPCContext } from "@/server/api/trpc";
+
+File: apps/dokploy/reset-2fa.ts
+Imports:
+import { findAdmin } from "@dokploy/server";
+import { db } from "@dokploy/server/db";
+import { users_temp } from "@dokploy/server/db/schema";
+import { eq } from "drizzle-orm";
+
+File: apps/dokploy/reset-password.ts
+Imports:
+import { findAdmin, generateRandomPassword } from "@dokploy/server";
+import { db } from "@dokploy/server/db";
+import { account } from "@dokploy/server/db/schema";
+import { eq } from "drizzle-orm";
+
+File: apps/dokploy/server/api/root.ts
+Imports:
+import { createTRPCRouter } from "../api/trpc";
+import { adminRouter } from "./routers/admin";
+import { aiRouter } from "./routers/ai";
+import { applicationRouter } from "./routers/application";
+import { backupRouter } from "./routers/backup";
+... (36 more imports)
+
+
+INFO Files:
+Analysis truncated: 318 more files not analyzed due to token limit.
+
+
+Repository Analysis Summary:
+- Files analyzed: 30 of 348 total files
+- Token usage estimate: ~2808 tokens
+- Token limit configured: 4000 tokens
