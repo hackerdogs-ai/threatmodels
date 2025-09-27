@@ -1,0 +1,40 @@
+{
+  "project_name": "Azure Web Application Security Architecture",
+  "line_of_business": [
+    "Web Application Hosting",
+    "Identity Management",
+    "Data Storage",
+    "System Monitoring"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "Azure Active Directory"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "Data encryption in transit and at rest",
+    "Access control for sensitive information",
+    "Intrusion detection and prevention",
+    "Secure management access"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threat model encompasses the entire architecture including user interactions, data flow, and security measures",
+  "assumptions": [
+    "User data is sensitive and must be protected",
+    "Proper configuration and management of Azure resources",
+    "User access is authenticated and authorized"
+  ],
+  "constraints": [
+    "Dependent on Azure services availability",
+    "Compliance with applicable regulations",
+    "Limitations in budget for security enhancements"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "01K66220AJVMGSA0NK8XF6VWKQ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Application Gateway",
+      "description": "Acts as a load balancer and provides routing and security features for incoming traffic.",
+      "type": "frontend"
+    },
+    {
+      "name": "Web App",
+      "description": "The core application hosted on Azure that processes user requests and interacts with the database.",
+      "type": "backend"
+    },
+    {
+      "name": "Azure SQL Database",
+      "description": "A managed database service for storing application data securely.",
+      "type": "database"
+    },
+    {
+      "name": "Web App Firewall",
+      "description": "Protects the web application from common threats and vulnerabilities.",
+      "type": "security service"
+    },
+    {
+      "name": "Azure Active Directory",
+      "description": "Manages user identities and access to the web application.",
+      "type": "identity management"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Users",
+      "destination": "Application Gateway",
+      "description": "Users initiate a DNS lookup that resolves to the Application Gateway, which routes traffic to the Web App."
+    },
+    {
+      "source": "Web App",
+      "destination": "Azure SQL Database",
+      "description": "The Web App interacts with the Azure SQL Database to retrieve and store application data."
+    },
+    {
+      "source": "Application Gateway",
+      "destination": "Web App Firewall",
+      "description": "Incoming traffic is filtered through the Web App Firewall for security checks before reaching the Web App."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Interaction Boundary",
+      "description": "The boundary between end-users and the application infrastructure.",
+      "components": [
+        "Application Gateway",
+        "Web App"
+      ]
+    },
+    {
+      "name": "Data Storage Boundary",
+      "description": "The boundary protecting the database and sensitive data.",
+      "components": [
+        "Web App",
+        "Azure SQL Database",
+        "Azure Key Vault"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-27 17:03:17.330730",
+  "updated_at": "2025-09-27 17:03:17.330745"
+}

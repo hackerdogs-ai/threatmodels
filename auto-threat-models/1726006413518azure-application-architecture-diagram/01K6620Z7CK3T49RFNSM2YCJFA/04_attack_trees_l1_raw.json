@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "id": "01K6623Q16H60HPV71PQ65WF3W",
+    "title": "Attack Tree for SQL Injection",
+    "description": "This attack tree outlines the potential paths an attacker may take to exploit SQL Injection vulnerabilities in the Azure Web Application.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-27 17:05:00+00:00",
+    "last_updated": "2025-09-27 17:04:24.593164",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6623Q16H60HPV71PQ65WF3W",
+    "description": "SQL Injection Attack Path",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6623Q16H60HPV71PQ65WF3W-1",
+        "description": "User inputs malicious SQL code into input fields",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement parameterized queries and prepared statements",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Use Web Application Firewall (WAF) to filter SQL injection attempts",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6623Q16H60HPV71PQ65WF3W-2",
+        "description": "Attacker exploits vulnerable API endpoints",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Conduct regular security assessments and penetration testing",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          },
+          {
+            "description": "Implement input validation and sanitization for API requests",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Regularly update and patch application dependencies",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      },
+      {
+        "description": "Educate developers on secure coding practices",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      }
+    ],
+    "references": []
+  }
+}

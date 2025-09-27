@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"SQL Injection is a common threat across various web application architectures, indicating a need for consistent input validation practices.",,,,2025-09-27T17:07:47.442594
+CORR_002,,,,"Cross-Site Scripting (XSS) vulnerabilities are prevalent in both web applications and e-commerce platforms, necessitating robust input sanitization.",,,,2025-09-27T17:07:47.442604
+CORR_003,,,,Both models emphasize the importance of strong authentication mechanisms to mitigate session hijacking risks.,,,,2025-09-27T17:07:47.442611
+CORR_004,,,,"Denial of Service (DoS) attacks are a shared concern, highlighting the need for DDoS protection mechanisms in cloud environments.",,,,2025-09-27T17:07:47.442616
+CORR_005,,,,Data Exposure due to Misconfiguration is a critical threat in both database management and web application contexts.,,,,2025-09-27T17:07:47.442622
+CORR_006,,,,Both models advocate for the implementation of access control checks to prevent Insecure Direct Object References (IDOR).,,,,2025-09-27T17:07:47.442627
+CORR_007,,,,"Weak Authentication Mechanisms are a common vulnerability in both web and mobile applications, emphasizing the need for strong authentication practices.",,,,2025-09-27T17:07:47.442633
+CORR_008,,,,"Both models must adhere to strict compliance requirements, such as PCI DSS, which mandates strong authentication and data protection measures.",,,,2025-09-27T17:07:47.442638
+CORR_009,,,,"Both models face similar risks related to data exposure, necessitating a unified approach to data protection strategies.",,,,2025-09-27T17:07:47.442644
+CORR_010,,,,"Insufficient Input Validation is a common vulnerability in IoT devices and web applications, highlighting the need for robust validation mechanisms.",,,,2025-09-27T17:07:47.442649
