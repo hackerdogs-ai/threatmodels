@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Database_Trust_Boundary, "Database Trust Boundary") {
+        System(Scheduler_Manager, "Scheduler Manager", "Core component that initializes APScheduler, registers tasks, and manages their execution.")
+        SystemDb(Database__PostgreSQL_, "Database (PostgreSQL)", "Persistent storage for schedules and job history, ensuring data reliability.")
+    }
+    System_Boundary(tb_Task_Execution_Trust_Boundary, "Task Execution Trust Boundary") {
+        System(Task_Queue__Redis_, "Task Queue (Redis)", "Manages task queuing and caching to optimize task execution.")
+        System(Task_Workers, "Task Workers", "Execute specific tasks such as cache management and LLM provider synchronization.")
+    }
+    System(Environment_Variables, "Environment Variables", "Stores configuration settings such as database and Redis URLs securely.")
+
+    Rel(Environment_Variables, Scheduler_Manager, "Uses")
+    Rel(Scheduler_Manager, Database__PostgreSQL_, "Uses")
+    Rel(Scheduler_Manager, Task_Queue__Redis_, "Uses")
+    Rel(Task_Queue__Redis_, Task_Workers, "Uses")

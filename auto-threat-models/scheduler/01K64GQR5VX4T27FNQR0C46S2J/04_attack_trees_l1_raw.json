@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "id": "01K64GSNT0Q54YGMJZ10QDJGNH",
+    "title": "Attack Tree for Unauthorized Access to Environment Variables",
+    "description": "This attack tree outlines the potential paths for unauthorized access to environment variables, which may expose sensitive configuration settings.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-27 02:45:00+00:00",
+    "last_updated": "2025-09-27 02:42:44.332657",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K64GSNT0Q54YGMJZ10QDJGNH",
+    "description": "Unauthorized Access to Environment Variables",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K64GSNT0Q54YGMJZ10QDJGNH-1",
+        "description": "Exploitation of Insecure Server Configuration",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K64GSNT0Q54YGMJZ10QDJGNH-1-1",
+            "description": "Access to server via weak credentials",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 8.0,
+              "impact": 9.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement strong password policies",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K64GSNT0Q54YGMJZ10QDJGNH-1-2",
+            "description": "Misconfigured file permissions",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 5.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Regularly audit file permissions",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Use a web application firewall (WAF)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K64GSNT0Q54YGMJZ10QDJGNH-2",
+        "description": "Social Engineering Attack",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K64GSNT0Q54YGMJZ10QDJGNH-2-1",
+            "description": "Phishing email targeting employees",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 7.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Conduct regular security awareness training",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K64GSNT0Q54YGMJZ10QDJGNH-2-2",
+            "description": "Impersonation of IT staff",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 4.0,
+              "impact": 7.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement strict verification protocols for IT requests",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.85
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Implement multi-factor authentication (MFA)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.95
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Use environment variable management tools",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      },
+      {
+        "description": "Encrypt sensitive environment variables",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      }
+    ],
+    "references": []
+  }
+}

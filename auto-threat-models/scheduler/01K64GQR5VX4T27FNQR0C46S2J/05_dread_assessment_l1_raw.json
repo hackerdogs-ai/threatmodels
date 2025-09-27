@@ -1,0 +1,229 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K64GSNSZ1T8W2W6QP6QSWM96",
+      "threat_title": "Unauthorized Access to Environment Variables",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 21,
+      "risk_level": "medium",
+      "justification": "Access to environment variables can lead to exposure of sensitive configurations, but the attack requires specific conditions to be met.",
+      "recommendations": [
+        "Implement strict access controls for environment variables.",
+        "Use secret management tools to handle sensitive configurations."
+      ],
+      "assessment_date": "2025-09-27 02:43:13.026897",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64GSNSZV3ADYCKHZW3Z4CEC",
+      "threat_title": "SQL Injection Attacks",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 6,
+        "exploitability": 5,
+        "affected_users": 4,
+        "discoverability": 4
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "SQL injection can lead to significant data manipulation or retrieval, but requires knowledge of the database structure.",
+      "recommendations": [
+        "Implement parameterized queries and prepared statements.",
+        "Regularly audit and test for SQL injection vulnerabilities."
+      ],
+      "assessment_date": "2025-09-27 02:43:13.028200",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64GSNSZEJRXEFFZTKNXYECS",
+      "threat_title": "Denial of Service via Task Overloading",
+      "dread_scores": {
+        "damage": 7,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 4
+      },
+      "total_risk_score": 26,
+      "risk_level": "medium",
+      "justification": "Flooding the task queue can degrade performance significantly, affecting all users, but requires sustained effort to execute.",
+      "recommendations": [
+        "Implement rate limiting on task submissions.",
+        "Monitor and limit the number of concurrent tasks."
+      ],
+      "assessment_date": "2025-09-27 02:43:13.028761",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64GSNT0SCE9VHR3R7WWQC5S",
+      "threat_title": "Information Disclosure through Logging",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 4,
+        "exploitability": 3,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 18,
+      "risk_level": "medium",
+      "justification": "Sensitive information may be logged unintentionally, but the likelihood of exploitation depends on access to logs.",
+      "recommendations": [
+        "Implement logging best practices to avoid sensitive data exposure.",
+        "Regularly review logs for sensitive information."
+      ],
+      "assessment_date": "2025-09-27 02:43:13.029249",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64GSNT0TM83MYC4TA3GF24E",
+      "threat_title": "Insufficient Input Validation",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 4,
+        "discoverability": 4
+      },
+      "total_risk_score": 22,
+      "risk_level": "medium",
+      "justification": "Lack of input validation can lead to harmful command execution, but requires specific inputs to exploit.",
+      "recommendations": [
+        "Implement strict input validation and sanitization.",
+        "Conduct regular security testing to identify vulnerabilities."
+      ],
+      "assessment_date": "2025-09-27 02:43:13.029740",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64GSNT0Q54YGMJZ10QDJGNH",
+      "threat_title": "Repudiation of Task Execution",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 3,
+        "exploitability": 2,
+        "affected_users": 3,
+        "discoverability": 3
+      },
+      "total_risk_score": 14,
+      "risk_level": "low",
+      "justification": "Without proper logging, users can deny actions, but the impact is limited to accountability issues.",
+      "recommendations": [
+        "Implement comprehensive logging and audit trails.",
+        "Ensure logs are tamper-proof and accessible for audits."
+      ],
+      "assessment_date": "2025-09-27 02:43:13.030212",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "low",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64GSNT01Q5EVYBCV6J2JV11",
+      "threat_title": "Elevation of Privilege through Misconfigured Roles",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 4
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Misconfigured roles can allow unauthorized access, but requires knowledge of the system's role structure.",
+      "recommendations": [
+        "Regularly review and audit user roles and permissions.",
+        "Implement role-based access control best practices."
+      ],
+      "assessment_date": "2025-09-27 02:43:13.030652",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The DREAD risk assessment for the APScheduler Task Management System identifies several medium-level threats, primarily related to unauthorized access, SQL injection, denial of service, and insufficient input validation. Recommendations focus on implementing best practices for security, access control, and logging to mitigate these risks."
+}
