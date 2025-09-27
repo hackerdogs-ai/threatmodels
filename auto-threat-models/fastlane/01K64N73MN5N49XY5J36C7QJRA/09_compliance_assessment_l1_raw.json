@@ -1,0 +1,75 @@
+{
+  "compliance_assessment": {
+    "id": "01K64N89Z8AW6HTA5XCWF148PY5",
+    "framework": "GDPR",
+    "framework_description": "General Data Protection Regulation - A regulation in EU law on data protection and privacy in the European Union and the European Economic Area.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 65.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-1",
+        "requirement": "Obtain explicit consent from users for data processing.",
+        "status": "partially_compliant",
+        "evidence": "User consent mechanisms are in place but need improvement.",
+        "gaps": [
+          "Lack of clear consent forms",
+          "No option to withdraw consent easily"
+        ],
+        "recommendations": [
+          "Implement clear and concise consent forms",
+          "Provide easy withdrawal options for users"
+        ]
+      },
+      {
+        "requirement_id": "GDPR-2",
+        "requirement": "Ensure data minimization and purpose limitation.",
+        "status": "non_compliant",
+        "evidence": "Data collection practices are not fully aligned with minimization principles.",
+        "gaps": [
+          "Collecting unnecessary user data",
+          "No clear purpose for all collected data"
+        ],
+        "recommendations": [
+          "Review data collection practices",
+          "Limit data collection to what is necessary for functionality"
+        ]
+      },
+      {
+        "requirement_id": "GDPR-3",
+        "requirement": "Implement data protection by design and by default.",
+        "status": "partially_compliant",
+        "evidence": "Some features are designed with privacy in mind, but not all.",
+        "gaps": [
+          "Inconsistent application of privacy features",
+          "Lack of default privacy settings"
+        ],
+        "recommendations": [
+          "Adopt a privacy-first approach in all features",
+          "Ensure default settings prioritize user privacy"
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Inadequate user consent mechanisms",
+      "Insufficient data minimization practices"
+    ],
+    "remediation_plan": [
+      "Conduct a data audit to identify unnecessary data collection",
+      "Revise consent forms and processes to enhance clarity and user control",
+      "Implement training for development teams on privacy by design principles"
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-27 04:02:54.486765",
+    "assessor": null,
+    "created_at": "2025-09-27 04:02:54.486769",
+    "updated_at": "2025-09-27 04:02:54.486777"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K64N89Z5ME8M4FXE2BZQ8BT4",
+      "threat_title": "Unauthorized Access",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 20,
+      "risk_level": "medium",
+      "justification": "Unauthorized access can lead to significant data breaches and compromise user accounts, but the complexity of exploiting such vulnerabilities can vary.",
+      "recommendations": [
+        "Implement strong authentication mechanisms.",
+        "Regularly review and update session management practices."
+      ],
+      "assessment_date": "2025-09-27 04:01:12.289716",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64N89Z6ENR82YS68EZTPVVM",
+      "threat_title": "Data Leakage",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 4,
+        "discoverability": 4
+      },
+      "total_risk_score": 22,
+      "risk_level": "medium",
+      "justification": "Data leakage can expose sensitive information, affecting a broad range of users, but the exploitability is moderate due to necessary access controls.",
+      "recommendations": [
+        "Enhance access controls and data encryption.",
+        "Regularly audit data storage practices."
+      ],
+      "assessment_date": "2025-09-27 04:01:12.290306",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64N89Z71131XSKMT065BKC5",
+      "threat_title": "Malicious Input Handling",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 20,
+      "risk_level": "medium",
+      "justification": "Injection attacks can lead to severe consequences, but they require specific conditions to be met for exploitation.",
+      "recommendations": [
+        "Implement input validation and sanitization.",
+        "Conduct regular security testing for vulnerabilities."
+      ],
+      "assessment_date": "2025-09-27 04:01:12.292395",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64N89Z8CE2GTYR1M2R46HPB",
+      "threat_title": "Denial of Service Attack",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 4,
+        "discoverability": 4
+      },
+      "total_risk_score": 21,
+      "risk_level": "medium",
+      "justification": "Denial of service can disrupt service availability, affecting many users, but requires significant resources to execute effectively.",
+      "recommendations": [
+        "Implement rate limiting and traffic monitoring.",
+        "Use DDoS protection services."
+      ],
+      "assessment_date": "2025-09-27 04:01:12.294855",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64N89Z8AW6HTA5XCWF148PY",
+      "threat_title": "Session Fixation",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 20,
+      "risk_level": "medium",
+      "justification": "Session fixation can lead to account hijacking, but exploiting this vulnerability requires specific conditions.",
+      "recommendations": [
+        "Implement secure session management practices.",
+        "Regularly regenerate session IDs."
+      ],
+      "assessment_date": "2025-09-27 04:01:12.295129",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64N89Z8M6HEWJ68V27R7SV1",
+      "threat_title": "File System Exposure",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 20,
+      "risk_level": "medium",
+      "justification": "Improper file handling can lead to sensitive data exposure, but requires specific vulnerabilities to be present.",
+      "recommendations": [
+        "Ensure proper file permissions and access controls.",
+        "Conduct regular security audits of file handling practices."
+      ],
+      "assessment_date": "2025-09-27 04:01:12.295507",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The DREAD assessment identified several medium-level risks associated with the Fastlane application, primarily focusing on unauthorized access, data leakage, and input handling vulnerabilities. Recommendations for mitigation include enhancing authentication mechanisms, implementing strong access controls, and conducting regular security audits."
+}
