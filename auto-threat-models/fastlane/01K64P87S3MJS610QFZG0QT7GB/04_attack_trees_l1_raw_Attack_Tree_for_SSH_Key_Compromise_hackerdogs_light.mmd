@@ -1,0 +1,44 @@
+graph TB
+  node_01K64P9M6CJZQR4D8AZ0432AZ3["Compromise of SSH key leading to unauthorized deployment. | [HIGH]"]:::highRisk
+  node_01K64P9M6CJZQR4D8AZ0432AZ4["Attacker gains access to the SSH private key. | [HIGH]"]:::highRisk
+  node_01K64P9M6CJZQR4D8AZ0432AZ5["Key is stolen from a compromised machine. | [HIGH]"]:::highRisk
+  node_01K64P9M6CJZQR4D8AZ0432AZ5_cm_0["CM: Use strong passwords for SSH keys. (Eff: 0.8)"]:::countermeasure
+  node_01K64P9M6CJZQR4D8AZ0432AZ5_cm_1["CM: Regularly rotate SSH keys. (Eff: 0.7)"]:::countermeasure
+  node_01K64P9M6CJZQR4D8AZ0432AZ6["Key is obtained through social engineering. | [HIGH]"]:::highRisk
+  node_01K64P9M6CJZQR4D8AZ0432AZ6_cm_0["CM: Conduct security awareness training for users. (Eff: 0.9)"]:::countermeasure
+  node_01K64P9M6CJZQR4D8AZ0432AZ6_cm_1["CM: Implement two-factor authentication for SSH access. (Eff: 0.85)"]:::countermeasure
+  node_01K64P9M6CJZQR4D8AZ0432AZ4_cm_0["CM: Implement strict access controls on machines storing SSH keys. (Eff: 0.75)"]:::countermeasure
+  node_01K64P9M6CJZQR4D8AZ0432AZ7["Attacker exploits weak SSH configurations. | [MED]"]:::mediumRisk
+  node_01K64P9M6CJZQR4D8AZ0432AZ8["Weak ciphers or protocols are used. | [MED]"]:::mediumRisk
+  node_01K64P9M6CJZQR4D8AZ0432AZ8_cm_0["CM: Enforce strong SSH configurations and ciphers. (Eff: 0.9)"]:::countermeasure
+  node_01K64P9M6CJZQR4D8AZ0432AZ9["Root login is allowed via SSH. | [HIGH]"]:::highRisk
+  node_01K64P9M6CJZQR4D8AZ0432AZ9_cm_0["CM: Disable root login over SSH. (Eff: 0.95)"]:::countermeasure
+  node_01K64P9M6CJZQR4D8AZ0432AZ7_cm_0["CM: Regularly audit SSH configurations. (Eff: 0.8)"]:::countermeasure
+  node_01K64P9M6CJZQR4D8AZ0432AZ3_cm_0["CM: Implement comprehensive logging and monitoring of SSH access. (Eff: 0.85)"]:::countermeasure
+
+  node_01K64P9M6CJZQR4D8AZ0432AZ3 -.-> node_01K64P9M6CJZQR4D8AZ0432AZ4
+  node_01K64P9M6CJZQR4D8AZ0432AZ4 --> node_01K64P9M6CJZQR4D8AZ0432AZ5
+  node_01K64P9M6CJZQR4D8AZ0432AZ5 -.-> node_01K64P9M6CJZQR4D8AZ0432AZ5_cm_0
+  node_01K64P9M6CJZQR4D8AZ0432AZ5 -.-> node_01K64P9M6CJZQR4D8AZ0432AZ5_cm_1
+  node_01K64P9M6CJZQR4D8AZ0432AZ4 --> node_01K64P9M6CJZQR4D8AZ0432AZ6
+  node_01K64P9M6CJZQR4D8AZ0432AZ6 -.-> node_01K64P9M6CJZQR4D8AZ0432AZ6_cm_0
+  node_01K64P9M6CJZQR4D8AZ0432AZ6 -.-> node_01K64P9M6CJZQR4D8AZ0432AZ6_cm_1
+  node_01K64P9M6CJZQR4D8AZ0432AZ4 -.-> node_01K64P9M6CJZQR4D8AZ0432AZ4_cm_0
+  node_01K64P9M6CJZQR4D8AZ0432AZ3 -.-> node_01K64P9M6CJZQR4D8AZ0432AZ7
+  node_01K64P9M6CJZQR4D8AZ0432AZ7 --> node_01K64P9M6CJZQR4D8AZ0432AZ8
+  node_01K64P9M6CJZQR4D8AZ0432AZ8 -.-> node_01K64P9M6CJZQR4D8AZ0432AZ8_cm_0
+  node_01K64P9M6CJZQR4D8AZ0432AZ7 --> node_01K64P9M6CJZQR4D8AZ0432AZ9
+  node_01K64P9M6CJZQR4D8AZ0432AZ9 -.-> node_01K64P9M6CJZQR4D8AZ0432AZ9_cm_0
+  node_01K64P9M6CJZQR4D8AZ0432AZ7 -.-> node_01K64P9M6CJZQR4D8AZ0432AZ7_cm_0
+  node_01K64P9M6CJZQR4D8AZ0432AZ3 -.-> node_01K64P9M6CJZQR4D8AZ0432AZ3_cm_0
+
+  classDef andNode fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef orNode fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef highRisk fill:#FFB3B3,color:#8B0000,stroke:#8B0000,stroke-width:2px
+  classDef mediumRisk fill:#FFF200,stroke:#7A6300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#ffa1ad,stroke:#A259FF,stroke-width:1px,stroke-dasharray:3 3,color:#0B0D17
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

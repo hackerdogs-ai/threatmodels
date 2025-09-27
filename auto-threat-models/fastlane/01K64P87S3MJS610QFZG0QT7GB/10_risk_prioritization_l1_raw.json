@@ -1,0 +1,207 @@
+{
+  "risk_prioritization": {
+    "id": "01K64P9M6CJZQR4D8AZ0432AZ3",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K64P9M6CJZQR4D8AZ0432AZ3",
+        "threat_title": "SSH Key Compromise",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "1 month",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement strong SSH key management practices.",
+          "Use passphrases for private keys.",
+          "Regularly rotate SSH keys."
+        ]
+      },
+      {
+        "risk_id": "01K64P9M6CKQ1WREPA7M3EPN6V",
+        "threat_title": "Insecure SSH Configuration",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "1 month",
+        "dependencies": [],
+        "recommended_actions": [
+          "Configure SSH with strong ciphers.",
+          "Disable root login.",
+          "Use non-standard ports."
+        ]
+      },
+      {
+        "risk_id": "01K64P9M6D3036XMQRE2Q5P3NC",
+        "threat_title": "Denial of Service via Deployment Scripts",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "2 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement a review process for deployment scripts.",
+          "Ensure scripts are free from malicious code."
+        ]
+      },
+      {
+        "risk_id": "01K64P9M6DRZQ1VJQQAY3SACHN",
+        "threat_title": "Improper Input Validation in Rake Tasks",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "2 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Validate all user inputs in Rake tasks.",
+          "Prevent command injection."
+        ]
+      },
+      {
+        "risk_id": "01K64P9M6DDP8AS1DA5PEZ3XAQ",
+        "threat_title": "Information Disclosure through Logs",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "low",
+        "timeline": "1 month",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement logging best practices.",
+          "Avoid logging sensitive information."
+        ]
+      },
+      {
+        "risk_id": "01K64P9M6DHZ6J244H92MC87GZ",
+        "threat_title": "Repudiation of Deployment Actions",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "3 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Establish a logging and monitoring system.",
+          "Ensure accountability for deployment actions."
+        ]
+      },
+      {
+        "risk_id": "01K64P9M6D9ZGWFYD06RDMVXD2",
+        "threat_title": "Elevation of Privilege via Misconfigured Roles",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "3 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Regularly review and audit server roles and permissions.",
+          "Ensure correct configurations."
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K64P9M6CJZQR4D8AZ0432AZ3",
+        "01K64P9M6CKQ1WREPA7M3EPN6V"
+      ],
+      "high_priority_risks": [
+        "01K64P9M6D3036XMQRE2Q5P3NC",
+        "01K64P9M6DRZQ1VJQQAY3SACHN"
+      ],
+      "medium_priority_risks": [
+        "01K64P9M6DDP8AS1DA5PEZ3XAQ",
+        "01K64P9M6DHZ6J244H92MC87GZ",
+        "01K64P9M6D9ZGWFYD06RDMVXD2"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K64P9M6CJZQR4D8AZ0432AZ3": 9.0,
+      "01K64P9M6CKQ1WREPA7M3EPN6V": 8.0,
+      "01K64P9M6D3036XMQRE2Q5P3NC": 7.0,
+      "01K64P9M6DRZQ1VJQQAY3SACHN": 7.0,
+      "01K64P9M6DDP8AS1DA5PEZ3XAQ": 6.0,
+      "01K64P9M6DHZ6J244H92MC87GZ": 5.0,
+      "01K64P9M6D9ZGWFYD06RDMVXD2": 5.0
+    },
+    "risk_rankings": [
+      [
+        "01K64P9M6CJZQR4D8AZ0432AZ3",
+        9.0
+      ],
+      [
+        "01K64P9M6CKQ1WREPA7M3EPN6V",
+        8.0
+      ],
+      [
+        "01K64P9M6D3036XMQRE2Q5P3NC",
+        7.0
+      ],
+      [
+        "01K64P9M6DRZQ1VJQQAY3SACHN",
+        7.0
+      ],
+      [
+        "01K64P9M6DDP8AS1DA5PEZ3XAQ",
+        6.0
+      ],
+      [
+        "01K64P9M6DHZ6J244H92MC87GZ",
+        5.0
+      ],
+      [
+        "01K64P9M6D9ZGWFYD06RDMVXD2",
+        5.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of revenue due to downtime or data breaches.",
+      "operational_impact": "Disruption of deployment processes and potential service outages.",
+      "reputational_impact": "Loss of customer trust and damage to brand reputation."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-27 04:21:37.212760",
+    "updated_at": "2025-09-27 04:21:37.212788"
+  }
+}

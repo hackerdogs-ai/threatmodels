@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "id": "01K64P9M6CJZQR4D8AZ0432AZ3",
+    "title": "Attack Tree for SSH Key Compromise",
+    "description": "An attack tree detailing the paths an attacker may take to compromise SSH keys used in the Capistrano Deployment Automation Tool.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-27 04:18:29+00:00",
+    "last_updated": "2025-09-27 04:18:48.838476",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K64P9M6CJZQR4D8AZ0432AZ3",
+    "description": "Compromise of SSH key leading to unauthorized deployment.",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K64P9M6CJZQR4D8AZ0432AZ4",
+        "description": "Attacker gains access to the SSH private key.",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K64P9M6CJZQR4D8AZ0432AZ5",
+            "description": "Key is stolen from a compromised machine.",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 6.0,
+              "impact": 9.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Use strong passwords for SSH keys.",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              },
+              {
+                "description": "Regularly rotate SSH keys.",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.7
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K64P9M6CJZQR4D8AZ0432AZ6",
+            "description": "Key is obtained through social engineering.",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 5.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Conduct security awareness training for users.",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              },
+              {
+                "description": "Implement two-factor authentication for SSH access.",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.85
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Implement strict access controls on machines storing SSH keys.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.75
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K64P9M6CJZQR4D8AZ0432AZ7",
+        "description": "Attacker exploits weak SSH configurations.",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K64P9M6CJZQR4D8AZ0432AZ8",
+            "description": "Weak ciphers or protocols are used.",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 5.0,
+              "impact": 7.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Enforce strong SSH configurations and ciphers.",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K64P9M6CJZQR4D8AZ0432AZ9",
+            "description": "Root login is allowed via SSH.",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 4.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Disable root login over SSH.",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.95
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Regularly audit SSH configurations.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement comprehensive logging and monitoring of SSH access.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.85
+      }
+    ],
+    "references": []
+  }
+}

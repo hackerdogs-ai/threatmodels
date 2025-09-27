@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both Capistrano and other web application deployment models face threats related to SSH key compromise and insecure configurations, impacting deployment integrity.",,,,2025-09-27T04:21:50.100392
+CORR_002,,,,Mitigations such as input validation and logging best practices are common across Capistrano and containerized deployment solutions.,,,,2025-09-27T04:21:50.100403
+CORR_003,,,,Both Capistrano and IaC frameworks are susceptible to denial of service attacks via misconfigured scripts or resources.,,,,2025-09-27T04:21:50.100409
+CORR_004,,,,"Compliance requirements for secure SSH configurations are shared between Capistrano and cloud deployment models, emphasizing the need for strong authentication mechanisms.",,,,2025-09-27T04:21:50.100445
+CORR_005,,,,"Threats related to improper input validation and information disclosure are prevalent in both Capistrano and DevOps practices, allowing for a unified risk management approach.",,,,2025-09-27T04:21:50.100455
+CORR_006,,,,Both Capistrano and CI/CD pipelines are vulnerable to elevation of privilege through misconfigured roles or permissions.,,,,2025-09-27T04:21:50.100462
+CORR_007,,,,Mitigations for SSH key management and secure configurations are applicable to both Capistrano and server configuration management tools.,,,,2025-09-27T04:21:50.100467
+CORR_008,,,,"Both Capistrano and API deployment frameworks face risks from information disclosure through logs, particularly sensitive data exposure.",,,,2025-09-27T04:21:50.100473
+CORR_009,,,,"Compliance requirements for secure deployment practices overlap between Capistrano and microservices architectures, particularly regarding logging and monitoring.",,,,2025-09-27T04:21:50.100478
+CORR_010,,,,"Similar threats related to denial of service and improper input validation exist between Capistrano and legacy deployment systems, allowing for shared risk management strategies.",,,,2025-09-27T04:21:50.100484

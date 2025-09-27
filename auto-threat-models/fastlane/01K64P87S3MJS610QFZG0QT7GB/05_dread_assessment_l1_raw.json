@@ -1,0 +1,236 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K64P9M6CJZQR4D8AZ0432AZ3",
+      "threat_title": "SSH Key Compromise",
+      "dread_scores": {
+        "damage": 7,
+        "reproducibility": 6,
+        "exploitability": 5,
+        "affected_users": 8,
+        "discoverability": 6
+      },
+      "total_risk_score": 32,
+      "risk_level": "high",
+      "justification": "The compromise of an SSH key can lead to unauthorized access and deployment of malicious code, affecting multiple users and systems. The damage potential is high due to the critical nature of deployment access.",
+      "recommendations": [
+        "Implement strong key management practices.",
+        "Use passphrase-protected SSH keys.",
+        "Regularly rotate SSH keys."
+      ],
+      "assessment_date": "2025-09-27 04:19:19.248719",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64P9M6CKQ1WREPA7M3EPN6V",
+      "threat_title": "Insecure SSH Configuration",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 27,
+      "risk_level": "medium",
+      "justification": "Weak SSH configurations can be exploited to gain unauthorized access, but the impact is somewhat mitigated by the need for specific conditions to be met.",
+      "recommendations": [
+        "Enforce strong SSH configurations.",
+        "Disable root login and use key-based authentication.",
+        "Regularly audit SSH settings."
+      ],
+      "assessment_date": "2025-09-27 04:19:19.249114",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64P9M6D3036XMQRE2Q5P3NC",
+      "threat_title": "Denial of Service via Deployment Scripts",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 6,
+        "discoverability": 5
+      },
+      "total_risk_score": 27,
+      "risk_level": "medium",
+      "justification": "Malicious scripts can disrupt services, but the likelihood of such scripts being executed without detection is moderate.",
+      "recommendations": [
+        "Implement input validation for deployment scripts.",
+        "Monitor deployment activities for anomalies.",
+        "Limit script execution permissions."
+      ],
+      "assessment_date": "2025-09-27 04:19:19.249683",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64P9M6DRZQ1VJQQAY3SACHN",
+      "threat_title": "Improper Input Validation in Rake Tasks",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 26,
+      "risk_level": "medium",
+      "justification": "Improper input validation can lead to command injection, but the complexity of exploiting this vulnerability may limit its impact.",
+      "recommendations": [
+        "Implement strict input validation in Rake tasks.",
+        "Conduct regular security reviews of deployment scripts.",
+        "Use automated tools to detect vulnerabilities."
+      ],
+      "assessment_date": "2025-09-27 04:19:19.249981",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64P9M6DDP8AS1DA5PEZ3XAQ",
+      "threat_title": "Information Disclosure through Logs",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 5,
+        "affected_users": 4,
+        "discoverability": 6
+      },
+      "total_risk_score": 24,
+      "risk_level": "medium",
+      "justification": "Sensitive information may be logged, but the actual risk depends on the logging practices and access controls in place.",
+      "recommendations": [
+        "Avoid logging sensitive information.",
+        "Implement log access controls.",
+        "Regularly review logs for sensitive data exposure."
+      ],
+      "assessment_date": "2025-09-27 04:19:19.251049",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64P9M6DHZ6J244H92MC87GZ",
+      "threat_title": "Repudiation of Deployment Actions",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 22,
+      "risk_level": "medium",
+      "justification": "Without proper logging, users may deny actions taken during deployment, but the overall impact is limited to accountability issues.",
+      "recommendations": [
+        "Implement comprehensive logging of deployment actions.",
+        "Ensure logs are tamper-proof.",
+        "Regularly audit logs for accountability."
+      ],
+      "assessment_date": "2025-09-27 04:19:19.251270",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K64P9M6D9ZGWFYD06RDMVXD2",
+      "threat_title": "Elevation of Privilege via Misconfigured Roles",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 6,
+        "discoverability": 5
+      },
+      "total_risk_score": 26,
+      "risk_level": "medium",
+      "justification": "Misconfigured roles can lead to privilege escalation, but the likelihood of this occurring depends on the deployment environment's configuration.",
+      "recommendations": [
+        "Regularly review and audit server roles and permissions.",
+        "Implement role-based access control.",
+        "Limit access to sensitive deployment tasks."
+      ],
+      "assessment_date": "2025-09-27 04:19:19.251482",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The Capistrano Deployment Automation Tool faces several threats primarily related to authentication, input validation, and data protection. Key risks include SSH key compromise, insecure configurations, and potential denial of service attacks through malicious scripts. Proper security measures and input validation are crucial to mitigate these risks."
+}
