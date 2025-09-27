@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Interaction_Boundary, "User Interaction Boundary") {
+        System(Web_UI, "Web UI", "A dynamic interface that allows users to interact with the backend service, visualize data, and manage configurations.")
+        System(Backend_Service, "Backend Service", "The core processing unit that handles requests, executes workflows, and integrates with various APIs for data retrieval and processing.")
+    }
+    System_Boundary(tb_External_API_Boundary, "External API Boundary") {
+        System(Backend_Service, "Backend Service", "The core processing unit that handles requests, executes workflows, and integrates with various APIs for data retrieval and processing.")
+        System(Search_Engine_Integration, "Search Engine Integration", "A module that connects to various search APIs (e.g., Tavily) to fetch data for research tasks.")
+    }
+    System(Configuration_Management, "Configuration Management", "Handles loading and managing configuration settings for the application, including API keys and model parameters.")
+
+    Rel(Web_UI, Backend_Service, "Uses")
+    Rel(Backend_Service, Search_Engine_Integration, "Uses")
+    Rel(Backend_Service, Configuration_Management, "Uses")

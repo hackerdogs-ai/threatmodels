@@ -1,0 +1,205 @@
+{
+  "risk_prioritization": {
+    "id": "01K66H8DR6P9ZKADCV6ZWEDPMW",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K66H8DR5530T415SFY3KGS4X",
+        "threat_title": "Unauthorized Access",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement multi-factor authentication (MFA).",
+          "Review and strengthen access control policies."
+        ]
+      },
+      {
+        "risk_id": "01K66H8DR6Q9QKX0CWGPPVA3XF",
+        "threat_title": "Data Tampering",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use encryption for data at rest and in transit.",
+          "Implement data integrity checks."
+        ]
+      },
+      {
+        "risk_id": "01K66H8DR65RQTG13X4GV294MM",
+        "threat_title": "Information Disclosure",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Regularly audit configurations.",
+          "Implement proper logging and monitoring."
+        ]
+      },
+      {
+        "risk_id": "01K66H8DR6MRQC8M3C8ENXWBPY",
+        "threat_title": "Denial of Service (DoS)",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting.",
+          "Monitor traffic patterns for anomalies."
+        ]
+      },
+      {
+        "risk_id": "01K66H8DR68FH4B9AY9N7PY862",
+        "threat_title": "Input Validation Attacks",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Validate and sanitize all user inputs.",
+          "Conduct regular security assessments."
+        ]
+      },
+      {
+        "risk_id": "01K66H8DR6P9ZKADCV6ZWEDPMW",
+        "threat_title": "Repudiation of Actions",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "low",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement logging and auditing mechanisms.",
+          "Ensure logs are tamper-proof."
+        ]
+      },
+      {
+        "risk_id": "01K66H8DR65ME86F4AWPJ2W57T",
+        "threat_title": "Elevation of Privilege",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "high",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Conduct regular security assessments.",
+          "Review user roles and permissions."
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K66H8DR5530T415SFY3KGS4X",
+        "01K66H8DR68FH4B9AY9N7PY862"
+      ],
+      "high_priority_risks": [
+        "01K66H8DR6Q9QKX0CWGPPVA3XF",
+        "01K66H8DR65RQTG13X4GV294MM"
+      ],
+      "medium_priority_risks": [
+        "01K66H8DR6MRQC8M3C8ENXWBPY",
+        "01K66H8DR6P9ZKADCV6ZWEDPMW",
+        "01K66H8DR65ME86F4AWPJ2W57T"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K66H8DR5530T415SFY3KGS4X": 9.0,
+      "01K66H8DR6Q9QKX0CWGPPVA3XF": 8.0,
+      "01K66H8DR65RQTG13X4GV294MM": 7.0,
+      "01K66H8DR6MRQC8M3C8ENXWBPY": 7.0,
+      "01K66H8DR68FH4B9AY9N7PY862": 8.0,
+      "01K66H8DR6P9ZKADCV6ZWEDPMW": 6.0,
+      "01K66H8DR65ME86F4AWPJ2W57T": 5.0
+    },
+    "risk_rankings": [
+      [
+        "01K66H8DR5530T415SFY3KGS4X",
+        9.0
+      ],
+      [
+        "01K66H8DR68FH4B9AY9N7PY862",
+        8.0
+      ],
+      [
+        "01K66H8DR6Q9QKX0CWGPPVA3XF",
+        8.0
+      ],
+      [
+        "01K66H8DR65RQTG13X4GV294MM",
+        7.0
+      ],
+      [
+        "01K66H8DR6MRQC8M3C8ENXWBPY",
+        7.0
+      ],
+      [
+        "01K66H8DR6P9ZKADCV6ZWEDPMW",
+        6.0
+      ],
+      [
+        "01K66H8DR65ME86F4AWPJ2W57T",
+        5.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of revenue due to service downtime and data breaches.",
+      "operational_impact": "Disruption of research processes and loss of user trust.",
+      "reputational_impact": "Damage to brand reputation and loss of customer confidence."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-27 21:31:38.127673",
+    "updated_at": "2025-09-27 21:31:38.127681"
+  }
+}

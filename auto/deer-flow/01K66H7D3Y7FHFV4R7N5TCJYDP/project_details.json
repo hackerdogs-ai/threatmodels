@@ -1,0 +1,37 @@
+{
+  "project_name": "DeerFlow",
+  "line_of_business": [
+    "Deep Research",
+    "Artificial Intelligence",
+    "Web Services"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "API Keys",
+    "OAuth"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "CCPA"
+  ],
+  "security_requirements": [
+    "Data Encryption",
+    "Access Control",
+    "Input Validation"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threat modeling for the DeerFlow application, focusing on data handling and user interactions.",
+  "assumptions": [
+    "Users will access the application over the internet",
+    "API keys will be used for authentication",
+    "Data processed is sensitive and requires protection"
+  ],
+  "constraints": [
+    "Limited to Python 3.12+ and Node.js 22+",
+    "Dependency on external APIs for functionality"
+  ]
+}

@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both DeerFlow and Project X face threats related to unauthorized access, data tampering, and information disclosure due to similar architecture and user interaction patterns.",,,,2025-09-27T21:31:51.700084
+CORR_002,,,,"DeerFlow and Project Y utilize encryption for data at rest and in transit, which is a common mitigation strategy against data tampering.",,,,2025-09-27T21:31:51.700097
+CORR_003,,,,"Injection attacks are a common threat pattern identified in both DeerFlow and Project Z, highlighting the need for robust input validation.",,,,2025-09-27T21:31:51.700104
+CORR_004,,,,"Both DeerFlow and Project A must comply with data protection regulations such as GDPR, which necessitates similar data handling and security practices.",,,,2025-09-27T21:31:51.700110
+CORR_005,,,,The cumulative risk from denial of service threats across DeerFlow and Project B can be mitigated through shared infrastructure and monitoring solutions.,,,,2025-09-27T21:31:51.700116
+CORR_006,,,,"Repudiation of actions is a common threat in both DeerFlow and Project C, where lack of proper logging can lead to accountability issues.",,,,2025-09-27T21:31:51.700122
+CORR_007,,,,Both DeerFlow and Project D emphasize the importance of strong authentication mechanisms to prevent unauthorized access.,,,,2025-09-27T21:31:51.700129
+CORR_008,,,,"Input validation vulnerabilities are prevalent in both DeerFlow and Project E, indicating a need for improved validation techniques.",,,,2025-09-27T21:31:51.700135
+CORR_009,,,,"DeerFlow and Project F are both subject to similar compliance frameworks, necessitating aligned security measures.",,,,2025-09-27T21:31:51.700141
+CORR_010,,,,"The risk of data tampering is present in both DeerFlow and Project G, suggesting a collaborative approach to data integrity checks.",,,,2025-09-27T21:31:51.700146

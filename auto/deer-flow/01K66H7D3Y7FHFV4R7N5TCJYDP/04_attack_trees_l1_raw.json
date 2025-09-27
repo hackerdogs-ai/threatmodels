@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "id": "01K66H8DR6P9ZKADCV6ZWEDPMW",
+    "title": "Unauthorized Access Attack Tree",
+    "description": "Attack paths leading to unauthorized access in the DeerFlow application.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-27 21:28:56+00:00",
+    "last_updated": "2025-09-27 21:29:07.579192",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K66H8DR6P9ZKADCV6ZWEDPMW",
+    "description": "Unauthorized access to the DeerFlow application.",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K66H8DR6P9ZKADCV6ZWEDPMW-1",
+        "description": "Exploitation of weak authentication mechanisms.",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement strong password policies and multi-factor authentication.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K66H8DR6P9ZKADCV6ZWEDPMW-2",
+        "description": "Misconfigured access controls.",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Regularly review and audit access control configurations.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K66H8DR6P9ZKADCV6ZWEDPMW-3",
+        "description": "Phishing attacks targeting users to gain credentials.",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Conduct user training on recognizing phishing attempts.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement a comprehensive security awareness program.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.85
+      },
+      {
+        "description": "Utilize intrusion detection systems to monitor for unauthorized access attempts.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      }
+    ],
+    "references": []
+  }
+}

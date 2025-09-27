@@ -1,0 +1,236 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K66H8DR5530T415SFY3KGS4X",
+      "threat_title": "Unauthorized Access",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 5
+      },
+      "total_risk_score": 19,
+      "risk_level": "medium",
+      "justification": "Unauthorized access can lead to sensitive data exposure and manipulation, affecting a moderate number of users. The attack can be reproduced with moderate effort due to potential weak authentication mechanisms.",
+      "recommendations": [
+        "Implement strong authentication mechanisms.",
+        "Regularly review and update access controls.",
+        "Conduct security audits to identify vulnerabilities."
+      ],
+      "assessment_date": "2025-09-27 21:29:35.661113",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66H8DR6Q9QKX0CWGPPVA3XF",
+      "threat_title": "Data Tampering",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 3,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 18,
+      "risk_level": "medium",
+      "justification": "Data tampering can significantly alter research outcomes, affecting users relying on accurate data. The attack can be executed with moderate complexity and is reasonably discoverable.",
+      "recommendations": [
+        "Implement data integrity checks.",
+        "Use encryption for data in transit and at rest.",
+        "Monitor data access and modifications."
+      ],
+      "assessment_date": "2025-09-27 21:29:35.661575",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66H8DR65RQTG13X4GV294MM",
+      "threat_title": "Information Disclosure",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 3,
+        "exploitability": 4,
+        "affected_users": 4,
+        "discoverability": 4
+      },
+      "total_risk_score": 19,
+      "risk_level": "medium",
+      "justification": "Information disclosure can lead to exposure of sensitive data, impacting a larger user base. The attack can be reproduced with moderate effort and is reasonably discoverable.",
+      "recommendations": [
+        "Ensure proper configuration of sensitive data storage.",
+        "Implement encryption for sensitive information.",
+        "Conduct regular security assessments."
+      ],
+      "assessment_date": "2025-09-27 21:29:35.661780",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66H8DR6MRQC8M3C8ENXWBPY",
+      "threat_title": "Denial of Service (DoS)",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 4
+      },
+      "total_risk_score": 21,
+      "risk_level": "medium",
+      "justification": "DoS attacks can disrupt service for all users, making it a significant threat. The attack can be executed with moderate complexity and is easily discoverable.",
+      "recommendations": [
+        "Implement rate limiting and traffic monitoring.",
+        "Use DDoS protection services.",
+        "Ensure redundancy in server infrastructure."
+      ],
+      "assessment_date": "2025-09-27 21:29:35.661973",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66H8DR68FH4B9AY9N7PY862",
+      "threat_title": "Input Validation Attacks",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 19,
+      "risk_level": "medium",
+      "justification": "Input validation attacks can lead to significant data breaches or system compromise. The attack is reproducible with moderate effort and is reasonably discoverable.",
+      "recommendations": [
+        "Implement strict input validation and sanitization.",
+        "Use prepared statements for database queries.",
+        "Conduct regular security training for developers."
+      ],
+      "assessment_date": "2025-09-27 21:29:35.662192",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66H8DR6P9ZKADCV6ZWEDPMW",
+      "threat_title": "Repudiation of Actions",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 3,
+        "exploitability": 3,
+        "affected_users": 2,
+        "discoverability": 3
+      },
+      "total_risk_score": 14,
+      "risk_level": "low",
+      "justification": "Without proper logging, users can deny actions, leading to accountability issues. The impact is limited to specific users and is moderately discoverable.",
+      "recommendations": [
+        "Implement comprehensive logging and auditing.",
+        "Ensure logs are tamper-proof.",
+        "Regularly review logs for suspicious activity."
+      ],
+      "assessment_date": "2025-09-27 21:29:35.662376",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K66H8DR65ME86F4AWPJ2W57T",
+      "threat_title": "Elevation of Privilege",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 19,
+      "risk_level": "medium",
+      "justification": "Elevation of privilege can allow unauthorized access to sensitive functionalities, impacting a moderate number of users. The attack can be reproduced with moderate effort and is reasonably discoverable.",
+      "recommendations": [
+        "Implement role-based access control.",
+        "Regularly review user permissions.",
+        "Conduct security audits to identify privilege escalation vulnerabilities."
+      ],
+      "assessment_date": "2025-09-27 21:29:35.662832",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The assessment identifies several threats with medium risk levels, primarily due to their potential impact on users and the system. Recommendations focus on improving authentication, data integrity, and logging mechanisms to mitigate these risks."
+}
