@@ -1,0 +1,28 @@
+{
+  "architecture_overview": "A scalable, highly available web application on AWS that routes traffic through Route 53 and an Elastic Load Balancer, serves dynamic content via EC2 web and app servers, stores data in RDS, caches with Elastic Cache, serves static assets from S3 (optionally via CloudFront), and handles notifications with SNS/SES.",
+  "components": [
+    {
+      "name": "Web Tier",
+      "description": "Handles HTTP(S) requests, includes ELB, EC2 web servers, and CloudFront for edge caching.",
+      "type": "frontend"
+    },
+    {
+      "name": "App Tier",
+      "description": "Processes business logic, runs EC2 app servers, and uses Elastic Cache for in‑memory caching.",
+      "type": "backend"
+    },
+    {
+      "name": "Database Tier",
+      "description": "Managed relational database with primary and standby instances for high availability.",
+      "type": "database"
+    },
+    {
+      "name": "Storage Tier",
+      "description": "S3 bucket for static assets such as images and files.",
+      "type": "storage"
+    },
+    {
+      "name": "Notification Tier",
+      "description": "SNS for push notifications and SES for email delivery.",
+      "type": "service"
+    }

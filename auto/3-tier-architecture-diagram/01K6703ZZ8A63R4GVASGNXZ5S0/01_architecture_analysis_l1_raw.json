@@ -1,0 +1,58 @@
+{
+  "id": "01K6704WPRXQ68EET18AQ24GA3",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Web Tier",
+      "description": "Handles HTTP(S) requests, includes ELB, EC2 web servers, and CloudFront for edge caching.",
+      "type": "frontend"
+    },
+    {
+      "name": "App Tier",
+      "description": "Processes business logic, runs EC2 app servers, and uses Elastic\u00a0Cache for in\u2011memory caching.",
+      "type": "backend"
+    },
+    {
+      "name": "Database Tier",
+      "description": "Managed relational database with primary and standby instances for high availability.",
+      "type": "database"
+    },
+    {
+      "name": "Storage Tier",
+      "description": "S3 bucket for static assets such as images and files.",
+      "type": "storage"
+    },
+    {
+      "name": "Notification Tier",
+      "description": "SNS for push notifications and SES for email delivery.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 01:49:09.209796",
+  "updated_at": "2025-09-28 01:49:09.209804"
+}

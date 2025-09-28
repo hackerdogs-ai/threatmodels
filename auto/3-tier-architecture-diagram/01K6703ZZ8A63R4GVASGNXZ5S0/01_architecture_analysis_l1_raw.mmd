@@ -1,0 +1,7 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(Web_Tier, "Web Tier", "Handles HTTP(S) requests, includes ELB, EC2 web servers, and CloudFront for edge caching.")
+    System(App_Tier, "App Tier", "Processes business logic, runs EC2 app servers, and uses Elastic Cache for in‑memory caching.")
+    SystemDb(Database_Tier, "Database Tier", "Managed relational database with primary and standby instances for high availability.")
+    SystemDb(Storage_Tier, "Storage Tier", "S3 bucket for static assets such as images and files.")
+    System(Notification_Tier, "Notification Tier", "SNS for push notifications and SES for email delivery.")
