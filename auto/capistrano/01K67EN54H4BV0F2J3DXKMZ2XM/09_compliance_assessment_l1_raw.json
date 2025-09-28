@@ -1,0 +1,58 @@
+{
+  "compliance_assessment": {
+    "id": "01K67EQ4Z6Y7V8Q4JW9X0Y2Z6Q",
+    "framework": "ISO/IEC 27001:2022",
+    "framework_description": "International standard for information security management systems (ISMS) focusing on risk-based security controls.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 78.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "A.8.2.1",
+        "requirement": "Implement appropriate controls for asset management and access control.",
+        "status": "partially_compliant",
+        "evidence": "Encrypted secrets management (control ID 01K67EQ4ZY4Y0HJ69C0ARQ47TS) and RBAC (01K67EQ4ZZ5CSZFS29F1JF0R23) address access control.",
+        "gaps": [
+          "Missing documentation of asset inventory and access control policies"
+        ],
+        "recommendations": [
+          "Document all assets and access control policies",
+          "Conduct regular access control reviews"
+        ]
+      },
+      {
+        "requirement_id": "A.12.2.1",
+        "requirement": "Implement controls for incident management and information security incident response.",
+        "status": "not_applicable",
+        "evidence": "No incident response controls identified in security controls",
+        "gaps": [
+          "Lack of incident response procedures"
+        ],
+        "recommendations": [
+          "Implement incident response plan with escalation procedures"
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Missing documentation of security controls and policies",
+      "No incident response procedures"
+    ],
+    "remediation_plan": [
+      "Document all security controls and update asset inventory",
+      "Implement incident response procedures and conduct drills",
+      "Prioritize RBAC and encrypted secrets management implementation"
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-28 06:09:07.305998",
+    "assessor": null,
+    "created_at": "2025-09-28 06:09:07.306003",
+    "updated_at": "2025-09-28 06:09:07.306007"
+  }
+}

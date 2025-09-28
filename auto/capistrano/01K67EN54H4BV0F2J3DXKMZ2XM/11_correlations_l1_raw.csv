@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"CLI command injection vulnerabilities are common in CLI-based deployment tools (e.g., Jenkins, Ansible), creating similar spoofing risks.",,,,2025-09-28T06:11:40.232368
+CORR_002,,,,Input validation and RBAC (role-based access control) are standard mitigations for CLI-related threats.,,,,2025-09-28T06:11:40.232385
+CORR_003,,,,"Privilege escalation via CLI access mirrors patterns in container runtime vulnerabilities (e.g., Docker CLI exploits).",,,,2025-09-28T06:11:40.232396
+CORR_004,,,,Secrets management risks align with GDPR Article 30 requirements for data protection in automated systems.,,,,2025-09-28T06:11:40.232406
+CORR_005,,,,Spoofing and elevation of privilege threats could combine to create persistent system access risks.,,,,2025-09-28T06:11:40.232416
+CORR_006,,,,"Digital signing of deployment tasks aligns with DevOps toolchain integrity requirements (e.g., GitOps practices).",,,,2025-09-28T06:11:40.232425
+CORR_007,,,,Resource exhaustion DoS attacks resemble patterns in cloud infrastructure denial-of-service scenarios.,,,,2025-09-28T06:11:40.232435
+CORR_008,,,,Access control requirements overlap with NIST SP 800-53 Rev. 4 AC-2 for system resource management.,,,,2025-09-28T06:11:40.232444
+CORR_009,,,,Encrypted secrets management practices align with SOC 2 Type II requirements for data protection.,,,,2025-09-28T06:11:40.232453
+CORR_010,,,,Tampering and information disclosure threats could combine to create data breach scenarios.,,,,2025-09-28T06:11:40.232463

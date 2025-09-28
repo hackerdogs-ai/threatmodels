@@ -1,0 +1,155 @@
+{
+  "id": "000000000000000000000000",
+  "name": "Capistrano Deployment Threat Model",
+  "version": "1.0.0",
+  "description": "Data flow diagram for Capistrano deployment tool focusing on code deployment, configuration management, and server interaction",
+  "created_at": "2025-09-28 06:03:28.505926",
+  "last_updated": "2025-09-28 06:03:28.506011",
+  "data_assets": [
+    {
+      "id": "000000000000000000000001",
+      "name": "deployment_script",
+      "description": null,
+      "classification": "public",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "000000000000000000000002",
+      "name": "user_credentials",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "000000000000000000000003",
+      "name": "server_configuration",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "000000000000000000000004",
+      "name": "deployment_logs",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "000000000000000000000005",
+      "name": "application_code",
+      "description": null,
+      "classification": "confidential",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "000000000000000000000006",
+      "name": "deployment_frontend",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "untrusted",
+      "external_references": {}
+    },
+    {
+      "id": "000000000000000000000007",
+      "name": "deployment_backend",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "000000000000000000000008",
+      "name": "configuration_database",
+      "description": null,
+      "type": "database",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "000000000000000000000009",
+      "name": "ci_cd_service",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "000000000000000000000010",
+      "name": "capistrano_config_db",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "000000000000000000000011",
+      "name": "deployment_artifacts",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "transport",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "000000000000000000000012",
+      "name": "developer_user",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "000000000000000000000013",
+      "name": "github_repository",
+      "description": null,
+      "type": "system",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "000000000000000000000014",
+      "name": "remote_servers",
+      "description": null,
+      "type": "system",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "000000000000000000000015",
+      "name": "ci_cd_system",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [],
+  "defined_trust_boundaries": []
+}

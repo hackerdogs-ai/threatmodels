@@ -1,0 +1,92 @@
+{
+    "id": "000000000000000000000000",
+    "name": "Capistrano Deployment Threat Model",
+    "description": "Data flow diagram for Capistrano deployment tool focusing on code deployment, configuration management, and server interaction",
+    "data_assets": [
+        {
+            "id": "000000000000000000000001",
+            "name": "deployment_script",
+            "classification": "public"
+        },
+        {
+            "id": "000000000000000000000002",
+            "name": "user_credentials",
+            "classification": "pii"
+        },
+        {
+            "id": "000000000000000000000003",
+            "name": "server_configuration",
+            "classification": "internal"
+        },
+        {
+            "id": "000000000000000000000004",
+            "name": "deployment_logs",
+            "classification": "internal"
+        },
+        {
+            "id": "000000000000000000000005",
+            "name": "application_code",
+            "classification": "confidential"
+        }
+    ],
+    "processes": [
+        {
+            "id": "000000000000000000000006",
+            "name": "deployment_frontend",
+            "type": "frontend",
+            "trust_level": "untrusted"
+        },
+        {
+            "id": "000000000000000000000007",
+            "name": "deployment_backend",
+            "type": "backend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "000000000000000000000008",
+            "name": "configuration_database",
+            "type": "database",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "000000000000000000000009",
+            "name": "ci_cd_service",
+            "type": "service",
+            "trust_level": "low_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "000000000000000000000010",
+            "name": "capistrano_config_db",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "000000000000000000000011",
+            "name": "deployment_artifacts",
+            "type": "file",
+            "encryption": "transport"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "000000000000000000000012",
+            "name": "developer_user",
+            "type": "user"
+        },
+        {
+            "id": "000000000000000000000013",
+            "name": "github_repository",
+            "type": "system"
+        },
+        {
+            "id": "000000000000000000000014",
+            "name": "remote_servers",
+            "type": "system"
+        },
+        {
+            "id": "000000000000000000000015",
+            "name": "ci_cd_system",
+            "type": "service"
+        }

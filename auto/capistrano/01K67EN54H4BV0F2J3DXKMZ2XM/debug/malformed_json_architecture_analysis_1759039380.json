@@ -1,0 +1,53 @@
+{
+  "architecture_overview": "Capistrano is a deployment tool for Ruby applications, featuring a CLI interface, task execution engine, and integration with version control systems like Git. The architecture emphasizes automation, configuration management, and secure credential handling.",
+  "components": [
+    {
+      "name": "CLI Interface",
+      "description": "Command-line interface for user interaction and deployment task initiation.",
+      "type": "frontend"
+    },
+    {
+      "name": "Task Execution Engine",
+      "description": "Core component handling deployment workflows, plugin execution, and task orchestration.",
+      "type": "backend"
+    },
+    {
+      "name": "Git Integration",
+      "description": "Module for interacting with Git repositories to manage code versions and deployment branches.",
+      "type": "service"
+    },
+    {
+      "name": "Secrets Manager",
+      "description": "Secure storage and retrieval of sensitive data like API keys and credentials.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "CLI Interface",
+      "destination": "Task Execution Engine",
+      "description": "User commands and deployment parameters are passed from CLI to the task engine."
+    },
+    {
+      "source": "Task Execution Engine",
+      "destination": "Git Integration",
+      "description": "Deployment tasks trigger Git operations like branch switching and commit retrieval."
+    },
+    {
+      "source": "Secrets Manager",
+      "destination": "Task Execution Engine",
+      "description": "Authentication credentials and secrets are injected into the task engine for secure operations."
+    }
+  ],
+  "security_considerations": [
+    "CLI interface must enforce authentication to prevent unauthorized deployment commands.",
+    "Secure handling of secrets via encryption-at-rest and secure injection mechanisms.",
+    "Mitigate Git-related attacks (e.g., code injection) by validating repository URLs and branch names.",
+    "Prevent command injection vulnerabilities in plugin execution pipelines."
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User CLI Trust Boundary",
+      "description": "CLI interface is considered trusted as it originates from authenticated users, but input validation is required.",
+      "components": ["CLI Interface", "Task Execution Engine"]
+    }

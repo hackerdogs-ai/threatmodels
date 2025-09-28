@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "id": "01K67EQ4ZTNWPTH9JQ4VN4CW6H",
+    "title": "Spoofing via CLI Command Injection Attack Tree",
+    "description": "Attack paths for spoofing threats through CLI command injection in Capistrano",
+    "author": null,
+    "version": null,
+    "created": "2025-09-28 06:04:00+00:00",
+    "last_updated": "2025-09-28 06:04:38.489423",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K67EQ4ZTNWPTH9JQ4VN4CW6H",
+    "description": "Spoofing via CLI Command Injection",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 8.0,
+      "impact": 9.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K67EQ4ZTNWPTH9JQ4VN4CW6H-1",
+        "description": "Bypass CLI Input Validation",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 7.0,
+          "impact": 6.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement strict input validation and sanitization for CLI commands",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K67EQ4ZTNWPTH9JQ4VN4CW6H-2",
+        "description": "Execute Malicious Commands",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 10.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Enforce privilege separation and restrict CLI command execution scope",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.75
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Deploy runtime command whitelisting for CLI interactions",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      },
+      {
+        "description": "Use secure authentication mechanisms for CLI access",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      }
+    ],
+    "references": []
+  }
+}

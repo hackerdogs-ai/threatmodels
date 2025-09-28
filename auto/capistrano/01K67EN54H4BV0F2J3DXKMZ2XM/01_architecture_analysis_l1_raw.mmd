@@ -1,0 +1,12 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_CLI_Trust_Boundary, "User CLI Trust Boundary") {
+        System(CLI_Interface, "CLI Interface", "Command-line interface for user interaction and deployment task initiation.")
+        System(Task_Execution_Engine, "Task Execution Engine", "Core component handling deployment workflows, plugin execution, and task orchestration.")
+    }
+    System(Git_Integration, "Git Integration", "Module for interacting with Git repositories to manage code versions and deployment branches.")
+    System(Secrets_Manager, "Secrets Manager", "Secure storage and retrieval of sensitive data like API keys and credentials.")
+
+    Rel(CLI_Interface, Task_Execution_Engine, "Uses")
+    Rel(Task_Execution_Engine, Git_Integration, "Uses")
+    Rel(Secrets_Manager, Task_Execution_Engine, "Uses")
