@@ -1,0 +1,89 @@
+{
+    "id": "01F3G4H5J6K7L8M9N2P3Q4R5",
+    "name": "Inference Application Data Flow",
+    "description": "Basic data flow diagram for machine learning inference application showing data movement between components",
+    "data_assets": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R1",
+            "name": "user_input_data",
+            "classification": "public"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R2",
+            "name": "model_parameters",
+            "classification": "restricted"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R3",
+            "name": "inference_results",
+            "classification": "internal"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R4",
+            "name": "user_credentials",
+            "classification": "pii"
+        }
+    ],
+    "processes": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S1",
+            "name": "frontend_service",
+            "type": "frontend",
+            "trust_level": "untrusted"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S2",
+            "name": "inference_engine",
+            "type": "backend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S3",
+            "name": "model_repository",
+            "type": "database",
+            "trust_level": "very_high_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4T1",
+            "name": "model_database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4T2",
+            "name": "inference_cache",
+            "type": "cache",
+            "encryption": "transport"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4U1",
+            "name": "authenticated_user",
+            "type": "user"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4U2",
+            "name": "third_party_data_source",
+            "type": "system"
+        }
+    ],
+    "data_flows": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4V1",
+            "name": "user_to_frontend",
+            "source_id": "01F3G4H5J6K7L8M9N2P3Q4U1",
+            "destination_id": "01F3G4H5J6K7L8M9N2P3Q4S1",
+            "protocol": "https",
+            "encryption": "end_to_end"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4V2",
+            "name": "frontend_to_inference",
+            "source_id": "01F3G4H5J6K7L8M9N2P3Q4S1",
+            "destination_id": "01F3G4H5J6K7L8M9N2P3Q4S2",
+            "protocol": "grpc",
+            "encryption": "transport"
+        }

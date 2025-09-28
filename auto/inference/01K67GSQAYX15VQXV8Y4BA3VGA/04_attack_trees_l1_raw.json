@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "id": "01K67H0J3Y4X6Q8V7Z2PQW5R6S",
+    "title": "Insecure Data Transmission Attack Tree",
+    "description": "Attack paths for data interception during inference system operations",
+    "author": null,
+    "version": null,
+    "created": "2025-09-28 07:00:00+00:00",
+    "last_updated": "2025-09-28 06:41:45.066051",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K67H0J3Y4X6Q8V7Z2PQW5R6S",
+    "description": "Insecure Data Transmission",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 8.0,
+      "impact": 9.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K67H0J3Y4X6Q8V7Z2PQW5R6T",
+        "description": "Intercept data flow between Model Service and Database",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 7.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement TLS encryption for all data in transit",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          },
+          {
+            "description": "Use secure communication protocols (e.g., HTTPS, mTLS)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K67H0J3Y4X6Q8V7Z2PQW5R6U",
+        "description": "Exploit unencrypted API communication between Frontend and Backend",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Enforce HTTPS with certificate validation",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Implement API request signing and validation",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.6
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Deploy network segmentation with firewall rules",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.7
+      },
+      {
+        "description": "Implement data encryption at rest for database storage",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.6
+      }
+    ],
+    "references": []
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "compliance_assessment": {
+    "id": "01K67GVMH000000000000021",
+    "framework": "GDPR",
+    "framework_description": "Regulation governing data protection and privacy in the European Union, focusing on data subject rights, data minimization, and security of personal data.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 72.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-001",
+        "requirement": "Lawful basis for data processing and data subject consent.",
+        "status": "not_applicable",
+        "evidence": "No explicit mention of consent mechanisms in security controls.",
+        "gaps": [
+          "Missing data subject consent management for model inference"
+        ],
+        "recommendations": [
+          "Implement explicit consent mechanisms for data processing"
+        ]
+      },
+      {
+        "requirement_id": "GDPR-002",
+        "requirement": "Data minimization and purpose limitation.",
+        "status": "partially_compliant",
+        "evidence": "Data masking controls (01K67GVMH000000000000013) address data exposure.",
+        "gaps": [
+          "No explicit data minimization policies for model training data"
+        ],
+        "recommendations": [
+          "Define data retention policies and minimize data collection"
+        ]
+      },
+      {
+        "requirement_id": "GDPR-003",
+        "requirement": "Security of personal data through technical and organizational measures.",
+        "status": "compliant",
+        "evidence": "TLS 1.3 (01K67GVMH000000000000006), AES-256 encryption (01K67GVMH000000000000008), and access controls are implemented.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "GDPR-004",
+        "requirement": "Data subject rights (access, deletion, portability).",
+        "status": "non_compliant",
+        "evidence": "No controls address data subject rights management.",
+        "gaps": [
+          "Missing mechanisms for data subject access requests"
+        ],
+        "recommendations": [
+          "Implement APIs for data export and deletion"
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Missing data subject rights implementation",
+      "No explicit consent management for inference processing"
+    ],
+    "remediation_plan": [
+      "Implement GDPR-compliant consent management framework",
+      "Develop data subject rights API endpoints",
+      "Conduct data minimization policy review"
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-28 06:47:04.961274",
+    "assessor": null,
+    "created_at": "2025-09-28 06:47:04.961278",
+    "updated_at": "2025-09-28 06:47:04.961280"
+  }
+}

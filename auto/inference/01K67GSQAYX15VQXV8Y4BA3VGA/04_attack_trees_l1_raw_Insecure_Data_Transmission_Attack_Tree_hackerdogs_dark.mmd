@@ -1,0 +1,30 @@
+graph TB
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6S["Insecure Data Transmission | [HIGH]"]:::highRisk
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6T["Intercept data flow between Model Service and Database | [HIGH]"]:::highRisk
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6T_cm_0["CM: Implement TLS encryption for all data in transit (Eff: 0.8)"]:::countermeasure
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6T_cm_1["CM: Use secure communication protocols (e.g., HTTPS, mTLS) (Eff: 0.7)"]:::countermeasure
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6U["Exploit unencrypted API communication between Frontend and Backend | [HIGH]"]:::highRisk
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6U_cm_0["CM: Enforce HTTPS with certificate validation (Eff: 0.9)"]:::countermeasure
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6U_cm_1["CM: Implement API request signing and validation (Eff: 0.6)"]:::countermeasure
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6S_cm_0["CM: Deploy network segmentation with firewall rules (Eff: 0.7)"]:::countermeasure
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6S_cm_1["CM: Implement data encryption at rest for database storage (Eff: 0.6)"]:::countermeasure
+
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6S --> node_01K67H0J3Y4X6Q8V7Z2PQW5R6T
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6T -.-> node_01K67H0J3Y4X6Q8V7Z2PQW5R6T_cm_0
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6T -.-> node_01K67H0J3Y4X6Q8V7Z2PQW5R6T_cm_1
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6S --> node_01K67H0J3Y4X6Q8V7Z2PQW5R6U
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6U -.-> node_01K67H0J3Y4X6Q8V7Z2PQW5R6U_cm_0
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6U -.-> node_01K67H0J3Y4X6Q8V7Z2PQW5R6U_cm_1
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6S -.-> node_01K67H0J3Y4X6Q8V7Z2PQW5R6S_cm_0
+  node_01K67H0J3Y4X6Q8V7Z2PQW5R6S -.-> node_01K67H0J3Y4X6Q8V7Z2PQW5R6S_cm_1
+
+  classDef andNode fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef orNode fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef highRisk fill:#FF4C4C,color:#F5F7FA,stroke:#FF4C4C,stroke-width:2px
+  classDef mediumRisk fill:#FFD300,stroke:#FFD300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#A259FF,stroke:#c3a4ff,stroke-width:1px,stroke-dasharray:3 3,color:#F5F7FA
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

@@ -1,0 +1,161 @@
+{
+  "id": "01F3G4H5J6K7L8M9N2P3Q4R5",
+  "name": "Inference Application Data Flow",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for machine learning inference application showing data movement between components",
+  "created_at": "2025-09-28 06:40:51.782618",
+  "last_updated": "2025-09-28 06:40:51.782623",
+  "data_assets": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R1",
+      "name": "user_input_data",
+      "description": null,
+      "classification": "public",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R2",
+      "name": "model_parameters",
+      "description": null,
+      "classification": "restricted",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R3",
+      "name": "inference_results",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R4",
+      "name": "user_credentials",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S1",
+      "name": "frontend_service",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "untrusted",
+      "external_references": {}
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S2",
+      "name": "inference_engine",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S3",
+      "name": "model_repository",
+      "description": null,
+      "type": "database",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "very_high_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4T1",
+      "name": "model_database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4T2",
+      "name": "inference_cache",
+      "description": null,
+      "type": "cache",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "transport",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4U1",
+      "name": "authenticated_user",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4U2",
+      "name": "third_party_data_source",
+      "description": null,
+      "type": "system",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4V1",
+      "name": "user_to_frontend",
+      "description": null,
+      "source_id": "01F3G4H5J6K7L8M9N2P3Q4U1",
+      "destination_id": "01F3G4H5J6K7L8M9N2P3Q4S1",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "end_to_end",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4V2",
+      "name": "frontend_to_inference",
+      "description": null,
+      "source_id": "01F3G4H5J6K7L8M9N2P3Q4S1",
+      "destination_id": "01F3G4H5J6K7L8M9N2P3Q4S2",
+      "data_assets": [],
+      "protocol": "grpc",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

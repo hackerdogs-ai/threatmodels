@@ -1,0 +1,14 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Public_Trust_Boundary, "Public Trust Boundary") {
+        System(Frontend, "Frontend", "User interface for interacting with the inference system")
+    }
+    System_Boundary(tb_Internal_Trust_Boundary, "Internal Trust Boundary") {
+        System(Backend, "Backend", "Handles business logic, request routing, and coordination between components")
+        System(Model_Service, "Model Service", "Manages machine learning model deployment and inference execution")
+        SystemDb(Database, "Database", "Stores model configurations, inference results, and metadata")
+    }
+
+    Rel(Frontend, Backend, "Uses")
+    Rel(Backend, Model_Service, "Uses")
+    Rel(Model_Service, Database, "Uses")

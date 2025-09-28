@@ -1,0 +1,167 @@
+{
+  "risk_prioritization": {
+    "id": "01K67GVMH000000000000005",
+    "prioritization_method": "Business Impact & Technical Criticality",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K67GVMGQNEXQVQWG7GJ3239E",
+        "threat_title": "Spoofing in API Endpoints",
+        "risk_score": 8.2,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "OAuth 2.0 implementation"
+        ],
+        "recommended_actions": [
+          "Implement JWT-based authentication",
+          "Enforce API key rotation"
+        ]
+      },
+      {
+        "risk_id": "01K67GVMGRN8GQ8EQNBZ7STY98",
+        "threat_title": "Insecure Data Transmission",
+        "risk_score": 8.0,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "TLS 1.2+ configuration"
+        ],
+        "recommended_actions": [
+          "Enable end-to-end encryption",
+          "Audit data flow paths"
+        ]
+      },
+      {
+        "risk_id": "01K67GVMGSCRKERAT05RGEV4W2",
+        "threat_title": "Database Exposure",
+        "risk_score": 7.8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "AES-256 encryption",
+          "RBAC setup"
+        ],
+        "recommended_actions": [
+          "Encrypt database at rest",
+          "Implement access logging"
+        ]
+      },
+      {
+        "risk_id": "01K67GVMGRAPQ2A32GKTJS5ASN",
+        "threat_title": "Input Validation Flaws",
+        "risk_score": 7.5,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "Schema validation tools"
+        ],
+        "recommended_actions": [
+          "Implement input whitelisting",
+          "Add rate limiting"
+        ]
+      },
+      {
+        "risk_id": "01K67GVMGS6NABSK5QKYFGP418",
+        "threat_title": "Denial of Service via Resource Exhaustion",
+        "risk_score": 7.3,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urg, urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "Traffic monitoring tools"
+        ],
+        "recommended_actions": [
+          "Deploy WAF",
+          "Implement auto-scaling"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K67GVMGQNEXQVQWG7GJ3239E",
+        "01K67GVMGRN8GQ8EQNBZ7STY98",
+        "01K67GVMGSCRKERAT05RGEV4W2"
+      ],
+      "high_priority_risks": [
+        "01K67GVMGRAPQ2A32GKTJS5ASN",
+        "01K67GVMGS6NABSK5QKYFGP418"
+      ],
+      "medium_priority_risks": [],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K67GVMGQNEXQVQWG7GJ3239E": 8.2,
+      "01K67GVMGRN8GQ8EQNBZ7STY98": 8.0,
+      "01K67GVMGSCRKERAT05RGEV4W2": 7.8,
+      "01K67GVMGRAPQ2A32GKTJS5ASN": 7.5,
+      "01K67GVMGS6NABSK5QKYFGP418": 7.3
+    },
+    "risk_rankings": [
+      [
+        "01K67GVMGQNEXQVQWG7GJ3239E",
+        8.2
+      ],
+      [
+        "01K67GVMGRN8GQ8EQNBZ7STY98",
+        8.0
+      ],
+      [
+        "01K67GVMGSCRKERAT05RGEV4W2",
+        7.8
+      ],
+      [
+        "01K67GVMGRAPQ2A32GKTJS5ASN",
+        7.5
+      ],
+      [
+        "01K67GVMGS6NABSK5QKYFGP418",
+        7.3
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "High (potential revenue loss from service outages and breach costs)",
+      "operational_impact": "High (disruption to inference workflows and compliance audits)",
+      "reputational_impact": "High (trust erosion from data breaches and service unavailability)"
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-28 06:48:29.475322",
+    "updated_at": "2025-09-28 06:48:29.475335"
+  }
+}

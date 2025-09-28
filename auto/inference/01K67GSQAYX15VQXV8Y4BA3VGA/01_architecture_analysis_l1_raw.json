@@ -1,0 +1,86 @@
+{
+  "id": "01K67GT5QTQ5TFAMQ7PZXYSCPQ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "User interface for interacting with the inference system",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend",
+      "description": "Handles business logic, request routing, and coordination between components",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "Stores model configurations, inference results, and metadata",
+      "type": "database"
+    },
+    {
+      "name": "Model Service",
+      "description": "Manages machine learning model deployment and inference execution",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "Backend",
+      "description": "User input and UI interactions are routed to backend processing"
+    },
+    {
+      "source": "Backend",
+      "destination": "Model Service",
+      "description": "Request payloads are sent to the model service for inference execution"
+    },
+    {
+      "source": "Model Service",
+      "destination": "Database",
+      "description": "Inference results and model metadata are persisted to the database"
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Public Trust Boundary",
+      "description": "Components exposed to external users (frontend, public API endpoints)",
+      "components": [
+        "Frontend"
+      ]
+    },
+    {
+      "name": "Internal Trust Boundary",
+      "description": "Secure internal components handling sensitive operations",
+      "components": [
+        "Backend",
+        "Model Service",
+        "Database"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 06:40:23.802345",
+  "updated_at": "2025-09-28 06:40:23.802351"
+}
