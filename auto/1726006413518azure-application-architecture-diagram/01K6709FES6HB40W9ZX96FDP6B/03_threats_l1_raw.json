@@ -1,0 +1,110 @@
+[
+  {
+    "id": "01K670BNQ5YK34TF7V6GAMQPT3",
+    "title": "SQL Injection",
+    "description": "Attackers inject malicious SQL statements through input fields, enabling unauthorized data access or manipulation of the Azure SQL Database.",
+    "stride_category": [
+      "tampering"
+    ],
+    "attack_vector": null,
+    "cwe_id": [],
+    "capec_id": [],
+    "exploitability": "moderate",
+    "impact_severity": "medium",
+    "dread_score": {
+      "damage": 1,
+      "reproducibility": 1,
+      "exploitability": 1,
+      "affected_users": 1,
+      "discoverability": 1
+    },
+    "business_impact": null,
+    "business_risk_score": null,
+    "compliance_impact": "set()",
+    "impacted_asset_ids": "set()",
+    "impacted_component_ids": "set()",
+    "impacted_data_flow_ids": "set()",
+    "mitigations": [],
+    "status": "identified",
+    "residual_risk": null,
+    "evidence": [],
+    "prerequisites": [],
+    "date_identified": "2025-09-28 01:52:51.430104",
+    "date_last_updated": "2025-09-28 01:52:51.430108",
+    "identified_by": null,
+    "owner": null,
+    "related_threat_ids": "set()"
+  },
+  {
+    "id": "01K670BNQ6NKQFD91XRRMVWM3T",
+    "title": "Cross\u2011Site Scripting (XSS)",
+    "description": "Malicious scripts are injected into web pages viewed by users, allowing attackers to steal session tokens or perform actions on behalf of legitimate users.",
+    "stride_category": [
+      "tampering"
+    ],
+    "attack_vector": null,
+    "cwe_id": [],
+    "capec_id": [],
+    "exploitability": "moderate",
+    "impact_severity": "medium",
+    "dread_score": {
+      "damage": 1,
+      "reproducibility": 1,
+      "exploitability": 1,
+      "affected_users": 1,
+      "discoverability": 1
+    },
+    "business_impact": null,
+    "business_risk_score": null,
+    "compliance_impact": "set()",
+    "impacted_asset_ids": "set()",
+    "impacted_component_ids": "set()",
+    "impacted_data_flow_ids": "set()",
+    "mitigations": [],
+    "status": "identified",
+    "residual_risk": null,
+    "evidence": [],
+    "prerequisites": [],
+    "date_identified": "2025-09-28 01:52:51.430284",
+    "date_last_updated": "2025-09-28 01:52:51.430287",
+    "identified_by": null,
+    "owner": null,
+    "related_threat_ids": "set()"
+  },
+  {
+    "id": "01K670BNQ6FDWBV93P4PFJEW3B",
+    "title": "Broken Authentication",
+    "description": "Weak password policies, session fixation, or inadequate token validation allow attackers to impersonate legitimate users or gain unauthorized access.",
+    "stride_category": [
+      "spoofing"
+    ],
+    "attack_vector": null,
+    "cwe_id": [],
+    "capec_id": [],
+    "exploitability": "moderate",
+    "impact_severity": "medium",
+    "dread_score": {
+      "damage": 1,
+      "reproducibility": 1,
+      "exploitability": 1,
+      "affected_users": 1,
+      "discoverability": 1
+    },
+    "business_impact": null,
+    "business_risk_score": null,
+    "compliance_impact": "set()",
+    "impacted_asset_ids": "set()",
+    "impacted_component_ids": "set()",
+    "impacted_data_flow_ids": "set()",
+    "mitigations": [],
+    "status": "identified",
+    "residual_risk": null,
+    "evidence": [],
+    "prerequisites": [],
+    "date_identified": "2025-09-28 01:52:51.430378",
+    "date_last_updated": "2025-09-28 01:52:51.430380",
+    "identified_by": null,
+    "owner": null,
+    "related_threat_ids": "set()"
+  }
+]

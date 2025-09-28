@@ -1,0 +1,123 @@
+{
+  "correlations": [
+    {
+      "source_threat_model": "On‑Premise Web Application Threat Model",
+      "correlation_type": "similar_threats",
+      "description": "Both models expose the same core web vulnerabilities – SQL Injection, Cross‑Site Scripting, and Broken Authentication – due to shared use of user‑supplied input and database access.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Implement a unified Web Application Firewall (WAF) across all web tiers.",
+        "Enforce parameterized queries and stored procedures in all database interactions.",
+        "Mandate MFA and strong password policies for all user accounts."
+      ]
+    },
+    {
+      "source_threat_model": "Microservices API Threat Model",
+      "correlation_type": "shared_mitigations",
+      "description": "Both architectures rely on API gateways; common controls include WAF rules, JWT validation, and rate limiting to prevent injection and DoS attacks.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Deploy a single API gateway with consistent WAF policies.",
+        "Centralize JWT validation and enforce token revocation lists.",
+        "Apply uniform rate‑limiting policies across all services."
+      ]
+    },
+    {
+      "source_threat_model": "Mobile App Threat Model",
+      "correlation_type": "related_attack_patterns",
+      "description": "Credential stuffing and insecure data storage are prevalent in both mobile and web contexts, leveraging weak authentication and local persistence.",
+      "impact_level": "medium",
+      "recommended_actions": [
+        "Use device‑bound MFA (e.g., biometrics + device ID).",
+        "Encrypt all local storage and use secure key‑management services.",
+        "Implement server‑side account lockout and anomaly detection."
+      ]
+    },
+    {
+      "source_threat_model": "Legacy ERP Threat Model",
+      "correlation_type": "compliance_overlap",
+      "description": "Both systems must satisfy PCI‑DSS and SOX requirements for data integrity, access control, and audit logging.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Align audit trail mechanisms with PCI‑DSS 10.2.1 and SOX 302/404.",
+        "Apply role‑based access controls consistent with both frameworks.",
+        "Schedule joint penetration testing for cross‑system coverage."
+      ]
+    },
+    {
+      "source_threat_model": "Data Warehouse Threat Model",
+      "correlation_type": "shared_mitigations",
+      "description": "Encryption at rest, column‑level masking, and strict RBAC are common controls to protect sensitive data in both the web app and data warehouse.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Use Azure Key Vault for key management across all services.",
+        "Implement column‑level encryption for PII in SQL databases.",
+        "Enforce least‑privilege RBAC for all data access."
+      ]
+    },
+    {
+      "source_threat_model": "Third‑Party Vendor Integration Threat Model",
+      "correlation_type": "related_attack_patterns",
+      "description": "Supply‑chain attacks and API misuse can propagate from vendor components into the cloud application, mirroring risks seen in the Azure environment.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Adopt a vendor risk assessment framework (e.g., NIST SP 800‑161).",
+        "Enforce API gateway authentication and throttling for third‑party calls.",
+        "Monitor vendor activity with Azure Sentinel alerts."
+      ]
+    },
+    {
+      "source_threat_model": "Hybrid Cloud Threat Model",
+      "correlation_type": "compliance_overlap",
+      "description": "ISO 27001 and NIST 800‑53 controls overlap with Azure Security Center recommendations, enabling a single compliance posture across on‑prem and cloud assets.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Map ISO 27001 controls to Azure Policy initiatives.",
+        "Use Azure Blueprints to enforce NIST 800‑53 baselines.",
+        "Conduct joint compliance audits for hybrid environments."
+      ]
+    },
+    {
+      "source_threat_model": "Edge Computing Threat Model",
+      "correlation_type": "shared_mitigations",
+      "description": "Secure boot, network segmentation, and firmware integrity checks are essential in both edge devices and Azure workloads to prevent tampering.",
+      "impact_level": "medium",
+      "recommended_actions": [
+        "Implement TPM‑based secure boot for edge nodes.",
+        "Segment edge traffic with Azure Virtual Network and NSGs.",
+        "Use Azure IoT Hub device twins to enforce firmware signatures."
+      ]
+    },
+    {
+      "source_threat_model": "Enterprise SaaS Threat Model",
+      "correlation_type": "similar_threats",
+      "description": "Data exfiltration and account takeover are common in SaaS and the Azure web app due to shared cloud storage and identity services.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Enable Azure AD Conditional Access for SaaS logins.",
+        "Apply data loss prevention (DLP) policies across all storage accounts.",
+        "Use Azure Sentinel to correlate suspicious outbound traffic."
+      ]
+    },
+    {
+      "source_threat_model": "IoT Device Threat Model",
+      "correlation_type": "related_attack_patterns",
+      "description": "Device spoofing and firmware tampering can lead to credential leakage, mirroring broken authentication risks in the Azure application.",
+      "impact_level": "medium",
+      "recommended_actions": [
+        "Enforce device identity with X.509 certificates.",
+        "Implement OTA firmware signing and verification.",
+        "Monitor device telemetry for anomalous authentication attempts."
+      ]
+    },
+    {
+      "source_threat_model": "Cloud Storage Threat Model",
+      "correlation_type": "shared_mitigations",
+      "description": "Bucket policy misconfigurations and lack of encryption are shared risks between Azure Storage and other cloud providers.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Apply Azure Storage Account firewall rules and NSG integration.",
+        "Enable customer‑managed keys (CMK) for all storage accounts.",
+        "Automate policy compliance checks with Azure Policy."
+      ]
+    }

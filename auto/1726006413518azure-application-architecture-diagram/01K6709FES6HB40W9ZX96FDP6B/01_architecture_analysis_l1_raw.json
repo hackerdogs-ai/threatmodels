@@ -1,0 +1,108 @@
+{
+  "id": "01K670AEHGBDHY3DK50466E8DJ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Application Gateway",
+      "description": "Handles inbound HTTPS traffic, performs SSL termination, and routes requests to the Web App.",
+      "type": "frontend"
+    },
+    {
+      "name": "Azure Web App",
+      "description": "Runs the application code, processes user requests, and performs background tasks via worker pools.",
+      "type": "backend"
+    },
+    {
+      "name": "Azure SQL Database",
+      "description": "Managed relational database for persistent application data.",
+      "type": "database"
+    },
+    {
+      "name": "Azure Key Vault",
+      "description": "Secure storage for secrets, keys, and certificates used by the Web App.",
+      "type": "service"
+    },
+    {
+      "name": "Azure Active Directory",
+      "description": "Provides authentication and authorization for users and services.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Users",
+      "destination": "Application Gateway",
+      "description": "HTTPS requests from the custom domain are received by the gateway."
+    },
+    {
+      "source": "Application Gateway",
+      "destination": "Azure Web App",
+      "description": "The gateway forwards authenticated requests to the web app."
+    },
+    {
+      "source": "Azure Web App",
+      "destination": "Azure SQL Database",
+      "description": "CRUD operations on application data."
+    },
+    {
+      "source": "Azure Web App",
+      "destination": "Azure Key Vault",
+      "description": "Retrieval of secrets and certificates at runtime."
+    },
+    {
+      "source": "Azure Web App",
+      "destination": "Azure Active Directory",
+      "description": "User authentication and token validation."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Internet to Azure",
+      "description": "Boundary between external users and Azure services.",
+      "components": [
+        "Application Gateway"
+      ]
+    },
+    {
+      "name": "Application to Data",
+      "description": "Boundary between application logic and persistent storage.",
+      "components": [
+        "Azure Web App",
+        "Azure SQL Database"
+      ]
+    },
+    {
+      "name": "Application to Secrets",
+      "description": "Boundary between application code and secret store.",
+      "components": [
+        "Azure Web App",
+        "Azure Key Vault"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 01:52:11.312818",
+  "updated_at": "2025-09-28 01:52:11.312823"
+}

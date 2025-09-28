@@ -1,0 +1,21 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Internet_to_Azure, "Internet to Azure") {
+        System(Application_Gateway, "Application Gateway", "Handles inbound HTTPS traffic, performs SSL termination, and routes requests to the Web App.")
+    }
+    System_Boundary(tb_Application_to_Data, "Application to Data") {
+        System(Azure_Web_App, "Azure Web App", "Runs the application code, processes user requests, and performs background tasks via worker pools.")
+        SystemDb(Azure_SQL_Database, "Azure SQL Database", "Managed relational database for persistent application data.")
+    }
+    System_Boundary(tb_Application_to_Secrets, "Application to Secrets") {
+        System(Azure_Web_App, "Azure Web App", "Runs the application code, processes user requests, and performs background tasks via worker pools.")
+        System(Azure_Key_Vault, "Azure Key Vault", "Secure storage for secrets, keys, and certificates used by the Web App.")
+    }
+    System(Azure_Active_Directory, "Azure Active Directory", "Provides authentication and authorization for users and services.")
+    System(Users, "Users", "Auto-created component: Users")
+
+    Rel(Users, Application_Gateway, "Uses")
+    Rel(Application_Gateway, Azure_Web_App, "Uses")
+    Rel(Azure_Web_App, Azure_SQL_Database, "Uses")
+    Rel(Azure_Web_App, Azure_Key_Vault, "Uses")
+    Rel(Azure_Web_App, Azure_Active_Directory, "Uses")

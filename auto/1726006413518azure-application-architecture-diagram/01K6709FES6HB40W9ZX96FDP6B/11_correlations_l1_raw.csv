@@ -1,0 +1,12 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models expose the same core web vulnerabilities – SQL Injection, Cross‑Site Scripting, and Broken Authentication – due to shared use of user‑supplied input and database access.",,,,2025-09-28T01:56:36.863369
+CORR_002,,,,"Both architectures rely on API gateways; common controls include WAF rules, JWT validation, and rate limiting to prevent injection and DoS attacks.",,,,2025-09-28T01:56:36.863409
+CORR_003,,,,"Credential stuffing and insecure data storage are prevalent in both mobile and web contexts, leveraging weak authentication and local persistence.",,,,2025-09-28T01:56:36.863420
+CORR_004,,,,"Both systems must satisfy PCI‑DSS and SOX requirements for data integrity, access control, and audit logging.",,,,2025-09-28T01:56:36.863428
+CORR_005,,,,"Encryption at rest, column‑level masking, and strict RBAC are common controls to protect sensitive data in both the web app and data warehouse.",,,,2025-09-28T01:56:36.863435
+CORR_006,,,,"Supply‑chain attacks and API misuse can propagate from vendor components into the cloud application, mirroring risks seen in the Azure environment.",,,,2025-09-28T01:56:36.863443
+CORR_007,,,,"ISO 27001 and NIST 800‑53 controls overlap with Azure Security Center recommendations, enabling a single compliance posture across on‑prem and cloud assets.",,,,2025-09-28T01:56:36.863451
+CORR_008,,,,"Secure boot, network segmentation, and firmware integrity checks are essential in both edge devices and Azure workloads to prevent tampering.",,,,2025-09-28T01:56:36.863459
+CORR_009,,,,Data exfiltration and account takeover are common in SaaS and the Azure web app due to shared cloud storage and identity services.,,,,2025-09-28T01:56:36.863467
+CORR_010,,,,"Device spoofing and firmware tampering can lead to credential leakage, mirroring broken authentication risks in the Azure application.",,,,2025-09-28T01:56:36.863475
+CORR_011,,,,Bucket policy misconfigurations and lack of encryption are shared risks between Azure Storage and other cloud providers.,,,,2025-09-28T01:56:36.863482

@@ -1,0 +1,126 @@
+{
+  "risk_prioritization": {
+    "id": "01K670BNQ5YK34TF7V6GAMQPTA",
+    "prioritization_method": "Weighted Scoring (Business Impact 40%, Technical Impact 30%, Likelihood 20%, Urgency 10%)",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K670BNQ6FDWBV93P4PFJEW3B",
+        "threat_title": "Broken Authentication",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "high",
+        "timeline": "2\u20134 weeks",
+        "dependencies": [
+          "Azure AD configuration",
+          "Web App authentication flow",
+          "MFA policy rollout"
+        ],
+        "recommended_actions": [
+          "Enforce Azure AD MFA and conditional access",
+          "Implement strong password policies and lockout thresholds",
+          "Audit token validation and session handling",
+          "Deploy Azure Monitor alerts for suspicious sign\u2011ins"
+        ]
+      },
+      {
+        "risk_id": "01K670BNQ5YK34TF7V6GAMQPT3",
+        "threat_title": "SQL Injection",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "1\u20133 weeks",
+        "dependencies": [
+          "Database access layer",
+          "Application codebase",
+          "WAF rule set"
+        ],
+        "recommended_actions": [
+          "Adopt parameterized queries and stored procedures",
+          "Enable Azure Web Application Firewall with SQLi detection rules",
+          "Conduct regular code reviews and static analysis",
+          "Implement least\u2011privilege database roles"
+        ]
+      },
+      {
+        "risk_id": "01K670BNQ6NKQFD91XRRMVWM3T",
+        "threat_title": "Cross\u2011Site Scripting (XSS)",
+        "risk_score": 6,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "low",
+        "timeline": "1\u20132 weeks",
+        "dependencies": [
+          "Front\u2011end rendering logic",
+          "Input validation libraries",
+          "Content Security Policy configuration"
+        ],
+        "recommended_actions": [
+          "Implement strict input validation and output encoding (OWASP ESAPI)",
+          "Deploy CSP headers to restrict script sources",
+          "Enable WAF XSS detection rules",
+          "Perform regular penetration testing"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K670BNQ6FDWBV93P4PFJEW3B",
+        "01K670BNQ5YK34TF7V6GAMQPT3"
+      ],
+      "high_priority_risks": [
+        "01K670BNQ6NKQFD91XRRMVWM3T"
+      ],
+      "medium_priority_risks": [],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K670BNQ6FDWBV93P4PFJEW3B": 9.0,
+      "01K670BNQ5YK34TF7V6GAMQPT3": 8.0,
+      "01K670BNQ6NKQFD91XRRMVWM3T": 6.0
+    },
+    "risk_rankings": [
+      [
+        "01K670BNQ6FDWBV93P4PFJEW3B",
+        9.0
+      ],
+      [
+        "01K670BNQ5YK34TF7V6GAMQPT3",
+        8.0
+      ],
+      [
+        "01K670BNQ6NKQFD91XRRMVWM3T",
+        6.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "High \u2013 potential data breach fines, remediation costs, and loss of revenue from downtime.",
+      "operational_impact": "High \u2013 authentication failures and data tampering could halt critical services and disrupt user access.",
+      "reputational_impact": "High \u2013 public exposure of security weaknesses erodes customer trust and brand value."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-28 01:56:06.316985",
+    "updated_at": "2025-09-28 01:56:06.316990"
+  }
+}

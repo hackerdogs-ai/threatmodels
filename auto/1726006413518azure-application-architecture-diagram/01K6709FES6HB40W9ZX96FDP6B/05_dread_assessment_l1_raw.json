@@ -1,0 +1,110 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K670BNQ5YK34TF7V6GAMQPT3",
+      "threat_title": "SQL Injection",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 6,
+        "exploitability": 6,
+        "affected_users": 9,
+        "discoverability": 6
+      },
+      "total_risk_score": 35,
+      "risk_level": "high",
+      "justification": "SQL injection can modify or exfiltrate critical data, affecting all users. The vulnerability is reproducible and moderately easy to exploit, and it is likely to be discovered by automated scanners.",
+      "recommendations": [
+        "Use parameterized queries or ORM frameworks to eliminate direct SQL string concatenation.",
+        "Enable Azure SQL Database firewall rules and threat detection.",
+        "Configure Web Application Firewall (WAF) rules to block common injection patterns.",
+        "Implement input validation and sanitization on all user\u2011supplied data.",
+        "Regularly scan the application with automated security testing tools."
+      ],
+      "assessment_date": "2025-09-28 01:53:40.752691",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K670BNQ6NKQFD91XRRMVWM3T",
+      "threat_title": "Cross\u2011Site Scripting (XSS)",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 7,
+        "exploitability": 5,
+        "affected_users": 8,
+        "discoverability": 6
+      },
+      "total_risk_score": 32,
+      "risk_level": "high",
+      "justification": "XSS can hijack user sessions or execute malicious scripts in the browser. The flaw is highly reproducible when input is not sanitized, and it can affect a large user base.",
+      "recommendations": [
+        "Apply strict output encoding (e.g., OWASP ESAPI) for all user\u2011generated content.",
+        "Enforce a strong Content Security Policy (CSP) header.",
+        "Use WAF rules to detect and block XSS payloads.",
+        "Implement input validation and sanitization on all forms and APIs.",
+        "Conduct regular penetration testing focused on XSS vectors."
+      ],
+      "assessment_date": "2025-09-28 01:53:40.753396",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K670BNQ6FDWBV93P4PFJEW3B",
+      "threat_title": "Broken Authentication",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 6,
+        "exploitability": 6,
+        "affected_users": 9,
+        "discoverability": 6
+      },
+      "total_risk_score": 35,
+      "risk_level": "high",
+      "justification": "Weak authentication mechanisms can allow attackers to impersonate users or gain administrative access, leading to full compromise of the application and data.",
+      "recommendations": [
+        "Enforce multi\u2011factor authentication (MFA) for all Azure AD sign\u2011ins.",
+        "Implement strong password policies and account lockout mechanisms.",
+        "Validate and rotate JWT tokens, ensuring proper expiration and revocation.",
+        "Use Azure AD Conditional Access policies to restrict sign\u2011ins from risky locations.",
+        "Regularly audit authentication logs via Azure Monitor and Log Analytics."
+      ],
+      "assessment_date": "2025-09-28 01:53:40.754924",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "All identified threats pose a high risk to the Azure\u2011based application, primarily due to their potential to affect a large user base and compromise critical data. Immediate implementation of the recommended mitigations\u2014especially input validation, WAF configuration, and robust authentication controls\u2014will significantly reduce the likelihood and impact of these attacks."
+}

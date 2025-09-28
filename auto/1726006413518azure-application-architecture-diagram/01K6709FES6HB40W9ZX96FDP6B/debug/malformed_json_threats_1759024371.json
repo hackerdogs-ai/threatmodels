@@ -1,0 +1,26 @@
+{
+  "threats": [
+    {
+      "title": "SQL Injection",
+      "description": "Attackers inject malicious SQL statements through input fields, enabling unauthorized data access or manipulation of the Azure SQL Database.",
+      "stride_category": "Tampering",
+      "impact": "high",
+      "likelihood": "medium",
+      "risk_score": 6
+    },
+    {
+      "title": "Cross‑Site Scripting (XSS)",
+      "description": "Malicious scripts are injected into web pages viewed by users, allowing attackers to steal session tokens or perform actions on behalf of legitimate users.",
+      "stride_category": "Tampering",
+      "impact": "high",
+      "likelihood": "medium",
+      "risk_score": 6
+    },
+    {
+      "title": "Broken Authentication",
+      "description": "Weak password policies, session fixation, or inadequate token validation allow attackers to impersonate legitimate users or gain unauthorized access.",
+      "stride_category": "Spoofing",
+      "impact": "high",
+      "likelihood": "high",
+      "risk_score": 9
+    }
