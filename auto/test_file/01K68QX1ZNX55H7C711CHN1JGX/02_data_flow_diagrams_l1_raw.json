@@ -1,0 +1,191 @@
+{
+  "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3A",
+  "name": "Simple Web App Data Flow Diagram",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for a web application that allows users to register, login, and manage their profile.",
+  "created_at": "2025-09-28 18:04:06.487617",
+  "last_updated": "2025-09-28 18:04:06.487624",
+  "data_assets": [
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3B",
+      "name": "User Credentials",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3C",
+      "name": "User Profile Data",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3D",
+      "name": "Session Tokens",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3E",
+      "name": "Frontend",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "untrusted",
+      "external_references": {}
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3F",
+      "name": "Backend API",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3G",
+      "name": "Authentication Service",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "very_high_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3H",
+      "name": "User Database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3I",
+      "name": "End User",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3J",
+      "name": "User Registration",
+      "description": null,
+      "source_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3I",
+      "destination_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3E",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3K",
+      "name": "Login Request",
+      "description": null,
+      "source_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3I",
+      "destination_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3E",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3L",
+      "name": "Auth to Backend",
+      "description": null,
+      "source_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3E",
+      "destination_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3F",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3M",
+      "name": "Backend to DB",
+      "description": null,
+      "source_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3F",
+      "destination_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3H",
+      "data_assets": [],
+      "protocol": "jdbc",
+      "authentication_strength": null,
+      "encryption": "at_rest",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3N",
+      "name": "DB to Backend",
+      "description": null,
+      "source_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3H",
+      "destination_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3F",
+      "data_assets": [],
+      "protocol": "jdbc",
+      "authentication_strength": null,
+      "encryption": "at_rest",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

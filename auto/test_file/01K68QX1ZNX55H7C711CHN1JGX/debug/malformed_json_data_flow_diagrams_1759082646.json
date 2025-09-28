@@ -1,0 +1,97 @@
+{
+  "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3A",
+  "name": "Simple Web App Data Flow Diagram",
+  "description": "Basic data flow diagram for a web application that allows users to register, login, and manage their profile.",
+  "data_assets": [
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3B",
+      "name": "User Credentials",
+      "classification": "pii"
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3C",
+      "name": "User Profile Data",
+      "classification": "pii"
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3D",
+      "name": "Session Tokens",
+      "classification": "internal"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3E",
+      "name": "Frontend",
+      "type": "frontend",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3F",
+      "name": "Backend API",
+      "type": "backend",
+      "trust_level": "high_trust"
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3G",
+      "name": "Authentication Service",
+      "type": "service",
+      "trust_level": "very_high_trust"
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3H",
+      "name": "User Database",
+      "type": "database",
+      "encryption": "at_rest"
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3I",
+      "name": "End User",
+      "type": "user"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3J",
+      "name": "User Registration",
+      "source_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3I",
+      "destination_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3E",
+      "protocol": "https",
+      "encryption": "transport"
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3K",
+      "name": "Login Request",
+      "source_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3I",
+      "destination_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3E",
+      "protocol": "https",
+      "encryption": "transport"
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3L",
+      "name": "Auth to Backend",
+      "source_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3E",
+      "destination_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3F",
+      "protocol": "https",
+      "encryption": "transport"
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3M",
+      "name": "Backend to DB",
+      "source_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3F",
+      "destination_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3H",
+      "protocol": "database",
+      "encryption": "at_rest"
+    },
+    {
+      "id": "01F5G3J5Z9K5T5V9W8X1Y2Z3N",
+      "name": "DB to Backend",
+      "source_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3H",
+      "destination_id": "01F5G3J5Z9K5T5V9W8X1Y2Z3F",
+      "protocol": "database",
+      "encryption": "at_rest"
+    }
