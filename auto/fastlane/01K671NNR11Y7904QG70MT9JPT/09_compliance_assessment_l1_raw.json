@@ -1,0 +1,60 @@
+{
+  "compliance_assessment": {
+    "id": "01K671QYKQ1FKN3A2BMMCNSA3J",
+    "framework": "GDPR",
+    "framework_description": "Regulation governing data protection and privacy in the European Union, focusing on data subject rights, data breaches, and cross-border data transfers.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 72.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-001",
+        "requirement": "Data Protection by Design (Article 25)",
+        "status": "partially_compliant",
+        "evidence": "Encryption and access controls implemented for configuration data.",
+        "gaps": [
+          "Lack of documented data protection impact assessments (DPIAs) for CLI and API interfaces."
+        ],
+        "recommendations": [
+          "Conduct DPIAs for high-risk data processing activities.",
+          "Integrate data minimization practices into CLI command handling."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-004",
+        "requirement": "Data Breach Notification (Article 33/34)",
+        "status": "non_compliant",
+        "evidence": "No breach detection or notification mechanisms documented.",
+        "gaps": [
+          "Missing real-time monitoring for data exposure incidents.",
+          "No defined breach response timeline."
+        ],
+        "recommendations": [
+          "Implement automated breach detection with 24/7 monitoring.",
+          "Establish a 72-hour breach notification protocol."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Insufficient documentation of data processing activities",
+      "No breach detection/notification mechanisms"
+    ],
+    "remediation_plan": [
+      "Document all data processing activities and DPIAs by Q1 2026",
+      "Deploy SIEM integration for real-time breach detection",
+      "Establish cross-functional breach response team"
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-28 02:21:45.789621",
+    "assessor": null,
+    "created_at": "2025-09-28 02:21:45.789625",
+    "updated_at": "2025-09-28 02:21:45.789629"
+  }
+}

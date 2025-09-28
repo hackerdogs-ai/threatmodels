@@ -1,0 +1,165 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K671QYKQ1FKN3A2BMMCNSA3J",
+      "threat_title": "Command Injection via CLI",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 9,
+        "exploitability": 7,
+        "affected_users": 8,
+        "discoverability": 6
+      },
+      "total_risk_score": 38,
+      "risk_level": "high",
+      "justification": "High damage potential from arbitrary code execution, moderate reproducibility due to CLI input vulnerabilities, and medium exploitability requiring user interaction.",
+      "recommendations": [
+        "Implement strict input validation and sanitization for all CLI commands",
+        "Use secure coding practices to prevent command injection vulnerabilities"
+      ],
+      "assessment_date": "2025-09-28 02:18:47.414640",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K671QYKQHDQD5DBG3MHR62TH",
+      "threat_title": "Configuration Data Exposure",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 8,
+        "exploitability": 7,
+        "affected_users": 8,
+        "discoverability": 7
+      },
+      "total_risk_score": 39,
+      "risk_level": "high",
+      "justification": "High damage from exposure of sensitive credentials, medium reproducibility through database access, and moderate exploitability requiring database access.",
+      "recommendations": [
+        "Encrypt sensitive data at rest using AES-256 or equivalent",
+        "Implement role-based access controls for configuration database"
+      ],
+      "assessment_date": "2025-09-28 02:18:47.415516",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K671QYKRADTWGJNY83DJDNRA",
+      "threat_title": "GitHub API Request Tampering",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 8,
+        "exploitability": 7,
+        "affected_users": 8,
+        "discoverability": 7
+      },
+      "total_risk_score": 39,
+      "risk_level": "high",
+      "justification": "High damage from compromised CI/CD pipelines, medium reproducibility through network interception, and moderate exploitability requiring network access.",
+      "recommendations": [
+        "Implement request signing and validation for GitHub API interactions",
+        "Use HTTPS with perfect forward secrecy for all API communications"
+      ],
+      "assessment_date": "2025-09-28 02:18:47.415936",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K671QYKRAFYAMSNKRSSHM5BA",
+      "threat_title": "Denial of Service via Resource Exhaustion",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 9,
+        "exploitability": 5,
+        "affected_users": 10,
+        "discoverability": 6
+      },
+      "total_risk_score": 39,
+      "risk_level": "high",
+      "justification": "High damage from service disruption, high reproducibility through resource exhaustion attacks, and low exploitability requiring sustained traffic.",
+      "recommendations": [
+        "Implement rate limiting and request throttling",
+        "Monitor for abnormal resource usage patterns"
+      ],
+      "assessment_date": "2025-09-28 02:18:47.416906",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K671QYKRKES7H7N9YTCFB21F",
+      "threat_title": "Insecure Authentication for CLI",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 8,
+        "exploitability": 7,
+        "affected_users": 8,
+        "discoverability": 7
+      },
+      "total_risk_score": 39,
+      "risk_level": "high",
+      "justification": "High damage from unauthorized command execution, medium reproducibility through authentication bypass, and moderate exploitability requiring CLI access.",
+      "recommendations": [
+        "Implement multi-factor authentication for CLI interactions",
+        "Use secure credential storage mechanisms"
+      ],
+      "assessment_date": "2025-09-28 02:18:47.417586",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "All identified threats pose high risk with total scores ranging from 38-39. Prioritize mitigating command injection, configuration exposure, and API tampering risks. Implement input validation, encryption, request signing, and rate limiting to reduce impact scope and likelihood."
+}

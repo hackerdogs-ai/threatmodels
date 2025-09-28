@@ -1,0 +1,162 @@
+{
+    "correlations": [
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "similar_threats",
+            "description": "CLI command injection vulnerabilities are common in other CLI-based tools (e.g., Docker, Kubernetes CLI) with insufficient input validation.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Standardize input validation practices across all CLI tools",
+                "Conduct cross-system CLI security audits"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "shared_mitigations",
+            "description": "Input validation and secure authentication mechanisms are critical for mitigating CLI-related threats across systems.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Implement centralized CLI security policy enforcement",
+                "Use token-based authentication frameworks (OAuth 2.0)"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "related_attack_patterns",
+            "description": "GitHub API tampering shares attack patterns with other cloud service API vulnerabilities (e.g., AWS S3, Azure CLI).",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Adopt request signing patterns from industry standards (RFC 8704)",
+                "Monitor API traffic for anomalous patterns"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "compliance_overlap",
+            "description": "Configuration data exposure overlaps with GDPR/ISO 27001 requirements for data protection in storage.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Implement encryption-at-rest for all configuration stores",
+                "Conduct compliance audits for data storage practices"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "risk_aggregation",
+            "description": "DoS vulnerabilities in fastlane could compound with similar vulnerabilities in CI/CD pipelines (e.g., Jenkins, GitLab).",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Implement unified rate-limiting across all pipeline components",
+                "Create centralized DoS response playbooks"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "similar_threats",
+            "description": "Insecure CLI authentication mirrors vulnerabilities in other DevOps tools (e.g., Terraform, Ansible) with weak credential handling.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Enforce multi-factor authentication for all CLI interfaces",
+                "Use secure credential managers (e.g., HashiCorp Vault)"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "shared_mitigations",
+            "description": "Request signing and HTTPS enforcement are standard mitigations for API tampering across systems.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Adopt standardized TLS configurations (TLS 1.3)",
+                "Implement API request signing for all external integrations"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "related_attack_patterns",
+            "description": "Resource exhaustion attacks share patterns with DDoS attacks on web applications and databases.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Deploy distributed rate-limiting solutions",
+                "Monitor system resource usage in real-time"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "compliance_overlap",
+            "description": "Authentication vulnerabilities align with NIST SP 800-63-3 requirements for secure authentication mechanisms.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Implement password complexity and session timeout policies",
+                "Audit authentication logs for suspicious activity"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "similar_threats",
+            "description": "Configuration data exposure is similar to secrets management vulnerabilities in other CI/CD systems.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Use secret scanning tools for configuration files",
+                "Implement automatic secret rotation"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "shared_mitigations",
+            "description": "Encryption practices for configuration data overlap with data protection requirements in other systems.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Use AES-256 for data at rest",
+                "Implement access control lists (ACLs) for configuration stores"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "related_attack_patterns",
+            "description": "CLI command injection shares attack vectors with web application command injection vulnerabilities.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Implement least-privilege execution for CLI commands",
+                "Use sandboxing for untrusted inputs"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "compliance_overlap",
+            "description": "Authentication risks align with SOC 2 Type II requirements for access control.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Conduct regular access control reviews",
+                "Implement automated privilege revocation"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "similar_threats",
+            "description": "API tampering risks mirror vulnerabilities in other SaaS platforms with exposed APIs.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Use API gateways with built-in validation",
+                "Implement API versioning for backward compatibility"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "shared_mitigations",
+            "description": "Rate limiting is a common mitigation for DoS attacks across distributed systems.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Deploy distributed denial of service (DDoS) protection services",
+                "Implement circuit breaker patterns for API calls"
+            ]
+        },
+        {
+            "source_threat_model": "fastlane",
+            "correlation_type": "related_attack_patterns",
+            "description": "Authentication bypass vulnerabilities share patterns with session hijacking attacks in web applications.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Use secure cookies with HTTP-only flags",
+                "Implement token refresh mechanisms"
+            ]
+        }

@@ -1,0 +1,91 @@
+{
+    "id": "01F3G4H5J6K7L8M9N2P3Q4R5",
+    "name": "fastlane Threat Model Data Flow",
+    "description": "Basic data flow diagram for fastlane CLI tool showing data movement between components, trust boundaries, and external interfaces",
+    "data_assets": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R1",
+            "name": "user_credentials",
+            "classification": "pii"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R2",
+            "name": "project_configurations",
+            "classification": "internal"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R3",
+            "name": "build_logs",
+            "classification": "internal"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R4",
+            "name": "secrets",
+            "classification": "restricted"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R5",
+            "name": "ci_cd_pipeline_data",
+            "classification": "internal"
+        }
+    ],
+    "processes": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R6",
+            "name": "command_line_interface",
+            "type": "frontend",
+            "trust_level": "untrusted"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R7",
+            "name": "core_processing_engine",
+            "type": "backend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R8",
+            "name": "github_api_service",
+            "type": "api",
+            "trust_level": "low_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S1",
+            "name": "project_configuration_db",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S2",
+            "name": "temporary_cache",
+            "type": "cache",
+            "encryption": "transport"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4T1",
+            "name": "developer_user",
+            "type": "user"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4T2",
+            "name": "github_service",
+            "type": "system"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4T3",
+            "name": "ci_cd_system",
+            "type": "system"
+        }
+    ],
+    "data_flows": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4U1",
+            "name": "user_to_cli",
+            "source_id": "01F3G4H5J6K7L8M9N2P3Q4T1",
+            "destination_id": "01F3G4H5J6K7L8M9N2P3Q4R6",
+            "protocol": "https",
+            "encryption": "transport"
+        }

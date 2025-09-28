@@ -1,0 +1,162 @@
+{
+  "risk_prioritization": {
+    "id": "01K671QYKQ1FKN3A2BMMCNSA3J",
+    "prioritization_method": "Business Impact & Technical Severity Weighted Scoring",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K671QYKQ1FKN3A2BMMCNSA3J",
+        "threat_title": "Command Injection via CLI",
+        "risk_score": 8.5,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "Q4 2025",
+        "dependencies": [
+          "01K671QYKRKES7H7N9YTCFB21F"
+        ],
+        "recommended_actions": [
+          "Implement strict CLI input validation",
+          "Enforce token-based authentication"
+        ]
+      },
+      {
+        "risk_id": "01K671QYKQHDQD5DBG3MHR62TH",
+        "threat_title": "Configuration Data Exposure",
+        "risk_score": 8.2,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "Q1 2026",
+        "dependencies": [],
+        "recommended_actions": [
+          "Encrypt configuration data",
+          "Implement RBAC"
+        ]
+      },
+      {
+        "risk_id": "01K671QYKRADTWGJNY83DJDNRA",
+        "threat_title": "GitHub API Request Tampering",
+        "risk_score": 7.8,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "Q4 2025",
+        "dependencies": [
+          "01K671QYKRADTWGJNY83DJDNRA"
+        ],
+        "recommended_actions": [
+          "Enforce HTTPS with TLS 1.2+",
+          "Implement request signing"
+        ]
+      },
+      {
+        "risk_id": "01K671QYKRKES7H7N9YTCFB21F",
+        "threat_title": "Insecure Authentication for CLI",
+        "risk_score": 7.6,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "Q4 2025",
+        "dependencies": [
+          "01K671QYKQ1FKN3A2BMMCNSA3J"
+        ],
+        "recommended_actions": [
+          "Implement token-based auth",
+          "Enforce expiration/revocation"
+        ]
+      },
+      {
+        "risk_id": "01K671QYKRAFYAMSNKRSSHM5BA",
+        "threat_title": "Denial of Service via Resource Exhaustion",
+        "risk_score": 7.4,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urg, urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "Q1 2026",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting",
+          "Monitor resource usage"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K671QYKQ1FKN3A2BMMCNSA3J"
+      ],
+      "high_priority_risks": [
+        "01K671QYKQHDQD5DBG3MHR62TH",
+        "01K671QYKRADTWGJNY83DJDNRA",
+        "01K671QYKRKES7H7N9YTCFB21F",
+        "01K671QYKRAFYAMSNKRSSHM5BA"
+      ],
+      "medium_priority_risks": [],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K671QYKQ1FKN3A2BMMCNSA3J": 8.5,
+      "01K671QYKQHDQD5DBG3MHR62TH": 8.2,
+      "01K671QYKRADTWGJNY83DJDNRA": 7.8,
+      "01K671QYKRKES7H7N9YTCFB21F": 7.6,
+      "01K671QYKRAFYAMSNKRSSHM5BA": 7.4
+    },
+    "risk_rankings": [
+      [
+        "01K671QYKQ1FKN3A2BMMCNSA3J",
+        8.5
+      ],
+      [
+        "01K671QYKQHDQD5DBG3MHR62TH",
+        8.2
+      ],
+      [
+        "01K671QYKRADTWGJNY83DJDNRA",
+        7.8
+      ],
+      [
+        "01K671QYKRKES7H7N9YTCFB21F",
+        7.6
+      ],
+      [
+        "01K671QYKRAFYAMSNKRSSHM5BA",
+        7.4
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "High (potential for financial loss from breaches or service disruption)",
+      "operational_impact": "High (disruption to CI/CD pipelines and system availability)",
+      "reputational_impact": "High (trust erosion from security incidents)"
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-28 02:23:01.022175",
+    "updated_at": "2025-09-28 02:23:01.022181"
+  }
+}

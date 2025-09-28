@@ -1,0 +1,17 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"CLI command injection vulnerabilities are common in other CLI-based tools (e.g., Docker, Kubernetes CLI) with insufficient input validation.",,,,2025-09-28T02:24:05.069937
+CORR_002,,,,Input validation and secure authentication mechanisms are critical for mitigating CLI-related threats across systems.,,,,2025-09-28T02:24:05.069952
+CORR_003,,,,"GitHub API tampering shares attack patterns with other cloud service API vulnerabilities (e.g., AWS S3, Azure CLI).",,,,2025-09-28T02:24:05.069961
+CORR_004,,,,Configuration data exposure overlaps with GDPR/ISO 27001 requirements for data protection in storage.,,,,2025-09-28T02:24:05.069967
+CORR_005,,,,"DoS vulnerabilities in fastlane could compound with similar vulnerabilities in CI/CD pipelines (e.g., Jenkins, GitLab).",,,,2025-09-28T02:24:05.069973
+CORR_006,,,,"Insecure CLI authentication mirrors vulnerabilities in other DevOps tools (e.g., Terraform, Ansible) with weak credential handling.",,,,2025-09-28T02:24:05.069979
+CORR_007,,,,Request signing and HTTPS enforcement are standard mitigations for API tampering across systems.,,,,2025-09-28T02:24:05.069985
+CORR_008,,,,Resource exhaustion attacks share patterns with DDoS attacks on web applications and databases.,,,,2025-09-28T02:24:05.069990
+CORR_009,,,,Authentication vulnerabilities align with NIST SP 800-63-3 requirements for secure authentication mechanisms.,,,,2025-09-28T02:24:05.069996
+CORR_010,,,,Configuration data exposure is similar to secrets management vulnerabilities in other CI/CD systems.,,,,2025-09-28T02:24:05.070001
+CORR_011,,,,Encryption practices for configuration data overlap with data protection requirements in other systems.,,,,2025-09-28T02:24:05.070007
+CORR_012,,,,CLI command injection shares attack vectors with web application command injection vulnerabilities.,,,,2025-09-28T02:24:05.070012
+CORR_013,,,,Authentication risks align with SOC 2 Type II requirements for access control.,,,,2025-09-28T02:24:05.070018
+CORR_014,,,,API tampering risks mirror vulnerabilities in other SaaS platforms with exposed APIs.,,,,2025-09-28T02:24:05.070023
+CORR_015,,,,Rate limiting is a common mitigation for DoS attacks across distributed systems.,,,,2025-09-28T02:24:05.070028
+CORR_016,,,,Authentication bypass vulnerabilities share patterns with session hijacking attacks in web applications.,,,,2025-09-28T02:24:05.070033

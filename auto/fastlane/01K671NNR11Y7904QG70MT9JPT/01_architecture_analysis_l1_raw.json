@@ -1,0 +1,86 @@
+{
+  "id": "01K671P8RH1E8VK9839W5E18R4",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Fastlane CLI",
+      "description": "Command-line interface for user interaction and task execution",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend Service",
+      "description": "Core logic for automation, plugin execution, and task orchestration",
+      "type": "backend"
+    },
+    {
+      "name": "Configuration Database",
+      "description": "Stores user-specific settings, credentials, and project configurations",
+      "type": "database"
+    },
+    {
+      "name": "GitHub Integration Service",
+      "description": "Handles GitHub API interactions for CI/CD pipeline automation",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Fastlane CLI",
+      "destination": "Backend Service",
+      "description": "Command execution and parameter exchange between CLI and backend"
+    },
+    {
+      "source": "Backend Service",
+      "destination": "Configuration Database",
+      "description": "Read/write operations for storing/retrieving user configurations"
+    },
+    {
+      "source": "Backend Service",
+      "destination": "GitHub Integration Service",
+      "description": "API requests for GitHub repository management and CI/CD triggers"
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "CLI/Backend Boundary",
+      "description": "Trust boundary between user-facing CLI and internal backend services",
+      "components": [
+        "Fastlane CLI",
+        "Backend Service"
+      ]
+    },
+    {
+      "name": "Backend/GitHub Boundary",
+      "description": "Trust boundary between backend services and external GitHub API",
+      "components": [
+        "Backend Service",
+        "GitHub Integration Service"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 02:16:07.185929",
+  "updated_at": "2025-09-28 02:16:07.185933"
+}

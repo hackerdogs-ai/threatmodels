@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_CLI_Backend_Boundary, "CLIBackend Boundary") {
+        System(Fastlane_CLI, "Fastlane CLI", "Command-line interface for user interaction and task execution")
+        System(Backend_Service, "Backend Service", "Core logic for automation, plugin execution, and task orchestration")
+    }
+    System_Boundary(tb_Backend_GitHub_Boundary, "BackendGitHub Boundary") {
+        System(Backend_Service, "Backend Service", "Core logic for automation, plugin execution, and task orchestration")
+        System(GitHub_Integration_Service, "GitHub Integration Service", "Handles GitHub API interactions for CI/CD pipeline automation")
+    }
+    SystemDb(Configuration_Database, "Configuration Database", "Stores user-specific settings, credentials, and project configurations")
+
+    Rel(Fastlane_CLI, Backend_Service, "Uses")
+    Rel(Backend_Service, Configuration_Database, "Uses")
+    Rel(Backend_Service, GitHub_Integration_Service, "Uses")
