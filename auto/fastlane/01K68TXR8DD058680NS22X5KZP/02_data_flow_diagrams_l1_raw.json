@@ -1,0 +1,130 @@
+{
+  "id": "a7b3c8d1-f2a9-4b5d-8e9f-0123456789ab",
+  "name": "Fastlane User Interaction",
+  "version": "1.0.0",
+  "description": "Diagram illustrating the flow of data from the user to Fastlane and back.",
+  "created_at": "2025-09-28 18:56:45.486847",
+  "last_updated": "2025-09-28 18:56:45.486852",
+  "data_assets": [
+    {
+      "id": "e1f2a3b4-c5d6-789a-bcde-f01234567890",
+      "name": "User Credentials",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "f2a3b4c5-d6e7-89ab-cdef-012345678901",
+      "name": "Fastlane Configuration",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "g3b4c5d6-e7f8-9a01-bcde-f01234567890",
+      "name": "Build Artifacts",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "h4c5d6e7-f8a9-01bc-def0-123456789abc",
+      "name": "Fastlane Frontend",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "i2d3e4f5-g6h7-i8j9-ka12-345678901234",
+      "name": "Git Repository",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "none",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "j3k4l5m6-n7o8-p9q0-r1s2-345678901234",
+      "name": "Fastlane Cache",
+      "description": null,
+      "type": "cache",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "none",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "l3m4n5o6-p7q8-r9s0-t1u2-345678901234",
+      "name": "User",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "m4n5o6p7-q8r9-s0t1-u2v3-345678901234",
+      "name": "GitHub",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "o4p5q6r7-s8t9-u0v1-w2x3-345678901234",
+      "name": "User Authentication",
+      "description": null,
+      "source_id": "l3m4n5o6-p7q8-r9s0-t1u2-345678901234",
+      "destination_id": "o4p5q6r7-s8t9-u0v1-w2x3-345678901234",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "p5q6r7s8-t9u0-v1w2-x3y4-345678901234",
+      "name": "Configuration Retrieval",
+      "description": null,
+      "source_id": "o4p5q6r7-s8t9-u0v1-w2x3-345678901234",
+      "destination_id": "i2d3e4f5-g6h7-i8j9-ka12-345678901234",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

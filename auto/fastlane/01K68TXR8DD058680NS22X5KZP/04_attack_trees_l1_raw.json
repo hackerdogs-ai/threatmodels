@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "id": "9E37B873-4281-4965-993A-377698728912",
+    "title": "Web UI Injection Attack Tree",
+    "description": "Attack tree focusing on the 'Web UI Injection Attack' threat identified in the threat model.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-28 19:05:32.123456",
+    "last_updated": "2025-09-28 18:57:06.088578",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "9E37B873-4281-4965-993A-377698728912",
+    "description": "Attack tree focusing on the 'Web UI Injection Attack' threat.",
+    "type": "AND",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 8.0,
+      "impact": 9.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "A1",
+        "description": "User Provides Malicious Input",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 9.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "A1.1",
+            "description": "User enters JavaScript code in the Fastlane web UI.",
+            "type": "AND",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 10.0,
+              "impact": 10.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Input Validation and Sanitization",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              },
+              {
+                "description": "Content Security Policy (CSP)",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "A1.2",
+            "description": "User uploads a malicious HTML/JavaScript file.",
+            "type": "AND",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 7.0,
+              "impact": 9.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "File Type Restrictions",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.7
+              },
+              {
+                "description": "Sandboxing the Web UI",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.6
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [],
+        "references": []
+      },
+      {
+        "id": "B1",
+        "description": "Server Vulnerability Exploitation",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 10.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Regular Security Audits and Penetration Testing",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          },
+          {
+            "description": "Keep Software Up-to-Date",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement a Web Application Firewall (WAF)",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      },
+      {
+        "description": "Regularly Monitor Web Server Logs",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.7
+      }
+    ],
+    "references": []
+  }
+}

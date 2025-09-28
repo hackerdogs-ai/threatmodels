@@ -1,0 +1,17 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Web_UI_Trust_Boundary, "Web UI Trust Boundary") {
+        System(Fastlane_Server, "Fastlane Server", "The central server that manages workflows, stores configuration, and orchestrates tasks across clients and external services. It handles authentica...")
+    }
+    System_Boundary(tb_Client_Server_Trust_Boundary, "Client-Server Trust Boundary") {
+        System(Fastlane_Server, "Fastlane Server", "The central server that manages workflows, stores configuration, and orchestrates tasks across clients and external services. It handles authentica...")
+        System(iOS_Client, "iOS Client", "A command-line tool that interacts with the Fastlane server to build, test, and deliver iOS apps. It utilizes Xcode and other iOS development tools.")
+        System(Android_Client, "Android Client", "A command-line tool that interacts with the Fastlane server to build, test, and deliver Android apps. It utilizes Gradle and Android Studio.")
+    }
+    System(Bitrise, "Bitrise", "A third-party service integrated with Fastlane for automated testing and build processes.  Fastlane interacts with Bitrise to execute tests and bui...")
+    System(User__Web_UI_, "User (Web UI)", "Auto-created component: User (Web UI)")
+
+    Rel(User__Web_UI_, Fastlane_Server, "Uses")
+    Rel(Fastlane_Server, iOS_Client, "Uses")
+    Rel(iOS_Client, Bitrise, "Uses")
+    Rel(Bitrise, iOS_Client, "Uses")

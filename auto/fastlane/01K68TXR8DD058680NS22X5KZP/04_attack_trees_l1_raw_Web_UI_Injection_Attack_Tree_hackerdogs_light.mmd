@@ -1,0 +1,38 @@
+graph TB
+  node_9E37B873-4281-4965-993A-377698728912["Attack tree focusing on the 'Web UI Injection Attack' threat. | [HIGH]"]:::highRisk
+  A1["User Provides Malicious Input | [HIGH]"]:::highRisk
+  A1_1["User enters JavaScript code in the Fastlane web UI. | [HIGH]"]:::highRisk
+  A1_1_cm_0["CM: Input Validation and Sanitization (Eff: 0.9)"]:::countermeasure
+  A1_1_cm_1["CM: Content Security Policy (CSP) (Eff: 0.8)"]:::countermeasure
+  A1_2["User uploads a malicious HTML/JavaScript file. | [HIGH]"]:::highRisk
+  A1_2_cm_0["CM: File Type Restrictions (Eff: 0.7)"]:::countermeasure
+  A1_2_cm_1["CM: Sandboxing the Web UI (Eff: 0.6)"]:::countermeasure
+  B1["Server Vulnerability Exploitation | [HIGH]"]:::highRisk
+  B1_cm_0["CM: Regular Security Audits and Penetration Testing (Eff: 0.8)"]:::countermeasure
+  B1_cm_1["CM: Keep Software Up-to-Date (Eff: 0.9)"]:::countermeasure
+  node_9E37B873-4281-4965-993A-377698728912_cm_0["CM: Implement a Web Application Firewall (WAF) (Eff: 0.8)"]:::countermeasure
+  node_9E37B873-4281-4965-993A-377698728912_cm_1["CM: Regularly Monitor Web Server Logs (Eff: 0.7)"]:::countermeasure
+
+  node_9E37B873-4281-4965-993A-377698728912 --> A1
+  A1 --> A1_1
+  A1_1 -.-> A1_1_cm_0
+  A1_1 -.-> A1_1_cm_1
+  A1 --> A1_2
+  A1_2 -.-> A1_2_cm_0
+  A1_2 -.-> A1_2_cm_1
+  node_9E37B873-4281-4965-993A-377698728912 --> B1
+  B1 -.-> B1_cm_0
+  B1 -.-> B1_cm_1
+  node_9E37B873-4281-4965-993A-377698728912 -.-> node_9E37B873-4281-4965-993A-377698728912_cm_0
+  node_9E37B873-4281-4965-993A-377698728912 -.-> node_9E37B873-4281-4965-993A-377698728912_cm_1
+
+  classDef andNode fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef orNode fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef highRisk fill:#FFB3B3,color:#8B0000,stroke:#8B0000,stroke-width:2px
+  classDef mediumRisk fill:#FFF200,stroke:#7A6300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#ffa1ad,stroke:#A259FF,stroke-width:1px,stroke-dasharray:3 3,color:#0B0D17
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

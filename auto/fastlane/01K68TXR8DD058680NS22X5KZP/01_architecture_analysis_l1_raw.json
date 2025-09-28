@@ -1,0 +1,92 @@
+{
+  "id": "01K68TY2D2D08Z0DCKSNFM7M3E",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Fastlane Server",
+      "description": "The central server that manages workflows, stores configuration, and orchestrates tasks across clients and external services. It handles authentication, authorization, and workflow execution.",
+      "type": "Backend Service"
+    },
+    {
+      "name": "iOS Client",
+      "description": "A command-line tool that interacts with the Fastlane server to build, test, and deliver iOS apps. It utilizes Xcode and other iOS development tools.",
+      "type": "Client Tool"
+    },
+    {
+      "name": "Android Client",
+      "description": "A command-line tool that interacts with the Fastlane server to build, test, and deliver Android apps. It utilizes Gradle and Android Studio.",
+      "type": "Client Tool"
+    },
+    {
+      "name": "Bitrise",
+      "description": "A third-party service integrated with Fastlane for automated testing and build processes.  Fastlane interacts with Bitrise to execute tests and build artifacts.",
+      "type": "External Service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "User (Web UI)",
+      "destination": "Fastlane Server",
+      "description": "User interacts with the Fastlane web UI to define and manage workflows, specifying tasks, configurations, and credentials."
+    },
+    {
+      "source": "Fastlane Server",
+      "destination": "iOS Client",
+      "description": "The server sends instructions and data to the iOS client to initiate build, test, and delivery processes."
+    },
+    {
+      "source": "iOS Client",
+      "destination": "Bitrise",
+      "description": "The iOS client triggers automated tests within Bitrise based on workflow configuration."
+    },
+    {
+      "source": "Bitrise",
+      "destination": "iOS Client",
+      "description": "Bitrise returns test results and build artifacts to the iOS client."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Web UI Trust Boundary",
+      "description": "The web UI represents a trust boundary where user input and configuration directly influence the execution of Fastlane workflows.  Potential for malicious configuration or injection attacks.",
+      "components": [
+        "Fastlane Server",
+        "Web UI"
+      ]
+    },
+    {
+      "name": "Client-Server Trust Boundary",
+      "description": "The interaction between the Fastlane server and its clients (iOS and Android) represents a trust boundary.  Ensuring secure communication and validation of data exchanged between these components is critical.",
+      "components": [
+        "Fastlane Server",
+        "iOS Client",
+        "Android Client"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 18:56:31.650979",
+  "updated_at": "2025-09-28 18:56:31.650983"
+}
