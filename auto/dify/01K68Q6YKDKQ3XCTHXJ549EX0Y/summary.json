@@ -1,0 +1,60 @@
+{
+  "run_id": "01K68Q6YKDKQ3XCTHXJ549EX0Y",
+  "timestamp": "2025-09-28T10:52:03.486297",
+  "execution_time_secs": 35.12,
+  "total_cost": 0.075,
+  "total_steps": 3,
+  "successful_steps": 3,
+  "failed_steps": 0,
+  "overall_success": true,
+  "steps": {
+    "architecture_analysis": {
+      "success": true,
+      "cost": 0.017050000000000003,
+      "total_tokens": 1047,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 8.660131931304932,
+      "error_message": null
+    },
+    "data_flow_diagrams": {
+      "success": true,
+      "cost": 0.035280000000000006,
+      "total_tokens": 2059,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 19.079840183258057,
+      "error_message": null
+    },
+    "threats": {
+      "success": true,
+      "cost": 0.02262,
+      "total_tokens": 1768,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 7.363795280456543,
+      "error_message": null
+    }
+  },
+  "generated_files": {
+    "total_files": 13,
+    "files": [
+      "01_architecture_analysis_l1_raw.mmd",
+      "01_architecture_analysis_l1_raw.md",
+      "01_architecture_analysis_l1_raw.json",
+      "02_data_flow_diagrams_l1_raw_dark.mmd",
+      "02_data_flow_diagrams_l1_raw_dark.md",
+      "02_data_flow_diagrams_l1_raw_dark.html",
+      "02_data_flow_diagrams_l1_raw_light.mmd",
+      "02_data_flow_diagrams_l1_raw_light.md",
+      "02_data_flow_diagrams_l1_raw_light.html",
+      "02_data_flow_diagrams_l1_raw.json",
+      "03_threats_l1_raw.md",
+      "03_threats_l1_raw.json",
+      "03_threats_l1_raw.csv"
+    ],
+    "output_directory": "hackerdogs-ai/threatmodels/01K68Q6YKDKQ3XCTHXJ549EX0Y",
+    "ulid": "01K68Q6YKDKQ3XCTHXJ549EX0Y"
+  },
+  "output_directory": "hackerdogs-ai/threatmodels/01K68Q6YKDKQ3XCTHXJ549EX0Y"
+}

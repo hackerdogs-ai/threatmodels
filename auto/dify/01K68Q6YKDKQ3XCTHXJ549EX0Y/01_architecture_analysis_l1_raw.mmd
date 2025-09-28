@@ -1,0 +1,18 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Input_Boundary, "User Input Boundary") {
+        System(Frontend, "Frontend", "Auto-created component: Frontend")
+        System(Backend_API, "Backend API", "Auto-created component: Backend API")
+    }
+    System_Boundary(tb_Database_Boundary, "Database Boundary") {
+        System(Backend_API, "Backend API", "Auto-created component: Backend API")
+        System(Database, "Database", "Auto-created component: Database")
+    }
+    System(Frontend__React_, "Frontend (React)", "The frontend is built using React, responsible for user interface, data input forms, and displaying threat model results. It interacts with the bac...")
+    System(Backend_API__Node_js_, "Backend API (Node.js)", "The backend API is implemented using Node.js, handling incoming requests from the frontend, processing threat models, and interacting with the data...")
+    SystemDb(Database__PostgreSQL_, "Database (PostgreSQL)", "PostgreSQL is used to store threat model data, including user information, threat model definitions, and results.")
+    System(Authentication_Service, "Authentication Service", "Handles user authentication and authorization, ensuring only authorized users can access the application and its data.")
+
+    Rel(Frontend, Backend_API, "Uses")
+    Rel(Backend_API, Database, "Uses")
+    Rel(Backend_API, Frontend, "Uses")

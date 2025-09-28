@@ -1,0 +1,36 @@
+graph TB
+  abcdef01-2345-6789-abcd-ef0123456789["Database (PostgreSQL) | (database)"]:::dataStore
+  node_12345678-9abc-def0-1234-567890abcdef1["Frontend (React) | (frontend) | [LT]"]:::lowTrust
+  node_87654321-fedc-ba98-7654-3210fedcba98["Backend (Python) | (backend) | [HT]"]:::highTrust
+  node_98765432-fedc-ba98-7654-3210fedcba98["Model Inference Service | (service) | [VHT]"]:::veryHighTrust
+  fedcba98-7654-3210-fedc-ba9876543210["Redis Cache | (cache)"]:::dataStore
+  a1b2c3d4-e5f6-789a-bcde-f01234567890["User Input | [PII]"]:::dataAsset,pii
+  c3d4e5f6-789a-bcde-f012-3456789abcde["Model Configuration | [INT]"]:::dataAsset,internal
+  e5f6789a-bcde-f012-3456-789abcdef01["Generated Output | [INT]"]:::dataAsset,internal
+  f0123456-789a-bcde-f012-3456789abcdef0["User Credentials | [CONF]"]:::dataAsset,confidential
+
+  abcdef01-2345-6789-abcd-ef0123456789 -->|User Input to Backend| node_87654321-fedc-ba98-7654-3210fedcba98:::encryptedFlow
+  node_87654321-fedc-ba98-7654-3210fedcba98 -->|Backend to Model Inference Service| node_98765432-fedc-ba98-7654-3210fedcba98:::encryptedFlow
+  node_98765432-fedc-ba98-7654-3210fedcba98 -->|Model Inference to Backend| node_87654321-fedc-ba98-7654-3210fedcba98:::encryptedFlow
+  node_87654321-fedc-ba98-7654-3210fedcba98 -->|Backend to User| abcdef01-2345-6789-abcd-ef0123456789:::encryptedFlow
+
+  classDef externalEntity fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef process fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef dataAsset fill:#ffa1ad,stroke:#A259FF,stroke-width:2px,color:#0B0D17
+  classDef untrusted fill:#FFB3B3,stroke:#8B0000,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFF2B3,stroke:#7A6300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#106B49,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#106B49,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#7A6300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#8B0000,stroke-width:2px
+  classDef restricted fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#106B49,stroke-width:2px
+  classDef unencryptedFlow stroke:#8B0000,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5

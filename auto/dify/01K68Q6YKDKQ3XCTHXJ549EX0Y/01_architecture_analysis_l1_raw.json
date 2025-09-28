@@ -1,0 +1,86 @@
+{
+  "id": "01K68Q7724CE4SJV3274RA5083",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend (React)",
+      "description": "The frontend is built using React, responsible for user interface, data input forms, and displaying threat model results. It interacts with the backend API.",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend API (Node.js)",
+      "description": "The backend API is implemented using Node.js, handling incoming requests from the frontend, processing threat models, and interacting with the database.",
+      "type": "backend"
+    },
+    {
+      "name": "Database (PostgreSQL)",
+      "description": "PostgreSQL is used to store threat model data, including user information, threat model definitions, and results.",
+      "type": "database"
+    },
+    {
+      "name": "Authentication Service",
+      "description": "Handles user authentication and authorization, ensuring only authorized users can access the application and its data.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "Backend API",
+      "description": "User submits a threat model request via the frontend, which is transmitted to the backend API."
+    },
+    {
+      "source": "Backend API",
+      "destination": "Database",
+      "description": "The backend API retrieves and stores threat model data in the database."
+    },
+    {
+      "source": "Backend API",
+      "destination": "Frontend",
+      "description": "The backend API sends the processed threat model results back to the frontend for display."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Input Boundary",
+      "description": "The boundary between user input and the backend. This is a critical area for vulnerability exploitation.",
+      "components": [
+        "Frontend",
+        "Backend API"
+      ]
+    },
+    {
+      "name": "Database Boundary",
+      "description": "Controls access to the database, preventing unauthorized data access and modification.",
+      "components": [
+        "Backend API",
+        "Database"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 17:51:37.028794",
+  "updated_at": "2025-09-28 17:51:37.028800"
+}
