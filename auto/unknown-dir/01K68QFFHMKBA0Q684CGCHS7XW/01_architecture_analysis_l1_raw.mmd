@@ -1,0 +1,14 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Authentication_Boundary, "User Authentication Boundary") {
+        System(Frontend_Web_Application, "Frontend Web Application", "The user interface, responsible for presenting information and accepting user input. Built using React.")
+        System(Backend_API_Server, "Backend API Server", "Handles user requests, processes data, and interacts with the database. Implemented using Node.js and Express.")
+    }
+    System_Boundary(tb_Database_Access_Boundary, "Database Access Boundary") {
+        System(Backend_API_Server, "Backend API Server", "Handles user requests, processes data, and interacts with the database. Implemented using Node.js and Express.")
+        SystemDb(Relational_Database, "Relational Database", "Stores application data. Utilizes PostgreSQL for data persistence.")
+    }
+
+    Rel(Frontend_Web_Application, Backend_API_Server, "Uses")
+    Rel(Backend_API_Server, Relational_Database, "Uses")
+    Rel(Relational_Database, Backend_API_Server, "Uses")

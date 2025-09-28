@@ -1,0 +1,81 @@
+{
+  "id": "01K68QG2T6RDR99DSY2Z5CKT5N",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend Web Application",
+      "description": "The user interface, responsible for presenting information and accepting user input. Built using React.",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend API Server",
+      "description": "Handles user requests, processes data, and interacts with the database. Implemented using Node.js and Express.",
+      "type": "backend"
+    },
+    {
+      "name": "Relational Database",
+      "description": "Stores application data. Utilizes PostgreSQL for data persistence.",
+      "type": "database"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend Web Application",
+      "destination": "Backend API Server",
+      "description": "User interactions (e.g., login, data submission) are transmitted to the backend API server via HTTPS."
+    },
+    {
+      "source": "Backend API Server",
+      "destination": "Relational Database",
+      "description": "The API server queries and updates the database to store and retrieve application data."
+    },
+    {
+      "source": "Relational Database",
+      "destination": "Backend API Server",
+      "description": "The API server retrieves data from the database to fulfill user requests."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Authentication Boundary",
+      "description": "Defines the boundary between untrusted user input and authenticated user data.",
+      "components": [
+        "Frontend Web Application",
+        "Backend API Server"
+      ]
+    },
+    {
+      "name": "Database Access Boundary",
+      "description": "Controls access to the relational database, limiting access to authorized components only.",
+      "components": [
+        "Backend API Server",
+        "Relational Database"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 17:56:27.591052",
+  "updated_at": "2025-09-28 17:56:27.591057"
+}
