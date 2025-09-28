@@ -1,0 +1,98 @@
+{
+  "id": "01K68R592QPNK3WR73EDWSTPT5",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Markdown Source Repository",
+      "description": "Central Git repository containing all threat modeling documentation in Markdown format.",
+      "type": "source control"
+    },
+    {
+      "name": "Static Site Generator",
+      "description": "Build tool (e.g., MkDocs or Hugo) that converts Markdown into a static website.",
+      "type": "build service"
+    },
+    {
+      "name": "CI/CD Pipeline",
+      "description": "Automated workflow (e.g., GitHub Actions) that triggers builds, runs tests, and deploys the site.",
+      "type": "automation"
+    },
+    {
+      "name": "Hosting Service",
+      "description": "Public web host (e.g., GitHub Pages, Netlify) that serves the generated static site to end users.",
+      "type": "hosting"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Markdown Source Repository",
+      "destination": "Static Site Generator",
+      "description": "Source files are pulled by the generator to produce HTML/CSS assets."
+    },
+    {
+      "source": "Static Site Generator",
+      "destination": "Hosting Service",
+      "description": "Generated site files are uploaded to the hosting platform."
+    },
+    {
+      "source": "CI/CD Pipeline",
+      "destination": "Static Site Generator",
+      "description": "Pipeline triggers the build process."
+    },
+    {
+      "source": "CI/CD Pipeline",
+      "destination": "Hosting Service",
+      "description": "Pipeline deploys the built site to the host."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Source Code Boundary",
+      "description": "Separates internal developers from external contributors; controls who can modify threat modeling documents.",
+      "components": [
+        "Markdown Source Repository"
+      ]
+    },
+    {
+      "name": "Build Environment Boundary",
+      "description": "Separates the CI/CD runner from the source repository; ensures builds are performed in a clean, isolated environment.",
+      "components": [
+        "CI/CD Pipeline",
+        "Static Site Generator"
+      ]
+    },
+    {
+      "name": "Deployment Boundary",
+      "description": "Separates the internal build artifacts from the public-facing hosting platform; controls what is exposed to end users.",
+      "components": [
+        "Static Site Generator",
+        "Hosting Service"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 18:08:02.136009",
+  "updated_at": "2025-09-28 18:08:02.136017"
+}

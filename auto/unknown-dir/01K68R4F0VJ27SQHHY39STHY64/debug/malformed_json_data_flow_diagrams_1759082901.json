@@ -1,0 +1,97 @@
+{
+  "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3C",
+  "name": "Basic Data Flow Diagram – Web Application",
+  "description": "Simplified data flow diagram for a typical web application with user authentication, API backend, and database storage.",
+  "data_assets": [
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3D",
+      "name": "User Credentials",
+      "classification": "pii"
+    },
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3E",
+      "name": "Session Tokens",
+      "classification": "pii"
+    },
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3F",
+      "name": "User Profile Data",
+      "classification": "pii"
+    },
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3G",
+      "name": "Application Logs",
+      "classification": "internal"
+    },
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3H",
+      "name": "Static Assets (CSS/JS)",
+      "classification": "public"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3I",
+      "name": "Frontend Web App",
+      "type": "frontend",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3J",
+      "name": "Backend API Service",
+      "type": "api",
+      "trust_level": "high_trust"
+    },
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3K",
+      "name": "Database Service",
+      "type": "database",
+      "trust_level": "very_high_trust"
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3L",
+      "name": "User Database",
+      "type": "database",
+      "encryption": "at_rest"
+    },
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3M",
+      "name": "Session Store",
+      "type": "cache",
+      "encryption": "at_rest"
+    },
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3N",
+      "name": "Static Asset Store",
+      "type": "file",
+      "encryption": "none"
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3O",
+      "name": "End‑User",
+      "type": "user"
+    },
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3P",
+      "name": "OAuth Provider",
+      "type": "service"
+    },
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3Q",
+      "name": "Payment Gateway",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3R",
+      "name": "User request to frontend",
+      "source_id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3O",
+      "destination_id": "01H5GJ5X5Y6Z7W8X9Y0Z1A2B3I",
+      "protocol": "http",
+      "encryption": "none"
+    }

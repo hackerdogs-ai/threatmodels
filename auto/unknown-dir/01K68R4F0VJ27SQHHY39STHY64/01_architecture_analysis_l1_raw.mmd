@@ -1,0 +1,18 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Source_Code_Boundary, "Source Code Boundary") {
+        System(Markdown_Source_Repository, "Markdown Source Repository", "Central Git repository containing all threat modeling documentation in Markdown format.")
+    }
+    System_Boundary(tb_Build_Environment_Boundary, "Build Environment Boundary") {
+        System(CI_CD_Pipeline, "CI/CD Pipeline", "Automated workflow (e.g., GitHub Actions) that triggers builds, runs tests, and deploys the site.")
+        System(Static_Site_Generator, "Static Site Generator", "Build tool (e.g., MkDocs or Hugo) that converts Markdown into a static website.")
+    }
+    System_Boundary(tb_Deployment_Boundary, "Deployment Boundary") {
+        System(Static_Site_Generator, "Static Site Generator", "Build tool (e.g., MkDocs or Hugo) that converts Markdown into a static website.")
+        System(Hosting_Service, "Hosting Service", "Public web host (e.g., GitHub Pages, Netlify) that serves the generated static site to end users.")
+    }
+
+    Rel(Markdown_Source_Repository, Static_Site_Generator, "Uses")
+    Rel(Static_Site_Generator, Hosting_Service, "Uses")
+    Rel(CI_CD_Pipeline, Static_Site_Generator, "Uses")
+    Rel(CI_CD_Pipeline, Hosting_Service, "Uses")
