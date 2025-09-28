@@ -1,0 +1,56 @@
+{
+    "metadata": {
+        "id": "01K67E69WSP87SK4T7ESB7C5VK",
+        "title": "Spoofing via Unauthenticated API Access",
+        "description": "Attack tree for the most critical threat: unauthorized access to Caprover's backend API through weak authentication mechanisms.",
+        "created": "2025-09-28T06:00:00Z"
+    },
+    "tree": {
+        "id": "01K67E69WSP87SK4T7ESB7C5VK",
+        "description": "Primary attack path for spoofing via unauthenticated API access",
+        "type": "OR",
+        "risk": {
+            "likelihood": 8,
+            "impact": 9
+        },
+        "children": [
+            {
+                "id": "01K67E69WSP87SK4T7ESB7C5VK-01",
+                "description": "Exploit weak authentication bypass (e.g., brute force, stolen credentials)",
+                "type": "LEAF",
+                "risk": {
+                    "likelihood": 7,
+                    "impact": 9
+                },
+                "children": [],
+                "countermeasures": [
+                    {
+                        "description": "Implement OAuth 2.0 with multi-factor authentication",
+                        "effectiveness": 0.85
+                    },
+                    {
+                        "description": "Enforce rate limiting on API endpoints",
+                        "effectiveness": 0.7
+                    }
+                ]
+            },
+            {
+                "id": "01K67E69WSP87SK4T7ESB7C5VK-02",
+                "description": "Exploit API misconfiguration (e.g., missing CORS headers)",
+                "type": "LEAF",
+                "risk": {
+                    "likelihood": 6,
+                    "impact": 9
+                },
+                "children": [],
+                "countermeasures": [
+                    {
+                        "description": "Validate and sanitize all API inputs",
+                        "effectiveness": 0.75
+                    },
+                    {
+                        "description": "Use API gateways with WAF protection",
+                        "effectiveness": 0.9
+                    }
+                ]
+            }

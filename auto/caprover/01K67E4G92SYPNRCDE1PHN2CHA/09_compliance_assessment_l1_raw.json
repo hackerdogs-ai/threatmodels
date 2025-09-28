@@ -1,0 +1,59 @@
+{
+  "compliance_assessment": {
+    "id": "01K67E69WRESBFC63ZAN87AXAK",
+    "framework": "GDPR",
+    "framework_description": "Regulation governing data protection and privacy in the European Union, focusing on data subject rights, data breach notifications, and lawful data processing.",
+    "applicability": "high",
+    "compliance_status": "non_compliant",
+    "overall_score": 45.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-1",
+        "requirement": "Data encryption for data in transit and at rest",
+        "status": "non_compliant",
+        "evidence": "TLS 1.2+ is planned but not implemented; database encryption is planned but not implemented",
+        "gaps": [
+          "No active encryption mechanisms for data in transit",
+          "No encryption for sensitive database fields at rest"
+        ],
+        "recommendations": [
+          "Implement TLS 1.2+ for all internal/external communications",
+          "Enforce database field encryption for sensitive data"
+        ]
+      },
+      {
+        "requirement_id": "GDPR-3",
+        "requirement": "Authentication and authorization mechanisms for data access",
+        "status": "partially_compliant",
+        "evidence": "OAuth2/JWT authentication is planned but not implemented",
+        "gaps": [
+          "No active authentication mechanism for API endpoints"
+        ],
+        "recommendations": [
+          "Deploy OAuth2/JWT authentication for all API endpoints"
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Missing encryption for data in transit and at rest",
+      "No active authentication mechanisms for API access"
+    ],
+    "remediation_plan": [
+      "Implement TLS 1.2+ encryption for all communications",
+      "Deploy OAuth2/JWT authentication for API endpoints",
+      "Enforce database encryption for sensitive fields"
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-28 05:59:08.331283",
+    "assessor": null,
+    "created_at": "2025-09-28 05:59:08.331287",
+    "updated_at": "2025-09-28 05:59:08.331289"
+  }
+}

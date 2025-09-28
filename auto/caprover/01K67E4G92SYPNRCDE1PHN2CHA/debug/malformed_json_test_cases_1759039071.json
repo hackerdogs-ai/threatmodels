@@ -1,0 +1,20 @@
+{
+    "test_cases": [
+        {
+            "id": "01K67E69WRESBFC63ZAN87AXAK",
+            "name": "Validate API Authentication Enforcement",
+            "description": "Verify all API endpoints require valid authentication tokens.",
+            "scenario": "Send a POST request to /api/deploy without valid OAuth2/JWT token and check for 401 Unauthorized response.",
+            "threat_ids": ["01K67E69WRESBFC63ZAN87AXAK"],
+            "status": "not_tested",
+            "test_result": "pending"
+        },
+        {
+            "id": "01K67E69WR7H687VQ9J1YA87GJ",
+            "name": "Test Database Access Controls",
+            "description": "Confirm unauthorized users cannot modify database records.",
+            "scenario": "Attempt to update application configuration in the database using a non-administrator account.",
+            "threat_ids": ["01K67E69WR7H687VQ9J1YA87GJ"],
+            "status": "not_tested",
+            "test_result": "pending"
+        }

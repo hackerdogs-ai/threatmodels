@@ -1,0 +1,152 @@
+{
+    "correlations": [
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "similar_threats",
+            "description": "Spoofing via unauthenticated APIs is a common vulnerability in cloud-native applications, including other Kubernetes-based platforms like Kubernetes Dashboard or Helm charts.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Standardize API authentication across all microservices using OAuth2/JWT",
+                "Conduct cross-system API security audits"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "shared_mitigations",
+            "description": "TLS encryption for internal/external communication aligns with industry standards for securing microservices architectures.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Implement TLS 1.3 across all inter-service communication channels",
+                "Enforce certificate pinning for internal Kubernetes API traffic"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "related_attack_patterns",
+            "description": "Kubernetes DoS attacks (resource exhaustion) share attack vectors with containerized workloads in Docker Swarm or other orchestration tools.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Deploy unified resource quotas across all container orchestration platforms",
+                "Implement anomaly detection for sudden resource spikes"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "compliance_overlap",
+            "description": "Database tampering risks align with GDPR Article 30 requirements for data integrity controls.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Implement audit logging for all database modifications",
+                "Conduct regular data integrity validation checks"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "similar_threats",
+            "description": "Container registry vulnerabilities are common across all DevOps pipelines, including CI/CD systems and artifact repositories.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Adopt signed image verification across all container registries",
+                "Integrate vulnerability scanning into CI/CD pipelines"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "shared_mitigations",
+            "description": "Role-based access control (RBAC) mitigates elevation of privilege risks across all cloud platforms.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Standardize RBAC policies across Kubernetes, Docker Swarm, and VM environments",
+                "Implement least-privilege access for container registries"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "related_attack_patterns",
+            "description": "Information disclosure risks through insecure communication overlap with vulnerabilities in API gateways and service meshes.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Deploy service mesh encryption for all service-to-service communication",
+                "Enable mTLS for internal API gateways"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "compliance_overlap",
+            "description": "Denial of Service risks align with NIST SP 800-53 Rev. 4 controls for availability protection.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Implement automated cluster health monitoring",
+                "Configure auto-scaling for critical workloads"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "similar_threats",
+            "description": "Database tampering risks are similar to vulnerabilities in relational database management systems (RDBMS) used across enterprise applications.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Implement database activity monitoring (DAM)",
+                "Enforce field-level encryption for sensitive data"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "shared_mitigations",
+            "description": "Container image scanning aligns with DevSecOps practices for securing all containerized workloads.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Centralize container image vulnerability scanning",
+                "Enforce policy-based image approval workflows"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "related_attack_patterns",
+            "description": "Spoofing attacks via APIs share similarities with vulnerabilities in RESTful APIs used in SaaS platforms.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Implement API rate limiting across all endpoints",
+                "Deploy WAF rules for API request validation"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "compliance_overlap",
+            "description": "Information disclosure risks align with ISO 27001 requirements for data protection.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Conduct regular security awareness training",
+                "Implement data classification policies"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "similar_threats",
+            "description": "Elevation of privilege risks via container registries are common in all containerized environments.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Enforce registry access controls",
+                "Implement image signing for all production deployments"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "shared_mitigations",
+            "description": "Kubernetes resource limits align with cloud provider security best practices for container orchestration.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Standardize resource quotas across cloud providers",
+                "Monitor for unexpected resource consumption patterns"
+            ]
+        },
+        {
+            "source_threat_model": "Caprover Threat Model",
+            "correlation_type": "related_attack_patterns",
+            "description": "Denial of Service attacks on Kubernetes clusters share vectors with DDoS attacks on cloud infrastructure.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Deploy DDoS protection for cloud infrastructure",
+                "Implement network segmentation for critical workloads"
+            ]
+        }

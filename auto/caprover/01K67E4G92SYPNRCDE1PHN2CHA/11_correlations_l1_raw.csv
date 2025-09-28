@@ -1,0 +1,16 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Spoofing via unauthenticated APIs is a common vulnerability in cloud-native applications, including other Kubernetes-based platforms like Kubernetes Dashboard or Helm charts.",,,,2025-09-28T06:02:03.193422
+CORR_002,,,,TLS encryption for internal/external communication aligns with industry standards for securing microservices architectures.,,,,2025-09-28T06:02:03.193436
+CORR_003,,,,Kubernetes DoS attacks (resource exhaustion) share attack vectors with containerized workloads in Docker Swarm or other orchestration tools.,,,,2025-09-28T06:02:03.193445
+CORR_004,,,,Database tampering risks align with GDPR Article 30 requirements for data integrity controls.,,,,2025-09-28T06:02:03.193454
+CORR_005,,,,"Container registry vulnerabilities are common across all DevOps pipelines, including CI/CD systems and artifact repositories.",,,,2025-09-28T06:02:03.193461
+CORR_006,,,,Role-based access control (RBAC) mitigates elevation of privilege risks across all cloud platforms.,,,,2025-09-28T06:02:03.193469
+CORR_007,,,,Information disclosure risks through insecure communication overlap with vulnerabilities in API gateways and service meshes.,,,,2025-09-28T06:02:03.193477
+CORR_008,,,,Denial of Service risks align with NIST SP 800-53 Rev. 4 controls for availability protection.,,,,2025-09-28T06:02:03.193485
+CORR_009,,,,Database tampering risks are similar to vulnerabilities in relational database management systems (RDBMS) used across enterprise applications.,,,,2025-09-28T06:02:03.193492
+CORR_010,,,,Container image scanning aligns with DevSecOps practices for securing all containerized workloads.,,,,2025-09-28T06:02:03.193501
+CORR_011,,,,Spoofing attacks via APIs share similarities with vulnerabilities in RESTful APIs used in SaaS platforms.,,,,2025-09-28T06:02:03.193508
+CORR_012,,,,Information disclosure risks align with ISO 27001 requirements for data protection.,,,,2025-09-28T06:02:03.193516
+CORR_013,,,,Elevation of privilege risks via container registries are common in all containerized environments.,,,,2025-09-28T06:02:03.193523
+CORR_014,,,,Kubernetes resource limits align with cloud provider security best practices for container orchestration.,,,,2025-09-28T06:02:03.193530
+CORR_015,,,,Denial of Service attacks on Kubernetes clusters share vectors with DDoS attacks on cloud infrastructure.,,,,2025-09-28T06:02:03.193538

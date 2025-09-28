@@ -1,0 +1,156 @@
+{
+  "risk_prioritization": {
+    "id": "01K67E69WRESBFC63ZAN87AXAK",
+    "prioritization_method": "weighted_impact_likelihood",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K67E69WRESBFC63ZAN87AXAK",
+        "threat_title": "Spoofing via Unauthenticated API Access",
+        "risk_score": 8.2,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement OAuth2/JWT-based authentication for all API endpoints",
+          "Enforce rate limiting and IP whitelisting for API access"
+        ]
+      },
+      {
+        "risk_id": "01K67E69WSHXQWJS7C45NR6CY4",
+        "threat_title": "Information Disclosure via Insecure Communication",
+        "risk_score": 8.0,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "low",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Mandate TLS 1.2+ encryption for all internal/external communications",
+          "Audit certificate validity and renewals for all endpoints"
+        ]
+      },
+      {
+        "risk_id": "01K67E69WR7H687VQ9J1YA87GJ",
+        "threat_title": "Database Tampering",
+        "risk_score": 7.8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urg, urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Enforce RBAC for database access",
+          "Encrypt sensitive fields at rest using AES-256"
+        ]
+      },
+      {
+        "risk_id": "01K67E69WS6Q9W690FF7700T9M",
+        "threat_title": "Denial of Service on Kubernetes Cluster",
+        "risk_score": 7.5,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Configure Kubernetes resource limits and memory constraints",
+          "Implement network policies to restrict cluster access"
+        ]
+      },
+      {
+        "risk_id": "01K67E69WSP87SK4T7ESB7C5VK",
+        "threat_title": "Elevation of Privilege via Container Registry Vulnerabilities",
+        "risk_score": 7.3,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Enforce signed image verification for registry access",
+          "Implement regular container image vulnerability scanning"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K67E69WRESBFC63ZAN87AXAK",
+        "01K67E69WSHXQWJS7C45NR6CY4",
+        "01K67E69WR7H687VQ9J1YA87GJ"
+      ],
+      "high_priority_risks": [
+        "01K67E69WS6Q9W690FF7700T9M",
+        "01K67E69WSP87SK4T7ESB7C5VK"
+      ],
+      "medium_priority_risks": [],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K67E69WRESBFC63ZAN87AXAK": 8.2,
+      "01K67E69WSHXQWJS7C45NR6CY4": 8.0,
+      "01K67E69WR7H687VQ9J1YA87GJ": 7.8,
+      "01K67E69WS6Q9W690FF7700T9M": 7.5,
+      "01K67E69WSP87SK4T7ESB7C5VK": 7.3
+    },
+    "risk_rankings": [
+      [
+        "01K67E69WRESBFC63ZAN87AXAK",
+        8.2
+      ],
+      [
+        "01K67E69WSHXQWJS7C45NR6CY4",
+        8.0
+      ],
+      [
+        "01K67E69WR7H687VQ9J1YA87GJ",
+        7.8
+      ],
+      [
+        "01K67E69WS6Q9W690FF7700T9M",
+        7.5
+      ],
+      [
+        "01K67E69WSP87SK4T7ESB7C5VK",
+        7.3
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "high",
+      "operational_impact": "high",
+      "reputational_impact": "high"
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-28 06:00:58.114894",
+    "updated_at": "2025-09-28 06:00:58.114912"
+  }
+}
