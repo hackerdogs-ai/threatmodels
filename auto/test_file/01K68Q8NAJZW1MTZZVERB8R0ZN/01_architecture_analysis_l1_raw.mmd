@@ -1,0 +1,13 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Frontend_Trust_Boundary, "Frontend Trust Boundary") {
+        System(Web_Frontend, "Web Frontend", "The frontend is a single-page application (SPA) built with React. It handles user interactions, displays data, and sends requests to the backend API.")
+    }
+    System_Boundary(tb_Backend_Trust_Boundary, "Backend Trust Boundary") {
+        System(RESTful_API_Backend, "RESTful API Backend", "The backend is built using Node.js and Express. It exposes a RESTful API for the frontend to consume. It handles business logic, authentication, an...")
+    }
+    SystemDb(Relational_Database, "Relational Database", "The database stores application data. It is a PostgreSQL instance, providing structured data storage and retrieval.")
+
+    Rel(Web_Frontend, RESTful_API_Backend, "Uses")
+    Rel(RESTful_API_Backend, Relational_Database, "Uses")
+    Rel(RESTful_API_Backend, Web_Frontend, "Uses")

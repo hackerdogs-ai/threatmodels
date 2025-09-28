@@ -1,0 +1,79 @@
+{
+  "id": "01K68Q91DX4DZ4S4T3VNTH9QK3",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Web Frontend",
+      "description": "The frontend is a single-page application (SPA) built with React. It handles user interactions, displays data, and sends requests to the backend API.",
+      "type": "frontend"
+    },
+    {
+      "name": "RESTful API Backend",
+      "description": "The backend is built using Node.js and Express. It exposes a RESTful API for the frontend to consume. It handles business logic, authentication, and authorization.",
+      "type": "backend"
+    },
+    {
+      "name": "Relational Database",
+      "description": "The database stores application data. It is a PostgreSQL instance, providing structured data storage and retrieval.",
+      "type": "database"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Web Frontend",
+      "destination": "RESTful API Backend",
+      "description": "User interactions (e.g., form submissions, button clicks) are sent as HTTP requests to the backend API."
+    },
+    {
+      "source": "RESTful API Backend",
+      "destination": "Relational Database",
+      "description": "The backend retrieves and stores data in the database."
+    },
+    {
+      "source": "RESTful API Backend",
+      "destination": "Web Frontend",
+      "description": "The backend sends data to the frontend for display."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Frontend Trust Boundary",
+      "description": "The frontend is considered a low-trust zone. It should only receive data from the backend and should not handle sensitive operations directly.",
+      "components": [
+        "Web Frontend"
+      ]
+    },
+    {
+      "name": "Backend Trust Boundary",
+      "description": "The backend is a higher-trust zone, handling authentication, authorization, and business logic.",
+      "components": [
+        "RESTful API Backend"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 17:52:36.797587",
+  "updated_at": "2025-09-28 17:52:36.797592"
+}
