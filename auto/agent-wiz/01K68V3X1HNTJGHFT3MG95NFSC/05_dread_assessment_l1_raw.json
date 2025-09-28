@@ -1,0 +1,137 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K68V5FKK0DVZHHEP546569NT",
+      "threat_title": "SQL Injection",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 7,
+        "exploitability": 6,
+        "affected_users": 5,
+        "discoverability": 4
+      },
+      "total_risk_score": 30,
+      "risk_level": "high",
+      "justification": "SQL injection vulnerabilities can lead to significant data breaches and system compromise. While exploitability is moderate, the potential damage is high. Reproducibility is high due to the prevalence of SQL injection techniques. Discoverability is moderate.",
+      "recommendations": [
+        "Implement robust input validation and sanitization.",
+        "Use parameterized queries or prepared statements.",
+        "Employ a Web Application Firewall (WAF)."
+      ],
+      "assessment_date": "2025-09-28 19:01:02.886660",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K68V5FKK3Z399D1C5NRS64QF",
+      "threat_title": "Cross-Site Scripting (XSS)",
+      "dread_scores": {
+        "damage": 7,
+        "reproducibility": 8,
+        "exploitability": 7,
+        "affected_users": 6,
+        "discoverability": 5
+      },
+      "total_risk_score": 33,
+      "risk_level": "high",
+      "justification": "XSS vulnerabilities can allow attackers to execute malicious scripts in the browsers of other users. The potential damage is significant, and reproducibility is high.  Exploitability is moderate, and discoverability is moderate.",
+      "recommendations": [
+        "Implement Content Security Policy (CSP).",
+        "Sanitize user input carefully.",
+        "Use a Web Application Firewall (WAF)."
+      ],
+      "assessment_date": "2025-09-28 19:01:02.886923",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K68V5FKKRWZ3CABMTPP7BXH2",
+      "threat_title": "Insufficient Input Validation",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 7,
+        "exploitability": 6,
+        "affected_users": 4,
+        "discoverability": 5
+      },
+      "total_risk_score": 29,
+      "risk_level": "high",
+      "justification": "Lack of proper input validation can lead to various vulnerabilities, including XSS and SQL injection. Reproducibility is high, and discoverability is moderate.  The potential damage is moderate.",
+      "recommendations": [
+        "Implement strict input validation on all user inputs.",
+        "Use a whitelist approach to input validation.",
+        "Sanitize user input before processing."
+      ],
+      "assessment_date": "2025-09-28 19:01:02.887117",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K68V5FKM2Q1DWYSE613G0XNH",
+      "threat_title": "Reliance on AI Service",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 6,
+        "exploitability": 5,
+        "affected_users": 3,
+        "discoverability": 6
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "If the Repello AI Service is compromised or provides inaccurate threat intelligence, the system's threat modeling and security decisions could be flawed. Reproducibility is moderate, and discoverability is high. The potential damage is moderate.",
+      "recommendations": [
+        "Implement robust monitoring and alerting for the AI service.",
+        "Establish a process for validating the AI service's output.",
+        "Have a fallback mechanism in case the AI service is unavailable."
+      ],
+      "assessment_date": "2025-09-28 19:01:02.887307",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "This threat model identifies several high-risk vulnerabilities related to data access, user authentication, and reliance on external AI services.  Prioritization should focus on robust input validation, secure authentication practices, and careful evaluation of the Repello AI Service's output.  A layered security approach is recommended."
+}

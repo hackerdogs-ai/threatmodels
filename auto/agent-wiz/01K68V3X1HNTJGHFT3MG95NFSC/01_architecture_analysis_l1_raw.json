@@ -1,0 +1,91 @@
+{
+  "id": "01K68V4REZM14KNEXH6YARBTET",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "React Frontend",
+      "description": "The user interface built with React, responsible for user interaction, data presentation, and form handling.",
+      "type": "frontend"
+    },
+    {
+      "name": "FastAPI Backend",
+      "description": "The Python backend built with FastAPI, handling API requests, business logic, and communication with the database and AI services.",
+      "type": "backend"
+    },
+    {
+      "name": "Repello AI Service",
+      "description": "An AI service (likely integrated via API) providing threat intelligence and automated threat modeling suggestions.",
+      "type": "service"
+    },
+    {
+      "name": "PostgreSQL Database",
+      "description": "Stores threat models, user data, and potentially threat intelligence data.",
+      "type": "database"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "React Frontend",
+      "destination": "FastAPI Backend",
+      "description": "User interactions (form submissions, data updates) are sent to the backend via API calls."
+    },
+    {
+      "source": "FastAPI Backend",
+      "destination": "Repello AI Service",
+      "description": "The backend sends threat modeling requests to the AI service for automated suggestions."
+    },
+    {
+      "source": "Repello AI Service",
+      "destination": "FastAPI Backend",
+      "description": "The AI service returns threat modeling suggestions to the backend."
+    },
+    {
+      "source": "FastAPI Backend",
+      "destination": "PostgreSQL Database",
+      "description": "Threat models and related data are persisted and retrieved from the database."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Frontend-Backend Trust Boundary",
+      "description": "The boundary between the React frontend and the FastAPI backend.  Sensitive data should not be directly exposed from the frontend.",
+      "components": [
+        "React Frontend",
+        "FastAPI Backend"
+      ]
+    },
+    {
+      "name": "AI Service Trust Boundary",
+      "description": "The interaction between the FastAPI backend and the Repello AI Service.  Trust in the AI service's threat intelligence and suggestions is paramount.",
+      "components": [
+        "FastAPI Backend",
+        "Repello AI Service"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 19:00:10.847662",
+  "updated_at": "2025-09-28 19:00:10.847667"
+}

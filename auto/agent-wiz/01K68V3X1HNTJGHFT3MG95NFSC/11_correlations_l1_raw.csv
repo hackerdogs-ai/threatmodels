@@ -1,0 +1,5 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"The Agent-Wiz threat model identifies SQL Injection, XSS, Broken Authentication, and Insufficient Input Validation. These are all common vulnerabilities exploited in web applications, particularly those utilizing React and FastAPI.",,,,2025-09-28T19:02:40.441292
+CORR_002,,,,"Several mitigation strategies overlap, including parameterized queries for SQL Injection, Content Security Policy (CSP) for XSS, and strong authentication practices (MFA) for Broken Authentication.",,,,2025-09-28T19:02:40.441304
+CORR_003,,,,"The reliance on the Repello AI Service introduces a dependency that could be exploited.  A compromised AI service could be used to inject malicious threat intelligence, leading to false positives or, more seriously, manipulated threat assessments.",,,,2025-09-28T19:02:40.441312
+CORR_004,,,,"The identified threats align with several compliance frameworks, including PCI DSS (due to handling sensitive data), GDPR (due to data privacy concerns), and potentially SOC 2 (depending on the organization's requirements).",,,,2025-09-28T19:02:40.441319

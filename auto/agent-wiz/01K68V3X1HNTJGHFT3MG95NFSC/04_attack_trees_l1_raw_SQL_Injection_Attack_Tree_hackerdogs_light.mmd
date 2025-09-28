@@ -1,0 +1,32 @@
+graph TB
+  a8f2d3e4-b5c6-4789-a123-456789abcdef["Attack tree focusing on the most critical threat: SQL Injection, targeting the FastAPI backend. | [HIGH]"]:::highRisk
+  node_12345678-9abc-4def-8765-43210fedcba["Exploit Input Field Vulnerability | [HIGH]"]:::highRisk
+  fedcba98-7654-3210-fedc-ba9876543210["Malicious User Input | [HIGH]"]:::highRisk
+  fedcba98-7654-3210-fedc-ba9876543210_cm_0["CM: Implement Robust Input Validation (Eff: 0.9)"]:::countermeasure
+  fedcba98-7654-3210-fedc-ba9876543210_cm_1["CM: Use Parameterized Queries (Eff: 0.95)"]:::countermeasure
+  node_12345678-9abc-4def-8765-43210fedcba_cm_0["CM: Implement Input Validation (Eff: 0.9)"]:::countermeasure
+  node_12345678-9abc-4def-8765-43210fedcba_cm_1["CM: Use Parameterized Queries (Eff: 0.95)"]:::countermeasure
+  a8f2d3e4-b5c6-4789-a123-456789abcdef_cm_0["CM: Implement Input Validation (Eff: 0.9)"]:::countermeasure
+  a8f2d3e4-b5c6-4789-a123-456789abcdef_cm_1["CM: Use Parameterized Queries (Eff: 0.95)"]:::countermeasure
+  a8f2d3e4-b5c6-4789-a123-456789abcdef_cm_2["CM: Regular Security Audits (Eff: 0.8)"]:::countermeasure
+
+  a8f2d3e4-b5c6-4789-a123-456789abcdef --> node_12345678-9abc-4def-8765-43210fedcba
+  node_12345678-9abc-4def-8765-43210fedcba --> fedcba98-7654-3210-fedc-ba9876543210
+  fedcba98-7654-3210-fedc-ba9876543210 -.-> fedcba98-7654-3210-fedc-ba9876543210_cm_0
+  fedcba98-7654-3210-fedc-ba9876543210 -.-> fedcba98-7654-3210-fedc-ba9876543210_cm_1
+  node_12345678-9abc-4def-8765-43210fedcba -.-> node_12345678-9abc-4def-8765-43210fedcba_cm_0
+  node_12345678-9abc-4def-8765-43210fedcba -.-> node_12345678-9abc-4def-8765-43210fedcba_cm_1
+  a8f2d3e4-b5c6-4789-a123-456789abcdef -.-> a8f2d3e4-b5c6-4789-a123-456789abcdef_cm_0
+  a8f2d3e4-b5c6-4789-a123-456789abcdef -.-> a8f2d3e4-b5c6-4789-a123-456789abcdef_cm_1
+  a8f2d3e4-b5c6-4789-a123-456789abcdef -.-> a8f2d3e4-b5c6-4789-a123-456789abcdef_cm_2
+
+  classDef andNode fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef orNode fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef highRisk fill:#FFB3B3,color:#8B0000,stroke:#8B0000,stroke-width:2px
+  classDef mediumRisk fill:#FFF200,stroke:#7A6300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#ffa1ad,stroke:#A259FF,stroke-width:1px,stroke-dasharray:3 3,color:#0B0D17
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

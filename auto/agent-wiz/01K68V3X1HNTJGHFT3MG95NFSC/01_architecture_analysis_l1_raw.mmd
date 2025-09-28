@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Frontend_Backend_Trust_Boundary, "Frontend-Backend Trust Boun...") {
+        System(React_Frontend, "React Frontend", "The user interface built with React, responsible for user interaction, data presentation, and form handling.")
+        System(FastAPI_Backend, "FastAPI Backend", "The Python backend built with FastAPI, handling API requests, business logic, and communication with the database and AI services.")
+    }
+    System_Boundary(tb_AI_Service_Trust_Boundary, "AI Service Trust Boundary") {
+        System(FastAPI_Backend, "FastAPI Backend", "The Python backend built with FastAPI, handling API requests, business logic, and communication with the database and AI services.")
+        System(Repello_AI_Service, "Repello AI Service", "An AI service (likely integrated via API) providing threat intelligence and automated threat modeling suggestions.")
+    }
+    SystemDb(PostgreSQL_Database, "PostgreSQL Database", "Stores threat models, user data, and potentially threat intelligence data.")
+
+    Rel(React_Frontend, FastAPI_Backend, "Uses")
+    Rel(FastAPI_Backend, Repello_AI_Service, "Uses")
+    Rel(Repello_AI_Service, FastAPI_Backend, "Uses")
+    Rel(FastAPI_Backend, PostgreSQL_Database, "Uses")

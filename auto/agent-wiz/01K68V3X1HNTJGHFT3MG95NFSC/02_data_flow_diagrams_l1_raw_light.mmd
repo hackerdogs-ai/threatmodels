@@ -1,0 +1,39 @@
+graph TB
+  n3o4p5q6-r7s8-9ab0-cdef-12345678901["User | (user) | [UT]"]:::untrusted
+  i2j3k4l5-m6n7-89ab-cdef-01234567890["Frontend (Web UI) | (frontend) | [LT]"]:::lowTrust
+  j3k4l5m6-n7o8-9ab0-cdef-12345678901["Backend API | (backend) | [HT]"]:::highTrust
+  k3l4m5n6-o7p8-9ab0-cdef-12345678901["Database | (database) | [HT]"]:::highTrust
+  l3m4n5o6-p7q8-9ab0-cdef-12345678901["User Database | (database)"]:::dataStore
+  m3n4o5p6-q7r8-9ab0-cdef-12345678901["Session Cache | (cache)"]:::dataStore
+  e1f2a3b4-c5d6-789a-bcde-f0123456789["User Credentials | [PII]"]:::dataAsset,pii
+  f2a3b4c5-d6e7-89ab-cdef-0123456789["Agent Configuration Data | [INT]"]:::dataAsset,internal
+  g3h4i5j6-k7l8-9a0b-cdef-12345678901["User Activity Logs | [INT]"]:::dataAsset,internal
+  p3q4r5s6-t7u8-9ab0-cdef-12345678901["Component p3q4r5s6-t7u8-9ab0-cdef-12345678901"]:::process,untrusted
+  o3p4q5r6-s7t8-9ab0-cdef-12345678901["Component o3p4q5r6-s7t8-9ab0-cdef-12345678901"]:::process,untrusted
+  q3r4s5t6-u7v8-9ab0-cdef-12345678901["Component q3r4s5t6-u7v8-9ab0-cdef-12345678901"]:::process,untrusted
+  n3o4p5q6-s7t8-9ab0-cdef-12345678901["Component n3o4p5q6-s7t8-9ab0-cdef-12345678901"]:::process,untrusted
+
+  n3o4p5q6-s7t8-9ab0-cdef-12345678901 -->|User Login| o3p4q5r6-s7t8-9ab0-cdef-12345678901:::encryptedFlow
+  o3p4q5r6-s7t8-9ab0-cdef-12345678901 -->|Agent Configuration Retrieval| p3q4r5s6-t7u8-9ab0-cdef-12345678901:::encryptedFlow
+  o3p4q5r6-s7t8-9ab0-cdef-12345678901 -->|User Activity Logging| q3r4s5t6-u7v8-9ab0-cdef-12345678901:::unencryptedFlow
+
+  classDef externalEntity fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef process fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef dataAsset fill:#ffa1ad,stroke:#A259FF,stroke-width:2px,color:#0B0D17
+  classDef untrusted fill:#FFB3B3,stroke:#8B0000,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFF2B3,stroke:#7A6300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#106B49,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#106B49,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#7A6300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#8B0000,stroke-width:2px
+  classDef restricted fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#106B49,stroke-width:2px
+  classDef unencryptedFlow stroke:#8B0000,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5

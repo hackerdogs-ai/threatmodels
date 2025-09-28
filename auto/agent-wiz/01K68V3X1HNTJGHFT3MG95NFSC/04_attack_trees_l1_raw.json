@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "id": "a8f2d3e4-b5c6-4789-a123-456789abcdef",
+    "title": "SQL Injection Attack Tree",
+    "description": "Attack tree focusing on the most critical threat: SQL Injection, targeting the FastAPI backend.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-28 19:05:34.789123",
+    "last_updated": "2025-09-28 19:00:45.262931",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "a8f2d3e4-b5c6-4789-a123-456789abcdef",
+    "description": "Attack tree focusing on the most critical threat: SQL Injection, targeting the FastAPI backend.",
+    "type": "AND",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 8.0,
+      "impact": 9.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "12345678-9abc-4def-8765-43210fedcba",
+        "description": "Exploit Input Field Vulnerability",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 9.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "fedcba98-7654-3210-fedc-ba9876543210",
+            "description": "Malicious User Input",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 10.0,
+              "impact": 10.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement Robust Input Validation",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              },
+              {
+                "description": "Use Parameterized Queries",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.95
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Implement Input Validation",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Use Parameterized Queries",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.95
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement Input Validation",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      },
+      {
+        "description": "Use Parameterized Queries",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.95
+      },
+      {
+        "description": "Regular Security Audits",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      }
+    ],
+    "references": []
+  }
+}
