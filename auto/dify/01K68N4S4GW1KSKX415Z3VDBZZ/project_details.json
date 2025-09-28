@@ -1,0 +1,40 @@
+{
+  "project_name": "Dify - Open-source LLM Application Development Platform",
+  "line_of_business": [
+    "Artificial Intelligence",
+    "Software Development",
+    "Cloud Services"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public and Organizations",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "Email/password reset",
+    "OAuth (potentially with third-party integrations)"
+  ],
+  "deployment_environment": "Cloud and On-premise",
+  "compliance_requirements": [
+    "GDPR",
+    "CCPA",
+    "HIPAA (if applicable based on usage)"
+  ],
+  "security_requirements": [
+    "Data encryption in transit and at rest",
+    "Access control mechanisms",
+    "Audit logging",
+    "Input validation"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threat modeling for the Dify platform including API interactions, user data handling, and external integrations",
+  "assumptions": [
+    "Users will have varying levels of technical expertise",
+    "The platform will be used for sensitive data processing",
+    "Third-party integrations may introduce additional risks"
+  ],
+  "constraints": [
+    "Limited by the capabilities of integrated LLMs",
+    "Dependency on Docker for deployment",
+    "Resource requirements for running the application"
+  ]
+}

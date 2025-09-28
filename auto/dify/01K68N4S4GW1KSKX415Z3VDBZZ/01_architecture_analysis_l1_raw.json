@@ -1,0 +1,96 @@
+{
+  "id": "01K68N54HBJY1VH175RJ50CX4Q",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Dify Web Application",
+      "description": "The frontend interface for users to interact with the platform, build workflows, and manage models.",
+      "type": "frontend"
+    },
+    {
+      "name": "Dify Backend API",
+      "description": "Handles requests from the frontend, processes data, and interacts with the database and external services.",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "Stores user data, model configurations, and workflow states.",
+      "type": "database"
+    },
+    {
+      "name": "Celery Task Queue",
+      "description": "Manages asynchronous tasks such as model inference and data processing.",
+      "type": "service"
+    },
+    {
+      "name": "External Model Providers",
+      "description": "Integrates with various LLM providers for model inference and capabilities.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Dify Web Application",
+      "destination": "Dify Backend API",
+      "description": "User requests are sent from the web application to the backend API for processing."
+    },
+    {
+      "source": "Dify Backend API",
+      "destination": "Database",
+      "description": "The backend API retrieves and stores data in the database as needed."
+    },
+    {
+      "source": "Dify Backend API",
+      "destination": "Celery Task Queue",
+      "description": "The backend API sends tasks to the Celery queue for asynchronous processing."
+    },
+    {
+      "source": "Celery Task Queue",
+      "destination": "External Model Providers",
+      "description": "Tasks are sent to external model providers for inference and data processing."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Interaction Boundary",
+      "description": "Boundary between user-facing components and backend services.",
+      "components": [
+        "Dify Web Application",
+        "Dify Backend API"
+      ]
+    },
+    {
+      "name": "Data Storage Boundary",
+      "description": "Boundary that separates user data storage from processing components.",
+      "components": [
+        "Database",
+        "Dify Backend API"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 17:15:31.755200",
+  "updated_at": "2025-09-28 17:15:31.755204"
+}

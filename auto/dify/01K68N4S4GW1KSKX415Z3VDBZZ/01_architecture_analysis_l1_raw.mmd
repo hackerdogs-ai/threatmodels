@@ -1,0 +1,17 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Interaction_Boundary, "User Interaction Boundary") {
+        System(Dify_Web_Application, "Dify Web Application", "The frontend interface for users to interact with the platform, build workflows, and manage models.")
+        System(Dify_Backend_API, "Dify Backend API", "Handles requests from the frontend, processes data, and interacts with the database and external services.")
+    }
+    System_Boundary(tb_Data_Storage_Boundary, "Data Storage Boundary") {
+        SystemDb(Database, "Database", "Stores user data, model configurations, and workflow states.")
+        System(Dify_Backend_API, "Dify Backend API", "Handles requests from the frontend, processes data, and interacts with the database and external services.")
+    }
+    System(Celery_Task_Queue, "Celery Task Queue", "Manages asynchronous tasks such as model inference and data processing.")
+    System(External_Model_Providers, "External Model Providers", "Integrates with various LLM providers for model inference and capabilities.")
+
+    Rel(Dify_Web_Application, Dify_Backend_API, "Uses")
+    Rel(Dify_Backend_API, Database, "Uses")
+    Rel(Dify_Backend_API, Celery_Task_Queue, "Uses")
+    Rel(Celery_Task_Queue, External_Model_Providers, "Uses")
