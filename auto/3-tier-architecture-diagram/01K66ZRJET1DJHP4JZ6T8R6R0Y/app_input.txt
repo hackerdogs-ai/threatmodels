@@ -1,0 +1,32 @@
+Overall Architecture: The architecture represents a web application hosted on AWS, utilizing various services for load balancing, data storage, and notifications. It is designed for scalability and reliability, with components that support dynamic content delivery and static asset management.
+
+Key Components:
+- Amazon Route 53: DNS service that directs traffic to the application.
+- Elastic Load Balancer: Distributes incoming traffic across multiple web servers to ensure high availability.
+- Auto Scaling Group: Automatically adjusts the number of web and app servers based on demand.
+- Web Servers: Handle incoming HTTP requests and serve dynamic content.
+- App Servers: Process business logic and interact with databases.
+- Elastic Cache Tier: Provides in-memory caching to improve application performance.
+- Amazon RDS: Relational database service for structured data storage, with a standby instance for failover.
+- Amazon S3 Bucket: Stores static assets like images and videos.
+- Amazon CloudFront: Content Delivery Network (CDN) that caches content globally for faster access.
+- Amazon SNS: Sends notifications to users or systems.
+- Amazon SES: Email service for sending transactional emails.
+
+Data Flow: User requests are routed through Route 53 to the Elastic Load Balancer, which directs traffic to the web servers. The web servers communicate with app servers to process requests and access the RDS database or Elastic Cache for data retrieval. Static assets are served from the S3 bucket via CloudFront, while notifications are sent through SNS and emails via SES.
+
+Technologies Used: AWS services including Route 53, Elastic Load Balancer, Auto Scaling, RDS, S3, CloudFront, DynamoDB, SNS, and SES. Programming languages and frameworks are not specified in the diagram.
+
+Security Considerations: The architecture includes redundancy with a standby RDS instance for failover, and the use of Elastic Load Balancer helps mitigate DDoS attacks by distributing traffic. However, specific security measures such as firewalls, encryption, or access controls are not detailed in the diagram.
+
+Top 10 FAQ:
+1. What are the security measures in place for data in transit?
+2. How is access to the RDS database secured?
+3. What authentication mechanisms are used for users accessing the application?
+4. Are there any firewalls or security groups configured?
+5. How is sensitive data encrypted at rest?
+6. What monitoring and alerting systems are implemented?
+7. How is the Auto Scaling Group configured for security?
+8. What is the backup strategy for the RDS database?
+9. How are static assets secured in the S3 bucket?
+10. What incident response plans are in place for security breaches?

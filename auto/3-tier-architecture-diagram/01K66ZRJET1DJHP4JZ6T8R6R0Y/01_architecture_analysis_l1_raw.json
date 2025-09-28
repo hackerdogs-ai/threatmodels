@@ -1,0 +1,74 @@
+{
+  "id": "01K66ZSF9RWM77JFFW32QYMG94",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "Handles HTTP requests via ELB and web servers, serving dynamic content.",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend",
+      "description": "App servers that process business logic, access RDS and Elastic Cache, and trigger notifications.",
+      "type": "backend"
+    },
+    {
+      "name": "Storage",
+      "description": "S3 bucket for static assets, delivered globally through CloudFront.",
+      "type": "storage"
+    },
+    {
+      "name": "Notification",
+      "description": "SNS for system alerts and SES for transactional emails.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Route 53",
+      "destination": "Frontend",
+      "description": "DNS resolution directs user traffic to the ELB, which forwards requests to web servers."
+    },
+    {
+      "source": "Frontend",
+      "destination": "Backend",
+      "description": "Web servers forward application requests to app servers for processing."
+    },
+    {
+      "source": "Backend",
+      "destination": "Storage",
+      "description": "App servers request static assets from S3 via CloudFront."
+    },
+    {
+      "source": "Backend",
+      "destination": "Notification",
+      "description": "App servers publish events to SNS and send emails through SES."
+    }
+  ],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 01:42:55.032433",
+  "updated_at": "2025-09-28 01:42:55.032439"
+}

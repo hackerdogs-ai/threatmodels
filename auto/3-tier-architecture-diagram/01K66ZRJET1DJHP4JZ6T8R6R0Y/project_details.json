@@ -1,0 +1,40 @@
+{
+  "project_name": "Scalable Web Application on AWS",
+  "line_of_business": [
+    "E-commerce",
+    "Content Delivery",
+    "Notification Services"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "User Login",
+    "Email Verification"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "Data Encryption in Transit",
+    "Data Encryption at Rest",
+    "Access Control",
+    "DDoS Mitigation"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Web application services including data storage, user authentication, and notification systems.",
+  "assumptions": [
+    "Traffic patterns may change, requiring auto-scaling",
+    "Users will interact with the application over the internet",
+    "Sensitive data will be processed and stored"
+  ],
+  "constraints": [
+    "Need for high availability",
+    "Compliance with data protection regulations",
+    "Performance optimization through caching"
+  ]
+}
