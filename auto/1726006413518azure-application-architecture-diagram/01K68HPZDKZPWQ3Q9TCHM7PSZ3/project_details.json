@@ -1,0 +1,42 @@
+{
+  "project_name": "Secure Azure Web Application Hosting",
+  "line_of_business": [
+    "Web Services",
+    "Data Management",
+    "Identity Management"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth",
+    "OpenID Connect",
+    "Multi-Factor Authentication"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "DDoS Protection",
+    "Data Encryption",
+    "Access Control",
+    "Incident Response",
+    "Log Management"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Web application and its supporting Azure infrastructure",
+  "assumptions": [
+    "Users access the application via the internet",
+    "The application serves sensitive data",
+    "Azure security features are configured and maintained correctly"
+  ],
+  "constraints": [
+    "Limited network bandwidth from external sources",
+    "Regulatory compliance timelines",
+    "Budget constraints for security technologies"
+  ]
+}
