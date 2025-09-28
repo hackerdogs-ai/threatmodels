@@ -1,0 +1,40 @@
+{
+  "project_name": "Azure Web Application Deployment",
+  "line_of_business": [
+    "E-commerce",
+    "Information Technology",
+    "Cloud Services"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "Azure Active Directory",
+    "OAuth",
+    "SAML"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "ISO 27001"
+  ],
+  "security_requirements": [
+    "Web Application Firewall",
+    "Encryption in transit and at rest",
+    "Network Security Groups"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threat modeling for the web application architecture on Azure",
+  "assumptions": [
+    "Users will access the application from various locations",
+    "Sensitive data will be stored in Azure SQL Database",
+    "Azure services will be properly configured for security"
+  ],
+  "constraints": [
+    "Dependence on Microsoft Azure for hosting",
+    "Need for compliance with industry standards",
+    "Budget limitations for security measures"
+  ]
+}
