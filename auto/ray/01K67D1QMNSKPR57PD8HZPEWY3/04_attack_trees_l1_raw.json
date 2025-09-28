@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "id": "01K67D29B3JKR9AVT775S7FBSH",
+    "title": "Denial of Service Attack Tree",
+    "description": "Attack paths targeting distributed worker nodes and backend services",
+    "author": null,
+    "version": null,
+    "created": "2025-09-28 05:36:00+00:00",
+    "last_updated": "2025-09-28 05:36:35.457994",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K67D29B3JKR9AVT775S7FBSH",
+    "description": "Denial of Service (DoS) attack targeting distributed compute infrastructure",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 9.0,
+      "impact": 10.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K67D29B3JKR9AVT775S7FBSH-01",
+        "description": "DDoS attack on worker nodes",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 10.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K67D29B3JKR9AVT775S7FBSH-01-01",
+            "description": "Exploit network bandwidth limitations",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 7.0,
+              "impact": 9.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement rate limiting on ingress traffic",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              },
+              {
+                "description": "Deploy DDoS mitigation service",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.7
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K67D29B3JKR9AVT775S7FBSH-01-02",
+            "description": "Exploit worker node resource exhaustion",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 6.0,
+              "impact": 10.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Enforce resource quotas per worker",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              },
+              {
+                "description": "Implement auto-scaling with limits",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [],
+        "references": []
+      },
+      {
+        "id": "01K67D29B3JKR9AVT775S7FBSH-02",
+        "description": "Exploit backend service vulnerabilities",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 7.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K67D29B3JKR9AVT775S7FBSH-02-01",
+            "description": "Launch DoS attack on task scheduler",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 5.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement request validation filters",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.7
+              },
+              {
+                "description": "Use distributed rate limiting",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.6
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K67D29B3JKR9AVT775S7FBSH-02-02",
+            "description": "Exploit authentication bypass",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 6.0,
+              "impact": 9.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Enforce multi-factor authentication",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              },
+              {
+                "description": "Implement token-based rate limiting",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.7
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Deploy network segmentation for worker nodes",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      },
+      {
+        "description": "Implement automated incident response playbook",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      }
+    ],
+    "references": []
+  }
+}

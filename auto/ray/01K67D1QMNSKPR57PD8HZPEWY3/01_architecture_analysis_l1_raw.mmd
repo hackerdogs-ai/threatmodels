@@ -1,0 +1,10 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(Frontend, "Frontend", "Handles user interaction and job submission interfaces.")
+    System(Backend, "Backend", "Manages task scheduling, resource allocation, and coordination across nodes.")
+    SystemDb(Storage, "Storage", "Provides persistent storage for intermediate data and results.")
+    System(Worker_Nodes, "Worker Nodes", "Distributed compute nodes executing tasks in parallel.")
+
+    Rel(Frontend, Backend, "Uses")
+    Rel(Backend, Storage, "Uses")
+    Rel(Worker_Nodes, Backend, "Uses")

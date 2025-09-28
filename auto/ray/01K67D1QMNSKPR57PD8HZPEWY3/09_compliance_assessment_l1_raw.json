@@ -1,0 +1,57 @@
+{
+  "compliance_assessment": {
+    "id": "01J3Q6V9X5Z2Y4K7L8N0M2P6R4S5T7U1",
+    "framework": "GDPR",
+    "framework_description": "General Data Protection Regulation for EU data privacy",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 68.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-001",
+        "requirement": "Data encryption for processing activities",
+        "status": "partially_compliant",
+        "evidence": "Data-at-rest encryption (AES-256) is planned",
+        "gaps": [
+          "No encryption in transit implemented"
+        ],
+        "recommendations": [
+          "Implement TLS 1.3 for data in transit"
+        ]
+      },
+      {
+        "requirement_id": "GDPR-002",
+        "requirement": "Access control and data minimization",
+        "status": "partially_compliant",
+        "evidence": "RBAC is planned",
+        "gaps": [
+          "No data minimization controls documented"
+        ],
+        "recommendations": [
+          "Implement role-based access and data retention policies"
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Missing implementation of mandatory data protection controls",
+      "No documented data minimization practices"
+    ],
+    "remediation_plan": [
+      "Prioritize TLS encryption implementation (Q4 2025)",
+      "Develop data retention policies by Q1 2026",
+      "Conduct GDPR impact assessment before data processing"
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-28 05:39:58.138833",
+    "assessor": null,
+    "created_at": "2025-09-28 05:39:58.138838",
+    "updated_at": "2025-09-28 05:39:58.138841"
+  }
+}

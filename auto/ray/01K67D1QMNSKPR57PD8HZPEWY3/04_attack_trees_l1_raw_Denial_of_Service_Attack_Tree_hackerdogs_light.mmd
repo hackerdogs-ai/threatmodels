@@ -1,0 +1,46 @@
+graph TB
+  node_01K67D29B3JKR9AVT775S7FBSH["Denial of Service (DoS) attack targeting distributed compute infrastructure | [HIGH]"]:::highRisk
+  node_01K67D29B3JKR9AVT775S7FBSH-01["DDoS attack on worker nodes | [HIGH]"]:::highRisk
+  node_01K67D29B3JKR9AVT775S7FBSH-01-01["Exploit network bandwidth limitations | [HIGH]"]:::highRisk
+  node_01K67D29B3JKR9AVT775S7FBSH-01-01_cm_0["CM: Implement rate limiting on ingress traffic (Eff: 0.8)"]:::countermeasure
+  node_01K67D29B3JKR9AVT775S7FBSH-01-01_cm_1["CM: Deploy DDoS mitigation service (Eff: 0.7)"]:::countermeasure
+  node_01K67D29B3JKR9AVT775S7FBSH-01-02["Exploit worker node resource exhaustion | [HIGH]"]:::highRisk
+  node_01K67D29B3JKR9AVT775S7FBSH-01-02_cm_0["CM: Enforce resource quotas per worker (Eff: 0.9)"]:::countermeasure
+  node_01K67D29B3JKR9AVT775S7FBSH-01-02_cm_1["CM: Implement auto-scaling with limits (Eff: 0.8)"]:::countermeasure
+  node_01K67D29B3JKR9AVT775S7FBSH-02["Exploit backend service vulnerabilities | [HIGH]"]:::highRisk
+  node_01K67D29B3JKR9AVT775S7FBSH-02-01["Launch DoS attack on task scheduler | [HIGH]"]:::highRisk
+  node_01K67D29B3JKR9AVT775S7FBSH-02-01_cm_0["CM: Implement request validation filters (Eff: 0.7)"]:::countermeasure
+  node_01K67D29B3JKR9AVT775S7FBSH-02-01_cm_1["CM: Use distributed rate limiting (Eff: 0.6)"]:::countermeasure
+  node_01K67D29B3JKR9AVT775S7FBSH-02-02["Exploit authentication bypass | [HIGH]"]:::highRisk
+  node_01K67D29B3JKR9AVT775S7FBSH-02-02_cm_0["CM: Enforce multi-factor authentication (Eff: 0.8)"]:::countermeasure
+  node_01K67D29B3JKR9AVT775S7FBSH-02-02_cm_1["CM: Implement token-based rate limiting (Eff: 0.7)"]:::countermeasure
+  node_01K67D29B3JKR9AVT775S7FBSH_cm_0["CM: Deploy network segmentation for worker nodes (Eff: 0.9)"]:::countermeasure
+  node_01K67D29B3JKR9AVT775S7FBSH_cm_1["CM: Implement automated incident response playbook (Eff: 0.8)"]:::countermeasure
+
+  node_01K67D29B3JKR9AVT775S7FBSH -.-> node_01K67D29B3JKR9AVT775S7FBSH-01
+  node_01K67D29B3JKR9AVT775S7FBSH-01 --> node_01K67D29B3JKR9AVT775S7FBSH-01-01
+  node_01K67D29B3JKR9AVT775S7FBSH-01-01 -.-> node_01K67D29B3JKR9AVT775S7FBSH-01-01_cm_0
+  node_01K67D29B3JKR9AVT775S7FBSH-01-01 -.-> node_01K67D29B3JKR9AVT775S7FBSH-01-01_cm_1
+  node_01K67D29B3JKR9AVT775S7FBSH-01 --> node_01K67D29B3JKR9AVT775S7FBSH-01-02
+  node_01K67D29B3JKR9AVT775S7FBSH-01-02 -.-> node_01K67D29B3JKR9AVT775S7FBSH-01-02_cm_0
+  node_01K67D29B3JKR9AVT775S7FBSH-01-02 -.-> node_01K67D29B3JKR9AVT775S7FBSH-01-02_cm_1
+  node_01K67D29B3JKR9AVT775S7FBSH -.-> node_01K67D29B3JKR9AVT775S7FBSH-02
+  node_01K67D29B3JKR9AVT775S7FBSH-02 --> node_01K67D29B3JKR9AVT775S7FBSH-02-01
+  node_01K67D29B3JKR9AVT775S7FBSH-02-01 -.-> node_01K67D29B3JKR9AVT775S7FBSH-02-01_cm_0
+  node_01K67D29B3JKR9AVT775S7FBSH-02-01 -.-> node_01K67D29B3JKR9AVT775S7FBSH-02-01_cm_1
+  node_01K67D29B3JKR9AVT775S7FBSH-02 --> node_01K67D29B3JKR9AVT775S7FBSH-02-02
+  node_01K67D29B3JKR9AVT775S7FBSH-02-02 -.-> node_01K67D29B3JKR9AVT775S7FBSH-02-02_cm_0
+  node_01K67D29B3JKR9AVT775S7FBSH-02-02 -.-> node_01K67D29B3JKR9AVT775S7FBSH-02-02_cm_1
+  node_01K67D29B3JKR9AVT775S7FBSH -.-> node_01K67D29B3JKR9AVT775S7FBSH_cm_0
+  node_01K67D29B3JKR9AVT775S7FBSH -.-> node_01K67D29B3JKR9AVT775S7FBSH_cm_1
+
+  classDef andNode fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef orNode fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef highRisk fill:#FFB3B3,color:#8B0000,stroke:#8B0000,stroke-width:2px
+  classDef mediumRisk fill:#FFF200,stroke:#7A6300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#ffa1ad,stroke:#A259FF,stroke-width:1px,stroke-dasharray:3 3,color:#0B0D17
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

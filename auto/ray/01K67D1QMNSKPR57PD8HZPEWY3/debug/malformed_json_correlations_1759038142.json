@@ -1,0 +1,132 @@
+{
+    "correlations": [
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "similar_threats",
+            "description": "Spoofing via Weak Authentication in Ray aligns with authentication vulnerabilities in other web applications and APIs.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Review authentication mechanisms across systems",
+                "Implement multi-factor authentication (MFA) universally"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "shared_mitigations",
+            "description": "Data Tampering and Information Disclosure in Ray share encryption/ TLS mitigations with financial systems.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Standardize encryption protocols across data flows",
+                "Enforce TLS 1.3 for all inter-system communication"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "related_attack_patterns",
+            "description": "DDoS attacks on Ray's worker nodes mirror attack patterns seen in cloud infrastructure systems.",
+            "impact_level": "critical",
+            "recommended_actions": [
+                "Deploy centralized DDoS mitigation tools",
+                "Implement auto-scaling for workload handling"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "compliance_overlap",
+            "description": "Audit log requirements for Repudiation in Ray overlap with GDPR/HIPAA compliance needs.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Centralize logging across compliant systems",
+                "Perform regular log integrity checks"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "shared_mitigations",
+            "description": "Elevation of Privilege mitigations (RBAC) in Ray apply to other systems with privilege management needs.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Audit access controls across all systems",
+                "Enforce least-privilege principles"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "related_attack_patterns",
+            "description": "Input validation gaps in Ray's Tampering threat align with injection vulnerabilities in other systems.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Standardize input sanitization protocols",
+                "Implement WAF rules for common injection vectors"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "compliance_overlap",
+            "description": "Data encryption requirements for Information Disclosure in Ray align with GDPR data protection mandates.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Audit encryption standards across data stores",
+                "Conduct regular security audits"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "shared_mitigations",
+            "description": "MFA recommendations for Spoofing in Ray align with authentication requirements for other critical systems.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Create cross-system MFA implementation guidelines",
+                "Monitor authentication failure patterns"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "risk_aggregation",
+            "description": "DDoS vulnerabilities in Ray could compound with DDoS risks in other public-facing systems.",
+            "impact_level": "critical",
+            "recommended_actions": [
+                "Create enterprise DDoS response playbooks",
+                "Monitor traffic patterns across systems"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "shared_mitigations",
+            "description": "Patching requirements for Elevation of Privilege in Ray align with maintenance needs for other systems.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Implement centralized patch management",
+                "Schedule regular vulnerability scans"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "similar_threats",
+            "description": "Repudiation risks in Ray mirror audit log gaps in other compliance-critical systems.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Audit logging practices across systems",
+                "Implement log tamper detection"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "compliance_overlap",
+            "description": "Data integrity requirements for Tampering in Ray align with HIPAA audit trail mandates.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Standardize data integrity checks",
+                "Perform regular integrity audits"
+            ]
+        },
+        {
+            "source_threat_model": "ray",
+            "correlation_type": "related_attack_patterns",
+            "description": "Unauthorized access risks in Ray align with access control weaknesses in other systems.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Review access control policies",
+                "Implement continuous access monitoring"
+            ]
+        }

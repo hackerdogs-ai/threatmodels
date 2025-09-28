@@ -1,0 +1,40 @@
+{
+  "architecture_overview": "Ray is a distributed computing framework with a modular architecture comprising a frontend for job submission, a backend for task scheduling, a storage layer for data persistence, and worker nodes for distributed execution.",
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "Handles user interaction and job submission interfaces.",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend",
+      "description": "Manages task scheduling, resource allocation, and coordination across nodes.",
+      "type": "backend"
+    },
+    {
+      "name": "Storage",
+      "description": "Provides persistent storage for intermediate data and results.",
+      "type": "database"
+    },
+    {
+      "name": "Worker Nodes",
+      "description": "Distributed compute nodes executing tasks in parallel.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "Backend",
+      "description": "Job submission requests and configuration data"
+    },
+    {
+      "source": "Backend",
+      "destination": "Storage",
+      "description": "Data retrieval and result storage"
+    },
+    {
+      "source": "Worker Nodes",
+      "destination": "Backend",
+      "description": "Task execution results and status updates"
+    }

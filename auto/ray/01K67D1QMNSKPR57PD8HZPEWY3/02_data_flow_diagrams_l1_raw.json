@@ -1,0 +1,107 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "name": "Ray Threat Model",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for Ray distributed computing framework",
+  "created_at": "2025-09-28 05:35:23.353662",
+  "last_updated": "2025-09-28 05:35:23.353671",
+  "data_assets": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "name": "task_data",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000002",
+      "name": "configuration",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000003",
+      "name": "user_credentials",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000004",
+      "name": "system_logs",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "00000000-0000-0000-0000-000000000005",
+      "name": "ray_web_ui",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000006",
+      "name": "ray_scheduler",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000007",
+      "name": "redis_service",
+      "description": null,
+      "type": "database",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "00000000-0000-0000-0000-000000000008",
+      "name": "redis_cache",
+      "description": null,
+      "type": "cache",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "end_to_end",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000009",
+      "name": "task_logs",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [],
+  "data_flows": [],
+  "defined_trust_boundaries": []
+}

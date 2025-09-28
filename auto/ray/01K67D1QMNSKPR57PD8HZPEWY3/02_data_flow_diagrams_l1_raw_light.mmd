@@ -1,0 +1,32 @@
+graph TB
+  node_00000000-0000-0000-0000-000000000005["ray_web_ui | (frontend) | [HT]"]:::highTrust
+  node_00000000-0000-0000-0000-000000000006["ray_scheduler | (backend) | [HT]"]:::highTrust
+  node_00000000-0000-0000-0000-000000000007["redis_service | (database) | [LT]"]:::lowTrust
+  node_00000000-0000-0000-0000-000000000008["redis_cache | (cache)"]:::dataStore
+  node_00000000-0000-0000-0000-000000000009["task_logs | (file)"]:::dataStore
+  node_00000000-0000-0000-0000-000000000001["task_data | [INT]"]:::dataAsset,internal
+  node_00000000-0000-0000-0000-000000000002["configuration | [INT]"]:::dataAsset,internal
+  node_00000000-0000-0000-0000-000000000003["user_credentials | [PII]"]:::dataAsset,pii
+  node_00000000-0000-0000-0000-000000000004["system_logs | [INT]"]:::dataAsset,internal
+
+
+  classDef externalEntity fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef process fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef dataAsset fill:#ffa1ad,stroke:#A259FF,stroke-width:2px,color:#0B0D17
+  classDef untrusted fill:#FFB3B3,stroke:#8B0000,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFF2B3,stroke:#7A6300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#106B49,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#106B49,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#7A6300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#8B0000,stroke-width:2px
+  classDef restricted fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#106B49,stroke-width:2px
+  classDef unencryptedFlow stroke:#8B0000,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5
