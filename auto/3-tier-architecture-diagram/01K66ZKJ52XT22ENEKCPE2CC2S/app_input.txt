@@ -1,0 +1,32 @@
+Overall Architecture: The architecture is a cloud-based web application hosted on AWS, designed to handle user requests efficiently and securely. It incorporates load balancing, auto-scaling, and various AWS services to ensure high availability and performance.
+
+Key Components:
+- Amazon Route 53: DNS service that routes user requests to the appropriate resources.
+- Elastic Load Balancer: Distributes incoming traffic across multiple web servers to ensure even load and high availability.
+- Auto Scaling Group: Automatically adjusts the number of web and app servers based on traffic demands.
+- Web Servers: Handle incoming HTTP requests and serve web content.
+- App Servers: Process application logic and interact with databases.
+- Elastic Cache Tier: Caches frequently accessed data to reduce latency and improve performance.
+- Amazon RDS: Managed relational database service for storing application data, with a standby instance for failover.
+- Amazon S3: Object storage service for storing static data, such as images and files.
+- Amazon CloudFront: Content Delivery Network (CDN) that speeds up the delivery of static and dynamic web content.
+- Amazon SNS: Notification service for sending alerts and messages.
+- Amazon SES: Email service for sending transactional and marketing emails.
+
+Data Flow: User requests are routed through Amazon Route 53 to the Elastic Load Balancer, which distributes traffic to the web servers. The web servers communicate with app servers to process requests, which may involve reading from or writing to the Amazon RDS database. Cached data is accessed from the Elastic Cache Tier to enhance performance. Static content is served from Amazon S3 and delivered via Amazon CloudFront.
+
+Technologies Used: AWS services (Route 53, Elastic Load Balancer, Auto Scaling, RDS, S3, CloudFront, SNS, SES), web technologies (HTTP/HTTPS), and caching mechanisms.
+
+Security Considerations: Security measures include the use of Elastic Load Balancer for traffic distribution, Amazon RDS for managed database security, and Amazon CloudFront for secure content delivery. Notifications and alerts are managed through Amazon SNS, and email communications are handled via Amazon SES.
+
+Top 10 FAQ:
+1. What are the security measures in place for data in transit?
+2. How is sensitive data encrypted at rest?
+3. What authentication mechanisms are implemented for users?
+4. How are access controls managed for AWS resources?
+5. What monitoring tools are used for security incidents?
+6. How is the application protected against DDoS attacks?
+7. What backup and disaster recovery strategies are in place?
+8. How are vulnerabilities in the application addressed?
+9. What logging and auditing practices are implemented?
+10. How frequently is the architecture reviewed for security compliance?
