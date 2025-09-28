@@ -1,0 +1,164 @@
+{
+  "risk_prioritization": {
+    "id": "01K67FRR71Z2H3V9QZ6W8Y4X5R",
+    "prioritization_method": "weighted_impact_likelihood",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K67FRR650CK3FWSZEV6BZR5Q",
+        "threat_title": "CLI Command Injection via Unvalidated Inputs",
+        "risk_score": 8.2,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "01K67FRR6VZT2DQV2GBRR5WFCX"
+        ],
+        "recommended_actions": [
+          "Implement strict input validation",
+          "Use sandboxed execution environments"
+        ]
+      },
+      {
+        "risk_id": "01K67FRR6WK34JCA9YFT1HDFWT",
+        "threat_title": "Elevation of Privilege via Package Manager Vulnerabilities",
+        "risk_score": 7.8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "01K67FRR6VZT2DQV2GBRR5WFCX"
+        ],
+        "recommended_actions": [
+          "Regular dependency updates",
+          "Implement privilege separation"
+        ]
+      },
+      {
+        "risk_id": "01K67FRR6S3R1HW9HFRB7RA1YR",
+        "threat_title": "Spoofed CLI Frontend Execution",
+        "risk_score": 6.5,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "medium_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Digital signatures for CLI components",
+          "User awareness training"
+        ]
+      },
+      {
+        "risk_id": "01K67FRR6VZT2DQV2GBRR5WFCW",
+        "threat_title": "Unencrypted Package Metadata Transmission",
+        "risk_score": 6.3,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urg, urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "medium_term",
+        "dependencies": [
+          "01K67FRR6WK34JCA9YFT1HDFWT"
+        ],
+        "recommended_actions": [
+          "Enforce TLS 1.3 encryption",
+          "Audit metadata transmission protocols"
+        ]
+      },
+      {
+        "risk_id": "01K67FRR709VAHSJQQM7445YHV",
+        "threat_title": "Denial of Service via Resource Exhaustion",
+        "risk_score": 5.9,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "medium_term",
+        "dependencies": [
+          "01K67FRR6VZT2DQV2GBRR5WFCX"
+        ],
+        "recommended_actions": [
+          "Implement resource quotas",
+          "Monitor system metrics"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K67FRR650CK3FWSZEV6BZR5Q",
+        "01K67FRR6WK34JCA9YFT1HDFWT"
+      ],
+      "high_priority_risks": [
+        "01K67FRR6S3R1HW9HFRB7RA1YR",
+        "01K67FRR6VZT2DQV2GBRR5WFCW",
+        "01K67FRR709VAHSJQQM7445YHV"
+      ],
+      "medium_priority_risks": [],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K67FRR650CK3FWSZEV6BZR5Q": 8.2,
+      "01K67FRR6WK34JCA9YFT1HDFWT": 7.8,
+      "01K67FRR6S3R1HW9HFRB7RA1YR": 6.5,
+      "01K67FRR6VZT2DQV2GBRR5WFCW": 6.3,
+      "01K67FRR709VAHSJQQM7445YHV": 5.9
+    },
+    "risk_rankings": [
+      [
+        "01K67FRR650CK3FWSZEV6BZR5Q",
+        8.2
+      ],
+      [
+        "01K67FRR6WK34JCA9YFT1HDFWT",
+        7.8
+      ],
+      [
+        "01K67FRR6S3R1HW9HFRB7RA1YR",
+        6.5
+      ],
+      [
+        "01K67FRR6VZT2DQV2GBRR5WFCW",
+        6.3
+      ],
+      [
+        "01K67FRR709VAHSJQQM7445YHV",
+        5.9
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "high",
+      "operational_impact": "high",
+      "reputational_impact": "medium"
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-28 06:29:21.480209",
+    "updated_at": "2025-09-28 06:29:21.480225"
+  }
+}

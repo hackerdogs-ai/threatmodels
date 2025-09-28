@@ -1,0 +1,76 @@
+{
+    "id": "01FCNDV6P593Q68X68946X6894",
+    "name": "AppImageKit Threat Model",
+    "description": "Data flow diagram for AppImageKit application showing data movement between components",
+    "data_assets": [
+        {
+            "id": "01FCNDV6P593Q68X68946X6895",
+            "name": "AppImage file",
+            "classification": "confidential"
+        },
+        {
+            "id": "01FCNDV6P593Q68X68946X6896",
+            "name": "Source code",
+            "classification": "internal"
+        },
+        {
+            "id": "01FCNDV6P593Q68X68946X6897",
+            "name": "Configuration files",
+            "classification": "internal"
+        },
+        {
+            "id": "01FCNDV6P593Q68X68946X6898",
+            "name": "User data",
+            "classification": "pii"
+        },
+        {
+            "id": "01FCNDV6P593Q68X68946X6899",
+            "name": "Build logs",
+            "classification": "internal"
+        }
+    ],
+    "processes": [
+        {
+            "id": "01FCNDV6P593Q68X68946X6900",
+            "name": "AppImageKit service",
+            "type": "service",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01FCNDV6P593Q68X68946X6901",
+            "name": "Build process",
+            "type": "backend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01FCNDV6P593Q68X68946X6902",
+            "name": "User interface",
+            "type": "frontend",
+            "trust_level": "low_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "01FCNDV6P593Q68X68946X6903",
+            "name": "Build cache",
+            "type": "cache",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01FCNDV6P593Q68X68946X6904",
+            "name": "Configuration storage",
+            "type": "file",
+            "encryption": "at_rest"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "01FCNDV6P593Q68X68946X6905",
+            "name": "User",
+            "type": "user"
+        },
+        {
+            "id": "01FCNDV6P593Q68X68946X6906",
+            "name": "Linux system",
+            "type": "system"
+        }

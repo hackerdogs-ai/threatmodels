@@ -1,0 +1,9 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(CLI_Frontend, "CLI Frontend", "Command-line interface for user interaction and initiating build processes")
+    System(Build_System, "Build System", "Core component handling packaging logic, dependency resolution, and AppImage creation")
+    System(Package_Manager, "Package Manager", "Integration with Linux package managers (e.g., apt, dnf) for dependency handling")
+    System(Runtime_Environment, "Runtime Environment", "Execution environment for AppImages, including sandboxing and compatibility layers")
+
+    Rel(CLI_Frontend, Build_System, "Uses")
+    Rel(Build_System, Package_Manager, "Uses")

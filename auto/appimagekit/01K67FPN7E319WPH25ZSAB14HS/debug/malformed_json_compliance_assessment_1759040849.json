@@ -1,0 +1,73 @@
+{
+    "compliance_assessment": {
+        "id": "01K67FRR71J2V6QW8Y4X0Z5V6H",
+        "framework": "GDPR",
+        "framework_description": "Regulation governing data protection and privacy in the European Union, focusing on user consent, data breaches, and data subject rights.",
+        "applicability": "high",
+        "compliance_status": "partially_compliant",
+        "overall_score": 68,
+        "requirements": [
+            {
+                "requirement_id": "GDPR-001",
+                "requirement": "Data encryption for processing personal data",
+                "status": "partially_compliant",
+                "evidence": "Unencrypted metadata transmission identified in threat model",
+                "gaps": ["Unencrypted package metadata exchange"],
+                "recommendations": ["Implement TLS 1.3 encryption for all data in transit"]
+            },
+            {
+                "requirement_id": "GDPR-002",
+                "requirement": "Data breach notification within 72 hours",
+                "status": "not_compliant",
+                "evidence": "No breach response protocol documented",
+                "gaps": ["No incident response plan for data breaches"],
+                "recommendations": ["Establish GDPR-compliant breach notification procedures"]
+            }
+        ],
+        "critical_gaps": ["Unencrypted metadata transmission", "No breach response protocol"],
+        "remediation_plan": ["Implement TLS encryption for metadata", "Document GDPR-compliant breach response procedures"]
+    },
+    "compliance_assessment": {
+        "id": "01K67FRR71J2V6QW8Y4X0Z5V6I",
+        "framework": "SOC 2 Type II",
+        "framework_description": "Standard for evaluating an organization's controls related to security, availability, processing integrity, confidentiality, and privacy.",
+        "applicability": "medium",
+        "compliance_status": "partially_compliant",
+        "overall_score": 62,
+        "requirements": [
+            {
+                "requirement_id": "SOC2-003",
+                "requirement": "Access control mechanisms for system resources",
+                "status": "partially_compliant",
+                "evidence": "Digital signatures proposed for CLI components",
+                "gaps": ["Missing multi-factor authentication for privileged access"],
+                "recommendations": ["Implement MFA for package manager access"]
+            },
+            {
+                "requirement_id": "SOC2-004",
+                "requirement": "System and information integrity controls",
+                "status": "partially_compliant",
+                "evidence": "Resource quotas proposed for DoS prevention",
+                "gaps": ["Missing integrity verification for build artifacts"],
+                "recommendations": ["Add checksum validation for all package downloads"]
+            }
+        ],
+        "critical_gaps": ["Missing access controls", "No integrity verification for artifacts"],
+        "remediation_plan": ["Deploy MFA for privileged accounts", "Implement artifact checksum validation"]
+    },
+    "compliance_assessment": {
+        "id": "01K67FRR71J2V6QW8Y4X0Z5V6J",
+        "framework": "ISO/IEC 27001",
+        "framework_description": "International standard for information security management systems (ISMS).",
+        "applicability": "high",
+        "compliance_status": "partially_compliant",
+        "overall_score": 74,
+        "requirements": [
+            {
+                "requirement_id": "ISO27001-005",
+                "requirement": "Risk assessment and treatment processes",
+                "status": "partially_compliant",
+                "evidence": "Threat modeling performed",
+                "gaps": ["Missing documented risk treatment plan"],
+                "recommendations": ["Formalize risk treatment processes in ISO 27001 policy"]
+            }

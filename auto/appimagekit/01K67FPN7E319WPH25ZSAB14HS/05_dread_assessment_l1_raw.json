@@ -1,0 +1,170 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K67FRR650CK3FWSZEV6BZR5Q",
+      "threat_title": "CLI Command Injection via Unvalidated Inputs",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 6,
+        "exploitability": 6,
+        "affected_users": 7,
+        "discoverability": 3
+      },
+      "total_risk_score": 30,
+      "risk_level": "high",
+      "justification": "High damage potential from arbitrary code execution, moderate reproducibility via user input, moderate exploitability requiring user interaction, system-wide impact, and low discoverability due to input validation oversight.",
+      "recommendations": [
+        "Implement strict input validation and sanitization for CLI parameters",
+        "Use least-privilege execution for build processes",
+        "Enable logging and monitoring for suspicious CLI activity"
+      ],
+      "assessment_date": "2025-09-28 06:23:59.742784",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67FRR6S3R1HW9HFRB7RA1YR",
+      "threat_title": "Spoofed CLI Frontend Execution",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 6,
+        "exploitability": 6,
+        "affected_users": 7,
+        "discoverability": 3
+      },
+      "total_risk_score": 30,
+      "risk_level": "high",
+      "justification": "High damage potential from executing malicious build scripts, moderate reproducibility via social engineering, moderate exploitability requiring user trust, system-wide impact, and low discoverability due to spoofing detection challenges.",
+      "recommendations": [
+        "Implement certificate pinning for CLI frontend authenticity",
+        "Use multi-factor authentication for build initiation",
+        "Enforce strict script signing and verification policies"
+      ],
+      "assessment_date": "2025-09-28 06:23:59.776830",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67FRR6VZT2DQV2GBRR5WFCW",
+      "threat_title": "Unencrypted Package Metadata Transmission",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 8,
+        "exploitability": 6,
+        "affected_users": 7,
+        "discoverability": 5
+      },
+      "total_risk_score": 31,
+      "risk_level": "high",
+      "justification": "Medium damage from information disclosure, high reproducibility via network interception, moderate exploitability for passive eavesdropping, system-wide impact, and medium discoverability due to common network monitoring tools.",
+      "recommendations": [
+        "Implement TLS encryption for all data in transit",
+        "Use secure protocols with perfect forward secrecy",
+        "Regularly audit network traffic for sensitive data"
+      ],
+      "assessment_date": "2025-09-28 06:23:59.878740",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67FRR6WK34JCA9YFT1HDFWT",
+      "threat_title": "Elevation of Privilege via Package Manager Vulnerabilities",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 6,
+        "exploitability": 6,
+        "affected_users": 7,
+        "discoverability": 3
+      },
+      "total_risk_score": 30,
+      "risk_level": "high",
+      "justification": "High damage from privilege escalation, moderate reproducibility via package manager exploits, moderate exploitability requiring system access, system-wide impact, and low discoverability due to complex attack vectors.",
+      "recommendations": [
+        "Regularly update and patch package manager integrations",
+        "Implement role-based access controls for package management",
+        "Enable runtime privilege separation for dependency resolution"
+      ],
+      "assessment_date": "2025-09-28 06:23:59.909593",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67FRR709VAHSJQQM7445YHV",
+      "threat_title": "Denial of Service via Resource Exhaustion",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 8,
+        "exploitability": 6,
+        "affected_users": 7,
+        "discoverability": 5
+      },
+      "total_risk_score": 34,
+      "risk_level": "high",
+      "justification": "High damage from system unavailability, high reproducibility via resource exhaustion attacks, moderate exploitability requiring system access, system-wide impact, and medium discoverability due to resource monitoring tools.",
+      "recommendations": [
+        "Implement resource quotas and rate limiting",
+        "Monitor system metrics for abnormal usage patterns",
+        "Design for graceful degradation under load"
+      ],
+      "assessment_date": "2025-09-28 06:23:59.936641",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "All identified threats pose high risk due to potential system-wide impact and moderate to high exploitability. Prioritize input validation, encryption for data in transit, and privilege separation to mitigate these risks effectively."
+}

@@ -1,0 +1,64 @@
+{
+  "id": "01K67FQ73E13VXHBVAH33QW4F4",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "CLI Frontend",
+      "description": "Command-line interface for user interaction and initiating build processes",
+      "type": "frontend"
+    },
+    {
+      "name": "Build System",
+      "description": "Core component handling packaging logic, dependency resolution, and AppImage creation",
+      "type": "backend"
+    },
+    {
+      "name": "Package Manager",
+      "description": "Integration with Linux package managers (e.g., apt, dnf) for dependency handling",
+      "type": "service"
+    },
+    {
+      "name": "Runtime Environment",
+      "description": "Execution environment for AppImages, including sandboxing and compatibility layers",
+      "type": "runtime"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "CLI Frontend",
+      "destination": "Build System",
+      "description": "User input parameters and configuration directives"
+    },
+    {
+      "source": "Build System",
+      "destination": "Package Manager",
+      "description": "Dependency resolution and package metadata exchange"
+    }
+  ],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 06:21:18.318774",
+  "updated_at": "2025-09-28 06:21:18.318788"
+}

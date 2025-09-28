@@ -1,0 +1,35 @@
+{
+  "architecture_overview": "AppImageKit is a toolchain for creating self-contained Linux applications (AppImages). The architecture includes a CLI frontend, build system, package manager integration, and runtime environment for executing packaged applications.",
+  "components": [
+    {
+      "name": "CLI Frontend",
+      "description": "Command-line interface for user interaction and initiating build processes",
+      "type": "frontend"
+    },
+    {
+      "name": "Build System",
+      "description": "Core component handling packaging logic, dependency resolution, and AppImage creation",
+      "type": "backend"
+    },
+    {
+      "name": "Package Manager",
+      "description": "Integration with Linux package managers (e.g., apt, dnf) for dependency handling",
+      "type": "service"
+    },
+    {
+      "name": "Runtime Environment",
+      "description": "Execution environment for AppImages, including sandboxing and compatibility layers",
+      "type": "runtime"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "CLI Frontend",
+      "destination": "Build System",
+      "description": "User input parameters and configuration directives"
+    },
+    {
+      "source": "Build System",
+      "destination": "Package Manager",
+      "description": "Dependency resolution and package metadata exchange"
+    }

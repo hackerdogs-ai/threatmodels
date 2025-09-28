@@ -1,0 +1,129 @@
+{
+  "id": "01FCNDV6P593Q68X68946X6894",
+  "name": "AppImageKit Threat Model",
+  "version": "1.0.0",
+  "description": "Data flow diagram for AppImageKit application showing data movement between components",
+  "created_at": "2025-09-28 06:21:45.835768",
+  "last_updated": "2025-09-28 06:21:45.835771",
+  "data_assets": [
+    {
+      "id": "01FCNDV6P593Q68X68946X6895",
+      "name": "AppImage file",
+      "description": null,
+      "classification": "confidential",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01FCNDV6P593Q68X68946X6896",
+      "name": "Source code",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01FCNDV6P593Q68X68946X6897",
+      "name": "Configuration files",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01FCNDV6P593Q68X68946X6898",
+      "name": "User data",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01FCNDV6P593Q68X68946X6899",
+      "name": "Build logs",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01FCNDV6P593Q68X68946X6900",
+      "name": "AppImageKit service",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01FCNDV6P593Q68X68946X6901",
+      "name": "Build process",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01FCNDV6P593Q68X68946X6902",
+      "name": "User interface",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01FCNDV6P593Q68X68946X6903",
+      "name": "Build cache",
+      "description": null,
+      "type": "cache",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01FCNDV6P593Q68X68946X6904",
+      "name": "Configuration storage",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01FCNDV6P593Q68X68946X6905",
+      "name": "User",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01FCNDV6P593Q68X68946X6906",
+      "name": "Linux system",
+      "description": null,
+      "type": "system",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [],
+  "defined_trust_boundaries": []
+}
