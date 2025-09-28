@@ -1,0 +1,40 @@
+{
+  "project_name": "Scalable Web Application on AWS",
+  "line_of_business": [
+    "E-commerce",
+    "Media",
+    "Content Distribution"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "IAM Roles",
+    "HTTPS"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "Data encryption in transit",
+    "Access control",
+    "Traffic filtering",
+    "Monitoring and alerting"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Network, Application, and Data Layers",
+  "assumptions": [
+    "User data is sensitive",
+    "System must handle variable traffic loads",
+    "Availability is critical for business operations"
+  ],
+  "constraints": [
+    "AWS service limitations",
+    "Cost management for scaling",
+    "Compliance with regulations"
+  ]
+}
