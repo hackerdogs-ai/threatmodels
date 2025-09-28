@@ -1,0 +1,121 @@
+{
+  "id": "000000000000000000000000",
+  "name": "up Threat Model",
+  "version": "1.0.0",
+  "description": "Threat model for the up application showing data flows, trust boundaries, and data classification",
+  "created_at": "2025-09-28 06:31:51.391864",
+  "last_updated": "2025-09-28 06:31:51.391872",
+  "data_assets": [
+    {
+      "id": "000000000000000000000001",
+      "name": "user_data",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "000000000000000000000002",
+      "name": "configuration",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "000000000000000000000003",
+      "name": "application_logs",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "000000000000000000000004",
+      "name": "session_tokens",
+      "description": null,
+      "classification": "confidential",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "000000000000000000000005",
+      "name": "frontend",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "untrusted",
+      "external_references": {}
+    },
+    {
+      "id": "000000000000000000000006",
+      "name": "authentication_service",
+      "description": null,
+      "type": "api",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "000000000000000000000007",
+      "name": "backend",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "000000000000000000000008",
+      "name": "database_service",
+      "description": null,
+      "type": "database",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "very_high_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "000000000000000000000009",
+      "name": "main_database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "000000000000000000000010",
+      "name": "authenticated_user",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "000000000000000000000011",
+      "name": "github",
+      "description": null,
+      "type": "system",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [],
+  "defined_trust_boundaries": []
+}

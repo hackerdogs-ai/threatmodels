@@ -1,0 +1,15 @@
+{
+    "metadata": {
+        "id": "01K67GZ2H4Q6V6Q6Q6Q6Q6Q6Q6",
+        "title": "Attack Tree: Spoofing via Unauthenticated Backend Access",
+        "description": "Attack tree for the most critical threat: Spoofing through unauthenticated backend access to execute arbitrary code.",
+        "created": "2025-09-28T06:33:00.000Z"
+    },
+    "tree": {
+        "id": "01K67GZ2H4Q6V6Q6Q6Q6Q6Q6Q6",
+        "description": "Spoofing via Unauthenticated Backend Access",
+        "type": "OR",
+        "risk": {
+            "likelihood": 8,
+            "impact": 9
+        }

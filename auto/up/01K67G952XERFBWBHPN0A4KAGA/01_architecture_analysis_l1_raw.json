@@ -1,0 +1,86 @@
+{
+  "id": "01K67G9P6HDVVJKHR67J87TSYZ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend Interface",
+      "description": "Web-based UI for content creation and site configuration",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend Processor",
+      "description": "Code execution engine for template rendering and content generation",
+      "type": "backend"
+    },
+    {
+      "name": "Content Storage",
+      "description": "Persistent storage for markdown files, templates, and configuration data",
+      "type": "database"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend Interface",
+      "destination": "Backend Processor",
+      "description": "User input data (content, templates) sent for processing"
+    },
+    {
+      "source": "Backend Processor",
+      "destination": "Content Storage",
+      "description": "Generated static files stored in persistent storage"
+    },
+    {
+      "source": "Content Storage",
+      "destination": "Frontend Interface",
+      "description": "Pre-generated content served to the user interface"
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Client Trust Boundary",
+      "description": "Untrusted environment where user inputs originate",
+      "components": [
+        "Frontend Interface"
+      ]
+    },
+    {
+      "name": "Server Trust Boundary",
+      "description": "Trusted environment executing code and processing data",
+      "components": [
+        "Backend Processor"
+      ]
+    },
+    {
+      "name": "Storage Trust Boundary",
+      "description": "Trusted but isolated storage for persistent data",
+      "components": [
+        "Content Storage"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 06:31:23.601520",
+  "updated_at": "2025-09-28 06:31:23.601530"
+}

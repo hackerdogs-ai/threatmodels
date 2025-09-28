@@ -1,0 +1,144 @@
+{
+  "risk_prioritization": {
+    "id": "01K67GB6CR43XNAJBSMG2073P9",
+    "prioritization_method": "DREAD + Business Impact + Mitigation Effectiveness",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K67GB6CQH2XHPQRYBR4GE6FX",
+        "threat_title": "Spoofing via Unauthenticated Backend Access",
+        "risk_score": 8.5,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "proposed",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "authentication framework integration"
+        ],
+        "recommended_actions": [
+          "Implement OAuth2/JWT",
+          "Enforce API key rotation",
+          "Monitor access logs"
+        ]
+      },
+      {
+        "risk_id": "01K67GB6CR43XNAJBSMG2073P9",
+        "threat_title": "Tampering via Unsanitized User Input",
+        "risk_score": 7.8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "proposed",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "input validation framework"
+        ],
+        "recommended_actions": [
+          "Whitelist sanitization",
+          "Escape markup",
+          "Implement CSP headers"
+        ]
+      },
+      {
+        "risk_id": "01K67GB6CRDMS04T1Y70K9945K",
+        "threat_title": "Information Disclosure through Unencrypted Storage",
+        "risk_score": 7.2,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "proposed",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "encryption infrastructure"
+        ],
+        "recommended_actions": [
+          "AES-256 encryption",
+          "Secure storage policies",
+          "Access control audits"
+        ]
+      },
+      {
+        "risk_id": "01K67GB6CRVG7AW0EGKK9WVQYJ",
+        "threat_title": "Denial of Service via Resource Exhaustion",
+        "risk_score": 6.5,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urg, urgency": "short_term",
+        "mitigation_status": "proposed",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "rate limiting tools"
+        ],
+        "recommended_actions": [
+          "API rate limiting",
+          "Request validation",
+          "Load testing"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K67GB6CQH2XHPQRYBR4GE6FX"
+      ],
+      "high_priority_risks": [
+        "01K67GB6CR43XNAJBSMG2073P9",
+        "01K67GB6CRDMS04T1Y70K9945K",
+        "01K67GB6CRVG7AW0EGKK9WVQYJ"
+      ],
+      "medium_priority_risks": [],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K67GB6CQH2XHPQRYBR4GE6FX": 8.5,
+      "01K67GB6CR43XNAJBSMG2073P9": 7.8,
+      "01K67GB6CRDMS04T1Y70K9945K": 7.2,
+      "01K67GB6CRVG7AW0EGKK9WVQYJ": 6.5
+    },
+    "risk_rankings": [
+      [
+        "01K67GB6CQH2XHPQRYBR4GE6FX",
+        8.5
+      ],
+      [
+        "01K67GB6CR43XNAJBSMG2073P9",
+        7.8
+      ],
+      [
+        "01K67GB6CRDMS04T1Y70K9945K",
+        7.2
+      ],
+      [
+        "01K67GB6CRVG7AW0EGKK9WVQYJ",
+        6.5
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "high (data breaches and service disruption)",
+      "operational_impact": "high (system availability and integrity)",
+      "reputational_impact": "high (trust erosion and compliance risks)"
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-28 06:38:27.860862",
+    "updated_at": "2025-09-28 06:38:27.860870"
+  }
+}

@@ -1,0 +1,71 @@
+{
+    "id": "000000000000000000000000",
+    "name": "up Threat Model",
+    "description": "Threat model for the up application showing data flows, trust boundaries, and data classification",
+    "data_assets": [
+        {
+            "id": "000000000000000000000001",
+            "name": "user_data",
+            "classification": "pii"
+        },
+        {
+            "id": "000000000000000000000002",
+            "name": "configuration",
+            "classification": "internal"
+        },
+        {
+            "id": "000000000000000000000003",
+            "name": "application_logs",
+            "classification": "internal"
+        },
+        {
+            "id": "000000000000000000000004",
+            "name": "session_tokens",
+            "classification": "confidential"
+        }
+    ],
+    "processes": [
+        {
+            "id": "000000000000000000000005",
+            "name": "frontend",
+            "type": "frontend",
+            "trust_level": "untrusted"
+        },
+        {
+            "id": "000000000000000000000006",
+            "name": "authentication_service",
+            "type": "api",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "000000000000000000000007",
+            "name": "backend",
+            "type": "backend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "000000000000000000000008",
+            "name": "database_service",
+            "type": "database",
+            "trust_level": "very_high_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "000000000000000000000009",
+            "name": "main_database",
+            "type": "database",
+            "encryption": "at_rest"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "000000000000000000000010",
+            "name": "authenticated_user",
+            "type": "user"
+        },
+        {
+            "id": "000000000000000000000011",
+            "name": "github",
+            "type": "system"
+        }

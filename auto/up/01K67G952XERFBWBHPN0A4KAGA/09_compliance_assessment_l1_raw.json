@@ -1,0 +1,67 @@
+{
+  "compliance_assessment": {
+    "id": "01K67GB6CQH2XHPQRYBR4GE6FZ",
+    "framework": "GDPR",
+    "framework_description": "Regulation governing data protection and privacy in the European Union.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 72.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-30",
+        "requirement": "Documentation of data processing activities",
+        "status": "non_compliant",
+        "evidence": "No documented data processing activities",
+        "gaps": [
+          "Missing data inventory",
+          "No data flow diagrams"
+        ],
+        "recommendations": [
+          "Implement data mapping",
+          "Document processing activities"
+        ]
+      },
+      {
+        "requirement_id": "GDPR-33",
+        "requirement": "Data encryption for processing",
+        "status": "compliant",
+        "evidence": "Data-at-rest encryption (AES-256) and TLS 1.3",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "GDPR-6",
+        "requirement": "Lawful basis for data processing",
+        "status": "partially_compliant",
+        "evidence": "No explicit consent management",
+        "gaps": [
+          "Missing user consent mechanisms"
+        ],
+        "recommendations": [
+          "Implement consent tracking"
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Missing data inventory",
+      "No lawful basis documentation"
+    ],
+    "remediation_plan": [
+      "Complete data mapping documentation by Q4 2025",
+      "Implement consent management framework",
+      "Conduct GDPR impact assessment"
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-28 06:37:08.706309",
+    "assessor": null,
+    "created_at": "2025-09-28 06:37:08.706313",
+    "updated_at": "2025-09-28 06:37:08.706316"
+  }
+}

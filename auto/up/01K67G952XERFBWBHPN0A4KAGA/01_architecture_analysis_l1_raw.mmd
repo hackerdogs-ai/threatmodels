@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Client_Trust_Boundary, "Client Trust Boundary") {
+        System(Frontend_Interface, "Frontend Interface", "Web-based UI for content creation and site configuration")
+    }
+    System_Boundary(tb_Server_Trust_Boundary, "Server Trust Boundary") {
+        System(Backend_Processor, "Backend Processor", "Code execution engine for template rendering and content generation")
+    }
+    System_Boundary(tb_Storage_Trust_Boundary, "Storage Trust Boundary") {
+        SystemDb(Content_Storage, "Content Storage", "Persistent storage for markdown files, templates, and configuration data")
+    }
+
+    Rel(Frontend_Interface, Backend_Processor, "Uses")
+    Rel(Backend_Processor, Content_Storage, "Uses")
+    Rel(Content_Storage, Frontend_Interface, "Uses")

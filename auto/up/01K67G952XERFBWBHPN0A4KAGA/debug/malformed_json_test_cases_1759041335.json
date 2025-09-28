@@ -1,0 +1,20 @@
+{
+    "test_cases": [
+        {
+            "id": "01K67GB6CQH2XHPQRYBR4GE6F0",
+            "name": "Validate Unauthenticated Backend Access",
+            "description": "Verify unauthorized access to the backend API is blocked by authentication mechanisms.",
+            "scenario": "Attempt to access the backend API endpoint without valid credentials and check for access denial.",
+            "threat_ids": ["01K67GB6CQH2XHPQRYBR4GE6FX"],
+            "status": "not_tested",
+            "test_result": "Pending"
+        },
+        {
+            "id": "01K67GB6CR43XNAJBSMG2073P90",
+            "name": "Validate User Input Sanitization",
+            "description": "Confirm malicious input (e.g., code injection) is rejected or sanitized by the system.",
+            "scenario": "Send a request with a payload containing script tags or SQL injection attempts and verify input is sanitized.",
+            "threat_ids": ["01K67GB6CR43XNAJBSMG2073P9"],
+            "status": "not_tested",
+            "test_result": "Pending"
+        }

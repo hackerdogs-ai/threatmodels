@@ -1,0 +1,137 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K67GB6CQH2XHPQRYBR4GE6FX",
+      "threat_title": "Spoofing via Unauthenticated Backend Access",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 6,
+        "exploitability": 8,
+        "affected_users": 8,
+        "discoverability": 8
+      },
+      "total_risk_score": 38,
+      "risk_level": "high",
+      "justification": "Unauthenticated backend access allows impersonation, leading to high damage. Attackers can exploit misconfigured endpoints (moderate reproducibility) and impact all users (high affected users).",
+      "recommendations": [
+        "Implement strict authentication for backend access",
+        "Enforce role-based access controls",
+        "Monitor and log unauthorized access attempts"
+      ],
+      "assessment_date": "2025-09-28 06:34:17.598815",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67GB6CR43XNAJBSMG2073P9",
+      "threat_title": "Tampering via Unsanitized User Input",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 7,
+        "exploitability": 9,
+        "affected_users": 9,
+        "discoverability": 7
+      },
+      "total_risk_score": 41,
+      "risk_level": "high",
+      "justification": "Unsanitized input enables code injection, causing severe damage. Attackers can easily reproduce attacks (high reproducibility) and exploit vulnerabilities in processing logic.",
+      "recommendations": [
+        "Implement input validation and sanitization",
+        "Use content security policies",
+        "Regularly audit input handling mechanisms"
+      ],
+      "assessment_date": "2025-09-28 06:34:17.600132",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "very_high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67GB6CRDMS04T1Y70K9945K",
+      "threat_title": "Information Disclosure through Unencrypted Storage",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 6,
+        "exploitability": 9,
+        "affected_users": 9,
+        "discoverability": 6
+      },
+      "total_risk_score": 39,
+      "risk_level": "high",
+      "justification": "Unencrypted storage exposes sensitive data. Attackers can access plaintext files (moderate reproducibility) and exploit this for data theft (high impact).",
+      "recommendations": [
+        "Encrypt sensitive data at rest",
+        "Implement access controls for storage systems",
+        "Use secure file permissions and encryption standards"
+      ],
+      "assessment_date": "2025-09-28 06:34:17.600531",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67GB6CRVG7AW0EGKK9WVQYJ",
+      "threat_title": "Denial of Service via Resource Exhaustion",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 7,
+        "exploitability": 8,
+        "affected_users": 8,
+        "discoverability": 7
+      },
+      "total_risk_score": 38,
+      "risk_level": "high",
+      "justification": "Resource exhaustion attacks can disrupt service availability. Attackers can overwhelm the backend (moderate reproducibility) and exploit lack of rate limiting.",
+      "recommendations": [
+        "Implement rate limiting and request throttling",
+        "Monitor system resource usage",
+        "Use auto-scaling for handling traffic spikes"
+      ],
+      "assessment_date": "2025-09-28 06:34:17.600790",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "All threats are rated as high risk due to potential for severe damage, high exploitability, and broad impact. Prioritize implementing authentication, input validation, encryption, and rate limiting to mitigate these risks."
+}

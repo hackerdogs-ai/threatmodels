@@ -1,0 +1,18 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Spoofing via unauthenticated backend access is common in API-driven systems with weak authentication, such as other microservices architectures.",,,,2025-09-28T06:39:27.083639
+CORR_002,,,,Input validation/mitigation strategies align with OWASP Top 10 A1 (Injection) and A2 (Broken Authentication) standards.,,,,2025-09-28T06:39:27.083670
+CORR_003,,,,Tampering via unsanitized input shares attack patterns with SQL injection and XSS vulnerabilities in web applications.,,,,2025-09-28T06:39:27.083784
+CORR_004,,,,Unencrypted storage violates GDPR Article 30 and HIPAA Security Rule requirements for data encryption.,,,,2025-09-28T06:39:27.083799
+CORR_005,,,,Combined resource exhaustion and denial-of-service risks could create cascading failures in distributed systems.,,,,2025-09-28T06:39:27.083806
+CORR_006,,,,Information disclosure through unencrypted storage mirrors data leakage risks in cloud storage solutions.,,,,2025-09-28T06:39:27.083812
+CORR_007,,,,Authentication mitigation strategies align with NIST SP 800-63-3 for multi-factor authentication requirements.,,,,2025-09-28T06:39:27.083818
+CORR_008,,,,Denial-of-service risks share patterns with DDoS attacks targeting cloud infrastructure.,,,,2025-09-28T06:39:27.083823
+CORR_009,,,,Spoofing risks overlap with SOX Section 404 requirements for internal control over financial reporting.,,,,2025-09-28T06:39:27.083829
+CORR_010,,,,Tampering vulnerabilities resemble issues in IoT devices with weak input validation.,,,,2025-09-28T06:39:27.083835
+CORR_011,,,,Encryption mitigations align with PCI-DSS requirements for cardholder data protection.,,,,2025-09-28T06:39:27.083840
+CORR_012,,,,Resource exhaustion risks share patterns with attacks on containerized microservices.,,,,2025-09-28T06:39:27.083845
+CORR_013,,,,Information disclosure risks overlap with ISO 27001 requirements for data protection.,,,,2025-09-28T06:39:27.083850
+CORR_014,,,,Spoofing risks mirror vulnerabilities in single-page applications (SPAs) with weak backend authentication.,,,,2025-09-28T06:39:27.083855
+CORR_015,,,,Rate limiting mitigations align with Cloud Security Alliance (CSA) guidelines for DDoS protection.,,,,2025-09-28T06:39:27.083861
+CORR_016,,,,Tampering risks share patterns with vulnerabilities in serverless architectures with misconfigured input handling.,,,,2025-09-28T06:39:27.083866
+CORR_017,,,,Denial-of-service risks overlap with NIST SP 800-53 Rev. 4 requirements for system availability.,,,,2025-09-28T06:39:27.083872
