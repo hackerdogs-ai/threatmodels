@@ -1,0 +1,50 @@
+{
+  "architecture_overview": "Dify's architecture combines a frontend interface, backend services, and a database to enable low-code AI application development. Key components include a React frontend, Go-based backend, PostgreSQL database, and AI processing services.",
+  "components": [
+    {
+      "name": "React Frontend",
+      "description": "User interface for building and managing AI applications",
+      "type": "frontend"
+    },
+    {
+      "name": "Go Backend",
+      "description": "Core API server handling business logic and workflow orchestration",
+      "type": "backend"
+    },
+    {
+      "name": "PostgreSQL Database",
+      "description": "Centralized storage for application metadata, user data, and configuration",
+      "type": "database"
+    },
+    {
+      "name": "AI Processing Service",
+      "description": "Dedicated service for executing AI model inference and training tasks",
+      "type": "service"
+    },
+    {
+      "name": "Message Queue",
+      "description": "Asynchronous communication layer for decoupling components",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "React Frontend",
+      "destination": "Go Backend",
+      "description": "User input and configuration data exchange"
+    },
+    {
+      "source": "Go Backend",
+      "destination": "PostgreSQL Database",
+      "description": "Persistent storage of application metadata and user data"
+    },
+    {
+      "source": "Go Backend",
+      "destination": "AI Processing Service",
+      "description": "Data transfer for AI model execution"
+    },
+    {
+      "source": "AI Processing Service",
+      "destination": "Message Queue",
+      "description": "Asynchronous task results dissemination"
+    }
