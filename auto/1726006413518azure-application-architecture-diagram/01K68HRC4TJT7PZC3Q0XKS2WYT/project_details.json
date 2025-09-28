@@ -1,0 +1,43 @@
+{
+  "project_name": "Secure Web Application Management on Azure",
+  "line_of_business": [
+    "Web Application Development",
+    "Cloud Services",
+    "Data Management"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth2",
+    "SAML",
+    "OpenID Connect"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "DDoS protection",
+    "Data encryption at rest and in transit",
+    "Role-based access control",
+    "Regular security assessments",
+    "Secure access management"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Web application and its supporting Azure architecture components",
+  "assumptions": [
+    "Users have internet access",
+    "Azure services are operational",
+    "Access controls are properly configured",
+    "Regular backups are performed"
+  ],
+  "constraints": [
+    "Dependent on Azure service availability",
+    "Compliance with data protection regulations",
+    "Performance limitations based on Azure resources"
+  ]
+}
