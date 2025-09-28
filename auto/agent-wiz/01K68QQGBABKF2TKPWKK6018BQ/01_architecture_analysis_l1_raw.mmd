@@ -1,0 +1,19 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Client_Server_Boundary, "Client-Server Boundary") {
+        System(Frontend, "Frontend", "React SPA that provides user interfaces for creating, configuring, and monitoring AI agents.")
+        System(Backend_API, "Backend API", "FastAPI service that handles authentication, business logic, data persistence, and orchestration of AI requests.")
+    }
+    System_Boundary(tb_Server_Database_Boundary, "Server-Database Boundary") {
+        System(Backend_API, "Backend API", "FastAPI service that handles authentication, business logic, data persistence, and orchestration of AI requests.")
+        SystemDb(Database, "Database", "PostgreSQL instance storing agent definitions, user data, logs, and task queues.")
+    }
+    System_Boundary(tb_Server_External_Service_Boundary, "Server-External Service Bou...") {
+        System(Backend_API, "Backend API", "FastAPI service that handles authentication, business logic, data persistence, and orchestration of AI requests.")
+        System(AI_Service, "AI Service", "External provider (e.g., OpenAI) that executes the agent prompts and returns results.")
+    }
+
+    Rel(Frontend, Backend_API, "Uses")
+    Rel(Backend_API, Database, "Uses")
+    Rel(Backend_API, AI_Service, "Uses")
+    Rel(Backend_API, Frontend, "Uses")

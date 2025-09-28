@@ -1,0 +1,99 @@
+{
+  "id": "01K68QRKBV07N34N8X5J91NAN1",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "React SPA that provides user interfaces for creating, configuring, and monitoring AI agents.",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend API",
+      "description": "FastAPI service that handles authentication, business logic, data persistence, and orchestration of AI requests.",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "PostgreSQL instance storing agent definitions, user data, logs, and task queues.",
+      "type": "database"
+    },
+    {
+      "name": "AI Service",
+      "description": "External provider (e.g., OpenAI) that executes the agent prompts and returns results.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "Backend API",
+      "description": "User submits agent configuration or prompt via HTTPS."
+    },
+    {
+      "source": "Backend API",
+      "destination": "Database",
+      "description": "Persist agent definitions, user sessions, and logs."
+    },
+    {
+      "source": "Backend API",
+      "destination": "AI Service",
+      "description": "Send prompt and receive generated response."
+    },
+    {
+      "source": "Backend API",
+      "destination": "Frontend",
+      "description": "Return agent status, logs, or AI responses to the user."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Client-Server Boundary",
+      "description": "Separates the untrusted browser environment from the trusted backend.",
+      "components": [
+        "Frontend",
+        "Backend API"
+      ]
+    },
+    {
+      "name": "Server-Database Boundary",
+      "description": "Separates application logic from persistent storage.",
+      "components": [
+        "Backend API",
+        "Database"
+      ]
+    },
+    {
+      "name": "Server-External Service Boundary",
+      "description": "Separates internal processing from third\u2011party AI providers.",
+      "components": [
+        "Backend API",
+        "AI Service"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 18:01:06.684012",
+  "updated_at": "2025-09-28 18:01:06.684022"
+}
