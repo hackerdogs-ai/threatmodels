@@ -1,0 +1,170 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K68TR6FWMVQTZTXYWM3S8XAZ",
+      "threat_title": "Unauthorized Access via Weak Authentication",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 8,
+        "exploitability": 7,
+        "affected_users": 5,
+        "discoverability": 6
+      },
+      "total_risk_score": 36,
+      "risk_level": "high",
+      "justification": "Weak authentication allows for potential widespread damage. Reproducibility is high due to common vulnerabilities. Exploitability is moderate, and discovery is relatively easy with sufficient effort.  Significant impact on users and systems.",
+      "recommendations": [
+        "Implement multi-factor authentication.",
+        "Enforce strong password policies.",
+        "Regularly audit authentication mechanisms."
+      ],
+      "assessment_date": "2025-09-28 18:53:51.392769",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K68TR6FYSG0JEJB2G5454SPA",
+      "threat_title": "Data Exposure through Input Validation Failure",
+      "dread_scores": {
+        "damage": 7,
+        "reproducibility": 7,
+        "exploitability": 6,
+        "affected_users": 10,
+        "discoverability": 8
+      },
+      "total_risk_score": 40,
+      "risk_level": "high",
+      "justification": "Data exposure can lead to significant damage. Reproducibility is high due to common input validation flaws. Exploitability is moderate, and discovery is relatively easy.  Widespread impact on users and systems. ",
+      "recommendations": [
+        "Implement strict input validation and sanitization.",
+        "Use parameterized queries or prepared statements.",
+        "Employ a Web Application Firewall (WAF)."
+      ],
+      "assessment_date": "2025-09-28 18:53:51.393472",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K68TR6FYED6VXA4WVS3G48MC",
+      "threat_title": "Privilege Escalation",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 6,
+        "exploitability": 5,
+        "affected_users": 2,
+        "discoverability": 7
+      },
+      "total_risk_score": 37,
+      "risk_level": "high",
+      "justification": "Privilege escalation allows for complete system control. Reproducibility is moderate, and exploitability is relatively low, but the potential damage is very high. Discovery is possible with focused effort. ",
+      "recommendations": [
+        "Implement least privilege access controls.",
+        "Regularly review and audit user permissions.",
+        "Employ security hardening techniques."
+      ],
+      "assessment_date": "2025-09-28 18:53:51.393720",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K68TR6FY41XCSK04T1F1A8HK",
+      "threat_title": "Data Corruption via Malicious Input",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 6
+      },
+      "total_risk_score": 32,
+      "risk_level": "medium",
+      "justification": "Data corruption can lead to significant operational disruption. Reproducibility is moderate, exploitability is low, and discovery is possible.  Impact on users and systems.",
+      "recommendations": [
+        "Implement robust data validation and integrity checks.",
+        "Use checksums or other data verification mechanisms.",
+        "Employ data backups and recovery procedures."
+      ],
+      "assessment_date": "2025-09-28 18:53:51.393926",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K68TR6FY41XCSK04T1F1A8HK",
+      "threat_title": "Data Corruption via Malicious Input",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 4,
+        "exploitability": 3,
+        "affected_users": 3,
+        "discoverability": 5
+      },
+      "total_risk_score": 24,
+      "risk_level": "low",
+      "justification": "Data corruption is less severe than other threats. Reproducibility is low, exploitability is low, and discovery is difficult.  Limited impact on users and systems.",
+      "recommendations": [
+        "Implement basic input validation.",
+        "Use checksums or other data verification mechanisms.",
+        "Employ data backups and recovery procedures."
+      ],
+      "assessment_date": "2025-09-28 18:53:51.394133",
+      "assessor": null,
+      "confidence_level": "low",
+      "mitigation_effort": "low",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "low",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "This threat model identifies key risks associated with the Ray architecture, primarily focusing on authentication vulnerabilities, input validation weaknesses, and potential resource exhaustion attacks. High priority mitigation efforts should focus on strengthening authentication, implementing robust input validation, and ensuring proper resource monitoring.  A layered approach to security is recommended."
+}

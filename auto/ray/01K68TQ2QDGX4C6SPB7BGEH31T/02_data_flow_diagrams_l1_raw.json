@@ -1,0 +1,180 @@
+{
+  "id": "a7e9b3d1-f2c8-4a1d-8b9c-d1e2f3a4b5c6",
+  "name": "Ray Application Data Flow",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for the Ray application, focusing on key data assets and flows.",
+  "created_at": "2025-09-28 18:53:10.824414",
+  "last_updated": "2025-09-28 18:53:10.824423",
+  "data_assets": [
+    {
+      "id": "e8f9a0b1-c3d4-4e5f-9a8b-c7d6e5f4a3b2",
+      "name": "User Credentials",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "f1a2b3c4-d5e6-789a-b234-56789abcde0f",
+      "name": "Job Configuration Data",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "9a8b7c6d-5f4a-3b2a-1c0d-ef9876543210",
+      "name": "Ray Cluster Metadata",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "b2c3d4e5-f6a7-89ab-cdef-123456789abc",
+      "name": "Job Results",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "1a2b3c4d-e5f6-789a-bcde-f0123456789a",
+      "name": "Ray Frontend (UI)",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    },
+    {
+      "id": "2b3c4d5e-f6a7-89ab-cdef-123456789abc0",
+      "name": "Ray Backend",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "3c4d5e6f-a7b8-9abc-def0-123456789abcd",
+      "name": "Ray Database",
+      "description": null,
+      "type": "database",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "4d5e6f7a-b8c9-0123-4567-89abcdef0123",
+      "name": "Ray Database Cluster",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "5e6f7a8b-c9d0-1234-5678-9abcdeffedcba",
+      "name": "Ray Cache",
+      "description": null,
+      "type": "cache",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "transport",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "6f7a8b9c-d0e1-2345-6789-abcdef012345",
+      "name": "User",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "789abcde-f012-3456-789a-bcdef0123456",
+      "name": "Authentication Service",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "89abcde0-f123-4567-89ab-cdef01234567",
+      "name": "User Login",
+      "description": null,
+      "source_id": "789abcde-f012-3456-789a-bcdef0123456",
+      "destination_id": "89abcde0-f012-3456-789a-bcdef0123456",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "end_to_end",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "9abcde0f-1234-5678-9abc-def012345678",
+      "name": "Job Submission",
+      "description": null,
+      "source_id": "89abcde0-f012-3456-789a-bcdef0123456",
+      "destination_id": "9abcde0f-1234-5678-9abc-def012345678",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "end_to_end",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "a7e9b3d1-f2c8-4a1d-8b9c-d1e2f3a4b5c6",
+      "name": "Job Execution Data",
+      "description": null,
+      "source_id": "9abcde0f-1234-5678-9abc-def012345678",
+      "destination_id": "a7e9b3d1-f2c8-4a1d-8b9c-d1e2f3a4b5c6",
+      "data_assets": [],
+      "protocol": "jdbc",
+      "authentication_strength": null,
+      "encryption": "at_rest",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

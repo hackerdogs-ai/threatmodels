@@ -1,0 +1,171 @@
+{
+  "run_id": "01K68TQ2QDGX4C6SPB7BGEH31T",
+  "timestamp": "2025-09-28T11:55:35.013474",
+  "execution_time_secs": 172.41,
+  "total_cost": 0.5539,
+  "total_steps": 13,
+  "successful_steps": 12,
+  "failed_steps": 1,
+  "overall_success": false,
+  "steps": {
+    "architecture_analysis": {
+      "success": true,
+      "cost": 0.01941,
+      "total_tokens": 1164,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 10.149787902832031,
+      "error_message": null
+    },
+    "data_flow_diagrams": {
+      "success": true,
+      "cost": 0.03307,
+      "total_tokens": 1948,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 18.060341835021973,
+      "error_message": null
+    },
+    "threats": {
+      "success": true,
+      "cost": 0.02483,
+      "total_tokens": 1928,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 8.398071050643921,
+      "error_message": null
+    },
+    "attack_trees": {
+      "success": true,
+      "cost": 0.052930000000000005,
+      "total_tokens": 4612,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 11.74847412109375,
+      "error_message": null
+    },
+    "dread_assessment": {
+      "success": true,
+      "cost": 0.06797,
+      "total_tokens": 5425,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 20.40645122528076,
+      "error_message": null
+    },
+    "mitigations": {
+      "success": true,
+      "cost": 0.042230000000000004,
+      "total_tokens": 3482,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 11.673618793487549,
+      "error_message": null
+    },
+    "test_cases": {
+      "success": true,
+      "cost": 0.061450000000000005,
+      "total_tokens": 5332,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 14.284825801849365,
+      "error_message": null
+    },
+    "security_controls": {
+      "success": true,
+      "cost": 0.07182000000000001,
+      "total_tokens": 5920,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 20.4548659324646,
+      "error_message": null
+    },
+    "compliance_assessment": {
+      "success": true,
+      "cost": 0.06914000000000001,
+      "total_tokens": 6206,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 12.889819860458374,
+      "error_message": null
+    },
+    "risk_prioritization": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 24.25734305381775,
+      "error_message": "Error parsing response ulid:01K68TQ2QDGX4C6SPB7BGEH31T: Validation failed for step risk_prioritization ulid:01K68TQ2QDGX4C6SPB7BGEH31T: Risk Prioritization validation failed ulid:01K68TQ2QDGX4C6SPB7BGEH31T: 1 validation error for RiskPrioritization\nrisk_scores.risk_id\n  Input should be a valid number [type=float_type, input_value={'01K68TR6FWMVQTZTXYWM3S8...6FY41XCSK04T1F1A8HK': 6}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/float_type"
+    },
+    "dashboard": {
+      "success": true,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.0033721923828125,
+      "error_message": null
+    },
+    "correlations": {
+      "success": true,
+      "cost": 0.08145,
+      "total_tokens": 7445,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 13.957164764404297,
+      "error_message": null
+    },
+    "executive_summary": {
+      "success": true,
+      "cost": 0.02956,
+      "total_tokens": 2611,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 6.072740793228149,
+      "error_message": null
+    }
+  },
+  "generated_files": {
+    "total_files": 34,
+    "files": [
+      "01_architecture_analysis_l1_raw.mmd",
+      "01_architecture_analysis_l1_raw.md",
+      "01_architecture_analysis_l1_raw.json",
+      "02_data_flow_diagrams_l1_raw_dark.mmd",
+      "02_data_flow_diagrams_l1_raw_dark.md",
+      "02_data_flow_diagrams_l1_raw_dark.html",
+      "02_data_flow_diagrams_l1_raw_light.mmd",
+      "02_data_flow_diagrams_l1_raw_light.md",
+      "02_data_flow_diagrams_l1_raw_light.html",
+      "02_data_flow_diagrams_l1_raw.json",
+      "03_threats_l1_raw.md",
+      "03_threats_l1_raw.json",
+      "03_threats_l1_raw.csv",
+      "05_dread_assessment_l1_raw.json",
+      "05_dread_assessment_l1_raw.csv",
+      "05_dread_assessment_l1_raw.md",
+      "06_mitigations_l1_raw.json",
+      "06_mitigations_l1_raw.md",
+      "07_test_cases_l1_raw.feature",
+      "07_test_cases_l1_raw.json",
+      "07_test_cases_l1_raw.md",
+      "08_security_controls_l1_raw.json",
+      "08_security_controls_l1_raw.md",
+      "09_compliance_assessment_l1_raw.json",
+      "09_compliance_assessment_l1_raw.md",
+      "12_dashboard_l1_raw.json",
+      "12_dashboard_l1_raw.md",
+      "12_dashboard_l1_raw.html",
+      "11_correlations_l1_raw.json",
+      "11_correlations_l1_raw.md",
+      "11_correlations_l1_raw.html",
+      "11_correlations_l1_raw.csv",
+      "13_executive_summary_l1_raw.json",
+      "13_executive_summary_l1_raw.md"
+    ],
+    "output_directory": "hackerdogs-ai/threatmodels/01K68TQ2QDGX4C6SPB7BGEH31T",
+    "ulid": "01K68TQ2QDGX4C6SPB7BGEH31T"
+  },
+  "output_directory": "hackerdogs-ai/threatmodels/01K68TQ2QDGX4C6SPB7BGEH31T"
+}

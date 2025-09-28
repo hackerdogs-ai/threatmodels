@@ -1,0 +1,91 @@
+{
+  "id": "01K68TQCMQYE8YZT4PB26Z024J",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Ray Cluster Scheduler",
+      "description": "The central component responsible for managing the Ray cluster, including task scheduling, resource allocation, and communication between worker nodes. It maintains the state of the cluster and handles incoming task requests.",
+      "type": "Service"
+    },
+    {
+      "name": "Ray Worker Nodes",
+      "description": "Individual machines within the Ray cluster that execute tasks assigned by the scheduler. They provide the computational resources for running Ray applications.",
+      "type": "Compute"
+    },
+    {
+      "name": "Ray Client Libraries",
+      "description": "Libraries integrated into user applications (e.g., Python) to interact with the Ray cluster, submit tasks, and retrieve results.",
+      "type": "Frontend/Library"
+    },
+    {
+      "name": "Ray Object Store",
+      "description": "A distributed storage system used for persisting Ray objects (e.g., arrays, dataframes) across the cluster, ensuring data consistency and availability.",
+      "type": "Data Storage"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Ray Client Libraries",
+      "destination": "Ray Cluster Scheduler",
+      "description": "Tasks and data are submitted to the scheduler via the client libraries, initiating the execution process."
+    },
+    {
+      "source": "Ray Cluster Scheduler",
+      "destination": "Ray Worker Nodes",
+      "description": "The scheduler distributes tasks to available worker nodes for execution."
+    },
+    {
+      "source": "Ray Worker Nodes",
+      "destination": "Ray Cluster Scheduler",
+      "description": "Worker nodes report task status and results back to the scheduler."
+    },
+    {
+      "source": "Ray Object Store",
+      "destination": "Ray Worker Nodes & Ray Cluster Scheduler",
+      "description": "Data is read from and written to the object store by both worker nodes and the scheduler to maintain data consistency."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Client-Ray Cluster Boundary",
+      "description": "This boundary separates the user applications (client libraries) from the Ray cluster itself.  Controls are needed to restrict what clients can do within the cluster.",
+      "components": [
+        "Ray Client Libraries",
+        "Ray Cluster Scheduler"
+      ]
+    },
+    {
+      "name": "Worker Node Boundary",
+      "description": "This boundary separates the worker nodes from the core Ray cluster components.  Worker nodes should have limited privileges and access to resources.",
+      "components": [
+        "Ray Worker Nodes",
+        "Ray Cluster Scheduler"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 18:52:52.759238",
+  "updated_at": "2025-09-28 18:52:52.759243"
+}

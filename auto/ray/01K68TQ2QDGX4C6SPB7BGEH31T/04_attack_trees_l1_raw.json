@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "id": "a1b2c3d4-e5f6-4a7b-8c9d-0123456789ab",
+    "title": "Unauthorized Access via Weak Authentication",
+    "description": "Attack tree focusing on the risk of unauthorized access to the Ray Cluster Scheduler due to weak authentication mechanisms.",
+    "author": null,
+    "version": null,
+    "created": "2025-10-27 10:30:00+00:00",
+    "last_updated": "2025-09-28 18:53:30.982540",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "789abcdef0123456789abcdef",
+    "description": "Attack tree focusing on the risk of unauthorized access to the Ray Cluster Scheduler due to weak authentication mechanisms.",
+    "type": "AND",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 8.0,
+      "impact": 9.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "789abcdef0123456789abcde1",
+        "description": "Weak Password Policy",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 7.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement strong password policy (minimum length, complexity)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Enforce regular password changes",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "789abcdef0123456789abcdef2",
+        "description": "Lack of Multi-Factor Authentication",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement multi-factor authentication (MFA) for all user accounts",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.95
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "789abcdef0123456789abcdef3",
+        "description": "Default Credentials",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 10.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Change all default credentials immediately upon installation",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Regular security audits and vulnerability assessments",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      },
+      {
+        "description": "Implement intrusion detection and prevention systems (IDS/IPS)",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.7
+      }
+    ],
+    "references": []
+  }
+}

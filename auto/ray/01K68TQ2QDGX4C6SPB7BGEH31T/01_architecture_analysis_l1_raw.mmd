@@ -1,0 +1,17 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Client_Ray_Cluster_Boundary, "Client-Ray Cluster Boundary") {
+        System(Ray_Client_Libraries, "Ray Client Libraries", "Libraries integrated into user applications (e.g., Python) to interact with the Ray cluster, submit tasks, and retrieve results.")
+        System(Ray_Cluster_Scheduler, "Ray Cluster Scheduler", "The central component responsible for managing the Ray cluster, including task scheduling, resource allocation, and communication between worker no...")
+    }
+    System_Boundary(tb_Worker_Node_Boundary, "Worker Node Boundary") {
+        System(Ray_Worker_Nodes, "Ray Worker Nodes", "Individual machines within the Ray cluster that execute tasks assigned by the scheduler. They provide the computational resources for running Ray a...")
+        System(Ray_Cluster_Scheduler, "Ray Cluster Scheduler", "The central component responsible for managing the Ray cluster, including task scheduling, resource allocation, and communication between worker no...")
+    }
+    System(Ray_Object_Store, "Ray Object Store", "A distributed storage system used for persisting Ray objects (e.g., arrays, dataframes) across the cluster, ensuring data consistency and availabil...")
+    System(Ray_Worker_Nodes___Ray_Cluster_Scheduler, "Ray Worker Nodes & Ray Cluster Scheduler", "Auto-created component: Ray Worker Nodes & Ray Cluster Scheduler")
+
+    Rel(Ray_Client_Libraries, Ray_Cluster_Scheduler, "Uses")
+    Rel(Ray_Cluster_Scheduler, Ray_Worker_Nodes, "Uses")
+    Rel(Ray_Worker_Nodes, Ray_Cluster_Scheduler, "Uses")
+    Rel(Ray_Object_Store, Ray_Worker_Nodes___Ray_Cluster_Scheduler, "Uses")
