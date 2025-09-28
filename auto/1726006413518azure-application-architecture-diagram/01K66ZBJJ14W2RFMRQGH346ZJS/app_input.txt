@@ -1,0 +1,36 @@
+Overall Architecture: The architecture is designed for a web application hosted on Microsoft Azure, utilizing various Azure services for load balancing, security, identity management, and monitoring. It integrates user access through an Application Gateway, ensuring secure and efficient traffic management.
+
+Key Components:
+- **Users**: End-users accessing the web application.
+- **Application Gateway**: Acts as a reverse proxy to manage incoming traffic and route it to the appropriate services.
+- **Web App Firewall**: Provides security by filtering and monitoring HTTP traffic to and from the web application.
+- **Load Balancers**: Distributes incoming application traffic across multiple instances of the web app to ensure high availability.
+- **Web App**: The core application that users interact with.
+- **Web App Worker Pools**: Handles background tasks and processes for the web app.
+- **Azure SQL Database**: A managed database service for storing application data.
+- **Bastion Host**: Provides secure access to virtual machines without exposing them to the public internet.
+- **Azure Management Portal**: Interface for managing Azure resources.
+- **Identity, Secrets & Access Management**: Includes Azure Active Directory for user authentication, Azure Key Vault for managing secrets, and Network Security Groups for controlling network traffic.
+- **System Health Monitoring**: Comprises Azure Security Center, Azure Monitor, and Log Analytics for monitoring and maintaining system health.
+
+Data Flow: Users initiate a DNS lookup to access the application via a custom domain, which resolves to the Application Gateway. The gateway routes traffic to the Web App, which interacts with the Azure SQL Database for data storage. Load balancers ensure even distribution of requests, while monitoring tools provide insights into system performance.
+
+Technologies Used: Microsoft Azure services, including Application Gateway, Web App, Azure SQL Database, Azure Active Directory, Azure Key Vault, Azure Security Center, Azure Monitor, and Log Analytics.
+
+Security Considerations: The architecture employs multiple security measures, including:
+- Web App Firewall to protect against common web vulnerabilities.
+- Network Security Groups to control inbound and outbound traffic.
+- Azure Key Vault for secure storage of secrets and keys.
+- Bastion host for secure access to VMs.
+
+Top 10 FAQ:
+1. What are the specific security policies enforced by the Web App Firewall?
+2. How is data encrypted in transit and at rest within the Azure SQL Database?
+3. What authentication methods are supported by Azure Active Directory?
+4. How are access controls managed for different user roles?
+5. What monitoring tools are in place to detect security incidents?
+6. How is the performance of the load balancers monitored?
+7. What backup and disaster recovery strategies are implemented?
+8. How frequently are security assessments conducted on the architecture?
+9. What measures are in place to ensure compliance with data protection regulations?
+10. How are updates and patches managed for the various components in the architecture?

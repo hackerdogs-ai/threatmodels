@@ -1,0 +1,42 @@
+{
+  "project_name": "Azure Web Application Architecture",
+  "line_of_business": [
+    "E-commerce",
+    "Online services",
+    "Data Management"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth",
+    "OpenID Connect",
+    "SAML"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "PCI DSS",
+    "HIPAA"
+  ],
+  "security_requirements": [
+    "Web Application Firewall",
+    "Data Encryption",
+    "Access Control",
+    "Network Security"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Web application architecture interactions and data flow",
+  "assumptions": [
+    "Users have internet access",
+    "Azure services are properly configured",
+    "Security measures are continuously updated",
+    "Traffic patterns are predictable"
+  ],
+  "constraints": [
+    "Dependency on Azure services",
+    "Budget limitations for cloud resources",
+    "Compliance with regulatory frameworks"
+  ]
+}
