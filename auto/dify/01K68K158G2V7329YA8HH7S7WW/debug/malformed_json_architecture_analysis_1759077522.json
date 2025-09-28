@@ -1,0 +1,45 @@
+{
+  "architecture_overview": "Dify's architecture comprises a frontend interface, backend services, and a database, with potential integration of external LLM services. The system processes user inputs, executes logic, and stores data securely.",
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "User-facing interface for interacting with the application",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend API",
+      "description": "Handles business logic, authentication, and request routing",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "Stores application data including user information and session records",
+      "type": "database"
+    },
+    {
+      "name": "LLM Service",
+      "description": "Provides large language model capabilities for AI-driven functionality",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "Backend API",
+      "description": "User inputs and UI interactions are transmitted to the backend for processing"
+    },
+    {
+      "source": "Backend API",
+      "destination": "Database",
+      "description": "Processed data and session information is stored in the database"
+    },
+    {
+      "source": "Backend API",
+      "destination": "LLM Service",
+      "description": "Request payloads are sent to the LLM service for AI processing"
+    },
+    {
+      "source": "LLM Service",
+      "destination": "Backend API",
+      "description": "Processed results from the LLM service are returned to the backend"
+    }
