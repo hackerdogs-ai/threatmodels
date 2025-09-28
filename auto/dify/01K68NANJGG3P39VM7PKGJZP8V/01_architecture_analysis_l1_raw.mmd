@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Data_Trust_Boundary, "User Data Trust Boundary") {
+        System(Dify_Web_Interface, "Dify Web Interface", "The frontend interface for users to create and manage AI workflows visually.")
+        System(Dify_Backend_API, "Dify Backend API", "Handles requests from the frontend, manages workflows, and integrates with various LLMs and services.")
+        SystemDb(Database, "Database", "Stores user data, workflows, and model configurations.")
+    }
+    System_Boundary(tb_External_Model_Provider_Trust_Boundary, "External Model Provider Tru...") {
+        System(Celery_Worker, "Celery Worker", "Asynchronous task queue for handling background tasks such as model inference and data processing.")
+        System(Model_Providers, "Model Providers", "External services providing access to various LLMs for inference and processing.")
+    }
+
+    Rel(Dify_Web_Interface, Dify_Backend_API, "Uses")
+    Rel(Dify_Backend_API, Database, "Uses")
+    Rel(Dify_Backend_API, Celery_Worker, "Uses")
+    Rel(Celery_Worker, Model_Providers, "Uses")

@@ -1,0 +1,97 @@
+{
+  "id": "01K68NB437W8KRQPCSY9NEC1HM",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Dify Web Interface",
+      "description": "The frontend interface for users to create and manage AI workflows visually.",
+      "type": "frontend"
+    },
+    {
+      "name": "Dify Backend API",
+      "description": "Handles requests from the frontend, manages workflows, and integrates with various LLMs and services.",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "Stores user data, workflows, and model configurations.",
+      "type": "database"
+    },
+    {
+      "name": "Celery Worker",
+      "description": "Asynchronous task queue for handling background tasks such as model inference and data processing.",
+      "type": "service"
+    },
+    {
+      "name": "Model Providers",
+      "description": "External services providing access to various LLMs for inference and processing.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Dify Web Interface",
+      "destination": "Dify Backend API",
+      "description": "User interactions and workflow configurations are sent to the backend for processing."
+    },
+    {
+      "source": "Dify Backend API",
+      "destination": "Database",
+      "description": "Workflow data and user configurations are stored in the database."
+    },
+    {
+      "source": "Dify Backend API",
+      "destination": "Celery Worker",
+      "description": "Requests for model inference are sent to the Celery worker for asynchronous processing."
+    },
+    {
+      "source": "Celery Worker",
+      "destination": "Model Providers",
+      "description": "The worker communicates with external LLM services to perform inference."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Data Trust Boundary",
+      "description": "Separates user data and workflows from external services and model providers.",
+      "components": [
+        "Dify Web Interface",
+        "Dify Backend API",
+        "Database"
+      ]
+    },
+    {
+      "name": "External Model Provider Trust Boundary",
+      "description": "Defines the boundary between Dify and external LLM services, ensuring data privacy.",
+      "components": [
+        "Celery Worker",
+        "Model Providers"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 17:18:47.911877",
+  "updated_at": "2025-09-28 17:18:47.911881"
+}
