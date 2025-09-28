@@ -1,0 +1,105 @@
+{
+  "compliance_assessment": {
+    "id": "A7B3C9F1-2D4E-4F5G-8H9I-0J1K2L3M4N5O",
+    "framework": "ISO 27001",
+    "framework_description": "An internationally recognized standard for information security management systems (ISMS). It provides a framework for establishing, implementing, maintaining, and continually improving an ISMS.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 75.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "A.5.1",
+        "requirement": "The organization shall determine the scope of its ISMS.",
+        "status": "compliant",
+        "evidence": "The threat model identifies key risks associated with Fastlane, suggesting a need for scope definition.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "A.5.2",
+        "requirement": "The organization shall determine the assets to be included in its ISMS.",
+        "status": "compliant",
+        "evidence": "The threat model identifies key assets, including the Fastlane Server and integrated services.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "A.8.1",
+        "requirement": "The organization shall establish and maintain a policy for information security.",
+        "status": "partially_compliant",
+        "evidence": "While the threat model suggests a need for a security policy, a formal documented policy is not explicitly identified.",
+        "gaps": [
+          "Formalized security policy document"
+        ],
+        "recommendations": [
+          "Develop and implement a comprehensive information security policy."
+        ]
+      },
+      {
+        "requirement_id": "A.8.2",
+        "requirement": "The organization shall establish and maintain a policy for access control.",
+        "status": "partially_compliant",
+        "evidence": "The threat model highlights the importance of strong authentication and MFA, indicating a need for access control policies.",
+        "gaps": [
+          "Detailed access control policies and procedures"
+        ],
+        "recommendations": [
+          "Implement robust access control policies, including MFA and least privilege principles."
+        ]
+      },
+      {
+        "requirement_id": "A.8.3",
+        "requirement": "The organization shall establish and maintain a policy for information classification.",
+        "status": "partially_compliant",
+        "evidence": "The threat model implicitly requires classifying data based on sensitivity.",
+        "gaps": [
+          "Formal data classification scheme"
+        ],
+        "recommendations": [
+          "Establish a data classification scheme based on sensitivity and regulatory requirements."
+        ]
+      },
+      {
+        "requirement_id": "A.8.4",
+        "requirement": "The organization shall establish and maintain a policy for incident management.",
+        "status": "not_assessed",
+        "evidence": "No specific incident management procedures are identified in the threat model.",
+        "gaps": [],
+        "recommendations": [
+          "Develop and implement an incident management plan."
+        ]
+      },
+      {
+        "requirement_id": "A.8.5",
+        "requirement": "The organization shall establish and maintain a policy for business continuity management.",
+        "status": "not_assessed",
+        "evidence": "No specific business continuity requirements are identified.",
+        "gaps": [],
+        "recommendations": [
+          "Develop and implement a business continuity plan."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Lack of formal security policy document",
+      "Absence of detailed access control policies and procedures"
+    ],
+    "remediation_plan": [
+      "Develop and implement a comprehensive information security policy.",
+      "Implement robust access control policies, including MFA and least privilege principles.",
+      "Develop and implement a business continuity plan."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-28 18:51:37.479780",
+    "assessor": null,
+    "created_at": "2025-09-28 18:51:37.479784",
+    "updated_at": "2025-09-28 18:51:37.479787"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "01K68THDKB6RHGPY338WMS7XNC",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Fastlane Server",
+      "description": "The central server component that manages tasks, stores configuration, and orchestrates actions across client applications. It handles authentication, authorization, and task scheduling.",
+      "type": "Backend Service"
+    },
+    {
+      "name": "iOS Client",
+      "description": "The iOS client application used by developers to interact with Fastlane, triggering builds, tests, and releases.",
+      "type": "Frontend Application"
+    },
+    {
+      "name": "Android Client",
+      "description": "Similar to the iOS client, this application allows Android developers to interact with Fastlane.",
+      "type": "Frontend Application"
+    },
+    {
+      "name": "Command-Line Interface (CLI)",
+      "description": "A versatile tool for interacting with Fastlane, offering flexibility for scripting and automation.",
+      "type": "Service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "iOS/Android/CLI Client",
+      "destination": "Fastlane Server",
+      "description": "Developers initiate tasks (e.g., build, test, upload) via the client applications or CLI, sending requests to the Fastlane Server."
+    },
+    {
+      "source": "Fastlane Server",
+      "destination": "External Services (e.g., Xcode, Gradle, App Store Connect)",
+      "description": "The server triggers actions in external services like Xcode for building, Gradle for Android builds, and App Store Connect for publishing."
+    },
+    {
+      "source": "External Services",
+      "destination": "Fastlane Server",
+      "description": "External services report build status, test results, and deployment outcomes back to the Fastlane Server."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Client-Server Boundary",
+      "description": "The boundary between the Fastlane client applications and the Fastlane Server. This boundary controls access to server resources and sensitive data.",
+      "components": [
+        "iOS Client",
+        "Android Client",
+        "CLI",
+        "Fastlane Server"
+      ]
+    },
+    {
+      "name": "External Service Integration",
+      "description": "The integration with external services like Xcode and App Store Connect.  Trust relies on the security posture of these services.",
+      "components": [
+        "Fastlane Server",
+        "Xcode",
+        "App Store Connect"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 18:49:37.131369",
+  "updated_at": "2025-09-28 18:49:37.131375"
+}

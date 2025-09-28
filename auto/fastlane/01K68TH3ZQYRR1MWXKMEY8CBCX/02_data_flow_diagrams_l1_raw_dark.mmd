@@ -1,0 +1,35 @@
+graph TB
+  l3m4n5o6-p7q8-90ab-cdef-0123456789ab["User | (user) | [UT]"]:::untrusted
+  m4n5o6p7-q8r9-01ab-cdef-0123456789ab["GitHub | (service) | [UT]"]:::untrusted
+  h9i0j1k2-l3m4-5678-9ab0-123456789012["User Interface (Web/CLI) | (frontend) | [LT]"]:::lowTrust
+  i2j3k4l5-m6n7-89ab-cdef-0123456789ab["Fastlane Core | (backend) | [HT]"]:::highTrust
+  j4k5l6m7-n8o9-ab12-3456-789012345678["Git Repository | (database)"]:::dataStore
+  k5l6m7n8-o9p0-12ab-cdef-0123456789ab["Fastlane Cache | (cache)"]:::dataStore
+  e1f2a3b4-c5d6-789a-b2c3-456789abcdef["User Credentials | [PII]"]:::dataAsset,pii
+  f2a3b4c5-d678-9a0b-c3d4-567890abcdef["Fastlane Configuration | [INT]"]:::dataAsset,internal
+  g3h4i5j6-k7l8-9012-3456-789012345678["Application Logs | [INT]"]:::dataAsset,internal
+  n5o6p7q8-r9s0-12ab-cdef-0123456789ab["Component n5o6p7q8-r9s0-12ab-cdef-0123456789ab"]:::process,untrusted
+
+  n5o6p7q8-r9s0-12ab-cdef-0123456789ab -->|User Input to Fastlane| m4n5o6p7-q8r9-01ab-cdef-0123456789ab:::encryptedFlow
+  m4n5o6p7-q8r9-01ab-cdef-0123456789ab -->|Fastlane to Git| l3m4n5o6-p7q8-90ab-cdef-0123456789ab:::encryptedFlow
+
+  classDef externalEntity fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef process fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef dataAsset fill:#A259FF,stroke:#c3a4ff,stroke-width:2px,color:#F5F7FA
+  classDef untrusted fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFD300,stroke:#FFD300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#36FF8F,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#36FF8F,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#FFD300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#FF4C4C,stroke-width:2px
+  classDef restricted fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#36FF8F,stroke-width:2px
+  classDef unencryptedFlow stroke:#FF4C4C,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5

@@ -1,0 +1,18 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Client_Server_Boundary, "Client-Server Boundary") {
+        System(iOS_Client, "iOS Client", "The iOS client application used by developers to interact with Fastlane, triggering builds, tests, and releases.")
+        System(Android_Client, "Android Client", "Similar to the iOS client, this application allows Android developers to interact with Fastlane.")
+        System(Fastlane_Server, "Fastlane Server", "The central server component that manages tasks, stores configuration, and orchestrates actions across client applications. It handles authenticati...")
+    }
+    System_Boundary(tb_External_Service_Integration, "External Service Integration") {
+        System(Fastlane_Server, "Fastlane Server", "The central server component that manages tasks, stores configuration, and orchestrates actions across client applications. It handles authenticati...")
+    }
+    System(Command_Line_Interface__CLI_, "Command-Line Interface (CLI)", "A versatile tool for interacting with Fastlane, offering flexibility for scripting and automation.")
+    System(iOS_Android_CLI_Client, "iOS/Android/CLI Client", "Auto-created component: iOS/Android/CLI Client")
+    System(External_Services__e_g___Xcode__Gradle__App_Store_Connect_, "External Services (e.g., Xcode, Gradle, App Store Connect)", "Auto-created component: External Services (e.g., Xcode, Gradle, App Store Connect)")
+    System(External_Services, "External Services", "Auto-created component: External Services")
+
+    Rel(iOS_Android_CLI_Client, Fastlane_Server, "Uses")
+    Rel(Fastlane_Server, External_Services__e_g___Xcode__Gradle__App_Store_Connect_, "Uses")
+    Rel(External_Services, Fastlane_Server, "Uses")

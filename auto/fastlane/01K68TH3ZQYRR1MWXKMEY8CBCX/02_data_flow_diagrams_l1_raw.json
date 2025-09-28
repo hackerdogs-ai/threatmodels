@@ -1,0 +1,142 @@
+{
+  "id": "a7b3c8d1-f2a9-4b5c-8d3e-1f2a3b4c5d67",
+  "name": "Fastlane User Interaction",
+  "version": "1.0.0",
+  "description": "Diagram illustrating the flow of data from the user to Fastlane and back.",
+  "created_at": "2025-09-28 18:49:51.517479",
+  "last_updated": "2025-09-28 18:49:51.517492",
+  "data_assets": [
+    {
+      "id": "e1f2a3b4-c5d6-789a-b2c3-456789abcdef",
+      "name": "User Credentials",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "f2a3b4c5-d678-9a0b-c3d4-567890abcdef",
+      "name": "Fastlane Configuration",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "g3h4i5j6-k7l8-9012-3456-789012345678",
+      "name": "Application Logs",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "h9i0j1k2-l3m4-5678-9ab0-123456789012",
+      "name": "User Interface (Web/CLI)",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    },
+    {
+      "id": "i2j3k4l5-m6n7-89ab-cdef-0123456789ab",
+      "name": "Fastlane Core",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "j4k5l6m7-n8o9-ab12-3456-789012345678",
+      "name": "Git Repository",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "none",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "k5l6m7n8-o9p0-12ab-cdef-0123456789ab",
+      "name": "Fastlane Cache",
+      "description": null,
+      "type": "cache",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "none",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "l3m4n5o6-p7q8-90ab-cdef-0123456789ab",
+      "name": "User",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "m4n5o6p7-q8r9-01ab-cdef-0123456789ab",
+      "name": "GitHub",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "n5o6p7q8-r9s0-12ab-cdef-0123456789ab",
+      "name": "User Input to Fastlane",
+      "description": null,
+      "source_id": "n5o6p7q8-r9s0-12ab-cdef-0123456789ab",
+      "destination_id": "m4n5o6p7-q8r9-01ab-cdef-0123456789ab",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "o5p6q7r8-s9t0-12ab-cdef-0123456789ab",
+      "name": "Fastlane to Git",
+      "description": null,
+      "source_id": "m4n5o6p7-q8r9-01ab-cdef-0123456789ab",
+      "destination_id": "l3m4n5o6-p7q8-90ab-cdef-0123456789ab",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

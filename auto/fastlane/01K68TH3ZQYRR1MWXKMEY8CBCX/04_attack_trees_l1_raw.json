@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "id": "83b9d74c-56b1-40c9-907f-82a29939b84d",
+    "title": "Unauthorized Access via Weak Authentication",
+    "description": "Attackers exploit vulnerabilities in Fastlane's authentication mechanisms to gain unauthorized access.",
+    "author": null,
+    "version": null,
+    "created": "2025-10-01 14:35:00",
+    "last_updated": "2025-09-28 18:50:11.745690",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "79a4e2d1-9b2f-4c6a-831d-a89c7d3e4f56",
+    "description": "Attack path: Compromise Fastlane Server Authentication",
+    "type": "AND",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 8.0,
+      "impact": 9.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "8f9d2a3b-4c5e-4d6f-9e01-234567890123",
+        "description": "Weak Password Policy",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement strong password policy (minimum length, complexity)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "9b3d4e5f-6c7d-4e5f-8a9b-c0d1e2f3a4b5",
+        "description": "Lack of Multi-Factor Authentication",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Enforce Multi-Factor Authentication (MFA) for all users",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "a2b3c4d5-e6f7-89a0-b1c2-345678901234",
+        "description": "Default Credentials",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 3.0,
+          "impact": 10.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Change all default credentials immediately upon installation",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.95
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Regular Security Audits of Authentication Mechanisms",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.7
+      },
+      {
+        "description": "Implement Rate Limiting on Login Attempts",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.6
+      }
+    ],
+    "references": []
+  }
+}

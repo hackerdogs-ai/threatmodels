@@ -1,0 +1,30 @@
+graph TB
+  node_79a4e2d1-9b2f-4c6a-831d-a89c7d3e4f56["Attack path: Compromise Fastlane Server Authentication | [HIGH]"]:::highRisk
+  node_8f9d2a3b-4c5e-4d6f-9e01-234567890123["Weak Password Policy | [MED]"]:::mediumRisk
+  node_8f9d2a3b-4c5e-4d6f-9e01-234567890123_cm_0["CM: Implement strong password policy (minimum length, complexity) (Eff: 0.9)"]:::countermeasure
+  node_9b3d4e5f-6c7d-4e5f-8a9b-c0d1e2f3a4b5["Lack of Multi-Factor Authentication | [HIGH]"]:::highRisk
+  node_9b3d4e5f-6c7d-4e5f-8a9b-c0d1e2f3a4b5_cm_0["CM: Enforce Multi-Factor Authentication (MFA) for all users (Eff: 0.8)"]:::countermeasure
+  a2b3c4d5-e6f7-89a0-b1c2-345678901234["Default Credentials | [HIGH]"]:::highRisk
+  a2b3c4d5-e6f7-89a0-b1c2-345678901234_cm_0["CM: Change all default credentials immediately upon installation (Eff: 0.95)"]:::countermeasure
+  node_79a4e2d1-9b2f-4c6a-831d-a89c7d3e4f56_cm_0["CM: Regular Security Audits of Authentication Mechanisms (Eff: 0.7)"]:::countermeasure
+  node_79a4e2d1-9b2f-4c6a-831d-a89c7d3e4f56_cm_1["CM: Implement Rate Limiting on Login Attempts (Eff: 0.6)"]:::countermeasure
+
+  node_79a4e2d1-9b2f-4c6a-831d-a89c7d3e4f56 --> node_8f9d2a3b-4c5e-4d6f-9e01-234567890123
+  node_8f9d2a3b-4c5e-4d6f-9e01-234567890123 -.-> node_8f9d2a3b-4c5e-4d6f-9e01-234567890123_cm_0
+  node_79a4e2d1-9b2f-4c6a-831d-a89c7d3e4f56 --> node_9b3d4e5f-6c7d-4e5f-8a9b-c0d1e2f3a4b5
+  node_9b3d4e5f-6c7d-4e5f-8a9b-c0d1e2f3a4b5 -.-> node_9b3d4e5f-6c7d-4e5f-8a9b-c0d1e2f3a4b5_cm_0
+  node_79a4e2d1-9b2f-4c6a-831d-a89c7d3e4f56 --> a2b3c4d5-e6f7-89a0-b1c2-345678901234
+  a2b3c4d5-e6f7-89a0-b1c2-345678901234 -.-> a2b3c4d5-e6f7-89a0-b1c2-345678901234_cm_0
+  node_79a4e2d1-9b2f-4c6a-831d-a89c7d3e4f56 -.-> node_79a4e2d1-9b2f-4c6a-831d-a89c7d3e4f56_cm_0
+  node_79a4e2d1-9b2f-4c6a-831d-a89c7d3e4f56 -.-> node_79a4e2d1-9b2f-4c6a-831d-a89c7d3e4f56_cm_1
+
+  classDef andNode fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef orNode fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef highRisk fill:#FF4C4C,color:#F5F7FA,stroke:#FF4C4C,stroke-width:2px
+  classDef mediumRisk fill:#FFD300,stroke:#FFD300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#A259FF,stroke:#c3a4ff,stroke-width:1px,stroke-dasharray:3 3,color:#F5F7FA
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5
