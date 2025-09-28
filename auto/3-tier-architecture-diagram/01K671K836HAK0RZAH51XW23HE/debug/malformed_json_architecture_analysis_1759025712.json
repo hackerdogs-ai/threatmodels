@@ -1,0 +1,8 @@
+{
+  "architecture_overview": "A scalable web application hosted on AWS with load balancing, auto-scaling, and distributed data storage for high availability and performance.",
+  "components": [
+    {
+      "name": "Elastic Load Balancer (ELB)",
+      "description": "Distributes incoming traffic across web servers and manages DDoS mitigation.",
+      "type": "frontend"
+    }
