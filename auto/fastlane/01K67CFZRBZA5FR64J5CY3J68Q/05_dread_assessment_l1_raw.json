@@ -1,0 +1,170 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K67CJ8QN48CRQ0Q84V1VW5PK",
+      "threat_title": "Spoofing via Untrusted CLI",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 6,
+        "exploitability": 7,
+        "affected_users": 9,
+        "discoverability": 5
+      },
+      "total_risk_score": 35,
+      "risk_level": "high",
+      "justification": "High damage potential from unauthorized CLI commands, moderate reproducibility, medium exploitability, widespread affected users, and low discoverability.",
+      "recommendations": [
+        "Implement strict CLI input validation",
+        "Enforce two-factor authentication for CLI access",
+        "Monitor CLI command logs for suspicious activity"
+      ],
+      "assessment_date": "2025-09-28 05:28:01.995000",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67CJ8QQG27NRG9ZP5FCPJ1F",
+      "threat_title": "Data Tampering in External Integrations",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 6,
+        "exploitability": 7,
+        "affected_users": 9,
+        "discoverability": 6
+      },
+      "total_risk_score": 36,
+      "risk_level": "high",
+      "justification": "High damage potential from data corruption, moderate reproducibility, medium exploitability, widespread affected users, and medium discoverability.",
+      "recommendations": [
+        "Encrypt data in transit to external services",
+        "Implement integrity checks for API communications",
+        "Monitor third-party service logs for anomalies"
+      ],
+      "assessment_date": "2025-09-28 05:28:01.997668",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67CJ8QS9ARW0F0W32C6GS8K",
+      "threat_title": "Information Disclosure from Database",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 7,
+        "exploitability": 7,
+        "affected_users": 9,
+        "discoverability": 6
+      },
+      "total_risk_score": 38,
+      "risk_level": "high",
+      "justification": "Severe damage from credential exposure, high reproducibility, medium exploitability, widespread affected users, and medium discoverability.",
+      "recommendations": [
+        "Encrypt sensitive data at rest",
+        "Implement role-based access controls",
+        "Regularly audit database access logs"
+      ],
+      "assessment_date": "2025-09-28 05:28:01.998897",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67CJ8QSJMS6Q8PFXCT85QFP",
+      "threat_title": "Denial of Service via External APIs",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 7,
+        "exploitability": 7,
+        "affected_users": 9,
+        "discoverability": 6
+      },
+      "total_risk_score": 37,
+      "risk_level": "high",
+      "justification": "High damage potential from service disruptions, moderate reproducibility, medium exploitability, widespread affected users, and medium discoverability.",
+      "recommendations": [
+        "Implement API rate limiting",
+        "Monitor external service availability",
+        "Establish failover mechanisms for critical integrations"
+      ],
+      "assessment_date": "2025-09-28 05:28:01.999479",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67CJ8QSWGJV41WB8R6Q28WJ",
+      "threat_title": "Input Validation Vulnerabilities",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 8,
+        "exploitability": 6,
+        "affected_users": 9,
+        "discoverability": 6
+      },
+      "total_risk_score": 38,
+      "risk_level": "high",
+      "justification": "Severe damage from command injection, high reproducibility, low exploitability, widespread affected users, and medium discoverability.",
+      "recommendations": [
+        "Implement strict input sanitization",
+        "Use parameterized queries for all operations",
+        "Conduct regular security testing for CLI inputs"
+      ],
+      "assessment_date": "2025-09-28 05:28:02.000429",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "All identified threats pose high risk due to potential for severe damage, moderate to high reproducibility, and widespread impact. Prioritize input validation, encryption, and access controls to mitigate these risks."
+}

@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Untrusted_CLI, "Untrusted CLI") {
+        System(Fastlane_CLI, "Fastlane CLI", "Command-line interface for user interaction and task initiation")
+    }
+    System_Boundary(tb_Trusted_Backend, "Trusted Backend") {
+        System(Backend_Services, "Backend Services", "Handles task orchestration, CI/CD pipeline management, and notifications")
+        SystemDb(Database, "Database", "Stores user credentials, project configurations, and job metadata")
+    }
+    System_Boundary(tb_External_Trust_Boundary, "External Trust Boundary") {
+        System(External_Integrations, "External Integrations", "Connects to GitHub, Firebase, and other cloud services for automation")
+    }
+
+    Rel(Fastlane_CLI, Backend_Services, "Uses")
+    Rel(Backend_Services, Database, "Uses")
+    Rel(Backend_Services, External_Integrations, "Uses")

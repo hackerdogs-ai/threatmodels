@@ -1,0 +1,172 @@
+{
+  "risk_prioritization": {
+    "id": "01K67CJ8QV2W7X6Q8Q84V1VW5P",
+    "prioritization_method": "DREAD + Business Impact Analysis",
+    "criteria_weights": {
+      "business_impact": 0.3,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.2
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K67CJ8QN48CRQ0Q84V1VW5PK",
+        "threat_title": "Spoofing via Untrusted CLI",
+        "risk_score": 9.2,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "MFA implementation",
+          "CLI protocol upgrade"
+        ],
+        "recommended_actions": [
+          "Implement MFA for CLI",
+          "Adopt SSH key-based authentication"
+        ]
+      },
+      {
+        "risk_id": "01K67CJ8QQG27NRG9ZP5FCPJ1F",
+        "threat_title": "Data Tampering in External Integrations",
+        "risk_score": 8.7,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "TLS 1.3 adoption",
+          "API monitoring"
+        ],
+        "recommended_actions": [
+          "Enforce HTTPS with TLS 1.3",
+          "Implement API request validation"
+        ]
+      },
+      {
+        "risk_id": "01K67CJ8QS9ARW0F0W32C6GS8K",
+        "threat_title": "Information Disclosure from Database",
+        "risk_score": 8.1,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "Encryption framework",
+          "RBAC policies"
+        ],
+        "recommended_actions": [
+          "Encrypt data at rest/in transit",
+          "Implement database access controls"
+        ]
+      },
+      {
+        "risk_id": "01K67CJ8QSJMS6Q8PFXCT85QFP",
+        "threat_title": "Denial of Service via External APIs",
+        "risk_score": 7.6,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "Rate limiting",
+          "API gateway"
+        ],
+        "recommended_actions": [
+          "Implement API rate limiting",
+          "Deploy circuit breakers"
+        ]
+      },
+      {
+        "risk_id": "01K67CJ8QSWGJV41WB8R6Q28WJ",
+        "threat_title": "Input Validation Vulnerabilities",
+        "risk_score": 6.9,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "Input sanitization framework",
+          "Security testing"
+        ],
+        "recommended_actions": [
+          "Implement strict CLI input validation",
+          "Conduct regular security audits"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K67CJ8QN48CRQ0Q84V1VW5PK"
+      ],
+      "high_priority_risks": [
+        "01K67CJ8QQG27NRG9ZP5FCPJ1F",
+        "01K67CJ8QS9ARW0F0W32C6GS8K",
+        "01K67CJ8QSJMS6Q8PFXCT85QFP"
+      ],
+      "medium_priority_risks": [
+        "01K67CJ8QSWGJV41WB8R6Q28WJ"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K67CJ8QN48CRQ0Q84V1VW5PK": 9.2,
+      "01K67CJ8QQG27NRG9ZP5FCPJ1F": 8.7,
+      "01K67CJ8QS9ARW0F0W32C6GS8K": 8.1,
+      "01K67CJ8QSJMS6Q8PFXCT85QFP": 7.6,
+      "01K67CJ8QSWGJV41WB8R6Q28WJ": 6.9
+    },
+    "risk_rankings": [
+      [
+        "01K67CJ8QN48CRQ0Q84V1VW5PK",
+        9.2
+      ],
+      [
+        "01K67CJ8QQG27NRG9ZP5FCPJ1F",
+        8.7
+      ],
+      [
+        "01K67CJ8QS9ARW0F0W32C6GS8K",
+        8.1
+      ],
+      [
+        "01K67CJ8QSJMS6Q8PFXCT85QFP",
+        7.6
+      ],
+      [
+        "01K67CJ8QSWGJV41WB8R6Q28WJ",
+        6.9
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "high (potential revenue loss from service disruptions)",
+      "operational_impact": "high (compromised integrations and data integrity)",
+      "reputational_impact": "high (trust erosion from security breaches)"
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-28 05:32:50.572983",
+    "updated_at": "2025-09-28 05:32:50.572992"
+  }
+}

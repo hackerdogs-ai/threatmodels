@@ -1,0 +1,92 @@
+{
+  "id": "01K67CGJ20YZMVQ2WXGFHKVXSX",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Fastlane CLI",
+      "description": "Command-line interface for user interaction and task initiation",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend Services",
+      "description": "Handles task orchestration, CI/CD pipeline management, and notifications",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "Stores user credentials, project configurations, and job metadata",
+      "type": "database"
+    },
+    {
+      "name": "External Integrations",
+      "description": "Connects to GitHub, Firebase, and other cloud services for automation",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Fastlane CLI",
+      "destination": "Backend Services",
+      "description": "User commands and configuration data sent to backend for processing"
+    },
+    {
+      "source": "Backend Services",
+      "destination": "Database",
+      "description": "Stores job status, credentials, and metadata in persistent storage"
+    },
+    {
+      "source": "Backend Services",
+      "destination": "External Integrations",
+      "description": "Triggers automated workflows with cloud providers and CI/CD systems"
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Untrusted CLI",
+      "description": "CLI interface exposed to end-users with potential for malicious input",
+      "components": [
+        "Fastlane CLI"
+      ]
+    },
+    {
+      "name": "Trusted Backend",
+      "description": "Internal services handling sensitive operations and data processing",
+      "components": [
+        "Backend Services",
+        "Database"
+      ]
+    },
+    {
+      "name": "External Trust Boundary",
+      "description": "Third-party services with potential for API abuse or data leakage",
+      "components": [
+        "External Integrations"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 05:25:14.432393",
+  "updated_at": "2025-09-28 05:25:14.432441"
+}

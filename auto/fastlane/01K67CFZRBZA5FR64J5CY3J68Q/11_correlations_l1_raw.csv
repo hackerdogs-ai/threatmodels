@@ -1,0 +1,19 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"CLI spoofing in Fastlane mirrors spoofing vulnerabilities in other CLI-based tools (e.g., Docker, Kubernetes CLI).",,,,2025-09-28T05:33:56.335155
+CORR_002,,,,Input validation mitigations for CLI commands align with OWASP Top 10 injection prevention standards.,,,,2025-09-28T05:33:56.335169
+CORR_003,,,,Data tampering in external integrations overlaps with API abuse patterns in SaaS platforms.,,,,2025-09-28T05:33:56.335177
+CORR_004,,,,Database information disclosure risks align with GDPR/CCPA requirements for data encryption.,,,,2025-09-28T05:33:56.335184
+CORR_005,,,,Denial-of-service risks in Fastlane could compound with DDoS vulnerabilities in cloud infrastructure.,,,,2025-09-28T05:33:56.335191
+CORR_006,,,,Multi-factor authentication recommendations align with NIST authentication frameworks.,,,,2025-09-28T05:33:56.335198
+CORR_007,,,,Command injection vulnerabilities share patterns with web application SQL injection risks.,,,,2025-09-28T05:33:56.335205
+CORR_008,,,,Data encryption requirements overlap with HIPAA/HITECH regulations for healthcare systems.,,,,2025-09-28T05:33:56.335211
+CORR_009,,,,External API denial-of-service risks mirror cloud service provider abuse patterns.,,,,2025-09-28T05:33:56.335218
+CORR_010,,,,Role-based access controls align with Zero Trust architecture principles.,,,,2025-09-28T05:33:56.335225
+CORR_011,,,,Data tampering risks share patterns with insider threat scenarios.,,,,2025-09-28T05:33:56.335231
+CORR_012,,,,CLI authentication risks align with SOC 2 compliance requirements for access controls.,,,,2025-09-28T05:33:56.335238
+CORR_013,,,,"Multiple threats could compound in CI/CD pipelines, increasing operational risk.",,,,2025-09-28T05:33:56.335244
+CORR_014,,,,Information disclosure risks mirror vulnerabilities in other database-driven applications.,,,,2025-09-28T05:33:56.335251
+CORR_015,,,,Secure CLI protocols align with SSH best practices for remote access.,,,,2025-09-28T05:33:56.335258
+CORR_016,,,,Input validation vulnerabilities share patterns with web application XSS risks.,,,,2025-09-28T05:33:56.335264
+CORR_017,,,,Data encryption requirements overlap with PCI DSS standards for payment systems.,,,,2025-09-28T05:33:56.335271
+CORR_018,,,,"Multiple threats could compound in cloud-native environments, increasing operational risk.",,,,2025-09-28T05:33:56.335277

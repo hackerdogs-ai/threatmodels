@@ -1,0 +1,77 @@
+{
+    "id": "01F3G4H5J6K7L8M9N2P3Q4R5",
+    "name": "fastlane Threat Model Data Flow",
+    "description": "Basic data flow diagram for fastlane showing data movement between components, trust boundaries, and external interfaces",
+    "data_assets": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R6",
+            "name": "user_credentials",
+            "classification": "pii"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R7",
+            "name": "build_configurations",
+            "classification": "internal"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R8",
+            "name": "ci_cd_secrets",
+            "classification": "restricted"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4R9",
+            "name": "github_access_tokens",
+            "classification": "confidential"
+        }
+    ],
+    "processes": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S0",
+            "name": "fastlane_cli",
+            "type": "frontend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S1",
+            "name": "backend_services",
+            "type": "service",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S2",
+            "name": "github_api",
+            "type": "api",
+            "trust_level": "untrusted"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S3",
+            "name": "apple_api",
+            "type": "api",
+            "trust_level": "untrusted"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S4",
+            "name": "configurations_database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S5",
+            "name": "secret_files",
+            "type": "file",
+            "encryption": "end_to_end"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S6",
+            "name": "developer_user",
+            "type": "user"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P3Q4S7",
+            "name": "github_service",
+            "type": "system"
+        }

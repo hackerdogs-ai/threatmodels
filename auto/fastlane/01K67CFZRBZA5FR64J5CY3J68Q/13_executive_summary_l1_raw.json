@@ -1,0 +1,46 @@
+{
+  "executive_summary": {
+    "id": "01K67D18CZHYJ65EWYNP53PNX0",
+    "title": null,
+    "overview": "The threat model for fastlane identifies critical security risks impacting business operations, compliance, and reputation. Key vulnerabilities in CLI authentication, data integrity, and external integrations require immediate mitigation to prevent financial loss, regulatory non-compliance, and trust erosion.",
+    "scope": null,
+    "methodology": null,
+    "key_findings": [
+      "Critical risk: CLI spoofing via untrusted terminals threatens data integrity and operational continuity with high business impact.",
+      "Data tampering in external integrations and database information disclosure pose significant risks to regulatory compliance (GDPR, HIPAA).",
+      "Denial-of-service vulnerabilities in APIs could disrupt service availability, impacting revenue and customer trust.",
+      "Input validation gaps expose the system to injection attacks, requiring urgent remediation to align with OWASP standards.",
+      "High business impact from security breaches could result in reputational damage and potential revenue loss from service disruptions."
+    ],
+    "critical_risks": [],
+    "high_priority_threats": [],
+    "total_threats": 0,
+    "high_risk_count": 0,
+    "medium_risk_count": 0,
+    "low_risk_count": 0,
+    "business_impact_summary": null,
+    "compliance_implications": null,
+    "recommendations": [],
+    "immediate_actions": [],
+    "strategic_recommendations": [
+      "Prioritize MFA and SSH key-based CLI authentication to mitigate spoofing risks immediately.",
+      "Adopt TLS 1.3 and API monitoring to secure external integrations and detect tampering.",
+      "Implement field-level encryption and RBAC policies to meet GDPR/CCPA and HIPAA compliance requirements.",
+      "Deploy rate limiting and circuit breakers to prevent API-based denial-of-service attacks.",
+      "Establish cross-platform input validation frameworks and integrate automated security testing."
+    ],
+    "resource_requirements": {},
+    "timeline": null,
+    "budget_implications": null,
+    "next_steps": [
+      "Implement critical risk mitigations (MFA, CLI encryption) within 30 days.",
+      "Conduct compliance audits for data encryption and access controls by Q4 2025.",
+      "Allocate resources for API monitoring tools and TLS 1.3 migration.",
+      "Schedule quarterly security training and pipeline risk assessments.",
+      "Monitor threat intelligence feeds for emerging CLI and API attack patterns."
+    ],
+    "follow_up_actions": [],
+    "created_at": "2025-09-28 05:34:21.600121",
+    "updated_at": "2025-09-28 05:34:21.600128"
+  }
+}

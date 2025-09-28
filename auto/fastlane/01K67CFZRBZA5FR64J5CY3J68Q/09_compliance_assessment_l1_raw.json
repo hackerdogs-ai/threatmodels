@@ -1,0 +1,60 @@
+{
+  "compliance_assessment": {
+    "id": "01K67CJ8QV2W7X6Q8Q84V1VW5Z",
+    "framework": "GDPR",
+    "framework_description": "Regulation governing data protection and privacy in the European Union, focusing on data subject rights, data minimization, and breach notification.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 72.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-001",
+        "requirement": "Data minimization - collect only necessary personal data.",
+        "status": "non_compliant",
+        "evidence": "No explicit data minimization controls documented.",
+        "gaps": [
+          "Data retention policies not defined",
+          "Third-party data sharing lacks restrictions"
+        ],
+        "recommendations": [
+          "Implement data minimization policies",
+          "Define data retention periods",
+          "Add third-party data sharing restrictions"
+        ]
+      },
+      {
+        "requirement_id": "GDPR-004",
+        "requirement": "Breach notification within 72 hours of discovery.",
+        "status": "partially_compliant",
+        "evidence": "No breach notification process documented.",
+        "gaps": [
+          "No incident response plan for data breaches"
+        ],
+        "recommendations": [
+          "Develop and document breach notification procedures",
+          "Integrate with incident response framework"
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Data minimization missing",
+      "Breach notification process absent"
+    ],
+    "remediation_plan": [
+      "Implement data minimization policies by Q4 2025",
+      "Develop GDPR-compliant breach notification procedures"
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-28 05:31:19.935355",
+    "assessor": null,
+    "created_at": "2025-09-28 05:31:19.935361",
+    "updated_at": "2025-09-28 05:31:19.935365"
+  }
+}

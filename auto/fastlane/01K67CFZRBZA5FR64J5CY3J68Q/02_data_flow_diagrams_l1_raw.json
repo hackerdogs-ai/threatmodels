@@ -1,0 +1,134 @@
+{
+  "id": "01F3G4H5J6K7L8M9N2P3Q4R5",
+  "name": "fastlane Threat Model Data Flow",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for fastlane showing data movement between components, trust boundaries, and external interfaces",
+  "created_at": "2025-09-28 05:25:42.414347",
+  "last_updated": "2025-09-28 05:25:42.414354",
+  "data_assets": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R6",
+      "name": "user_credentials",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R7",
+      "name": "build_configurations",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R8",
+      "name": "ci_cd_secrets",
+      "description": null,
+      "classification": "restricted",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R9",
+      "name": "github_access_tokens",
+      "description": null,
+      "classification": "confidential",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S0",
+      "name": "fastlane_cli",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S1",
+      "name": "backend_services",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S2",
+      "name": "github_api",
+      "description": null,
+      "type": "api",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "untrusted",
+      "external_references": {}
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S3",
+      "name": "apple_api",
+      "description": null,
+      "type": "api",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "untrusted",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S4",
+      "name": "configurations_database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S5",
+      "name": "secret_files",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "end_to_end",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S6",
+      "name": "developer_user",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S7",
+      "name": "github_service",
+      "description": null,
+      "type": "system",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [],
+  "defined_trust_boundaries": []
+}
