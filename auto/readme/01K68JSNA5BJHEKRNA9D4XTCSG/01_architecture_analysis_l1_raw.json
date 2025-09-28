@@ -1,0 +1,87 @@
+{
+  "id": "01K68JT6ZH5EAKFAQ8QS42KQB5",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "Static website for displaying threat model documentation",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend",
+      "description": "API server handling user authentication and data access",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "Secure storage for threat model data and user credentials",
+      "type": "database"
+    },
+    {
+      "name": "Documentation Service",
+      "description": "Service generating and maintaining README.md content",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "Backend",
+      "description": "User authentication and documentation access requests"
+    },
+    {
+      "source": "Backend",
+      "destination": "Database",
+      "description": "Secure data retrieval and storage operations"
+    },
+    {
+      "source": "Documentation Service",
+      "destination": "Database",
+      "description": "Content synchronization for README.md files"
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Boundary",
+      "description": "Trust boundary for authenticated users accessing documentation",
+      "components": [
+        "Frontend",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Internal Boundary",
+      "description": "Trust boundary for secure internal service communications",
+      "components": [
+        "Backend",
+        "Database",
+        "Documentation Service"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 16:34:36.657381",
+  "updated_at": "2025-09-28 16:34:36.657389"
+}

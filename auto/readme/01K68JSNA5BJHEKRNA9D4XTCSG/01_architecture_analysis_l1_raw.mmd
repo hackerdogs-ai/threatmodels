@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Boundary, "User Boundary") {
+        System(Frontend, "Frontend", "Static website for displaying threat model documentation")
+        System(Backend, "Backend", "API server handling user authentication and data access")
+    }
+    System_Boundary(tb_Internal_Boundary, "Internal Boundary") {
+        System(Backend, "Backend", "API server handling user authentication and data access")
+        SystemDb(Database, "Database", "Secure storage for threat model data and user credentials")
+        System(Documentation_Service, "Documentation Service", "Service generating and maintaining README.md content")
+    }
+
+    Rel(Frontend, Backend, "Uses")
+    Rel(Backend, Database, "Uses")
+    Rel(Documentation_Service, Database, "Uses")
