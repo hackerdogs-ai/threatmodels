@@ -1,0 +1,15 @@
+{
+    "metadata": {
+        "id": "01K67DKDKB9MNQHN19HSAX1ZC8",
+        "title": "Information Disclosure via Database Exposure",
+        "description": "Attack tree for critical threat: Unauthorized access to sensitive data stored in the database",
+        "created": "2025-09-28T06:00:00.000Z"
+    },
+    "tree": {
+        "id": "01K67DKDKB9MNQHN19HSAX1ZC8",
+        "description": "Information Disclosure via Database Exposure",
+        "type": "OR",
+        "risk": {
+            "likelihood": 8,
+            "impact": 9
+        }

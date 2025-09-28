@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Untrusted_Frontend, "Untrusted Frontend") {
+        System(Frontend, "Frontend", "User interface for interacting with deployment workflows and configurations")
+    }
+    System_Boundary(tb_Trusted_Backend___Database, "Trusted Backend  Database") {
+        System(Backend, "Backend", "API layer handling request routing, authentication, and orchestration logic")
+        SystemDb(Database, "Database", "Persistent storage for deployment configurations, secrets, and metadata")
+    }
+    System(Deployment_Service, "Deployment Service", "Worker service executing deployment tasks on target infrastructure")
+
+    Rel(Frontend, Backend, "Uses")
+    Rel(Backend, Database, "Uses")
+    Rel(Backend, Deployment_Service, "Uses")
+    Rel(Deployment_Service, Backend, "Uses")

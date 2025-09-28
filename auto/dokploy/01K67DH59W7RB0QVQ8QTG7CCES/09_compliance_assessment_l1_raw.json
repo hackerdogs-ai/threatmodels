@@ -1,0 +1,61 @@
+{
+  "compliance_assessment": {
+    "id": "01K67DKDK8V4VRET00C86AX5VH",
+    "framework": "ISO/IEC 27001",
+    "framework_description": "International standard for information security management systems (ISMS) focusing on risk management and control implementation.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 72.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "ISO27001-2022-A.8.1",
+        "requirement": "Implement technical safeguards for data confidentiality, integrity, and availability",
+        "status": "partially_compliant",
+        "evidence": "Data encryption (at rest/in transit) and cryptographic signing are planned",
+        "gaps": [
+          "Encryption implementation status: planned",
+          "Cryptographic signing requires verification mechanisms"
+        ],
+        "recommendations": [
+          "Prioritize encryption implementation for database secrets",
+          "Add HMAC verification for deployment instruction signing"
+        ]
+      },
+      {
+        "requirement_id": "ISO27001-2022-A.12.1",
+        "requirement": "Implement access control mechanisms",
+        "status": "partially_compliant",
+        "evidence": "RBAC framework is planned",
+        "gaps": [
+          "Role-based access controls not yet implemented",
+          "Lack of least-privilege enforcement"
+        ],
+        "recommendations": [
+          "Implement RBAC for database access",
+          "Enforce least-privilege principles for deployment credentials"
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Missing implementation of encryption controls",
+      "Insufficient session management safeguards"
+    ],
+    "remediation_plan": [
+      "Implement TLS 1.3 with certificate pinning (Q3 2025)",
+      "Deploy database encryption and access controls by Q4 2025",
+      "Establish session token validation mechanisms"
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-28 05:50:21.771719",
+    "assessor": null,
+    "created_at": "2025-09-28 05:50:21.771725",
+    "updated_at": "2025-09-28 05:50:21.771727"
+  }
+}

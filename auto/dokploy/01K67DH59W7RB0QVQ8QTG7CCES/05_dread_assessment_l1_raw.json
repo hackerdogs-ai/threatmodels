@@ -1,0 +1,203 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K67DKDJXAE3BX2P388XR7BA0",
+      "threat_title": "Spoofing via Untrusted Frontend",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 6,
+        "exploitability": 6,
+        "affected_users": 6,
+        "discoverability": 6
+      },
+      "total_risk_score": 32,
+      "risk_level": "high",
+      "justification": "High damage potential from credential theft, moderate reproducibility due to network exposure, medium exploitability requiring social engineering.",
+      "recommendations": [
+        "Implement HTTPS with certificate pinning",
+        "Enforce multi-factor authentication",
+        "Add frontend-to-backend mutual TLS"
+      ],
+      "assessment_date": "2025-09-28 05:46:14.698448",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67DKDJZT54Y4YQAK4PHPEMH",
+      "threat_title": "Tampering of Deployment Instructions",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 7,
+        "exploitability": 6,
+        "affected_users": 7,
+        "discoverability": 6
+      },
+      "total_risk_score": 35,
+      "risk_level": "high",
+      "justification": "High damage potential for infrastructure compromise, high reproducibility through network interception, medium exploitability requiring data interception.",
+      "recommendations": [
+        "Implement TLS 1.3 with perfect forward secrecy",
+        "Add message integrity checks (HMAC)",
+        "Segment deployment service network"
+      ],
+      "assessment_date": "2025-09-28 05:46:14.698916",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67DKDJZCY5WC800B65JPFGD",
+      "threat_title": "Information Disclosure via Database Exposure",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 6,
+        "exploitability": 6,
+        "affected_users": 8,
+        "discoverability": 6
+      },
+      "total_risk_score": 35,
+      "risk_level": "high",
+      "justification": "High damage potential for data exposure, medium reproducibility through database vulnerabilities, high impact scope for all users.",
+      "recommendations": [
+        "Encrypt sensitive data at rest",
+        "Implement row-level access controls",
+        "Enable audit logging for database access"
+      ],
+      "assessment_date": "2025-09-28 05:46:14.699524",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67DKDK8V4VRET00C86AX5VH",
+      "threat_title": "Denial of Service via Resource Exhaustion",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 8,
+        "exploitability": 5,
+        "affected_users": 8,
+        "discoverability": 8
+      },
+      "total_risk_score": 38,
+      "risk_level": "high",
+      "justification": "High damage potential for service disruption, high reproducibility through automated attacks, medium exploitability requiring resource allocation.",
+      "recommendations": [
+        "Implement rate limiting with sliding window",
+        "Add circuit breaker patterns",
+        "Monitor for abnormal request patterns"
+      ],
+      "assessment_date": "2025-09-28 05:46:14.700694",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67DKDKB9MNQHN19HSAX1ZC8",
+      "threat_title": "Elevation of Privilege via Compromised Session Tokens",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 6,
+        "exploitability": 6,
+        "affected_users": 6,
+        "discoverability": 6
+      },
+      "total_risk_score": 33,
+      "risk_level": "high",
+      "justification": "High damage potential for backend access, moderate reproducibility through token interception, medium exploitability requiring token reuse.",
+      "recommendations": [
+        "Use short-lived tokens with OAuth 2.0",
+        "Implement token revocation mechanisms",
+        "Add anti-CSRF protections"
+      ],
+      "assessment_date": "2025-09-28 05:46:14.701425",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67DKDKCBVYJ2QAYVKVH3GZB",
+      "threat_title": "Input Validation Flaws Leading to Injection Attacks",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 8,
+        "exploitability": 4,
+        "affected_users": 8,
+        "discoverability": 8
+      },
+      "total_risk_score": 37,
+      "risk_level": "high",
+      "justification": "High damage potential for data corruption/compromise, high reproducibility through common attack vectors, low exploitability requiring precise input.",
+      "recommendations": [
+        "Implement strict input validation",
+        "Use parameterized queries for database access",
+        "Sanitize all user inputs"
+      ],
+      "assessment_date": "2025-09-28 05:46:14.703560",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "All threats are rated as high risk due to potential for significant damage and system-wide impact. Prioritize mitigations for information disclosure and tampering risks first. Implement encryption, access controls, and input validation across all components."
+}

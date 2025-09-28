@@ -1,0 +1,63 @@
+{
+  "architecture_overview": "The dokploy architecture likely involves a frontend for user interaction, a backend for processing logic, a database for storing configurations, and deployment services for executing tasks.",
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "User interface for interacting with deployment workflows and configurations",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend",
+      "description": "API layer handling request routing, authentication, and orchestration logic",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "Persistent storage for deployment configurations, secrets, and metadata",
+      "type": "database"
+    },
+    {
+      "name": "Deployment Service",
+      "description": "Worker service executing deployment tasks on target infrastructure",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "Backend",
+      "description": "User input and authentication tokens flow between frontend and backend"
+    },
+    {
+      "source": "Backend",
+      "destination": "Database",
+      "description": "Deployment configurations and secrets are stored/retrieved from the database"
+    },
+    {
+      "source": "Backend",
+      "destination": "Deployment Service",
+      "description": "Deployment instructions and credentials are sent to execution workers"
+    },
+    {
+      "source": "Deployment Service",
+      "destination": "Backend",
+      "description": "Status updates and logs are returned to the backend for user visibility"
+    }
+  ],
+  "security_considerations": [
+    "Ensure strict authentication/authorization between frontend and backend",
+    "Encrypt sensitive data in transit between components",
+    "Secure storage of secrets in the database with access controls",
+    "Validate and sanitize all user inputs to prevent injection attacks"
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Untrusted Frontend",
+      "description": "Frontend interface exposed to public internet with no direct access to backend systems",
+      "components": ["Frontend"]
+    },
+    {
+      "name": "Trusted Backend & Database",
+      "description": "Internal network with strict access controls for processing and storage components",
+      "components": ["Backend", "Database"]
+    }

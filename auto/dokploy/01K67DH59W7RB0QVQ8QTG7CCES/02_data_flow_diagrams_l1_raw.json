@@ -1,0 +1,180 @@
+{
+  "id": "01F3G4H5J6K7L8M9N2P3Q4R5",
+  "name": "dokploy Threat Model",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for dokploy deployment platform showing core data flows, trust boundaries, and data classification",
+  "created_at": "2025-09-28 05:43:47.385081",
+  "last_updated": "2025-09-28 05:43:47.385088",
+  "data_assets": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R1",
+      "name": "user_credentials",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R2",
+      "name": "deployment_config",
+      "description": null,
+      "classification": "confidential",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R3",
+      "name": "system_logs",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4R4",
+      "name": "docker_images",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S1",
+      "name": "user_authentication",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "untrusted",
+      "external_references": {}
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S2",
+      "name": "deployment_engine",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4S3",
+      "name": "config_manager",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "very_high_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4T1",
+      "name": "user_database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "end_to_end",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4T2",
+      "name": "deployment_logs",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4U1",
+      "name": "github",
+      "description": null,
+      "type": "system",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4U2",
+      "name": "docker_registry",
+      "description": null,
+      "type": "system",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4V1",
+      "name": "user_authentication_flow",
+      "description": null,
+      "source_id": "01F3G4H5J6K7L8M9N2P3Q4S1",
+      "destination_id": "01F3G4H5J6K7L8M9N2P3Q4S2",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4V2",
+      "name": "config_storage_flow",
+      "description": null,
+      "source_id": "01F3G4H5J6K7L8M9N2P3Q4S2",
+      "destination_id": "01F3G4H5J6K7L8M9N2P3Q4T1",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "end_to_end",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P3Q4V3",
+      "name": "deployment_execution_flow",
+      "description": null,
+      "source_id": "01F3G4H5J6K7L8M9N2P3Q4S3",
+      "destination_id": "docker_registry",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

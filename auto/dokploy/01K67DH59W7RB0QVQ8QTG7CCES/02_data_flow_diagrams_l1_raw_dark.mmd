@@ -1,0 +1,38 @@
+graph TB
+  node_01F3G4H5J6K7L8M9N2P3Q4U1["github | (system) | [UT]"]:::untrusted
+  node_01F3G4H5J6K7L8M9N2P3Q4U2["docker_registry | (system) | [UT]"]:::untrusted
+  node_01F3G4H5J6K7L8M9N2P3Q4S1["user_authentication | (frontend) | [UT]"]:::untrusted
+  node_01F3G4H5J6K7L8M9N2P3Q4S2["deployment_engine | (backend) | [HT]"]:::highTrust
+  node_01F3G4H5J6K7L8M9N2P3Q4S3["config_manager | (service) | [VHT]"]:::veryHighTrust
+  node_01F3G4H5J6K7L8M9N2P3Q4T1["user_database | (database)"]:::dataStore
+  node_01F3G4H5J6K7L8M9N2P3Q4T2["deployment_logs | (file)"]:::dataStore
+  node_01F3G4H5J6K7L8M9N2P3Q4R1["user_credentials | [PII]"]:::dataAsset,pii
+  node_01F3G4H5J6K7L8M9N2P3Q4R2["deployment_config | [CONF]"]:::dataAsset,confidential
+  node_01F3G4H5J6K7L8M9N2P3Q4R3["system_logs | [INT]"]:::dataAsset,internal
+  node_01F3G4H5J6K7L8M9N2P3Q4R4["docker_images | [INT]"]:::dataAsset,internal
+  docker_registry["Component docker_registry"]:::process,untrusted
+
+  node_01F3G4H5J6K7L8M9N2P3Q4S1 -->|user_authentication_flow| node_01F3G4H5J6K7L8M9N2P3Q4S2:::encryptedFlow
+  node_01F3G4H5J6K7L8M9N2P3Q4S2 -->|config_storage_flow| node_01F3G4H5J6K7L8M9N2P3Q4T1:::encryptedFlow
+  node_01F3G4H5J6K7L8M9N2P3Q4S3 -->|deployment_execution_flow| docker_registry:::encryptedFlow
+
+  classDef externalEntity fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef process fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef dataAsset fill:#A259FF,stroke:#c3a4ff,stroke-width:2px,color:#F5F7FA
+  classDef untrusted fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFD300,stroke:#FFD300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#36FF8F,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#36FF8F,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#FFD300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#FF4C4C,stroke-width:2px
+  classDef restricted fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#FF4C4C,stroke:#FF4C4C,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#36FF8F,stroke-width:2px
+  classDef unencryptedFlow stroke:#FF4C4C,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5
