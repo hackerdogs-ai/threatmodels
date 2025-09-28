@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Public_Trust_Boundary, "Public Trust Boundary") {
+        System(Frontend, "Frontend", "User-facing interface for inputting and viewing cost data.")
+    }
+    System_Boundary(tb_Internal_Trust_Boundary, "Internal Trust Boundary") {
+        System(Backend_API, "Backend API", "Handles business logic and communication between frontend, database, and cost service.")
+        SystemDb(Database, "Database", "Stores cost data, user inputs, and threat model results.")
+        System(Cost_Calculation_Service, "Cost Calculation Service", "Processes cost data and performs calculations for threat modeling.")
+    }
+
+    Rel(Frontend, Backend_API, "Uses")
+    Rel(Backend_API, Database, "Uses")
+    Rel(Backend_API, Cost_Calculation_Service, "Uses")
+    Rel(Cost_Calculation_Service, Database, "Uses")

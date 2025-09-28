@@ -1,0 +1,91 @@
+{
+  "id": "01K68JV4XPW6MCWY7WGH45HJB0",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "User-facing interface for inputting and viewing cost data.",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend API",
+      "description": "Handles business logic and communication between frontend, database, and cost service.",
+      "type": "backend"
+    },
+    {
+      "name": "Cost Calculation Service",
+      "description": "Processes cost data and performs calculations for threat modeling.",
+      "type": "service"
+    },
+    {
+      "name": "Database",
+      "description": "Stores cost data, user inputs, and threat model results.",
+      "type": "database"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "Backend API",
+      "description": "User inputs are sent to the backend for processing."
+    },
+    {
+      "source": "Backend API",
+      "destination": "Database",
+      "description": "Processed data is stored in the database for persistence."
+    },
+    {
+      "source": "Backend API",
+      "destination": "Cost Calculation Service",
+      "description": "Raw data is forwarded to the cost service for analysis."
+    },
+    {
+      "source": "Cost Calculation Service",
+      "destination": "Database",
+      "description": "Calculated results are saved to the database."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Public Trust Boundary",
+      "description": "Frontend interface accessible over the internet with minimal trust.",
+      "components": [
+        "Frontend"
+      ]
+    },
+    {
+      "name": "Internal Trust Boundary",
+      "description": "Secure network containing backend, database, and cost service with strict access controls.",
+      "components": [
+        "Backend API",
+        "Database",
+        "Cost Calculation Service"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 16:35:07.318501",
+  "updated_at": "2025-09-28 16:35:07.318505"
+}
