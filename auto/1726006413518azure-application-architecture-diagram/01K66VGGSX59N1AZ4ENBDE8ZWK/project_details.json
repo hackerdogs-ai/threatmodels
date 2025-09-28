@@ -1,0 +1,43 @@
+{
+  "project_name": "Azure Web Application Architecture",
+  "line_of_business": [
+    "E-commerce",
+    "Finance",
+    "Healthcare",
+    "Education"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth 2.0",
+    "OpenID Connect",
+    "SAML"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "Web Application Firewall",
+    "DDoS Protection",
+    "Data Encryption at Rest and in Transit",
+    "Access Control",
+    "Security Monitoring"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Web application interactions, data storage, identity management, network security",
+  "assumptions": [
+    "Users will access the application over the internet",
+    "Sensitive data will be stored in Azure SQL Database",
+    "All components will be maintained up-to-date with security patches"
+  ],
+  "constraints": [
+    "Limited to Azure services",
+    "Compliance with industry regulations",
+    "Resource budget constraints"
+  ]
+}

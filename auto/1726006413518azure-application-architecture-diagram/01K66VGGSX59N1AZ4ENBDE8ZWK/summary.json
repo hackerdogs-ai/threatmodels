@@ -1,0 +1,140 @@
+{
+  "run_id": "01K66VGGSX59N1AZ4ENBDE8ZWK",
+  "timestamp": "2025-09-27T17:28:26.134320",
+  "execution_time_secs": 0.25,
+  "total_cost": 0.0,
+  "total_steps": 13,
+  "successful_steps": 1,
+  "failed_steps": 12,
+  "overall_success": false,
+  "steps": {
+    "architecture_analysis": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.017755746841430664,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    },
+    "data_flow_diagrams": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.01125788688659668,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    },
+    "threats": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.010331869125366211,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    },
+    "attack_trees": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.011308908462524414,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    },
+    "dread_assessment": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.011451959609985352,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    },
+    "mitigations": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.009875297546386719,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    },
+    "test_cases": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.009078025817871094,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    },
+    "security_controls": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.011410951614379883,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    },
+    "compliance_assessment": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.009168148040771484,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    },
+    "risk_prioritization": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.011050939559936523,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    },
+    "dashboard": {
+      "success": true,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.0034799575805664062,
+      "error_message": null
+    },
+    "correlations": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.010834932327270508,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    },
+    "executive_summary": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.01015615463256836,
+      "error_message": "Failed to use gpt-oss:latest ulid:01K66VGGSX59N1AZ4ENBDE8ZWK via LiteLLM: litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=gpt-oss:latest\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+    }
+  },
+  "generated_files": {
+    "total_files": 3,
+    "files": [
+      "12_dashboard_l1_raw.json",
+      "12_dashboard_l1_raw.md",
+      "12_dashboard_l1_raw.html"
+    ],
+    "output_directory": "hackerdogs-ai/threatmodels/01K66VGGSX59N1AZ4ENBDE8ZWK",
+    "ulid": "01K66VGGSX59N1AZ4ENBDE8ZWK"
+  },
+  "output_directory": "hackerdogs-ai/threatmodels/01K66VGGSX59N1AZ4ENBDE8ZWK"
+}
