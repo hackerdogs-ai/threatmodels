@@ -1,0 +1,11 @@
+{
+    "test_cases": [
+        {
+            "id": "01K672PHASVBZB13NXGKWYYS8I",
+            "name": "Fastfile Tampering Detection",
+            "description": "Verify system detects unauthorized modifications to Fastfile configurations.",
+            "scenario": "Modify Fastfile content and check if tampering is flagged by version control or signature checks.",
+            "threat_ids": ["01K672PHASVBZB13NXGKWYYS8H"],
+            "status": "not_tested",
+            "test_result": "not tested"
+        }

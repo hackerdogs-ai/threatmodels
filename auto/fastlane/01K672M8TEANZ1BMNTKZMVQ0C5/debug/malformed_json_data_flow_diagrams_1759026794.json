@@ -1,0 +1,97 @@
+{
+    "id": "01F8K9B7X6QH4V5Y6Z7W8X9A",
+    "name": "fastlane Threat Model",
+    "description": "Data flow diagram for fastlane CLI tool and its integration with GitHub",
+    "data_assets": [
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9B",
+            "name": "user_credentials",
+            "classification": "pii"
+        },
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9C",
+            "name": "project_configuration",
+            "classification": "internal"
+        },
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9D",
+            "name": "build_artifacts",
+            "classification": "internal"
+        },
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9E",
+            "name": "operation_logs",
+            "classification": "internal"
+        }
+    ],
+    "processes": [
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9F",
+            "name": "cli_frontend",
+            "type": "frontend",
+            "trust_level": "untrusted"
+        },
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9G",
+            "name": "core_engine",
+            "type": "backend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9H",
+            "name": "github_integration",
+            "type": "api",
+            "trust_level": "low_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9I",
+            "name": "fastlane_database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9J",
+            "name": "temporary_cache",
+            "type": "cache",
+            "encryption": "transport"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9K",
+            "name": "github_api",
+            "type": "system"
+        },
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9L",
+            "name": "developer_user",
+            "type": "user"
+        }
+    ],
+    "data_flows": [
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9M",
+            "name": "user_authentication",
+            "source_id": "01F8K9B7X6QH4V5Y6Z7W8X9K",
+            "destination_id": "01F8K9B7X6QH4V5Y6Z7W8X9F",
+            "protocol": "https",
+            "encryption": "end_to_end"
+        },
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9N",
+            "name": "configuration_access",
+            "source_id": "01F8K9B7X6QH4V5Y6Z7W8X9F",
+            "destination_id": "01F8K9B7X6QH4V5Y6Z7W8X9G",
+            "protocol": "internal",
+            "encryption": "none"
+        },
+        {
+            "id": "01F8K9B7X6QH4V5Y6Z7W8X9O",
+            "name": "github_api_communication",
+            "source_id": "01F8K9B7X6QH4V5Y6Z7W8X9G",
+            "destination_id": "01F8K9B7X6QH4V5Y6Z7W8X9K",
+            "protocol": "https",
+            "encryption": "transport"
+        }

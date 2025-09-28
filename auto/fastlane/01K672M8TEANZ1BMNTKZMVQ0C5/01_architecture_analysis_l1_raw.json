@@ -1,0 +1,91 @@
+{
+  "id": "01K672MREM8JD2TT824T2RFXXR",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Fastlane CLI",
+      "description": "Command-line interface for user interaction and workflow initiation",
+      "type": "frontend"
+    },
+    {
+      "name": "Processing Engine",
+      "description": "Core backend component handling Fastfile parsing, lane execution, and task orchestration",
+      "type": "backend"
+    },
+    {
+      "name": "Configuration Store",
+      "description": "Secure storage for user-specific settings, credentials, and project configurations",
+      "type": "database"
+    },
+    {
+      "name": "External Integrations",
+      "description": "APIs for CI/CD systems (GitHub Actions, Jenkins), App Store Connect, and cloud services",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Fastlane CLI",
+      "destination": "Processing Engine",
+      "description": "User commands and configuration parameters passed to the backend for execution"
+    },
+    {
+      "source": "Processing Engine",
+      "destination": "Configuration Store",
+      "description": "Retrieves and stores sensitive credentials and project settings during lane execution"
+    },
+    {
+      "source": "Processing Engine",
+      "destination": "External Integrations",
+      "description": "Automated workflows triggering CI/CD pipelines and cloud service operations"
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Trusted CLI Environment",
+      "description": "User's local machine where CLI operates with elevated privileges",
+      "components": [
+        "Fastlane CLI"
+      ]
+    },
+    {
+      "name": "Trusted Backend Processing",
+      "description": "Internal system processing workflows with strict access controls",
+      "components": [
+        "Processing Engine"
+      ]
+    },
+    {
+      "name": "Untrusted External Services",
+      "description": "Third-party CI/CD and cloud services with potential attack vectors",
+      "components": [
+        "External Integrations"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 02:32:46.293008",
+  "updated_at": "2025-09-28 02:32:46.293019"
+}

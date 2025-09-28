@@ -1,0 +1,170 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K672PHASVBZB13NXGKWYYS8H",
+      "threat_title": "Tampering with Fastfile Configuration",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 9,
+        "exploitability": 6,
+        "affected_users": 9,
+        "discoverability": 2
+      },
+      "total_risk_score": 34,
+      "risk_level": "high",
+      "justification": "Tampering with Fastfile could lead to data corruption or unintended actions (high damage). Reproducibility is high as the Fastfile is accessible. Exploitability is medium due to access requirements. Affected users are high, and discoverability is low.",
+      "recommendations": [
+        "Implement strict input validation for Fastfile modifications",
+        "Enforce access controls for Fastfile access",
+        "Monitor configuration changes for anomalies"
+      ],
+      "assessment_date": "2025-09-28 02:36:23.446378",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K672PHASMGG5Z08G18WB04QV",
+      "threat_title": "Information Disclosure via Configuration Store",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 6,
+        "exploitability": 6,
+        "affected_users": 9,
+        "discoverability": 2
+      },
+      "total_risk_score": 31,
+      "risk_level": "high",
+      "justification": "Compromised secure storage exposes credentials (high damage). Reproducibility is medium due to access requirements. Exploitability is medium. Affected users are high, and discoverability is low.",
+      "recommendations": [
+        "Encrypt sensitive data at rest",
+        "Implement access controls for configuration store",
+        "Regularly audit storage access logs"
+      ],
+      "assessment_date": "2025-09-28 02:36:23.447590",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K672PHASWE7WA6KSFMWC4ZGB",
+      "threat_title": "Denial of Service via Resource Exhaustion",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 9,
+        "exploitability": 6,
+        "affected_users": 9,
+        "discoverability": 2
+      },
+      "total_risk_score": 34,
+      "risk_level": "high",
+      "justification": "Resource exhaustion could disrupt service (high damage). Reproducibility is high via excessive requests. Exploitability is medium. Affected users are high, and discoverability is low.",
+      "recommendations": [
+        "Implement rate limiting for lane execution",
+        "Monitor system resource usage",
+        "Set resource quotas for user workflows"
+      ],
+      "assessment_date": "2025-09-28 02:36:23.447928",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K672PHATF67QRE4HRG2PXK1B",
+      "threat_title": "Elevation of Privilege through CLI Misconfiguration",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 6,
+        "exploitability": 6,
+        "affected_users": 9,
+        "discoverability": 2
+      },
+      "total_risk_score": 31,
+      "risk_level": "high",
+      "justification": "Misconfigured CLI could allow privilege escalation (high damage). Reproducibility is medium due to configuration requirements. Exploitability is medium. Affected users are high, and discoverability is low.",
+      "recommendations": [
+        "Enforce strict privilege separation in CLI",
+        "Validate user permissions during CLI operations",
+        "Audit CLI access logs"
+      ],
+      "assessment_date": "2025-09-28 02:36:23.448140",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K672PHATP2QAM53PFDR6HSNC",
+      "threat_title": "Command Injection via Unvalidated Inputs",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 9,
+        "exploitability": 8,
+        "affected_users": 9,
+        "discoverability": 2
+      },
+      "total_risk_score": 36,
+      "risk_level": "high",
+      "justification": "Unvalidated inputs could enable arbitrary command execution (high damage). Reproducibility is high, and exploitability is high due to lack of validation. Affected users are high, and discoverability is low.",
+      "recommendations": [
+        "Implement strict input validation and sanitization",
+        "Use least-privilege execution for tasks",
+        "Log and monitor all command executions"
+      ],
+      "assessment_date": "2025-09-28 02:36:23.449014",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "All identified threats pose high risk due to potential for data corruption, credential exposure, service disruption, privilege escalation, and command injection. Mitigations include input validation, access controls, encryption, and resource monitoring."
+}

@@ -1,0 +1,167 @@
+{
+  "risk_prioritization": {
+    "id": "01K672PHASVBZB13NXGKWYYS8N",
+    "prioritization_method": "Impact-likelihood matrix with business context",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K672PHATP2QAM53PFDR6HSNC",
+        "threat_title": "Command Injection via Unvalidated Inputs",
+        "risk_score": 8.5,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "low",
+        "timeline": "short_term",
+        "dependencies": [
+          "input validation framework"
+        ],
+        "recommended_actions": [
+          "Implement strict input validation",
+          "Use parameterized commands"
+        ]
+      },
+      {
+        "risk_id": "01K672PHATF67QRE4HRG2PXK1B",
+        "threat_title": "Elevation of Privilege through CLI Misconfiguration",
+        "risk_score": 8.0,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "role-based access controls"
+        ],
+        "recommended_actions": [
+          "Enforce least-privilege access",
+          "Audit CLI permissions"
+        ]
+      },
+      {
+        "risk_id": "01K672PHASMGG5Z08G18WB04QV",
+        "threat_title": "Information Disclosure via Configuration Store",
+        "risk_score": 7.5,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urg, urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "secure storage integration"
+        ],
+        "recommended_actions": [
+          "Encrypt sensitive data",
+          "Implement access controls"
+        ]
+      },
+      {
+        "risk_id": "01K672PHASWE7WA6KSFMWC4ZGB",
+        "threat_title": "Denial of Service via Resource Exhaustion",
+        "risk_score": 7.0,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "medium_term",
+        "dependencies": [
+          "rate limiting tools"
+        ],
+        "recommended_actions": [
+          "Implement resource quotas",
+          "Monitor system load"
+        ]
+      },
+      {
+        "risk_id": "01K672PHASVBZB13NXGKWYYS8H",
+        "threat_title": "Tampering with Fastfile Configuration",
+        "risk_score": 6.5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "low",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [
+          "version control integration"
+        ],
+        "recommended_actions": [
+          "Enable digital signatures",
+          "Use version-controlled configs"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K672PHATP2QAM53PFDR6HSNC",
+        "01K672PHATF67QRE4HRG2PXK1B"
+      ],
+      "high_priority_risks": [
+        "01K672PHASMGG5Z08G18WB04QV",
+        "01K672PHASWE7WA6KSFMWC4ZGB"
+      ],
+      "medium_priority_risks": [
+        "01K672PHASVBZB13NXGKWYYS8H"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K672PHATP2QAM53PFDR6HSNC": 8.5,
+      "01K672PHATF67QRE4HRG2PXK1B": 8.0,
+      "01K672PHASMGG5Z08G18WB04QV": 7.5,
+      "01K672PHASWE7WA6KSFMWC4ZGB": 7.0,
+      "01K672PHASVBZB13NXGKWYYS8H": 6.5
+    },
+    "risk_rankings": [
+      [
+        "01K672PHATP2QAM53PFDR6HSNC",
+        8.5
+      ],
+      [
+        "01K672PHATF67QRE4HRG2PXK1B",
+        8.0
+      ],
+      [
+        "01K672PHASMGG5Z08G18WB04QV",
+        7.5
+      ],
+      [
+        "01K672PHASWE7WA6KSFMWC4ZGB",
+        7.0
+      ],
+      [
+        "01K672PHASVBZB13NXGKWYYS8H",
+        6.5
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "High (potential for data breaches, regulatory fines)",
+      "operational_impact": "High (service disruption, system compromise)",
+      "reputational_impact": "High (loss of trust, brand damage)"
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-28 02:42:30.872462",
+    "updated_at": "2025-09-28 02:42:30.872469"
+  }
+}

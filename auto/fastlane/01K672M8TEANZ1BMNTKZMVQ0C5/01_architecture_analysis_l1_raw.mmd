@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Trusted_CLI_Environment, "Trusted CLI Environment") {
+        System(Fastlane_CLI, "Fastlane CLI", "Command-line interface for user interaction and workflow initiation")
+    }
+    System_Boundary(tb_Trusted_Backend_Processing, "Trusted Backend Processing") {
+        System(Processing_Engine, "Processing Engine", "Core backend component handling Fastfile parsing, lane execution, and task orchestration")
+    }
+    System_Boundary(tb_Untrusted_External_Services, "Untrusted External Services") {
+        System(External_Integrations, "External Integrations", "APIs for CI/CD systems (GitHub Actions, Jenkins), App Store Connect, and cloud services")
+    }
+    SystemDb(Configuration_Store, "Configuration Store", "Secure storage for user-specific settings, credentials, and project configurations")
+
+    Rel(Fastlane_CLI, Processing_Engine, "Uses")
+    Rel(Processing_Engine, Configuration_Store, "Uses")
+    Rel(Processing_Engine, External_Integrations, "Uses")
