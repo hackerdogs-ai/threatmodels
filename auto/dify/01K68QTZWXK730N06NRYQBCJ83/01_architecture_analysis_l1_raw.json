@@ -1,0 +1,79 @@
+{
+  "id": "01K68QVCAFRA3F8DA140FQFAVQ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "React single\u2011page application that interacts with the API server via HTTPS.",
+      "type": "frontend"
+    },
+    {
+      "name": "API Server",
+      "description": "Go service exposing REST/GraphQL endpoints for user management, app configuration, and task orchestration.",
+      "type": "backend"
+    },
+    {
+      "name": "Worker",
+      "description": "Go worker that consumes inference jobs from a queue, calls external LLM providers, and writes results to the database.",
+      "type": "service"
+    },
+    {
+      "name": "Database",
+      "description": "PostgreSQL instance storing user data, app definitions, and inference results.",
+      "type": "database"
+    },
+    {
+      "name": "Cache",
+      "description": "Redis instance used for session storage, rate limiting, and lightweight caching.",
+      "type": "cache"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "API Server",
+      "description": "HTTPS requests for authentication, app CRUD, and job submission."
+    },
+    {
+      "source": "API Server",
+      "destination": "Database",
+      "description": "SQL queries for persisting user and app data."
+    },
+    {
+      "source": "API Server",
+      "destination": "Cache",
+      "description": "Session tokens, rate\u2011limit counters, and short\u2011lived data."
+    },
+    {
+      "source": "API Server",
+      "destination": "Worker",
+      "description": "Job payloads sent via Redis queue for asynchronous inference."
+    }
+  ],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 18:02:37.779306",
+  "updated_at": "2025-09-28 18:02:37.779315"
+}

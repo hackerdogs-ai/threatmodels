@@ -1,0 +1,50 @@
+{
+  "threats": [
+    {
+      "title": "Session Hijacking via Stolen JWT",
+      "description": "An attacker could intercept or steal a valid JSON Web Token (JWT) or session cookie and impersonate a legitimate user, gaining access to the API server.",
+      "stride_category": "Spoofing",
+      "impact": "high",
+      "likelihood": "medium",
+      "risk_score": 6
+    },
+    {
+      "title": "Tampering with Job Payloads in Redis Queue",
+      "description": "Malicious actors could modify or inject job payloads in the Redis queue before the worker processes them, potentially causing the worker to send unintended requests to external LLM providers.",
+      "stride_category": "Tampering",
+      "impact": "high",
+      "likelihood": "low",
+      "risk_score": 3
+    },
+    {
+      "title": "Lack of Audit Logging for User Actions",
+      "description": "Without comprehensive audit logs, users can repudiate actions they performed, making it difficult to trace malicious or accidental changes.",
+      "stride_category": "Repudiation",
+      "impact": "medium",
+      "likelihood": "high",
+      "risk_score": 6
+    },
+    {
+      "title": "Unencrypted Sensitive Data in PostgreSQL",
+      "description": "Storing API keys, user credentials, or LLM responses in plain text could lead to data exposure if the database is compromised.",
+      "stride_category": "Information Disclosure",
+      "impact": "high",
+      "likelihood": "medium",
+      "risk_score": 6
+    },
+    {
+      "title": "Denial of Service via Queue Overload",
+      "description": "An attacker could flood the Redis queue with excessive job requests, exhausting worker resources and causing service disruption.",
+      "stride_category": "Denial of Service",
+      "impact": "high",
+      "likelihood": "medium",
+      "risk_score": 6
+    },
+    {
+      "title": "Privilege Escalation through Misconfigured Roles",
+      "description": "If role-based access control is incorrectly implemented, a normal user might gain access to administrative endpoints or sensitive data.",
+      "stride_category": "Elevation of Privilege",
+      "impact": "high",
+      "likelihood": "low",
+      "risk_score": 3
+    }

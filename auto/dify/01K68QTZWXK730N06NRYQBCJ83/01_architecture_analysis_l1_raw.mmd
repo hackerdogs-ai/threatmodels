@@ -1,0 +1,12 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(Frontend, "Frontend", "React single‑page application that interacts with the API server via HTTPS.")
+    System(API_Server, "API Server", "Go service exposing REST/GraphQL endpoints for user management, app configuration, and task orchestration.")
+    System(Worker, "Worker", "Go worker that consumes inference jobs from a queue, calls external LLM providers, and writes results to the database.")
+    SystemDb(Database, "Database", "PostgreSQL instance storing user data, app definitions, and inference results.")
+    System(Cache, "Cache", "Redis instance used for session storage, rate limiting, and lightweight caching.")
+
+    Rel(Frontend, API_Server, "Uses")
+    Rel(API_Server, Database, "Uses")
+    Rel(API_Server, Cache, "Uses")
+    Rel(API_Server, Worker, "Uses")
