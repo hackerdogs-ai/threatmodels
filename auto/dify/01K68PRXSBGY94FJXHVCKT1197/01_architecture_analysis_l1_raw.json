@@ -1,0 +1,89 @@
+{
+  "id": "01K68PSA3Y6EST7WTRFA6596XN",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "React SPA that handles user interactions, authentication UI, and communicates with the backend via REST/GraphQL.",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend API",
+      "description": "Go/Node.js service that implements business logic, authentication, request routing, and orchestrates calls to the database, vector store, and LLM APIs.",
+      "type": "backend"
+    },
+    {
+      "name": "PostgreSQL Database",
+      "description": "Relational database storing user data, application metadata, and structured logs.",
+      "type": "database"
+    },
+    {
+      "name": "Vector Store (Weaviate)",
+      "description": "Vector database for storing embeddings and performing similarity searches.",
+      "type": "service"
+    },
+    {
+      "name": "LLM Service",
+      "description": "External large language model APIs (OpenAI, Anthropic, etc.) used for generating responses and embeddings.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "User",
+      "destination": "Frontend",
+      "description": "User submits input via browser; data sent over HTTPS."
+    },
+    {
+      "source": "Frontend",
+      "destination": "Backend API",
+      "description": "API requests for authentication, data retrieval, and LLM invocation."
+    },
+    {
+      "source": "Backend API",
+      "destination": "PostgreSQL Database",
+      "description": "CRUD operations for user profiles, app configs, and audit logs."
+    },
+    {
+      "source": "Backend API",
+      "destination": "Vector Store",
+      "description": "Store and query embeddings for similarity search."
+    },
+    {
+      "source": "Backend API",
+      "destination": "LLM Service",
+      "description": "Send prompts and receive generated text or embeddings."
+    },
+    {
+      "source": "LLM Service",
+      "destination": "Backend API",
+      "description": "Return generated content to be processed or stored."
+    }
+  ],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 17:44:01.406744",
+  "updated_at": "2025-09-28 17:44:01.406750"
+}

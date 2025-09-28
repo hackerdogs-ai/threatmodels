@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(Frontend, "Frontend", "React SPA that handles user interactions, authentication UI, and communicates with the backend via REST/GraphQL.")
+    System(Backend_API, "Backend API", "Go/Node.js service that implements business logic, authentication, request routing, and orchestrates calls to the database, vector store, and LLM A...")
+    SystemDb(PostgreSQL_Database, "PostgreSQL Database", "Relational database storing user data, application metadata, and structured logs.")
+    System(Vector_Store__Weaviate_, "Vector Store (Weaviate)", "Vector database for storing embeddings and performing similarity searches.")
+    System(LLM_Service, "LLM Service", "External large language model APIs (OpenAI, Anthropic, etc.) used for generating responses and embeddings.")
+    System(User, "User", "Auto-created component: User")
+    System(Vector_Store, "Vector Store", "Auto-created component: Vector Store")
+
+    Rel(User, Frontend, "Uses")
+    Rel(Frontend, Backend_API, "Uses")
+    Rel(Backend_API, PostgreSQL_Database, "Uses")
+    Rel(Backend_API, Vector_Store, "Uses")
+    Rel(Backend_API, LLM_Service, "Uses")
+    Rel(LLM_Service, Backend_API, "Uses")
