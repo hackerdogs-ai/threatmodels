@@ -1,0 +1,91 @@
+{
+  "id": "01K68Q52J82B86G5973984KGH7",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "React Frontend",
+      "description": "The user interface built with React, responsible for user interaction, data presentation, and form submission.",
+      "type": "frontend"
+    },
+    {
+      "name": "FastAPI Backend",
+      "description": "The API server built with FastAPI, handling user requests, interacting with the database, and performing threat modeling logic.",
+      "type": "backend"
+    },
+    {
+      "name": "PostgreSQL Database",
+      "description": "Stores threat models, associated data, user information, and potentially other application data.",
+      "type": "database"
+    },
+    {
+      "name": "Repello AI Engine",
+      "description": "The core threat intelligence engine, likely integrated to provide contextual threat data and recommendations.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "React Frontend",
+      "destination": "FastAPI Backend",
+      "description": "User interactions (form submissions, API calls) are sent to the backend for processing."
+    },
+    {
+      "source": "FastAPI Backend",
+      "destination": "PostgreSQL Database",
+      "description": "Threat model data is persisted and retrieved from the database."
+    },
+    {
+      "source": "FastAPI Backend",
+      "destination": "Repello AI Engine",
+      "description": "The backend requests threat intelligence data from the Repello AI Engine to enrich threat models."
+    },
+    {
+      "source": "Repello AI Engine",
+      "destination": "FastAPI Backend",
+      "description": "The AI engine returns threat intelligence data to the backend."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Interface Trust Boundary",
+      "description": "The React frontend represents a potential trust boundary. Untrusted user input directly interacts with the application, requiring strict validation and sanitization.",
+      "components": [
+        "React Frontend",
+        "FastAPI Backend"
+      ]
+    },
+    {
+      "name": "API Trust Boundary",
+      "description": "The API endpoints represent a trust boundary, requiring authentication, authorization, and rate limiting to prevent abuse and unauthorized access.",
+      "components": [
+        "FastAPI Backend",
+        "Repello AI Engine"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 17:50:26.888595",
+  "updated_at": "2025-09-28 17:50:26.888599"
+}
