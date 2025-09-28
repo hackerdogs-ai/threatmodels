@@ -1,0 +1,41 @@
+{
+  "project_name": "Cloud-Based Web Application on Azure",
+  "line_of_business": [
+    "IT Services",
+    "E-Commerce",
+    "Enterprise Applications"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth",
+    "SAML",
+    "OpenID Connect"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "DDoS Protection",
+    "Data Encryption",
+    "Identity Management",
+    "Secure Storage"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Architecture encompasses all integrated Azure services and user interactions",
+  "assumptions": [
+    "Users will utilize secure connections",
+    "All Azure services are configured according to best practices",
+    "Third-party integrations are also following security standards"
+  ],
+  "constraints": [
+    "Dependency on Azure services",
+    "Latency considerations with remote access",
+    "Compliance with regional data protection laws"
+  ]
+}
