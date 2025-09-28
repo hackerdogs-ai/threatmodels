@@ -1,1 +1,0 @@
-Architecture file: 3-tier architecture diagram.png
