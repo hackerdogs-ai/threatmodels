@@ -1,0 +1,122 @@
+{
+  "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6D7",
+  "name": "Chef Threat Model Data Flow",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for Chef application showing core data movement between components",
+  "created_at": "2025-09-28 06:51:14.797117",
+  "last_updated": "2025-09-28 06:51:14.797121",
+  "data_assets": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6D7",
+      "name": "node_data",
+      "description": null,
+      "classification": "confidential",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6D8",
+      "name": "cookbook",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6D9",
+      "name": "credentials",
+      "description": null,
+      "classification": "restricted",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E0",
+      "name": "user_data",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E1",
+      "name": "chef_server",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "very_high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E2",
+      "name": "chef_client",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "untrusted",
+      "external_references": {}
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E3",
+      "name": "chef_dashboard",
+      "description": null,
+      "type": "api",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E4",
+      "name": "chef_database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E5",
+      "name": "cookbook_repository",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "none",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E6",
+      "name": "user",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E7",
+      "name": "external_system",
+      "description": null,
+      "type": "system",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [],
+  "defined_trust_boundaries": []
+}

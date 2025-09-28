@@ -1,0 +1,71 @@
+{
+    "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6D7",
+    "name": "Chef Threat Model Data Flow",
+    "description": "Basic data flow diagram for Chef application showing core data movement between components",
+    "data_assets": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6D7",
+            "name": "node_data",
+            "classification": "confidential"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6D8",
+            "name": "cookbook",
+            "classification": "internal"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6D9",
+            "name": "credentials",
+            "classification": "restricted"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E0",
+            "name": "user_data",
+            "classification": "pii"
+        }
+    ],
+    "processes": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E1",
+            "name": "chef_server",
+            "type": "backend",
+            "trust_level": "very_high_trust"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E2",
+            "name": "chef_client",
+            "type": "frontend",
+            "trust_level": "untrusted"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E3",
+            "name": "chef_dashboard",
+            "type": "api",
+            "trust_level": "high_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E4",
+            "name": "chef_database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E5",
+            "name": "cookbook_repository",
+            "type": "file",
+            "encryption": "none"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E6",
+            "name": "user",
+            "type": "user"
+        },
+        {
+            "id": "01F3G4H5J6K7L8M9N2P5Q3R4S6T7U8V9W0X1Y2Z3A4B5C6E7",
+            "name": "external_system",
+            "type": "system"
+        }

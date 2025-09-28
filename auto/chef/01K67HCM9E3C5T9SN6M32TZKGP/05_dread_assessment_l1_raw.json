@@ -1,0 +1,170 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K67HEN7SVWGWQZBEVPTHR7TY",
+      "threat_title": "Unauthorized Client Spoofing",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 4,
+        "discoverability": 2
+      },
+      "total_risk_score": 22,
+      "risk_level": "medium",
+      "justification": "Spoofing clients could disrupt configurations, but requires network access and authentication bypass.",
+      "recommendations": [
+        "Enforce TLS for all client-server communication",
+        "Implement certificate-based authentication for clients",
+        "Monitor for anomalous client behavior"
+      ],
+      "assessment_date": "2025-09-28 06:53:04.607700",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67HEN7SGS27Z4RYT7MNJ24M",
+      "threat_title": "Database Data Exposure",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 9,
+        "discoverability": 1
+      },
+      "total_risk_score": 28,
+      "risk_level": "high",
+      "justification": "Compromised database exposes credentials and node data across the entire infrastructure.",
+      "recommendations": [
+        "Encrypt sensitive data at rest",
+        "Implement role-based access controls",
+        "Enable audit logging for database access"
+      ],
+      "assessment_date": "2025-09-28 06:53:04.608504",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67HEN7T8BNEC157MC4JNFX0",
+      "threat_title": "Malicious Cookbook Execution",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 7,
+        "exploitability": 5,
+        "affected_users": 8,
+        "discoverability": 4
+      },
+      "total_risk_score": 33,
+      "risk_level": "high",
+      "justification": "Tampered cookbooks could execute arbitrary code across all managed nodes.",
+      "recommendations": [
+        "Validate cookbook inputs rigorously",
+        "Implement digital signing for cookbooks",
+        "Use least-privilege execution contexts"
+      ],
+      "assessment_date": "2025-09-28 06:53:04.608883",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67HEN7TK133NVCDA1C6NWAR",
+      "threat_title": "Denial of Service via Resource Exhaustion",
+      "dread_scores": {
+        "damage": 7,
+        "reproducibility": 8,
+        "exploitability": 5,
+        "affected_users": 9,
+        "discoverability": 3
+      },
+      "total_risk_score": 32,
+      "risk_level": "high",
+      "justification": "Overwhelming API requests could disrupt configuration management for all nodes.",
+      "recommendations": [
+        "Implement rate limiting for API requests",
+        "Monitor for unusual traffic patterns",
+        "Use auto-scaling for server resources"
+      ],
+      "assessment_date": "2025-09-28 06:53:04.609492",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K67HEN7TQANVPR08E8GPG64F",
+      "threat_title": "Privilege Escalation via Compromised Client",
+      "dread_scores": {
+        "damage": 7,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 8,
+        "discoverability": 2
+      },
+      "total_risk_score": 27,
+      "risk_level": "high",
+      "justification": "Compromised clients could grant attackers access to server resources.",
+      "recommendations": [
+        "Enforce strict client authentication",
+        "Regularly update client software",
+        "Implement network segmentation"
+      ],
+      "assessment_date": "2025-09-28 06:53:04.609696",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "All threats pose high risk to the organization-wide infrastructure. Prioritize database security, cookbook validation, and DDoS protection. Implement TLS, access controls, and continuous monitoring to mitigate these risks."
+}

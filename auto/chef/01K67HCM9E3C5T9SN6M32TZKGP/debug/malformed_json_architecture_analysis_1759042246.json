@@ -1,0 +1,58 @@
+{
+  "architecture_overview": "Chef's architecture centers on a server-client model with a centralized configuration management system, utilizing a database and messaging layer for coordination.",
+  "components": [
+    {
+      "name": "Chef Server",
+      "description": "Central hub managing configuration data, user authentication, and policy enforcement.",
+      "type": "backend"
+    },
+    {
+      "name": "Chef Client",
+      "description": "Agent running on nodes to apply configurations and report status back to the server.",
+      "type": "frontend"
+    },
+    {
+      "name": "Chef Database",
+      "description": "Stores node data, cookbooks, policies, and user credentials securely.",
+      "type": "database"
+    },
+    {
+      "name": "ChefDK",
+      "description": "Development kit providing tools for building and testing cookbooks.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Chef Client",
+      "destination": "Chef Server",
+      "description": "Configuration data and node status updates sent from clients to the server"
+    },
+    {
+      "source": "Chef Server",
+      "destination": "Chef Database",
+      "description": "Persistent storage of node data, cookbooks, and authentication credentials"
+    },
+    {
+      "source": "ChefDK",
+      "destination": "Chef Server",
+      "description": "Cookbook uploads and validation via the server's API"
+    }
+  ],
+  "security_considerations": [
+    "Secure communication between clients and server using TLS",
+    "Data encryption at rest for sensitive credentials in the database",
+    "Access control for database tables containing user credentials",
+    "Preventing unauthorized cookbook execution via validation mechanisms"
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Internal Network Boundary",
+      "description": "Trust between Chef Server and Clients within a secure internal network",
+      "components": ["Chef Server", "Chef Client"]
+    },
+    {
+      "name": "Database Boundary",
+      "description": "Isolated trust boundary for database access with strict authentication",
+      "components": ["Chef Database"]
+    }

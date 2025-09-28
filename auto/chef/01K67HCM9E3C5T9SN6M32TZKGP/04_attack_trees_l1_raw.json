@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "id": "01K67HEN7T8BNEC157MC4JNFX0",
+    "title": "Unauthorized Client Spoofing Attack Tree",
+    "description": "Attack paths for compromising Chef Client authentication to execute malicious configurations.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-28 07:00:00+00:00",
+    "last_updated": "2025-09-28 06:52:23.314384",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K67HEN7T8BNEC157MC4JNFX0",
+    "description": "Unauthorized Client Spoofing Attack Tree",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 8.0,
+      "impact": 9.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K67HEN7T8BNEC157MC4JNFX1",
+        "description": "Intercept and forge Chef Client communication to the server",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 7.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement TLS encryption for all client-server communications",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          },
+          {
+            "description": "Use certificate-based authentication for client-server interactions",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K67HEN7T8BNEC157MC4JNFX2",
+        "description": "Exploit weak client authentication to gain server access",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 10.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Enforce strong password policies and multi-factor authentication",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          },
+          {
+            "description": "Regularly rotate client authentication credentials",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.6
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Deploy network segmentation to isolate client-server communication",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.7
+      },
+      {
+        "description": "Implement real-time monitoring for anomalous client behavior",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.6
+      }
+    ],
+    "references": []
+  }
+}

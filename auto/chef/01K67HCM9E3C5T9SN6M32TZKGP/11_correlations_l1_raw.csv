@@ -1,0 +1,18 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Unauthorized Client Spoofing in Chef resembles authentication spoofing vulnerabilities in Kubernetes and Docker systems.,,,,2025-09-28T06:58:25.613143
+CORR_002,,,,Database encryption and access controls overlap with PCI-DSS requirements for financial systems.,,,,2025-09-28T06:58:25.613153
+CORR_003,,,,Malicious Cookbook Execution shares attack patterns with supply chain attacks in CI/CD pipelines.,,,,2025-09-28T06:58:25.613160
+CORR_004,,,,Denial of Service risks align with ISO 27001 requirements for DDoS protection.,,,,2025-09-28T06:58:25.613165
+CORR_005,,,,Privilege Escalation vulnerabilities mirror issues in cloud provider IAM systems.,,,,2025-09-28T06:58:25.613171
+CORR_006,,,,Input validation requirements overlap with OWASP Top 10 injection vulnerabilities.,,,,2025-09-28T06:58:25.613176
+CORR_007,,,,Resource exhaustion attacks share patterns with API abuse in SaaS platforms.,,,,2025-09-28T06:58:25.613181
+CORR_008,,,,Data exposure risks align with GDPR requirements for data protection by design.,,,,2025-09-28T06:58:25.613187
+CORR_009,,,,Spoofing risks mirror vulnerabilities in IoT device authentication protocols.,,,,2025-09-28T06:58:25.613192
+CORR_010,,,,Least privilege principles overlap with Zero Trust Architecture requirements.,,,,2025-09-28T06:58:25.613197
+CORR_011,,,,Configuration tampering shares patterns with misconfiguration risks in cloud environments.,,,,2025-09-28T06:58:25.613203
+CORR_012,,,,Server-side request forgery (SSRF) risks align with OWASP ZAP compliance checks.,,,,2025-09-28T06:58:25.613209
+CORR_013,,,,Database exposure risks mirror vulnerabilities in database-as-a-service (DBaaS) platforms.,,,,2025-09-28T06:58:25.613214
+CORR_014,,,,Rate limiting requirements overlap with DDoS mitigation standards.,,,,2025-09-28T06:58:25.613219
+CORR_015,,,,Privilege escalation risks share patterns with vertical privilege escalation in multi-tenant systems.,,,,2025-09-28T06:58:25.613225
+CORR_016,,,,Configuration management risks align with NIST SP 800-123 requirements.,,,,2025-09-28T06:58:25.613230
+CORR_017,,,,Spoofing risks mirror vulnerabilities in API gateways and microservices architectures.,,,,2025-09-28T06:58:25.613236
