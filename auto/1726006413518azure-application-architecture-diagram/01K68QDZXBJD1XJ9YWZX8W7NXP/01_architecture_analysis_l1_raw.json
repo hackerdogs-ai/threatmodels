@@ -1,0 +1,101 @@
+{
+  "id": "01K68QEAM21A9MTM431EC2N0YS",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "A web application built using React, responsible for user interaction and presenting data. It consumes APIs from the backend services.",
+      "type": "frontend"
+    },
+    {
+      "name": "Authentication Service",
+      "description": "Manages user authentication and authorization using Azure Active Directory.  Handles user login, token issuance, and role-based access control.",
+      "type": "service"
+    },
+    {
+      "name": "API Gateway",
+      "description": "Acts as a single entry point for all API requests, routing them to the appropriate backend services. Provides rate limiting and request transformation.",
+      "type": "service"
+    },
+    {
+      "name": "Business Logic Service",
+      "description": "Contains the core application logic and interacts with the Data Service to perform operations.",
+      "type": "service"
+    },
+    {
+      "name": "Data Service",
+      "description": "Provides access to the data stored in the Azure SQL Database.  Handles data retrieval and persistence.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "API Gateway",
+      "description": "User requests are sent from the frontend to the API Gateway for processing."
+    },
+    {
+      "source": "API Gateway",
+      "destination": "Business Logic Service",
+      "description": "The API Gateway routes requests to the Business Logic Service."
+    },
+    {
+      "source": "Business Logic Service",
+      "destination": "Data Service",
+      "description": "The Business Logic Service retrieves and updates data via the Data Service."
+    },
+    {
+      "source": "Authentication Service",
+      "destination": "API Gateway",
+      "description": "The API Gateway utilizes the Authentication Service to verify user credentials before routing requests."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Frontend Trust Boundary",
+      "description": "The frontend is a publicly accessible component.  Strict input validation and output encoding are required to prevent XSS attacks.",
+      "components": [
+        "Frontend"
+      ]
+    },
+    {
+      "name": "API Gateway Trust Boundary",
+      "description": "The API Gateway acts as a security layer, controlling access to backend services.  It should be configured with appropriate security policies.",
+      "components": [
+        "API Gateway"
+      ]
+    },
+    {
+      "name": "Authentication Service Trust Boundary",
+      "description": "The Authentication Service manages user credentials and should be isolated to prevent compromise.",
+      "components": [
+        "Authentication Service"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 17:55:30.050443",
+  "updated_at": "2025-09-28 17:55:30.050448"
+}
