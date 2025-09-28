@@ -1,0 +1,35 @@
+{
+  "architecture_overview": "Dify's architecture is a microservices-based system with a frontend interface, backend services, and integrated AI model processing. It includes a database for persistent storage and API gateways for request routing.",
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "Web-based user interface for interacting with AI application builders",
+      "type": "frontend"
+    },
+    {
+      "name": "API Gateway",
+      "description": "Central entry point for routing and authenticating requests to backend services",
+      "type": "service"
+    },
+    {
+      "name": "Backend Services",
+      "description": "Core business logic and workflow management for application lifecycle operations",
+      "type": "backend"
+    },
+    {
+      "name": "Model Service",
+      "description": "Container for AI/ML models and inference processing capabilities",
+      "type": "service"
+    },
+    {
+      "name": "Database",
+      "description": "Persistent storage for user data, application configurations, and metadata",
+      "type": "database"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "API Gateway",
+      "description": "User interactions and request payloads are sent to the API gateway for authentication"
+    }
