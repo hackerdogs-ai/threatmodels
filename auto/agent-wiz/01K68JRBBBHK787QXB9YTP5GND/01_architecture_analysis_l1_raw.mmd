@@ -1,0 +1,10 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(Frontend, "Frontend", "User interface for threat modeling tasks and visualization")
+    System(Backend_API, "Backend API", "Handles business logic, authentication, and request routing")
+    SystemDb(Database, "Database", "Stores user data, threat models, and analysis results")
+    System(AI_Analysis_Service, "AI Analysis Service", "Provides threat intelligence and risk assessment capabilities")
+
+    Rel(Frontend, Backend_API, "Uses")
+    Rel(Backend_API, Database, "Uses")
+    Rel(AI_Analysis_Service, Backend_API, "Uses")

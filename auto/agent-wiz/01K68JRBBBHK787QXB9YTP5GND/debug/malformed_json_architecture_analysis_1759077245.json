@@ -1,0 +1,40 @@
+{
+  "architecture_overview": "Agent-Wiz is a threat modeling tool with a frontend interface, backend API, database, and AI-driven analysis service. Components interact via secure APIs and data pipelines to enable threat modeling workflows.",
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "User interface for threat modeling tasks and visualization",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend API",
+      "description": "Handles business logic, authentication, and request routing",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "Stores user data, threat models, and analysis results",
+      "type": "database"
+    },
+    {
+      "name": "AI Analysis Service",
+      "description": "Provides threat intelligence and risk assessment capabilities",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "Backend API",
+      "description": "User input and UI state synchronization"
+    },
+    {
+      "source": "Backend API",
+      "destination": "Database",
+      "description": "Persistent storage of threat models and user data"
+    },
+    {
+      "source": "AI Analysis Service",
+      "destination": "Backend API",
+      "description": "Threat intelligence results and risk scoring"
+    }

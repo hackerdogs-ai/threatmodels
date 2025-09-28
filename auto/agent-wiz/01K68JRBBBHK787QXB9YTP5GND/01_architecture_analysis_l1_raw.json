@@ -1,0 +1,69 @@
+{
+  "id": "01K68JS84HRPVTYZF3TXH4EQE4",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "User interface for threat modeling tasks and visualization",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend API",
+      "description": "Handles business logic, authentication, and request routing",
+      "type": "backend"
+    },
+    {
+      "name": "Database",
+      "description": "Stores user data, threat models, and analysis results",
+      "type": "database"
+    },
+    {
+      "name": "AI Analysis Service",
+      "description": "Provides threat intelligence and risk assessment capabilities",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "Backend API",
+      "description": "User input and UI state synchronization"
+    },
+    {
+      "source": "Backend API",
+      "destination": "Database",
+      "description": "Persistent storage of threat models and user data"
+    },
+    {
+      "source": "AI Analysis Service",
+      "destination": "Backend API",
+      "description": "Threat intelligence results and risk scoring"
+    }
+  ],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 16:34:05.073249",
+  "updated_at": "2025-09-28 16:34:05.073259"
+}
