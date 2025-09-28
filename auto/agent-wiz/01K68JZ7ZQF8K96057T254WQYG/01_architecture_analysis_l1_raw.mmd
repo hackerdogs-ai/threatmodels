@@ -1,0 +1,11 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(Frontend, "Frontend", "User interface for threat model creation and visualization")
+    System(Backend, "Backend", "API layer handling user requests and business logic")
+    System(ThreatAnalysisService, "ThreatAnalysisService", "Core service for threat model processing and analysis")
+    SystemDb(Database, "Database", "Secure storage for threat models and user data")
+
+    Rel(Frontend, Backend, "Uses")
+    Rel(Backend, ThreatAnalysisService, "Uses")
+    Rel(ThreatAnalysisService, Database, "Uses")
+    Rel(Database, Frontend, "Uses")

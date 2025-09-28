@@ -1,0 +1,32 @@
+{
+  "run_id": "01K68JZ7ZQF8K96057T254WQYG",
+  "timestamp": "2025-09-28T09:37:49.204383",
+  "execution_time_secs": 18.14,
+  "total_cost": 0.0236,
+  "total_steps": 1,
+  "successful_steps": 1,
+  "failed_steps": 0,
+  "overall_success": true,
+  "steps": {
+    "architecture_analysis": {
+      "success": true,
+      "cost": 0.02356,
+      "total_tokens": 1356,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 18.127340078353882,
+      "error_message": null
+    }
+  },
+  "generated_files": {
+    "total_files": 3,
+    "files": [
+      "01_architecture_analysis_l1_raw.mmd",
+      "01_architecture_analysis_l1_raw.md",
+      "01_architecture_analysis_l1_raw.json"
+    ],
+    "output_directory": "hackerdogs-ai/threatmodels/01K68JZ7ZQF8K96057T254WQYG",
+    "ulid": "01K68JZ7ZQF8K96057T254WQYG"
+  },
+  "output_directory": "hackerdogs-ai/threatmodels/01K68JZ7ZQF8K96057T254WQYG"
+}
