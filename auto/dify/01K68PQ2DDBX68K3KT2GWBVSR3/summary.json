@@ -1,0 +1,28 @@
+{
+  "run_id": "01K68PQ2DDBX68K3KT2GWBVSR3",
+  "timestamp": "2025-09-28T10:43:06.519072",
+  "execution_time_secs": 18.54,
+  "total_cost": 0.0235,
+  "total_steps": 1,
+  "successful_steps": 0,
+  "failed_steps": 1,
+  "overall_success": false,
+  "steps": {
+    "architecture_analysis": {
+      "success": false,
+      "cost": 0.0235,
+      "total_tokens": 1350,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 18.507041215896606,
+      "error_message": null
+    }
+  },
+  "generated_files": {
+    "total_files": 0,
+    "files": [],
+    "output_directory": "hackerdogs-ai/threatmodels/01K68PQ2DDBX68K3KT2GWBVSR3",
+    "ulid": "01K68PQ2DDBX68K3KT2GWBVSR3"
+  },
+  "output_directory": "hackerdogs-ai/threatmodels/01K68PQ2DDBX68K3KT2GWBVSR3"
+}
