@@ -1,0 +1,28 @@
+{
+  "run_id": "01K66ZE15QRBTQ9VY3AN9JJHF5",
+  "timestamp": "2025-09-27T18:36:59.123389",
+  "execution_time_secs": 0.06,
+  "total_cost": 0,
+  "total_steps": 1,
+  "successful_steps": 0,
+  "failed_steps": 1,
+  "overall_success": false,
+  "steps": {
+    "architecture_analysis": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.04702305793762207,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZE15QRBTQ9VY3AN9JJHF5 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    }
+  },
+  "generated_files": {
+    "total_files": 0,
+    "files": [],
+    "output_directory": "hackerdogs-ai/threatmodels/01K66ZE15QRBTQ9VY3AN9JJHF5",
+    "ulid": "01K66ZE15QRBTQ9VY3AN9JJHF5"
+  },
+  "output_directory": "hackerdogs-ai/threatmodels/01K66ZE15QRBTQ9VY3AN9JJHF5"
+}
