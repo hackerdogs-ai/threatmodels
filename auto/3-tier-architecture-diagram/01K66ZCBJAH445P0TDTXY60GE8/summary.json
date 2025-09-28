@@ -1,0 +1,140 @@
+{
+  "run_id": "01K66ZCBJAH445P0TDTXY60GE8",
+  "timestamp": "2025-09-27T18:36:04.500386",
+  "execution_time_secs": 0.43,
+  "total_cost": 0.0,
+  "total_steps": 13,
+  "successful_steps": 1,
+  "failed_steps": 12,
+  "overall_success": false,
+  "steps": {
+    "architecture_analysis": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.034168243408203125,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    },
+    "data_flow_diagrams": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.022680044174194336,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    },
+    "threats": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.019932031631469727,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    },
+    "attack_trees": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.020457983016967773,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    },
+    "dread_assessment": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.02108168601989746,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    },
+    "mitigations": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.021883010864257812,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    },
+    "test_cases": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.023565053939819336,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    },
+    "security_controls": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.020016193389892578,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    },
+    "compliance_assessment": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.0195767879486084,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    },
+    "risk_prioritization": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.021830081939697266,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    },
+    "dashboard": {
+      "success": true,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.003392934799194336,
+      "error_message": null
+    },
+    "correlations": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.02115321159362793,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    },
+    "executive_summary": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.023215055465698242,
+      "error_message": "Failed to use ollama/gpt-oss:latest ulid:01K66ZCBJAH445P0TDTXY60GE8 via LiteLLM: litellm.APIConnectionError: OllamaException - {\"error\":\"model 'gpt-oss:latest' not found\"}"
+    }
+  },
+  "generated_files": {
+    "total_files": 3,
+    "files": [
+      "12_dashboard_l1_raw.json",
+      "12_dashboard_l1_raw.md",
+      "12_dashboard_l1_raw.html"
+    ],
+    "output_directory": "hackerdogs-ai/threatmodels/01K66ZCBJAH445P0TDTXY60GE8",
+    "ulid": "01K66ZCBJAH445P0TDTXY60GE8"
+  },
+  "output_directory": "hackerdogs-ai/threatmodels/01K66ZCBJAH445P0TDTXY60GE8"
+}
