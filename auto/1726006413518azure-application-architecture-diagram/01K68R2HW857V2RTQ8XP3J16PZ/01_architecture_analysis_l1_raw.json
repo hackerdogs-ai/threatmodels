@@ -1,0 +1,99 @@
+{
+  "id": "01K68R2Y4AW6QMVN8AZCN6DGGC",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Azure App Service (Web Frontend)",
+      "description": "Handles user interactions, serves static content, and performs initial authentication.",
+      "type": "frontend"
+    },
+    {
+      "name": "Azure Functions / App Service (API)",
+      "description": "Business logic layer exposing REST endpoints, enforcing authorization, and orchestrating data access.",
+      "type": "backend"
+    },
+    {
+      "name": "Azure SQL Database",
+      "description": "Relational data store for transactional data.",
+      "type": "database"
+    },
+    {
+      "name": "Azure Blob Storage",
+      "description": "Object storage for unstructured data such as files and logs.",
+      "type": "storage"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "User Browser",
+      "destination": "Azure App Service (Web Frontend)",
+      "description": "HTTPS requests for UI and authentication."
+    },
+    {
+      "source": "Azure App Service (Web Frontend)",
+      "destination": "Azure Functions / App Service (API)",
+      "description": "Secure API calls carrying user context and payload."
+    },
+    {
+      "source": "Azure Functions / App Service (API)",
+      "destination": "Azure SQL Database",
+      "description": "SQL queries and transactions over TLS."
+    },
+    {
+      "source": "Azure Functions / App Service (API)",
+      "destination": "Azure Blob Storage",
+      "description": "Blob uploads/downloads for file handling."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Client\u2011to\u2011Frontend Boundary",
+      "description": "Separates external users from the web application.",
+      "components": [
+        "Azure App Service (Web Frontend)"
+      ]
+    },
+    {
+      "name": "Frontend\u2011to\u2011API Boundary",
+      "description": "Separates presentation logic from business logic.",
+      "components": [
+        "Azure App Service (Web Frontend)",
+        "Azure Functions / App Service (API)"
+      ]
+    },
+    {
+      "name": "API\u2011to\u2011Backend Boundary",
+      "description": "Separates application logic from data persistence.",
+      "components": [
+        "Azure Functions / App Service (API)",
+        "Azure SQL Database",
+        "Azure Blob Storage"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 18:06:45.386396",
+  "updated_at": "2025-09-28 18:06:45.386402"
+}

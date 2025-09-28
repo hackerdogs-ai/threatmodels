@@ -1,0 +1,20 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Client_to_Frontend_Boundary, "ClienttoFrontend Boundary") {
+        System(Azure_App_Service__Web_Frontend_, "Azure App Service (Web Frontend)", "Handles user interactions, serves static content, and performs initial authentication.")
+    }
+    System_Boundary(tb_Frontend_to_API_Boundary, "FrontendtoAPI Boundary") {
+        System(Azure_App_Service__Web_Frontend_, "Azure App Service (Web Frontend)", "Handles user interactions, serves static content, and performs initial authentication.")
+        System(Azure_Functions___App_Service__API_, "Azure Functions / App Service (API)", "Business logic layer exposing REST endpoints, enforcing authorization, and orchestrating data access.")
+    }
+    System_Boundary(tb_API_to_Backend_Boundary, "APItoBackend Boundary") {
+        System(Azure_Functions___App_Service__API_, "Azure Functions / App Service (API)", "Business logic layer exposing REST endpoints, enforcing authorization, and orchestrating data access.")
+        SystemDb(Azure_SQL_Database, "Azure SQL Database", "Relational data store for transactional data.")
+        SystemDb(Azure_Blob_Storage, "Azure Blob Storage", "Object storage for unstructured data such as files and logs.")
+    }
+    System(User_Browser, "User Browser", "Auto-created component: User Browser")
+
+    Rel(User_Browser, Azure_App_Service__Web_Frontend_, "Uses")
+    Rel(Azure_App_Service__Web_Frontend_, Azure_Functions___App_Service__API_, "Uses")
+    Rel(Azure_Functions___App_Service__API_, Azure_SQL_Database, "Uses")
+    Rel(Azure_Functions___App_Service__API_, Azure_Blob_Storage, "Uses")
