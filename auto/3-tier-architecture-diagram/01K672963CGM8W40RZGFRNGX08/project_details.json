@@ -1,0 +1,41 @@
+{
+  "project_name": "Scalable Web Application on AWS",
+  "line_of_business": [
+    "E-commerce",
+    "Content Delivery",
+    "Real-time Notifications"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth",
+    "JWT",
+    "Session-based Authentication"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "Data encryption in transit and at rest",
+    "Access control for S3 Bucket",
+    "DDoS mitigation",
+    "Regular backups",
+    "Auditing and logging"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "User interaction and data processing within the web application",
+  "assumptions": [
+    "Users will have internet access",
+    "Appropriate IAM roles will be implemented",
+    "Data stored is varied in type and use"
+  ],
+  "constraints": [
+    "Limited budget for security services",
+    "Dependence on AWS service availability"
+  ]
+}

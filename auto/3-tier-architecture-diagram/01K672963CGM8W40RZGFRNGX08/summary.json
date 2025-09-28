@@ -1,0 +1,28 @@
+{
+  "run_id": "01K672963CGM8W40RZGFRNGX08",
+  "timestamp": "2025-09-27T19:26:52.936357",
+  "execution_time_secs": 0.02,
+  "total_cost": 0,
+  "total_steps": 1,
+  "successful_steps": 0,
+  "failed_steps": 1,
+  "overall_success": false,
+  "steps": {
+    "architecture_analysis": {
+      "success": false,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.008365154266357422,
+      "error_message": "Failed to use ollama/qwen3:latest ulid:01K672963CGM8W40RZGFRNGX08 via LiteLLM: No module named 'shared.utils.mask_utils'"
+    }
+  },
+  "generated_files": {
+    "total_files": 0,
+    "files": [],
+    "output_directory": "hackerdogs-ai/threatmodels/01K672963CGM8W40RZGFRNGX08",
+    "ulid": "01K672963CGM8W40RZGFRNGX08"
+  },
+  "output_directory": "hackerdogs-ai/threatmodels/01K672963CGM8W40RZGFRNGX08"
+}
