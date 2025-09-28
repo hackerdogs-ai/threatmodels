@@ -1,0 +1,86 @@
+{
+  "id": "01K68Q31NHC1J4K5JJ7CR1FCQJ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Fastlane Client",
+      "description": "The Fastlane client is a command-line tool and GUI application used by developers to interact with the Lane service. It executes automation tasks and provides a user interface for managing workflows.",
+      "type": "frontend"
+    },
+    {
+      "name": "Lane Service",
+      "description": "The Lane service is the core of Fastlane. It's a backend service that manages workflows, interacts with various platforms (iOS, Android, etc.), and handles the execution of automation tasks.",
+      "type": "backend"
+    },
+    {
+      "name": "Platform Integrations",
+      "description": "These are the various integrations Fastlane uses to interact with different mobile platforms (e.g., Xcode, Android Studio, Google Cloud Build).",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Fastlane Client",
+      "destination": "Lane Service",
+      "description": "Developers use the Fastlane client to submit workflows and task definitions to the Lane service for execution."
+    },
+    {
+      "source": "Lane Service",
+      "destination": "Platform Integrations",
+      "description": "The Lane service communicates with platform integrations (e.g., Xcode, Android Studio) to execute tasks like building, testing, and deploying apps."
+    },
+    {
+      "source": "Platform Integrations",
+      "destination": "Fastlane Client",
+      "description": "Platform integrations provide status updates and results back to the Fastlane client."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Developer Environment",
+      "description": "The environment where developers build and run Fastlane. This boundary includes the developer's machine, IDE, and any locally installed Fastlane components.",
+      "components": [
+        "Fastlane Client"
+      ]
+    },
+    {
+      "name": "Lane Service Infrastructure",
+      "description": "The infrastructure hosting the Lane service, including servers, databases, and network components.",
+      "components": [
+        "Lane Service"
+      ]
+    },
+    {
+      "name": "Platform Integrations Environment",
+      "description": "The environment where platform integrations (e.g., Xcode, Android Studio) are deployed and run.",
+      "components": [
+        "Platform Integrations"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 17:49:20.433640",
+  "updated_at": "2025-09-28 17:49:20.433645"
+}

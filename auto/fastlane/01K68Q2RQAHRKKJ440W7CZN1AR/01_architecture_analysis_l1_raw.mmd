@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Developer_Environment, "Developer Environment") {
+        System(Fastlane_Client, "Fastlane Client", "The Fastlane client is a command-line tool and GUI application used by developers to interact with the Lane service. It executes automation tasks a...")
+    }
+    System_Boundary(tb_Lane_Service_Infrastructure, "Lane Service Infrastructure") {
+        System(Lane_Service, "Lane Service", "The Lane service is the core of Fastlane. It's a backend service that manages workflows, interacts with various platforms (iOS, Android, etc.), and...")
+    }
+    System_Boundary(tb_Platform_Integrations_Environment, "Platform Integrations Envir...") {
+        System(Platform_Integrations, "Platform Integrations", "These are the various integrations Fastlane uses to interact with different mobile platforms (e.g., Xcode, Android Studio, Google Cloud Build).")
+    }
+
+    Rel(Fastlane_Client, Lane_Service, "Uses")
+    Rel(Lane_Service, Platform_Integrations, "Uses")
+    Rel(Platform_Integrations, Fastlane_Client, "Uses")

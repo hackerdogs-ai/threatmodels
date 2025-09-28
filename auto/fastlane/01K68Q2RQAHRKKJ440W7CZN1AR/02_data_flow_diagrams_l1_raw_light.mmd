@@ -1,0 +1,33 @@
+graph TB
+  l3m4n5o6-p7q8-r9st-uvwxyz-0123456789ab["User | (user) | [UT]"]:::untrusted
+  m3n4o5p6-q7r8-s9t0-uvwxyz-123456789abc["GitHub | (service) | [UT]"]:::untrusted
+  i2j3k4l5-m6n7-89oa-bcde-f0123456789a["Fastlane Frontend | (frontend) | [LT]"]:::lowTrust
+  j3k4l5m6-n7o8-9ab0-cdef-123456789abc0["Git Repository | (database)"]:::dataStore
+  e1f2a3b4-c5d6-789a-bcde-f01234567890["User Credentials | [PII]"]:::dataAsset,pii
+  f2a3b4c5-d6e7-89ab-cdef-123456789abc["Fastlane Configuration | [INT]"]:::dataAsset,internal
+  g3h4i5j6-k7l8-90ma-nbc-d9e0f1234567["Application Logs | [INT]"]:::dataAsset,internal
+  j3k4l5m6-n7o8-9ab0-cdef-123456789abc["Component j3k4l5m6-n7o8-9ab0-cdef-123456789abc"]:::process,untrusted
+
+  m3n4o5p6-q7r8-s9t0-uvwxyz-123456789abc -->|User Authentication Request| i2j3k4l5-m6n7-89oa-bcde-f0123456789a:::encryptedFlow
+  i2j3k4l5-m6n7-89oa-bcde-f0123456789a -->|Configuration Retrieval| j3k4l5m6-n7o8-9ab0-cdef-123456789abc:::unencryptedFlow
+
+  classDef externalEntity fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef process fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef dataAsset fill:#ffa1ad,stroke:#A259FF,stroke-width:2px,color:#0B0D17
+  classDef untrusted fill:#FFB3B3,stroke:#8B0000,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFF2B3,stroke:#7A6300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#106B49,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#106B49,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#7A6300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#8B0000,stroke-width:2px
+  classDef restricted fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#106B49,stroke-width:2px
+  classDef unencryptedFlow stroke:#8B0000,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5
