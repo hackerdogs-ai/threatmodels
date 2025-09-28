@@ -1,0 +1,60 @@
+{
+  "compliance_assessment": {
+    "id": "01K67F8XDXK4X9J6T429FCW2DE",
+    "framework": "ISO/IEC 27001",
+    "framework_description": "International standard for information security management systems (ISMS) focusing on risk management and control implementation.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 72.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "ISO-27001-2.1",
+        "requirement": "Implement appropriate security controls to protect information assets.",
+        "status": "partially_compliant",
+        "evidence": "Controls like encrypted configuration store (CTL002) and MFA (CTL001) are planned but not yet implemented.",
+        "gaps": [
+          "Missing implementation of controls for data minimization and access certification"
+        ],
+        "recommendations": [
+          "Prioritize implementation of all planned security controls",
+          "Establish regular access certification processes"
+        ]
+      },
+      {
+        "requirement_id": "ISO-27001-11.1.2",
+        "requirement": "Maintain documented information security policies and procedures.",
+        "status": "not_compliant",
+        "evidence": "No documentation evidence for security controls or incident response processes",
+        "gaps": [
+          "Lack of documented security policies",
+          "No incident response documentation"
+        ],
+        "recommendations": [
+          "Create and maintain security policy documentation",
+          "Develop incident response procedures"
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Missing implementation of security controls",
+      "Lack of documentation for compliance requirements"
+    ],
+    "remediation_plan": [
+      "Implement all planned security controls (CTL001-CTL005) within 90 days",
+      "Develop comprehensive security policy documentation",
+      "Establish access certification and audit processes"
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-28 06:18:09.253484",
+    "assessor": null,
+    "created_at": "2025-09-28 06:18:09.253488",
+    "updated_at": "2025-09-28 06:18:09.253491"
+  }
+}

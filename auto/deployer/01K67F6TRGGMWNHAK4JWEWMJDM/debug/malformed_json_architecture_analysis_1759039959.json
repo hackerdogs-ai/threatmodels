@@ -1,0 +1,63 @@
+{
+  "architecture_overview": "Deployer is a CLI-based deployment tool with a modular architecture, integrating task scheduling, configuration management, and secure communication for deployment workflows.",
+  "components": [
+    {
+      "name": "CLI Interface",
+      "description": "Command-line interface for user interaction and deployment command execution.",
+      "type": "frontend"
+    },
+    {
+      "name": "Task Scheduler",
+      "description": "Manages deployment tasks, job queues, and execution orchestration.",
+      "type": "backend"
+    },
+    {
+      "name": "Configuration Store",
+      "description": "Stores deployment configurations, secrets, and environment settings.",
+      "type": "database"
+    },
+    {
+      "name": "Message Queue",
+      "description": "Facilitates asynchronous communication between components for task distribution.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "CLI Interface",
+      "destination": "Task Scheduler",
+      "description": "User commands and deployment parameters are sent to the task scheduler for processing."
+    },
+    {
+      "source": "Task Scheduler",
+      "destination": "Message Queue",
+      "description": "Scheduled tasks are pushed to the message queue for asynchronous execution."
+    },
+    {
+      "source": "Message Queue",
+      "destination": "Configuration Store",
+      "description": "Deployment credentials and settings are retrieved from the configuration store for task execution."
+    },
+    {
+      "source": "Task Scheduler",
+      "destination": "Configuration Store",
+      "description": "Logs and metadata are stored in the configuration store for audit and debugging."
+    }
+  ],
+  "security_considerations": [
+    "Ensure secure communication between CLI and backend components using TLS to prevent eavesdropping.",
+    "Encrypt sensitive data at rest in the configuration store to protect secrets and credentials.",
+    "Validate and sanitize all user inputs to prevent command injection attacks via CLI.",
+    "Implement role-based access control (RBAC) to restrict configuration store access to authorized users."
+  ],
+  "trust_boundaries": [
+    {
+      "name": "External CLI Boundary",
+      "description": "CLI interface is exposed to external users, requiring strict input validation and authentication.",
+      "components": ["CLI Interface"]
+    },
+    {
+      "name": "Internal Service Boundary",
+      "description": "Task Scheduler and Message Queue operate within a trusted internal network with restricted access.",
+      "components": ["Task Scheduler", "Message Queue"]
+    }

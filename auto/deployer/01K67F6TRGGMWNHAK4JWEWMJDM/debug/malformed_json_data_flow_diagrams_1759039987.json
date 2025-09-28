@@ -1,0 +1,81 @@
+{
+    "id": "000000000000000000000000",
+    "name": "Deployer Threat Model",
+    "description": "Basic data flow diagram for Deployer application showing data movement, trust boundaries, and classification",
+    "data_assets": [
+        {
+            "id": "000000000000000000000001",
+            "name": "User credentials",
+            "classification": "pii"
+        },
+        {
+            "id": "000000000000000000000002",
+            "name": "Deployment scripts",
+            "classification": "internal"
+        },
+        {
+            "id": "000000000000000000000003",
+            "name": "Configuration files",
+            "classification": "internal"
+        },
+        {
+            "id": "000000000000000000000004",
+            "name": "Deployment logs",
+            "classification": "internal"
+        },
+        {
+            "id": "000000000000000000000005",
+            "name": "GitHub API tokens",
+            "classification": "secret"
+        }
+    ],
+    "processes": [
+        {
+            "id": "000000000000000000000006",
+            "name": "CLI interface",
+            "type": "frontend",
+            "trust_level": "untrusted"
+        },
+        {
+            "id": "000000000000000000000007",
+            "name": "Deployment engine",
+            "type": "backend",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "000000000000000000000008",
+            "name": "Authentication service",
+            "type": "service",
+            "trust_level": "very_high_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "000000000000000000000009",
+            "name": "Deployment database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "000000000000000000000010",
+            "name": "Cache store",
+            "type": "cache",
+            "encryption": "transport"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "000000000000000000000011",
+            "name": "GitHub API",
+            "type": "system"
+        },
+        {
+            "id": "000000000000000000000012",
+            "name": "Administrator",
+            "type": "user"
+        },
+        {
+            "id": "000000000000000000000013",
+            "name": "Developer",
+            "type": "user"
+        }

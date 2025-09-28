@@ -1,0 +1,90 @@
+{
+  "id": "01K67F7CKMJS27V4XTQ8B1PGJZ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "CLI Interface",
+      "description": "Command-line interface for user interaction and deployment command execution.",
+      "type": "frontend"
+    },
+    {
+      "name": "Task Scheduler",
+      "description": "Manages deployment tasks, job queues, and execution orchestration.",
+      "type": "backend"
+    },
+    {
+      "name": "Configuration Store",
+      "description": "Stores deployment configurations, secrets, and environment settings.",
+      "type": "database"
+    },
+    {
+      "name": "Message Queue",
+      "description": "Facilitates asynchronous communication between components for task distribution.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "CLI Interface",
+      "destination": "Task Scheduler",
+      "description": "User commands and deployment parameters are sent to the task scheduler for processing."
+    },
+    {
+      "source": "Task Scheduler",
+      "destination": "Message Queue",
+      "description": "Scheduled tasks are pushed to the message queue for asynchronous execution."
+    },
+    {
+      "source": "Message Queue",
+      "destination": "Configuration Store",
+      "description": "Deployment credentials and settings are retrieved from the configuration store for task execution."
+    },
+    {
+      "source": "Task Scheduler",
+      "destination": "Configuration Store",
+      "description": "Logs and metadata are stored in the configuration store for audit and debugging."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "External CLI Boundary",
+      "description": "CLI interface is exposed to external users, requiring strict input validation and authentication.",
+      "components": [
+        "CLI Interface"
+      ]
+    },
+    {
+      "name": "Internal Service Boundary",
+      "description": "Task Scheduler and Message Queue operate within a trusted internal network with restricted access.",
+      "components": [
+        "Task Scheduler",
+        "Message Queue"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 06:12:39.668124",
+  "updated_at": "2025-09-28 06:12:39.668146"
+}

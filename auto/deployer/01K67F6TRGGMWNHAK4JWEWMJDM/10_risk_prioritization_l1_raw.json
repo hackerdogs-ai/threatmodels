@@ -1,0 +1,167 @@
+{
+  "risk_prioritization": {
+    "id": "01K67F8XJ123456789ABCDEF06",
+    "prioritization_method": "DREAD + Business Impact Analysis",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K67F8XDXK4X9J6T429FCW2DE",
+        "threat_title": "Spoofing via CLI Interface",
+        "risk_score": 8.2,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "moderate",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "Q4 2025",
+        "dependencies": [
+          "01K67F8XJ123456789ABCDEF01"
+        ],
+        "recommended_actions": [
+          "Implement MFA for CLI access",
+          "Validate user sessions"
+        ]
+      },
+      {
+        "risk_id": "01K67F8XDYY05GPQ3QJCVYE7MQ",
+        "threat_title": "Configuration Data Disclosure",
+        "risk_score": 7.8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "moderate",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "Q4 2025",
+        "dependencies": [
+          "01K67F8XJ123456789ABCDEF02"
+        ],
+        "recommended_actions": [
+          "Encrypt config data",
+          "Implement RBAC"
+        ]
+      },
+      {
+        "risk_id": "01K67F8XDY199MF93Z74PC81N1",
+        "threat_title": "Command Injection via CLI Input",
+        "risk_score": 7.5,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "moderate",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "low",
+        "timeline": "Q4 2025",
+        "dependencies": [
+          "01K67F8XJ123456789ABCDEF03"
+        ],
+        "recommended_actions": [
+          "Whitelist CLI inputs",
+          "Sanitize parameters"
+        ]
+      },
+      {
+        "risk_id": "01K67F8XDY5JREP4E27W0H4YEQ",
+        "threat_title": "Denial of Service via Task Scheduler",
+        "risk_score": 6.9,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "moderate",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "Q1 2026",
+        "dependencies": [
+          "01K67F8XJ123456789ABCDEF04"
+        ],
+        "recommended_actions": [
+          "Implement rate limiting",
+          "Set job quotas"
+        ]
+      },
+      {
+        "risk_id": "01K67F8XDYSQBGBK37C10KXTAD",
+        "threat_title": "Elevation of Privilege via Message Queue",
+        "risk_score": 6.5,
+        "priority_level": "medium",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "moderate",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "Q1 2026",
+        "dependencies": [
+          "01K67F8XJ123456789ABCDEF05"
+        ],
+        "recommended_actions": [
+          "Enforce least-privilege access",
+          "Monitor queue activity"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K67F8XDXK4X9J6T429FCW2DE"
+      ],
+      "high_priority_risks": [
+        "01K67F8XDYY05GPQ3QJCVYE7MQ",
+        "01K67F8XDY199MF93Z74PC81N1"
+      ],
+      "medium_priority_risks": [
+        "01K67F8XDY5JREP4E27W0H4YEQ",
+        "01K67F8XDYSQBGBK37C10KXTAD"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K67F8XDXK4X9J6T429FCW2DE": 8.2,
+      "01K67F8XDYY05GPQ3QJCVYE7MQ": 7.8,
+      "01K67F8XDY199MF93Z74PC81N1": 7.5,
+      "01K67F8XDY5JREP4E27W0H4YEQ": 6.9,
+      "01K67F8XDYSQBGBK37C10KXTAD": 6.5
+    },
+    "risk_rankings": [
+      [
+        "01K67F8XDXK4X9J6T429FCW2DE",
+        8.2
+      ],
+      [
+        "01K67F8XDYY05GPQ3QJCVYE7MQ",
+        7.8
+      ],
+      [
+        "01K67F8XDY199MF93Z74PC81N1",
+        7.5
+      ],
+      [
+        "01K67F8XDY5JREP4E27W0H4YEQ",
+        6.9
+      ],
+      [
+        "01K67F8XDYSQBGBK37C10KXTAD",
+        6.5
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "High (potential data breaches, regulatory fines)",
+      "operational_impact": "High (service disruption, system compromise)",
+      "reputational_impact": "High (loss of trust in deployment reliability)"
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-28 06:19:13.988605",
+    "updated_at": "2025-09-28 06:19:13.988625"
+  }
+}

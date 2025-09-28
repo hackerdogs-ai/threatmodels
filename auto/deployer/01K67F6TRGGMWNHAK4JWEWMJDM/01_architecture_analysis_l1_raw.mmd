@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_External_CLI_Boundary, "External CLI Boundary") {
+        System(CLI_Interface, "CLI Interface", "Command-line interface for user interaction and deployment command execution.")
+    }
+    System_Boundary(tb_Internal_Service_Boundary, "Internal Service Boundary") {
+        System(Task_Scheduler, "Task Scheduler", "Manages deployment tasks, job queues, and execution orchestration.")
+        System(Message_Queue, "Message Queue", "Facilitates asynchronous communication between components for task distribution.")
+    }
+    SystemDb(Configuration_Store, "Configuration Store", "Stores deployment configurations, secrets, and environment settings.")
+
+    Rel(CLI_Interface, Task_Scheduler, "Uses")
+    Rel(Task_Scheduler, Message_Queue, "Uses")
+    Rel(Message_Queue, Configuration_Store, "Uses")
+    Rel(Task_Scheduler, Configuration_Store, "Uses")

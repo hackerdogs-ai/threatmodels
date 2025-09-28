@@ -1,0 +1,182 @@
+{
+    "correlations": [
+        {
+            "source_threat_model": "Deployer CLI Spoofing",
+            "correlation_type": "similar_threats",
+            "description": "Similar to CLI spoofing risks in DevOps tools like Jenkins and GitLab CI/CD pipelines.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Standardize CLI authentication across all deployment tools",
+                "Implement command signing for all CLI interactions"
+            ]
+        },
+        {
+            "source_threat_model": "Configuration Data Disclosure",
+            "correlation_type": "shared_mitigations",
+            "description": "Shared mitigation needs with cloud provider configuration leaks (e.g., AWS/S3 misconfigurations).",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Adopt encrypted config storage across all systems",
+                "Implement config access auditing frameworks"
+            ]
+        },
+        {
+            "source_threat_model": "Command Injection",
+            "correlation_type": "related_attack_patterns",
+            "description": "Related to shell injection vulnerabilities in Docker and Kubernetes deployment pipelines.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Enforce strict input whitelisting across all execution contexts",
+                "Use containerization with strict privilege boundaries"
+            ]
+        },
+        {
+            "source_threat_model": "Task Scheduler DoS",
+            "correlation_type": "compliance_overlap",
+            "description": "Overlaps with NIST SP 800-53 Rev 4 AU-6 compliance requirements for workload management.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Implement rate limiting per compliance standards",
+                "Create automated DoS detection workflows"
+            ]
+        },
+        {
+            "source_threat_model": "Message Queue Privilege Escalation",
+            "correlation_type": "similar_threats",
+            "description": "Similar to RabbitMQ/Redis privilege escalation vulnerabilities in microservices architectures.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Segment message queues by service boundaries",
+                "Implement queue access monitoring"
+            ]
+        },
+        {
+            "source_threat_model": "CLI Spoofing",
+            "correlation_type": "shared_mitigations",
+            "description": "Shared mitigation needs with SSH/SFTP spoofing risks in infrastructure management.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Deploy multi-factor authentication for all CLI interfaces",
+                "Implement command history sanitization"
+            ]
+        },
+        {
+            "source_threat_model": "Configuration Disclosure",
+            "correlation_type": "compliance_overlap",
+            "description": "Overlaps with GDPR Article 30 requirements for configuration data protection.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Create automated configuration audit trails",
+                "Implement encryption at rest/in transit"
+            ]
+        },
+        {
+            "source_threat_model": "Command Injection",
+            "correlation_type": "related_attack_patterns",
+            "description": "Related to supply chain vulnerabilities in CI/CD pipelines (e.g., SolarWinds attack patterns).",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Implement strict dependency validation",
+                "Use immutable deployment artifacts"
+            ]
+        },
+        {
+            "source_threat_model": "Task Scheduler DoS",
+            "correlation_type": "similar_threats",
+            "description": "Similar to API rate limiting bypass vulnerabilities in web application architectures.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Implement distributed rate limiting",
+                "Create automated anomaly detection rules"
+            ]
+        },
+        {
+            "source_threat_model": "Message Queue Privilege Escalation",
+            "correlation_type": "shared_mitigations",
+            "description": "Shared mitigation needs with database privilege escalation risks (e.g., SQL injection).",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Enforce least-privilege access patterns",
+                "Implement access logging and monitoring"
+            ]
+        },
+        {
+            "source_threat_model": "CLI Spoofing",
+            "correlation_type": "compliance_overlap",
+            "description": "Overlaps with ISO 27001 A.9.2 requirements for secure remote access.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Implement secure remote access frameworks",
+                "Create CLI access audit trails"
+            ]
+        },
+        {
+            "source_threat_model": "Configuration Disclosure",
+            "correlation_type": "related_attack_patterns",
+            "description": "Related to insecure API key exposure in microservices architectures.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Implement automated secret scanning",
+                "Use secret management platforms"
+            ]
+        },
+        {
+            "source_threat_model": "Command Injection",
+            "correlation_type": "similar_threats",
+            "description": "Similar to vulnerabilities in serverless function execution environments.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Implement strict environment isolation",
+                "Use sandboxed execution contexts"
+            ]
+        },
+        {
+            "source_threat_model": "Task Scheduler DoS",
+            "correlation_type": "shared_mitigations",
+            "description": "Shared mitigation needs with DDoS protection requirements in cloud environments.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Deploy distributed denial-of-service protection",
+                "Implement automated traffic analysis"
+            ]
+        },
+        {
+            "source_threat_model": "Message Queue Privilege Escalation",
+            "correlation_type": "compliance_overlap",
+            "description": "Overlaps with SOC 2 Type II requirements for system integrity controls.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Implement continuous integrity monitoring",
+                "Create access control audits"
+            ]
+        },
+        {
+            "source_threat_model": "CLI Spoofing",
+            "correlation_type": "related_attack_patterns",
+            "description": "Related to vulnerabilities in remote management protocols (e.g., Telnet vs SSH).",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Migrate to secure protocols",
+                "Implement protocol-level authentication"
+            ]
+        },
+        {
+            "source_threat_model": "Configuration Disclosure",
+            "correlation_type": "similar_threats",
+            "description": "Similar to insecure default configurations in IoT device ecosystems.",
+            "impact_level": "medium",
+            "recommended_actions": [
+                "Implement configuration hardening standards",
+                "Create default configuration audits"
+            ]
+        },
+        {
+            "source_threat_model": "Command Injection",
+            "correlation_type": "compliance_overlap",
+            "description": "Overlaps with OWASP Top 10 A03:2021 - Injection vulnerabilities.",
+            "impact_level": "high",
+            "recommended_actions": [
+                "Implement automated injection detection",
+                "Create secure coding standards"
+            ]
+        }

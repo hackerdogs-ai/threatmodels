@@ -1,0 +1,136 @@
+{
+  "id": "000000000000000000000000",
+  "name": "Deployer Threat Model",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for Deployer application showing data movement, trust boundaries, and classification",
+  "created_at": "2025-09-28 06:13:07.636729",
+  "last_updated": "2025-09-28 06:13:07.636733",
+  "data_assets": [
+    {
+      "id": "000000000000000000000001",
+      "name": "User credentials",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "000000000000000000000002",
+      "name": "Deployment scripts",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "000000000000000000000003",
+      "name": "Configuration files",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "000000000000000000000004",
+      "name": "Deployment logs",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "000000000000000000000005",
+      "name": "GitHub API tokens",
+      "description": null,
+      "classification": "secret",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "000000000000000000000006",
+      "name": "CLI interface",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "untrusted",
+      "external_references": {}
+    },
+    {
+      "id": "000000000000000000000007",
+      "name": "Deployment engine",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "000000000000000000000008",
+      "name": "Authentication service",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "very_high_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "000000000000000000000009",
+      "name": "Deployment database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "000000000000000000000010",
+      "name": "Cache store",
+      "description": null,
+      "type": "cache",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "transport",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "000000000000000000000011",
+      "name": "GitHub API",
+      "description": null,
+      "type": "system",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "000000000000000000000012",
+      "name": "Administrator",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "000000000000000000000013",
+      "name": "Developer",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [],
+  "defined_trust_boundaries": []
+}
