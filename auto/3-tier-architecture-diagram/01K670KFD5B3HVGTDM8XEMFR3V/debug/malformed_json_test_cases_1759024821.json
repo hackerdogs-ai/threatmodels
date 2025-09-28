@@ -1,0 +1,79 @@
+{
+  "test_cases": [
+    {
+      "id": "01K670NGM0TESTCASE00000001",
+      "name": "Session Hijacking Mitigation Test",
+      "description": "Verify that session cookies are protected and cannot be captured or reused by an attacker.",
+      "scenario": "Capture network traffic between client and ELB using a packet sniffer and attempt to replay the session cookie to access a protected resource.",
+      "threat_ids": [
+        "01K670NGM0VW07WHCB1231ZC36"
+      ],
+      "status": "not_tested",
+      "test_result": ""
+    },
+    {
+      "id": "01K670NGM0TESTCASE00000002",
+      "name": "TLS Everywhere Enforcement Test",
+      "description": "Ensure all endpoints enforce HTTPS and redirect HTTP traffic.",
+      "scenario": "Send an HTTP request to the ELB and verify that the response redirects to HTTPS and that the TLS certificate is valid.",
+      "threat_ids": [
+        "01K670NGM1XM4JSJTK6F78VYZZ"
+      ],
+      "status": "not_tested",
+      "test_result": ""
+    },
+    {
+      "id": "01K670NGM0TESTCASE00000003",
+      "name": "Data at Rest Encryption Test",
+      "description": "Confirm that RDS instances and snapshots are encrypted.",
+      "scenario": "Query the RDS instance properties via the AWS CLI and check the `StorageEncrypted` flag; attempt to download a snapshot without encryption and verify failure.",
+      "threat_ids": [
+        "01K670NGM1K92MX72J4RXCT1PQ"
+      ],
+      "status": "not_tested",
+      "test_result": ""
+    },
+    {
+      "id": "01K670NGM0TESTCASE00000004",
+      "name": "DDoS Mitigation Test",
+      "description": "Validate that AWS Shield/WAF rate limiting protects the ELB from high‑volume traffic.",
+      "scenario": "Generate a burst of requests to the ELB using a load‑testing tool and monitor the ELB metrics for throttling or WAF rule hits.",
+      "threat_ids": [
+        "01K670NGM1WETMZGVZKDDQP95X"
+      ],
+      "status": "not_tested",
+      "test_result": ""
+    },
+    {
+      "id": "01K670NGM0TESTCASE00000005",
+      "name": "IAM Least Privilege Test",
+      "description": "Verify that instance profile credentials cannot list S3 buckets they should not access.",
+      "scenario": "Run `aws s3 ls` from an EC2 instance using its IAM role and confirm that access is denied for unauthorized buckets.",
+      "threat_ids": [
+        "01K670NGM1DZ95ZSPBDPT490CN"
+      ],
+      "status": "not_tested",
+      "test_result": ""
+    },
+    {
+      "id": "01K670NGM0TESTCASE00000006",
+      "name": "SQL Injection Test",
+      "description": "Check that user input is properly sanitized to prevent SQL injection.",
+      "scenario": "Submit a payload containing SQL code to an input field and observe whether the application returns a database error or leaks data.",
+      "threat_ids": [
+        "01K670NGM1PC8Y7KS45TZ92Y8M"
+      ],
+      "status": "not_tested",
+      "test_result": ""
+    },
+    {
+      "id": "01K670NGM0TESTCASE00000007",
+      "name": "Cross‑Site Scripting (XSS) Test",
+      "description": "Validate that dynamic output is encoded and CSP is enforced.",
+      "scenario": "Inject a script tag into a form field and verify that it is not executed in the browser and that a CSP header is present.",
+      "threat_ids": [
+        "01K670NGM12AH8RGCGS0PYA2Z4"
+      ],
+      "status": "not_tested",
+      "test_result": ""
+    }

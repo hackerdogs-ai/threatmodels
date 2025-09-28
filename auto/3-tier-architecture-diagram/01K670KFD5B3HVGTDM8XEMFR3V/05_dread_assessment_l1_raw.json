@@ -1,0 +1,270 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K670NGM0VW07WHCB1231ZC36",
+      "threat_title": "User Impersonation via Session Hijacking",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 8,
+        "exploitability": 6,
+        "affected_users": 8,
+        "discoverability": 7
+      },
+      "total_risk_score": 37,
+      "risk_level": "high",
+      "justification": "Session hijacking can impersonate any authenticated user, potentially exposing sensitive data and allowing unauthorized actions across the application. The attack is highly reproducible, moderately easy to exploit, and affects a large user base.",
+      "recommendations": [
+        "Enforce TLS everywhere and enable HSTS",
+        "Mark session cookies as Secure, HttpOnly, and SameSite",
+        "Implement short session timeouts and token rotation",
+        "Use a Web Application Firewall (WAF) to detect session fixation patterns"
+      ],
+      "assessment_date": "2025-09-28 01:59:22.774832",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K670NGM1XM4JSJTK6F78VYZZ",
+      "threat_title": "Man\u2011in\u2011the\u2011Middle Attacks on Unencrypted Traffic",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 8,
+        "exploitability": 6,
+        "affected_users": 8,
+        "discoverability": 7
+      },
+      "total_risk_score": 35,
+      "risk_level": "high",
+      "justification": "Unencrypted traffic between clients, ELB, and EC2 instances allows attackers to intercept or tamper with requests, compromising confidentiality and integrity for all users.",
+      "recommendations": [
+        "Enable TLS termination on ELB and enforce TLS on backend connections",
+        "Use strong cipher suites and enable HTTP Strict Transport Security (HSTS)",
+        "Configure client certificates for critical endpoints if feasible"
+      ],
+      "assessment_date": "2025-09-28 01:59:22.775580",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K670NGM1K92MX72J4RXCT1PQ",
+      "threat_title": "Unencrypted Sensitive Data Exposure",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 8,
+        "exploitability": 6,
+        "affected_users": 8,
+        "discoverability": 5
+      },
+      "total_risk_score": 36,
+      "risk_level": "high",
+      "justification": "Storing RDS backups, S3 objects, or cache entries without encryption exposes confidential data to anyone who gains storage access, leading to severe regulatory and reputational damage.",
+      "recommendations": [
+        "Enable encryption at rest for RDS, S3, and ElastiCache using AWS KMS",
+        "Apply bucket policies and IAM permissions to restrict access",
+        "Enable automated backups with encryption and versioning"
+      ],
+      "assessment_date": "2025-09-28 01:59:22.775923",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K670NGM1WETMZGVZKDDQP95X",
+      "threat_title": "Distributed Denial of Service on ELB and Application Layer",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 8,
+        "exploitability": 6,
+        "affected_users": 8,
+        "discoverability": 7
+      },
+      "total_risk_score": 38,
+      "risk_level": "high",
+      "justification": "A large volume of malicious traffic can overwhelm ELB and EC2 instances, causing legitimate requests to fail and degrading application availability for all users.",
+      "recommendations": [
+        "Enable AWS Shield Advanced and configure WAF rate limiting",
+        "Use Auto Scaling and Elastic Load Balancing health checks",
+        "Implement traffic monitoring and anomaly detection"
+      ],
+      "assessment_date": "2025-09-28 01:59:22.776526",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K670NGM1DZ95ZSPBDPT490CN",
+      "threat_title": "Privilege Escalation via Misconfigured IAM Roles",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 8,
+        "exploitability": 6,
+        "affected_users": 8,
+        "discoverability": 5
+      },
+      "total_risk_score": 36,
+      "risk_level": "high",
+      "justification": "Over\u2011permissive IAM policies or instance profiles can grant attackers elevated privileges, allowing them to access RDS credentials, S3 buckets, or other critical resources.",
+      "recommendations": [
+        "Apply the principle of least privilege to all IAM roles",
+        "Use IAM Access Analyzer and automated policy reviews",
+        "Enable IAM role session policies and enforce MFA for privileged actions"
+      ],
+      "assessment_date": "2025-09-28 01:59:22.777358",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K670NGM1PC8Y7KS45TZ92Y8M",
+      "threat_title": "SQL Injection into RDS",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 8,
+        "exploitability": 6,
+        "affected_users": 8,
+        "discoverability": 5
+      },
+      "total_risk_score": 36,
+      "risk_level": "high",
+      "justification": "Unsanitized user input can modify or delete database records, leading to data loss, corruption, or unauthorized data exposure.",
+      "recommendations": [
+        "Use parameterized queries or ORM frameworks that escape inputs",
+        "Implement input validation and output encoding",
+        "Deploy a WAF with SQL injection protection rules"
+      ],
+      "assessment_date": "2025-09-28 01:59:22.778228",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K670NGM12AH8RGCGS0PYA2Z4",
+      "threat_title": "Cross\u2011Site Scripting (XSS) via Web Server",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 8,
+        "exploitability": 6,
+        "affected_users": 8,
+        "discoverability": 5
+      },
+      "total_risk_score": 33,
+      "risk_level": "high",
+      "justification": "Improperly escaped output can inject malicious scripts that run in users\u2019 browsers, potentially stealing session data or defacing pages.",
+      "recommendations": [
+        "Apply output encoding and use a Content Security Policy (CSP)",
+        "Sanitize all user\u2011supplied data on both client and server sides",
+        "Configure WAF to block common XSS payloads"
+      ],
+      "assessment_date": "2025-09-28 01:59:22.778473",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K670NGM2H40G107ZHT32BV70",
+      "threat_title": "Weak Authentication and Session Management",
+      "dread_scores": {
+        "damage": 9,
+        "reproducibility": 8,
+        "exploitability": 6,
+        "affected_users": 8,
+        "discoverability": 5
+      },
+      "total_risk_score": 36,
+      "risk_level": "high",
+      "justification": "Lack of strong password policies, MFA, and secure session handling enables attackers to compromise user accounts and gain unauthorized access to application resources.",
+      "recommendations": [
+        "Enforce MFA for all user accounts and privileged roles",
+        "Implement strong password policies and account lockout mechanisms",
+        "Secure session cookies and enforce short session lifetimes"
+      ],
+      "assessment_date": "2025-09-28 01:59:22.778701",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "All identified threats pose high risk to the application, primarily due to their potential for widespread impact, ease of exploitation, and significant damage to data confidentiality, integrity, and availability. Immediate mitigation should focus on enforcing TLS, encrypting data at rest, tightening IAM permissions, implementing robust input validation, and strengthening authentication mechanisms to reduce the likelihood and impact of these attacks."
+}

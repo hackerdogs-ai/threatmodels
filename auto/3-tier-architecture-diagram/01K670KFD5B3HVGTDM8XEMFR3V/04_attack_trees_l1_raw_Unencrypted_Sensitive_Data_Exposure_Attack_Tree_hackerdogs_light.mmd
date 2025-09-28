@@ -1,0 +1,56 @@
+graph TB
+  T1["Unencrypted Sensitive Data Exposure | [HIGH]"]:::highRisk
+  T1_1["Compromise IAM credentials to gain storage access | [HIGH]"]:::highRisk
+  T1_1_1["Obtain IAM user/role credentials via phishing or credential stuffing | [HIGH]"]:::highRisk
+  T1_1_1_cm_0["CM: Enforce MFA for all IAM users and roles (Eff: 0.8)"]:::countermeasure
+  T1_1_1_cm_1["CM: Implement least‑privilege IAM policies (Eff: 0.7)"]:::countermeasure
+  T1_1_1_cm_2["CM: Enable CloudTrail logging and anomaly detection (Eff: 0.6)"]:::countermeasure
+  T1_1_2["Use compromised credentials to access S3 bucket | [HIGH]"]:::highRisk
+  T1_1_2_cm_0["CM: Enable S3 bucket encryption (SSE‑S3 or SSE‑KMS) (Eff: 0.9)"]:::countermeasure
+  T1_1_2_cm_1["CM: Apply bucket policies to restrict access to only required principals (Eff: 0.8)"]:::countermeasure
+  T1_1_3["Use compromised credentials to access RDS snapshots | [HIGH]"]:::highRisk
+  T1_1_3_cm_0["CM: Enable RDS encryption at rest (KMS) (Eff: 0.9)"]:::countermeasure
+  T1_1_3_cm_1["CM: Restrict snapshot export permissions to a dedicated role (Eff: 0.8)"]:::countermeasure
+  T1_1_cm_0["CM: Rotate IAM credentials regularly (Eff: 0.5)"]:::countermeasure
+  T1_2["Exploit misconfigured encryption settings | [HIGH]"]:::highRisk
+  T1_2_1["Identify S3 bucket without encryption enabled | [HIGH]"]:::highRisk
+  T1_2_1_cm_0["CM: Automated compliance checks (AWS Config) for S3 encryption (Eff: 0.8)"]:::countermeasure
+  T1_2_2["Identify RDS instance with encryption disabled | [HIGH]"]:::highRisk
+  T1_2_2_cm_0["CM: Require encryption for all RDS instances via launch templates (Eff: 0.9)"]:::countermeasure
+  T1_2_cm_0["CM: Enforce encryption policies via AWS Organizations Service Control Policies (Eff: 0.7)"]:::countermeasure
+  T1_cm_0["CM: Implement centralized key management with AWS KMS and enforce key rotation (Eff: 0.9)"]:::countermeasure
+  T1_cm_1["CM: Enable automatic encryption for all new S3 buckets and RDS instances (Eff: 0.8)"]:::countermeasure
+  T1_cm_2["CM: Conduct regular penetration testing and vulnerability scanning focused on data at rest (Eff: 0.6)"]:::countermeasure
+
+  T1 --> T1_1
+  T1_1 --> T1_1_1
+  T1_1_1 -.-> T1_1_1_cm_0
+  T1_1_1 -.-> T1_1_1_cm_1
+  T1_1_1 -.-> T1_1_1_cm_2
+  T1_1 --> T1_1_2
+  T1_1_2 -.-> T1_1_2_cm_0
+  T1_1_2 -.-> T1_1_2_cm_1
+  T1_1 --> T1_1_3
+  T1_1_3 -.-> T1_1_3_cm_0
+  T1_1_3 -.-> T1_1_3_cm_1
+  T1_1 -.-> T1_1_cm_0
+  T1 --> T1_2
+  T1_2 --> T1_2_1
+  T1_2_1 -.-> T1_2_1_cm_0
+  T1_2 --> T1_2_2
+  T1_2_2 -.-> T1_2_2_cm_0
+  T1_2 -.-> T1_2_cm_0
+  T1 -.-> T1_cm_0
+  T1 -.-> T1_cm_1
+  T1 -.-> T1_cm_2
+
+  classDef andNode fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef orNode fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef highRisk fill:#FFB3B3,color:#8B0000,stroke:#8B0000,stroke-width:2px
+  classDef mediumRisk fill:#FFF200,stroke:#7A6300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#ffa1ad,stroke:#A259FF,stroke-width:1px,stroke-dasharray:3 3,color:#0B0D17
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

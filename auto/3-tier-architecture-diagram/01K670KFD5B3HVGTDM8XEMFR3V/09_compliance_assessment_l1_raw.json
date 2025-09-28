@@ -1,0 +1,93 @@
+{
+  "compliance_assessment": {
+    "id": "01K670NGM0ZZZZZZZZZZZZZZZZ",
+    "framework": "ISO/IEC 27001:2013",
+    "framework_description": "International standard for information security management systems (ISMS) covering risk assessment, controls, and continual improvement.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 68.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "A.5.1.1",
+        "requirement": "Information security policy",
+        "status": "compliant",
+        "evidence": "Security policy documented and approved by senior management; controls list aligns with policy.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "A.6.1.1",
+        "requirement": "Internal organization \u2013 roles and responsibilities",
+        "status": "compliant",
+        "evidence": "Defined ownership for Cloud Security Team, Application Development, Security Operations, and Security Team.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "A.8.1.1",
+        "requirement": "Asset inventory",
+        "status": "non_compliant",
+        "evidence": "No formal asset register captured for EC2 instances, RDS instances, S3 buckets, and IAM roles.",
+        "gaps": [
+          "Missing asset inventory"
+        ],
+        "recommendations": [
+          "Implement automated asset discovery using AWS Config and tag all resources.",
+          "Maintain a central inventory in a CMDB or spreadsheet."
+        ]
+      },
+      {
+        "requirement_id": "A.9.1.1",
+        "requirement": "Access control policy",
+        "status": "partially_compliant",
+        "evidence": "IAM least\u2011privilege control in place; MFA for privileged accounts implemented.",
+        "gaps": [
+          "No formal access review process"
+        ],
+        "recommendations": [
+          "Schedule quarterly access reviews using IAM Access Analyzer.",
+          "Automate revocation of unused permissions."
+        ]
+      },
+      {
+        "requirement_id": "A.12.1.1",
+        "requirement": "Operational procedures and responsibilities",
+        "status": "partially_compliant",
+        "evidence": "Incident response plan drafted; monitoring via CloudTrail, CloudWatch, GuardDuty.",
+        "gaps": [
+          "No documented change\u2011management process for security controls"
+        ],
+        "recommendations": [
+          "Adopt AWS CloudFormation or Terraform for IaC and enforce change\u2011control.",
+          "Document change\u2011management workflow."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "No formal asset inventory.",
+      "No documented change\u2011management process.",
+      "No privacy impact assessment for GDPR.",
+      "No formal risk assessment methodology.",
+      "No documented business continuity plan."
+    ],
+    "remediation_plan": [
+      "Month\u202f1: Deploy AWS Config rules and tag all resources; populate asset inventory.",
+      "Month\u202f2: Implement automated IAM access reviews; enforce MFA for all privileged users.",
+      "Month\u202f3: Conduct a full ISO\u202f27001 risk assessment; update risk register.",
+      "Month\u202f4: Draft and test a business continuity and disaster recovery plan.",
+      "Month\u202f5: Perform a privacy impact assessment for GDPR; update data processing agreements."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-28 02:02:12.838620",
+    "assessor": null,
+    "created_at": "2025-09-28 02:02:12.838627",
+    "updated_at": "2025-09-28 02:02:12.838631"
+  }
+}

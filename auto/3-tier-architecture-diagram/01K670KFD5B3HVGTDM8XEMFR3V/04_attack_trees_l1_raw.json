@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "id": "01H5G3Z0Y9Q5J3X5V4K7R8T2",
+    "title": "Unencrypted Sensitive Data Exposure Attack Tree",
+    "description": "Basic attack tree for the most critical threat: exposure of sensitive data due to lack of encryption at rest.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-28 02:00:00+00:00",
+    "last_updated": "2025-09-28 01:58:36.572898",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "T1",
+    "description": "Unencrypted Sensitive Data Exposure",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 5.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "T1.1",
+        "description": "Compromise IAM credentials to gain storage access",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "T1.1.1",
+            "description": "Obtain IAM user/role credentials via phishing or credential stuffing",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 6.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Enforce MFA for all IAM users and roles",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              },
+              {
+                "description": "Implement least\u2011privilege IAM policies",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.7
+              },
+              {
+                "description": "Enable CloudTrail logging and anomaly detection",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.6
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "T1.1.2",
+            "description": "Use compromised credentials to access S3 bucket",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 6.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Enable S3 bucket encryption (SSE\u2011S3 or SSE\u2011KMS)",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              },
+              {
+                "description": "Apply bucket policies to restrict access to only required principals",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "T1.1.3",
+            "description": "Use compromised credentials to access RDS snapshots",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 6.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Enable RDS encryption at rest (KMS)",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              },
+              {
+                "description": "Restrict snapshot export permissions to a dedicated role",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Rotate IAM credentials regularly",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.5
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "T1.2",
+        "description": "Exploit misconfigured encryption settings",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "T1.2.1",
+            "description": "Identify S3 bucket without encryption enabled",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 4.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Automated compliance checks (AWS Config) for S3 encryption",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "T1.2.2",
+            "description": "Identify RDS instance with encryption disabled",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 4.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Require encryption for all RDS instances via launch templates",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Enforce encryption policies via AWS Organizations Service Control Policies",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement centralized key management with AWS KMS and enforce key rotation",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      },
+      {
+        "description": "Enable automatic encryption for all new S3 buckets and RDS instances",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      },
+      {
+        "description": "Conduct regular penetration testing and vulnerability scanning focused on data at rest",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.6
+      }
+    ],
+    "references": []
+  }
+}

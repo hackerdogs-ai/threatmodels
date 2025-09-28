@@ -1,0 +1,262 @@
+{
+  "risk_prioritization": {
+    "id": "01K670NGM0ZZZZZZZZZZZZZZZZ",
+    "prioritization_method": "Weighted Risk Scoring (Business Impact, Technical Impact, Likelihood, Urgency)",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K670NGM0VW07WHCB1231ZC36",
+        "threat_title": "User Impersonation via Session Hijacking",
+        "risk_score": 10,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "Secure cookie flags",
+          "Session timeout policy"
+        ],
+        "recommended_actions": [
+          "Implement HttpOnly, Secure, SameSite cookies",
+          "Enforce short session timeouts and token rotation",
+          "Invalidate sessions on logout",
+          "Add multi\u2011factor authentication for privileged accounts"
+        ]
+      },
+      {
+        "risk_id": "01K670NGM1XM4JSJTK6F78VYZZ",
+        "threat_title": "Man\u2011in\u2011the\u2011Middle Attacks on Unencrypted Traffic",
+        "risk_score": 10,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "AWS Certificate Manager",
+          "HTTPS listeners on ELB & CloudFront"
+        ],
+        "recommended_actions": [
+          "Enable TLS everywhere (Route\u00a053, ELB, EC2, CloudFront, S3)",
+          "Configure strict TLS cipher suites and HTTP/2",
+          "Automate certificate renewal via ACM"
+        ]
+      },
+      {
+        "risk_id": "01K670NGM1K92MX72J4RXCT1PQ",
+        "threat_title": "Unencrypted Sensitive Data Exposure",
+        "risk_score": 10,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [
+          "KMS keys",
+          "RDS encryption",
+          "S3 bucket encryption"
+        ],
+        "recommended_actions": [
+          "Enable encryption at rest for RDS, S3, and ElasticCache",
+          "Encrypt automated backups and snapshots",
+          "Use customer\u2011managed KMS keys with strict rotation"
+        ]
+      },
+      {
+        "risk_id": "01K670NGM1WETMZGVZKDDQP95X",
+        "threat_title": "Distributed Denial of Service on ELB and Application Layer",
+        "risk_score": 10,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [
+          "AWS Shield Advanced",
+          "WAF rate\u2011based rules"
+        ],
+        "recommended_actions": [
+          "Subscribe to Shield Advanced for global protection",
+          "Configure WAF with rate\u2011based and geo\u2011restriction rules",
+          "Enable ELB access logs and monitor traffic patterns"
+        ]
+      },
+      {
+        "risk_id": "01K670NGM1DZ95ZSPBDPT490CN",
+        "threat_title": "Privilege Escalation via Misconfigured IAM Roles",
+        "risk_score": 10,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "IAM Access Analyzer",
+          "Least\u2011Privilege policy templates"
+        ],
+        "recommended_actions": [
+          "Audit all IAM roles and instance profiles with Access Analyzer",
+          "Remove over\u2011permissive policies and enforce least privilege",
+          "Enable IAM policy simulator for testing"
+        ]
+      },
+      {
+        "risk_id": "01K670NGM1PC8Y7KS45TZ92Y8M",
+        "threat_title": "SQL Injection into RDS",
+        "risk_score": 10,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "low",
+        "timeline": "short_term",
+        "dependencies": [
+          "ORM framework",
+          "Parameterized query support"
+        ],
+        "recommended_actions": [
+          "Use parameterized queries or prepared statements",
+          "Validate and sanitize all user input server\u2011side",
+          "Implement a web application firewall (WAF) rule set for SQLi patterns"
+        ]
+      },
+      {
+        "risk_id": "01K670NGM12AH8RGCGS0PYA2Z4",
+        "threat_title": "Cross\u2011Site Scripting (XSS) via Web Server",
+        "risk_score": 8,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "low",
+        "timeline": "short_term",
+        "dependencies": [
+          "Content Security Policy (CSP)",
+          "Output encoding libraries"
+        ],
+        "recommended_actions": [
+          "Encode all dynamic output using context\u2011aware libraries",
+          "Deploy a strong CSP header with nonce or hash",
+          "Enable XSS protection headers (X-XSS-Protection, X-Content-Type-Options)"
+        ]
+      },
+      {
+        "risk_id": "01K670NGM2H40G107ZHT32BV70",
+        "threat_title": "Weak Authentication and Session Management",
+        "risk_score": 10,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [
+          "MFA enforcement",
+          "Password policy engine"
+        ],
+        "recommended_actions": [
+          "Enforce strong password policies and MFA for all users",
+          "Implement account lockout after repeated failed attempts",
+          "Use secure authentication protocols (OAuth2, OpenID Connect)"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K670NGM0VW07WHCB1231ZC36",
+        "01K670NGM1XM4JSJTK6F78VYZZ",
+        "01K670NGM1K92MX72J4RXCT1PQ",
+        "01K670NGM1WETMZGVZKDDQP95X",
+        "01K670NGM1DZ95ZSPBDPT490CN",
+        "01K670NGM1PC8Y7KS45TZ92Y8M",
+        "01K670NGM2H40G107ZHT32BV70"
+      ],
+      "high_priority_risks": [],
+      "medium_priority_risks": [
+        "01K670NGM12AH8RGCGS0PYA2Z4"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K670NGM0VW07WHCB1231ZC36": 10.0,
+      "01K670NGM1XM4JSJTK6F78VYZZ": 10.0,
+      "01K670NGM1K92MX72J4RXCT1PQ": 10.0,
+      "01K670NGM1WETMZGVZKDDQP95X": 10.0,
+      "01K670NGM1DZ95ZSPBDPT490CN": 10.0,
+      "01K670NGM1PC8Y7KS45TZ92Y8M": 10.0,
+      "01K670NGM12AH8RGCGS0PYA2Z4": 8.0,
+      "01K670NGM2H40G107ZHT32BV70": 10.0
+    },
+    "risk_rankings": [
+      [
+        "01K670NGM0VW07WHCB1231ZC36",
+        10.0
+      ],
+      [
+        "01K670NGM1XM4JSJTK6F78VYZZ",
+        10.0
+      ],
+      [
+        "01K670NGM1K92MX72J4RXCT1PQ",
+        10.0
+      ],
+      [
+        "01K670NGM1WETMZGVZKDDQP95X",
+        10.0
+      ],
+      [
+        "01K670NGM1DZ95ZSPBDPT490CN",
+        10.0
+      ],
+      [
+        "01K670NGM1PC8Y7KS45TZ92Y8M",
+        10.0
+      ],
+      [
+        "01K670NGM2H40G107ZHT32BV70",
+        10.0
+      ],
+      [
+        "01K670NGM12AH8RGCGS0PYA2Z4",
+        8.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "High \u2013 potential regulatory fines, data\u2011breach remediation costs, and loss of revenue from downtime.",
+      "operational_impact": "High \u2013 critical services (authentication, data access, CDN) could be disrupted, affecting user experience and business continuity.",
+      "reputational_impact": "High \u2013 public exposure of data breaches or service outages can erode customer trust and brand value."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-28 02:03:15.917246",
+    "updated_at": "2025-09-28 02:03:15.917250"
+  }
+}

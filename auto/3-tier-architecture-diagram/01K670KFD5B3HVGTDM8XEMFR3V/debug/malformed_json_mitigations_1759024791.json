@@ -1,0 +1,69 @@
+{
+  "mitigations": [
+    {
+      "id": "01K670NGM0AAAAAAAABBBBBBBB",
+      "description": "Enforce TLS everywhere by configuring HTTPS on Route 53, ELB, EC2, CloudFront, and S3. Use AWS Certificate Manager for certificate management.",
+      "type": "preventive",
+      "effectiveness": 9,
+      "priority": "critical",
+      "threat_ids": [
+        "01K670NGM1XM4JSJTK6F78VYZZ"
+      ],
+      "implementation_effort": "medium"
+    },
+    {
+      "id": "01K670NGM0CCCCCCCCDDDDDDDD",
+      "description": "Implement secure session handling: use HttpOnly, Secure, SameSite cookies, enforce short session timeouts, rotate session tokens, and invalidate on logout.",
+      "type": "preventive",
+      "effectiveness": 8,
+      "priority": "high",
+      "threat_ids": [
+        "01K670NGM0VW07WHCB1231ZC36",
+        "01K670NGM2H40G107ZHT32BV70"
+      ],
+      "implementation_effort": "medium"
+    },
+    {
+      "id": "01K670NGM0EEEEEEEEFFFFFFFF",
+      "description": "Encrypt all data at rest: enable RDS encryption, S3 bucket default encryption (AES‑256 or KMS), and ElasticCache encryption. Ensure backups and snapshots are also encrypted.",
+      "type": "preventive",
+      "effectiveness": 9,
+      "priority": "critical",
+      "threat_ids": [
+        "01K670NGM1K92MX72J4RXCT1PQ"
+      ],
+      "implementation_effort": "high"
+    },
+    {
+      "id": "01K670NGM0GGGGGGGGHHHHHHHH",
+      "description": "Apply the principle of least privilege to all IAM roles and instance profiles. Use IAM Access Analyzer and regularly review policies to remove over‑permissive permissions.",
+      "type": "preventive",
+      "effectiveness": 8,
+      "priority": "high",
+      "threat_ids": [
+        "01K670NGM1DZ95ZSPBDPT490CN"
+      ],
+      "implementation_effort": "medium"
+    },
+    {
+      "id": "01K670NGM0IIIIIIIIJJJJJJJJ",
+      "description": "Use parameterized queries or ORM frameworks and validate all user input on the server side to prevent SQL injection into RDS.",
+      "type": "preventive",
+      "effectiveness": 8,
+      "priority": "high",
+      "threat_ids": [
+        "01K670NGM1PC8Y7KS45TZ92Y8M"
+      ],
+      "implementation_effort": "medium"
+    },
+    {
+      "id": "01K670NGM0KKKKKKKKLLLLLLLL",
+      "description": "Encode all dynamic output and enforce a Content Security Policy (CSP) to mitigate XSS attacks from the web server.",
+      "type": "preventive",
+      "effectiveness": 7,
+      "priority": "medium",
+      "threat_ids": [
+        "01K670NGM12AH8RGCGS0PYA2Z4"
+      ],
+      "implementation_effort": "medium"
+    }

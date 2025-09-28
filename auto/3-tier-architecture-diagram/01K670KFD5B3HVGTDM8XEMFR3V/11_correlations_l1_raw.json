@@ -1,0 +1,122 @@
+{
+  "correlations": [
+    {
+      "source_threat_model": "Scalable Web Application on AWS",
+      "correlation_type": "similar_threats",
+      "description": "Session hijacking, MITM on unencrypted traffic, and weak authentication are common across all web\u2011app threat models in the organization, regardless of the underlying stack.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Implement TLS everywhere and enforce HSTS on all endpoints.",
+        "Mark session cookies as Secure, HttpOnly, SameSite, and rotate tokens.",
+        "Enforce MFA and strong password policies for all user accounts."
+      ]
+    },
+    {
+      "source_threat_model": "Scalable Web Application on AWS",
+      "correlation_type": "shared_mitigations",
+      "description": "Encryption at rest (RDS, S3, ElastiCache) and encryption in transit are mitigations that appear in every AWS\u2011based threat model in the org.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Enable default encryption for all S3 buckets and RDS instances using AWS KMS.",
+        "Use KMS\u2011managed keys for ElastiCache and enable automatic backups with encryption.",
+        "Rotate KMS keys quarterly and audit key usage."
+      ]
+    },
+    {
+      "source_threat_model": "Scalable Web Application on AWS",
+      "correlation_type": "related_attack_patterns",
+      "description": "SQL injection and XSS are classic injection patterns that also surface in micro\u2011service and API gateway threat models.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Use parameterized queries or ORM frameworks for all database access.",
+        "Apply strict input validation and output encoding on every API endpoint.",
+        "Deploy a WAF with SQLi and XSS protection rules."
+      ]
+    },
+    {
+      "source_threat_model": "Scalable Web Application on AWS",
+      "correlation_type": "compliance_overlap",
+      "description": "All identified threats intersect with PCI\u2011DSS requirement 3 (protect cardholder data) and GDPR requirement 32 (data security).",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Document encryption controls and provide evidence for PCI\u2011DSS audits.",
+        "Implement data minimization and access controls to satisfy GDPR Article 5.",
+        "Maintain an incident response plan that addresses data breach notification."
+      ]
+    },
+    {
+      "source_threat_model": "Scalable Web Application on AWS",
+      "correlation_type": "risk_aggregation",
+      "description": "The high DREAD scores for MITM, data exposure, and DDoS can be aggregated to prioritize security investments across the portfolio.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Create a risk register that aggregates DREAD scores per asset type.",
+        "Allocate budget for Shield Advanced and WAF across all applications with scores >30.",
+        "Schedule quarterly risk reviews to adjust mitigation priorities."
+      ]
+    },
+    {
+      "source_threat_model": "Scalable Web Application on AWS",
+      "correlation_type": "shared_mitigations",
+      "description": "Privilege escalation via misconfigured IAM roles is a recurring threat in all AWS workloads.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Apply the principle of least privilege to every IAM role and instance profile.",
+        "Enable IAM Access Analyzer and schedule automated policy reviews.",
+        "Require MFA for privileged role assumption."
+      ]
+    },
+    {
+      "source_threat_model": "Scalable Web Application on AWS",
+      "correlation_type": "related_attack_patterns",
+      "description": "Distributed Denial of Service on ELB and application layer mirrors DDoS patterns seen in SaaS and e\u2011commerce threat models.",
+      "impact_level": "high",
+      "recommended_actions": [
+        "Enable AWS Shield Advanced and configure WAF rate\u2011based rules.",
+        "Implement auto\u2011scaling and health checks for all backend services.",
+        "Deploy anomaly detection on CloudWatch metrics."
+      ]
+    },
+    {
+      "source_threat_model": "Scalable Web Application on AWS",
+      "correlation_type": "compliance_overlap",
+      "description": "Data encryption and access controls align with ISO\u202f27001 controls A.10.1.1 (cryptographic controls) and A.9.1.2 (access control to information and assets).",
+      "impact_level": "medium",
+      "recommended_actions": [
+        "Maintain an inventory of encrypted assets and document key management.",
+        "Implement role\u2011based access control and audit logs for all privileged actions."
+      ]
+    },
+    {
+      "source_threat_model": "Scalable Web Application on AWS",
+      "correlation_type": "similar_threats",
+      "description": "Cross\u2011site scripting via web server is also present in the mobile\u2011app backend threat model, indicating a shared vulnerability surface.",
+      "impact_level": "medium",
+      "recommended_actions": [
+        "Adopt a Content Security Policy (CSP) across all web and mobile APIs.",
+        "Use a templating engine that auto\u2011escapes output.",
+        "Run automated XSS scanners during CI/CD."
+      ]
+    },
+    {
+      "source_threat_model": "Scalable Web Application on AWS",
+      "correlation_type": "shared_mitigations",
+      "description": "Logging and monitoring are common mitigations across all threat models, yet many workloads lack centralized observability.",
+      "impact_level": "medium",
+      "recommended_actions": [
+        "Centralize logs in CloudWatch Logs or a SIEM and enable real\u2011time alerts for anomalous activity.",
+        "Implement log retention policies that satisfy regulatory requirements.",
+        "Use AWS Config to detect configuration drift."
+      ]
+    }
+  ],
+  "correlation_patterns": [],
+  "risk_aggregation_analysis": {},
+  "optimization_opportunities": [],
+  "threat_intelligence_integration": {},
+  "advanced_analytics": {},
+  "strategic_recommendations": [],
+  "next_steps": [],
+  "innovation_roadmap": null,
+  "summary": "The threat model for the scalable AWS web application shares numerous high\u2011impact threats, mitigations, and compliance requirements with other organizational and industry models. By aligning TLS enforcement, encryption at rest, IAM least privilege, WAF/Shield, and robust input validation across all workloads, security teams can achieve cross\u2011domain risk reduction, streamline audits, and prioritize investments based on aggregated DREAD scores."
+}

@@ -1,0 +1,42 @@
+{
+  "project_name": "Scalable Web Application on AWS",
+  "line_of_business": [
+    "E-commerce",
+    "Content Delivery",
+    "SaaS"
+  ],
+  "application_type": "Web Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Confidential",
+  "authentication_methods": [
+    "OAuth",
+    "JWT",
+    "Basic Authentication"
+  ],
+  "deployment_environment": "Cloud",
+  "compliance_requirements": [
+    "GDPR",
+    "HIPAA",
+    "PCI-DSS"
+  ],
+  "security_requirements": [
+    "Data encryption in transit and at rest",
+    "DDoS protection",
+    "Access controls",
+    "Incident response planning",
+    "Regular security assessments"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Web application architecture and associated services deployed on AWS",
+  "assumptions": [
+    "The application will handle sensitive user data",
+    "All AWS services are configured according to best practices",
+    "Users will access the application over the internet"
+  ],
+  "constraints": [
+    "Limited visibility into specific programming languages and frameworks",
+    "Dependency on AWS service availability",
+    "Potential impact of regional regulations on data storage"
+  ]
+}

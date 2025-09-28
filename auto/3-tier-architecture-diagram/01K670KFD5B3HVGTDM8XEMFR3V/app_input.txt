@@ -1,0 +1,31 @@
+Overall Architecture: The architecture represents a scalable web application hosted on AWS, utilizing various services for load balancing, data storage, and content delivery. It is designed to handle dynamic and static content efficiently while ensuring high availability and performance.
+
+Key Components:
+- **Amazon Route 53**: A DNS service that routes traffic to the application.
+- **Elastic Load Balancer (ELB)**: Distributes incoming application traffic across multiple targets, ensuring high availability.
+- **Web Servers**: Handle incoming requests and serve web content, part of an auto-scaling group for dynamic scaling based on demand.
+- **App Servers**: Process business logic and interact with databases and caching layers.
+- **Elastic Cache Tier**: Provides in-memory caching to speed up data retrieval and reduce database load.
+- **Amazon RDS**: A managed relational database service for structured data storage, with a primary and standby instance for high availability.
+- **Amazon S3 Bucket**: Stores static content like images and videos, accessible via Amazon CloudFront for content delivery.
+- **Amazon CloudFront**: A content delivery network (CDN) that caches static content at edge locations for faster access.
+- **Amazon SNS Notifications**: Sends notifications to subscribers, useful for alerting and communication.
+- **Amazon SES Email**: Used for sending emails, such as notifications or alerts.
+
+Data Flow: User requests are routed through Route 53 to the Elastic Load Balancer, which distributes them to the web servers. The web servers process requests and may interact with app servers for business logic. Data is retrieved from the Elastic Cache Tier or Amazon RDS as needed. Static content is served from the S3 bucket, often via CloudFront for optimized delivery.
+
+Technologies Used: AWS services including Route 53, Elastic Load Balancer, EC2 (for web and app servers), Elastic Cache, RDS, S3, CloudFront, SNS, and SES. Programming languages and frameworks are not specified in the diagram.
+
+Security Considerations: The architecture includes load balancing for traffic distribution, auto-scaling for resilience, and RDS with standby for database failover. However, specific security measures such as firewalls, encryption, or access controls are not detailed in the diagram.
+
+Top 10 FAQ:
+1. What specific security measures are in place for data in transit and at rest?
+2. How is user authentication and authorization managed within the application?
+3. What monitoring and logging solutions are implemented for security events?
+4. How are backups handled for the RDS database?
+5. What is the process for scaling the application during peak loads?
+6. How are the web and app servers secured against common vulnerabilities?
+7. What measures are in place to protect against DDoS attacks?
+8. How is sensitive data handled and stored within the architecture?
+9. What incident response plans are in place for data breaches or outages?
+10. How frequently are security assessments and audits conducted on the architecture?

@@ -1,0 +1,19 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Internet_Boundary, "Internet Boundary") {
+    }
+    System_Boundary(tb_Application_Boundary, "Application Boundary") {
+        System(Application_Layer, "Application Layer", "EC2 instances (web & app servers) in an Auto Scaling group handling business logic and dynamic content.")
+    }
+    System_Boundary(tb_Data_Boundary, "Data Boundary") {
+        System(Application_Layer, "Application Layer", "EC2 instances (web & app servers) in an Auto Scaling group handling business logic and dynamic content.")
+        SystemDb(Data_Layer, "Data Layer", "Amazon RDS (primary + standby) and Elastic Cache for structured data and in‑memory caching.")
+    }
+    System(Content_Delivery_Layer, "Content Delivery Layer", "Amazon S3 bucket for static assets served via CloudFront CDN.")
+    System(Load_Balancing_Layer, "Load Balancing Layer", "Route 53 DNS routing to an Elastic Load Balancer distributing traffic to the application layer.")
+    System(Internet, "Internet", "Auto-created component: Internet")
+
+    Rel(Internet, Load_Balancing_Layer, "Uses")
+    Rel(Load_Balancing_Layer, Application_Layer, "Uses")
+    Rel(Application_Layer, Data_Layer, "Uses")
+    Rel(Application_Layer, Content_Delivery_Layer, "Uses")

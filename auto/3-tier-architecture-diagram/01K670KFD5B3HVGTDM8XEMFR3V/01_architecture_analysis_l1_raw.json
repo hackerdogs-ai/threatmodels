@@ -1,0 +1,99 @@
+{
+  "id": "01K670MB0YNBFMCWF1Q8FZDZQG",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Application Layer",
+      "description": "EC2 instances (web & app servers) in an Auto Scaling group handling business logic and dynamic content.",
+      "type": "backend"
+    },
+    {
+      "name": "Data Layer",
+      "description": "Amazon RDS (primary + standby) and Elastic Cache for structured data and in\u2011memory caching.",
+      "type": "database"
+    },
+    {
+      "name": "Content Delivery Layer",
+      "description": "Amazon S3 bucket for static assets served via CloudFront CDN.",
+      "type": "frontend"
+    },
+    {
+      "name": "Load Balancing Layer",
+      "description": "Route 53 DNS routing to an Elastic Load Balancer distributing traffic to the application layer.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Internet",
+      "destination": "Load Balancing Layer",
+      "description": "User requests resolved by Route 53 and forwarded to ELB."
+    },
+    {
+      "source": "Load Balancing Layer",
+      "destination": "Application Layer",
+      "description": "Traffic distributed to EC2 instances for request processing."
+    },
+    {
+      "source": "Application Layer",
+      "destination": "Data Layer",
+      "description": "Business logic queries RDS or Elastic Cache for data."
+    },
+    {
+      "source": "Application Layer",
+      "destination": "Content Delivery Layer",
+      "description": "Requests for static assets are served from S3 via CloudFront."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Internet Boundary",
+      "description": "Boundary between external users and Route 53/ELB.",
+      "components": [
+        "Route 53",
+        "ELB"
+      ]
+    },
+    {
+      "name": "Application Boundary",
+      "description": "Boundary between ELB and application servers.",
+      "components": [
+        "ELB",
+        "Application Layer"
+      ]
+    },
+    {
+      "name": "Data Boundary",
+      "description": "Boundary between application servers and the Data Layer.",
+      "components": [
+        "Application Layer",
+        "Data Layer"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 01:57:35.390786",
+  "updated_at": "2025-09-28 01:57:35.390794"
+}
