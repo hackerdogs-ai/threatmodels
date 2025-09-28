@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Local_Machine_Boundary, "Local Machine Boundary") {
+        System(Fastlane_CLI, "Fastlane CLI", "Ruby executable that parses lane definitions, loads plugins, and orchestrates tasks.")
+        System(Plugin_System, "Plugin System", "Dynamic loading of Ruby gems that implement specific actions (e.g., upload to App Store).")
+        SystemDb(Configuration___Credential_Store, "Configuration & Credential Store", "Local YAML/JSON files and encrypted keychain that hold API keys, certificates, and lane definitions.")
+        SystemDb(Local_Filesystem, "Local Filesystem", "Repository of app binaries, screenshots, and metadata used by Fastlane.")
+    }
+    System_Boundary(tb_Plugin_Trust_Boundary, "Plugin Trust Boundary") {
+        System(Plugin_System, "Plugin System", "Dynamic loading of Ruby gems that implement specific actions (e.g., upload to App Store).")
+    }
+    System(External_Services, "External Services", "Remote APIs (Apple Developer Portal, Google Play, CI/CD, Slack, etc.) accessed via HTTPS.")
+
+    Rel(Fastlane_CLI, Configuration___Credential_Store, "Uses")
+    Rel(Fastlane_CLI, External_Services, "Uses")
+    Rel(Plugin_System, External_Services, "Uses")

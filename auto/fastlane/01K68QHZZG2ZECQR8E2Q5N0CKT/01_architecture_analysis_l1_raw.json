@@ -1,0 +1,92 @@
+{
+  "id": "01K68QJ7QXH4NCA66CJ7HHMZC3",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Fastlane CLI",
+      "description": "Ruby executable that parses lane definitions, loads plugins, and orchestrates tasks.",
+      "type": "frontend/backend"
+    },
+    {
+      "name": "Plugin System",
+      "description": "Dynamic loading of Ruby gems that implement specific actions (e.g., upload to App Store).",
+      "type": "service"
+    },
+    {
+      "name": "Configuration & Credential Store",
+      "description": "Local YAML/JSON files and encrypted keychain that hold API keys, certificates, and lane definitions.",
+      "type": "database"
+    },
+    {
+      "name": "External Services",
+      "description": "Remote APIs (Apple Developer Portal, Google Play, CI/CD, Slack, etc.) accessed via HTTPS.",
+      "type": "service"
+    },
+    {
+      "name": "Local Filesystem",
+      "description": "Repository of app binaries, screenshots, and metadata used by Fastlane.",
+      "type": "storage"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Fastlane CLI",
+      "destination": "Configuration & Credential Store",
+      "description": "Reads lane definitions and decrypts stored credentials."
+    },
+    {
+      "source": "Fastlane CLI",
+      "destination": "External Services",
+      "description": "Sends signed binaries, metadata, and build artifacts over HTTPS."
+    },
+    {
+      "source": "Plugin System",
+      "destination": "External Services",
+      "description": "Plugins perform actions such as uploading to App Store or posting to Slack."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Local Machine Boundary",
+      "description": "Separates the user\u2019s local environment from external services.",
+      "components": [
+        "Fastlane CLI",
+        "Plugin System",
+        "Configuration & Credential Store",
+        "Local Filesystem"
+      ]
+    },
+    {
+      "name": "Plugin Trust Boundary",
+      "description": "Isolates third\u2011party plugin code from core Fastlane logic.",
+      "components": [
+        "Plugin System"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 17:57:38.173129",
+  "updated_at": "2025-09-28 17:57:38.173134"
+}
