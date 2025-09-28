@@ -1,0 +1,14 @@
+C4Context
+    title Architecture Analysis - System Context
+    System(Elastic_Load_Balancer__ELB_, "Elastic Load Balancer (ELB)", "Distributes incoming traffic across web servers and app servers.")
+    System(Auto_Scaling_Group, "Auto Scaling Group", "Automatically adjusts web/app server count based on demand.")
+    SystemDb(Amazon_RDS, "Amazon RDS", "Relational database with standby instance for high availability.")
+    SystemDb(Amazon_S3, "Amazon S3", "Stores static content like images and files.")
+    System(Amazon_CloudFront, "Amazon CloudFront", "CDN for accelerating static and dynamic content delivery.")
+    System(User, "User", "Auto-created component: User")
+    System(Elastic_Load_Balancer, "Elastic Load Balancer", "Auto-created component: Elastic Load Balancer")
+    System(App_Servers, "App Servers", "Auto-created component: App Servers")
+
+    Rel(User, Elastic_Load_Balancer, "Uses")
+    Rel(Elastic_Load_Balancer, Auto_Scaling_Group, "Uses")
+    Rel(App_Servers, Amazon_RDS, "Uses")

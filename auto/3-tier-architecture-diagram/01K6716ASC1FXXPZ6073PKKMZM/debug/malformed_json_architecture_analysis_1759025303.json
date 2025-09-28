@@ -1,0 +1,45 @@
+{
+  "architecture_overview": "A scalable web application hosted on AWS with load balancing, auto-scaling, and distributed data storage for high availability and performance.",
+  "components": [
+    {
+      "name": "Elastic Load Balancer (ELB)",
+      "description": "Distributes incoming traffic across web servers and app servers.",
+      "type": "service"
+    },
+    {
+      "name": "Auto Scaling Group",
+      "description": "Automatically adjusts web/app server count based on demand.",
+      "type": "infrastructure"
+    },
+    {
+      "name": "Amazon RDS",
+      "description": "Relational database with standby instance for high availability.",
+      "type": "database"
+    },
+    {
+      "name": "Amazon S3",
+      "description": "Stores static content like images and files.",
+      "type": "storage"
+    },
+    {
+      "name": "Amazon CloudFront",
+      "description": "CDN for accelerating static and dynamic content delivery.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "User",
+      "destination": "Elastic Load Balancer",
+      "description": "HTTP requests routed via Route 53 to the ELB"
+    },
+    {
+      "source": "Elastic Load Balancer",
+      "destination": "Auto Scaling Group",
+      "description": "Traffic distributed to scalable web/app servers"
+    },
+    {
+      "source": "App Servers",
+      "destination": "Amazon RDS",
+      "description": "Application logic interacts with relational database"
+    }

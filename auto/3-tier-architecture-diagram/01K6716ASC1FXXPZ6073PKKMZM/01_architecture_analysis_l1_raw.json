@@ -1,0 +1,74 @@
+{
+  "id": "01K67183FP99Y20QFZTPFFETY8",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Elastic Load Balancer (ELB)",
+      "description": "Distributes incoming traffic across web servers and app servers.",
+      "type": "service"
+    },
+    {
+      "name": "Auto Scaling Group",
+      "description": "Automatically adjusts web/app server count based on demand.",
+      "type": "infrastructure"
+    },
+    {
+      "name": "Amazon RDS",
+      "description": "Relational database with standby instance for high availability.",
+      "type": "database"
+    },
+    {
+      "name": "Amazon S3",
+      "description": "Stores static content like images and files.",
+      "type": "storage"
+    },
+    {
+      "name": "Amazon CloudFront",
+      "description": "CDN for accelerating static and dynamic content delivery.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "User",
+      "destination": "Elastic Load Balancer",
+      "description": "HTTP requests routed via Route 53 to the ELB"
+    },
+    {
+      "source": "Elastic Load Balancer",
+      "destination": "Auto Scaling Group",
+      "description": "Traffic distributed to scalable web/app servers"
+    },
+    {
+      "source": "App Servers",
+      "destination": "Amazon RDS",
+      "description": "Application logic interacts with relational database"
+    }
+  ],
+  "trust_boundaries": [],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 02:08:23.030873",
+  "updated_at": "2025-09-28 02:08:23.030893"
+}
