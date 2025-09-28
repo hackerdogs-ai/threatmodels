@@ -1,0 +1,16 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Input_Trust_Boundary, "User Input Trust Boundary") {
+        System(Frontend, "Frontend", "A web interface (likely React or similar) allowing users to input prompts and view generated images. Handles user interaction and displays results.")
+        System(Backend_API, "Backend API", "A REST API (e.g., Python/Flask, Node.js/Express) that receives prompts from the frontend, interacts with the diffusion model, and returns the gener...")
+    }
+    System_Boundary(tb_Diffusion_Model_Trust_Boundary, "Diffusion Model Trust Boundary") {
+        System(Backend_API, "Backend API", "A REST API (e.g., Python/Flask, Node.js/Express) that receives prompts from the frontend, interacts with the diffusion model, and returns the gener...")
+    }
+    System(Diffusion_Model, "Diffusion Model", "The core AI model responsible for generating images from text prompts.  This is likely a pre-trained model hosted externally (e.g., on a cloud plat...")
+    SystemDb(Database, "Database", "Stores user data (if any), prompt history, and potentially image metadata.  Could be a relational database (PostgreSQL, MySQL) or a NoSQL database ...")
+
+    Rel(Frontend, Backend_API, "Uses")
+    Rel(Backend_API, Diffusion_Model, "Uses")
+    Rel(Diffusion_Model, Backend_API, "Uses")
+    Rel(Backend_API, Frontend, "Uses")

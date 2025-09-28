@@ -1,0 +1,91 @@
+{
+  "id": "01K68PVF6PV696CPBW720107VJ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "A web interface (likely React or similar) allowing users to input prompts and view generated images. Handles user interaction and displays results.",
+      "type": "frontend"
+    },
+    {
+      "name": "Backend API",
+      "description": "A REST API (e.g., Python/Flask, Node.js/Express) that receives prompts from the frontend, interacts with the diffusion model, and returns the generated images.  Handles authentication and authorization.",
+      "type": "backend"
+    },
+    {
+      "name": "Diffusion Model",
+      "description": "The core AI model responsible for generating images from text prompts.  This is likely a pre-trained model hosted externally (e.g., on a cloud platform like AWS Sagemaker or Google Cloud Vertex AI).",
+      "type": "service"
+    },
+    {
+      "name": "Database",
+      "description": "Stores user data (if any), prompt history, and potentially image metadata.  Could be a relational database (PostgreSQL, MySQL) or a NoSQL database (MongoDB).",
+      "type": "database"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "Backend API",
+      "description": "User input (text prompt) is sent from the frontend to the backend API."
+    },
+    {
+      "source": "Backend API",
+      "destination": "Diffusion Model",
+      "description": "The backend API forwards the text prompt to the diffusion model for image generation."
+    },
+    {
+      "source": "Diffusion Model",
+      "destination": "Backend API",
+      "description": "The diffusion model returns the generated image to the backend API."
+    },
+    {
+      "source": "Backend API",
+      "destination": "Frontend",
+      "description": "The backend API sends the generated image back to the frontend for display."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Input Trust Boundary",
+      "description": "The frontend and backend API trust user-provided text prompts.  This boundary is highly vulnerable to prompt injection attacks.",
+      "components": [
+        "Frontend",
+        "Backend API"
+      ]
+    },
+    {
+      "name": "Diffusion Model Trust Boundary",
+      "description": "The diffusion model itself is a third-party service. Trust relies on the security practices of the hosting provider.",
+      "components": [
+        "Backend API",
+        "Diffusion Model (External Service)"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-28 17:45:12.150935",
+  "updated_at": "2025-09-28 17:45:12.150940"
+}
