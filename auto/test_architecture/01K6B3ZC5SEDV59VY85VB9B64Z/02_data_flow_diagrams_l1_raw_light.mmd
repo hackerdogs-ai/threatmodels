@@ -1,0 +1,45 @@
+graph TB
+  node_01F8Z8W8F8Z8W8F8Z8W8F8O["User | (user) | [UT]"]:::untrusted
+  node_01F8Z8W8F8Z8W8F8Z8W8F8P["Stripe Payment Gateway | (service) | [UT]"]:::untrusted
+  node_01F8Z8W8F8Z8W8F8Z8W8F8Q["SendGrid | (service) | [UT]"]:::untrusted
+  node_01F8Z8W8F8Z8W8F8Z8W8F8R["AWS S3 | (service) | [UT]"]:::untrusted
+  node_01F8Z8W8F8Z8W8F8Z8W8F8S["CloudFront | (service) | [UT]"]:::untrusted
+  node_01F8Z8W8F8Z8W8F8Z8W8F8E["Frontend Application | (frontend) | [LT]"]:::lowTrust
+  node_01F8Z8W8F8Z8W8F8Z8W8F8F["User Service | (service) | [HT]"]:::highTrust
+  node_01F8Z8W8F8Z8W8F8Z8W8F8G["Product Service | (service) | [HT]"]:::highTrust
+  node_01F8Z8W8F8Z8W8F8Z8W8F8H["Order Service | (service) | [HT]"]:::highTrust
+  node_01F8Z8W8F8Z8W8F8Z8W8F8I["Payment Service | (service) | [VHT]"]:::veryHighTrust
+  node_01F8Z8W8F8Z8W8F8Z8W8F8J["Notification Service | (service) | [HT]"]:::highTrust
+  node_01F8Z8W8F8Z8W8F8Z8W8F8K["User Database | (database)"]:::dataStore
+  node_01F8Z8W8F8Z8W8F8Z8W8F8L["Product Database | (database)"]:::dataStore
+  node_01F8Z8W8F8Z8W8F8Z8W8F8M["Order Database | (database)"]:::dataStore
+  node_01F8Z8W8F8Z8W8F8Z8W8F8N["Cache (Redis) | (cache)"]:::dataStore
+  node_01F8Z8W8F8Z8W8F8Z8W8F8A["User Data | [PII]"]:::dataAsset,pii
+  node_01F8Z8W8F8Z8W8F8Z8W8F8B["Product Data | [INT]"]:::dataAsset,internal
+  node_01F8Z8W8F8Z8W8F8Z8W8F8C["Order Data | [PCI]"]:::dataAsset,pci
+  node_01F8Z8W8F8Z8W8F8Z8W8F8D["Notification Data | [INT]"]:::dataAsset,internal
+
+  node_01F8Z8W8F8Z8W8F8Z8W8F8O -->|User Interaction| node_01F8Z8W8F8Z8W8F8Z8W8F8E:::encryptedFlow
+  node_01F8Z8W8F8Z8W8F8Z8W8F8E -->|API Calls to User Service| node_01F8Z8W8F8Z8W8F8Z8W8F8F:::encryptedFlow
+  node_01F8Z8W8F8Z8W8F8Z8W8F8E -->|API Calls to Product Service| node_01F8Z8W8F8Z8W8F8Z8W8F8G:::encryptedFlow
+
+  classDef externalEntity fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef process fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef dataStore fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef dataAsset fill:#ffa1ad,stroke:#A259FF,stroke-width:2px,color:#0B0D17
+  classDef untrusted fill:#FFB3B3,stroke:#8B0000,stroke-width:3px,stroke-dasharray:5 5
+  classDef lowTrust fill:#f77c63,stroke:#f77c63,stroke-width:2px,stroke-dasharray:3 3
+  classDef mediumTrust fill:#FFF2B3,stroke:#7A6300,stroke-width:2px
+  classDef highTrust fill:#C2FFD8,stroke:#106B49,stroke-width:2px
+  classDef veryHighTrust fill:#36FF8F,stroke:#36FF8F,stroke-width:3px
+  classDef public fill:#C2FFD8,stroke:#106B49,stroke-width:1px
+  classDef internal fill:#FFF2B3,stroke:#7A6300,stroke-width:1px
+  classDef confidential fill:#FFB3B3,stroke:#8B0000,stroke-width:2px
+  classDef restricted fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef pii fill:#ffa1ad,stroke:#A259FF,stroke-width:2px
+  classDef pci fill:#8B0000,stroke:#8B0000,stroke-width:3px
+  classDef phi fill:#ffa1ad,stroke:#A259FF,stroke-width:3px
+  classDef encryptedFlow stroke:#106B49,stroke-width:2px
+  classDef unencryptedFlow stroke:#8B0000,stroke-width:2px,stroke-dasharray:5 5
+  classDef authenticatedFlow stroke:#29ABE2,stroke-width:2px
+  classDef trustBoundary fill:transparent,stroke:#2E3440,stroke-width:3px,stroke-dasharray:10 5

@@ -1,0 +1,36 @@
+graph TB
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8["User Account Spoofing Attack Tree | [HIGH]"]:::highRisk
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-1["Phishing Attack to Steal Credentials | [HIGH]"]:::highRisk
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-1_cm_0["CM: User education on recognizing phishing attempts (Eff: 0.8)"]:::countermeasure
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-1_cm_1["CM: Implementing email filtering for phishing (Eff: 0.7)"]:::countermeasure
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-2["Session Hijacking via XSS | [HIGH]"]:::highRisk
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-2_cm_0["CM: Implement Content Security Policy (CSP) (Eff: 0.9)"]:::countermeasure
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-2_cm_1["CM: Use secure cookies with HttpOnly and SameSite attributes (Eff: 0.85)"]:::countermeasure
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-3["Credential Stuffing Attack | [MED]"]:::mediumRisk
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-3_cm_0["CM: Implement rate limiting on login attempts (Eff: 0.8)"]:::countermeasure
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-3_cm_1["CM: Require multi-factor authentication (MFA) (Eff: 0.9)"]:::countermeasure
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8_cm_0["CM: Implement strong password policies (Eff: 0.75)"]:::countermeasure
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8_cm_1["CM: Regular security awareness training for users (Eff: 0.8)"]:::countermeasure
+
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8 -.-> node_01K6B41NP0FAZ2FRFCV5ZC52Q8-1
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-1 -.-> node_01K6B41NP0FAZ2FRFCV5ZC52Q8-1_cm_0
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-1 -.-> node_01K6B41NP0FAZ2FRFCV5ZC52Q8-1_cm_1
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8 -.-> node_01K6B41NP0FAZ2FRFCV5ZC52Q8-2
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-2 -.-> node_01K6B41NP0FAZ2FRFCV5ZC52Q8-2_cm_0
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-2 -.-> node_01K6B41NP0FAZ2FRFCV5ZC52Q8-2_cm_1
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8 -.-> node_01K6B41NP0FAZ2FRFCV5ZC52Q8-3
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-3 -.-> node_01K6B41NP0FAZ2FRFCV5ZC52Q8-3_cm_0
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8-3 -.-> node_01K6B41NP0FAZ2FRFCV5ZC52Q8-3_cm_1
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8 -.-> node_01K6B41NP0FAZ2FRFCV5ZC52Q8_cm_0
+  node_01K6B41NP0FAZ2FRFCV5ZC52Q8 -.-> node_01K6B41NP0FAZ2FRFCV5ZC52Q8_cm_1
+
+  classDef andNode fill:#FF4C4C,stroke:#FF4C4C,stroke-width:2px,color:#F5F7FA
+  classDef orNode fill:#36FF8F,stroke:#36FF8F,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#29ABE2,stroke:#29ABE2,stroke-width:2px,color:#F5F7FA
+  classDef highRisk fill:#FF4C4C,color:#F5F7FA,stroke:#FF4C4C,stroke-width:2px
+  classDef mediumRisk fill:#FFD300,stroke:#FFD300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#A259FF,stroke:#c3a4ff,stroke-width:1px,stroke-dasharray:3 3,color:#F5F7FA
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

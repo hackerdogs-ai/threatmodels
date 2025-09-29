@@ -1,0 +1,253 @@
+{
+  "risk_prioritization": {
+    "id": "01K6B41NP0FAZ2FRFCV5ZC52Q17",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K6B41NNZ202NW93MK0TA4X3S",
+        "threat_title": "User Account Spoofing",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement multi-factor authentication (MFA)",
+          "Enhance session management practices"
+        ]
+      },
+      {
+        "risk_id": "01K6B41NP0HXFFCBZQ6QQV8BTB",
+        "threat_title": "SQL Injection in User Input",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use secure coding practices",
+          "Conduct regular code reviews and security testing"
+        ]
+      },
+      {
+        "risk_id": "01K6B41NP0TEPR8C8HZ0VDCRBA",
+        "threat_title": "Cross-Site Scripting (XSS)",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement Content Security Policy (CSP)",
+          "Sanitize user input and output"
+        ]
+      },
+      {
+        "risk_id": "01K6B41NP0FAZ2FRFCV5ZC52Q10",
+        "threat_title": "Data Tampering in API Requests",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use input validation and sanitization techniques",
+          "Implement API security best practices"
+        ]
+      },
+      {
+        "risk_id": "01K6B41NP0QM8370BPEC2D8DKD",
+        "threat_title": "Denial of Service via API Rate Limiting",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting on APIs",
+          "Monitor API usage patterns"
+        ]
+      },
+      {
+        "risk_id": "01K6B41NNZBESBRG4RY8588JGH",
+        "threat_title": "Repudiation of Transactions",
+        "risk_score": 7,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement comprehensive logging and monitoring",
+          "Ensure transaction verification mechanisms are in place"
+        ]
+      },
+      {
+        "risk_id": "01K6B41NP0RST5Z8XNJ2T5VXAJ",
+        "threat_title": "Elevation of Privilege through Insecure Direct Object References",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement proper authorization checks",
+          "Conduct security reviews of access controls"
+        ]
+      },
+      {
+        "risk_id": "01K6B41NP0FAZ2FRFCV5ZC52Q11",
+        "threat_title": "Information Disclosure through API Exposure",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Secure API endpoints with proper authentication",
+          "Conduct regular security assessments"
+        ]
+      },
+      {
+        "risk_id": "01K6B41NP0FAZ2FRFCV5ZC52Q12",
+        "threat_title": "Cross-Site Request Forgery (CSRF)",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use anti-CSRF tokens in forms",
+          "Educate users about CSRF risks"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K6B41NNZ202NW93MK0TA4X3S",
+        "01K6B41NP0HXFFCBZQ6QQV8BTB"
+      ],
+      "high_priority_risks": [
+        "01K6B41NP0TEPR8C8HZ0VDCRBA",
+        "01K6B41NP0FAZ2FRFCV5ZC52Q10",
+        "01K6B41NP0QM8370BPEC2D8DKD"
+      ],
+      "medium_priority_risks": [
+        "01K6B41NNZBESBRG4RY8588JGH",
+        "01K6B41NP0RST5Z8XNJ2T5VXAJ",
+        "01K6B41NP0FAZ2FRFCV5ZC52Q11",
+        "01K6B41NP0FAZ2FRFCV5ZC52Q12"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K6B41NNZ202NW93MK0TA4X3S": 9.0,
+      "01K6B41NP0HXFFCBZQ6QQV8BTB": 9.0,
+      "01K6B41NP0TEPR8C8HZ0VDCRBA": 8.0,
+      "01K6B41NP0FAZ2FRFCV5ZC52Q10": 8.0,
+      "01K6B41NP0QM8370BPEC2D8DKD": 7.0,
+      "01K6B41NNZBESBRG4RY8588JGH": 7.0,
+      "01K6B41NP0RST5Z8XNJ2T5VXAJ": 6.0,
+      "01K6B41NP0FAZ2FRFCV5ZC52Q11": 6.0,
+      "01K6B41NP0FAZ2FRFCV5ZC52Q12": 5.0
+    },
+    "risk_rankings": [
+      [
+        "01K6B41NNZ202NW93MK0TA4X3S",
+        9.0
+      ],
+      [
+        "01K6B41NP0HXFFCBZQ6QQV8BTB",
+        9.0
+      ],
+      [
+        "01K6B41NP0TEPR8C8HZ0VDCRBA",
+        8.0
+      ],
+      [
+        "01K6B41NP0FAZ2FRFCV5ZC52Q10",
+        8.0
+      ],
+      [
+        "01K6B41NP0QM8370BPEC2D8DKD",
+        7.0
+      ],
+      [
+        "01K6B41NNZBESBRG4RY8588JGH",
+        7.0
+      ],
+      [
+        "01K6B41NP0RST5Z8XNJ2T5VXAJ",
+        6.0
+      ],
+      [
+        "01K6B41NP0FAZ2FRFCV5ZC52Q11",
+        6.0
+      ],
+      [
+        "01K6B41NP0FAZ2FRFCV5ZC52Q12",
+        5.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "High potential for revenue loss due to fraud and chargebacks.",
+      "operational_impact": "Disruption in service availability and user trust.",
+      "reputational_impact": "Severe damage to brand reputation and customer loyalty."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-29 16:17:35.310089",
+    "updated_at": "2025-09-29 16:17:35.310094"
+  }
+}

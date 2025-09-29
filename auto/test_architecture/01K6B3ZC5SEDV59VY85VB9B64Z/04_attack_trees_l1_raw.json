@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "id": "01K6B41NP0FAZ2FRFCV5ZC52Q8",
+    "title": "Attack Tree for User Account Spoofing",
+    "description": "This attack tree outlines the potential paths for user account spoofing, focusing on unauthorized access through stolen credentials or session hijacking.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-29 16:14:15+00:00",
+    "last_updated": "2025-09-29 16:14:29.984995",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6B41NP0FAZ2FRFCV5ZC52Q8",
+    "description": "User Account Spoofing Attack Tree",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6B41NP0FAZ2FRFCV5ZC52Q8-1",
+        "description": "Phishing Attack to Steal Credentials",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "User education on recognizing phishing attempts",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          },
+          {
+            "description": "Implementing email filtering for phishing",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B41NP0FAZ2FRFCV5ZC52Q8-2",
+        "description": "Session Hijacking via XSS",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement Content Security Policy (CSP)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Use secure cookies with HttpOnly and SameSite attributes",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B41NP0FAZ2FRFCV5ZC52Q8-3",
+        "description": "Credential Stuffing Attack",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement rate limiting on login attempts",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          },
+          {
+            "description": "Require multi-factor authentication (MFA)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement strong password policies",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      },
+      {
+        "description": "Regular security awareness training for users",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      }
+    ],
+    "references": []
+  }
+}

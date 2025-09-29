@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,Both models face threats related to user account spoofing and unauthorized access to sensitive data.,,,,2025-09-29T16:17:56.310161
+CORR_002,,,,Both systems utilize input validation and sanitization to prevent data tampering.,,,,2025-09-29T16:17:56.310174
+CORR_003,,,,Similar attack patterns such as SQL injection and XSS are prevalent in both models.,,,,2025-09-29T16:17:56.310183
+CORR_004,,,,"Both models must comply with GDPR and PCI DSS regulations, focusing on data protection and user privacy.",,,,2025-09-29T16:17:56.310190
+CORR_005,,,,"Both systems are vulnerable to CSRF attacks, which can lead to unauthorized actions on behalf of users.",,,,2025-09-29T16:17:56.310198
+CORR_006,,,,Both models emphasize the need for secure API endpoints to prevent information disclosure.,,,,2025-09-29T16:17:56.310206
+CORR_007,,,,Both models are susceptible to data tampering and unauthorized access through insecure API calls.,,,,2025-09-29T16:17:56.310213
+CORR_008,,,,Both systems face risks from XSS attacks that can compromise user data and session integrity.,,,,2025-09-29T16:17:56.310220
+CORR_009,,,,"Both models must adhere to data protection regulations, focusing on data encryption at rest and in transit.",,,,2025-09-29T16:17:56.310227
+CORR_010,,,,"Both models can aggregate risk assessments related to denial of service attacks, enhancing overall security posture.",,,,2025-09-29T16:17:56.310235
