@@ -1,0 +1,14 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Environment, "User Environment") {
+        System(Editor_Core, "Editor Core", "The main component responsible for code editing, syntax highlighting, and language support.")
+        System(Extension_Host, "Extension Host", "A separate process that runs extensions, allowing for enhanced functionality and customization of the editor.")
+    }
+    System_Boundary(tb_External_Services, "External Services") {
+        System(Extension_Host, "Extension Host", "A separate process that runs extensions, allowing for enhanced functionality and customization of the editor.")
+        System(Debugging_Interface, "Debugging Interface", "Handles debugging tasks, integrating with various programming languages and frameworks.")
+    }
+    System(Development_Container, "Development Container", "Provides a consistent development environment using Docker containers for building and testing applications.")
+
+    Rel(Editor_Core, Extension_Host, "Uses")
+    Rel(Extension_Host, Debugging_Interface, "Uses")

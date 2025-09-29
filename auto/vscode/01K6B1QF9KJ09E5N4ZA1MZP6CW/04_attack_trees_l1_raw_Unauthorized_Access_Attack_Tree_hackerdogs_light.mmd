@@ -1,0 +1,36 @@
+graph TB
+  node_01K6B1SGCND243YG6CJC3AJFS1["Unauthorized Access to User Accounts | [HIGH]"]:::highRisk
+  node_01K6B1SGCND243YG6CJC3AJFS1-1["Exploiting Weak Passwords | [MED]"]:::mediumRisk
+  node_01K6B1SGCND243YG6CJC3AJFS1-1_cm_0["CM: Implement strong password policies and enforce password complexity requirements. (Eff: 0.8)"]:::countermeasure
+  node_01K6B1SGCND243YG6CJC3AJFS1-1_cm_1["CM: Encourage users to enable two-factor authentication. (Eff: 0.9)"]:::countermeasure
+  node_01K6B1SGCND243YG6CJC3AJFS1-2["Session Hijacking | [HIGH]"]:::highRisk
+  node_01K6B1SGCND243YG6CJC3AJFS1-2_cm_0["CM: Use secure cookies with HttpOnly and Secure flags. (Eff: 0.85)"]:::countermeasure
+  node_01K6B1SGCND243YG6CJC3AJFS1-2_cm_1["CM: Implement session timeout and re-authentication for sensitive actions. (Eff: 0.75)"]:::countermeasure
+  node_01K6B1SGCND243YG6CJC3AJFS1-3["Phishing Attacks | [HIGH]"]:::highRisk
+  node_01K6B1SGCND243YG6CJC3AJFS1-3_cm_0["CM: Educate users about phishing tactics and how to recognize suspicious emails. (Eff: 0.7)"]:::countermeasure
+  node_01K6B1SGCND243YG6CJC3AJFS1-3_cm_1["CM: Implement email filtering and anti-phishing technologies. (Eff: 0.8)"]:::countermeasure
+  node_01K6B1SGCND243YG6CJC3AJFS1_cm_0["CM: Conduct regular security awareness training for users. (Eff: 0.75)"]:::countermeasure
+  node_01K6B1SGCND243YG6CJC3AJFS1_cm_1["CM: Regularly update and patch the application to fix vulnerabilities. (Eff: 0.9)"]:::countermeasure
+
+  node_01K6B1SGCND243YG6CJC3AJFS1 -.-> node_01K6B1SGCND243YG6CJC3AJFS1-1
+  node_01K6B1SGCND243YG6CJC3AJFS1-1 -.-> node_01K6B1SGCND243YG6CJC3AJFS1-1_cm_0
+  node_01K6B1SGCND243YG6CJC3AJFS1-1 -.-> node_01K6B1SGCND243YG6CJC3AJFS1-1_cm_1
+  node_01K6B1SGCND243YG6CJC3AJFS1 -.-> node_01K6B1SGCND243YG6CJC3AJFS1-2
+  node_01K6B1SGCND243YG6CJC3AJFS1-2 -.-> node_01K6B1SGCND243YG6CJC3AJFS1-2_cm_0
+  node_01K6B1SGCND243YG6CJC3AJFS1-2 -.-> node_01K6B1SGCND243YG6CJC3AJFS1-2_cm_1
+  node_01K6B1SGCND243YG6CJC3AJFS1 -.-> node_01K6B1SGCND243YG6CJC3AJFS1-3
+  node_01K6B1SGCND243YG6CJC3AJFS1-3 -.-> node_01K6B1SGCND243YG6CJC3AJFS1-3_cm_0
+  node_01K6B1SGCND243YG6CJC3AJFS1-3 -.-> node_01K6B1SGCND243YG6CJC3AJFS1-3_cm_1
+  node_01K6B1SGCND243YG6CJC3AJFS1 -.-> node_01K6B1SGCND243YG6CJC3AJFS1_cm_0
+  node_01K6B1SGCND243YG6CJC3AJFS1 -.-> node_01K6B1SGCND243YG6CJC3AJFS1_cm_1
+
+  classDef andNode fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef orNode fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef highRisk fill:#FFB3B3,color:#8B0000,stroke:#8B0000,stroke-width:2px
+  classDef mediumRisk fill:#FFF200,stroke:#7A6300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#ffa1ad,stroke:#A259FF,stroke-width:1px,stroke-dasharray:3 3,color:#0B0D17
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

@@ -1,0 +1,173 @@
+{
+  "run_id": "01K6B1QF9KJ09E5N4ZA1MZP6CW",
+  "timestamp": "2025-09-29T08:39:28.050081",
+  "execution_time_secs": 323.67,
+  "total_cost": 1.0752,
+  "total_steps": 13,
+  "successful_steps": 13,
+  "failed_steps": 0,
+  "overall_success": true,
+  "steps": {
+    "architecture_analysis": {
+      "success": true,
+      "cost": 0.03871,
+      "total_tokens": 3422,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 8.283142805099487,
+      "error_message": null
+    },
+    "data_flow_diagrams": {
+      "success": true,
+      "cost": 0.0537,
+      "total_tokens": 4257,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 23.876760959625244,
+      "error_message": null
+    },
+    "threats": {
+      "success": true,
+      "cost": 0.048760000000000005,
+      "total_tokens": 4240,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 14.47673225402832,
+      "error_message": null
+    },
+    "attack_trees": {
+      "success": true,
+      "cost": 0.07979,
+      "total_tokens": 7317,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 12.25184416770935,
+      "error_message": null
+    },
+    "dread_assessment": {
+      "success": true,
+      "cost": 0.10291,
+      "total_tokens": 8533,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 46.64185881614685,
+      "error_message": null
+    },
+    "mitigations": {
+      "success": true,
+      "cost": 0.07831,
+      "total_tokens": 6845,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 23.57477831840515,
+      "error_message": null
+    },
+    "test_cases": {
+      "success": true,
+      "cost": 0.10189000000000001,
+      "total_tokens": 9179,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 37.40512299537659,
+      "error_message": null
+    },
+    "security_controls": {
+      "success": true,
+      "cost": 0.12306,
+      "total_tokens": 10302,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 48.100102186203,
+      "error_message": null
+    },
+    "compliance_assessment": {
+      "success": true,
+      "cost": 0.1118,
+      "total_tokens": 10584,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 16.253549098968506,
+      "error_message": null
+    },
+    "risk_prioritization": {
+      "success": true,
+      "cost": 0.12652000000000002,
+      "total_tokens": 10589,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 33.63295531272888,
+      "error_message": null
+    },
+    "dashboard": {
+      "success": true,
+      "cost": 0.0,
+      "total_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 0.0042269229888916016,
+      "error_message": null
+    },
+    "correlations": {
+      "success": true,
+      "cost": 0.13237,
+      "total_tokens": 12077,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 48.11309003829956,
+      "error_message": null
+    },
+    "executive_summary": {
+      "success": true,
+      "cost": 0.07737,
+      "total_tokens": 7398,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "execution_time_secs": 10.971097230911255,
+      "error_message": null
+    }
+  },
+  "generated_files": {
+    "total_files": 36,
+    "files": [
+      "01_architecture_analysis_l1_raw.mmd",
+      "01_architecture_analysis_l1_raw.md",
+      "01_architecture_analysis_l1_raw.json",
+      "02_data_flow_diagrams_l1_raw_dark.mmd",
+      "02_data_flow_diagrams_l1_raw_dark.md",
+      "02_data_flow_diagrams_l1_raw_dark.html",
+      "02_data_flow_diagrams_l1_raw_light.mmd",
+      "02_data_flow_diagrams_l1_raw_light.md",
+      "02_data_flow_diagrams_l1_raw_light.html",
+      "02_data_flow_diagrams_l1_raw.json",
+      "03_threats_l1_raw.md",
+      "03_threats_l1_raw.json",
+      "03_threats_l1_raw.csv",
+      "05_dread_assessment_l1_raw.json",
+      "05_dread_assessment_l1_raw.csv",
+      "05_dread_assessment_l1_raw.md",
+      "06_mitigations_l1_raw.json",
+      "06_mitigations_l1_raw.md",
+      "07_test_cases_l1_raw.feature",
+      "07_test_cases_l1_raw.json",
+      "07_test_cases_l1_raw.md",
+      "08_security_controls_l1_raw.json",
+      "08_security_controls_l1_raw.md",
+      "09_compliance_assessment_l1_raw.json",
+      "09_compliance_assessment_l1_raw.md",
+      "10_risk_prioritization_l1_raw.json",
+      "10_risk_prioritization_l1_raw.md",
+      "12_dashboard_l1_raw.json",
+      "12_dashboard_l1_raw.md",
+      "12_dashboard_l1_raw.html",
+      "11_correlations_l1_raw.json",
+      "11_correlations_l1_raw.md",
+      "11_correlations_l1_raw.html",
+      "11_correlations_l1_raw.csv",
+      "13_executive_summary_l1_raw.json",
+      "13_executive_summary_l1_raw.md"
+    ],
+    "output_directory": "hackerdogs-ai/threatmodels/01K6B1QF9KJ09E5N4ZA1MZP6CW",
+    "ulid": "01K6B1QF9KJ09E5N4ZA1MZP6CW"
+  },
+  "output_directory": "hackerdogs-ai/threatmodels/01K6B1QF9KJ09E5N4ZA1MZP6CW"
+}

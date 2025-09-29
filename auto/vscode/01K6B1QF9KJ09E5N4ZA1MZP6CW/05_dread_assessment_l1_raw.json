@@ -1,0 +1,261 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K6B1SGCND243YG6CJC3AJFS1",
+      "threat_title": "Unauthorized Access",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 18,
+      "risk_level": "medium",
+      "justification": "Unauthorized access can lead to exposure of sensitive features, but the impact is limited to user accounts. The attack is moderately reproducible and exploitable due to potential weak authentication mechanisms.",
+      "recommendations": [
+        "Implement stronger authentication mechanisms such as multi-factor authentication.",
+        "Regularly review and update access controls."
+      ],
+      "assessment_date": "2025-09-29 15:35:49.958031",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1SGCP9F6E9ENWM64VKRBE",
+      "threat_title": "Code Injection",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 19,
+      "risk_level": "medium",
+      "justification": "Code injection can lead to significant damage, including arbitrary code execution. The attack is moderately reproducible and exploitable, especially if input validation is insufficient.",
+      "recommendations": [
+        "Implement strict input validation and sanitization.",
+        "Use security libraries to mitigate injection risks."
+      ],
+      "assessment_date": "2025-09-29 15:35:49.958399",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1SGCP1525P0H55CG1WR1D",
+      "threat_title": "Data Leakage",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 3,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 18,
+      "risk_level": "medium",
+      "justification": "Data leakage can expose sensitive information, impacting user trust and compliance. The attack is moderately reproducible and exploitable due to potential access control weaknesses.",
+      "recommendations": [
+        "Enhance data access controls and encryption.",
+        "Conduct regular audits of data handling practices."
+      ],
+      "assessment_date": "2025-09-29 15:35:49.958682",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1SGCP5GBXG3EMM3M7H4HF",
+      "threat_title": "Denial of Service (DoS)",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 18,
+      "risk_level": "medium",
+      "justification": "DoS attacks can disrupt service availability, affecting all users. The attack is moderately reproducible and exploitable, especially if rate limiting is not implemented.",
+      "recommendations": [
+        "Implement rate limiting and traffic analysis.",
+        "Use DDoS protection services."
+      ],
+      "assessment_date": "2025-09-29 15:35:49.958955",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1SGCPVH2K51GZNB8S6SKY",
+      "threat_title": "Session Fixation",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 18,
+      "risk_level": "medium",
+      "justification": "Session fixation can lead to unauthorized access to user sessions. The attack is moderately reproducible and exploitable if session management is weak.",
+      "recommendations": [
+        "Implement secure session management practices.",
+        "Regenerate session IDs after authentication."
+      ],
+      "assessment_date": "2025-09-29 15:35:49.959227",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1SGCPF3DS4TGHMCD3B0CC",
+      "threat_title": "Insecure Direct Object References",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 18,
+      "risk_level": "medium",
+      "justification": "Insecure direct object references can allow unauthorized access to resources. The attack is moderately reproducible and exploitable due to predictable identifiers.",
+      "recommendations": [
+        "Implement access controls for object references.",
+        "Use randomized identifiers for sensitive resources."
+      ],
+      "assessment_date": "2025-09-29 15:35:49.959495",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1SGCP8QWYKJ88YMJ1FRK4",
+      "threat_title": "Cross-Site Scripting (XSS)",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 19,
+      "risk_level": "medium",
+      "justification": "XSS can lead to significant damage, including data theft and session hijacking. The attack is moderately reproducible and exploitable if input sanitization is insufficient.",
+      "recommendations": [
+        "Implement output encoding and input validation.",
+        "Use security libraries to mitigate XSS risks."
+      ],
+      "assessment_date": "2025-09-29 15:35:49.959763",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1SGCPYGTAMF9DAZBDYAR2",
+      "threat_title": "Improper Input Validation",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 19,
+      "risk_level": "medium",
+      "justification": "Improper input validation can lead to various attacks, including SQL injection. The attack is moderately reproducible and exploitable if validation is not enforced.",
+      "recommendations": [
+        "Implement comprehensive input validation and sanitization.",
+        "Conduct regular security testing to identify vulnerabilities."
+      ],
+      "assessment_date": "2025-09-29 15:35:49.960029",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The DREAD risk assessment identifies several medium-level threats to the Visual Studio Code application, focusing on common vulnerabilities such as unauthorized access, code injection, and data leakage. Recommendations for mitigation include enhancing authentication mechanisms, implementing strict input validation, and improving session management practices."
+}

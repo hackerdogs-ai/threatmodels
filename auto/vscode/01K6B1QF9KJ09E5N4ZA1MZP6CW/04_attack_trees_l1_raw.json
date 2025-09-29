@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "id": "01K6B1SGCND243YG6CJC3AJFS1",
+    "title": "Unauthorized Access Attack Tree",
+    "description": "This attack tree outlines the potential paths an attacker may take to gain unauthorized access to user accounts or sensitive features in Visual Studio Code.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-29 15:34:51+00:00",
+    "last_updated": "2025-09-29 15:35:03.288780",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6B1SGCND243YG6CJC3AJFS1",
+    "description": "Unauthorized Access to User Accounts",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6B1SGCND243YG6CJC3AJFS1-1",
+        "description": "Exploiting Weak Passwords",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement strong password policies and enforce password complexity requirements.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          },
+          {
+            "description": "Encourage users to enable two-factor authentication.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B1SGCND243YG6CJC3AJFS1-2",
+        "description": "Session Hijacking",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Use secure cookies with HttpOnly and Secure flags.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          },
+          {
+            "description": "Implement session timeout and re-authentication for sensitive actions.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.75
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B1SGCND243YG6CJC3AJFS1-3",
+        "description": "Phishing Attacks",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Educate users about phishing tactics and how to recognize suspicious emails.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          },
+          {
+            "description": "Implement email filtering and anti-phishing technologies.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Conduct regular security awareness training for users.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      },
+      {
+        "description": "Regularly update and patch the application to fix vulnerabilities.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      }
+    ],
+    "references": []
+  }
+}

@@ -1,0 +1,12 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify Code Injection and Cross-Site Scripting (XSS) as significant threats, highlighting the need for input validation and output encoding.",,,,2025-09-29T15:39:17.076279
+CORR_002,,,,"Unauthorized Access and Session Fixation are common threats, indicating vulnerabilities in session management across platforms.",,,,2025-09-29T15:39:17.076290
+CORR_003,,,,Both models recommend strict access controls and data handling policies to prevent Data Leakage and Insecure Direct Object References.,,,,2025-09-29T15:39:17.076297
+CORR_004,,,,"Code Injection and Improper Input Validation are prevalent in both models, emphasizing the need for robust API input validation.",,,,2025-09-29T15:39:17.076303
+CORR_005,,,,Both models advocate for rate limiting and traffic analysis to mitigate Denial of Service (DoS) attacks.,,,,2025-09-29T15:39:17.076309
+CORR_006,,,,"Data Leakage and Improper Input Validation are critical threats in both models, affecting user trust and compliance.",,,,2025-09-29T15:39:17.076315
+CORR_007,,,,"Insecure Direct Object References and Code Injection are common threats, indicating vulnerabilities in device management.",,,,2025-09-29T15:39:17.076321
+CORR_008,,,,"Both models must adhere to regulations like PCI DSS, which require strong authentication and data protection measures.",,,,2025-09-29T15:39:17.076327
+CORR_009,,,,Similar compliance requirements under HIPAA for data protection and user access controls are present in both models.,,,,2025-09-29T15:39:17.076333
+CORR_010,,,,"Cross-Site Scripting (XSS) and Session Fixation are common threats, emphasizing the need for secure session management.",,,,2025-09-29T15:39:17.076339
+CORR_011,,,,"Both models face threats from Denial of Service (DoS) attacks, which can disrupt service availability.",,,,2025-09-29T15:39:17.076345

@@ -1,0 +1,81 @@
+{
+  "id": "01K6B1RAXSP8BWDHWJWR03ZX6F",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Editor Core",
+      "description": "The main component responsible for code editing, syntax highlighting, and language support.",
+      "type": "frontend"
+    },
+    {
+      "name": "Extension Host",
+      "description": "A separate process that runs extensions, allowing for enhanced functionality and customization of the editor.",
+      "type": "backend"
+    },
+    {
+      "name": "Debugging Interface",
+      "description": "Handles debugging tasks, integrating with various programming languages and frameworks.",
+      "type": "service"
+    },
+    {
+      "name": "Development Container",
+      "description": "Provides a consistent development environment using Docker containers for building and testing applications.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Editor Core",
+      "destination": "Extension Host",
+      "description": "The Editor Core sends user commands and code context to the Extension Host for processing and extension functionalities."
+    },
+    {
+      "source": "Extension Host",
+      "destination": "Debugging Interface",
+      "description": "The Extension Host communicates with the Debugging Interface to facilitate debugging features provided by installed extensions."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Environment",
+      "description": "The boundary between the user's local environment and the application components.",
+      "components": [
+        "Editor Core",
+        "Extension Host"
+      ]
+    },
+    {
+      "name": "External Services",
+      "description": "The boundary between the application and external services or APIs accessed by extensions.",
+      "components": [
+        "Extension Host",
+        "Debugging Interface"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-29 15:34:12.665594",
+  "updated_at": "2025-09-29 15:34:12.665600"
+}

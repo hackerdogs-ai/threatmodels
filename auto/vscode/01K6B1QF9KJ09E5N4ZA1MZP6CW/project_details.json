@@ -1,0 +1,35 @@
+{
+  "project_name": "Visual Studio Code - Open Source",
+  "line_of_business": [
+    "Software Development",
+    "Open Source Community"
+  ],
+  "application_type": "Desktop Application",
+  "application_audience": "Public",
+  "data_sensitivity": "Public",
+  "authentication_methods": [
+    "None (Open Source)",
+    "GitHub Authentication for Contributions"
+  ],
+  "deployment_environment": "Cloud and On-premise",
+  "compliance_requirements": [
+    "MIT License",
+    "Open Source Code of Conduct"
+  ],
+  "security_requirements": [
+    "Code Quality Assurance",
+    "Dependency Management",
+    "Vulnerability Assessment"
+  ],
+  "business_criticality": "High",
+  "threat_modeling_approach": "STRIDE",
+  "scope": "Threats related to code contributions, extensions, and user data handling",
+  "assumptions": [
+    "Contributors are familiar with GitHub workflows",
+    "Users trust the open-source nature of the application"
+  ],
+  "constraints": [
+    "Limited to the capabilities of the underlying technologies (Node.js, TypeScript)",
+    "Compliance with open-source licensing"
+  ]
+}
