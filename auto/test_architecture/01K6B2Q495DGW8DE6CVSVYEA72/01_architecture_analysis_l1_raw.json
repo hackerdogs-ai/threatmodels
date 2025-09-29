@@ -1,0 +1,96 @@
+{
+  "id": "01K6B2RKJ08T0SXFFAAPKRBHFQ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "A Single Page Application (SPA) developed using React and TypeScript, providing a user-friendly interface for online shopping.",
+      "type": "frontend"
+    },
+    {
+      "name": "User Service",
+      "description": "Manages user authentication, profiles, and session management.",
+      "type": "backend service"
+    },
+    {
+      "name": "Product Service",
+      "description": "Handles the catalog and inventory of products, providing product information to the frontend.",
+      "type": "backend service"
+    },
+    {
+      "name": "Order Service",
+      "description": "Responsible for processing and fulfilling customer orders, interacting with the Order Database.",
+      "type": "backend service"
+    },
+    {
+      "name": "Payment Service",
+      "description": "Integrates with payment gateways like Stripe for secure transaction processing.",
+      "type": "backend service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "User Service",
+      "description": "User authentication requests are sent from the frontend to the User Service."
+    },
+    {
+      "source": "Frontend",
+      "destination": "Product Service",
+      "description": "Product information requests are sent from the frontend to the Product Service."
+    },
+    {
+      "source": "Frontend",
+      "destination": "Order Service",
+      "description": "Order placement requests are sent from the frontend to the Order Service."
+    },
+    {
+      "source": "Order Service",
+      "destination": "Payment Service",
+      "description": "Payment processing requests are sent from the Order Service to the Payment Service."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Data Boundary",
+      "description": "Boundary separating user data management from other services to protect sensitive information.",
+      "components": [
+        "User Service",
+        "User Database"
+      ]
+    },
+    {
+      "name": "Payment Processing Boundary",
+      "description": "Boundary that isolates payment processing to ensure secure handling of financial transactions.",
+      "components": [
+        "Payment Service",
+        "Stripe"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-29 15:51:50.080297",
+  "updated_at": "2025-09-29 15:51:50.080303"
+}

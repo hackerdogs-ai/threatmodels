@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"User Account Spoofing is also identified in the Banking Application threat model, indicating a common risk in user authentication across platforms.",,,,2025-09-29T15:57:05.547185
+CORR_002,,,,"Sensitive Data Exposure is a threat identified in both the Healthcare Management System and the E-Commerce Microservices Platform, highlighting the need for stringent data protection measures.",,,,2025-09-29T15:57:05.547199
+CORR_003,,,,Both the E-Commerce Microservices Platform and the Financial Services Platform propose input validation and sanitization as a mitigation for SQL Injection and XSS attacks.,,,,2025-09-29T15:57:05.547209
+CORR_004,,,,"Denial of Service Attack patterns are common in both the E-Commerce Microservices Platform and the Online Gaming Platform, indicating a shared risk of service disruption.",,,,2025-09-29T15:57:05.547218
+CORR_005,,,,"Both the E-Commerce Microservices Platform and the Healthcare Management System must comply with GDPR, emphasizing the need for data protection and user privacy.",,,,2025-09-29T15:57:05.547226
+CORR_006,,,,Logging and monitoring strategies are emphasized in both the E-Commerce Microservices Platform and the Cloud Infrastructure Management System to detect unauthorized access.,,,,2025-09-29T15:57:05.547234
+CORR_007,,,,"Cross-Site Scripting (XSS) vulnerabilities are identified in both the E-Commerce Microservices Platform and the Social Media Application, indicating a common risk in web applications.",,,,2025-09-29T15:57:05.547242
+CORR_008,,,,"Session Hijacking is a threat recognized in both the E-Commerce Microservices Platform and the Online Banking Application, highlighting risks in session management.",,,,2025-09-29T15:57:05.547250
+CORR_009,,,,"Both the E-Commerce Microservices Platform and the Payment Processing System must adhere to PCI DSS standards, focusing on payment data security.",,,,2025-09-29T15:57:05.547258
+CORR_010,,,,Rate limiting is a common mitigation strategy in both the E-Commerce Microservices Platform and the API Gateway used in the Organization’s Infrastructure.,,,,2025-09-29T15:57:05.547266

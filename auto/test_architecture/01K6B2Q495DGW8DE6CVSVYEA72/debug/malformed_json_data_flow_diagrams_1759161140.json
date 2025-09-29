@@ -1,0 +1,139 @@
+{
+    "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8Y5",
+    "name": "E-Commerce Microservices Platform Data Flow Diagram",
+    "description": "Data flow diagram for the E-Commerce Microservices Platform illustrating the flow of data between frontend, backend services, databases, and external integrations.",
+    "data_assets": [
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8Y1",
+            "name": "User Data",
+            "classification": "pii"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8Y2",
+            "name": "Product Data",
+            "classification": "internal"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8Y3",
+            "name": "Order Data",
+            "classification": "pci"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8Y4",
+            "name": "Payment Information",
+            "classification": "pci"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8Y5",
+            "name": "Notification Data",
+            "classification": "internal"
+        }
+    ],
+    "processes": [
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8P1",
+            "name": "Frontend (React SPA)",
+            "type": "frontend",
+            "trust_level": "low_trust"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8P2",
+            "name": "User Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8P3",
+            "name": "Product Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8P4",
+            "name": "Order Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8P5",
+            "name": "Payment Service",
+            "type": "service",
+            "trust_level": "very_high_trust"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8P6",
+            "name": "Notification Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8D1",
+            "name": "User Database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8D2",
+            "name": "Product Database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8D3",
+            "name": "Order Database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8D4",
+            "name": "Cache (Redis)",
+            "type": "cache",
+            "encryption": "none"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8E1",
+            "name": "User",
+            "type": "user"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8E2",
+            "name": "Stripe Payment Gateway",
+            "type": "service"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8E3",
+            "name": "SendGrid",
+            "type": "service"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8E4",
+            "name": "AWS S3",
+            "type": "service"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8E5",
+            "name": "CloudFront",
+            "type": "service"
+        }
+    ],
+    "data_flows": [
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8F1",
+            "name": "User Authentication",
+            "source_id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8E1",
+            "destination_id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8P2",
+            "protocol": "https",
+            "encryption": "transport"
+        },
+        {
+            "id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8F2",
+            "name": "Product Information Retrieval",
+            "source_id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8P1",
+            "destination_id": "01F8Z9K8Y0Q8N5F8Y5H5Z5D8P3",
+            "protocol": "https",
+            "encryption": "transport"
+        }

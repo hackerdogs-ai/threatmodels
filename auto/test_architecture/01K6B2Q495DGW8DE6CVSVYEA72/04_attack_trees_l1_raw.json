@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "id": "01K6B2T75C3TTS7QG36RZ7TW4Z",
+    "title": "Attack Tree for Session Hijacking",
+    "description": "This attack tree outlines the potential paths for an attacker to hijack a user's session, gaining unauthorized access to their account.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-29 15:52:42+00:00",
+    "last_updated": "2025-09-29 15:53:00.445945",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6B2T75C3TTS7QG36RZ7TW4Z",
+    "description": "Session Hijacking Attack Tree",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6B2T75C3TTS7QG36RZ7TW4A",
+        "description": "Steal Session Token via XSS",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement Content Security Policy (CSP)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          },
+          {
+            "description": "Sanitize user inputs to prevent XSS",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B2T75C3TTS7QG36RZ7TW4B",
+        "description": "Network Sniffing to Capture Tokens",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Enforce HTTPS across the platform",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.95
+          },
+          {
+            "description": "Use secure cookies with HttpOnly and SameSite attributes",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B2T75C3TTS7QG36RZ7TW4C",
+        "description": "Phishing to Obtain Credentials",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Educate users on recognizing phishing attempts",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          },
+          {
+            "description": "Implement multi-factor authentication (MFA)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Regularly review and update security policies",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      },
+      {
+        "description": "Conduct security awareness training for users",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      }
+    ],
+    "references": []
+  }
+}
