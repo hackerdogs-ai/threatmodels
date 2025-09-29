@@ -1,0 +1,177 @@
+{
+  "risk_prioritization": {
+    "id": "01K6B3GZFF5XH5BXN4VCRD432M",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K6B3GZFF5XH5BXN4VCRD432M",
+        "threat_title": "Unauthorized Access to Test Text File",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "1 month",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement access controls",
+          "Conduct user training on security best practices"
+        ]
+      },
+      {
+        "risk_id": "01K6B3GZFFXVYJP48637PSJF05",
+        "threat_title": "File Tampering",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "2 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Utilize file integrity monitoring tools",
+          "Regularly review file access logs"
+        ]
+      },
+      {
+        "risk_id": "01K6B3GZFF5TS2YNY5DNAZHKP1",
+        "threat_title": "Repudiation of Actions",
+        "risk_score": 6,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "low",
+        "timeline": "1 month",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement logging and auditing mechanisms"
+        ]
+      },
+      {
+        "risk_id": "01K6B3GZFFZV271T50PP8B42SP",
+        "threat_title": "Information Disclosure",
+        "risk_score": 6,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "2 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Encrypt sensitive information in the text file"
+        ]
+      },
+      {
+        "risk_id": "01K6B3GZFGYXM04H7K8742SW7V",
+        "threat_title": "Denial of Service on File Access",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "3 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting and access controls"
+        ]
+      },
+      {
+        "risk_id": "01K6B3GZFGX69G3QQKHSBS33WA",
+        "threat_title": "Elevation of Privilege",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "3 months",
+        "dependencies": [],
+        "recommended_actions": [
+          "Regularly update and patch systems"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K6B3GZFF5XH5BXN4VCRD432M"
+      ],
+      "high_priority_risks": [
+        "01K6B3GZFFXVYJP48637PSJF05",
+        "01K6B3GZFF5TS2YNY5DNAZHKP1",
+        "01K6B3GZFFZV271T50PP8B42SP"
+      ],
+      "medium_priority_risks": [
+        "01K6B3GZFGYXM04H7K8742SW7V",
+        "01K6B3GZFGX69G3QQKHSBS33WA"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K6B3GZFF5XH5BXN4VCRD432M": 8.0,
+      "01K6B3GZFFXVYJP48637PSJF05": 7.0,
+      "01K6B3GZFF5TS2YNY5DNAZHKP1": 6.0,
+      "01K6B3GZFFZV271T50PP8B42SP": 6.0,
+      "01K6B3GZFGYXM04H7K8742SW7V": 5.0,
+      "01K6B3GZFGX69G3QQKHSBS33WA": 5.0
+    },
+    "risk_rankings": [
+      [
+        "01K6B3GZFF5XH5BXN4VCRD432M",
+        8.0
+      ],
+      [
+        "01K6B3GZFFXVYJP48637PSJF05",
+        7.0
+      ],
+      [
+        "01K6B3GZFF5TS2YNY5DNAZHKP1",
+        6.0
+      ],
+      [
+        "01K6B3GZFFZV271T50PP8B42SP",
+        6.0
+      ],
+      [
+        "01K6B3GZFGYXM04H7K8742SW7V",
+        5.0
+      ],
+      [
+        "01K6B3GZFGX69G3QQKHSBS33WA",
+        5.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of sensitive data leading to financial penalties.",
+      "operational_impact": "Disruption of threat modeling processes.",
+      "reputational_impact": "Loss of trust from stakeholders due to security breaches."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-29 16:07:59.327285",
+    "updated_at": "2025-09-29 16:07:59.327289"
+  }
+}

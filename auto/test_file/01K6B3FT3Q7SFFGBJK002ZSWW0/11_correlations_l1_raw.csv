@@ -1,0 +1,12 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify unauthorized access and file tampering as significant threats, indicating a common vulnerability in file management systems.",,,,2025-09-29T16:08:21.171405
+CORR_002,,,,"The use of encryption for sensitive information is a shared mitigation strategy across multiple threat models, emphasizing its importance in protecting data integrity.",,,,2025-09-29T16:08:21.171418
+CORR_003,,,,"Similar attack patterns such as denial of service and elevation of privilege are noted, suggesting a need for comprehensive security measures across applications.",,,,2025-09-29T16:08:21.171427
+CORR_004,,,,"Both models highlight the need for compliance with data protection regulations, indicating a shared focus on regulatory adherence.",,,,2025-09-29T16:08:21.171435
+CORR_005,,,,"The identified threats can be aggregated into a broader incident response strategy, allowing for a unified approach to threat management.",,,,2025-09-29T16:08:21.171443
+CORR_006,,,,"Unauthorized access and information disclosure threats are common across both models, highlighting vulnerabilities in networked environments.",,,,2025-09-29T16:08:21.171450
+CORR_007,,,,Both models emphasize the importance of file integrity monitoring as a key mitigation strategy against unauthorized changes.,,,,2025-09-29T16:08:21.171457
+CORR_008,,,,"Similar attack patterns such as file tampering and denial of service are present, indicating a need for coordinated endpoint protection.",,,,2025-09-29T16:08:21.171464
+CORR_009,,,,"Access control measures are a common mitigation strategy, underscoring the importance of identity management in securing sensitive files.",,,,2025-09-29T16:08:21.171472
+CORR_010,,,,"Information disclosure and unauthorized access threats are prevalent, indicating a need for data loss prevention measures.",,,,2025-09-29T16:08:21.171479
+CORR_011,,,,"The threats identified can be incorporated into security awareness training, enhancing employee understanding of potential risks.",,,,2025-09-29T16:08:21.171486

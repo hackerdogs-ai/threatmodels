@@ -1,0 +1,96 @@
+{
+  "id": "01F8D9F5F8A1B2C3D4E5F6A7B8",
+  "name": "Threat Modeling Data Flow Diagram",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for the threat modeling analysis of a test text file.",
+  "created_at": "2025-09-29 16:05:00.002841",
+  "last_updated": "2025-09-29 16:05:00.002845",
+  "data_assets": [
+    {
+      "id": "01F8D9F5F8A1B2C3D4E5F6A7B9",
+      "name": "Test Text File",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F8D9F5F8A1B2C3D4E5F6A7C0",
+      "name": "Threat Modeling Analysis Process",
+      "description": null,
+      "type": "backend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F8D9F5F8A1B2C3D4E5F6A7C1",
+      "name": "Analysis Results Storage",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F8D9F5F8A1B2C3D4E5F6A7C2",
+      "name": "Threat Modeling Analyst",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01F8D9F5F8A1B2C3D4E5F6A7C3",
+      "name": "Input Test Text File",
+      "description": null,
+      "source_id": "01F8D9F5F8A1B2C3D4E5F6A7C2",
+      "destination_id": "01F8D9F5F8A1B2C3D4E5F6A7C0",
+      "data_assets": [],
+      "protocol": "unknown",
+      "authentication_strength": null,
+      "encryption": "none",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8D9F5F8A1B2C3D4E5F6A7C4",
+      "name": "Store Analysis Results",
+      "description": null,
+      "source_id": "01F8D9F5F8A1B2C3D4E5F6A7C0",
+      "destination_id": "01F8D9F5F8A1B2C3D4E5F6A7C1",
+      "data_assets": [],
+      "protocol": "unknown",
+      "authentication_strength": null,
+      "encryption": "at_rest",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

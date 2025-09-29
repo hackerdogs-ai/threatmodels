@@ -1,0 +1,197 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K6B3GZFF5XH5BXN4VCRD432M",
+      "threat_title": "Unauthorized Access to Test Text File",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 19,
+      "risk_level": "medium",
+      "justification": "Unauthorized access can lead to exposure of sensitive information, but the damage is limited to the file itself. Reproducibility and exploitability are moderate due to potential access controls.",
+      "recommendations": [
+        "Implement access controls and authentication mechanisms.",
+        "Regularly audit access logs."
+      ],
+      "assessment_date": "2025-09-29 16:05:51.448105",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B3GZFFXVYJP48637PSJF05",
+      "threat_title": "File Tampering",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 20,
+      "risk_level": "medium",
+      "justification": "Tampering could lead to incorrect analysis results, affecting the integrity of the threat modeling. Damage potential is moderate, with similar scores for reproducibility and exploitability.",
+      "recommendations": [
+        "Use file integrity monitoring tools.",
+        "Implement version control for the text file."
+      ],
+      "assessment_date": "2025-09-29 16:05:51.448570",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B3GZFF5TS2YNY5DNAZHKP1",
+      "threat_title": "Repudiation of Actions",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 3,
+        "exploitability": 3,
+        "affected_users": 2,
+        "discoverability": 3
+      },
+      "total_risk_score": 14,
+      "risk_level": "low",
+      "justification": "While repudiation can create accountability issues, the overall impact is limited to the users involved. The scores reflect a lower risk due to fewer affected users.",
+      "recommendations": [
+        "Implement logging and monitoring of file access and modifications.",
+        "Establish clear policies for accountability."
+      ],
+      "assessment_date": "2025-09-29 16:05:51.450555",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "low",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "low",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B3GZFFZV271T50PP8B42SP",
+      "threat_title": "Information Disclosure",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 4,
+        "discoverability": 4
+      },
+      "total_risk_score": 21,
+      "risk_level": "medium",
+      "justification": "Disclosure of sensitive information can have significant consequences, affecting multiple users. The scores reflect a moderate risk level due to the potential impact.",
+      "recommendations": [
+        "Encrypt sensitive information within the text file.",
+        "Restrict access to authorized personnel only."
+      ],
+      "assessment_date": "2025-09-29 16:05:51.451465",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B3GZFGYXM04H7K8742SW7V",
+      "threat_title": "Denial of Service on File Access",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 3
+      },
+      "total_risk_score": 17,
+      "risk_level": "medium",
+      "justification": "Denial of service can disrupt access for legitimate users, but the damage is limited to the availability of the file. The risk is moderate due to potential impact on users.",
+      "recommendations": [
+        "Implement redundancy and backup solutions.",
+        "Monitor for unusual access patterns."
+      ],
+      "assessment_date": "2025-09-29 16:05:51.451855",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B3GZFGX69G3QQKHSBS33WA",
+      "threat_title": "Elevation of Privilege",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 4,
+        "discoverability": 4
+      },
+      "total_risk_score": 22,
+      "risk_level": "medium",
+      "justification": "Elevation of privilege can allow attackers to gain unauthorized access to modify or delete the file, leading to significant consequences. The scores reflect a higher risk due to the potential impact.",
+      "recommendations": [
+        "Implement strict access controls and permissions.",
+        "Regularly review user access rights."
+      ],
+      "assessment_date": "2025-09-29 16:05:51.452258",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The DREAD risk assessment identifies several threats related to the test text file, with a focus on unauthorized access, file tampering, repudiation, information disclosure, denial of service, and elevation of privilege. Each threat has been evaluated for its potential impact and likelihood, leading to prioritized recommendations for mitigation."
+}

@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "id": "01K6B3GZFF5XH5BXN4VCRD432M",
+    "title": "Attack Tree for Unauthorized Access to Test Text File",
+    "description": "This attack tree outlines the potential paths an attacker may take to gain unauthorized access to the test text file, along with associated risks and countermeasures.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-29 16:05:08+00:00",
+    "last_updated": "2025-09-29 16:05:22.902811",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6B3GZFF5XH5BXN4VCRD432M",
+    "description": "Unauthorized Access to Test Text File",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 6.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6B3GZFF5XH5BXN4VCRD432M-1",
+        "description": "Exploitation of Weak Authentication Mechanisms",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement strong authentication mechanisms (e.g., multi-factor authentication)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B3GZFF5XH5BXN4VCRD432M-2",
+        "description": "Phishing Attack to Obtain Credentials",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Conduct regular security awareness training for users",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B3GZFF5XH5BXN4VCRD432M-3",
+        "description": "Exploitation of Software Vulnerabilities",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Regularly update and patch software to fix vulnerabilities",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Conduct regular security audits and vulnerability assessments",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      },
+      {
+        "description": "Implement access controls and logging mechanisms",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      }
+    ],
+    "references": []
+  }
+}
