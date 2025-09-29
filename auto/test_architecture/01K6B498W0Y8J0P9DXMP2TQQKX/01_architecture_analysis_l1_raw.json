@@ -1,0 +1,96 @@
+{
+  "id": "01K6B4ABD61KYNAX9PHJ0P4822",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "A Single Page Application (SPA) developed using React and TypeScript, providing the user interface for the e-commerce platform.",
+      "type": "frontend"
+    },
+    {
+      "name": "User Service",
+      "description": "Manages user authentication and profile management, ensuring secure access to user accounts.",
+      "type": "backend service"
+    },
+    {
+      "name": "Product Service",
+      "description": "Handles the product catalog and inventory management, allowing users to browse and search for products.",
+      "type": "backend service"
+    },
+    {
+      "name": "Order Service",
+      "description": "Responsible for processing and fulfilling customer orders, integrating with the Payment Service for transaction handling.",
+      "type": "backend service"
+    },
+    {
+      "name": "User Database",
+      "description": "PostgreSQL database used for storing user-related data securely.",
+      "type": "database"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "User Service",
+      "description": "User submits login credentials through the frontend, which are sent to the User Service for authentication."
+    },
+    {
+      "source": "User Service",
+      "destination": "User Database",
+      "description": "User Service retrieves and stores user data in the User Database."
+    },
+    {
+      "source": "Frontend",
+      "destination": "Order Service",
+      "description": "User places an order through the frontend, which communicates with the Order Service to process the order."
+    },
+    {
+      "source": "Order Service",
+      "destination": "Payment Service",
+      "description": "Order Service requests payment processing from the Payment Service after an order is placed."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Data Trust Boundary",
+      "description": "Boundary that separates user data management from other services, ensuring that sensitive user information is handled securely.",
+      "components": [
+        "User Service",
+        "User Database"
+      ]
+    },
+    {
+      "name": "Payment Processing Trust Boundary",
+      "description": "Boundary that isolates payment processing to ensure secure transactions and compliance with payment standards.",
+      "components": [
+        "Order Service",
+        "Payment Service"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-29 16:19:00.134576",
+  "updated_at": "2025-09-29 16:19:00.134580"
+}

@@ -1,0 +1,302 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K6B4C63C853MFA6R80DART8F",
+      "threat_title": "User Account Spoofing",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 6,
+        "exploitability": 5,
+        "affected_users": 7,
+        "discoverability": 6
+      },
+      "total_risk_score": 29,
+      "risk_level": "medium",
+      "justification": "User account spoofing can lead to unauthorized access to sensitive user data and actions, affecting a significant number of users. The attack is moderately reproducible and exploitable due to potential weaknesses in the authentication process.",
+      "recommendations": [
+        "Implement multi-factor authentication.",
+        "Enhance monitoring for suspicious login attempts.",
+        "Regularly review and update authentication mechanisms."
+      ],
+      "assessment_date": "2025-09-29 16:21:07.463804",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B4C63F1HDK2QS7VT8E2WDR",
+      "threat_title": "Session Hijacking",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 7,
+        "discoverability": 5
+      },
+      "total_risk_score": 29,
+      "risk_level": "medium",
+      "justification": "Session hijacking can lead to unauthorized actions on behalf of users, impacting their accounts and data. The attack is moderately reproducible and exploitable, especially if session tokens are not adequately protected.",
+      "recommendations": [
+        "Use secure cookies with HttpOnly and Secure flags.",
+        "Implement session expiration and re-authentication mechanisms.",
+        "Monitor for unusual session activity."
+      ],
+      "assessment_date": "2025-09-29 16:21:07.465860",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B4C63FT16MY61R7C2PW629",
+      "threat_title": "SQL Injection",
+      "dread_scores": {
+        "damage": 7,
+        "reproducibility": 6,
+        "exploitability": 6,
+        "affected_users": 8,
+        "discoverability": 5
+      },
+      "total_risk_score": 32,
+      "risk_level": "medium",
+      "justification": "SQL injection can lead to significant data breaches and manipulation of databases, affecting a large number of users. The attack is moderately reproducible and exploitable if input validation is insufficient.",
+      "recommendations": [
+        "Implement prepared statements and parameterized queries.",
+        "Regularly conduct security audits and code reviews.",
+        "Enhance input validation and sanitization practices."
+      ],
+      "assessment_date": "2025-09-29 16:21:07.467712",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B4C63HMZYQSBP78793JXAT",
+      "threat_title": "Cross-Site Scripting (XSS)",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 7,
+        "discoverability": 5
+      },
+      "total_risk_score": 29,
+      "risk_level": "medium",
+      "justification": "XSS can lead to data theft and session hijacking, impacting users significantly. The attack is moderately reproducible and exploitable if input sanitization is not properly implemented.",
+      "recommendations": [
+        "Implement Content Security Policy (CSP).",
+        "Sanitize and validate all user inputs.",
+        "Educate developers on secure coding practices."
+      ],
+      "assessment_date": "2025-09-29 16:21:07.467921",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B4C63HSPA2TW6JZPR6Q4C1",
+      "threat_title": "Data Exposure",
+      "dread_scores": {
+        "damage": 7,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 8,
+        "discoverability": 6
+      },
+      "total_risk_score": 32,
+      "risk_level": "medium",
+      "justification": "Data exposure can lead to significant privacy violations and loss of user trust. The attack is moderately reproducible and exploitable due to potential misconfigurations.",
+      "recommendations": [
+        "Implement strong encryption for sensitive data at rest and in transit.",
+        "Regularly review access controls and permissions.",
+        "Conduct security training for developers and staff."
+      ],
+      "assessment_date": "2025-09-29 16:21:07.468242",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B4C63H581FJABPPCPF8WRA",
+      "threat_title": "Denial of Service (DoS)",
+      "dread_scores": {
+        "damage": 8,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 9,
+        "discoverability": 5
+      },
+      "total_risk_score": 33,
+      "risk_level": "medium",
+      "justification": "DoS attacks can severely disrupt service availability, affecting all users. The attack is moderately reproducible and exploitable, especially if rate limiting is not enforced.",
+      "recommendations": [
+        "Implement rate limiting and traffic filtering.",
+        "Use DDoS protection services.",
+        "Monitor traffic patterns for anomalies."
+      ],
+      "assessment_date": "2025-09-29 16:21:07.468511",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "very_high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B4C63J85EVW360R17SNVKA",
+      "threat_title": "Insecure Direct Object References",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 7,
+        "discoverability": 5
+      },
+      "total_risk_score": 29,
+      "risk_level": "medium",
+      "justification": "Insecure direct object references can lead to unauthorized access to sensitive data. The attack is moderately reproducible and exploitable if access controls are not properly implemented.",
+      "recommendations": [
+        "Implement proper access controls for all resources.",
+        "Conduct regular security reviews of access permissions.",
+        "Educate developers on secure coding practices."
+      ],
+      "assessment_date": "2025-09-29 16:21:07.468711",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B4C63J6R0M4V8EPKXM1NYV",
+      "threat_title": "Repudiation of Transactions",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 5,
+        "affected_users": 6,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Without proper logging, users may deny actions taken on their accounts, leading to disputes. The attack is moderately reproducible and exploitable if logging is insufficient.",
+      "recommendations": [
+        "Implement comprehensive logging and auditing mechanisms.",
+        "Ensure logs are tamper-proof and regularly reviewed.",
+        "Educate staff on the importance of transaction logging."
+      ],
+      "assessment_date": "2025-09-29 16:21:07.468897",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B4C63JR91298XYAWWM9RWR",
+      "threat_title": "Insufficient Input Validation",
+      "dread_scores": {
+        "damage": 6,
+        "reproducibility": 5,
+        "exploitability": 6,
+        "affected_users": 7,
+        "discoverability": 5
+      },
+      "total_risk_score": 29,
+      "risk_level": "medium",
+      "justification": "Insufficient input validation can lead to various attacks, including injection attacks. The attack is moderately reproducible and exploitable if validation is not enforced.",
+      "recommendations": [
+        "Implement strict input validation and sanitization.",
+        "Conduct regular security training for developers.",
+        "Review and update validation mechanisms regularly."
+      ],
+      "assessment_date": "2025-09-29 16:21:07.469078",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The e-commerce microservices platform faces several threats primarily related to user authentication, data protection, and input validation. Key risks include user account spoofing, session hijacking, SQL injection, and data exposure, all of which could significantly impact the security and integrity of the application. Mitigation efforts should focus on enhancing authentication mechanisms, input validation, and monitoring practices."
+}

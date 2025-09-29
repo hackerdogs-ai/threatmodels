@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "id": "01K6B4C63C853MFA6R80DART8F",
+    "title": "Attack Tree for User Account Spoofing",
+    "description": "This attack tree outlines the potential paths for user account spoofing, focusing on the methods attackers may use to gain unauthorized access to user accounts.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-29 16:30:00+00:00",
+    "last_updated": "2025-09-29 16:20:13.047047",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6B4C63C853MFA6R80DART8F",
+    "description": "User Account Spoofing Attack Tree",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6B4C63C853MFA6R80DART8F-1",
+        "description": "Phishing Attack to Steal Credentials",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement email filtering and user education on phishing.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B4C63C853MFA6R80DART8F-2",
+        "description": "Exploiting Weak Passwords",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Enforce strong password policies and multi-factor authentication.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B4C63C853MFA6R80DART8F-3",
+        "description": "Session Fixation Attack",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 6.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Regenerate session tokens after login and implement secure cookie attributes.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement JWT-based authentication and regular security audits.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      }
+    ],
+    "references": []
+  }
+}

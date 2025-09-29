@@ -1,0 +1,12 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models face threats related to SQL Injection and Data Exposure, which can compromise sensitive user and transaction data.",,,,2025-09-29T16:24:17.619670
+CORR_002,,,,"User Account Spoofing and Session Hijacking are common threats that can affect both systems, leading to unauthorized access.",,,,2025-09-29T16:24:17.619687
+CORR_003,,,,"Both models utilize logging and monitoring to detect suspicious activities, enhancing overall security posture.",,,,2025-09-29T16:24:17.619699
+CORR_004,,,,Similar attack patterns such as Cross-Site Scripting (XSS) and Insecure Direct Object References are prevalent in both models.,,,,2025-09-29T16:24:17.619710
+CORR_005,,,,"Both systems must comply with data protection regulations, such as GDPR, particularly regarding Data Exposure and encryption practices.",,,,2025-09-29T16:24:17.619720
+CORR_006,,,,Rate limiting is a shared mitigation strategy to prevent Denial of Service (DoS) attacks across both models.,,,,2025-09-29T16:24:17.619730
+CORR_007,,,,Both systems are susceptible to Denial of Service (DoS) attacks that can disrupt service availability.,,,,2025-09-29T16:24:17.619739
+CORR_008,,,,Both models require rigorous auditing processes to ensure compliance with industry standards and regulations.,,,,2025-09-29T16:24:17.619749
+CORR_009,,,,Both models emphasize the importance of user training to mitigate risks associated with social engineering and phishing attacks.,,,,2025-09-29T16:24:17.619758
+CORR_010,,,,"Data Exposure risks are common in both models, especially concerning backup data security.",,,,2025-09-29T16:24:17.619768
+CORR_011,,,,Both models must ensure that third-party integrations comply with security standards to mitigate risks of Data Exposure.,,,,2025-09-29T16:24:17.619777
