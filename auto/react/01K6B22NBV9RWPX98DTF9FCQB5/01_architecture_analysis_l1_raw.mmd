@@ -1,0 +1,13 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_Client_Side_Trust_Boundary, "Client-Side Trust Boundary") {
+        System(React_Components, "React Components", "Reusable UI elements that manage their own state and can be composed to build complex interfaces.")
+        System(React_DOM, "React DOM", "The package that provides DOM-specific methods for rendering React components to the web.")
+    }
+    System_Boundary(tb_Build_Process_Trust_Boundary, "Build Process Trust Boundary") {
+        System(Babel_Compiler, "Babel Compiler", "Transpiles modern JavaScript and JSX into backward-compatible JavaScript, enabling the use of the latest language features.")
+        System(Webpack, "Webpack", "A module bundler that compiles JavaScript modules and assets, optimizing them for production.")
+    }
+
+    Rel(React_Components, React_DOM, "Uses")
+    Rel(Babel_Compiler, Webpack, "Uses")

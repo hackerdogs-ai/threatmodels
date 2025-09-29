@@ -1,0 +1,179 @@
+{
+  "risk_prioritization": {
+    "id": "01K6B24M7W9DYC725X3GSP71BY",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K6B24M7W9DYC725X3GSP71BY",
+        "threat_title": "Cross-Site Scripting (XSS)",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement input sanitization and output encoding.",
+          "Use libraries that handle escaping of user input."
+        ]
+      },
+      {
+        "risk_id": "01K6B24M7WABA6Q815728EHPFR",
+        "threat_title": "Cross-Site Request Forgery (CSRF)",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Utilize anti-CSRF tokens in forms.",
+          "Validate tokens on the server side."
+        ]
+      },
+      {
+        "risk_id": "01K6B24M7WF4XQXHCGCZTGG0VN",
+        "threat_title": "Authentication Bypass",
+        "risk_score": 9,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement strong authentication mechanisms.",
+          "Include multi-factor authentication (MFA)."
+        ]
+      },
+      {
+        "risk_id": "01K6B24M7WNCT0ME6P23X2R60H",
+        "threat_title": "Sensitive Data Exposure",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Encrypt sensitive data at rest and in transit.",
+          "Use strong encryption algorithms."
+        ]
+      },
+      {
+        "risk_id": "01K6B24M7XQXT1TQ7QJFS9ZZ7K",
+        "threat_title": "Denial of Service (DoS)",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting.",
+          "Monitor for unusual traffic patterns."
+        ]
+      },
+      {
+        "risk_id": "01K6B24M7YG5WEZEXF765P8TM4",
+        "threat_title": "Input Validation Attacks",
+        "risk_score": 8,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Enforce strict input validation on all user inputs."
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K6B24M7W9DYC725X3GSP71BY",
+        "01K6B24M7WF4XQXHCGCZTGG0VN"
+      ],
+      "high_priority_risks": [
+        "01K6B24M7WABA6Q815728EHPFR",
+        "01K6B24M7WNCT0ME6P23X2R60H",
+        "01K6B24M7XQXT1TQ7QJFS9ZZ7K",
+        "01K6B24M7YG5WEZEXF765P8TM4"
+      ],
+      "medium_priority_risks": [],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K6B24M7W9DYC725X3GSP71BY": 9.0,
+      "01K6B24M7WABA6Q815728EHPFR": 8.0,
+      "01K6B24M7WF4XQXHCGCZTGG0VN": 9.0,
+      "01K6B24M7WNCT0ME6P23X2R60H": 8.0,
+      "01K6B24M7XQXT1TQ7QJFS9ZZ7K": 7.0,
+      "01K6B24M7YG5WEZEXF765P8TM4": 8.0
+    },
+    "risk_rankings": [
+      [
+        "01K6B24M7W9DYC725X3GSP71BY",
+        9.0
+      ],
+      [
+        "01K6B24M7WF4XQXHCGCZTGG0VN",
+        9.0
+      ],
+      [
+        "01K6B24M7WABA6Q815728EHPFR",
+        8.0
+      ],
+      [
+        "01K6B24M7WNCT0ME6P23X2R60H",
+        8.0
+      ],
+      [
+        "01K6B24M7YG5WEZEXF765P8TM4",
+        8.0
+      ],
+      [
+        "01K6B24M7XQXT1TQ7QJFS9ZZ7K",
+        7.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of revenue due to service downtime and data breaches.",
+      "operational_impact": "Disruption of services affecting user experience and trust.",
+      "reputational_impact": "Damage to brand reputation leading to loss of customer trust."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-29 15:44:41.425287",
+    "updated_at": "2025-09-29 15:44:41.425298"
+  }
+}

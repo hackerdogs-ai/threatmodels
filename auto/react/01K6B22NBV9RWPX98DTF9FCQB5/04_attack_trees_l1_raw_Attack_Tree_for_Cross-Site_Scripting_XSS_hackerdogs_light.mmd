@@ -1,0 +1,34 @@
+graph TB
+  node_01K6B24M7W9DYC725X3GSP71BY["Cross-Site Scripting (XSS) Attack | [HIGH]"]:::highRisk
+  node_01K6B24M7W9DYC725X3GSP71B1["Inject malicious script into input fields | [HIGH]"]:::highRisk
+  node_01K6B24M7W9DYC725X3GSP71B1_cm_0["CM: Implement input validation and sanitization (Eff: 0.9)"]:::countermeasure
+  node_01K6B24M7W9DYC725X3GSP71B1_cm_1["CM: Use Content Security Policy (CSP) (Eff: 0.8)"]:::countermeasure
+  node_01K6B24M7W9DYC725X3GSP71B2["Exploit vulnerable third-party libraries | [MED]"]:::mediumRisk
+  node_01K6B24M7W9DYC725X3GSP71B2_cm_0["CM: Regularly update and audit third-party libraries (Eff: 0.85)"]:::countermeasure
+  node_01K6B24M7W9DYC725X3GSP71B2_cm_1["CM: Use trusted libraries with known security practices (Eff: 0.9)"]:::countermeasure
+  node_01K6B24M7W9DYC725X3GSP71B3["Leverage browser vulnerabilities | [HIGH]"]:::highRisk
+  node_01K6B24M7W9DYC725X3GSP71B3_cm_0["CM: Encourage users to keep browsers updated (Eff: 0.7)"]:::countermeasure
+  node_01K6B24M7W9DYC725X3GSP71BY_cm_0["CM: Conduct regular security audits and penetration testing (Eff: 0.8)"]:::countermeasure
+  node_01K6B24M7W9DYC725X3GSP71BY_cm_1["CM: Educate developers on secure coding practices (Eff: 0.75)"]:::countermeasure
+
+  node_01K6B24M7W9DYC725X3GSP71BY -.-> node_01K6B24M7W9DYC725X3GSP71B1
+  node_01K6B24M7W9DYC725X3GSP71B1 -.-> node_01K6B24M7W9DYC725X3GSP71B1_cm_0
+  node_01K6B24M7W9DYC725X3GSP71B1 -.-> node_01K6B24M7W9DYC725X3GSP71B1_cm_1
+  node_01K6B24M7W9DYC725X3GSP71BY -.-> node_01K6B24M7W9DYC725X3GSP71B2
+  node_01K6B24M7W9DYC725X3GSP71B2 -.-> node_01K6B24M7W9DYC725X3GSP71B2_cm_0
+  node_01K6B24M7W9DYC725X3GSP71B2 -.-> node_01K6B24M7W9DYC725X3GSP71B2_cm_1
+  node_01K6B24M7W9DYC725X3GSP71BY --> node_01K6B24M7W9DYC725X3GSP71B3
+  node_01K6B24M7W9DYC725X3GSP71B3 -.-> node_01K6B24M7W9DYC725X3GSP71B3_cm_0
+  node_01K6B24M7W9DYC725X3GSP71BY -.-> node_01K6B24M7W9DYC725X3GSP71BY_cm_0
+  node_01K6B24M7W9DYC725X3GSP71BY -.-> node_01K6B24M7W9DYC725X3GSP71BY_cm_1
+
+  classDef andNode fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef orNode fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef highRisk fill:#FFB3B3,color:#8B0000,stroke:#8B0000,stroke-width:2px
+  classDef mediumRisk fill:#FFF200,stroke:#7A6300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#ffa1ad,stroke:#A259FF,stroke-width:1px,stroke-dasharray:3 3,color:#0B0D17
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

@@ -1,0 +1,197 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K6B24M7W9DYC725X3GSP71BY",
+      "threat_title": "Cross-Site Scripting (XSS)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "XSS can lead to significant data theft and user compromise, with moderate complexity in exploitation and high discoverability.",
+      "recommendations": [
+        "Implement input validation and output encoding.",
+        "Use Content Security Policy (CSP) to mitigate XSS risks."
+      ],
+      "assessment_date": "2025-09-29 15:41:50.301414",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B24M7WABA6Q815728EHPFR",
+      "threat_title": "Cross-Site Request Forgery (CSRF)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "CSRF can lead to unauthorized actions on behalf of users, with moderate complexity in exploitation and high discoverability.",
+      "recommendations": [
+        "Implement anti-CSRF tokens for state-changing requests.",
+        "Use SameSite cookie attributes."
+      ],
+      "assessment_date": "2025-09-29 15:41:50.301791",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B24M7WF4XQXHCGCZTGG0VN",
+      "threat_title": "Authentication Bypass",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Weak authentication mechanisms can be exploited to gain unauthorized access, with moderate complexity and high discoverability.",
+      "recommendations": [
+        "Strengthen authentication mechanisms with multi-factor authentication.",
+        "Regularly review and update authentication logic."
+      ],
+      "assessment_date": "2025-09-29 15:41:50.302947",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B24M7WNCT0ME6P23X2R60H",
+      "threat_title": "Sensitive Data Exposure",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Improper handling of sensitive data can lead to significant breaches, with moderate complexity in exploitation and high discoverability.",
+      "recommendations": [
+        "Implement strong encryption for sensitive data at rest and in transit.",
+        "Conduct regular security audits and data handling reviews."
+      ],
+      "assessment_date": "2025-09-29 15:41:50.303132",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B24M7XQXT1TQ7QJFS9ZZ7K",
+      "threat_title": "Denial of Service (DoS)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "DoS attacks can disrupt service availability, with moderate complexity in execution and high discoverability.",
+      "recommendations": [
+        "Implement rate limiting and traffic monitoring.",
+        "Use web application firewalls to mitigate DoS attacks."
+      ],
+      "assessment_date": "2025-09-29 15:41:50.303316",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B24M7YG5WEZEXF765P8TM4",
+      "threat_title": "Input Validation Attacks",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Insufficient input validation can lead to various attacks, with moderate complexity and high discoverability.",
+      "recommendations": [
+        "Implement strict input validation and sanitization.",
+        "Conduct regular security testing for input handling."
+      ],
+      "assessment_date": "2025-09-29 15:41:50.303501",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The application faces several significant threats primarily related to web application vulnerabilities, authentication issues, and data protection concerns. Addressing these threats through proper security measures and best practices is crucial for maintaining the integrity and confidentiality of the application."
+}

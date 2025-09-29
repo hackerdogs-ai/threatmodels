@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify Cross-Site Scripting (XSS) as a critical threat, highlighting the risk of malicious script injection.",,,,2025-09-29T15:44:57.835048
+CORR_002,,,,Cross-Site Request Forgery (CSRF) is recognized in both models as a significant threat to user actions and data integrity.,,,,2025-09-29T15:44:57.835057
+CORR_003,,,,"Both models recommend strong authentication mechanisms, including multi-factor authentication (MFA), to prevent unauthorized access.",,,,2025-09-29T15:44:57.835064
+CORR_004,,,,"Sensitive Data Exposure is a common threat identified in both models, emphasizing the risk of data breaches due to improper handling.",,,,2025-09-29T15:44:57.835070
+CORR_005,,,,"Both models highlight Denial of Service (DoS) attacks as a potential threat, focusing on service availability.",,,,2025-09-29T15:44:57.835075
+CORR_006,,,,"Both models emphasize the need for compliance with data protection regulations, particularly regarding sensitive data handling.",,,,2025-09-29T15:44:57.835081
+CORR_007,,,,"The identified threats can be aggregated into a broader enterprise risk management strategy, enhancing overall security posture.",,,,2025-09-29T15:44:57.835086
+CORR_008,,,,Both models recommend implementing strict input validation to prevent injection attacks.,,,,2025-09-29T15:44:57.835092
+CORR_009,,,,"Input Validation Attacks are recognized as a threat in both models, highlighting the importance of validating user inputs.",,,,2025-09-29T15:44:57.835097
+CORR_010,,,,Both models emphasize the importance of secure coding practices throughout the development lifecycle.,,,,2025-09-29T15:44:57.835102

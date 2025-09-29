@@ -1,0 +1,288 @@
+Repository: https://github.com/facebook/react
+
+README.md Content:
+# [React](https://react.dev/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![(Runtime) Build and Test](https://github.com/facebook/react/actions/workflows/runtime_build_and_test.yml/badge.svg)](https://github.com/facebook/react/actions/workflows/runtime_build_and_test.yml) [![(Compiler) TypeScript](https://github.com/facebook/react/actions/workflows/compiler_typescript.yml/badge.svg?branch=main)](https://github.com/facebook/react/actions/workflows/compiler_typescript.yml) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://legacy.reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
+
+React is a JavaScript library for building user interfaces.
+
+* **Declarative:** React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
+* **Component-Based:** Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep the state out of the DOM.
+* **Learn Once, Write Anywhere:** We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using [Node](https://nodejs.org/en) and power mobile apps using [React Native](https://reactnative.dev/).
+
+[Learn how to use React in your project](https://react.dev/learn).
+
+## Installation
+
+React has been designed for gradual adoption from the start, and **you can use as little or as much React as you need**:
+
+* Use [Quick Start](https://react.dev/learn) to get a taste of React.
+* [Add React to an Existing Project](https://react.dev/learn/add-react-to-an-existing-project) to use as little or as much React as you need.
+* [Create a New React App](https://react.dev/learn/start-a-new-react-project) if you're looking for a powerful JavaScript toolchain.
+
+## Documentation
+
+You can find the React documentation [on the website](https://react.dev/).
+
+Check out the [Getting Started](https://react.dev/learn) page for a quick overview.
+
+The documentation is divided into several sections:
+
+* [Quick Start](https://react.dev/learn)
+* [Tutorial](https://react.dev/learn/tutorial-tic-tac-toe)
+* [Thinking in React](https://react.dev/learn/thinking-in-react)
+* [Installation](https://react.dev/learn/installation)
+* [Describing the UI](https://react.dev/learn/describing-the-ui)
+* [Adding Interactivity](https://react.dev/learn/adding-interactivity)
+* [Managing State](https://react.dev/learn/managing-state)
+* [Advanced Guides](https://react.dev/learn/escape-hatches)
+* [API Reference](https://react.dev/reference/react)
+* [Where to Get Support](https://react.dev/community)
+* [Contributing Guide](https://legacy.reactjs.org/docs/how-to-contribute.html)
+
+You can improve it by sending pull requests to [this repository](https://github.com/reactjs/react.dev).
+
+## Examples
+
+We have several examples [on the website](https://react.dev/). Here is the first one to get you started:
+
+```jsx
+import { createRoot } from 'react-dom/client';
+
+function HelloMessage({ name }) {
+  return <div>Hello {name}</div>;
+}
+
+const root = createRoot(document.getElementById('container'));
+root.render(<HelloMessage name="Taylor" />);
+```
+
+This example will render "Hello Taylor" into a container on the page.
+
+You'll notice that we used an HTML-like syntax; [we call it JSX](https://react.dev/learn#writing-markup-with-jsx). JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML.
+
+## Contributing
+
+The main purpose of this repository is to continue evolving React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.
+
+### [Code of Conduct](https://code.fb.com/codeofconduct)
+
+Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://code.fb.com/codeofconduct) so that you can understand what actions will and will not be tolerated.
+
+### [Contributing Guide](https://legacy.reactjs.org/docs/how-to-contribute.html)
+
+Read our [contributing guide](https://legacy.reactjs.org/docs/how-to-contribute.html) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.
+
+### [Good First Issues](https://github.com/facebook/react/labels/good%20first%20issue)
+
+To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/facebook/react/labels/good%20first%20issue) that contain bugs that have a relatively limited scope. This is a great place to get started.
+
+### License
+
+React is [MIT licensed](./LICENSE).
+
+
+JS Files:
+File: .eslintrc.js
+Imports:
+const restrictedGlobals = require('confusing-browser-globals')
+
+File: .prettierrc.js
+Imports:
+const {esNextPaths} = require('./scripts/shared/pathsByLanguageVersion')
+
+File: ReactVersions.js
+
+File: babel.config-react-compiler.js
+Imports:
+const baseConfig = require('./babel.config-ts')
+
+File: babel.config-ts.js
+
+File: babel.config.js
+
+File: compiler/.eslintrc.js
+
+File: compiler/apps/playground/colors.js
+
+File: compiler/apps/playground/next.config.js
+Imports:
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+const path = require('path')
+
+File: compiler/apps/playground/playwright.config.js
+Imports:
+import {defineConfig, devices} from '@playwright/test';
+import path from 'path';
+
+File: compiler/apps/playground/postcss.config.js
+
+File: compiler/apps/playground/scripts/downloadFonts.js
+Imports:
+const {execSync} = require('child_process')
+
+File: compiler/apps/playground/tailwind.config.js
+Imports:
+const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('./colors')
+
+File: compiler/packages/babel-plugin-react-compiler/jest.config.js
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/build-react-hooks-fixures.js
+Imports:
+const {tests} = require('./eslint-plugin-react-hooks-test-cases')
+const fs = require('fs')
+const path = require('path')
+const prettier = require('prettier')
+const process = require('process')
+... (2 more imports)
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/jest/e2e-classic.config.js
+Imports:
+const makeE2EConfig = require('../jest/makeE2EConfig')
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/jest/e2e-forget.config.js
+Imports:
+const makeE2EConfig = require('../jest/makeE2EConfig')
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/jest/main.config.js
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/jest/makeE2EConfig.js
+Functions:
+function makeE2EConfig(displayName, useForget) {
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/jest/makeSnapshotResolver.js
+Functions:
+function makeSnapshotResolver(useForget) {
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/jest/snapshot-resolver-no-forget.js
+Imports:
+const makeSnapshotResolver = require('./makeSnapshotResolver')
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/jest/snapshot-resolver-with-forget.js
+Imports:
+const makeSnapshotResolver = require('./makeSnapshotResolver')
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/jest/transform-no-forget.js
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/jest/transform-with-forget.js
+
+
+TS Files:
+File: compiler/apps/playground/components/Editor/monacoOptions.ts
+Imports:
+import type {EditorProps} from '@monaco-editor/react';
+
+File: compiler/apps/playground/components/index.ts
+
+File: compiler/apps/playground/hooks/index.ts
+
+File: compiler/apps/playground/hooks/useMountEffect.ts
+Imports:
+import type {EffectCallback} from 'react';
+import {useEffect} from 'react';
+Functions:
+function useMountEffect(effect: EffectCallback) {
+
+File: compiler/apps/playground/lib/createContext.ts
+Imports:
+import React from 'react';
+
+File: compiler/apps/playground/lib/defaultStore.ts
+Imports:
+import type {Store} from './stores';
+import type { PluginOptions } from 'babel-plugin-react-compiler/dist';
+Functions:
+function MyApp() {
+
+File: compiler/apps/playground/lib/reactCompilerMonacoDiagnostics.ts
+Imports:
+import {Monaco} from '@monaco-editor/react';
+import {
+import {MarkerSeverity, type editor} from 'monaco-editor';
+
+File: compiler/apps/playground/lib/stores/index.ts
+
+File: compiler/apps/playground/lib/stores/messages.ts
+
+File: compiler/apps/playground/lib/stores/store.ts
+Imports:
+import invariant from 'invariant';
+import {
+import {defaultStore, defaultConfig} from '../defaultStore';
+
+File: compiler/apps/playground/lib/types.d.ts
+
+File: compiler/apps/playground/next-env.d.ts
+Imports:
+import "./.next/types/routes.d.ts";
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/babel-plugin-annotate-react-code.ts
+Imports:
+import type * as BabelCore from '@babel/core';
+import {NodePath} from '@babel/core';
+import * as t from '@babel/types';
+Functions:
+const useHook = () =>
+const {useHook = () =>
+
+File: compiler/packages/babel-plugin-react-compiler/scripts/jest/makeTransform.ts
+Imports:
+import babelJest from 'babel-jest';
+import {
+import {execSync} from 'child_process';
+import type {NodePath, Visitor} from '@babel/traverse';
+import type {CallExpression} from '@babel/types';
+... (1 more imports)
+Functions:
+function createTransformer() {
+
+File: compiler/packages/babel-plugin-react-compiler/src/Babel/BabelPlugin.ts
+Imports:
+import type * as BabelCore from '@babel/core';
+import {compileProgram, Logger, parsePluginOptions} from '../Entrypoint';
+import {
+import validateNoUntransformedReferences from '../Entrypoint/ValidateNoUntransformedReferences';
+import {CompilerError} from '..';
+
+File: compiler/packages/babel-plugin-react-compiler/src/Babel/RunReactCompilerBabelPlugin.ts
+Imports:
+import type * as BabelCore from '@babel/core';
+import {transformFromAstSync} from '@babel/core';
+import * as BabelParser from '@babel/parser';
+import invariant from 'invariant';
+import type {PluginOptions} from '../Entrypoint';
+... (1 more imports)
+
+File: compiler/packages/babel-plugin-react-compiler/src/CompilerError.ts
+Imports:
+import * as t from '@babel/types';
+import {codeFrameColumns} from '@babel/code-frame';
+import {type SourceLocation} from './HIR';
+... (3 more imports)
+Classes:
+class CompilerDiagnostic {
+class CompilerErrorDetail {
+class CompilerError extends Error {
+
+File: compiler/packages/babel-plugin-react-compiler/src/Entrypoint/Gating.ts
+Imports:
+import {NodePath} from '@babel/core';
+import * as t from '@babel/types';
+import {CompilerError} from '../CompilerError';
+import {ProgramContext} from './Imports';
+import {ExternalFunction} from '..';
+Functions:
+function Foo() {
+function Foo_optimized() {
+function Foo_unoptimized() {
+function Foo() {
+
+
+INFO Files:
+Analysis truncated: 4310 more files not analyzed due to token limit.
+
+
+Repository Analysis Summary:
+- Files analyzed: 42 of 4352 total files
+- Token usage estimate: ~2869 tokens
+- Token limit configured: 4000 tokens

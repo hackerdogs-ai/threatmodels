@@ -1,0 +1,81 @@
+{
+  "id": "01K6B240Z33K81TGC8ES16R01P",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "React Components",
+      "description": "Reusable UI elements that manage their own state and can be composed to build complex interfaces.",
+      "type": "frontend"
+    },
+    {
+      "name": "React DOM",
+      "description": "The package that provides DOM-specific methods for rendering React components to the web.",
+      "type": "frontend"
+    },
+    {
+      "name": "Babel Compiler",
+      "description": "Transpiles modern JavaScript and JSX into backward-compatible JavaScript, enabling the use of the latest language features.",
+      "type": "build tool"
+    },
+    {
+      "name": "Webpack",
+      "description": "A module bundler that compiles JavaScript modules and assets, optimizing them for production.",
+      "type": "build tool"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "React Components",
+      "destination": "React DOM",
+      "description": "React components render their output to the DOM through the React DOM package."
+    },
+    {
+      "source": "Babel Compiler",
+      "destination": "Webpack",
+      "description": "Babel processes source code and outputs transpiled code, which is then bundled by Webpack."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "Client-Side Trust Boundary",
+      "description": "The boundary between the user's browser and the server, where user inputs are processed.",
+      "components": [
+        "React Components",
+        "React DOM"
+      ]
+    },
+    {
+      "name": "Build Process Trust Boundary",
+      "description": "The boundary during the build process where source code is transformed and bundled.",
+      "components": [
+        "Babel Compiler",
+        "Webpack"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-29 15:40:35.683203",
+  "updated_at": "2025-09-29 15:40:35.683211"
+}
