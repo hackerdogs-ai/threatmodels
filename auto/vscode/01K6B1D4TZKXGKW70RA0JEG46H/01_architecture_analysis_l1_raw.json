@@ -1,0 +1,86 @@
+{
+  "id": "01K6B1E6EEK9AGDCQ0RK2YHTM7",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Editor Core",
+      "description": "The main component responsible for code editing, syntax highlighting, and basic functionalities.",
+      "type": "frontend"
+    },
+    {
+      "name": "Extension Host",
+      "description": "A separate process that runs extensions to enhance the editor's capabilities without blocking the main UI thread.",
+      "type": "service"
+    },
+    {
+      "name": "Language Server Protocol (LSP)",
+      "description": "A protocol used to provide language-specific features such as autocompletion and error checking through language servers.",
+      "type": "service"
+    },
+    {
+      "name": "Debug Adapter",
+      "description": "Handles debugging sessions and communicates with the editor to provide debugging features.",
+      "type": "service"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Editor Core",
+      "destination": "Extension Host",
+      "description": "The Editor Core sends user commands and events to the Extension Host to trigger extension functionalities."
+    },
+    {
+      "source": "Extension Host",
+      "destination": "Language Server Protocol",
+      "description": "The Extension Host communicates with language servers to fetch language-specific features and data."
+    },
+    {
+      "source": "Debug Adapter",
+      "destination": "Editor Core",
+      "description": "The Debug Adapter sends debugging information and control commands back to the Editor Core for user interaction."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Environment",
+      "description": "The boundary between the user's local environment and the application components.",
+      "components": [
+        "Editor Core",
+        "Extension Host"
+      ]
+    },
+    {
+      "name": "External Services",
+      "description": "The boundary between the application and external language servers or debugging services.",
+      "components": [
+        "Language Server Protocol",
+        "Debug Adapter"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-29 15:28:40.398597",
+  "updated_at": "2025-09-29 15:28:40.398602"
+}

@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "id": "01K6B1F7BXS8ND1G6BJ1NMET67",
+    "title": "Unauthorized Access Attack Tree",
+    "description": "An attack tree representing potential paths for unauthorized access to the Visual Studio Code application.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-29 15:30:00+00:00",
+    "last_updated": "2025-09-29 15:29:28.258860",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6B1F7BXS8ND1G6BJ1NMET67",
+    "description": "Unauthorized Access to the application",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6B1F7BXS8ND1G6BJ1NMET68",
+        "description": "Exploitation of weak authentication mechanisms",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 8.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K6B1F7BXS8ND1G6BJ1NMET69",
+            "description": "Brute force attack on user credentials",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 6.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement account lockout mechanisms after multiple failed attempts",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              },
+              {
+                "description": "Require multi-factor authentication",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K6B1F7BXS8ND1G6BJ1NMET70",
+            "description": "Session hijacking through insecure session management",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 5.0,
+              "impact": 9.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Use secure cookies with HttpOnly and SameSite attributes",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.85
+              },
+              {
+                "description": "Implement session expiration and regeneration",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Conduct regular security audits on authentication mechanisms",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.75
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B1F7BXS8ND1G6BJ1NMET71",
+        "description": "Exploitation of session fixation vulnerabilities",
+        "type": "LEAF",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Regenerate session IDs after login",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Validate session IDs before processing requests",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement strong password policies",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      },
+      {
+        "description": "Educate users about phishing attacks",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.7
+      }
+    ],
+    "references": []
+  }
+}

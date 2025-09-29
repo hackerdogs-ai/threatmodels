@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify unauthorized access and code injection as significant threats, highlighting common vulnerabilities in web applications.",,,,2025-09-29T15:33:10.595881
+CORR_002,,,,Both models emphasize the need for strong authentication mechanisms and input validation to mitigate unauthorized access and code injection threats.,,,,2025-09-29T15:33:10.595896
+CORR_003,,,,Similar attack patterns such as session fixation and improper input validation are prevalent in both mobile and web applications.,,,,2025-09-29T15:33:10.595903
+CORR_004,,,,"Code injection and data leakage are common threats identified in both models, emphasizing the need for secure API design.",,,,2025-09-29T15:33:10.595909
+CORR_005,,,,"Both models address data leakage risks, aligning with compliance requirements for data protection and privacy.",,,,2025-09-29T15:33:10.595915
+CORR_006,,,,Both models advocate for continuous monitoring and logging to detect potential security incidents.,,,,2025-09-29T15:33:10.595921
+CORR_007,,,,"Unauthorized access and denial of service threats are common across IoT and web application models, necessitating robust security measures.",,,,2025-09-29T15:33:10.595927
+CORR_008,,,,"Both models identify elevation of privilege as a critical threat, suggesting a need for comprehensive access control measures.",,,,2025-09-29T15:33:10.595932
+CORR_009,,,,Similar attack patterns such as code injection and data leakage are prevalent in both e-commerce and web applications.,,,,2025-09-29T15:33:10.595938
+CORR_010,,,,"Both models emphasize the importance of data protection and secure transaction processing, aligning with financial regulations.",,,,2025-09-29T15:33:10.595944

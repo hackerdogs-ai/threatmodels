@@ -1,0 +1,205 @@
+{
+  "risk_prioritization": {
+    "id": "01K6B1F7BXW1M75ACP35NTQ5P8",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K6B1F7BXS8ND1G6BJ1NMET67",
+        "threat_title": "Unauthorized Access",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement multi-factor authentication (MFA)",
+          "Review and strengthen session management"
+        ]
+      },
+      {
+        "risk_id": "01K6B1F7BXES3SSWDVMFZV91CF",
+        "threat_title": "Code Injection",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use input validation libraries",
+          "Conduct code reviews for injection vulnerabilities"
+        ]
+      },
+      {
+        "risk_id": "01K6B1F7BXFFC8P2NRSWGRBCYR",
+        "threat_title": "Data Leakage",
+        "risk_score": 6,
+        "priority_level": "high",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement logging and monitoring",
+          "Encrypt sensitive data in transit and at rest"
+        ]
+      },
+      {
+        "risk_id": "01K6B1F7BXQBR4Z5TPPM0WP396",
+        "threat_title": "Denial of Service (DoS)",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Deploy rate limiting and throttling mechanisms",
+          "Monitor traffic patterns for anomalies"
+        ]
+      },
+      {
+        "risk_id": "01K6B1F7BXMW85Y8PHQ3KMBARJ",
+        "threat_title": "Improper Input Validation",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "partially_mitigated",
+        "resource_requirements": "high",
+        "timeline": "medium_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Conduct regular security audits",
+          "Educate developers on secure coding practices"
+        ]
+      },
+      {
+        "risk_id": "01K6B1F7BXVVWMQAHA00W11P4M",
+        "threat_title": "Elevation of Privilege",
+        "risk_score": 4,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Review user roles and permissions",
+          "Implement least privilege access controls"
+        ]
+      },
+      {
+        "risk_id": "01K6B1F7BXW1M75ACP35NTQ5P1",
+        "threat_title": "Session Fixation",
+        "risk_score": 4,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement session regeneration on login",
+          "Review session management practices"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K6B1F7BXS8ND1G6BJ1NMET67"
+      ],
+      "high_priority_risks": [
+        "01K6B1F7BXES3SSWDVMFZV91CF",
+        "01K6B1F7BXFFC8P2NRSWGRBCYR"
+      ],
+      "medium_priority_risks": [
+        "01K6B1F7BXQBR4Z5TPPM0WP396",
+        "01K6B1F7BXMW85Y8PHQ3KMBARJ",
+        "01K6B1F7BXVVWMQAHA00W11P4M",
+        "01K6B1F7BXW1M75ACP35NTQ5P1"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K6B1F7BXS8ND1G6BJ1NMET67": 8.0,
+      "01K6B1F7BXES3SSWDVMFZV91CF": 7.0,
+      "01K6B1F7BXFFC8P2NRSWGRBCYR": 6.0,
+      "01K6B1F7BXQBR4Z5TPPM0WP396": 5.0,
+      "01K6B1F7BXMW85Y8PHQ3KMBARJ": 5.0,
+      "01K6B1F7BXVVWMQAHA00W11P4M": 4.0,
+      "01K6B1F7BXW1M75ACP35NTQ5P1": 4.0
+    },
+    "risk_rankings": [
+      [
+        "01K6B1F7BXS8ND1G6BJ1NMET67",
+        8.0
+      ],
+      [
+        "01K6B1F7BXES3SSWDVMFZV91CF",
+        7.0
+      ],
+      [
+        "01K6B1F7BXFFC8P2NRSWGRBCYR",
+        6.0
+      ],
+      [
+        "01K6B1F7BXQBR4Z5TPPM0WP396",
+        5.0
+      ],
+      [
+        "01K6B1F7BXMW85Y8PHQ3KMBARJ",
+        5.0
+      ],
+      [
+        "01K6B1F7BXVVWMQAHA00W11P4M",
+        4.0
+      ],
+      [
+        "01K6B1F7BXW1M75ACP35NTQ5P1",
+        4.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "Potential loss of revenue due to service downtime or data breaches.",
+      "operational_impact": "Disruption of services leading to decreased productivity and user trust.",
+      "reputational_impact": "Damage to brand reputation due to security incidents and user data exposure."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-29 15:32:47.524690",
+    "updated_at": "2025-09-29 15:32:47.524695"
+  }
+}

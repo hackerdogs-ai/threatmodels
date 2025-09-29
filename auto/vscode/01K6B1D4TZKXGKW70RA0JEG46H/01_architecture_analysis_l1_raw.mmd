@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Environment, "User Environment") {
+        System(Editor_Core, "Editor Core", "The main component responsible for code editing, syntax highlighting, and basic functionalities.")
+        System(Extension_Host, "Extension Host", "A separate process that runs extensions to enhance the editor's capabilities without blocking the main UI thread.")
+    }
+    System_Boundary(tb_External_Services, "External Services") {
+        System(Language_Server_Protocol, "Language Server Protocol", "Auto-created component: Language Server Protocol")
+        System(Debug_Adapter, "Debug Adapter", "Handles debugging sessions and communicates with the editor to provide debugging features.")
+    }
+    System(Language_Server_Protocol__LSP_, "Language Server Protocol (LSP)", "A protocol used to provide language-specific features such as autocompletion and error checking through language servers.")
+
+    Rel(Editor_Core, Extension_Host, "Uses")
+    Rel(Extension_Host, Language_Server_Protocol, "Uses")
+    Rel(Debug_Adapter, Editor_Core, "Uses")

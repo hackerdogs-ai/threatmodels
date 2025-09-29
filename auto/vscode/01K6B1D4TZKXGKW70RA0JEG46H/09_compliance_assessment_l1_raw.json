@@ -1,0 +1,66 @@
+{
+  "compliance_assessment": {
+    "id": "01K6B1F7BXW1M75ACP35NTQ5P0",
+    "framework": "GDPR",
+    "framework_description": "General Data Protection Regulation - A regulation in EU law on data protection and privacy.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 70.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-1",
+        "requirement": "Obtain explicit consent from users for data processing.",
+        "status": "partially_compliant",
+        "evidence": "User consent mechanisms are in place but may not be fully transparent.",
+        "gaps": [
+          "Lack of clear consent forms.",
+          "No option for users to withdraw consent easily."
+        ],
+        "recommendations": [
+          "Implement clearer consent forms and processes for withdrawal."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-2",
+        "requirement": "Ensure data minimization principles are followed.",
+        "status": "compliant",
+        "evidence": "Data collection is limited to necessary information.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "GDPR-3",
+        "requirement": "Implement data protection by design and by default.",
+        "status": "partially_compliant",
+        "evidence": "Some features incorporate data protection measures.",
+        "gaps": [
+          "Not all features are designed with privacy in mind."
+        ],
+        "recommendations": [
+          "Conduct a privacy impact assessment for new features."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Inadequate user consent management.",
+      "Insufficient data protection measures in new features."
+    ],
+    "remediation_plan": [
+      "Enhance user consent mechanisms.",
+      "Conduct regular privacy impact assessments.",
+      "Train developers on GDPR compliance."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-29 15:32:05.722696",
+    "assessor": null,
+    "created_at": "2025-09-29 15:32:05.722703",
+    "updated_at": "2025-09-29 15:32:05.722707"
+  }
+}

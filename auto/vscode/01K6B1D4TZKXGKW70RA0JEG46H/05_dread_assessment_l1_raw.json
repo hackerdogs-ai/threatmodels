@@ -1,0 +1,236 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K6B1F7BXS8ND1G6BJ1NMET67",
+      "threat_title": "Unauthorized Access",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 24,
+      "risk_level": "medium",
+      "justification": "Unauthorized access can lead to significant data exposure and manipulation. The potential damage is moderate due to the nature of the application and the number of affected users. The exploitability is moderate, as it may require specific knowledge of the system.",
+      "recommendations": [
+        "Implement stronger authentication mechanisms.",
+        "Regularly review and update session management practices.",
+        "Conduct security audits to identify vulnerabilities."
+      ],
+      "assessment_date": "2025-09-29 15:30:04.171000",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1F7BXES3SSWDVMFZV91CF",
+      "threat_title": "Code Injection",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 24,
+      "risk_level": "medium",
+      "justification": "Code injection can lead to severe consequences, including data loss and system compromise. The potential damage is high, and the attack can be reproduced easily with the right knowledge. However, the complexity of exploitation may vary.",
+      "recommendations": [
+        "Implement input validation and sanitization.",
+        "Use prepared statements for database queries.",
+        "Conduct regular code reviews and security testing."
+      ],
+      "assessment_date": "2025-09-29 15:30:04.171870",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1F7BXFFC8P2NRSWGRBCYR",
+      "threat_title": "Data Leakage",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 23,
+      "risk_level": "medium",
+      "justification": "Data leakage can expose sensitive information, leading to privacy violations and reputational damage. The damage potential is high, and the likelihood of exploitation is moderate due to various factors.",
+      "recommendations": [
+        "Implement encryption for sensitive data.",
+        "Review logging practices to avoid sensitive data exposure.",
+        "Conduct regular security assessments."
+      ],
+      "assessment_date": "2025-09-29 15:30:04.172102",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1F7BXQBR4Z5TPPM0WP396",
+      "threat_title": "Denial of Service (DoS)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 23,
+      "risk_level": "medium",
+      "justification": "A DoS attack can significantly disrupt service availability, affecting all users. The damage potential is high, and the attack can be reproduced with relative ease, but may require some technical knowledge.",
+      "recommendations": [
+        "Implement rate limiting and traffic filtering.",
+        "Use a content delivery network (CDN) to absorb traffic spikes.",
+        "Regularly test the application for resilience against DoS attacks."
+      ],
+      "assessment_date": "2025-09-29 15:30:04.172310",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1F7BXVVWMQAHA00W11P4M",
+      "threat_title": "Improper Input Validation",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 24,
+      "risk_level": "medium",
+      "justification": "Improper input validation can lead to various attacks, including XSS and SQL injection. The damage potential is high, and the likelihood of exploitation is significant due to common vulnerabilities.",
+      "recommendations": [
+        "Implement comprehensive input validation mechanisms.",
+        "Conduct regular security training for developers.",
+        "Utilize security libraries and frameworks."
+      ],
+      "assessment_date": "2025-09-29 15:30:04.172518",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1F7BXMW85Y8PHQ3KMBARJ",
+      "threat_title": "Session Fixation",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 4,
+        "discoverability": 4
+      },
+      "total_risk_score": 20,
+      "risk_level": "medium",
+      "justification": "Session fixation can lead to unauthorized access to user accounts. The damage potential is moderate, and the attack can be reproduced with some knowledge of session management.",
+      "recommendations": [
+        "Implement secure session management practices.",
+        "Regenerate session IDs after login.",
+        "Educate users about session security."
+      ],
+      "assessment_date": "2025-09-29 15:30:04.172856",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B1F7BXVVWMQAHA00W11P4M",
+      "threat_title": "Elevation of Privilege",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 23,
+      "risk_level": "medium",
+      "justification": "Elevation of privilege can allow users to perform unauthorized actions, potentially compromising the entire application. The damage potential is high, and the attack can be reproduced with some knowledge of vulnerabilities.",
+      "recommendations": [
+        "Implement strict access controls and permissions.",
+        "Conduct regular security audits.",
+        "Educate developers on secure coding practices."
+      ],
+      "assessment_date": "2025-09-29 15:30:04.173083",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "system_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The DREAD risk assessment identifies various threats to the Visual Studio Code - Open Source application, focusing on common vulnerabilities and their potential impacts. Each threat is assessed based on damage potential, reproducibility, exploitability, affected users, and discoverability, leading to a comprehensive understanding of the risks involved."
+}
