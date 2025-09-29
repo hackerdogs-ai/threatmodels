@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify Cross-Site Scripting (XSS) as a significant threat, highlighting the risk of script injection attacks.",,,,2025-09-29T15:50:24.095021
+CORR_002,,,,"Cross-Site Request Forgery (CSRF) is a common threat in both models, emphasizing the need for user action validation.",,,,2025-09-29T15:50:24.095037
+CORR_003,,,,"Both models address Sensitive Data Exposure, aligning with data protection regulations like GDPR and HIPAA.",,,,2025-09-29T15:50:24.095044
+CORR_004,,,,"Insecure Direct Object References (IDOR) is a shared threat, indicating risks in both web and mobile applications.",,,,2025-09-29T15:50:24.095051
+CORR_005,,,,"Denial of Service (DoS) threats are prevalent in both models, emphasizing the need for availability measures.",,,,2025-09-29T15:50:24.095057
+CORR_006,,,,"Authentication Bypass is a common threat, indicating vulnerabilities in user authentication mechanisms.",,,,2025-09-29T15:50:24.095063
+CORR_007,,,,"Both models emphasize the importance of proper input validation to prevent various attacks, including XSS and SQL injection.",,,,2025-09-29T15:50:24.095070
+CORR_008,,,,Similar attack patterns related to data exposure and unauthorized access are identified in both models.,,,,2025-09-29T15:50:24.095076
+CORR_009,,,,Both models recognize the risks associated with improper input validation and insecure data handling.,,,,2025-09-29T15:50:24.095082
+CORR_010,,,,Overlap in compliance requirements related to data protection and user privacy across both models.,,,,2025-09-29T15:50:24.095088

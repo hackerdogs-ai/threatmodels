@@ -1,0 +1,173 @@
+{
+  "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8Z",
+  "name": "React Application Data Flow",
+  "version": "1.0.0",
+  "description": "Basic data flow diagram for the React application showing how data moves through the system.",
+  "created_at": "2025-09-29 15:46:40.613638",
+  "last_updated": "2025-09-29 15:46:40.613648",
+  "data_assets": [
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8A",
+      "name": "User Input Data",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8B",
+      "name": "Application State",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8C",
+      "name": "Configuration Data",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8D",
+      "name": "User Interface Rendering",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8E",
+      "name": "State Management",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8F",
+      "name": "API Communication",
+      "description": null,
+      "type": "api",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8G",
+      "name": "Local Storage",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "none",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8H",
+      "name": "Session Storage",
+      "description": null,
+      "type": "file",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "none",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8I",
+      "name": "User",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8J",
+      "name": "External API",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8K",
+      "name": "User Input to Application State",
+      "description": null,
+      "source_id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8I",
+      "destination_id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8B",
+      "data_assets": [],
+      "protocol": "http",
+      "authentication_strength": null,
+      "encryption": "none",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8L",
+      "name": "Application State to User Interface",
+      "description": null,
+      "source_id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8B",
+      "destination_id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8D",
+      "data_assets": [],
+      "protocol": "http",
+      "authentication_strength": null,
+      "encryption": "none",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8M",
+      "name": "API Communication to External API",
+      "description": null,
+      "source_id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8F",
+      "destination_id": "01F8MZ8Z4F5K8Z1D5G8J8Z8Z8J",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

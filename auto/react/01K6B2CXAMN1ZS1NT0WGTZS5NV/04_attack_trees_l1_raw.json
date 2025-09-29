@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "id": "01K6B2FHS7EFMWPY1YBXPGVY5Z",
+    "title": "Attack Tree for Cross-Site Scripting (XSS)",
+    "description": "This attack tree outlines the potential paths an attacker might take to exploit Cross-Site Scripting vulnerabilities in the React application.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-29 15:46:53.351739",
+    "last_updated": "2025-09-29 15:47:03.452469",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6B2FHS7EFMWPY1YBXPGVY5Z",
+    "description": "Cross-Site Scripting (XSS) Attack Path",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6B2FHS7EFMWPY1YBXPGVY5Z-1",
+        "description": "Inject malicious script into input fields",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement input validation and sanitization",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B2FHS7EFMWPY1YBXPGVY5Z-2",
+        "description": "Exploit vulnerable third-party libraries",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Regularly update and audit third-party libraries",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B2FHS7EFMWPY1YBXPGVY5Z-3",
+        "description": "Manipulate DOM via unsafe JavaScript execution",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Use Content Security Policy (CSP) to restrict script execution",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Conduct regular security audits and penetration testing",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.75
+      }
+    ],
+    "references": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "compliance_assessment": {
+    "id": "01K6B2FHS7EFMWPY1YBXPGVY5Z",
+    "framework": "GDPR",
+    "framework_description": "General Data Protection Regulation - A regulation in EU law on data protection and privacy.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 65.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "GDPR-1",
+        "requirement": "Obtain explicit consent from users for data processing.",
+        "status": "partially_compliant",
+        "evidence": "User consent mechanisms are implemented but may lack clarity.",
+        "gaps": [
+          "Consent mechanisms need clearer language and options."
+        ],
+        "recommendations": [
+          "Enhance consent forms to ensure clarity and explicitness."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-2",
+        "requirement": "Implement data protection by design and by default.",
+        "status": "non_compliant",
+        "evidence": "Data protection measures are not fully integrated into the development lifecycle.",
+        "gaps": [
+          "Lack of privacy impact assessments during development."
+        ],
+        "recommendations": [
+          "Integrate privacy assessments into the development process."
+        ]
+      },
+      {
+        "requirement_id": "GDPR-3",
+        "requirement": "Ensure users can access, rectify, and delete their data.",
+        "status": "partially_compliant",
+        "evidence": "Users can request data deletion but the process is not automated.",
+        "gaps": [
+          "Manual processes for data access and deletion requests."
+        ],
+        "recommendations": [
+          "Automate data access and deletion requests to improve user experience."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Lack of comprehensive data protection by design.",
+      "Insufficient user data access and deletion automation."
+    ],
+    "remediation_plan": [
+      "Review and enhance consent mechanisms for clarity.",
+      "Integrate privacy impact assessments into the development lifecycle.",
+      "Automate user data access and deletion processes."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-29 15:49:32.844106",
+    "assessor": null,
+    "created_at": "2025-09-29 15:49:32.844119",
+    "updated_at": "2025-09-29 15:49:32.844125"
+  }
+}

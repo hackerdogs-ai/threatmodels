@@ -1,0 +1,236 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K6B2FHS7EFMWPY1YBXPGVY5Z",
+      "threat_title": "Cross-Site Scripting (XSS)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "XSS attacks can lead to significant data theft and user compromise, with a moderate level of complexity in execution and high potential for user impact.",
+      "recommendations": [
+        "Implement Content Security Policy (CSP)",
+        "Sanitize user inputs",
+        "Use frameworks that automatically escape XSS"
+      ],
+      "assessment_date": "2025-09-29 15:47:33.769285",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B2FHS891J16FFMR1NYCWYM",
+      "threat_title": "Cross-Site Request Forgery (CSRF)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "CSRF can lead to unauthorized actions on behalf of users, with moderate complexity and high potential for user impact.",
+      "recommendations": [
+        "Implement anti-CSRF tokens",
+        "Use SameSite cookie attributes",
+        "Validate requests with user authentication"
+      ],
+      "assessment_date": "2025-09-29 15:47:33.769650",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B2FHSBJBE914Q8PSV7W5T4",
+      "threat_title": "Insecure Direct Object References (IDOR)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "IDOR can allow unauthorized access to sensitive data, with moderate complexity and high potential for user impact.",
+      "recommendations": [
+        "Implement proper access controls",
+        "Validate user permissions for resource access",
+        "Use indirect references for sensitive data"
+      ],
+      "assessment_date": "2025-09-29 15:47:33.771131",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B2FHSBDMWPVXV9MT8B7FKW",
+      "threat_title": "Sensitive Data Exposure",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Sensitive data exposure can lead to significant privacy violations, with moderate complexity and high potential for user impact.",
+      "recommendations": [
+        "Encrypt sensitive data at rest and in transit",
+        "Implement strict access controls",
+        "Regularly audit data access and usage"
+      ],
+      "assessment_date": "2025-09-29 15:47:33.772159",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B2FHSC6VWQE18XXE4VXQ1N",
+      "threat_title": "Denial of Service (DoS)",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "DoS attacks can disrupt service availability, with moderate complexity and high potential for user impact.",
+      "recommendations": [
+        "Implement rate limiting",
+        "Use web application firewalls",
+        "Monitor traffic patterns for anomalies"
+      ],
+      "assessment_date": "2025-09-29 15:47:33.773326",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B2FHSC7GWNW7Z2609GKTHC",
+      "threat_title": "Improper Input Validation",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Improper input validation can lead to various attacks, with moderate complexity and high potential for user impact.",
+      "recommendations": [
+        "Implement strict input validation",
+        "Use whitelisting for acceptable input",
+        "Regularly review and test input handling"
+      ],
+      "assessment_date": "2025-09-29 15:47:33.773582",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B2FHSCNQDSYRG0SRETGQJ2",
+      "threat_title": "Authentication Bypass",
+      "dread_scores": {
+        "damage": 5,
+        "reproducibility": 5,
+        "exploitability": 5,
+        "affected_users": 5,
+        "discoverability": 5
+      },
+      "total_risk_score": 25,
+      "risk_level": "medium",
+      "justification": "Authentication bypass can lead to unauthorized access, with moderate complexity and high potential for user impact.",
+      "recommendations": [
+        "Implement multi-factor authentication",
+        "Regularly review authentication mechanisms",
+        "Monitor for unusual login attempts"
+      ],
+      "assessment_date": "2025-09-29 15:47:33.773790",
+      "assessor": null,
+      "confidence_level": "high",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "high",
+      "impact_scope": "organization_wide",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The application faces several essential threats including XSS, CSRF, and sensitive data exposure, which can lead to significant impacts on user security and application integrity. Proper security measures should be implemented to mitigate these risks."
+}
