@@ -1,0 +1,165 @@
+{
+  "dread_assessments": [
+    {
+      "threat_id": "01K6B3RXATB7HGE9Y48YYM7S46",
+      "threat_title": "Unauthorized Access to Test File",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 2,
+        "discoverability": 4
+      },
+      "total_risk_score": 17,
+      "risk_level": "medium",
+      "justification": "Unauthorized access can lead to exposure of sensitive information, but the impact is limited to the file itself and not systemic.",
+      "recommendations": [
+        "Implement access controls and permissions for the test text file.",
+        "Regularly audit file access logs."
+      ],
+      "assessment_date": "2025-09-29 16:10:09.333932",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B3RXAWXCGSS7W1BB7TFRA3",
+      "threat_title": "File Tampering",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 3,
+        "exploitability": 4,
+        "affected_users": 2,
+        "discoverability": 3
+      },
+      "total_risk_score": 16,
+      "risk_level": "medium",
+      "justification": "Tampering can disrupt the threat modeling process, but the overall impact is contained to the analysis conducted on the file.",
+      "recommendations": [
+        "Use file integrity monitoring tools.",
+        "Establish a version control system for the test text file."
+      ],
+      "assessment_date": "2025-09-29 16:10:09.334198",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B3RXAWGP22C8XJ4WZEM7S1",
+      "threat_title": "Denial of Service via File Overload",
+      "dread_scores": {
+        "damage": 3,
+        "reproducibility": 3,
+        "exploitability": 4,
+        "affected_users": 2,
+        "discoverability": 3
+      },
+      "total_risk_score": 15,
+      "risk_level": "medium",
+      "justification": "While resource exhaustion is a concern, the impact is limited to the availability of the test file and does not affect broader systems.",
+      "recommendations": [
+        "Implement rate limiting on file creation.",
+        "Monitor file system usage to detect anomalies."
+      ],
+      "assessment_date": "2025-09-29 16:10:09.334686",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "medium",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B3RXAX0S6WMJPYR7BZHS8Q",
+      "threat_title": "Information Disclosure through Misconfiguration",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 4,
+        "exploitability": 4,
+        "affected_users": 3,
+        "discoverability": 4
+      },
+      "total_risk_score": 19,
+      "risk_level": "medium",
+      "justification": "Misconfiguration can lead to unauthorized access, affecting multiple users, but the impact is still limited to the file.",
+      "recommendations": [
+        "Regularly review and update file permissions.",
+        "Conduct security training for personnel managing file access."
+      ],
+      "assessment_date": "2025-09-29 16:10:09.336501",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    },
+    {
+      "threat_id": "01K6B3RXAXT48CSDET2NF4XVMX",
+      "threat_title": "Input Validation Attacks",
+      "dread_scores": {
+        "damage": 4,
+        "reproducibility": 3,
+        "exploitability": 4,
+        "affected_users": 2,
+        "discoverability": 3
+      },
+      "total_risk_score": 16,
+      "risk_level": "medium",
+      "justification": "If the file is used as input, it may lead to injection attacks, but the impact is limited to the processing context.",
+      "recommendations": [
+        "Implement strict input validation for any processing using the test text file.",
+        "Conduct regular security testing on input handling."
+      ],
+      "assessment_date": "2025-09-29 16:10:09.339392",
+      "assessor": null,
+      "confidence_level": "medium",
+      "mitigation_effort": "high",
+      "business_impact": null,
+      "technical_impact": null,
+      "likelihood": "medium",
+      "impact_scope": "local",
+      "detailed_dread_justifications": null,
+      "attack_scenarios": null,
+      "detailed_recommendations": null,
+      "risk_analysis": null,
+      "enterprise_risk_framework": null,
+      "future_risk_projection": null
+    }
+  ],
+  "summary": "The DREAD risk assessment for the identified threats associated with the test text file indicates a range of medium-level risks primarily focused on unauthorized access, tampering, denial of service, information disclosure, and input validation attacks. Each threat has been evaluated for its potential impact and likelihood, leading to recommendations for mitigation."
+}

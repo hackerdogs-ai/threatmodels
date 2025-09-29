@@ -1,0 +1,46 @@
+{
+  "id": "01K6B3RCJ6H8HRNTFM561NCTMZ",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Test Text File",
+      "description": "A simple text file used for threat modeling analysis, containing no sensitive information or specific application logic.",
+      "type": "Data"
+    }
+  ],
+  "data_flows": [],
+  "trust_boundaries": [
+    {
+      "name": "File Storage Boundary",
+      "description": "The boundary that separates secure storage from insecure storage locations.",
+      "components": [
+        "Test Text File"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-29 16:09:11.494516",
+  "updated_at": "2025-09-29 16:09:11.494523"
+}

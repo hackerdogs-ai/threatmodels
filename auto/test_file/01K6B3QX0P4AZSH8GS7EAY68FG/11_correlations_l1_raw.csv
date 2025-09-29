@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify unauthorized access and file tampering as critical threats, indicating a common vulnerability in file management systems.",,,,2025-09-29T16:12:28.317335
+CORR_002,,,,"Both threat models recommend file integrity monitoring tools to detect unauthorized changes, highlighting a shared mitigation strategy.",,,,2025-09-29T16:12:28.317349
+CORR_003,,,,Injection attacks identified in the test text file threat model correlate with similar input validation vulnerabilities in web applications.,,,,2025-09-29T16:12:28.317357
+CORR_004,,,,"Both models must adhere to data protection regulations, indicating a need for compliance alignment in security practices.",,,,2025-09-29T16:12:28.317365
+CORR_005,,,,Identified threats in the test text file model can be aggregated with other incident response scenarios to enhance overall security posture.,,,,2025-09-29T16:12:28.317372
+CORR_006,,,,"Unauthorized access and information disclosure threats are common across both models, indicating a shared risk landscape.",,,,2025-09-29T16:12:28.317380
+CORR_007,,,,Denial of service threats identified in both models suggest a need for coordinated defense strategies.,,,,2025-09-29T16:12:28.317386
+CORR_008,,,,"Both models emphasize the importance of input validation, suggesting a unified approach to secure coding practices.",,,,2025-09-29T16:12:28.317393
+CORR_009,,,,"File tampering and unauthorized access are also prevalent in endpoint security models, indicating a broader risk across systems.",,,,2025-09-29T16:12:28.317403
+CORR_010,,,,"Similar threats of information disclosure through misconfiguration are present in both models, highlighting a common vulnerability.",,,,2025-09-29T16:12:28.317451

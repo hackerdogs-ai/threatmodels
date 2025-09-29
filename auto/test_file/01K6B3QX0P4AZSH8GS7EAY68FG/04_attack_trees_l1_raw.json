@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "id": "01K6B3RXATB7HGE9Y48YYM7S46",
+    "title": "Attack Tree for Unauthorized Access to Test File",
+    "description": "This attack tree outlines the potential paths an attacker may take to gain unauthorized access to the test text file, along with associated risks and countermeasures.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-29 16:09:28+00:00",
+    "last_updated": "2025-09-29 16:09:43.177951",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6B3RXATB7HGE9Y48YYM7S46",
+    "description": "Unauthorized Access to Test File",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 6.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6B3RXATB7HGE9Y48YYM7S46-1",
+        "description": "Exploiting Weak Permissions",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Implement strict file permissions and access controls.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B3RXATB7HGE9Y48YYM7S46-2",
+        "description": "Brute Force Attack on Authentication",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 6.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Enforce strong password policies and account lockout mechanisms.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B3RXATB7HGE9Y48YYM7S46-3",
+        "description": "Social Engineering Tactics",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 4.0,
+          "impact": 5.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [],
+        "countermeasures": [
+          {
+            "description": "Conduct regular security awareness training for users.",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.7
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Regularly audit access logs for suspicious activity.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.85
+      },
+      {
+        "description": "Utilize encryption for sensitive files.",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.9
+      }
+    ],
+    "references": []
+  }
+}
