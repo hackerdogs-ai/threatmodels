@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "id": "01K6B4QAVT2M3SD9XDW1W3ACN",
+    "title": "Attack Tree for User Credential Theft",
+    "description": "This attack tree outlines the potential paths for user credential theft through phishing and man-in-the-middle attacks.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-29 16:30:00+00:00",
+    "last_updated": "2025-09-29 16:26:29.365906",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6B4QAVT2M3SD9XDW1W3ACN",
+    "description": "User Credential Theft Attack Tree",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6B4QAVT2M3SD9XDW1W3ACN-1",
+        "description": "Phishing Attack",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 8.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K6B4QAVT2M3SD9XDW1W3ACN-1-1",
+            "description": "Fake Login Page",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 5.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Educate users about phishing scams",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              },
+              {
+                "description": "Implement anti-phishing technologies",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.7
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K6B4QAVT2M3SD9XDW1W3ACN-1-2",
+            "description": "Email Spoofing",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 4.0,
+              "impact": 7.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Use SPF, DKIM, and DMARC for email authentication",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "User training and awareness programs",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.8
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B4QAVT2M3SD9XDW1W3ACN-2",
+        "description": "Man-in-the-Middle Attack",
+        "type": "OR",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K6B4QAVT2M3SD9XDW1W3ACN-2-1",
+            "description": "Unsecured Wi-Fi Network",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 6.0,
+              "impact": 9.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Encourage the use of VPNs on public networks",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K6B4QAVT2M3SD9XDW1W3ACN-2-2",
+            "description": "SSL Stripping",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 3.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Enforce HTTPS across the platform",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.9
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Implement strong encryption for data in transit",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Implement multi-factor authentication for user accounts",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.95
+      },
+      {
+        "description": "Regular security audits and penetration testing",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.85
+      }
+    ],
+    "references": []
+  }
+}

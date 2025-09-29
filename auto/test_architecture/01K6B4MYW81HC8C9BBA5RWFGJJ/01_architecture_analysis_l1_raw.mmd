@@ -1,0 +1,15 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Data_Trust_Boundary, "User Data Trust Boundary") {
+        System(Frontend, "Frontend", "A Single Page Application (SPA) developed using React with TypeScript, utilizing Redux for state management and Material-UI for UI components.")
+        System(User_Service, "User Service", "Manages user authentication and user-related data, ensuring secure access to the platform.")
+        SystemDb(User_Database, "User Database", "Utilizes PostgreSQL to store user information securely, ensuring data integrity and availability.")
+    }
+    System_Boundary(tb_Payment_Processing_Trust_Boundary, "Payment Processing Trust Bo...") {
+        System(Order_Service, "Order Service", "Responsible for processing and fulfilling customer orders, interacting with the Payment Service for transactions.")
+        System(Payment_Service, "Payment Service", "Integrates with external payment processors like Stripe to handle transactions securely.")
+    }
+
+    Rel(Frontend, User_Service, "Uses")
+    Rel(Order_Service, Payment_Service, "Uses")
+    Rel(User_Service, User_Database, "Uses")

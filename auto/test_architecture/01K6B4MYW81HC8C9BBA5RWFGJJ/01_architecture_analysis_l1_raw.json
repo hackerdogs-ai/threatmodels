@@ -1,0 +1,92 @@
+{
+  "id": "01K6B4NSE22AM4SWD4XSPAS069",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "A Single Page Application (SPA) developed using React with TypeScript, utilizing Redux for state management and Material-UI for UI components.",
+      "type": "frontend"
+    },
+    {
+      "name": "User Service",
+      "description": "Manages user authentication and user-related data, ensuring secure access to the platform.",
+      "type": "backend service"
+    },
+    {
+      "name": "Order Service",
+      "description": "Responsible for processing and fulfilling customer orders, interacting with the Payment Service for transactions.",
+      "type": "backend service"
+    },
+    {
+      "name": "Payment Service",
+      "description": "Integrates with external payment processors like Stripe to handle transactions securely.",
+      "type": "backend service"
+    },
+    {
+      "name": "User Database",
+      "description": "Utilizes PostgreSQL to store user information securely, ensuring data integrity and availability.",
+      "type": "database"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "User Service",
+      "description": "User credentials are sent from the frontend to the User Service for authentication."
+    },
+    {
+      "source": "Order Service",
+      "destination": "Payment Service",
+      "description": "Order details are sent from the Order Service to the Payment Service to process payments."
+    },
+    {
+      "source": "User Service",
+      "destination": "User Database",
+      "description": "User data is stored and retrieved from the User Database by the User Service."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Data Trust Boundary",
+      "description": "Boundary that protects user data and authentication processes.",
+      "components": [
+        "Frontend",
+        "User Service",
+        "User Database"
+      ]
+    },
+    {
+      "name": "Payment Processing Trust Boundary",
+      "description": "Boundary that secures payment transactions and sensitive financial data.",
+      "components": [
+        "Order Service",
+        "Payment Service"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-29 16:25:14.946708",
+  "updated_at": "2025-09-29 16:25:14.946714"
+}

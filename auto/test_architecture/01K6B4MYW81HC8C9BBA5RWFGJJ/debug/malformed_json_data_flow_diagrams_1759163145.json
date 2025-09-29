@@ -1,0 +1,137 @@
+{
+    "id": "01F8F8G6D8H9J0K1L2M3N4O5P6",
+    "name": "E-Commerce Microservices Data Flow Diagram",
+    "description": "Basic data flow diagram for the E-Commerce Microservices Platform, illustrating data movement, storage, and trust boundaries.",
+    "data_assets": [
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5Q7",
+            "name": "User Data",
+            "classification": "pii"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5R8",
+            "name": "Product Catalog",
+            "classification": "internal"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5S9",
+            "name": "Order Data",
+            "classification": "confidential"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5T0",
+            "name": "Payment Information",
+            "classification": "pci"
+        }
+    ],
+    "processes": [
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5U1",
+            "name": "Frontend Application",
+            "type": "frontend",
+            "trust_level": "low_trust"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5V2",
+            "name": "User Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5W3",
+            "name": "Product Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5X4",
+            "name": "Order Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5Y5",
+            "name": "Payment Service",
+            "type": "service",
+            "trust_level": "very_high_trust"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5Z6",
+            "name": "Notification Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5A7",
+            "name": "User Database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5B8",
+            "name": "Product Database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5C9",
+            "name": "Order Database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5D0",
+            "name": "Cache",
+            "type": "cache",
+            "encryption": "none"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5E1",
+            "name": "User",
+            "type": "user"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5F2",
+            "name": "Stripe Payment Processor",
+            "type": "service"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5G3",
+            "name": "SendGrid Notification Service",
+            "type": "service"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5H4",
+            "name": "AWS S3 Storage",
+            "type": "service"
+        }
+    ],
+    "data_flows": [
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5I5",
+            "name": "User Authentication",
+            "source_id": "01F8F8G6D8H9J0K1L2M3N4O5E1",
+            "destination_id": "01F8F8G6D8H9J0K1L2M3N4O5V2",
+            "protocol": "https",
+            "encryption": "transport"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5J6",
+            "name": "Product Information Retrieval",
+            "source_id": "01F8F8G6D8H9J0K1L2M3N4O5V2",
+            "destination_id": "01F8F8G6D8H9J0K1L2M3N4O5W3",
+            "protocol": "https",
+            "encryption": "transport"
+        },
+        {
+            "id": "01F8F8G6D8H9J0K1L2M3N4O5K7",
+            "name": "Order Processing",
+            "source_id": "01F8F8G6D8H9J0K1L2M3N4O5W3",
+            "destination_id": "01F8F8G6D8H9J0K1L2M3N4O5X4",
+            "protocol": "https",
+            "encryption": "transport"
+        }

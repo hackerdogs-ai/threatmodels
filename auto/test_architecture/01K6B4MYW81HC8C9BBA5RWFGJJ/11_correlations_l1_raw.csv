@@ -1,0 +1,11 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify user credential theft as a significant threat, particularly in the context of payment information.",,,,2025-09-29T16:29:37.657551
+CORR_002,,,,Both models emphasize the need for secure JWT token management to prevent session hijacking.,,,,2025-09-29T16:29:37.657574
+CORR_003,,,,Similar patterns of SQL injection threats are identified in both models due to shared database technologies.,,,,2025-09-29T16:29:37.657587
+CORR_004,,,,Both models recommend using web application firewalls to detect and block SQL injection attempts.,,,,2025-09-29T16:29:37.657599
+CORR_005,,,,Cross-Site Scripting (XSS) vulnerabilities are prevalent in both web and mobile applications.,,,,2025-09-29T16:29:37.657610
+CORR_006,,,,"Both models must adhere to data protection regulations, emphasizing the need for data encryption at rest and in transit.",,,,2025-09-29T16:29:37.657621
+CORR_007,,,,Both models highlight the importance of role-based access control (RBAC) to prevent unauthorized access.,,,,2025-09-29T16:29:37.657632
+CORR_008,,,,Denial of Service (DoS) attacks are a common threat across both models due to the reliance on APIs.,,,,2025-09-29T16:29:37.657643
+CORR_009,,,,"Both models must comply with data protection laws, necessitating audit logging for tracking access and changes.",,,,2025-09-29T16:29:37.657655
+CORR_010,,,,Both models emphasize the need for incident response strategies to address security breaches effectively.,,,,2025-09-29T16:29:37.657666
