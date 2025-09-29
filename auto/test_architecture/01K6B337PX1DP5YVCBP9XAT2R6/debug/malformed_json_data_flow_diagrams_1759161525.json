@@ -1,0 +1,134 @@
+{
+    "id": "01FJ9V9F8G4F8F8F8F8F8F8F8F",
+    "name": "E-Commerce Microservices Platform Data Flow Diagram",
+    "description": "A basic data flow diagram for the E-Commerce Microservices Platform showing how data moves through the application.",
+    "data_assets": [
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8A",
+            "name": "User Data",
+            "classification": "pii"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8B",
+            "name": "Product Data",
+            "classification": "internal"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8C",
+            "name": "Order Data",
+            "classification": "confidential"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8D",
+            "name": "Payment Information",
+            "classification": "pci"
+        }
+    ],
+    "processes": [
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8E",
+            "name": "Frontend Application",
+            "type": "frontend",
+            "trust_level": "low_trust"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8F",
+            "name": "User Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8G",
+            "name": "Product Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8H",
+            "name": "Order Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8I",
+            "name": "Payment Service",
+            "type": "service",
+            "trust_level": "very_high_trust"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8J",
+            "name": "Notification Service",
+            "type": "service",
+            "trust_level": "high_trust"
+        }
+    ],
+    "data_stores": [
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8K",
+            "name": "User Database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8L",
+            "name": "Product Database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8M",
+            "name": "Order Database",
+            "type": "database",
+            "encryption": "at_rest"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8N",
+            "name": "Cache (Redis)",
+            "type": "cache",
+            "encryption": "none"
+        }
+    ],
+    "external_entities": [
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8O",
+            "name": "User",
+            "type": "user"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8P",
+            "name": "Stripe Payment Processor",
+            "type": "service"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8Q",
+            "name": "SendGrid Notification Service",
+            "type": "service"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8R",
+            "name": "AWS S3",
+            "type": "service"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8S",
+            "name": "CloudFront CDN",
+            "type": "service"
+        }
+    ],
+    "data_flows": [
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8T",
+            "name": "User Authentication",
+            "source_id": "01FJ9V9F8G4F8F8F8F8F8F8F8E",
+            "destination_id": "01FJ9V9F8G4F8F8F8F8F8F8F8F",
+            "protocol": "https",
+            "encryption": "transport"
+        },
+        {
+            "id": "01FJ9V9F8G4F8F8F8F8F8F8F8U",
+            "name": "Product Retrieval",
+            "source_id": "01FJ9V9F8G4F8F8F8F8F8F8F8F",
+            "destination_id": "01FJ9V9F8G4F8F8F8F8F8F8F8G",
+            "protocol": "https",
+            "encryption": "transport"
+        }

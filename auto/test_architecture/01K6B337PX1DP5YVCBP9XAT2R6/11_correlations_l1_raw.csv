@@ -1,0 +1,12 @@
+Correlation_ID,Type,Source,Target,Description,Strength,Impact,Confidence,Created_At
+CORR_001,,,,"Both models identify data tampering during payment processing as a significant threat, highlighting the risk of intercepting and modifying payment information.",,,,2025-09-29T16:03:57.273555
+CORR_002,,,,"User account spoofing is a common threat identified in both models, emphasizing the need for robust authentication mechanisms.",,,,2025-09-29T16:03:57.273565
+CORR_003,,,,Both models propose implementing HTTPS for secure communication to prevent data tampering and eavesdropping.,,,,2025-09-29T16:03:57.273572
+CORR_004,,,,"Cross-Site Scripting (XSS) vulnerabilities are identified in both models, indicating a shared risk related to user input handling.",,,,2025-09-29T16:03:57.273577
+CORR_005,,,,Both models emphasize the need for strict access controls on API endpoints to mitigate information disclosure risks.,,,,2025-09-29T16:03:57.273583
+CORR_006,,,,Both models align with compliance requirements for logging and auditing user activities to ensure accountability.,,,,2025-09-29T16:03:57.273588
+CORR_007,,,,"Denial of Service (DoS) threats are common across both models, indicating a need for coordinated mitigation strategies.",,,,2025-09-29T16:03:57.273593
+CORR_008,,,,"SQL Injection vulnerabilities are identified in both models, highlighting the risk of data manipulation through improper input validation.",,,,2025-09-29T16:03:57.273599
+CORR_009,,,,Both models recommend user education to mitigate risks associated with CSRF attacks and social engineering.,,,,2025-09-29T16:03:57.273604
+CORR_010,,,,"Similar threats related to third-party integrations, such as insecure API communications with external services, are identified in both models.",,,,2025-09-29T16:03:57.273609
+CORR_011,,,,"User account spoofing and session hijacking threats are prevalent in both models, indicating a need for consistent security practices.",,,,2025-09-29T16:03:57.273615

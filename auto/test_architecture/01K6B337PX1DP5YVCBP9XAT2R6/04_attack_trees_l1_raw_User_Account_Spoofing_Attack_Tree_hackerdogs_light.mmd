@@ -1,0 +1,44 @@
+graph TB
+  node_01K6B35WC84N1Y531BQJD16WM2["User Account Spoofing | [HIGH]"]:::highRisk
+  node_01K6B35WC84N1Y531BQJD16WM2-1["Steal JWT Token | [HIGH]"]:::highRisk
+  node_01K6B35WC84N1Y531BQJD16WM2-1-1["Phishing Attack | [HIGH]"]:::highRisk
+  node_01K6B35WC84N1Y531BQJD16WM2-1-1_cm_0["CM: User education on phishing (Eff: 0.8)"]:::countermeasure
+  node_01K6B35WC84N1Y531BQJD16WM2-1-2["Malware Installation | [HIGH]"]:::highRisk
+  node_01K6B35WC84N1Y531BQJD16WM2-1-2_cm_0["CM: Endpoint protection software (Eff: 0.7)"]:::countermeasure
+  node_01K6B35WC84N1Y531BQJD16WM2-1_cm_0["CM: Implement short-lived JWT tokens (Eff: 0.9)"]:::countermeasure
+  node_01K6B35WC84N1Y531BQJD16WM2-1_cm_1["CM: Use refresh tokens with secure storage (Eff: 0.85)"]:::countermeasure
+  node_01K6B35WC84N1Y531BQJD16WM2-2["Guess User Credentials | [MED]"]:::mediumRisk
+  node_01K6B35WC84N1Y531BQJD16WM2-2-1["Brute Force Attack | [MED]"]:::mediumRisk
+  node_01K6B35WC84N1Y531BQJD16WM2-2-1_cm_0["CM: Implement account lockout mechanisms (Eff: 0.75)"]:::countermeasure
+  node_01K6B35WC84N1Y531BQJD16WM2-2-2["Credential Stuffing | [MED]"]:::mediumRisk
+  node_01K6B35WC84N1Y531BQJD16WM2-2-2_cm_0["CM: Enforce strong password policies (Eff: 0.8)"]:::countermeasure
+  node_01K6B35WC84N1Y531BQJD16WM2-2_cm_0["CM: Implement multi-factor authentication (MFA) (Eff: 0.95)"]:::countermeasure
+  node_01K6B35WC84N1Y531BQJD16WM2_cm_0["CM: Regular security training for users (Eff: 0.8)"]:::countermeasure
+  node_01K6B35WC84N1Y531BQJD16WM2_cm_1["CM: Monitor and log authentication attempts (Eff: 0.85)"]:::countermeasure
+
+  node_01K6B35WC84N1Y531BQJD16WM2 --> node_01K6B35WC84N1Y531BQJD16WM2-1
+  node_01K6B35WC84N1Y531BQJD16WM2-1 --> node_01K6B35WC84N1Y531BQJD16WM2-1-1
+  node_01K6B35WC84N1Y531BQJD16WM2-1-1 -.-> node_01K6B35WC84N1Y531BQJD16WM2-1-1_cm_0
+  node_01K6B35WC84N1Y531BQJD16WM2-1 --> node_01K6B35WC84N1Y531BQJD16WM2-1-2
+  node_01K6B35WC84N1Y531BQJD16WM2-1-2 -.-> node_01K6B35WC84N1Y531BQJD16WM2-1-2_cm_0
+  node_01K6B35WC84N1Y531BQJD16WM2-1 -.-> node_01K6B35WC84N1Y531BQJD16WM2-1_cm_0
+  node_01K6B35WC84N1Y531BQJD16WM2-1 -.-> node_01K6B35WC84N1Y531BQJD16WM2-1_cm_1
+  node_01K6B35WC84N1Y531BQJD16WM2 --> node_01K6B35WC84N1Y531BQJD16WM2-2
+  node_01K6B35WC84N1Y531BQJD16WM2-2 --> node_01K6B35WC84N1Y531BQJD16WM2-2-1
+  node_01K6B35WC84N1Y531BQJD16WM2-2-1 -.-> node_01K6B35WC84N1Y531BQJD16WM2-2-1_cm_0
+  node_01K6B35WC84N1Y531BQJD16WM2-2 --> node_01K6B35WC84N1Y531BQJD16WM2-2-2
+  node_01K6B35WC84N1Y531BQJD16WM2-2-2 -.-> node_01K6B35WC84N1Y531BQJD16WM2-2-2_cm_0
+  node_01K6B35WC84N1Y531BQJD16WM2-2 -.-> node_01K6B35WC84N1Y531BQJD16WM2-2_cm_0
+  node_01K6B35WC84N1Y531BQJD16WM2 -.-> node_01K6B35WC84N1Y531BQJD16WM2_cm_0
+  node_01K6B35WC84N1Y531BQJD16WM2 -.-> node_01K6B35WC84N1Y531BQJD16WM2_cm_1
+
+  classDef andNode fill:#FFB3B3,stroke:#8B0000,stroke-width:2px,color:#0B0D17
+  classDef orNode fill:#C2FFD8,stroke:#106B49,stroke-width:2px,color:#0B0D17
+  classDef leafNode fill:#73d1ff,stroke:#29ABE2,stroke-width:2px,color:#0B0D17
+  classDef highRisk fill:#FFB3B3,color:#8B0000,stroke:#8B0000,stroke-width:2px
+  classDef mediumRisk fill:#FFF200,stroke:#7A6300,stroke-width:1px,color:#0B0D17
+  classDef lowRisk fill:#FFF2B3,stroke:#FFF2B3,stroke-width:1px,color:#0B0D17
+  classDef countermeasure fill:#C2FFD8,stroke:#106B49,stroke-width:1px,color:#0B0D17
+  classDef reference fill:#ffa1ad,stroke:#A259FF,stroke-width:1px,stroke-dasharray:3 3,color:#0B0D17
+  classDef mitreNode stroke-dasharray:5 5
+  classDef note fill:#ffffcc,stroke:#ffcc00,stroke-width:2px,stroke-dasharray:5 5

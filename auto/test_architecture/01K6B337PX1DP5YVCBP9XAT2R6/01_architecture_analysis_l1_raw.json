@@ -1,0 +1,96 @@
+{
+  "id": "01K6B345TVW4Z75N8ACVND1XWR",
+  "title": null,
+  "overview": null,
+  "architecture_type": null,
+  "deployment_model": null,
+  "components": [
+    {
+      "name": "Frontend",
+      "description": "A Single Page Application built using React and TypeScript, providing a user interface for the e-commerce platform.",
+      "type": "frontend"
+    },
+    {
+      "name": "User Service",
+      "description": "Manages user authentication and user-related operations, ensuring secure access to the platform.",
+      "type": "backend service"
+    },
+    {
+      "name": "Product Service",
+      "description": "Handles the product catalog and inventory management, allowing users to browse and search for products.",
+      "type": "backend service"
+    },
+    {
+      "name": "Payment Service",
+      "description": "Integrates with external payment processors like Stripe to handle transactions securely.",
+      "type": "backend service"
+    },
+    {
+      "name": "User Database",
+      "description": "PostgreSQL database used for storing user-related data, ensuring data integrity and security.",
+      "type": "database"
+    }
+  ],
+  "data_flows": [
+    {
+      "source": "Frontend",
+      "destination": "User Service",
+      "description": "User authentication requests are sent from the frontend to the User Service."
+    },
+    {
+      "source": "User Service",
+      "destination": "User Database",
+      "description": "User data is stored and retrieved from the User Database."
+    },
+    {
+      "source": "Frontend",
+      "destination": "Payment Service",
+      "description": "Payment information is sent from the frontend to the Payment Service for processing."
+    },
+    {
+      "source": "Payment Service",
+      "destination": "Stripe",
+      "description": "Payment transactions are processed through the Stripe payment gateway."
+    }
+  ],
+  "trust_boundaries": [
+    {
+      "name": "User Data Trust Boundary",
+      "description": "Boundary that separates user data management from other services to protect sensitive information.",
+      "components": [
+        "User Service",
+        "User Database"
+      ]
+    },
+    {
+      "name": "Payment Processing Trust Boundary",
+      "description": "Boundary that ensures secure handling of payment information and transactions.",
+      "components": [
+        "Payment Service",
+        "Stripe"
+      ]
+    }
+  ],
+  "technology_stack": {},
+  "frameworks": [],
+  "protocols": [],
+  "security_controls": [],
+  "authentication_mechanisms": [],
+  "authorization_model": null,
+  "encryption_standards": [],
+  "network_segments": [],
+  "firewall_rules": [],
+  "network_security": {},
+  "data_stores": [],
+  "data_classification": {},
+  "external_integrations": [],
+  "api_endpoints": [],
+  "third_party_services": [],
+  "identified_vulnerabilities": [],
+  "architectural_weaknesses": [],
+  "security_gaps": [],
+  "architectural_recommendations": [],
+  "security_improvements": [],
+  "created_at": "2025-09-29 15:58:09.243324",
+  "updated_at": "2025-09-29 15:58:09.243328"
+}

@@ -1,0 +1,247 @@
+{
+  "risk_prioritization": {
+    "id": "01K6B35WC84N1Y531BQJD16WM4",
+    "prioritization_method": "DREAD",
+    "criteria_weights": {
+      "business_impact": 0.4,
+      "technical_impact": 0.3,
+      "likelihood": 0.2,
+      "urgency": 0.1
+    },
+    "prioritized_risks": [
+      {
+        "risk_id": "01K6B35WC84N1Y531BQJD16WM2",
+        "threat_title": "User Account Spoofing",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement strong password policies",
+          "Enable multi-factor authentication (MFA)"
+        ]
+      },
+      {
+        "risk_id": "01K6B35WCB13GNADCZG4MJ527R",
+        "threat_title": "Data Tampering in Payment Processing",
+        "risk_score": 8,
+        "priority_level": "critical",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "high",
+        "urgency": "immediate",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use HTTPS for all communication",
+          "Implement data integrity checks"
+        ]
+      },
+      {
+        "risk_id": "01K6B35WCBZP78KTCK4JY7AN34",
+        "threat_title": "Repudiation of Transactions",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement comprehensive logging and audit trails"
+        ]
+      },
+      {
+        "risk_id": "01K6B35WCC2H0242Z7TR2V1APR",
+        "threat_title": "Information Disclosure via Insecure API",
+        "risk_score": 7,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Enforce strict access controls on API endpoints"
+        ]
+      },
+      {
+        "risk_id": "01K6B35WCBRBCYZ7V87VWT2AR5",
+        "threat_title": "Denial of Service via API Abuse",
+        "risk_score": 6,
+        "priority_level": "high",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement rate limiting and throttling on API endpoints"
+        ]
+      },
+      {
+        "risk_id": "01K6B35WCBTP837HMAEB41TFF7",
+        "threat_title": "Elevation of Privilege through Misconfigured Services",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "long_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "high",
+        "timeline": "long_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Regularly review and update service configurations"
+        ]
+      },
+      {
+        "risk_id": "01K6B35WCCH46XYYHRD2SRZTDW",
+        "threat_title": "SQL Injection in User and Order Services",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "high",
+        "technical_impact": "high",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Utilize prepared statements and parameterized queries"
+        ]
+      },
+      {
+        "risk_id": "01K6B35WCCH46XYYHRD2SRZTDX",
+        "threat_title": "Cross-Site Scripting (XSS) in Frontend",
+        "risk_score": 6,
+        "priority_level": "medium",
+        "business_impact": "high",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Implement Content Security Policy (CSP)",
+          "Sanitize user inputs"
+        ]
+      },
+      {
+        "risk_id": "01K6B35WCCH46XYYHRD2SRZTDZ",
+        "threat_title": "Cross-Site Request Forgery (CSRF) Attacks",
+        "risk_score": 5,
+        "priority_level": "medium",
+        "business_impact": "medium",
+        "technical_impact": "medium",
+        "likelihood": "medium",
+        "urgency": "short_term",
+        "mitigation_status": "unmitigated",
+        "resource_requirements": "medium",
+        "timeline": "short_term",
+        "dependencies": [],
+        "recommended_actions": [
+          "Use anti-CSRF tokens for state-changing requests"
+        ]
+      }
+    ],
+    "risk_categories": {
+      "critical_risks": [
+        "01K6B35WC84N1Y531BQJD16WM2",
+        "01K6B35WCB13GNADCZG4MJ527R"
+      ],
+      "high_priority_risks": [
+        "01K6B35WCBZP78KTCK4JY7AN34",
+        "01K6B35WCC2H0242Z7TR2V1APR",
+        "01K6B35WCBRBCYZ7V87VWT2AR5"
+      ],
+      "medium_priority_risks": [
+        "01K6B35WCBTP837HMAEB41TFF7",
+        "01K6B35WCCH46XYYHRD2SRZTDW",
+        "01K6B35WCCH46XYYHRD2SRZTDX",
+        "01K6B35WCCH46XYYHRD2SRZTDZ"
+      ],
+      "low_priority_risks": []
+    },
+    "risk_scores": {
+      "01K6B35WC84N1Y531BQJD16WM2": 8.0,
+      "01K6B35WCB13GNADCZG4MJ527R": 8.0,
+      "01K6B35WCBZP78KTCK4JY7AN34": 7.0,
+      "01K6B35WCC2H0242Z7TR2V1APR": 7.0,
+      "01K6B35WCBRBCYZ7V87VWT2AR5": 6.0,
+      "01K6B35WCBTP837HMAEB41TFF7": 6.0,
+      "01K6B35WCCH46XYYHRD2SRZTDW": 6.0,
+      "01K6B35WCCH46XYYHRD2SRZTDX": 6.0,
+      "01K6B35WCCH46XYYHRD2SRZTDZ": 5.0
+    },
+    "risk_rankings": [
+      [
+        "01K6B35WC84N1Y531BQJD16WM2",
+        8.0
+      ],
+      [
+        "01K6B35WCB13GNADCZG4MJ527R",
+        8.0
+      ],
+      [
+        "01K6B35WCBZP78KTCK4JY7AN34",
+        7.0
+      ],
+      [
+        "01K6B35WCC2H0242Z7TR2V1APR",
+        7.0
+      ],
+      [
+        "01K6B35WCBRBCYZ7V87VWT2AR5",
+        6.0
+      ],
+      [
+        "01K6B35WCBTP837HMAEB41TFF7",
+        6.0
+      ],
+      [
+        "01K6B35WCCH46XYYHRD2SRZTDW",
+        6.0
+      ],
+      [
+        "01K6B35WCCH46XYYHRD2SRZTDX",
+        6.0
+      ],
+      [
+        "01K6B35WCCH46XYYHRD2SRZTDZ",
+        5.0
+      ]
+    ],
+    "business_impact_analysis": {
+      "financial_impact": "High potential loss due to fraud or data breaches.",
+      "operational_impact": "Service disruptions and increased support costs.",
+      "reputational_impact": "Loss of customer trust and brand damage."
+    },
+    "cost_benefit_analysis": {},
+    "mitigation_priorities": [],
+    "resource_allocation": {},
+    "created_at": "2025-09-29 16:03:34.031864",
+    "updated_at": "2025-09-29 16:03:34.031870"
+  }
+}

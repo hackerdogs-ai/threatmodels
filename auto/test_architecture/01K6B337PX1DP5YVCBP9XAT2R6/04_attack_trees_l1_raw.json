@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "id": "01K6B35WC84N1Y531BQJD16WM2",
+    "title": "User Account Spoofing Attack Tree",
+    "description": "Attack tree for the threat of user account spoofing through JWT token theft or credential guessing.",
+    "author": null,
+    "version": null,
+    "created": "2025-09-29 16:00:00+00:00",
+    "last_updated": "2025-09-29 15:59:17.820203",
+    "framework_references": []
+  },
+  "tree": {
+    "id": "01K6B35WC84N1Y531BQJD16WM2",
+    "description": "User Account Spoofing",
+    "type": "OR",
+    "mitre_attack": null,
+    "risk": {
+      "likelihood": 7.0,
+      "impact": 8.0,
+      "cost_to_attacker": null,
+      "notes": null
+    },
+    "children": [
+      {
+        "id": "01K6B35WC84N1Y531BQJD16WM2-1",
+        "description": "Steal JWT Token",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 6.0,
+          "impact": 9.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K6B35WC84N1Y531BQJD16WM2-1-1",
+            "description": "Phishing Attack",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 5.0,
+              "impact": 9.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "User education on phishing",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K6B35WC84N1Y531BQJD16WM2-1-2",
+            "description": "Malware Installation",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 4.0,
+              "impact": 8.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Endpoint protection software",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.7
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Implement short-lived JWT tokens",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.9
+          },
+          {
+            "description": "Use refresh tokens with secure storage",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.85
+          }
+        ],
+        "references": []
+      },
+      {
+        "id": "01K6B35WC84N1Y531BQJD16WM2-2",
+        "description": "Guess User Credentials",
+        "type": "AND",
+        "mitre_attack": null,
+        "risk": {
+          "likelihood": 5.0,
+          "impact": 7.0,
+          "cost_to_attacker": null,
+          "notes": null
+        },
+        "children": [
+          {
+            "id": "01K6B35WC84N1Y531BQJD16WM2-2-1",
+            "description": "Brute Force Attack",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 6.0,
+              "impact": 7.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Implement account lockout mechanisms",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.75
+              }
+            ],
+            "references": []
+          },
+          {
+            "id": "01K6B35WC84N1Y531BQJD16WM2-2-2",
+            "description": "Credential Stuffing",
+            "type": "LEAF",
+            "mitre_attack": null,
+            "risk": {
+              "likelihood": 5.0,
+              "impact": 6.0,
+              "cost_to_attacker": null,
+              "notes": null
+            },
+            "children": [],
+            "countermeasures": [
+              {
+                "description": "Enforce strong password policies",
+                "mitre_mitigation_id": null,
+                "effectiveness": 0.8
+              }
+            ],
+            "references": []
+          }
+        ],
+        "countermeasures": [
+          {
+            "description": "Implement multi-factor authentication (MFA)",
+            "mitre_mitigation_id": null,
+            "effectiveness": 0.95
+          }
+        ],
+        "references": []
+      }
+    ],
+    "countermeasures": [
+      {
+        "description": "Regular security training for users",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.8
+      },
+      {
+        "description": "Monitor and log authentication attempts",
+        "mitre_mitigation_id": null,
+        "effectiveness": 0.85
+      }
+    ],
+    "references": []
+  }
+}

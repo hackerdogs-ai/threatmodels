@@ -1,0 +1,244 @@
+{
+  "id": "01FJ9V9F8G4F8F8F8F8F8F8F8F",
+  "name": "E-Commerce Microservices Platform Data Flow Diagram",
+  "version": "1.0.0",
+  "description": "A basic data flow diagram for the E-Commerce Microservices Platform showing how data moves through the application.",
+  "created_at": "2025-09-29 15:58:45.918612",
+  "last_updated": "2025-09-29 15:58:45.918616",
+  "data_assets": [
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8A",
+      "name": "User Data",
+      "description": null,
+      "classification": "pii",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8B",
+      "name": "Product Data",
+      "description": null,
+      "classification": "internal",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8C",
+      "name": "Order Data",
+      "description": null,
+      "classification": "confidential",
+      "compliance_scope": "set()"
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8D",
+      "name": "Payment Information",
+      "description": null,
+      "classification": "pci",
+      "compliance_scope": "set()"
+    }
+  ],
+  "processes": [
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8E",
+      "name": "Frontend Application",
+      "description": null,
+      "type": "frontend",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "low_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8F",
+      "name": "User Service",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8G",
+      "name": "Product Service",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8H",
+      "name": "Order Service",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8I",
+      "name": "Payment Service",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "very_high_trust",
+      "external_references": {}
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8J",
+      "name": "Notification Service",
+      "description": null,
+      "type": "service",
+      "owner": null,
+      "language": null,
+      "version": null,
+      "environment": null,
+      "trust_level": "high_trust",
+      "external_references": {}
+    }
+  ],
+  "data_stores": [
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8K",
+      "name": "User Database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8L",
+      "name": "Product Database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8M",
+      "name": "Order Database",
+      "description": null,
+      "type": "database",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "at_rest",
+      "authentication_required": true,
+      "authentication_strength": null
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8N",
+      "name": "Cache (Redis)",
+      "description": null,
+      "type": "cache",
+      "technology": null,
+      "owner": null,
+      "environment": null,
+      "trust_level": null,
+      "encryption": "none",
+      "authentication_required": true,
+      "authentication_strength": null
+    }
+  ],
+  "external_entities": [
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8O",
+      "name": "User",
+      "description": null,
+      "type": "user",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8P",
+      "name": "Stripe Payment Processor",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8Q",
+      "name": "SendGrid Notification Service",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8R",
+      "name": "AWS S3",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8S",
+      "name": "CloudFront CDN",
+      "description": null,
+      "type": "service",
+      "trust_level": "untrusted"
+    }
+  ],
+  "data_flows": [
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8T",
+      "name": "User Authentication",
+      "description": null,
+      "source_id": "01FJ9V9F8G4F8F8F8F8F8F8F8E",
+      "destination_id": "01FJ9V9F8G4F8F8F8F8F8F8F8F",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    },
+    {
+      "id": "01FJ9V9F8G4F8F8F8F8F8F8F8U",
+      "name": "Product Retrieval",
+      "description": null,
+      "source_id": "01FJ9V9F8G4F8F8F8F8F8F8F8F",
+      "destination_id": "01FJ9V9F8G4F8F8F8F8F8F8F8G",
+      "data_assets": [],
+      "protocol": "https",
+      "authentication_strength": null,
+      "encryption": "transport",
+      "source_network": null,
+      "destination_network": null,
+      "network_path": null,
+      "destination_port": null,
+      "destination_endpoint": null,
+      "initiated_by": "source",
+      "is_batch": false,
+      "batch_frequency": null
+    }
+  ],
+  "defined_trust_boundaries": []
+}

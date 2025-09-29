@@ -1,0 +1,86 @@
+{
+  "compliance_assessment": {
+    "id": "01K6B35WCC3KYKV1VWWT2BSX3M",
+    "framework": "ISO 27001",
+    "framework_description": "ISO 27001 is an international standard for information security management systems (ISMS) that provides a systematic approach to managing sensitive company information, ensuring its confidentiality, integrity, and availability.",
+    "applicability": "high",
+    "compliance_status": "partially_compliant",
+    "overall_score": 75.0,
+    "maturity_level": null,
+    "requirements": [
+      {
+        "requirement_id": "A.5.1",
+        "requirement": "Information security policies should be defined and communicated.",
+        "status": "compliant",
+        "evidence": "Information security policies are documented and communicated to all employees.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "A.6.1",
+        "requirement": "Management should actively support security initiatives.",
+        "status": "partially_compliant",
+        "evidence": "Management supports security initiatives but lacks regular reviews.",
+        "gaps": [
+          "Lack of regular management reviews of security policies."
+        ],
+        "recommendations": [
+          "Establish a schedule for regular management reviews of security policies."
+        ]
+      },
+      {
+        "requirement_id": "A.9.1",
+        "requirement": "Access control policies should be established and enforced.",
+        "status": "partially_compliant",
+        "evidence": "Access control policies are in place but not consistently enforced across all services.",
+        "gaps": [
+          "Inconsistent enforcement of access control policies."
+        ],
+        "recommendations": [
+          "Conduct regular audits to ensure access control policies are enforced."
+        ]
+      },
+      {
+        "requirement_id": "A.12.1",
+        "requirement": "Information systems should be protected against malware.",
+        "status": "compliant",
+        "evidence": "Anti-malware solutions are implemented across the platform.",
+        "gaps": [],
+        "recommendations": []
+      },
+      {
+        "requirement_id": "A.16.1",
+        "requirement": "Incident management processes should be established.",
+        "status": "partially_compliant",
+        "evidence": "Incident management processes are documented but not regularly tested.",
+        "gaps": [
+          "Lack of regular testing of incident management processes."
+        ],
+        "recommendations": [
+          "Conduct regular drills to test incident management processes."
+        ]
+      }
+    ],
+    "critical_gaps": [
+      "Lack of regular management reviews of security policies.",
+      "Inconsistent enforcement of access control policies.",
+      "Lack of regular testing of incident management processes."
+    ],
+    "remediation_plan": [
+      "Establish a schedule for regular management reviews of security policies.",
+      "Conduct regular audits to ensure access control policies are enforced.",
+      "Implement regular drills to test incident management processes."
+    ],
+    "risk_implications": [],
+    "business_impact": null,
+    "compliance_analysis": {},
+    "compliance_trends": null,
+    "critical_frameworks": [],
+    "compliance_risks": [],
+    "recommendations": [],
+    "assessment_date": "2025-09-29 16:02:45.476904",
+    "assessor": null,
+    "created_at": "2025-09-29 16:02:45.476920",
+    "updated_at": "2025-09-29 16:02:45.476923"
+  }
+}

@@ -1,0 +1,17 @@
+C4Context
+    title Architecture Analysis - System Context
+    Enterprise_Boundary(tb_User_Data_Trust_Boundary, "User Data Trust Boundary") {
+        System(User_Service, "User Service", "Manages user authentication and user-related operations, ensuring secure access to the platform.")
+        SystemDb(User_Database, "User Database", "PostgreSQL database used for storing user-related data, ensuring data integrity and security.")
+    }
+    System_Boundary(tb_Payment_Processing_Trust_Boundary, "Payment Processing Trust Bo...") {
+        System(Payment_Service, "Payment Service", "Integrates with external payment processors like Stripe to handle transactions securely.")
+        System(Stripe, "Stripe", "Auto-created component: Stripe")
+    }
+    System(Frontend, "Frontend", "A Single Page Application built using React and TypeScript, providing a user interface for the e-commerce platform.")
+    System(Product_Service, "Product Service", "Handles the product catalog and inventory management, allowing users to browse and search for products.")
+
+    Rel(Frontend, User_Service, "Uses")
+    Rel(User_Service, User_Database, "Uses")
+    Rel(Frontend, Payment_Service, "Uses")
+    Rel(Payment_Service, Stripe, "Uses")
